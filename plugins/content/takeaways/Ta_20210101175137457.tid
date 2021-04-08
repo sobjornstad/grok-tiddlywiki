@@ -1,0 +1,9 @@
+answer: Inside of a macro definition.
+created: 20210101175138769
+modified: 20210302162924718
+origin: Using Variables in Macros
+qtype: rememberq
+question: You can do text substitution with `$moneyPlaceholders$` only within what context?
+tags: Takeaway
+title: Ta:20210101175137457
+type: text/vnd.tiddlywiki

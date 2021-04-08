@@ -1,0 +1,13 @@
+created: 20210207222708735
+modified: 20210207223543160
+tags: 
+title: Sn:AuthorizationBypass
+type: text/vnd.tiddlywiki
+
+\define checkAuthorization(password)
+<$list filter="[[$password$]match{$:/config/SecretPasswordExample}]">
+  The user is authorized.
+</$list>
+\end
+
+<<checkAuthorization "">>

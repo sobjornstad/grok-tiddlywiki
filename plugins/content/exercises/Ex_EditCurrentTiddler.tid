@@ -1,0 +1,11 @@
+created: 20210107230556451
+length: m
+modified: 20210130174856977
+origin: Buttons and Input Widgets
+tags: Exercise
+title: Ex:EditCurrentTiddler
+type: text/vnd.tiddlywiki
+
+The `$edit-text` widget can edit any field on any tiddler, so you might wonder why, in our example above, we wouldn't just let the user edit the `userwhoclicked` field directly.
+
+Look up the documentation for the `edit-text` widget to find out how to select an appropriate field and try this out. What happens?

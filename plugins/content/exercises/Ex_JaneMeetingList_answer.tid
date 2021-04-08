@@ -1,0 +1,13 @@
+created: 20200603194617232
+modified: 20200603194755669
+tags: Answer
+title: Ex:JaneMeetingList/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$list filter="[tag[Meeting]contains:participants[JaneDoe]!sort[at]]">
+  <<currentTiddler>><br>
+</$list>
+```
+
+Note the use of the `contains:` operator rather than the `field:` operator. If we used `field:`, then a meeting whose `participants` field included both Jane and someone else, like `JaneDoe ChrisSmith`, would not match.

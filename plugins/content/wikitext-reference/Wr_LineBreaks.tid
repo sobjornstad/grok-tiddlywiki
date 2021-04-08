@@ -1,0 +1,14 @@
+caption: Maintaining line breaks
+created: 20210131151340756
+modified: 20210131153038726
+tags: [[Wikitext Reference]]
+title: Wr:LineBreaks
+type: text/vnd.tiddlywiki
+
+Normally, TiddlyWiki only starts a new paragraph when you leave a blank line (two presses of the Enter key). While usually helpful, this can be unwanted in a few circumstances, like when trying to display poetry. You can turn off this behavior for a block of text by wrapping it in triple quotes:
+
+{{Sn:WikitextTripleQuotes||MagicSnippet}}
+
+When displaying passages this way, you might also want to put the text in a block quote or indent some lines. You can combine this with the block-quote syntax, and use HTML //em spaces// (`&emsp;`) to add a small indent:
+
+{{Sn:WikitextPoetryMarkup||MagicSnippet}}

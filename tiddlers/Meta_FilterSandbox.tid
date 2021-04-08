@@ -1,0 +1,22 @@
+created: 20210128194826410
+modified: 20210407173544556
+tags: Meta
+title: Meta:FilterSandbox
+type: text/vnd.tiddlywiki
+
+\define testme(inputFilt, userFilt)
+<$list filter="[<__userFilt__>!is[blank]]" variable=_ emptyMessage="Enter a filter run to see the results.">
+<$list filter="""$inputFilt$ :filter$userFilt$""">
+	<<currentTiddler>><br>
+</$list>
+</$list>
+\end
+
+<$set name="inputs" value="[[Soren]] [[Ellie]] [[Maud]]">
+
+|!Input tiddlers|<<inputs>>|
+|!Filter run|<$edit-text tiddler="$:/temp/filtersandbox" tag="input" type="text" default=""/>|
+
+<$macrocall $name=testme inputFilt=<<inputs>> userFilt={{$:/temp/filtersandbox}}/>
+
+</$set>

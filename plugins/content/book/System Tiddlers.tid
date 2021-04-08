@@ -1,0 +1,47 @@
+created: 20200717225935255
+description: Almost everything in TiddlyWiki is controlled by tiddlers; system tiddlers are those hidden “meta-tiddlers” that control the wiki rather than containing your actual content.
+modified: 20210316171701072
+parent: Looking Under the Hood
+tags: Section Concept
+title: System Tiddlers
+type: text/vnd.tiddlywiki
+
+Back at the very beginning of the book, in [[Tiddlers]], we learned that everything is a tiddler. And in [[Transclusions]], we mentioned in passing that the entire interface of TiddlyWiki is created by transcluding special tiddlers.
+
+This means that, essentially, we can change //anything// in TiddlyWiki just by modifying these tiddlers, using the same tools we already know. Completely changing the look and feel of TiddlyWiki and implementing custom JavaScript code are beyond the scope of this book, but in this chapter we will look at changing the sidebar, adding custom interface elements, and some more fun and useful things that will help you make any wiki you create with TiddlyWiki exactly fit your needs. Along the way, you'll also learn how you can poke around and discover how these tiddlers work, so you can make your own changes that we haven't talked about.
+
+If everything is made up of these special tiddlers, you may be wondering why you don't see all of them in the list of tiddlers when you click the ''All'' section of the ''More'' tab in the sidebar of a new TiddlyWiki. The answer is that they're ''system tiddlers''. A system tiddler is a tiddler whose title begins with `$:/`. System tiddlers are hidden in search results and most tabs of the sidebar.
+
+Aside from their names and the fact that tiddlers with those names are hidden from most views, there is nothing special or different about system tiddlers as compared to “normal” tiddlers.
+
+System tiddlers are ''organized into a hierarchy'' by giving them names with slashes separating each folder, much like a computer's file system. For instance, the default height of the text box presented when you edit a tiddler is stored in a tiddler called [[$:/config/TextEditor/EditorHeight/Height]].
+
+Important top-level folders in this hierarchy include:
+
+* `config` -- {{Ltc:EverySetting||LieToChildrenTemplate}} (there are other settings here that aren't displayed in the control panel as well)
+* `core` -- most of the ''code of TiddlyWiki'', in both JavaScript and wikitext, is kept in here
+* `language` -- contains ''translations'' for TiddlyWiki elements into your local language
+* `palettes` -- contains ''tables from names to colors'' used to draw the interface
+* `plugins` -- any ''plugins you've installed'' go here
+* `state` -- contains temporary tiddlers that describe ''what you currently have open and selected'' in the user interface
+* `tags` -- for the parts of TiddlyWiki's interface and functionality people most frequently want to ''add parts to'', TiddlyWiki provides these special tags; by adding the tag to a new tiddler, that tiddler appears in TiddlyWiki's interface
+* `temp` -- contains miscellaneous ''temporary tiddlers''
+* `themes` -- contains CSS and configuration tweaks describing ''how to draw the interface''
+
+Many people like to create a top-level folder titled with their name or initials (e.g., I use `$:/sib`), so that when they create their own custom system tiddlers, they can see them all in the same place and remember what they've added. You don't have to make your custom tiddlers system tiddlers -- you could just make them normal tiddlers with whatever names you like -- but if you don't intend to directly use the tiddlers from other non-system tiddlers, it's usually cleaner to keep them with the other system tiddlers.
+
+You can see a list of all system tiddlers in the ''System'' section of the ''More'' tab. However, the ''Explorer'' tab is usually a better way to look -- this will show them in a tree view.
+
+As noted earlier, system tiddlers are hidden from normal search results. If you want to find one, perhaps so you can edit it or inspect how it works, you can search in system tiddlers using the ''System'' tab of Advanced Search. On the other hand, system tiddlers are //not// hidden from filters. Often this isn't noticeable at all since filters typically look for things with a particular tag or field or link, and system tiddlers typically do not share tags, field values, or links with non-system tiddlers. However, many filters, both those built into TiddlyWiki and ones you compose yourself, will want to use the `!is[system]` filter step to remove system tiddlers from the list.
+
+Note that neither Advanced Search, nor filters you may write, nor the ''System'' section of the ''More'' tab includes system tiddlers that are also [[shadow tiddlers|Shadow Tiddlers]] (we'll discuss those in a moment). To find those, you'll need to use the ''Shadows'' tab of either interface.
+
+!! Exercises
+
+{{Ex:CreateSystemTiddler||ExerciseTemplate}}
+{{Ex:ExploreSystemTiddlers||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

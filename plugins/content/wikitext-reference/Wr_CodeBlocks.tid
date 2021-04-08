@@ -1,0 +1,10 @@
+caption: {{$:/core/images/mono-block}} Code blocks
+created: 20210131145918563
+modified: 20210320144937334
+tags: [[Wikitext Reference]]
+title: Wr:CodeBlocks
+type: text/vnd.tiddlywiki
+
+Code blocks work much like block quotes, only they begin and end with <code>&#96;&#96;&#96;</code> instead of `<<<`, and they display their contents in a fixed-width font, respecting line breaks. If you install the official Highlight [[plugin|Plugins]], you can also specify a language for [[syntax highlighting|https://en.wikipedia.org/wiki/Syntax_highlighting]] after the opening backticks.
+
+{{Sn:WikitextCodeBlock||MagicSnippet}}

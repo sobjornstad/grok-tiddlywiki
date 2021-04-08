@@ -1,0 +1,11 @@
+created: 20200718202118837
+modified: 20200718202122620
+tags: Answer
+title: Ex:ExcerptConfigurationTiddler/answer
+type: text/vnd.tiddlywiki
+
+Your configuration tiddler itself just needs to contain the text `200` (or whatever number of characters you want to show). To use the value on your filter, the easiest method is:
+
+```html
+{{{ [<wikitext>split[]first{$:/config/LinkExcerptLength}join[]] }}}
+```

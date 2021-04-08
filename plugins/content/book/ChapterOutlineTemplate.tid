@@ -1,0 +1,11 @@
+created: 20210110042913461
+modified: 20210110045004066
+tags: Template
+title: ChapterOutlineTemplate
+type: text/vnd.tiddlywiki
+
+<ul>
+<$list filter={{!!list}}>
+	<li><$link to={{!!title}}/> -- {{!!description}}</li>
+</$list>
+</ul>

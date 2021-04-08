@@ -1,0 +1,17 @@
+caption: General takeaway functions
+created: 20210101234652033
+description: Once you've answered a takeaway for the first time, you'll see several options below it, whether you're seeing the takeaway [[in the text|TakeAway Help/Studying In Text]] (//List// tab), [[in the browser|Takeaway Browser]], or [[in review|TakeAway Help/Reviewing]].
+modified: 20210407194540991
+tags: Fragment
+title: TakeAway Help/General Takeaway Functions
+type: text/vnd.tiddlywiki
+
+{{TakeAway Help/General Takeaway Functions!!description}}
+
+* ''next review'' or ''due for review'' (only shown in the text and the browser) -- this indicates when you'll next see the takeaway, or //due for review// if it's time to review it now. See [[Reviewing takeaways|TakeAway Help/Reviewing]] for more information. If the takeaway is due later than tomorrow, you can click //forgot// to tell TakeAway that you've already forgotten the takeaway and would like to see it again right away tomorrow.
+* ''edit'' -- Open the takeaway's tiddler to edit its text or view its scheduling information.
+* ''uncollect'' -- If you don't want to see this takeaway at all in review anymore, this option will remove it from review, clear its scheduling history, and put the takeaway back to showing only the question in the text.
+* ''send feedback'' -- If you think the prompt is unclear or could be improved, click here to send a quick note to the author.
+* ''help'' -- Open the TakeAway help screen.
+
+In the reviewer and the browser, you'll also notice a link and an ID number in square brackets over on the right. You can click the link to ''return to the section in the text where the takeaway was introduced'', if you need a refresher.

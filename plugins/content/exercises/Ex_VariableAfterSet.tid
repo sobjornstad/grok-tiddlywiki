@@ -1,0 +1,9 @@
+created: 20201121235545353
+length: s
+modified: 20210130174659679
+origin: Variables
+tags: Exercise
+title: Ex:VariableAfterSet
+type: text/vnd.tiddlywiki
+
+What happens if you refer to a variable after the `</$set>`?

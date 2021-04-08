@@ -1,0 +1,16 @@
+created: 20210116193620018
+modified: 20210116193557083
+tags: 
+title: Sn:HtmlIncorrectlyNestedList
+type: text/vnd.tiddlywiki
+
+<ul>
+  <li>Item 1
+    <ul>
+      <li>Subitem 1</li>
+      <li>Subitem 2</li>
+    </li>
+  </ul>
+</ul>
+
+Some later text.

@@ -1,0 +1,13 @@
+created: 20200718012126754
+length: m
+modified: 20210130174652722
+origin: Data Tiddlers
+tags: Exercise
+title: Ex:VeryOrdinaryDay
+type: text/vnd.tiddlywiki
+
+The `TodaysHoliday` tiddler has a problem: if today isn't a holiday, it says "It's today!". While true, that sounds a little silly, doesn't it? Change the tiddler so that if today is not a holiday, it instead says, "Sadly, it's a very ordinary day today."
+
+//Hint 1//: If you don't remember how to make some wikitext appear only if a condition is met, have another read through [[Text Substitution]].
+
+//Hint 2//: An attribute called `emptyMessage` will come in handy.

@@ -1,0 +1,9 @@
+created: 20200604022701610
+length: s
+modified: 20210130174328217
+origin: Transclusions
+tags: Exercise
+title: Ex:CircularTransclusion
+type: text/vnd.tiddlywiki
+
+What happens if you transclude tiddler A into tiddler B, and tiddler B into tiddler A?

@@ -1,0 +1,8 @@
+created: 20210207221248517
+description: accurate definition of the current tiddler
+modified: 20210207221316374
+tags: Lie
+title: Ltc:CurrentTiddlerDefinition
+type: text/vnd.tiddlywiki
+
+Actually, properly setting the current tiddler also involves setting some variables to the names of CSS classes, as discussed in the section on the `$tiddler` widget in [[Miscellaneous Widgets]]. However, in virtually all cases you can get away with simply setting the value of the `currentTiddler` variable.

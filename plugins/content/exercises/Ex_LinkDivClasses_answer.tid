@@ -1,0 +1,35 @@
+created: 20200718201623464
+modified: 20210327153127895
+tags: Answer
+title: Ex:LinkDivClasses/answer
+type: text/vnd.tiddlywiki
+
+```html
+\define excerptify(title)
+  <$wikify name=wikitext text={{$title$}}>
+    <$text text={{{ [<wikitext>split[]first[200]join[]] }}} />...
+  </$wikify>
+\end
+
+\define linkDisplay(title, filterFragment, cssClass)
+<div class=<<__cssClass__>>>
+$title$:
+
+<ul>
+<$list filter="[all[current]$filterFragment$]">
+  <li>
+    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
+    <div class="sib-excerpt">
+      <$macrocall $name="excerptify" title={{!!title}}/>
+    </div>
+  </li>
+</$list>
+</ul>
+</div>
+\end
+
+<div class="sib-link-display">
+  <<linkDisplay "Links" "links[]" "sib-links">>
+  <<linkDisplay "Backlinks" "backlinks[]" "sib-backlinks">>
+</div>
+```

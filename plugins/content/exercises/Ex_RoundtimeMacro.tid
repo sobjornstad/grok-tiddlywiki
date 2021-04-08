@@ -1,0 +1,9 @@
+created: 20200822194847240
+length: M
+modified: 20210130174601176
+origin: JavaScript Macros
+tags: Exercise
+title: Ex:RoundtimeMacro
+type: text/vnd.tiddlywiki
+
+Create a JavaScript macro called `roundtime` that rounds a TiddlyWiki-formatted timestamp to the nearest 15 minutes.

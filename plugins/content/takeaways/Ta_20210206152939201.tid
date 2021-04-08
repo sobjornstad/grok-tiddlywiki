@@ -1,0 +1,9 @@
+answer: `[tag[Journal]] -[search[fudge]tag[Meeting]]`
+created: 20210206152939704
+modified: 20210311172545289
+origin: Multi-Run Filters
+qtype: rememberq
+question: Write a filter expression that shows all tiddlers that are tagged `Journal`, but do not both contain the word `fudge` in their `text` field and have the tag `Meeting` (having one of the latter two conditions is OK).
+tags: Takeaway
+title: Ta:20210206152939201
+type: text/vnd.tiddlywiki

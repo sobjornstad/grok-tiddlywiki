@@ -1,0 +1,7 @@
+created: 20210121000943507
+modified: 20210121000855353
+tags: Answer
+title: Ex:InspectSquare/answer
+type: text/vnd.tiddlywiki
+
+The class is `bluuuuu`, and the hidden message, kept in a `span` element inside the `div` element that makes up the square, is “Help, I'm trapped in an HTML span!”

@@ -1,0 +1,9 @@
+answer: `The password is "purple<!-- elephant-->".`
+created: 20210117013406348
+modified: 20210302161047061
+origin: Comments
+qtype: rememberq
+question: Make the following wikitext appear to say that the password is "purple" when it's rendered, by inserting a comment: `The password is "purple elephant".`
+tags: Takeaway
+title: Ta:20210117013403056
+type: text/vnd.tiddlywiki

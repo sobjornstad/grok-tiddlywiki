@@ -1,0 +1,50 @@
+created: 20200822214806325
+description: Whether you should use CamelCase titles, what makes something CamelCase, and how you can get rid of CamelCase linking.
+modified: 20210322011650952
+parent: Appendices
+tags: Section
+title: CamelCase
+type: text/vnd.tiddlywiki
+
+TiddlyWiki has an option to make CamelCase text (where the words are run together without spaces and capitalized) turn automatically into links. This is discussed extensively in [[the answer to the camel-case knowledge tiddlers exercise|Ex:CamelCaseKnowledgeTiddlers/answer]].
+
+!! Should you use CamelCase?
+
+CamelCase makes it easier to link to things, but some people think it's ugly. The only general advice I can give is figure out what you like, and don't feel like you have to fall solidly on one side of the fence for every wiki. For my personal notes, I love CamelCase; for the wiki I wrote this book in, it's more irritating than helpful, since I want my page titles to be friendlier and I don't want the CamelCase titles I quote to become links.
+
+You can learn more about my decision to use CamelCase for my huge Zettelkasten project at the [[WikiCamelCase|https://zettelkasten.sorenbjornstad.com/#WikiCamelCase]] page there.
+
+
+!! Escaping CamelCase words
+
+If you have a word that is in CamelCase, but you don't want it to be a link, you need to //escape// it by placing a tilde in front of it, like `~CamelCase`. The one irritating thing about this mechanism is that if you move the text to a wiki or tiddler that has CamelCase links turned off, the tilde actually appears in the text. I am not aware of any way to ensure a CamelCase word appears exactly as itself in either mode, although you can always place it in `backticks` if you don't mind it showing up in a different font.
+
+
+!! Is it CamelCase?
+
+The rules for determining whether a given word is in CamelCase are not always obvious, particularly when numbers or symbols are involved. Here are several things that //aren't// CamelCase that you might think would be:
+
+* `CAmelcase`
+* `Camel2Camel`
+* `3Camels`
+* `camelCaseWord`
+
+The rule that has always served me well is that to be considered CamelCase, the word must begin with a capital letter //and// contain at least one uppercase letter that immediately follows a lowercase letter. The above cases all fail that test.
+
+
+!! Temporarily turning off CamelCase linking
+
+Even if you normally like CamelCase in your wiki, you might occasionally find you'd like to turn it off for a particular tiddler. For instance, maybe you've copied and pasted some text that contains a bunch of CamelCase words from some other source, and you don't want to have to go through and manually escape all of them.
+
+Fortunately, there's an easy fix in this situation. Just insert the following pragma at the top of the tiddler:
+
+```html
+\rules except wikilink
+```
+
+Note that like any other pragma, this must go at the very beginning of your tiddler. If other lines come before it, they must be either empty lines or other pragmas (e.g., `\define` or `\import`). Otherwise, the text `\rules except wikilink` will appear literally.
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

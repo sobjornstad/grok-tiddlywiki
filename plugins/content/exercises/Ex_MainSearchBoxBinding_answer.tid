@@ -1,0 +1,7 @@
+created: 20210107235020864
+modified: 20210107234945156
+tags: Answer
+title: Ex:MainSearchBoxBinding/answer
+type: text/vnd.tiddlywiki
+
+The answer is the `text` field of `$:/temp/search`. The easiest way to find this answer is to type a weird word in the search box that you won't find anywhere else (e.g., `oobleckblargle`), then open up Advanced Search and search for the same word on the `System` tab. The tiddler will appear in the list.

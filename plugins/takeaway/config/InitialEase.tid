@@ -1,0 +1,10 @@
+caption: Starting ease
+created: 20201230013117977
+description: Ease of newly seen takeaways. The ease is the size of the new interval when choosing //Good// compared to the previous interval, expressed as a percentage; e.g., 200 will make //Good// double the interval. The ease is adjusted when you select options other than //Good//.
+modified: 20210407150829885
+stackorder: 20
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/InitialEase
+type: text/vnd.tiddlywiki
+
+250

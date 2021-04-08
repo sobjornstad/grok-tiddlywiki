@@ -1,0 +1,19 @@
+created: 20200531142251622
+description: Some final exercises to help you practice the basics.
+modified: 20210315154237956
+parent: The Shape of TiddlyWiki
+tags: Section
+title: Reviewing the Basics
+type: text/vnd.tiddlywiki
+
+We've now worked our way through the majority of our initial set of requirements! We've created standard types of tiddlers for each of the things we said we wanted to keep track of, decided what kind of information we wanted to capture for each of them, and created a sample tiddler for each.
+
+There are still some significant holes you're probably looking to fill. For instance, we haven't talked about how to ''find tiddlers that match particular criteria'', or indeed how to find tiddlers at all, and we could do with a clearer ''overview'' of all the notes belonging to a particular project or area. Many of the fields we created on tiddlers are kind of hard to use, and we have to manually add them to every tiddler. And there are a great number of other efficiency improvements and customizations we could benefit from.
+
+We'll tackle these things starting in the next chapter, but first, let's do a few exercises to solidify what we've covered so far.
+
+{{Ex:RaffapKnowledgeTiddler||ExerciseTemplate}}
+{{Ex:RaffapReflection||ExerciseTemplate}}
+{{Ex:CamelCaseKnowledgeTiddlers||ExerciseTemplate}}
+{{Ex:JaneDoeFamily||ExerciseTemplate}}
+{{Ex:ManagerField||ExerciseTemplate}}

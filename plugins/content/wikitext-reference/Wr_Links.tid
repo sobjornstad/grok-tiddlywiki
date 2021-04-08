@@ -1,0 +1,18 @@
+caption: {{$:/core/images/link}} Links
+created: 20210131145925457
+modified: 20210320191211734
+tags: [[Wikitext Reference]]
+title: Wr:Links
+type: text/vnd.tiddlywiki
+
+You can create both internal and external [[links|Links]] using the `[[double bracket]]` syntax. Internal links go to another tiddler, while external links go to a URL; TiddlyWiki automatically selects the correct type based on the link target. To make the link text different than the target, you place the link text first, followed by a pipe (`|`) character and then the link target.
+
+Here are some examples:
+
+{{Sn:WikitextLinksExample||MagicSnippet}}
+
+URLs or paths to files are automatically linked if they appear in the text of your tiddler. However, there are a handful of cases where TiddlyWiki can't automatically detect something as a URL, for instance if it's a relative path to a file on your computer (see [[Images and Attachments]]) for why you might want that. Then placing the path by itself will make it normal text, and putting it in double square brackets will try to link to a tiddler with that name. In this case, you can use the `ext` syntax to force an external link.
+
+{{Sn:WikitextExtForce||MagicSnippet}}
+
+If CamelCase links are on in the control panel, words in CamelCase are automatically turned into links. If you want to prevent a CamelCase word from turning into a link, precede it with a tilde: `~CamelCase` (note that the tilde will appear literally in the output if you have camel-case linking off, though). See the [[CamelCase appendix|CamelCase]] for details.

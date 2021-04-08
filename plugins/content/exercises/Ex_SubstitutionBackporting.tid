@@ -1,0 +1,9 @@
+created: 20210207224132602
+length: m
+modified: 20210207224110632
+origin: Text Substitution
+tags: Exercise
+title: Ex:SubstitutionBackporting
+type: text/vnd.tiddlywiki
+
+Go back through some of the macros you have written for previous exercises in this chapter and look for opportunities to switch from text substitution to `<<__parameter-substitution__>>`.

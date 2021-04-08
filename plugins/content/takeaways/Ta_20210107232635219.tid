@@ -1,0 +1,9 @@
+answer: `<th>` (//table header//)
+created: 20210107232636637
+modified: 20210329214932388
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: What HTML element creates a table header cell when used within a `<tr>` element?
+tags: Takeaway
+title: Ta:20210107232635219
+type: text/vnd.tiddlywiki

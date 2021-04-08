@@ -1,0 +1,9 @@
+answer: It is a single filter step; to be a complete filter expression, it needs an outer set of square brackets, like `[tag[Contact]]`.
+created: 20201230163350480
+modified: 20210204034227115
+origin: Using Filter Expressions
+qtype: rememberq
+question: Why does the filter expression `tag[Contact]` not work?
+tags: Takeaway
+title: Ta:20201230163348978
+type: text/vnd.tiddlywiki

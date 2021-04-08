@@ -1,0 +1,41 @@
+created: 20200530141306650
+list: [[Front Matter]] [[The Shape of TiddlyWiki]] [[Filing and Organizing]] [[Filtering and Formatting]] [[Variables, Macros, and Transclusions]] [[More Organizational Tools]] [[Looking Under the Hood]] [[Tips and Tricks]] [[Getting Technical]] [[Supplemental Exercises]] Resources Appendices
+modified: 20210407173624261
+refexplorer-hide: true
+tags: Index Meta
+title: Meta:TwintroductionReorder
+type: text/vnd.tiddlywiki
+
+\define actionPrependNew()
+<$action-listops
+  $tiddler="""$(selectedParent)$"""
+	$field=list
+	$filter="[parent[$(selectedParent)$]] [list[$(selectedParent)$]] -[!parent[$(selectedParent)$]]"
+	/>
+\end
+
+
+!! Chapter/section hierarchy
+
+Drag and drop to move items between chapters.
+
+<<locator-view baseTitle:Outline fieldOfRelationship:parent>>
+
+
+!! Chapter reordering
+
+The Locator doesn't let you reorder items //within// a section, so this tool lets you do that.
+
+Reorder sections of:
+<$select tiddler="$:/temp/ReorderSection" default="TwintroductionReorder">
+  <$list filter="[parent[Outline]!has[draft.of]sort[caption]] Meta:TwintroductionReorder">
+	  <option value=<<currentTiddler>>>{{!!caption}} ({{!!title}})</option>
+  </$list>
+</$select>
+
+<$macrocall $name="list-links-draggable" tiddler={{$:/temp/ReorderSection}}/>
+
+//This list does not update automatically. To add new tiddlers to the top of the list and remove tiddlers that are no longer part of this chapter,//
+<$set name="selectedParent" value={{$:/temp/ReorderSection}}>
+	<$button actions=<<actionPrependNew>>>Update List</$button>.
+</$set>

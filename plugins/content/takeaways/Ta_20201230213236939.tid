@@ -1,0 +1,9 @@
+answer: The first run returns all tiddlers that //are// system tiddlers; the second run returns all tiddlers that are //not// system tiddlers.
+created: 20201230213240799
+modified: 20210204033949427
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: How do the results of the filter runs `[is[system]]` and `[!is[system]]` differ?
+tags: Takeaway
+title: Ta:20201230213236939
+type: text/vnd.tiddlywiki

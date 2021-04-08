@@ -1,0 +1,9 @@
+answer: `currentTab`
+created: 20210103174335087
+modified: 20210302162950034
+origin: Tabs
+qtype: rememberq
+question: When rendering each tab in a `tabs` macro call, what variable contains the title of the tiddler being rendered?
+tags: Takeaway
+title: Ta:20210103174333268
+type: text/vnd.tiddlywiki

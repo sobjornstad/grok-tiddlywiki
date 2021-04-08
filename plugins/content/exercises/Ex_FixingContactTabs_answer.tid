@@ -1,0 +1,39 @@
+created: 20200717224206811
+modified: 20210103173338907
+tags: Answer
+title: Ex:FixingContactTabs/answer
+type: text/vnd.tiddlywiki
+
+Create a template tiddler called `ContactTabTemplate` with the following content:
+
+```html
+<$set name=currentTiddler value=<<currentTab>>>
+	{{!!text}}
+</$set>
+```
+
+(You can use any method you like to set the current tiddler.)
+
+Then add a `template:ContactTabTemplate` parameter to the `tabs` macro used to render your contact tabs.
+
+The TiddlyWiki documentation gives the following version:
+
+```html
+<$tiddler tiddler=<<currentTab>>>
+<$transclude mode="block" />
+</$tiddler>
+```
+
+This has the same effect, using fancy widgets we haven't discussed yet.
+
+Another way would be to transclude the tiddler in `currentTab` using double curly braces within the template tiddler, since doing a transclusion this way sets the current tiddler as it does so. You have to use text substitution to get the value of `currentTab` into the braces, though:
+
+```html
+\define makeCurrentTiddler()
+	{{$(currentTab)$}}
+\end
+
+<<makeCurrentTiddler>>
+```
+
+It's a lot less obvious what you're doing this way, so one of the preceding methods is probably preferable.

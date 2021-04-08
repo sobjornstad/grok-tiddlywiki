@@ -1,0 +1,9 @@
+answer: All (non-shadow) tiddlers in the wiki.
+created: 20201230205717399
+modified: 20210223170336350
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: What are the input tiddlers to the filter step `tag[Person]` in the filter run `[tag[Person]]`?
+tags: Takeaway
+title: Ta:20201230205710487
+type: text/vnd.tiddlywiki

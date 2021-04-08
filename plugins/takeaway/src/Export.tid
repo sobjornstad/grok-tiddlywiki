@@ -1,0 +1,17 @@
+caption: Export
+created: 20210101224920086
+modified: 20210407150448374
+stackorder: 10
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/Settings/Export
+type: text/vnd.tiddlywiki
+
+Only collected takeaways (those you have answered in the text or manually chosen to collect) are exported. If necessary, you can collect all takeaways in the [[bulk-update console|$:/plugins/sobjornstad/TakeAway/Settings/BulkUpdate]] first.
+
+!!! Anki export via TiddlyRemember
+
+{{$:/plugins/sobjornstad/TakeAway/TrAnkiExportSettings}}
+
+!!! File export
+
+{{$:/plugins/sobjornstad/TakeAway/FileExport}}

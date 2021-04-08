@@ -1,0 +1,13 @@
+created: 20210123233814789
+modified: 20210322225858427
+tags: Fragment
+title: SavingProgress
+type: text/vnd.tiddlywiki
+
+If you're currently viewing this page on the web, you should download a copy now by clicking this save button: {{$:/core/ui/Buttons/save-wiki}}.
+
+You are free to modify your saved copy for personal use, and to share unmodified copies with others, but not to redistribute modified versions or earn money from redistribution. See the [[copyright notice|Copyright]] if you have any questions.
+
+Since the point of having your own copy is being able to edit the wiki to save your progress, you'll also need a way to save changes to the file. The most convenient way is to [[load the file up in TiddlyDesktop|Installing TiddlyWiki]], just like the wiki you'll be doing exercises in. Once you've done that, close out of //Grok TiddlyWiki// in your web browser and pick up where you left off in TiddlyDesktop (you can use the //Outline// link in the upper-right to quickly find your spot again). In the future, open the book in TiddlyDesktop rather than on the web.
+
+Be sure to save your changes when you close the book for a while; TiddlyDesktop will prompt you to do so when you close the window.

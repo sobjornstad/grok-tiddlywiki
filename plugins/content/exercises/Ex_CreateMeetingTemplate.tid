@@ -1,0 +1,19 @@
+complete: 
+created: 20200605153755202
+length: m
+modified: 20210322232807963
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:CreateMeetingTemplate
+type: text/vnd.tiddlywiki
+
+<!--
+<$action-createtiddler $basetitle=<<qualify "$:/temp/Render">> $savetitle="!!rendering" text=<<mytext>>/>-->
+
+Our meetings have two fields, `at` and `participants`, which don't show up anywhere on the meeting tiddlers. Create a new template tiddler, `MeetingInformationTemplate`, and add a table something like the following.
+
+{{Sn:MeetingParticipants||MagicSnippet}}
+
+Obviously, your version should include the correct information for whichever tiddler the template is being transcluded into. Don't miss the space before the `!` in `Time` and `Participants` in the wikitext, which causes the headings to be right-aligned rather than centered.
+
+Transclude this template at the top of all your meeting tiddlers.

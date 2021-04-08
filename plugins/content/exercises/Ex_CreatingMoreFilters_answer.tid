@@ -1,0 +1,14 @@
+created: 20200603185304662
+modified: 20210320153324726
+tags: Answer
+title: Ex:CreatingMoreFilters/answer
+type: text/vnd.tiddlywiki
+
+I won't list the actual answers because you've likely played with your wiki enough by now that your answers will be slightly different from mine, but here are the filters you can use:
+
+# `[count[]]`
+# `[is[system]count[]]`
+# `[[JaneDoe]backlinks[]tag[Meeting]]`
+# `[tag[Contact]sort[phone]]` (and take the first in the list)
+# `[has[at]]` (or, more verbosely, `[field:at[]]`)
+# `[search[JaneDoe help]]`

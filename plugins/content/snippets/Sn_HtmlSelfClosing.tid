@@ -1,0 +1,10 @@
+created: 20210116193534717
+modified: 20210116193444901
+tags: 
+title: Sn:HtmlSelfClosing
+type: text/vnd.tiddlywiki
+
+<ul>
+  <li>Item 1</li>
+  <li />
+</ul>

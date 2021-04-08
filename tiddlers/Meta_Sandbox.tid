@@ -1,0 +1,9 @@
+created: 20210120011900877
+modified: 20210407173604110
+tags: Meta
+title: Meta:Sandbox
+type: text/vnd.tiddlywiki
+
+If you ever want to try some [[Wikitext]] out and you don't want to open your own TiddlyWiki, you can use the live example widget below to experiment. Any changes here will be discarded when you leave the page or close the wiki.
+
+{{$:/temp/Sandbox||MagicSnippet}}

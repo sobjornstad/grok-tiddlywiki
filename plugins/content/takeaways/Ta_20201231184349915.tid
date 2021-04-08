@@ -1,0 +1,9 @@
+answer: Search looks at a tiddler's wikitext, and a transcluded tiddler is not part of the wikitext of the tiddler transcluding it.
+created: 20201231184351104
+modified: 20210220191214780
+origin: Transclusions
+qtype: rememberq
+question: Why is any text behind transclusions not considered when searching the contents of tiddlers?
+tags: Takeaway
+title: Ta:20201231184349915
+type: text/vnd.tiddlywiki

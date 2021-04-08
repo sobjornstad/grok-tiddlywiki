@@ -1,0 +1,9 @@
+answer: When looking at a tag pill or table of contents for the tiddler T, `B` and `A` will be listed beneath it in that order.
+created: 20210103163503663
+modified: 20210208151659101
+origin: Ordering Tiddlers
+qtype: rememberq
+question: If you have a tag tiddler `T` and two tiddlers with that tag `A` and `B`, what is the effect of populating the `list` field of `T` with `B A`?
+tags: Takeaway
+title: Ta:20210103163502135
+type: text/vnd.tiddlywiki

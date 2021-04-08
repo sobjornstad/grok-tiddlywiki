@@ -1,0 +1,9 @@
+answer: The suffix is silently ignored.
+created: 20201230213930371
+modified: 20210226140317379
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: What happens if you add a suffix to a filter operator that doesn't support suffixes?
+tags: Takeaway
+title: Ta:20201230213928787
+type: text/vnd.tiddlywiki

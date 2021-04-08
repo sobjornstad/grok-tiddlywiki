@@ -1,0 +1,19 @@
+created: 20210116213810262
+modified: 20210116213859544
+tags: 
+title: Sn:AtAtClass
+type: text/vnd.tiddlywiki
+
+<style>
+.my-funny-class {
+  background-color: blue;
+  color: yellow;
+  font-size: 150%;
+  border: 3px dotted orange;
+  text-align: right;
+}
+</style>
+
+@@.my-funny-class
+Here is some funny-looking text.
+@@

@@ -1,0 +1,25 @@
+caption: Review
+created: 20210101233411930
+modified: 20210407191238894
+stackorder: 1
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/Settings/Review
+type: text/vnd.tiddlywiki
+
+<table class="gtw-form">
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/sobjornstad/TakeAway/Reviewer/]nsort[stackorder]]">
+<tr>
+	<th width="200px" style="text-align: left; vertical-align: top;">{{!!caption}}</th>
+	<td><$checkbox tiddler=<<currentTiddler>> field=text checked="yes" unchecked="no"/></td>
+	<td>{{!!description}}</td>
+</tr>
+</$list>
+</table>
+
+<$button>
+	<!-- NOT all[tiddlers+shadows] -- delete only modified -->
+	<$list filter="[prefix[$:/config/sobjornstad/TakeAway/Reviewer/]]">
+		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+	</$list>
+	Reset review settings to default
+</$button>

@@ -1,0 +1,9 @@
+created: 20210131145709035
+modified: 20210131145610787
+tags: 
+title: Sn:WikitextTransclusionVariable
+type: text/vnd.tiddlywiki
+
+<$set name="myvariable" value="Hello!">
+  <<myvariable>>
+</$set>

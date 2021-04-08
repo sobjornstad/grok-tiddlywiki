@@ -1,0 +1,11 @@
+created: 20210131141859994
+modified: 20210131143303668
+tags: 
+title: Sn:WikitextExtForce
+type: text/vnd.tiddlywiki
+
+attachments/my_image.png
+
+That didn't work. How about [[attachments/my_image.png]]?
+
+Nope! Here's the right way: [ext[attachments/my_image.png]]

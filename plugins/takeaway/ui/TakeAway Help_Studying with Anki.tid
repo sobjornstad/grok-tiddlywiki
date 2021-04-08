@@ -1,0 +1,35 @@
+caption: Studying with Anki
+created: 20210101235013980
+modified: 20210407150742425
+tags: Fragment
+title: TakeAway Help/Studying with Anki
+type: text/vnd.tiddlywiki
+
+If you're a serious learner, you may already use a general-purpose spaced-repetition tool like [[Anki|https://apps.ankiweb.net]] to study other topics. TakeAway's built-in spaced-repetition reviewer is convenient for those new to spaced repetition but not as powerful as Anki, so if you prefer to take advantage of Anki's wide array of options and keep all the material you're studying in one place, you can use the [[TiddlyRemember|https://sobjornstad.github.io/TiddlyRemember/]] Anki add-on to ''sync takeaways into your Anki collection''. Once set up, TiddlyRemember will sync all collected takeaways to notes in Anki.
+
+Be aware that when using TiddlyRemember you ''should not edit the synced notes within Anki'' -- TiddlyRemember does a unidirectional sync, so you must edit the takeaways in the wiki and then sync them to Anki, or you will lose the changes next time you sync.
+
+Setting up reviewing in Anki is a little more involved than using TakeAway's integrated tooling, but if you're familiar with Anki it shouldn't be too bad:
+
+# Follow step 2 of the installation instructions on the [[TiddlyRemember homepage|https://sobjornstad.github.io/TiddlyRemember/]] to install Node.js on your computer, if you do not already have it.
+# In Anki, install TiddlyRemember: choose //Tools > Add-ons > Get Add-ons// and paste in the code `60456529` (if you'd prefer to see what you're downloading before you download it, the AnkiWeb page is [[here|https://ankiweb.net/shared/info/60456529]]).
+# Click //OK// and restart Anki as instructed.
+# Choose //Tools > Add-ons//, select the TiddlyRemember add-on, and click the //Config// button on the right.
+# Fill out the syncing options as desired. A full description of each option is provided [[here|https://sobjornstad.github.io/TiddlyRemember/#Configuring%20the%20Anki%20add-on]].
+#* For the wiki settings, you'll want to choose a type of //File// and select the path of the wiki that you downloaded and opened with TiddlyDesktop on your computer. The //Filter// should be `[[Takeaway Export List]]`.
+# Choose //Tools > Sync from TiddlyWiki// to add all takeaways that you've seen in the text to your Anki collection. As you proceed through the book, you'll want to sync periodically to import the takeaways you've newly seen.
+
+Here's an example configuration:
+
+[img [anki-config-screenshot.png]]
+
+For more ways you can customize TiddlyRemember, including sorting cards into different decks or adding tags, visit the [[TiddlyRemember documentation|https://sobjornstad.github.io/TiddlyRemember/]].
+
+
+!! Settings for reviewing with Anki
+
+If you review with Anki rather than with the integrated TakeAway spaced-repetition tool, your scheduling information won't get updated within this text, so you'll want to disable review notifications in TakeAway so it doesn't bug you about reviewing.
+
+<$checkbox tiddler="$:/config/sobjornstad/TakeAway/Reviewer/ShowDueNotifications" field=text checked="yes" unchecked="no">&nbsp;Show banner in-text when takeaways are due for review</$checkbox>
+
+{{$:/plugins/sobjornstad/TakeAway/TrAnkiExportSettings}}

@@ -1,0 +1,69 @@
+created: 20210206155516669
+description: We slice content up into tiddlers by modeling nouns related to our subject matter.
+modified: 20210326025601667
+parent: Filing and Organizing
+tags: Section
+title: Slicing Up Content
+type: text/vnd.tiddlywiki
+
+A large portion of the power of TiddlyWiki lies in its ability to reuse content in different contexts. The best way to create opportunities for reuse is to slice content up into tiddlers appropriately. The value of this kind of slicing will become much more obvious once you learn about [[filters|Filters]] in chapter 3 and [[transclusions|Transclusions]] in chapter 4. However, there is already value even when our only means of reusing content is [[linking to it|Links]], and it's a good idea to start thinking about these issues now regardless, so that you'll be prepared to integrate the ideas you learn in those chapters.
+
+!! What makes an appropriately sliced tiddler?
+
+Many new users of TiddlyWiki start by creating what experienced users would consider monster tiddlers, containing pages-long bulleted lists, lots of headings and subheadings, and so on. As such, a good rule of thumb, when you're getting started, is to ''create more tiddlers than you think you should''. Another good rule of thumb is that ''a tiddler shouldn't get so large that it doesn't fit on your screen without scrolling'' (exactly how large this means the tiddler is of course depends a great deal on what kind of monitor you're using, but unless you are using a truly tiny monitor at low resolution, it's unlikely to suggest your tiddlers should be too small).
+
+However, while size does matter, it's not the critical factor in how content should be broken up into tiddlers. After all, if it were, TiddlyWiki could break our content up into lots of tiddlers all by itself, perhaps using one tiddler per paragraph or word, and save us some work. Dividing content into tiddlers really has more to do with conceptual boundaries than physical ones -- that is, the appearance of the text or other content on the screen isn't important, but rather how the objects and ideas described by the content relate to each other.
+
+We will now benefit from a new metaphor for [[tiddlers|Tiddlers]]. Tiddlers serve as ''models of nouns'' -- people, things, ideas. Nouns have various properties; we represent this by adding fields, like //phone number//, //source//, //author//, //temperature//, and so on, to our tiddlers.
+
+Simple nouns may just need a few of these fields to be modeled appropriately. More complex ones likely need some text that we write out to describe them -- but since TiddlyWiki can't understand and reuse the content in the text field as well as it can the content in our other custom fields, it's best to consider whether we can't store the information in a field before writing it in the text field. For instance, we shouldn't create a bulleted list like this in a tiddler describing a person:
+
+* ''Phone number:'' (212) 555-1234
+* ''Email:'' alice@example.com
+* ''Address'': ...
+
+This is all information we could easily place in fields, and then we would be able to refer to it from other tiddlers and in searches in the future.
+
+Nouns also relate to other nouns. For instance, they might be ''part of another noun'' (tagged with that noun), ''similar to another noun'' (linked to that noun), or any number of other relationships (if the precise type of relationship is important, we can create a list field named for that relationship, as we did in [[Contact Tiddlers]] for the contact's manager and family members).
+
+Tiddlers can serve in several more complicated roles as well:
+
+* They can ''gather together lists of other nouns'' that meet some criteria; in this way, they act like //sentences//, enumerating and expressing the relationships between other things. Their titles [[can then give the relationship a concise name|Tiddler Titles]]. We'll learn about this role in [[chapter 3|Filtering and Formatting]].
+* They can ''modify the way we see other tiddlers''; in this way, they can act like //lenses//. We'll learn about this role in [[chapter 4|Variables, Macros, and Transclusions]], specifically in the section on [[templates|Templates and the Current Tiddler]].
+* They can ''perform actions'' and modify other nouns; in this way, they act like //machines//. We'll learn about this role in [[chapter 6|Looking Under the Hood]] and [[chapter 7|Tips and Tricks]].
+
+
+!! What about multiple wikis?
+
+Oftentimes people wonder if they should create one large wiki or lots of smaller wikis. As with most questions in life, the answer is “it depends.”
+
+Creating different wikis that have the same //function// is usually an antipattern. For instance, if you're a student, it's better not to create one wiki for your notes on your math class and another for your notes on your history class. It's not just possible but likely that you'll eventually find connections between your classes, and when you can [[link these completely different ideas together|https://zettelkasten.sorenbjornstad.com/#DontPartitionKnowledge]], you begin to understand much more about both disciplines and are far more likely to come up with entirely new ideas.
+
+Further, you gain little benefit from a TiddlyWiki perspective from splitting them up. Presumably the design of your wiki and the plugins you include in it will not differ tremendously based on the subject matter -- the much more important element is that you're taking notes on a class. (Sure, you might need to add a plugin for math notation when you're taking math notes, but it won't get in the way of your history notes. And if you want to be able to limit your searches to a single class, just use a tag or field on each tiddler to identify the class it goes with.) Meanwhile, you'll have to go duplicate any awesome new customizations you come up with in both wikis, making extra work for yourself.
+
+When you get to entirely different functions -- for instance, your class notes and a tool for managing your favorite recipes -- separate wikis may start to look like a better idea. Still, there is no hard and fast rule.
+
+
+!! In //Grok TiddlyWiki//
+
+In the //Grok TiddlyWiki// wiki, each chapter and section has a tiddler. Sections use the `parent` field to describe which chapter they're a part of (tags would work just as well here, but I wanted to keep the list of tags small and neat in this book). Each takeaway, live example, lie, and exercise has its own tiddler. Answers to exercises have their own tiddler.
+
+You can see that the book is neatly divided into its component parts and concepts by this model. Some of the section tiddlers are a little longer than I would consider ideal, but I felt keeping a one-to-one correspondence between tiddlers and sections of the book was more important than the size of those tiddlers, and if a section got too long, I looked to split up the section.
+
+You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Transclusions]], which we'll learn about in chapter 4, and in some cases [[filters|Filters]], which we'll learn about in chapter 3.
+
+
+!! In our sample wiki
+
+Office notes are a squishier domain than books, where it is much more difficult to draw neat lines between different nouns. Nevertheless, our tiddler types, which we discussed in [[Structuring Our Wiki]], are different classes of nouns. And as we started talking about [[knowledge tiddlers|Knowledge Tiddlers]], we worked to pull individual ideas into their own tiddlers. Fortunately, if it turns out a tiddler needs to be split up, or several tiddlers need to be combined, doing so is straightforward.
+
+
+!! Exercises
+
+{{Ex:SlicingInGtw||ExerciseTemplate}}
+{{Ex:Slicing||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

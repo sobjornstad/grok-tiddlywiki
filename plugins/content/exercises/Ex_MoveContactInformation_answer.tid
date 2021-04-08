@@ -1,0 +1,9 @@
+created: 20200718031911364
+modified: 20210207182809569
+tags: Answer
+title: Ex:MoveContactInformation/answer
+type: text/vnd.tiddlywiki
+
+You need to get your `$:/yourname/TiddlerTypeTemplates/Contact` tiddler before $:/core/ui/ViewTemplate/body in the `list` field of [[$:/tags/ViewTemplate]]. The easiest way to do this is to click the tag pill for [[$:/tags/ViewTemplate]] where it appears on your `$:/yourname/TiddlerTypeTemplates/Contact` tiddler and drag and drop the entries into the proper position.
+
+You could also manually edit the `list` field, or even create a `<<list-links-draggable>>` macro for this purpose.

@@ -1,0 +1,9 @@
+created: 20210206220348508
+length: m
+modified: 20210206220517570
+origin: Miscellaneous Widgets
+tags: Exercise
+title: Ex:FamilyRadioButton
+type: text/vnd.tiddlywiki
+
+Add a series of radio buttons on the `ContactInformationTemplate` that allow you to view some information about each family member of the current tiddler.

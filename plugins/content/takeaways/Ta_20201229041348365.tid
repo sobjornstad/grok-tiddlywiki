@@ -1,0 +1,9 @@
+answer: December 9, 2018. (You have to subtract five hours from the `01` part, since the timestamp is at UTC+0, which moves the calendar back a day.)
+created: 20201229041355152
+modified: 20210212134035262
+origin: Meeting Tiddlers
+qtype: rememberq
+question: In the UTC-5 timezone, what date does the TiddlyWiki timestamp `20181210015823551` represent?
+tags: Takeaway
+title: Ta:20201229041348365
+type: text/vnd.tiddlywiki

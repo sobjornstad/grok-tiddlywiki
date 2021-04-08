@@ -1,0 +1,11 @@
+created: 20210131141526918
+modified: 20210131150316213
+tags: 
+title: Sn:WikitextLinksExample
+type: text/vnd.tiddlywiki
+
+You can read about links in the [[Links]] section.
+
+You can [[read about links|Links]] if you want to learn more about them.
+
+If you have questions that are not related to TiddlyWiki, let me point you to [[Google|https://google.com]], [[DuckDuckGo|https://duckduckgo.com]], or [[Wikipedia|https://en.wikipedia.org]]. (Or, if you prefer a language other than English, try visiting https://wikipedia.org and selecting a language.)

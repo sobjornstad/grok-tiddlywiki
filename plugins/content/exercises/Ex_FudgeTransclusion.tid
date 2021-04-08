@@ -1,0 +1,11 @@
+created: 20200604014215820
+length: s
+modified: 20210130174422990
+origin: Transclusions
+tags: Exercise
+title: Ex:FudgeTransclusion
+type: text/vnd.tiddlywiki
+
+Our initial motivation for extracting the now-infamous fudge tiddler from the `EmployeeProfileSetupMeeting` tiddler was so that we wouldn't accidentally share that information with somebody. Suppose that everyone else at the company also uses TiddlyWiki, so we always share our notes as raw wikitext instead of rendered/formatted output so recipients can paste it directly into their own wikis. In this case, we can rely on transclusion to protect us provided that the fudge tiddler's title isn't too revealing: if we copy the whole tiddler without noticing this inclusion, the recipient won't get the transcluded tiddler and thus won't see our embarrassing notes.
+
+All this is to say, transclude the fudge tiddler into the `EmployeeProfileSetupMeeting` tiddler. What are the advantages and disadvantages of doing it this way as opposed to linking or tagging?

@@ -1,0 +1,8 @@
+created: 20210121003205119
+description: every setting in the control panel has a tiddler here holding your choice of value
+modified: 20210206213445145
+tags: Lie
+title: Ltc:EverySetting
+type: text/vnd.tiddlywiki
+
+Actually, a handful are so important that they have values right under `$:/`, such as [[$:/SiteTitle]]. And you or a plugin author could add items to the control panel that don't store configuration in `$:/config`.

@@ -1,0 +1,17 @@
+created: 20200603203413284
+length: m
+modified: 20210130174505228
+origin: Macros
+tags: Exercise
+title: Ex:MacroAdjacency
+type: text/vnd.tiddlywiki
+
+Rather than create a macro for the first version of the Wikipedia link functionality, one might think we could simply use a variable and stick the variable reference immediately next to the article name:
+
+```html
+<$set name="wikipedia" value="https://en.wikipedia.org/wiki/">
+	<<wikipedia>>Aardvark
+</$set>
+```
+
+Try putting this snippet in a tiddler. What happens? Why do you think this might happen?

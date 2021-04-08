@@ -1,0 +1,10 @@
+caption: Skip prefix on match
+created: 20210101191505488
+description: If the question field of the takeaway matches this regular expression, no prefix will be added to the question (e.g., you might feel prefixing questions that contain the word `TiddlyWiki` with `TiddlyWiki` is redundant).
+modified: 20210407150611410
+stackorder: 20
+tags: 
+title: $:/config/sobjornstad/TakeAway/Exporter/InhibitPrefixIfQuestionMatch
+type: text/vnd.tiddlywiki
+
+TiddlyWiki

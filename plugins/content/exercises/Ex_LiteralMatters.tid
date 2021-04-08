@@ -1,0 +1,9 @@
+created: 20210208005356135
+length: m
+modified: 20210208005318293
+origin: Wikification
+tags: Exercise
+title: Ex:LiteralMatters
+type: text/vnd.tiddlywiki
+
+Modify the [[previous exercise|Ex:WikifyWikipediaLink]] so that the value of the `articleName` macro parameter is in quotation marks. What happens? Why do you think this is?

@@ -1,0 +1,11 @@
+created: 20200718205253237
+modified: 20200718205355806
+tags: Answer
+title: Ex:WikipediaLinkSnippet/answer
+type: text/vnd.tiddlywiki
+
+You need three tiddlers.
+
+* `WikipediaLinkSnippet`: tagged `$:/tags/TextEditor/Snippet` and with a caption `Link to Wikipedia article`. No content.
+* `WikipediaLinkSnippet/prefix`: body text `<<wikipediaLink `
+* `WikipediaLinkSnippet/suffix`: body text ` linktext>>`

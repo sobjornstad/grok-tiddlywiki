@@ -1,0 +1,9 @@
+answer: `[all[current]backlinks[]]`
+created: 20210107184854784
+modified: 20210218193804090
+origin: Creating a List of Links and Backlinks
+qtype: rememberq
+question: Write a filter expression that displays the backlinks of the current tiddler. Do not use any field or variable transclusions.
+tags: Takeaway
+title: Ta:20210107184853444
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: `myop:one:two[param]`
+created: 20210206182435827
+modified: 20210311153611993
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: If a filter operator `myop` accepts multiple suffixes, `one` and `two`, and a single parameter `param`, what would the resulting filter step look like?
+tags: Takeaway
+title: Ta:20210206182434279
+type: text/vnd.tiddlywiki

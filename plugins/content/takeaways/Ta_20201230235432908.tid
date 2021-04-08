@@ -1,0 +1,9 @@
+answer: `contains:family[Tom Swift]`
+created: 20201230235434408
+modified: 20210226133235929
+origin: Common Filter Operators
+qtype: rememberq
+question: Write a filter step that finds all tiddlers which have a list field `family` containing the tiddler `Tom Swift` (and possibly other tiddlers).
+tags: Takeaway
+title: Ta:20201230235432908
+type: text/vnd.tiddlywiki

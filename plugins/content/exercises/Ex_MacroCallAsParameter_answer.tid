@@ -1,0 +1,9 @@
+created: 20200603223249332
+modified: 20210116210224354
+tags: Answer
+title: Ex:MacroCallAsParameter/answer
+type: text/vnd.tiddlywiki
+
+{{Sn:AnimalLinkText||MagicSnippet}}
+
+Your choice of parameter name (`initialLetter` in my version) makes no functional difference as long as you use the same name in the parameter list and in the body of the macro. But it's good to be explicit about what you expect the variable to be to make life easier on yourself in the future if you have to reread your macro.

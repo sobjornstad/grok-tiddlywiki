@@ -1,0 +1,21 @@
+created: 20201121235627600
+length: s
+modified: 20210130174538857
+origin: Variables
+tags: Exercise
+title: Ex:NestedSets
+type: text/vnd.tiddlywiki
+
+Consider the following code:
+
+```html
+<$set name="variable" value="1">
+    <<variable>>
+    <$set name="variable" value="2">
+        <<variable>>
+    </$set>
+    <<variable>>
+</$set>
+```
+
+What do you think happens at each reference to `<<variable>>`? Check your answers by pasting this into a new tiddler.

@@ -1,0 +1,9 @@
+answer: `<option value="excellent">An Excellent Choice</option>`
+created: 20210206234006739
+modified: 20210315201127677
+origin: Miscellaneous Widgets
+qtype: rememberq
+question: Write an `option` HTML element which displays the text “An Excellent Choice” and places the text `excellent` in its `$select` widget's bound field.
+tags: Takeaway
+title: Ta:20210206234005759
+type: text/vnd.tiddlywiki

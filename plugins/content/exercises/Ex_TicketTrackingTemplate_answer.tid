@@ -1,0 +1,21 @@
+created: 20200605153922962
+modified: 20210327153247824
+tags: Answer
+title: Ex:TicketTrackingTemplate/answer
+type: text/vnd.tiddlywiki
+
+In the `TicketNumberLink` tiddler:
+
+```html
+\define ticketLink(ticketId)
+[[Ticket #$ticketId$|https://tix.example.com/ticket/$ticketId$]]
+\end
+
+<$macrocall $name="ticketLink" ticketId={{!!ticketnum}} />
+```
+
+In the `OnboardingProcess` tiddler:
+
+```html
+{{||TicketNumberLink}}
+```

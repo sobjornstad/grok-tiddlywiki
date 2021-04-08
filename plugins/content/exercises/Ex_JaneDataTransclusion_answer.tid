@@ -1,0 +1,16 @@
+created: 20200604013733380
+modified: 20200604013754220
+tags: Answer
+title: Ex:JaneDataTransclusion/answer
+type: text/vnd.tiddlywiki
+
+An easy version:
+
+```html
+!! Information about Jane
+
+* ''Email'': {{!!email}}
+* ''Phone'': {{!!phone}}
+* ''Family'': {{!!family}}
+* ''Manager'': {{!!manager}}
+```

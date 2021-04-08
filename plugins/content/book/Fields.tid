@@ -1,0 +1,21 @@
+created: 20200530170241199
+description: Tiddlers are made up of fields.
+modified: 20210327180114854
+parent: The Shape of TiddlyWiki
+tags: Section Concept
+title: Fields
+type: text/vnd.tiddlywiki
+
+[[Tiddlers]] are made up of ''fields''. Fields have a //name//, which describes what information they store, and a //value//, which contains the actual information. For example, the field named `description` might have a value of `This tiddler discusses fields in TiddlyWiki`.
+
+The most important fields of every tiddler are the ''title'' and the ''text''; the title is how you reference the tiddler from elsewhere in the wiki, while the text contains the actual content, written in a markup language called [[wikitext|Wikitext]] (more on that in the next section). Other built-in fields include the tiddler's tags (more on those [[in a few moments|Tags]] too), the user who last edited the tiddler, and the times the tiddler was created and last modified.
+
+In addition to the built-in fields, you can ''add your own fields'' to any tiddler on the fly, should you wish to. For instance, you might add fields to a tiddler containing meeting notes to define what time the meeting happened and who attended. Storing this information in separate fields, rather than directly within the text of the tiddler, lets you retrieve specifically that information for use in another part of the wiki, or search and filter based on it.
+
+Here are this tiddler's fields as an example (not including the `text` field, since that would cause the example to include itself!). Field names are in the left column, while their values are in the right column. Don't worry if you don't understand the meaning or significance of all these fields yet.
+
+{{||$:/core/ui/TiddlerInfo/Fields}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

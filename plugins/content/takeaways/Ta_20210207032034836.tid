@@ -1,0 +1,9 @@
+answer: Give it a filter that has either one or zero output tiddlers depending on the state of the condition; if it has one, the body of the widget will be displayed, and if it has zero it won't.
+created: 20210207032035835
+modified: 20210314155018896
+origin: Hiding and Showing Things
+qtype: rememberq
+question: How can you use the `$list` widget to display some content only if a condition is true?
+tags: Takeaway
+title: Ta:20210207032034836
+type: text/vnd.tiddlywiki

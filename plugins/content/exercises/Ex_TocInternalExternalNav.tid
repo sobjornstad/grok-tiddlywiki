@@ -1,0 +1,10 @@
+complete: 
+created: 20200603195801747
+length: m
+modified: 20210321012406640
+origin: Creating Hierarchies with a Table of Contents
+tags: Exercise
+title: Ex:TocInternalExternalNav
+type: text/vnd.tiddlywiki
+
+There are two more (rarely used) kinds of tables of contents, `toc-tabbed-internal-nav` and `toc-tabbed-external-nav`. Try these out. Can you figure out the difference between them?

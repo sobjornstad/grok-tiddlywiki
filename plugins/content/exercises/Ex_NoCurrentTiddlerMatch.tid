@@ -1,0 +1,9 @@
+created: 20210207181812648
+length: s
+modified: 20210207181745077
+origin: Using a Tag Tiddler as a Template
+tags: Exercise
+title: Ex:NoCurrentTiddlerMatch
+type: text/vnd.tiddlywiki
+
+Why didn't we use `<<currentTiddler>>` instead of hard-coding the `Reading` tag above?

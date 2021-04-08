@@ -1,0 +1,11 @@
+created: 20210207214601805
+modified: 20210207214502838
+tags: Answer
+title: Ex:ViewTemplateExplicitHideReveal/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$reveal state="!!hide-contactinfo" type="nomatch" text="yes">
+	... the rest of the template
+</$reveal>
+```

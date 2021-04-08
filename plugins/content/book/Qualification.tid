@@ -1,0 +1,59 @@
+created: 20210206154042167
+description: The `qualify` macro lets you avoid having state in one use of a template affect another use of a template.
+modified: 20210317012814076
+parent: Tips and Tricks
+tags: Section
+title: Qualification
+type: text/vnd.tiddlywiki
+
+When we write templates that rely on ''maintaining state'' (that is, values stored in fields somewhere that control the display of the template), we may run into a problem: if the template is displayed in multiple locations at once, the state can collide and cause changes in one location to apply to the other locations as well.
+
+This will become more clear with an example. Put the following on a template called `SelectiveTemplate` in your example wiki:
+
+```html
+<$vars stateTiddlerName="$:/temp/IsOpen">
+	<$reveal state=<<stateTiddlerName>> type="match" text="yes">
+			<$button set=<<stateTiddlerName>> setTo="no">Close</$button>
+
+			Here is some information that can be selectively hidden and shown: This tiddler's name is {{!!title}}.
+	</$reveal>
+
+	<$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
+			<$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
+	</$reveal>
+</$vars>
+```
+
+Leaving the template tiddler open, add a template transclusion `{{||SelectiveTemplate}}` to some other tiddler. Now, click the //Open// button on one of the tiddlers. You'll see that the other tiddler's expandable section opens as well.
+
+This makes sense, given that both `$reveal` widgets are bound to the same tiddler field. In a few cases, this might even be what we want. But in most cases, we'd probably like them to expand and contract separately.
+
+One solution is to place the state in a field on the tiddler itself, using something like `set="!!isopen"`. Sometimes, this is quite appropriate, but other times, editing the tiddler that is using a template is messy, or even doesn't work at all. The `qualify` macro provides a more robust method. Given a tiddler title, it adds a number to the end of that title that is guaranteed to be unique for each location the invocation of the `qualify` macro might be displayed within the story river (it even takes into account the fact that one tiddler might be recursively transcluded into multiple other tiddlers).
+
+We can fix our example above using the `qualify` macro as follows:
+
+```html
+<$vars stateTiddlerName=<<qualify "$:/temp/IsOpen">>>
+	<$reveal state=<<stateTiddlerName>> type="match" text="yes">
+			<$button set=<<stateTiddlerName>> setTo="no">Close</$button>
+
+			Here is some information that can be selectively hidden and shown: This tiddler's name is {{!!title}}.
+	</$reveal>
+
+	<$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
+			<$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
+	</$reveal>
+</$vars>
+```
+ 
+If you go look in `$:/temp` after clicking on each of the buttons, you'll see several unique tiddlers that look like `IsOpen-148223948` or `IsOpen--723342025`, each of which contains a unique value describing whether the expandable section is open.
+
+
+!! Exercises
+
+{{Ex:QualifyMultipleCalls||ExerciseTemplate}}
+{{Ex:ContactRadioButtonQualification||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

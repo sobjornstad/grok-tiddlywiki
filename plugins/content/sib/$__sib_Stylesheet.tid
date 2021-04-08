@@ -1,0 +1,129 @@
+created: 20210116181556596
+modified: 20210408160939407
+tags: $:/tags/Stylesheet
+title: $:/sib/Stylesheet
+type: text/vnd.tiddlywiki
+
+div.msbs-snippet {
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div.msbs-snippet pre {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sib-magic-bottom-border .tc-tab-content {
+  margin: 0;
+	border-bottom: 1px solid <<color tab-border>>;
+}
+
+.ltc-link {
+	border-bottom: 1px dashed <<color "tiddler-link-foreground">>;
+	display: inline;
+}
+
+table.gtw-form {
+	width: 100%;
+	font-size: 14px;
+}
+table.gtw-form th {
+	text-align: left;
+}
+table.gtw-form td input[type=text], table.gtw-form td select {
+	width: 100%;
+}
+table.gtw-form td {
+	vertical-align: top;
+}
+
+.gtw-bordered-element {
+	border: 2px solid <<color button-border>>;
+	padding: 5px;
+}
+
+.gtw-textual-button svg {
+	font-size: 0.6em;
+	padding: 0.2em;
+	margin: 1px;
+	background: none;
+	border: 1px solid <<colour tiddler-controls-foreground>>;
+	border-radius: 0.25em;
+  height: 18px;
+	width: 18px;
+	margin-bottom: -2px;
+}
+
+.gtw-textual-icon svg {
+	font-size: 0.6em;
+	padding: 0.2em;
+	margin: 1px;
+	background: none;
+  height: 16px;
+	width: 16px;
+	margin-bottom: -3px;
+}
+
+.gtw-bookmarks-list {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/* Add more horizontal space and a border for headings, except the title. */
+h2:not(.tc-title) {
+  /*margin-top: 6ex; -- for some bizarre reason Firefox and Chrome are calculating ex-height differently, so eyeballed an appropriate number of inches*/
+  margin-top: 0.4in;
+  padding-bottom: 5px;
+	border-bottom: 0.05px solid <<color foreground>>;
+}
+
+/* Limit line length to a traditionally-longish but readable value. */
+div.tc-tiddler-body {
+  max-width: 35em;
+	margin: auto;
+}
+
+div[data-tiddler-title*="Outline"] div.tc-tiddler-body,
+div[data-tiddler-title*="Exercise Browser"] div.tc-tiddler-body,
+div[data-tiddler-title*="Takeaway Browser"] div.tc-tiddler-body,
+div[data-tiddler-title*="interface.png"] div.tc-tiddler-body,
+div[data-tiddler-title*="Send Feedback"] div.tc-tiddler-body,
+div[data-tiddler-title*="Wikitext Reference"] div.tc-tiddler-body
+{
+	max-width: 100%;
+}
+
+/* Allow the story river to get a good bit wider than the text since this gives useful space to the navbars and balances out any empty space more nicely, but not so long that it looks ridiculous. */
+div.tc-tiddler-frame {
+  max-width: 60em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tc-storyview-zoomin-tiddler {
+	position: unset;
+}
+
+/* Because most of our content is shadow tiddlers, it doesn't make sense to bold the links. */
+a.tc-tiddlylink-shadow {
+	font-weight: normal;
+}
+
+/* The close link color is nearly invisible on the dark palette. */
+.tc-sidebar-lists button.gtw-close-link {
+	color: <<color muted-foreground>>;
+}
+
+
+/* The palette makes it just a wee bit too hard to see internal links. This drives up the font weight just enough to make them easier to see without making them look bold.
+a.tc-tiddlylink-resolves, a.tc-tiddlylink-shadow.tc-tiddlylink-resolves {
+	font-family: "Source Sans Pro Semibold";
+	font-weight: normal;
+	font-style: normal;
+} */

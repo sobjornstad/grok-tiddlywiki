@@ -1,0 +1,53 @@
+created: 20200717234504136
+description: A //data tiddler// packs a series of name-value pairs into a single tiddler's text field.
+modified: 20210316171449267
+parent: More Organizational Tools
+tags: Section
+title: Data Tiddlers
+type: text/vnd.tiddlywiki
+
+Once in a while you may end up with a bunch of simple data in a key-value pair format, where you have one piece of information and want to look up the other. For instance, let's suppose we want to create a display of what holiday today is, if it is a holiday. We have a list of the months and days of some common United States holidays (we'll pretend for the moment that no holidays exist that don't fall on the same date every year!):
+
+|!Date|!Holiday name|
+|01/01|New Year's Day|
+|07/04|Independence Day|
+|10/31|Halloween|
+|12/25|Christmas Day|
+
+If we have lots of other information about these holidays, it would make sense to put them each in a tiddler and use fields to store the different data points we wanted to track about each holiday. However, if this is all we have, and we just want to be able to see if a particular day is a holiday, that might be overkill.
+
+We might also find the approach of creating tiddlers annoying if we have a way to import this data from somewhere outside the wiki -- we can likely get a list of holidays in some standard format, but TiddlyWiki tiddlers are not likely to be one of those standard formats!
+
+For these situations, ''data tiddlers'' can come in handy. A data tiddler is a tiddler with a special content type whose text field contains a series of key-value pairs, like the date-name pairs shown in the table above. There are two ways to format a data tiddler: TiddlyWiki's ''built-in dictionary format'', and ''JSON'' (JavaScript Object Notation, a standard data interchange format). If you're familiar with JSON, be aware that only very simple JSON files with a single level of key-value pairs are supported (no arrays or objects).
+
+Each entry in a data tiddler is called a ''property'', and the key of each property is called its ''index''.
+
+
+!! Creating a data tiddler
+
+Let's create a data tiddler called `UsHolidays` for these holidays. The tiddler's content will look like this:
+
+```html
+01/01: New Year's Day
+07/04: Independence Day
+10/31: Halloween
+12/25: Christmas Day
+```
+
+You can see that the keys (the month and day) are separated from the values (the name of the holiday) by a colon. Spaces before or after the colon don't affect the value TiddlyWiki sees.
+
+Paste this content into a new tiddler, then from the `Type` drop-down underneath the text field, pick `application/x-tiddler-dictionary` and save the tiddler.
+
+To get the value, we use a special addition to the normal transclusion syntax: to get the value for the index `07/04` from the `UsHolidays` data tiddler, we write `{{UsHolidays##07/04}}`. You can also use the `getindex` filter operator, like `[[UsHolidays]getindex[07/04]]`.
+
+
+!! Exercises
+
+{{Ex:HolidayToday||ExerciseTemplate}}
+{{Ex:VeryOrdinaryDay||ExerciseTemplate}}
+{{Ex:JsonHoliday||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

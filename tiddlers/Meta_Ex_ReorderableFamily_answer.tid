@@ -1,0 +1,14 @@
+created: 20200608023224477
+modified: 20210407173457850
+tags: Answer Meta
+title: Meta:Ex:ReorderableFamily/answer
+type: text/vnd.tiddlywiki
+
+The relevant list item:
+
+```html
+<li>
+  ''Family'':
+  <$macrocall $name="list-links-draggable" tiddler=<<currentTiddler>> field="family" />
+</li>
+```

@@ -1,0 +1,20 @@
+created: 20210131154145461
+modified: 20210202190728899
+tags: 
+title: Sn:WikitextStyles
+type: text/vnd.tiddlywiki
+
+@@color:red;
+Here is some red text.
+@@
+
+<style>
+.my-blue-bold-class {
+	font-weight: bold;
+	color: blue;
+}
+</style>
+
+@@.my-blue-bold-class
+Here is some blue, bold text.
+@@

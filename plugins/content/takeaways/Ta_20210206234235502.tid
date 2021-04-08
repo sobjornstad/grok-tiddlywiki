@@ -1,0 +1,9 @@
+answer: `$select`, `$list`, and `option`.
+created: 20210206234236937
+modified: 20210315200755131
+origin: Miscellaneous Widgets
+qtype: rememberq
+question: What three widgets/HTML elements must be nested together to produce a drop-down list with dynamically chosen elements in TiddlyWiki?
+tags: Takeaway
+title: Ta:20210206234235502
+type: text/vnd.tiddlywiki

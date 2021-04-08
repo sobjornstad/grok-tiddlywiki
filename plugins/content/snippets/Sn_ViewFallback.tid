@@ -1,0 +1,13 @@
+adate: 
+created: 20210123195102822
+modified: 20210123200150412
+tags: 
+title: Sn:ViewFallback
+type: text/vnd.tiddlywiki
+
+<$button set="!!adate" setTo={{!!created}}>Show Created Date</$button>
+<$button set="!!adate" setTo="">Hide Created Date</$button>
+
+<$view field="adate" format="date" template="This tiddler was created on MMM DD, YYYY.">
+	The date is not currently set.
+</$view>

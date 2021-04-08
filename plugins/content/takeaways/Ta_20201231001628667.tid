@@ -1,0 +1,9 @@
+answer: More than one newline in a row starts a new paragraph.
+created: 20201231001633860
+modified: 20210302162915214
+origin: HTML
+qtype: rememberq
+question: What exception does TiddlyWiki add to the standard rules of HTML whitespace?
+tags: Takeaway
+title: Ta:20201231001628667
+type: text/vnd.tiddlywiki

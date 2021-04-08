@@ -1,0 +1,9 @@
+created: 20210206220335570
+length: m
+modified: 20210206220346247
+origin: Miscellaneous Widgets
+tags: Exercise
+title: Ex:CountWidgetReplacement
+type: text/vnd.tiddlywiki
+
+Go to the `WikiStatistics` tiddler, originally created in the exercise [[Ex:WikiStatistics]], and replace any numbers that you can with an appropriate `$count` widget.

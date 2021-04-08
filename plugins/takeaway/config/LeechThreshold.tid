@@ -1,0 +1,10 @@
+caption: Leech threshold
+created: 20210123180740015
+description: Number of lapses (nonconsecutive selections of //Forgot//) at which the leech warning banner will appear. If the warning is hidden, it will appear again at every multiple of this number.
+modified: 20210407150859105
+stackorder: 80
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/LeechThreshold
+type: text/vnd.tiddlywiki
+
+4

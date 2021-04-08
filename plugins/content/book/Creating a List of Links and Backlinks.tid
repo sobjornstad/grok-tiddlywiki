@@ -1,0 +1,69 @@
+created: 20200718160337924
+description: Dive into adding custom tooling to TiddlyWiki by building a list of outbound and inbound links that appears at the bottom of every tiddler.
+modified: 20210317010344691
+parent: Looking Under the Hood
+tags: Section
+title: Creating a List of Links and Backlinks
+type: text/vnd.tiddlywiki
+
+Let's put all everything we've learned so far about customizing TiddlyWiki together by building a useful and commonly requested tool. Several plugins offer prefabricated versions of the tool we're about to discuss, which you might or might not prefer to building your own, but creating our own will be educational at the least.
+
+We know we can get at the backlinks of a tiddler by looking at the info section of a tiddler. In many types of wikis, however, it's convenient to have the backlinks much more obvious. Let's build some custom functionality to ''show all of the backlinks at the bottom of each tiddler'' without having to click on anything. While we're at it, let's summarize the forward links in the tiddler here, too: at the bottom of the tiddler, we'll have two columns, the left column showing all the forward links and the right column showing all the backward links. (You may notice that this is strikingly like the “related topics” view you can find in the footer of any section in this book -- so no cheating by looking there!)
+
+Most of this section will be presented as a series of exercises: you'll be given a small incremental step in the implementation to try on your own, and in the answer I will show one possible way to do it. At that point, you're free to either change your implementation to match the answer or attempt to continue with your own version.
+
+
+!! Building the logic
+
+{{Ex:BasicBacklinksList||ExerciseTemplate}}
+{{Ex:BasicLinksList||ExerciseTemplate}}
+{{Ex:LinkedTiddlerExcerpt||ExerciseTemplate}}
+{{Ex:CreatingLinkDivs||ExerciseTemplate}}
+{{Ex:LinkDivClasses||ExerciseTemplate}}
+
+
+!! Improving the formatting
+
+Custom formatting can be added to tiddlers using a //stylesheet//. Stylesheets are written in the [[CSS|https://en.wikipedia.org/wiki/Cascading_Style_Sheets]] (Cascading Style Sheets) language, an extremely powerful if slightly obtuse formatting language that controls the display of every web page you've ever looked at. You can either put a stylesheet in an individual tiddler within `<style>` tags (this is called an //inline// stylesheet) or make it global to the wiki. See [[Stylesheets]] if you know a little CSS and want more details on the options TiddlyWiki provides here.
+
+Teaching you CSS is outside the scope of this book -- and I'm no expert myself anyway -- so I'm just going to give you a stylesheet to use with this exercise. If you're interested in learning more, there are a wide variety of resources on the Internet.
+
+```css
+<style>
+div.sib-link-display {
+  border: 1px dashed white;
+  overflow: auto;
+  padding: 2px;
+}
+div.sib-link-display div ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+div.sib-link-display div ul div.sib-excerpt {
+  padding-left: 1em;
+  color: <<colour muted-foreground>>;
+}
+div.sib-links {
+  width: 50%;
+  float: left;
+  padding-right: 0.5em;
+}
+div.sib-backlinks {
+  width: 50%;
+  float: right;
+  padding-left: 0.5em;
+}
+</style>
+```
+
+If you named the classes you put on your divs something different than I did, you'll need to replace the names in the part before each opening `{` (this part is called the //CSS selector//). Otherwise, just paste this at the bottom of the tiddler and save it, and your links should suddenly look much prettier.
+
+
+!! Final tweaks
+
+{{Ex:ExcerptConfigurationTiddler||ExerciseTemplate}}
+{{Ex:PaletteInvestigation||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

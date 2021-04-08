@@ -1,0 +1,13 @@
+created: 20200603200049928
+length: m
+modified: 20210130174418398
+origin: Creating Hierarchies with a Table of Contents
+tags: Exercise
+title: Ex:FudgeAdviceReflection
+type: text/vnd.tiddlywiki
+
+Revisit the tiddler you created in the previous exercise.
+
+* Logically, is it a child of that meeting? Or is it a separate idea that just happened to occur during that meeting?
+* Would it be better to use a different kind of relationship, like a link?
+* Think about the title you chose: does it [[serve as metacommentary on the idea|Tiddler Titles]]?

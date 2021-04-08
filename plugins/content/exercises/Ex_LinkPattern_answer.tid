@@ -1,0 +1,27 @@
+created: 20201122171832715
+modified: 20210326025647304
+tags: Answer
+title: Ex:LinkPattern/answer
+type: text/vnd.tiddlywiki
+
+```html
+<ul>
+    <$list filter="[tag[Meeting]!sort[at]]">
+        <li><$link to=<<currentTiddler>>><<currentTiddler>></$link></li>
+    </$list>
+</ul>
+```
+
+Side note: you can abbreviate this. If the text of the link should be be the same as the target, you can leave the body empty using a self-closing tag:
+
+```html
+<$link to=<<currentTiddler>>/>
+```
+
+And in fact, if the target should be the current tiddler, you can just say:
+
+```html
+<$link />
+```
+
+We'll be seeing much more of using `<<things in angle brackets>>` as attribute values in widgets and HTML tags when we learn about [[variables, macros, and transclusions|Variables, Macros, and Transclusions]].

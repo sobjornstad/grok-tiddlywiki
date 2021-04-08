@@ -1,0 +1,11 @@
+created: 20210116204238244
+modified: 20210116204148381
+tags: 
+title: Sn:ParameterlessMacro
+type: text/vnd.tiddlywiki
+
+\define disclaimer()
+(This paragraph does not represent the formal opinion of my company.)
+\end
+
+You need to use the Really Annoying Five-Factor Authentication Process to get into the Employee Information System if it is a Tuesday, unless you have also purchased coffee (tea or pastries do not count) in the company cafeteria earlier in the day. <<disclaimer>>

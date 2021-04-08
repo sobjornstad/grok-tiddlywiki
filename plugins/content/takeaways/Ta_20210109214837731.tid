@@ -1,0 +1,9 @@
+answer: `<$action-sendmessage $message="tm-new-tiddler" title=NewT tags={{!!tags}}/>`
+created: 20210109214850266
+modified: 20210321231627596
+origin: Creating Tiddlers With Predefined Fields
+qtype: rememberq
+question: Write wikitext for an `$action-sendmessage` widget that creates a new tiddler called `NewT` tagged with the same tags as the current tiddler and opens it for editing.
+tags: Takeaway
+title: Ta:20210109214837731
+type: text/vnd.tiddlywiki

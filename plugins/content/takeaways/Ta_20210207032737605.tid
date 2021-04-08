@@ -1,0 +1,9 @@
+answer: `match` (show contents if the text reference matches `text`) and `nomatch` (show contents if it doesn't match)
+created: 20210207032739798
+modified: 20210320135811270
+origin: Hiding and Showing Things
+qtype: rememberq
+question: What are the two most common values for the `type` attribute of the `$reveal` widget?
+tags: Takeaway
+title: Ta:20210207032737605
+type: text/vnd.tiddlywiki

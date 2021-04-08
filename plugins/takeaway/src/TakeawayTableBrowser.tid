@@ -1,0 +1,59 @@
+created: 20210124150840658
+modified: 20210408142359910
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/TakeawayTableBrowser
+type: text/vnd.tiddlywiki
+
+<table width="100%" class="mm-takeaway-browser">
+	<col style="width: 3em;">
+	<$list filter="[[$:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState]answer[yes]]">
+		<col style="width:40%;">
+		<col style="width:40%;">
+		<col style="width:20%;">
+	</$list>
+	<$list filter="[[$:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState]answer[no]]">
+		<col style="width:70%;">
+		<col style="width:30%;">
+	</$list>
+	<col style="width: 3.5em;">
+	<col style="width: 4em;">
+	<col style="width: 4em;">
+	<col style="width: 4.2em;">
+	<col style="width: 6em;">
+	<thead>
+	<tr>
+		<th/>
+		<th>Question/Cloze</th>
+		<$list filter="[[$:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState]answer[yes]]">
+			<th>Answer</th>
+		</$list>
+		<th>Section</th>
+		<th>seen</th>
+		<th>ivl</th>
+		<th>ease</th>
+		<th>lapses</th>
+		<th>due</th>
+	</tr>
+	</thead>
+	<tbody>
+	<$vars invertsort={{$:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState!!invertsort}} sort={{$:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState!!sort}}>
+		<$set name=thesortfrag value=<<sortfrag>>>
+		<$list filter=<<curFilt>>>
+		<tr>
+			<td><$link to={{!!title}}>edit</$link></td>
+			<td>{{!!question}}</td>
+			<$list filter="[{$:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState!!answer}match[yes]]" variable=_>
+				<td>{{!!answer}}</td>
+			</$list>
+			<td><$link to={{!!origin}}/></td>
+			<td><$view field="seen">no</$view></td>
+			<td><$view field="ivl">(new)</$view></td>
+			<td><$list filter="[all[current]has[ease]]" emptyMessage="(new)">{{!!ease}}%</$list></td>
+			<td><$view field="lapses">0</$view></td>
+			<td><$view field="due" format="date" template="YYYY-0MM-0DD">(new)</$view></td>
+		</tr>
+	</$list>
+	</$set>
+	</$vars>
+	</tbody>
+</table>

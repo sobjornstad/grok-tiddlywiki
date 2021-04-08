@@ -1,0 +1,11 @@
+created: 20210116205906718
+modified: 20210327153554284
+tags: 
+title: Sn:SimpleMacrocallWidget
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName, linkText)
+[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+<$macrocall $name="wikipediaLink" linkText="Wikipedia on Aardvarks" articleName=Aardvark />

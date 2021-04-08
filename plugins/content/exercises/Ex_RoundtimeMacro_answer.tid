@@ -1,0 +1,48 @@
+created: 20200822194914928
+modified: 20200822194933716
+tags: Answer
+title: Ex:RoundtimeMacro/answer
+type: text/vnd.tiddlywiki
+
+Here's one version. I'm not a JavaScript developer, so there are probably easier ways to do this!
+
+```javascript
+/*\
+title: roundtime
+type: application/javascript
+module-type: macro
+
+Round TiddlyWiki-formatted times to the nearest 15 minutes
+\*/
+
+(function(){
+"use strict";
+
+exports.name = "roundtime";
+exports.params = [
+	{name: "timestamp"}
+];
+exports.run = function(timestamp) {
+    var hours = timestamp.substring(8, 10);
+    var minutes = timestamp.substring(10, 12);
+
+    if (minutes < 8) {
+        minutes = 0;
+    } else if (minutes < 23) {
+        minutes = 15;
+    } else if (minutes < 38) {
+        minutes = 30;
+    } else if (minutes < 53) {
+        minutes = 45;
+    } else {
+        minutes = 0;
+        hours++;
+    }
+
+    return timestamp.substring(0, 8) + hours + minutes + "00000";
+};
+
+})();
+```
+
+(If we wanted to dig into extracting seconds as well, we could round a bit more precisely. This is good enough for explanatory purposes!)

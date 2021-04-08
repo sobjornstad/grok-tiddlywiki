@@ -1,0 +1,9 @@
+created: 20200718205147878
+length: m
+modified: 20210130174645284
+origin: Stamps
+tags: Exercise
+title: Ex:WikipediaLinkSnippet
+type: text/vnd.tiddlywiki
+
+Create a snippet //Link to Wikipedia article// that inserts a call to the `wikipediaLink` global macro. Specifically, it should use the prefix/suffix feature so that if you highlight `Aardvark`, you get `<<wikipediaLink Aardvark linktext>>`.

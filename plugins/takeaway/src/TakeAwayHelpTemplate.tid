@@ -1,0 +1,9 @@
+created: 20210123234617682
+modified: 20210407150331106
+tags: $:/tags/ViewTemplate
+title: $:/plugins/sobjornstad/TakeAway/TakeAwayHelpTemplate
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]prefix[TakeAway Help]!match[TakeAway Help]]">
+<div style="text-align: center;">This is a section of TakeAway's help. [[See all help pages|TakeAway Help]].</div>
+</$list>

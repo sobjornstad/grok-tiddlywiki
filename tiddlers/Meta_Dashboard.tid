@@ -1,0 +1,128 @@
+created: 20200531142851888
+modified: 20210408161257454
+tags: Meta
+title: Meta:Dashboard
+type: text/vnd.tiddlywiki
+
+!! Release
+
+* [Out with Adithya] Cover art and favicon
+* Finish setting up my Stripe account.
+* Publish the donate page.
+
+
+!! Content
+
+* If I can, try running through exercises to make sure they all work as intended.
+* Make sure that we have sufficient creative and why questions -- these can be the hardest to spot at first. And generally revise question wording?
+* Create a little video introducing the book for "How to Use This Book". (Do this closer to the end in case things change...) Could have a landing page with this, too?
+
+
+!! Technical
+
+* Retest on Mac and Windows
+* Make $:/sib/Dateops work correctly with leap years (I believe there's a new version on the forum someone created for me, but need to test)
+
+
+!! Todo list
+
+{{Meta:TODO}}
+
+
+!! Nice-to-have things, maybe for a later edition
+
+For takeaways:
+
+* Figure out how to instruct users in "leveling up" their spaced-repetition skills.
+* Some bubbles when new to a particular place
+* Overdue calculations? -- It //looks// like it's calculating from the former date instead of the current date by mistake!
+* A mark/flag function?
+* A bury function
+* Type-answer and diff options?
+* Interval fuzzing and/or capping
+* Give some encouragement if someone hasn't studied takeaways for a while
+* Ability to reorder takeaways?
+* Ability to prioritize your own takeaways over default ones? [Walt] (careful not to de-randomize, but maybe pull them forward ahead of the cap or something?)
+* Ability to skip in-text takeaways, rather than having to work through them and then uncollecting them
+* Permanently fix TR bug that puts the cloze identifier line in the wrong place (change overridden in here right now -- but not visible since it's hidden in most circumstances)
+* Ability to undo review (we could do a single-level undo easily enough by just saving off the tiddler and its values to a temp tiddler before updating it)
+* Getting some decent examples of takeaways or screenshots or something in [[TakeAway Help]] would be extremely helpful.
+
+Other:
+
+* Consider more summary sections
+* Think further about cross-linking videos and text, and what other kinds of videos would be helpful [Walt]
+* Extract TakeAway into a plugin.
+* Improve the options in the exercises browser, making it a bit more like the takeaways one.
+* Glossary?
+* Improve the reliability of the feedback sender; save feedback locally for review [Stephane]
+* Are people OK with the s/m/M/h system, or would T-shirt sizes be better? (Odin)
+* Add a brief blip about dynamic stylesheets.
+
+!! Solicitations
+
+* More resources and plugins?
+
+!! Major changes
+
+* Highlight cloze deletions [Odin]
+* Don't show the `c1::` on multi-clozes [several folks, even though I had it listed out as an outstanding problem lol]
+* Allow for an initial rating in text. Next day if forgotten, 5 days if remembered. [Andy M.]
+* There should be a TakeAway help link on the template for editing a takeaway. (Also added some other useful links to the top of the editor screen.)
+* Haven't mentioned how to install default plugins (I actually did, but I improved it)
+* Quine2 should be mentioned for using wikis on a mobile device [Walt]: Added more details in [[Options for Saving and Hosting Your Wiki]].
+* Make the takeaways into flashcards so that it appears less overwhelming when there are a lot. And don't show the list at all by default.
+* Limit the width of flashcards in the TakeAway Reviewer to 600px and center it in the viewport; I have been struggling to read the questions. May consider increasing the font size, too.
+* Emphasize terms and the most important points with sparing use of ''bold''.
+* Add icons to the tabs in the live preview, the takeaway view within each tiddler, and the wikitext reference.
+* Show relevant icons using the `<<textual-button>>` macro within the text when a button in TW is being referenced [Stéphane]
+* Added a [[Summary of Macro and Transclusion Syntax]] based on my response to [[this forum thread|https://groups.google.com/g/tiddlywiki/c/UoiZjeth-cU/m/lSbxj9OBAwAJ]], assisting with an issue that I've seen many people have.
+* Fixed several out-of-order exercises requiring the reader to do things they hadn't learned about yet, or edit tiddlers they hadn't created yet, caused by reordering sections after writing the exercises. [Various]
+* Added horizontal rules after headings so as to break up long tiddlers better. [Various people vaguely stated they had trouble finding their place]
+* Added notes to "how to use this book" on navigating between open tiddlers and the difference between internal and external links [Stephané]
+* Save the state of the story river when exiting, but make `[[Grok TiddlyWiki]]` the default story river when you first open the page [Walt]
+* Allow bookmarking sections [Stephané, others]
+* Switched to SIL fonts Source Sans Pro and Inconsolata, and embedded them so that the wiki will look the same on all computers.
+* Redesigned page layout so that lines are no more than 35em long except in tiddlers explicitly defined otherwise in the stylesheet, and the story river is no more than 60em wide. This was even more work than I expected it to be, but makes a //giant// difference in legibility. [Stanley, others]
+* Don't show the edit toolbar in the live-example editor; it takes up a ton of space and isn't usually helpful [Diego]
+* Moved the "up one level" item should be moved down in the navigator to give more space to the right/left sides on the newly narrowed page layout.
+* Fix text colliding in the TakeAway reviewer on particularly narrow screens.
+* Removed the TW5-Locator tab and added a new "Contents" tab that matches the rest of the wiki's styling, with a quick filter bar [Mohammad, Diego]
+* Make the navigator bar behave properly around the [[Supplemental Exercises]] chapter, which has no sections.
+* Made the "takeaways" link in the upper-right go to the TakeAway browser rather than the reviewer, with a prominent link to the reviewer at the top of the browser if reviews are due; this way it matches the function of the "exercises" link.
+* Move the takeaway notification to the sidebar and make it stand out a bit more without being obnoxious, using a big green info icon. This prevents TW from scrolling the banner off the screen and making it hard to spot.
+* Add a note if there are no tiddlers open so that users who accidentally close everything understand what's going on. [Stephané]
+* ''Here version 0.3.0-preview was released to the review group''
+* Navigator: [[Appendices]] chapter incorrectly showed only "at last chapter" when it should have a dive-into arrow as well.
+* Rename chapter 4, swapping "variables" and "macros" to match the order of the sections [Sinisa]
+* Fix the story river not being centered in //zoomin// story view.
+* Update the TakeAway Help to match new design.
+* Change all `$macrocall` widgets to use quotes around the name for consistency [Stephané]
+* Fix exercise in [[Ordering Tiddlers]] referring to several concepts that we haven't come to yet. [Several folks]
+* Some exercises on [[Templates and the Current Tiddler]] didn't use the `$link` widget for references to the current tiddler where they should have.
+* Mention the new filter prefixes in 5.1.23.
+* Clean up and rewrite all of the descriptions.
+* Add references to the new TiddlyWiki Links Aggregator.
+* Tweak wording of several takeaways that were called out as issues by reviewers.
+* Tweak wording of several sections in Chapter 4 [Sinisa]
+* Improve display of takeaway lists on small screens.
+* Improve vertical spacing of takeaway lists and make more consistent across different devices.
+* Improve plugin metadata.
+* Add link describing how to upgrade the wiki using a plugin drag-and-drop.
+* Shadowed much more content into the upgradeable plugin.
+* Renamed the `Note` tag to `Takeaway`, and changed the prefix from `Tr:` to `Ta:`, to reflect current terminology.
+* Don't store state information within the Takeaway Browser and Exercise Browser.
+* Add "help" link to takeaways.
+
+
+
+!! Removed ideas
+
+* Diagram for [[Using Filter Expressions]] with expressions/runs/steps?
+* Multi-line questions/answers for code snippets (will have to update TiddlyRemember for this...)
+
+
+
+!! Reviewers
+
+[[Meta:ReviewerList]]

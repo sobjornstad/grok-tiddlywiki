@@ -1,0 +1,26 @@
+caption: {{$:/core/images/list-bullet}} Lists
+created: 20210131145945917
+modified: 20210320145234700
+tags: [[Wikitext Reference]]
+title: Wr:Lists
+type: text/vnd.tiddlywiki
+
+Bulleted (//unordered//) lists:
+
+{{Sn:WikitextBulletedList||MagicSnippet}}
+
+Numbered (//ordered//) lists:
+
+{{Sn:WikitextNumberedList||MagicSnippet}}
+
+Bulleted and numbered lists can be combined:
+
+{{Sn:WikitextCombinedList||MagicSnippet}}
+
+To nest multiple lines of [[HTML]] within a wikitext list, for instance to include multiple paragraphs or other complicated content within a single list item, you can open a `<div>` at the end of a list element:
+
+{{Sn:WikitextHtmlInList||MagicSnippet}}
+
+Definition lists:
+
+{{Sn:WikitextDefinitionList||MagicSnippet}}

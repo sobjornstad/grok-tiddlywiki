@@ -1,0 +1,30 @@
+created: 20200603185713595
+length: M
+modified: 20210206183436530
+tags: Answer
+title: Ex:AlphabeticallyLastDescription/answer
+type: text/vnd.tiddlywiki
+
+The answer, at least as of TiddlyWiki 5.1.23 with no plugins, is ''Wrap selection in square brackets''.
+
+Here's the filter I used:
+
+```
+[all[shadows]tag[$:/tags/EditorToolbar]get[description]split[{{]split[}}]get[text]!sort[]first[]]
+```
+
+Here's a live version. The `{{{triple curly braces}}}` tell TiddlyWiki to display the result of the filter; we'll learn much more about this syntax in [[Filters and Transclusions]].
+
+{{Sn:AlphabeticallyLastFilter||MagicSnippet}}
+
+You might have used a slightly different filter; as usual with computers, there's more than one way to do things.
+
+Let's break this filter down:
+
+* `all[shadows]`: As mentioned in the question, you won't be able to see any of the tiddlers we're looking at without adding this. We'll talk more about [[shadow tiddlers|Shadow Tiddlers]] in a later chapter.
+* `tag[$:/tags/EditorToolbar]`: This limits the list of shadow tiddlers to those that represent buttons on the editor toolbar.
+* `get[description]`: This retrieves the contents of the `description` field of each matching tiddler. Thus, instead of the tiddler titles being in our filter pipeline, the contents of the `description` fields of each tiddler will now be in the pipeline.
+* `split[{{]split[}}]`: This eliminates the `{{double braces}}` that surround each value of the `description` field on these tiddlers. Double braces introduce //transclusion//, which we'll [[discuss|Transclusions]] in a later chapter.
+* `get[text]`: Removing the double braces resulted in a new set of tiddler titles. We want to get the text of these tiddlers, since that contains the descriptions we're looking at.
+* `!sort[]`: This sorts the set of tiddler texts in our filter pipeline in reverse order, putting the alphabetically last item at the top, which is `Wrap selection in square brackets`.
+* `first[]`: This selects only the first item. You don't really have to use this in this case -- you could just pick the first item out of the list -- but it'll be nice later when you learn how to display the results of a filter inside some other part of TiddlyWiki's interface and a bunch of irrelevant crud will be much more annoying.

@@ -1,0 +1,13 @@
+created: 20200718022049665
+length: m
+modified: 20210130174554368
+origin: Global Macros
+tags: Exercise
+title: Ex:ReadingDefaultMacros
+type: text/vnd.tiddlywiki
+
+Search for all tiddlers that currently contain global macros. Remember that most of these will be stored in shadow tiddlers, so you'll need to say you want to filter on shadow tiddlers to get any results.
+
+Spend a few minutes browsing through some of the tiddlers that come up and looking at some of the system macro definitions. You'll recognize some of the macros from previous chapters, and you should be able to understand a good portion of what's going on. There's no magic -- the built-in macros are simply wrapping up some complicated HTML and widgets for us to use in a convenient way, just like we would do when writing our own macros.
+
+You'll have to edit each shadow tiddler to look at the definitions. Just click the discard-changes button when you're done so you don't mess anything up!

@@ -1,0 +1,8 @@
+created: 20210116183316696
+description: elements are rendered in either block mode or inline mode
+modified: 20210116214206949
+tags: Lie
+title: Ltc:BlockAndInlineMode
+type: text/vnd.tiddlywiki
+
+This sentence contains a whole host of inaccuracies. In HTML, there are a number of possible display modes besides block and inline, such as `inline-block`, `flex`, and so on. Further, HTML doesn't generally call them “modes” -- you're more likely to see “layouts” or “contexts” depending on exactly what is being discussed. But as we'll see, this is convenient terminology to use with TiddlyWiki because the wikitext parser actually does have “modes,” so it will be good enough for this discussion.

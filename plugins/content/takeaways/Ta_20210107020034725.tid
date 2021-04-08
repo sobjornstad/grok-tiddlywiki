@@ -1,0 +1,9 @@
+answer: It transcludes all tiddlers that have the `$:/tags/ViewTemplate` tag in order, so that users only have to tag a template tiddler with this tag to include it in the view template.
+created: 20210107020036261
+modified: 20210220191000438
+origin: The View Template
+qtype: rememberq
+question: What mechanism does TiddlyWiki's view template use to enable users to easily add additional components?
+tags: Takeaway
+title: Ta:20210107020034725
+type: text/vnd.tiddlywiki

@@ -1,0 +1,10 @@
+caption: Initial forgot interval
+created: 20201230013113133
+description: Initial interval for newly seen takeaways if you choose “forgot” in-text; the number of days before first review. This option does not affect the interval a forgotten takeaway is reduced to, which is always 1.
+modified: 20210407150837685
+stackorder: 10
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/InitialForgotInterval
+type: text/vnd.tiddlywiki
+
+1

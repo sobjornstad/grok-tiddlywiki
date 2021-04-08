@@ -1,0 +1,11 @@
+created: 20210116210438040
+modified: 20210327155555215
+tags: 
+title: Sn:QuotedMacroExpansion
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName, linkText)
+[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+<$macrocall $name="wikipediaLink" linkText="<<linktext>>" articleName="Aardvark" />

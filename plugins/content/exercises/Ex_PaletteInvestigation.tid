@@ -1,0 +1,11 @@
+created: 20200718202138869
+length: m
+modified: 20210130174544781
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:PaletteInvestigation
+type: text/vnd.tiddlywiki
+
+In the stylesheet I provided, you may have noticed there is a macro call: `<<colour muted-foreground>>`.  This macro is used to retrieve a color from the palette. The benefit is that if you change the palette of your wiki, the color of the excerpt text will change to something appropriate as well.
+
+Find the definition of the `colour` macro and figure out how the CSS color value (it'll be a `#` and six numbers and letters) is retrieved.

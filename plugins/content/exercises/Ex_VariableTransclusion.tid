@@ -1,0 +1,15 @@
+created: 20201122031933154
+length: s
+modified: 20210130174656427
+origin: Transclusions
+tags: Exercise
+title: Ex:VariableTransclusion
+type: text/vnd.tiddlywiki
+
+What happens if you set a variable in one tiddler, and transclude a tiddler that references that variable within the scope of the `$set` widget? You can start with a Tiddler 1 that looks something like this:
+
+```html
+<$set name="myVariable" value="test">
+    {{Tiddler 2}}
+</$set>
+```

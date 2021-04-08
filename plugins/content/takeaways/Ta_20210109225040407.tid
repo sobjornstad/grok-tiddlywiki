@@ -1,0 +1,8 @@
+created: 20210109225041456
+modified: 20210311183209173
+origin: JavaScript Macros
+qtype: remembercz
+question: A JavaScript macro should not have any {side effect}s when run.
+tags: Takeaway
+title: Ta:20210109225040407
+type: text/vnd.tiddlywiki

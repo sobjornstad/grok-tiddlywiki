@@ -1,0 +1,32 @@
+created: 20210117012121365
+modified: 20210117012853774
+tags: 
+title: Sn:HtmlComments
+type: text/vnd.tiddlywiki
+
+<!-- This is a comment. -->
+
+Here's some ordinary text that appears in the output. On the other hand, the <!-- secret --> word doesn't show up.
+
+<!--
+A comment can go on
+for multiple lines
+if you like.
+-->
+
+<!--
+HTML and wikitext can be included in comments. It's ''easy as''
+
+<ul style="color: red;">
+	<li>one</li>
+	<li>two</li>
+	<li>three.</li>
+</ul>
+-->
+
+Here's an uncommented list:
+
+<!-- The * creates a wikitext list. -->
+* four
+* five
+* six

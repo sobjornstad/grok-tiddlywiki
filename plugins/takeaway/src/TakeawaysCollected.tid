@@ -1,0 +1,7 @@
+created: 20210102000508798
+modified: 20210408140012474
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/TakeawaysCollected
+type: text/vnd.tiddlywiki
+
+<$text text={{{ [all[tiddlers+shadows]tag[Takeaway]seen[yes]count[]] }}}/>/<$text text={{{ [all[tiddlers+shadows]tag[Takeaway]count[]] }}}/> takeaways collected.

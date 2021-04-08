@@ -1,0 +1,9 @@
+answer: Namespacing (starting all their names with a constant prefix, perhaps followed by a slash or colon).
+created: 20210130213338912
+modified: 20210311182812073
+origin: Naming Conventions
+qtype: rememberq
+question: What naming technique may help organize a large number of tiddlers of the same type or on the same topic?
+tags: Takeaway
+title: Ta:20210130213337117
+type: text/vnd.tiddlywiki

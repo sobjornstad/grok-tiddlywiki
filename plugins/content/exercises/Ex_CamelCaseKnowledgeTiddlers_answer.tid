@@ -1,0 +1,25 @@
+autoinclude: Reviewing the Basics
+created: 20200603030458934
+length: m
+modified: 20210131211311582
+tags: Answer
+title: Ex:CamelCaseKnowledgeTiddlers/answer
+type: text/vnd.tiddlywiki
+
+On the topic of the advantages and disadvantages of camel-case linking...
+
+!!! Advantages
+
+* Linking is faster.
+* If you're a programmer, you may dislike spaces!
+* You're encouraged to create more concise titles which are in a consistent format.
+* If you copy the formatted text into another tiddler which is in edit mode, the links will stay there. This does not work with `[[links like this]]`. A small thing, but quite convenient.
+
+!!! Disadvantages
+
+# According to some people, it looks ugly and disrupts the flow of text.
+# If people try to camel-case even things that don't take naturally to it, adding extra words or capitalizing words in the middle, how they did this is not always obvious, and someone may end up missing a title that already exists and creating a new one. More on this later.
+# Words that just happen to use the CamelCase format but are not supposed to refer to page titles have to be escaped in some way. In TiddlyWiki this is done by putting a `~` before the word.
+# Particularly long titles may be difficult to read or fail to wrap nicely over multiple lines.
+
+See also the [[CamelCase]] appendix.

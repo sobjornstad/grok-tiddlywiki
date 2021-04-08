@@ -1,0 +1,9 @@
+answer: `\define myMacro()`
+created: 20201231035928615
+modified: 20210329214904095
+origin: The Finer Points of Macros
+qtype: rememberq
+question: What is the wikitext syntax to define a macro `myMacro` with no parameters?
+tags: Takeaway
+title: Ta:20201231035927292
+type: text/vnd.tiddlywiki

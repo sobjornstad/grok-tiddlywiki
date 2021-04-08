@@ -1,0 +1,9 @@
+answer: Sometimes. If the `{{transclusion}}` is directly within the body of the tiddler, it will be. But if it's used as an attribute, like `<img src={{transclusion}}>`, it won't be.
+created: 20210101171954389
+modified: 20210208151546671
+origin: Wikification
+qtype: rememberq
+question: Always/Sometimes/Never: When you put a `{{transclusion}}` somewhere within the body of a tiddler, the wikitext at the other end of the transclusion will be wikified.
+tags: Takeaway
+title: Ta:20210101171953478
+type: text/vnd.tiddlywiki

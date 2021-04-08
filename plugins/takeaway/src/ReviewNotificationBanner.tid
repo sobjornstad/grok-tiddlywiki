@@ -1,0 +1,30 @@
+created: 20201230045026595
+list-before: $:/sib/Navigator/LinksBar
+modified: 20210408135922597
+tags: $:/tags/SideBarSegment
+title: $:/plugins/sobjornstad/TakeAway/ReviewNotificationBanner
+type: text/vnd.tiddlywiki
+
+<$list filter="[[$:/config/sobjornstad/TakeAway/Reviewer/ShowDueNotifications]text[yes]]">
+<$list filter="[!days:due[-1]] [days:due[0]] +[tag[Takeaway]seen[yes]has[due]first[]]">
+	<div class="mm-review-notification">
+		<div style="display: inline-block; vertical-align: center; margin-top: 6px; margin-left: 1em;">
+			<span style="height: 44px; fill: green;">{{$:/core/images/info-button}}</span>
+		</div>
+		<div style="display: inline-block; margin-left: 1em; margin-right: 1em;">
+		You have takeaways due for review.<br>
+			<$button class="tc-btn-invisible tc-tiddlylink">
+				<<startReviewSessionAction>>
+				Click here
+			</$button> to start a review session.
+	</div>
+	</div>
+</$list>
+</$list>
+
+<style>
+.mm-review-notification {
+	background-color: <<color tiddler-background>>;
+	display: inline-block;
+}
+</style>

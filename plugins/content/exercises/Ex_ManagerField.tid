@@ -1,0 +1,9 @@
+created: 20200603115339849
+length: s
+modified: 20210130174514831
+origin: Reviewing the Basics
+tags: Exercise
+title: Ex:ManagerField
+type: text/vnd.tiddlywiki
+
+We chose to use a field to keep track of employees' managers. List at least two other ways we could have chosen to do this, and some advantages and disadvantages of each.

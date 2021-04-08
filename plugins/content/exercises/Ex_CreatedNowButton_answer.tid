@@ -1,0 +1,37 @@
+created: 20210207180126132
+modified: 20210214165012708
+tags: Answer
+title: Ex:CreatedNowButton/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$button set="!!created" setTo=<<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>>
+	Created Now
+</$button>
+
+{{!!created}}}
+```
+
+(The `{{!!created}}` is just there so you can check your work. You can also click the info button and look on the //Fields// tab.)
+
+You might be tempted to define and use the `now-timestamp` macro discussed earlier, but there's a gotcha awaiting the unwary:
+
+```html
+\define now-timestamp() <<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>
+
+<$button set="!!created" setTo=<<now-timestamp>>>
+	Created Now
+</$button>
+```
+
+This will set the `created` field to `NaNNaNNaNNaNNaNNaNNaN`, which is probably not what you wanted! (`NaN` stands for //not a number//, and [[often occurs|https://en.wikipedia.org/wiki/NaN]] when computers try to do math on invalid operands.) The problem is that the contents of the `now-timestamp` macro are not wikified in this context, so TiddlyWiki tries to set the field to the literal body of the macro, which [[results in|https://groups.google.com/g/tiddlywiki/c/879Djgpf4YY]] a bunch of `NaN`s when TiddlyWiki then tries to convert it to a date.
+
+In this case, the easiest fix is not to use the `now-timestamp` macro, since its replacement is simple and unlikely to change anyway. But if you do want to use it, you can use a `$wikify` widget:
+
+```html
+<$wikify name="currentTime" text=<<now-timestamp>>>
+	<$button set="!!created" setTo=<<currentTime>>>
+		Created Now
+	</$button>
+</$wikify>
+```

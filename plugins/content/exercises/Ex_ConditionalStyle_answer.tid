@@ -1,0 +1,25 @@
+created: 20210130034151941
+modified: 20210130034510385
+tags: Answer
+title: Ex:ConditionalStyle/answer
+type: text/vnd.tiddlywiki
+
+To accomplish this, simply wrap the class in a `$list` widget so that the CSS doesn't show up if the config tiddler isn't set appropriately:
+
+```html
+<$list filter="[[$:/config/ShowFunnyText]text[yes]]">
+.my-funny-class2 {
+  background-color: blue;
+  color: yellow;
+  font-size: 150%;
+  border: 3px dotted orange;
+  text-align: right;
+}
+</$list>
+```
+
+The filter can be written in several ways; for instance, you could equivalently use:
+
+```html
+<$list filter="[{$:/config/ShowFunnyText}match[yes]]">
+```

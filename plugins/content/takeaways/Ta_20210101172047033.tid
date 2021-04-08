@@ -1,0 +1,9 @@
+answer: `<img src="https://example.com/image.png">` (`img` is a void element, so the tag is not closed)
+created: 20210101172048478
+modified: 20210317130309870
+origin: Wikification
+qtype: rememberq
+question: In HTML, how do you display an image that's stored at the URL `https://example.com/image.png`?
+tags: Takeaway
+title: Ta:20210101172047033
+type: text/vnd.tiddlywiki

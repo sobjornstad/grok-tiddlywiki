@@ -1,0 +1,9 @@
+answer: If you have a negative UTC offset, the date will otherwise be one day too early when adjusted for time zone and displayed.
+created: 20210207005229873
+modified: 20210311154012806
+origin: Working with Dates
+qtype: rememberq
+question: Why is it a good idea to list a time of noon on timestamps if you care only about the date?
+tags: Takeaway
+title: Ta:20210207005228571
+type: text/vnd.tiddlywiki

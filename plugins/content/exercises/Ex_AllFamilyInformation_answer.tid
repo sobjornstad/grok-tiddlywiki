@@ -1,0 +1,34 @@
+created: 20201122034213721
+modified: 20201122034453414
+tags: Answer
+title: Ex:AllFamilyInformation/answer
+type: text/vnd.tiddlywiki
+
+```html
+<ul>
+	<li>''Email'': {{!!email}}</li>
+	<li>''Phone'': {{!!phone}}</li>
+	<li>
+		''Family'':
+		<ul>
+			<$list filter={{!!family}}>
+				<li>{{!!title}}: {{!!phone}}</li>
+			</$list>
+		</ul>
+	</li>
+	<li>''Manager'': {{!!manager}}</li>
+</ul>
+```
+
+Here's the same thing, retaining the outer bulleted list in wikitext. The critical part is that the `<ul>` has to be on the same line as the end of the `Family` bullet -- otherwise it won't be treated as a nested list.
+
+```html
+* ''Email'': {{!!email}}
+* ''Phone'': {{!!phone}}
+* ''Family'': <ul>
+  <$list filter={{!!family}}>
+    <li>{{!!title}}: {{!!phone}}</li>
+  </$list>
+</ul>
+* ''Manager'': {{!!manager}}
+```

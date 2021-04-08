@@ -1,0 +1,8 @@
+created: 20201231005815791
+modified: 20210321231656226
+origin: Macros
+qtype: remembercz
+question: In `\define wikipediaLink(articleName)`, the part `(articleName)` is called the {parameter list} of the macro.
+tags: Takeaway
+title: Ta:20201231005812772
+type: text/vnd.tiddlywiki

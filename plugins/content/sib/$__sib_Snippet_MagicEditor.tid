@@ -1,0 +1,25 @@
+caption: {{$:/core/images/edit-button}} Edit
+created: 20210117004717893
+modified: 20210321011733040
+tags: 
+title: $:/sib/Snippet/MagicEditor
+type: text/vnd.tiddlywiki
+
+<div class="msbs-snippet" style="padding-top: 3ex;">
+
+<$edit
+  field="text"
+  class="tc-edit-texteditor tc-edit-texteditor-body"
+  placeholder={{$:/language/EditTemplate/Body/Placeholder}}
+  tabindex={{$:/config/EditTabIndex}}
+  focus={{{ [{$:/config/AutoFocus}match[text]then[true]] ~[[false]] }}}
+  cancelPopups="yes"
+/>
+
+</div>
+<div class="msbs-snippet">
+
+{{||$:/sib/Snippet/TiddlerAsRendered}}
+
+</div>
+<!--{{||$:/core/ui/EditTemplate/body/editor}}-->

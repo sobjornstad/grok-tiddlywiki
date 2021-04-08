@@ -1,0 +1,23 @@
+created: 20200605152841532
+modified: 20210327155915576
+tags: Answer
+title: Ex:MeetingListWithoutCurrentTiddler/answer
+type: text/vnd.tiddlywiki
+
+```html
+<ul>
+	<$list filter="[tag[Meeting]!sort[at]]">
+		<li><$link to={{!!title}}>{{!!title}}</$link></li>
+	</$list>
+</ul>
+```
+
+If you happened to remember from an [[earlier exercise|Ex:LinkPattern/answer]] that the `$link` widget creates a link to the current tiddler if you don't give it any attributes or body text at all, you could also just say this:
+
+```html
+<ul>
+	<$list filter="[tag[Meeting]!sort[at]]">
+		<li><$link /></li>
+	</$list>
+</ul>
+```

@@ -1,0 +1,9 @@
+created: 20210207214325266
+length: m
+modified: 20210207214315159
+origin: Hiding and Showing Things
+tags: Exercise
+title: Ex:ViewTemplateExplicitHide
+type: text/vnd.tiddlywiki
+
+Change the ViewTemplate tiddler that displays the contact information template so that it does not display if the `hide-contactinfo` field on the contact tiddler has the value `yes`. Use a `$list` widget.

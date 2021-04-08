@@ -1,0 +1,13 @@
+created: 20210206211117892
+modified: 20210206211016565
+tags: 
+title: Sn:TiddlerWidget
+type: text/vnd.tiddlywiki
+
+<$set name="currentTiddler" value="New Current Tiddler">
+	<<currentTiddler>>
+</$set>
+
+<$tiddler tiddler="New Current Tiddler">
+	<<currentTiddler>>
+</$tiddler>

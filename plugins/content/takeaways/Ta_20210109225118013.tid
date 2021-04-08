@@ -1,0 +1,9 @@
+answer: TiddlyWiki may decide to rerun the macro at any time if the tiddler or element containing it needs to be refreshed.
+created: 20210109225119121
+modified: 20210212140605438
+origin: JavaScript Macros
+qtype: rememberq
+question: Why are side effects in JavaScript macros dangerous?
+tags: Takeaway
+title: Ta:20210109225118013
+type: text/vnd.tiddlywiki

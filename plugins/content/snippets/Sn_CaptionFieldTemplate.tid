@@ -1,0 +1,7 @@
+created: 20210314125223866
+modified: 20210314125233928
+tags: 
+title: Sn:CaptionFieldTemplate
+type: text/vnd.tiddlywiki
+
+The caption of the current tiddler is “{{!!caption}}”.

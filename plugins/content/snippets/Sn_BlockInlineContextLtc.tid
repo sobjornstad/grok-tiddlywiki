@@ -1,0 +1,11 @@
+created: 20210116175919244
+modified: 20210116175910453
+tags: 
+title: Sn:BlockInlineContextLtc
+type: text/vnd.tiddlywiki
+
+<span>Here's an adjacent span.</span>
+<span style="color: orange;">My first line, directly inside the span.
+<p>Here is a paragraph nested inside of the span.</p>
+Here is another line directly inside the span.</span>
+<span>Here's an adjacent span.</span>

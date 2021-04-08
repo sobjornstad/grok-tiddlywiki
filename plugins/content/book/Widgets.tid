@@ -1,0 +1,29 @@
+created: 20201125033901397
+description: Widgets are a TiddlyWiki extension to HTML exposing wiki-specific functionality.
+modified: 20210315202332008
+parent: Filtering and Formatting
+tags: Section Concept
+title: Widgets
+type: text/vnd.tiddlywiki
+
+''Widgets'' {{Ltc:WidgetsExtension||LieToChildrenTemplate}} to [[HTML]]. They look and work almost exactly like HTML elements, except they have a `$` before the tag name, and TiddlyWiki does further processing on them prior to sending them to your browser for display.
+
+All the formatting instructions you use in wikitext, like `//italics//` or `[[links]]`, have either a corresponding HTML element or a corresponding widget. Just like we sometimes need or want to use raw HTML elements for more control over formatting, we sometimes need or want to use raw widgets.
+
+There are also many widgets that have no equivalent at all in wikitext, because you can only make the symbols on the keyboard do so many things! We will be seeing some of these widgets throughout the rest of the book.
+
+!! Widget example
+
+Let's suppose we want to link to another tiddler. You can create a link with the double-bracket syntax in wikitext:
+
+{{Sn:WikitextLink||MagicSnippet}}
+
+Or you can use the `$link` widget:
+
+{{Sn:WidgetLink||MagicSnippet}}
+
+At the moment, this looks like it's just an overly verbose way to write a link, but in later chapters, we'll see that there are some things that we can do with this syntax that we can't do with the double-bracket syntax.
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

@@ -1,0 +1,15 @@
+created: 20201231200111052
+modified: 20210206150314961
+tags: Template
+title: MagicSnippet
+type: text/vnd.tiddlywiki
+
+\define deltid() <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+<div style="float: right; margin-top:10px; font-size:14px;">
+<$list filter="[is[shadow]field:title<currentTiddler>]">
+modified by you (<$button class="tc-btn-invisible tc-tiddlylink" actions=<<deltid>>>restore original</$button>)&nbsp;·
+</$list>
+<$button message="tm-copy-to-clipboard" param={{!!text}} class="tc-btn-invisible tc-tiddlylink">copy wikitext to clipboard</$button>
+	
+</div>
+<<tabs "$:/sib/Snippet/TiddlerAsWikitext $:/sib/Snippet/TiddlerAsRendered $:/sib/Snippet/MagicSideBySide $:/sib/Snippet/MagicEditor" default:"$:/sib/Snippet/MagicSideBySide" class:"sib-magic-bottom-border">>

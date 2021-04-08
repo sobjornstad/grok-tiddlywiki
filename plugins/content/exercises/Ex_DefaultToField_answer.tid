@@ -1,0 +1,25 @@
+created: 20201122170037082
+modified: 20210317204417479
+tags: Answer
+title: Ex:DefaultToField/answer
+type: text/vnd.tiddlywiki
+
+In your `WikipediaLinkTemplate`:
+
+```html
+<$set name="theArticle" value={{{ [<articleName>!is[blank]else{!!articlename}] }}}>
+    <a
+      class="tc-tiddlylink-external"
+      href={{{ [{WikipediaMetadata!!url}addsuffix<theArticle>] }}}>
+        <<theArticle>>
+    </a>
+</$set>
+```
+
+Note that now, if you want to use the default `articlename` field, you'll need to use the `||` in the transclusion, unlike for the [[previous version|Ex:WikipediaLinkTemplate]] -- although you can still leave it off if you're using the variable.
+
+You are probably wondering why we need `!is[blank]`. To understand, consider what happens if `articleName` hasn't been defined. As we learned way back in the [[Variables]] section, a variable that hasn't been defined evaluates to nothing. However, within filters, TiddlyWiki makes a distinction between having a single value that contains no characters in the pipeline (programmers call this an //empty value// or //empty string//) and the state of there being no value at all in the pipeline (programmers call this //null//).
+
+This may sound like a silly distinction. Sometimes null and empty can safely be treated as the same thing, but other times they are quite different. For instance, suppose we are surveying people to find out what names they have printed on the nameplates on their office doors. Alice tells us that she has //nothing// printed on her nameplate (empty value) -- perhaps she just moved into a new office. Bob, on the other hand, didn't answer the question at all (no value, or null value). When analyzing our results, mixing these states together might lead us to incorrect conclusions -- e.g., we might think that 50% of people at the company have empty nameplates and conclude that we need to launch an initiative to fix people's nameplates, when in reality Alice is the only one who has a bad nameplate and a bunch of other people just didn't answer our survey.
+
+In the case of this filter, when no article name is defined, the output of the `<articleName>` filter step is a single empty value. The function of the `!is[blank]` filter step is to eliminate any empty values from the pipeline. Thus, after `!is[blank]`, we don't pass any input values into `else`, and `else` concludes it should output the value of the `articlename` field. If we had left out `!is[blank]`, `else` would receive one input value (an empty one, but an input value nonetheless), so it would just pass the input value through to the output unmodified. Then `theArticle` would also be empty, and the target of our link would be missing.

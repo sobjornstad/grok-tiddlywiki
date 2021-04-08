@@ -1,0 +1,9 @@
+answer: Check if the current tiddler is a draft tiddler, and if it is change the current tiddler to the tiddler the draft is of.
+created: 20210207014143636
+modified: 20210313141526590
+origin: Getting the Current Tiddler Right on Drafts
+qtype: rememberq
+question: What pattern can be used to allow logic depending on the name of the current tiddler to function in a side-by-side preview?
+tags: Takeaway
+title: Ta:20210207014142455
+type: text/vnd.tiddlywiki

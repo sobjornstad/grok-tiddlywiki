@@ -1,0 +1,9 @@
+answer: `<<list-links-draggable "My Tiddler">>`
+created: 20210103164625111
+modified: 20210329214909458
+origin: Ordering Tiddlers
+qtype: rememberq
+question: Use `list-links-draggable` (a built-in macro) to allow the `list` field on the `My Tiddler` tiddler to be reordered.
+tags: Takeaway
+title: Ta:20210103164623372
+type: text/vnd.tiddlywiki

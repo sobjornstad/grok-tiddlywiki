@@ -1,0 +1,21 @@
+created: 20200718201326615
+length: m
+modified: 20210130174459855
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:LinkedTiddlerExcerpt
+type: text/vnd.tiddlywiki
+
+Add an excerpt for each link -- in other words, grab the first 200 characters of each tiddler and show it under the title. This will help us remind us what the tiddler is about, if the [[title wasn't chosen carefully enough|Tiddler Titles]].
+
+We can accomplish this by [[wikifying|Wikification]] the tiddler -- that is, processing the HTML, transclusions, and wikitext in it as if we were displaying the tiddler -- and then taking just the beginning portion of it. Here's a partially completed macro you can use to get an excerpt from a tiddler. Your task is to figure out what goes in the filter transclusion (to convert the full text of the tiddler to just its first 200 characters), then call the macro from an appropriate location.
+
+```html
+\define excerptify(title)
+  <$wikify name=wikitext text={{$title$}}>
+    <$text text={{{ ??? }}} />...
+  </$wikify>
+\end
+```
+
+//Hint//: The `split[]` filter operator with nothing in the square brackets can be used to split incoming text into individual characters. You may need to review the [[filter operators|https://tiddlywiki.com/#Filter Operators]] documentation.

@@ -1,0 +1,7 @@
+created: 20210117002226847
+modified: 20210321010956034
+tags: Fragment
+title: Live Examples
+type: text/vnd.tiddlywiki
+
+You'll see live examples like this one periodically throughout the book -- the left side shows the [[wikitext|Wikitext]], i.e., what you would type in when editing a tiddler, while the right side shows what the result looks like when viewing the tiddler. You can also click the //Wikitext// or //Output// tab to see the left or right side alone, if you'd like a little more horizontal space to read a long line. Finally, you can click the //Edit// tab to change the snippet and see how TiddlyWiki reacts. (If you edit the snippet, a link to restore the original text will appear in the upper-right, so you can experiment without fear.)

@@ -1,0 +1,89 @@
+created: 20201229224422563
+modified: 20210408143158395
+tags: [[TakeAway Tools]]
+title: TakeAway Reviewer
+type: text/vnd.tiddlywiki
+
+<div class="tr-reviewer">
+<$list filter="[!days:due[-1]] [days:due[0]] +[tag[Takeaway]seen[yes]has[due]shuffle{$:/config/sobjornstad/TakeAway/ReviewerSeed}first[]]" emptyMessage="<center>Congratulations! You're all caught up.</center>">
+	{{||$:/plugins/sobjornstad/TakeAway/LeechBanner}}
+
+	<$reveal type="nomatch" text="answer" state="$:/temp/TakeAwayReviewerAnswerState">
+		{{||$:/plugins/sobjornstad/TakeAway/TakeawayFrontSide}}
+		<div class="tr-nav tr-actions">
+			<div>
+				<$button class="tc-btn-invisible tc-tiddlylink">
+					<<forwardToAnswerAction>>
+					show answer
+				</$button>
+			</div>
+			<div>&nbsp;</div>
+		</div>
+	</$reveal>
+
+	<$reveal type="match" text="answer" state="$:/temp/TakeAwayReviewerAnswerState">
+	{{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
+	<div class="tr-actions">
+		<div>
+			<$button class="tc-btn-invisible tc-tiddlylink" tooltip="I didn't remember the answer to this takeaway.">
+				<<againAction>>
+				forgot
+			</$button>&nbsp;·
+			<$reveal type="match" text="yes" state="$:/config/sobjornstad/TakeAway/Reviewer/UseFourButtons">
+			<$button class="tc-btn-invisible tc-tiddlylink" param={{!!title}} tooltip="I remembered the answer, and I would like to see this takeaway more often in the future.">
+				<<hardAction>>
+				hard
+			</$button>&nbsp;·
+			</$reveal>
+			<$button class="tc-btn-invisible tc-tiddlylink" param={{!!title}} tooltip="I remembered the answer.">
+				<<goodAction>>
+				good
+			</$button>
+			<$reveal type="match" text="yes" state="$:/config/sobjornstad/TakeAway/Reviewer/UseFourButtons">·
+			<$button class="tc-btn-invisible tc-tiddlylink" param={{!!title}} tooltip="I remembered the answer, and I would like to see this takeaway less often in the future.">
+				<<easyAction>>
+				easy
+			</$button>
+			</$reveal>
+		</div>
+		<div>
+			<$button class="tc-btn-invisible tc-tiddlylink" tooltip="Return to showing only the question.">
+				<<backToQuestionAction>>
+				hide answer
+			</$button>&nbsp;·
+			<<editLink>>&nbsp;·
+			<<markUnseenLink>>&nbsp;·
+			<<sendFeedbackLink>>
+		</div>
+	</div>
+	</$reveal>
+</$list>
+</div>
+
+<div style="text-align: center;">
+	{{$:/plugins/sobjornstad/TakeAway/TakeawaysCollected}}
+</div>
+<div style="text-align: center;">
+	Due for review today: <$text text={{{ [!days:due[-1]] [days:due[0]] +[tag[Takeaway]seen[yes]has[due]count[]] }}}/>
+</div>
+<div style="text-align: center;">
+	[[browse takeaways|Takeaway Browser]]&nbsp;· [[help|TakeAway Help]]
+</div>
+
+<style>
+div.tr-leech-warning {
+	text-align: center;
+	margin: auto;
+	width: 90%;
+	background-color: #404040;
+	margin-bottom: 1em;
+}
+</style>
+
+
+
+<!-- TODO: leap year is handled incorrectly in the datetime calculation thing: adding 1 on the 28th gives the 28th again
+https://groups.google.com/g/tiddlywiki/c/y_GjM302u60
+
+<<daysFromDatestamp "20200228" 1>>
+-->

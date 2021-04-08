@@ -1,0 +1,9 @@
+answer: `template`
+created: 20210207005415452
+modified: 20210313141816178
+origin: Working with Dates
+qtype: rememberq
+question: What additional attribute must be supplied to the `$view` widget when choosing `format="date"`?
+tags: Takeaway
+title: Ta:20210207005414293
+type: text/vnd.tiddlywiki

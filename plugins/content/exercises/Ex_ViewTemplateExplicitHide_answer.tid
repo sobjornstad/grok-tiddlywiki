@@ -1,0 +1,11 @@
+created: 20210207214430861
+modified: 20210207214334658
+tags: Answer
+title: Ex:ViewTemplateExplicitHide/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$list filter="[all[current]!hide-contactinfo[yes]]">
+	... the rest of the template
+</$list>
+```

@@ -1,0 +1,9 @@
+created: 20210207181850172
+modified: 20210207181751236
+tags: Answer
+title: Ex:NoCurrentTiddlerMatch/answer
+type: text/vnd.tiddlywiki
+
+At the risk of sounding ridiculous, //because it wouldn't work//. Since we're trying to match the current tiddler with `Reading`, if we matched it against the current tiddler, it would always match and we wouldn't have any conditional logic.
+
+This may be obvious in the context of an exercise, but I've made this mistake and been puzzled numerous times, so pay attention!

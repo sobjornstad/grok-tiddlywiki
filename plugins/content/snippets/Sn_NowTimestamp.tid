@@ -1,0 +1,9 @@
+created: 20210207002251317
+modified: 20210207002158486
+tags: 
+title: Sn:NowTimestamp
+type: text/vnd.tiddlywiki
+
+\define now-timestamp() <<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>
+
+<<now-timestamp>>

@@ -1,0 +1,9 @@
+answer: `<tr>` (//table row//)
+created: 20210107232533466
+modified: 20210220191046514
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: What HTML element creates a row when used within a `<table>` element?
+tags: Takeaway
+title: Ta:20210107232532110
+type: text/vnd.tiddlywiki

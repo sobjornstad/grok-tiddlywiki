@@ -1,0 +1,14 @@
+caption: Editing takeaways
+created: 20210101235002229
+modified: 20210327150931913
+tags: Fragment
+title: TakeAway Help/Editing
+type: text/vnd.tiddlywiki
+
+When initially encountering or reviewing a takeaway, if you find that you knew the answer but you ''didn't understand what the question was asking'' or the prompt led you to ''suggest a different correct answer'' than the one shown, you can click the //edit// link and edit the question and/or answer text to suit you better. If you think the prompt is actually wrong or would be confusing for most people, please also take a moment to click //send feedback// so the author can consider improvements for the next edition.
+
+It's usually possible to write takeaway prompts that work well for most people, but everyone is a bit different and sometimes an author's prompts won't quite work with the unique set of knowledge and experiences you have. When reviewing, you should remain open to the possibility that ''the prompt just isn't working for you'' -- if you don't, you might end up reviewing the same thing over and over again and never learning it.
+
+If you ''don't think a takeaway is useful at all for you'', or you can't think of a way to edit it so that it works well, click //uncollect// to remove it from review. It will not appear again unless you answer it again in the text.
+
+TakeAway will help you identify prompts that you're struggling with via its [[leech|TakeAway Help/Leeches]] mechanism. If it notices that you've repeatedly forgotten the answer to a particular prompt, it will display a banner during review with further instructions.

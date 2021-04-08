@@ -1,0 +1,12 @@
+created: 20210207215123361
+modified: 20210407135909459
+tags: Answer
+title: Ex:EmptyAtField/answer
+type: text/vnd.tiddlywiki
+
+```html
+| !Time|<$view field="at">(no time specified)</$view>|
+| !Participants|{{!!participants}}|
+```
+
+You might have also used a `$transclude` widget; in this case it's equivalent since there is no wikitext to wikify in the `at` field if we're using it normally. In [[Working with Dates]], we'll learn that the `$view` widget has some special features for dates that usually make it more useful than the `$transclude` widget.

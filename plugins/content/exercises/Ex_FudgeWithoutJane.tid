@@ -1,0 +1,9 @@
+created: 20200716022808142
+length: s
+modified: 20210130174424856
+origin: Multi-Run Filters
+tags: Exercise
+title: Ex:FudgeWithoutJane
+type: text/vnd.tiddlywiki
+
+Write a filter to find all tiddlers mentioning fudge that don't list Jane as a participant. Use two filter runs.

@@ -1,0 +1,11 @@
+created: 20210131045640394
+modified: 20210131045709108
+tags: 
+title: Sn:WikitextBoldItalicBad
+type: text/vnd.tiddlywiki
+
+Here's how to do //''bold italics''// correctly.
+
+Here's the wrong way: //''bold italic//''.
+
+Oops, now the rest of the tiddler is messed up!

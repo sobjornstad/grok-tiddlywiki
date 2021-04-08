@@ -1,0 +1,9 @@
+answer: Because the current tiddler is set to the template tiddler, but a template tiddler is designed to be rendered with a different current tiddler. The template tiddler likely does not have any of the fields the template was designed to refer to.
+created: 20201231190323429
+modified: 20210208152620636
+origin: Templates and the Current Tiddler
+qtype: rememberq
+question: Why might a template tiddler display errors when you look at it in the story river?
+tags: Takeaway
+title: Ta:20201231190320069
+type: text/vnd.tiddlywiki

@@ -1,0 +1,28 @@
+created: 20200530170154864
+description: Tiddlers are the unit of information in TiddlyWiki.
+modified: 20210329215028919
+parent: The Shape of TiddlyWiki
+tags: Section Concept
+title: Tiddlers
+type: text/vnd.tiddlywiki
+
+Before we start creating our sample wiki, we need to go over a few concepts. I know, theory is boring and you want to get your hands on the software, so I'll just introduce five foundational concepts that we can't do without right now, and we'll fill in the rest as we need them.
+
+''Tiddlers'' are the unit of information in TiddlyWiki. If we didn't want to use a weird neologism, we might call tiddlers //notes//, or //cards//, or //records//, or //files//, or //pages//, or //articles//. However, tiddlers aren't quite like any of these things, so the designers concluded a word that doesn't carry any baggage from other information systems would ultimately be less confusing. (A tiddler is a kind of small fish.)
+
+For now, you can think of a tiddler as a 3×5 index card: a blank slate used to store a small amount of information. Even better, think of it as an [[edge-notched card|https://en.wikipedia.org/wiki/Edge-notched_card]], an index card that can be mechanically sorted based on metadata punched out of the edges of the card. (In the mid-20th century, these were the height of sophistication for the amateur information geek, and they're still pretty cool even in the computer age!) Tiddlers can do much more complicated things than this, however, so in [[Slicing Up Content]] in chapter 2 we'll see a different, more conceptual metaphor which will be more helpful as we continue.
+
+<div style="text-align: center;">
+<$link to="edge-notched.jpg">[img width=300 [edge-notched.jpg]]</$link>
+<div>//A homemade edge-notched card system with vintage sorting needle and notching punch (click to expand). TiddlyWiki eliminates the [[chads|https://en.wikipedia.org/wiki/Chad_(paper)]], but it keeps alive the spirit of small units of information, non-hierarchical thinking, and easy sorting inherent in these systems.//</div>
+</div>
+
+In TiddlyWiki, ''everything is a tiddler'': content, configuration, user macros, plugins, {{Ltc:CoreCodeTiddlers||LieToChildrenTemplate}}. This means you get to use the same set of powerful tools for working with all these things. It's much like Unix's [[everything's a file|https://en.wikipedia.org/wiki/Everything_is_a_file]] philosophy, and it has the same benefits.
+
+The way we slice our content up into tiddlers and relate those tiddlers to each other has a strong influence on both our patterns of thinking and the value of our notes. By slicing content into small, carefully defined tiddlers, we are able to reuse ideas and data in many more contexts than we could if they were organized like traditional notes, which makes not only our notes but also our thoughts more flexible. A substantial portion of the first two chapters will be spent on the question of how to slice up and relate tiddlers.
+
+This section of the book, //Tiddlers//, is an example of a tiddler.
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

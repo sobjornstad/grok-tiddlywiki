@@ -1,0 +1,9 @@
+answer: A closing tag has a forward slash (`/`) before the tag name.
+created: 20201231000402212
+modified: 20210203164619545
+origin: HTML
+qtype: rememberq
+question: In HTML, what differentiates the syntax of an opening tag from that of a closing tag?
+tags: Takeaway
+title: Ta:20201231000355989
+type: text/vnd.tiddlywiki

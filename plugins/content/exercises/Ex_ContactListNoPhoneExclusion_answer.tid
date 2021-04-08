@@ -1,0 +1,15 @@
+created: 20200603194024447
+modified: 20200603210244780
+tags: Answer
+title: Ex:ContactListNoPhoneExclusion/answer
+type: text/vnd.tiddlywiki
+
+Add a `has[phone]` filter step:
+
+```html
+<$list filter="[tag[Contact]has[phone]sort[]]">
+    <<currentTiddler>><br>
+</$list>
+```
+
+You might also have put `has[phone]` before `tag[Contact]` or after `sort[]` -- the order doesn't matter in this case.

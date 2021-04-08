@@ -1,0 +1,18 @@
+created: 20210206220636892
+modified: 20210206220538164
+tags: Answer
+title: Ex:ContactCard/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$select tiddler="$:/temp/CurrentContactCard" default="">
+    <option value="">(select a contact)</option>
+    <$list filter="[tag[Contact]]">
+        <option value=<<currentTiddler>>><<currentTiddler>></option>
+    </$list>
+</$select>
+
+<$tiddler tiddler={{$:/temp/CurrentContactCard}}>
+    {{||ContactInformationTemplate}}
+</$tiddler>
+```

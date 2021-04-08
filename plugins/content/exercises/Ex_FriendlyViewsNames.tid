@@ -1,0 +1,10 @@
+complete: 
+created: 20200718044721309
+length: m
+modified: 20210408142546732
+origin: Adding to the Sidebar
+tags: Exercise
+title: Ex:FriendlyViewsNames
+type: text/vnd.tiddlywiki
+
+By default, all of the tabs will have ugly system-tiddler names on them, like `$:/yourname/Views`. Fix this so they have friendly names like we defined at the beginning of this section. (Hint: Your MeetingList should already be set up correctly from when we used it for the table of contents exercises!)

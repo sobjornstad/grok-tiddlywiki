@@ -1,0 +1,11 @@
+created: 20210116204445198
+modified: 20210116204614173
+tags: 
+title: Sn:TripleDoublesMacro
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName, linkText)
+[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+<<wikipediaLink Aardvark """What is an "aardvark"?""">>

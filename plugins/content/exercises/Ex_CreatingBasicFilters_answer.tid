@@ -1,0 +1,12 @@
+created: 20200603184605684
+modified: 20210207150044596
+tags: Answer
+title: Ex:CreatingBasicFilters/answer
+type: text/vnd.tiddlywiki
+
+# `[tag[Application]]`
+# `[tag[Application]tag[OnboardingProcess]]`
+# `[[JaneDoe]tag[Application]]`
+#* You might think that `[tag[Application][JaneDoe]]` would be equivalent, but surprisingly it is not. In the next section, [[Anatomy of Filter Steps]], we'll learn that this is because the title operator is a //constructor//; that is, it ignores its input entirely.
+# `[[EmployeeProfileSetupMeeting]backlinks[]]`
+# `[[EmployeeProfileSetupMeeting]backlinks[]!tag[Journal]]`

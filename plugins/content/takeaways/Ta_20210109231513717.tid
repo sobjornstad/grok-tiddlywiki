@@ -1,0 +1,9 @@
+answer: `plugin.info`
+created: 20210109231516123
+modified: 20210220185936351
+origin: Creating Plugins
+qtype: rememberq
+question: What file at the root of a plugin's folder contains metadata about the plugin?
+tags: Takeaway
+title: Ta:20210109231513717
+type: text/vnd.tiddlywiki

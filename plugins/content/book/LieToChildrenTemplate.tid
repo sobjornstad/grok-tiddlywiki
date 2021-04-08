@@ -1,0 +1,9 @@
+created: 20210110042143124
+modified: 20210130022017337
+tags: Template
+title: LieToChildrenTemplate
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+
+<$link class="ltc-link" tooltip="""This is a “lie to children”: it is not strictly accurate, but will give you sufficient understanding for now. Click if you want to know the full truth.""" to={{!!title}}>{{!!description}}</$link>

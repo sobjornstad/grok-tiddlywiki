@@ -1,0 +1,41 @@
+created: 20200719030352650
+description: Explore buttons, system tags, action widgets, and messages by adding new buttons to the toolbar that create tiddlers with some custom field values already in place.
+modified: 20210327163010908
+parent: Looking Under the Hood
+tags: Section
+title: Creating Tiddlers With Predefined Fields
+type: text/vnd.tiddlywiki
+
+In our office wiki, we have a number of types of tiddlers that we often need to create with particular text and fields. In particular, let's focus on contacts and meetings. Right now, it's fairly complicated to add one of these -- we have to remember what fields and standard content we want to add to each. It would be better if, like with the built-in [[journal button|Journal Tiddlers]], we could ''prefill some values in the tiddler's fields''.
+
+TiddlyWiki has a built-in message called `tm-new-tiddler` that can help us do this. A ''message'' is a way of triggering a specific action to take place in the wiki -- when you trigger a message, any widgets higher up the widget tree are given the opportunity to respond to the message. That is, if you trigger a message within a button, the button can respond, the HTML element containing the button can respond, and so on up to the level of the whole wiki. This is much like [[the way TiddlyWiki refreshes elements after a tiddler is changed|Ex:EditCurrentTiddler/answer]], but the news propagates the other way: news of refreshes starts at the top of the wiki and works its way down the widget tree to each element on a page, while a message starts at an individual element and works its way up the widget tree until it reaches the //root widget// (the very top of the tree).
+
+You can trigger a message using the `$action-sendmessage` widget. This is a new type of widget that we haven't seen before, called an ''action widget''. (As you might have guessed, the names of all action widgets begin with `$action-`.) An action widget doesn't display anything on the screen, but instead causes something to happen -- creating a new tiddler, navigating somewhere, sending a message, etc. An action widget can't stand alone in a tiddler but has to be part of a button or other triggerable element, or it will never do anything (if TiddlyWiki didn't enforce this restriction, the action would fire randomly whenever something happened that triggered its containing tiddler to refresh itself, which you probably wouldn't want!).
+
+Here's how this looks in practice for creating a new tiddler:
+
+{{Sn:NewTiddlerActionWidget||MagicSnippet}}
+
+It's also possible to put the action widget inside the `$button` widget along with the text of the button:
+
+{{Sn:NewTiddlerActionWidgetText||MagicSnippet}}
+
+This second method is widespread in the wild, but it's usually better to avoid it nowadays, as [[it's deprecated|https://tiddlywiki.com/#ActionWidgets]] and could be removed in a future version of TiddlyWiki.
+
+In either case, when you click on the button, the action will be triggered, which will send a `tm-new-tiddler` message, which will create a new draft tiddler with the fields you've defined in the attributes of the action widget and open it for editing.
+
+If you like, you can put several action widgets within the macro or the `$button` widget. They will be triggered in sequence when the button is clicked.
+
+
+!! Exercises
+
+{{Ex:NewContactButton||ExerciseTemplate}}
+{{Ex:NewMeetingButton||ExerciseTemplate}}
+{{Ex:ButtonsOnPageToolbar||ExerciseTemplate}}
+{{Ex:SelectiveButtonDisplay||ExerciseTemplate}}
+{{Ex:ButtonDisplayTweaks||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

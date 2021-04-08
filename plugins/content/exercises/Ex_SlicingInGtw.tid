@@ -1,0 +1,10 @@
+complete: 
+created: 20210206170109287
+length: m
+modified: 20210322014624166
+origin: Slicing Up Content
+tags: Exercise
+title: Ex:SlicingInGtw
+type: text/vnd.tiddlywiki
+
+Edit a few sections and tiddlers in the //Grok TiddlyWiki// wiki to get a feel for how it's divided into tiddlers and what fields are present on these tiddlers. Tiddlers are included in other tiddlers using a syntax involving `{{double curly braces}}`; don't worry if you see things in the source that don't make sense yet.

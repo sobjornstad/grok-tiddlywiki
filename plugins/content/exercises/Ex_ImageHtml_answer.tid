@@ -1,0 +1,7 @@
+created: 20210124041101968
+modified: 20210124041010621
+tags: Answer
+title: Ex:ImageHtml/answer
+type: text/vnd.tiddlywiki
+
+`<img>`, a void element with the `src` attribute containing the URL of the image.

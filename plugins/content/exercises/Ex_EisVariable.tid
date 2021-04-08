@@ -1,0 +1,9 @@
+created: 20200603201028095
+length: s
+modified: 20210130174406407
+origin: Variables
+tags: Exercise
+title: Ex:EisVariable
+type: text/vnd.tiddlywiki
+
+In the tiddler above, define a second variable called `eis` with the value `Employee Information System`, and replace all references to the EIS or Employee Information System with the value of the `eis` variable. Make sure the disclaimer still shows up correctly.

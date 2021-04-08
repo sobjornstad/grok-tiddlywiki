@@ -1,0 +1,23 @@
+created: 20210131143343463
+modified: 20210214171831138
+tags: 
+title: Sn:WikitextCodeBlock
+type: text/vnd.tiddlywiki
+
+Let's say hello to the world in Python, without syntax highlighting:
+
+```
+print("Hello world!")
+```
+
+Let's add syntax highlighting by specifying a language (Highlight plugin must be installed):
+
+```python
+print("Hello world!")
+```
+
+How about in JavaScript?
+
+```javascript
+console.log("Hello world!")
+```

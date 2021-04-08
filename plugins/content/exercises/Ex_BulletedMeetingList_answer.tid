@@ -1,0 +1,15 @@
+created: 20200603194852266
+modified: 20200603195014987
+tags: Answer
+title: Ex:BulletedMeetingList/answer
+type: text/vnd.tiddlywiki
+
+```html
+<ul>
+	<$list filter="[tag[Meeting]!sort[at]]">
+		<li><<currentTiddler>></li>
+	</$list>
+</ul>
+```
+
+(If you left in the `contains:participants[JaneDoe]` filter step from the previous exercise, that's fine too.)

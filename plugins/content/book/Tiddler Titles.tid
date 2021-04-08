@@ -1,0 +1,49 @@
+created: 20200603023508383
+description: Carefully naming tiddlers and concepts has many benefits, but is often more art than science.
+modified: 20210327170244265
+parent: Filing and Organizing
+tags: Section
+title: Tiddler Titles
+type: text/vnd.tiddlywiki
+
+In the [[basic searching|Searching]] section, we mentioned that it was a good idea to include the keywords you're likely to search for in the titles of your tiddlers. So far the book has just been throwing out titles you can use, so let's talk a bit more about what makes a good tiddler title.
+
+
+!! The obvious
+
+Sometimes your titles are going to be ''obvious''. For instance, in creating our [[contact tiddlers|Contact Tiddlers]], we made the tiddler titles the person's name. For the Employee Information System, which was a software application, the title was the name of the application. If you're creating a tiddler for something that already //has// a name, then you're probably in pretty decent shape just using that as a name.
+
+There's one exception to that rule: if the name is ambiguous. For instance, if you're creating a tiddler for the technology company Apple, calling your tiddler simply `Apple` could be problematic: are you talking about the company, the original computer the company made, the fruit, the record label, or something else entirely? In this case, you might want to add an extra word or two to disambiguate.
+
+
+!! Titles for knowledge tiddlers
+
+In many cases, though, we want to create tiddlers that don't have a specific named thing associated with them. For instance, the project for our onboarding probably does not have an official corporate name, nor does the meeting at which Jane showed us how to use the information system, nor will a tiddler we create describing a new insight we came up with that might help us improve our process.
+
+Writing titles is tricky, as anyone who's stared at a computer screen trying to figure out what to call their essay or poem or book knows. But there's a great deal of value in getting them right. The popular academic-writing guide //They Say, I Say// describes titles as //metacommentary//, “a way of commenting on your claims and telling readers how and how not to think about them” (p. 127). It goes on to explain:
+
+> Thinking of a title as metacommentary can actually help you to develop sharper titles, leading you to write something that gives readers some sense of your argument rather than merely announcing your topic, or that it's an “English Essay” -- or having no title at all. Essays that bear no title send the message that the writer has simply not bothered to reflect on what he or she is saying.
+
+Of course, the audience for your wiki may be only yourself. This doesn't get you off the hook, though; as the old adage goes in programming, “There are always at least two people involved, you and you six weeks from now.” Having a good title not only makes it easier to find ideas, it actually makes it easier to //think// about ideas: once the tiddler is no longer fresh in your mind, looking at a good title still immediately gives you that “sense of the argument” therein, without having to look into the contents, and when we do look at the contents it frames our initial impression of it.
+
+Further, we can only hold a small amount of information in our short-term memory at a time; if the title is clear enough to help us understand the idea, we can forget everything except the title, leaving us free to use that capacity to relate the title to other things.
+
+Giving your idea or note a title is coming up with a name for that thing. For more on the importance of naming things, check out my blog post, [[The Power of Names|https://controlaltbackspace.org/psychology/the-power-of-names/]]. Also, if you're of a technical bent, Andy Matuschak [[describes|https://notes.andymatuschak.org/Evergreen_note_titles_are_like_APIs]] note titles as ''idea APIs'' -- a way of referencing a complicated idea with a simple interface. 
+
+!! In practice
+
+We just spent the last few paragraphs describing //why// you should create good titles, but not //how// to do it. The //how// is much more art than science, and it differs somewhat from wiki to wiki; if you start thinking carefully about what you're trying to accomplish, you'll get better at writing titles over time. That said, here are a few suggestions to help guide your experimentation:
+
+* Make sure that your tiddlers are really focused on a ''single idea''. This is an important skill to develop to get the most out of TiddlyWiki in general, but it's also quite helpful in producing titles. Scoping the title appropriately may make it easier to figure out what content goes in the tiddler, and vice versa.
+* If a noun phrase (e.g., “Good keyboards” or “Benefits of using a good keyboard”) doesn't seem like it would describe the idea in the tiddler with sufficient precision, try ''making a claim'' instead (e.g., “Using a good keyboard makes injury less likely”).
+* ''Avoid the word “not,”'' and negations in general, when possible; titles that state what is, rather than what is not, are easier to interpret and are less likely to result in overly broad tiddlers.
+* If there are any ''keywords'' you know you'll be using when searching for this tiddler later, try including them in the title, as we noted in the [[Searching]] section.
+
+
+!! Exercises
+
+{{Ex:NamingOldNotes||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

@@ -1,0 +1,11 @@
+created: 20200608014521722
+length: m
+modified: 20210130174558529
+origin: Classifying Tags
+tags: Exercise
+title: Ex:RedTagsFilter
+type: text/vnd.tiddlywiki
+
+Write a filter to find all tiddlers tagged with red tags. Make sure you figure out [[Ex:TagMetadataStorage]] first, or you won't have much luck.
+
+//Hint//: Review the //Tags// section of [[Common Filter Operators]].

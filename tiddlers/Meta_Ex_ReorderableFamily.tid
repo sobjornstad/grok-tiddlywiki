@@ -1,0 +1,13 @@
+created: 20200608023154266
+length: m
+modified: 20210407173414228
+origin: Ordering Tiddlers
+tags: Exercise Meta
+title: Meta:Ex:ReorderableFamily
+type: text/vnd.tiddlywiki
+
+SIB: This exercise was removed because we don't have the necessary stuff to do it yet. Maybe find a new place for it in a future edition.
+
+Edit the `ContactInformationTemplate` and make the bulleted sublist of family members support drag and drop: when you move the contact's family members around, the `family` field on the contact should reorder itself to match.
+
+You'll need to use the `list-links-draggable` macro and review the documentation linked above to find the necessary parameters.

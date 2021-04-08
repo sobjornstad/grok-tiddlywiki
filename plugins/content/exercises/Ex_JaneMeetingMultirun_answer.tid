@@ -1,0 +1,22 @@
+created: 20200715230537311
+modified: 20200716014411821
+tags: Answer
+title: Ex:JaneMeetingMultirun/answer
+type: text/vnd.tiddlywiki
+
+```
+[tag[OnboardingHr]] [tag[TopSecretHr]] +[contains:participants[JaneDoe]]
+```
+
+This works fine too, but requires more typing and is a bit harder to understand:
+
+```
+[tag[OnboardingHr]contains:participants[JaneDoe]] [tag[TopSecretHr]contains:participants[JaneDoe]]
+```
+
+If you're a programmer, you might wonder which version is faster. Generally, filter performance is decidedly non-obvious -- you really have to benchmark it to find out.
+
+* With the first version, you have to do three filter runs, two of which have to work through all of the tiddlers in the wiki. 
+* In the second version, you save a filter run, but you have to filter for the same thing multiple times.
+
+In this case, it's likely that the first version is slightly slower, because under most circumstances it will have to process more tiddlers in total, but it's also unlikely to be enough to matter. Filters are generally very fast and rarely worth optimizing unless you're calling them from dozens of places at once.

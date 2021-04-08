@@ -1,0 +1,10 @@
+caption: Hard penalty
+created: 20201229235951493
+description: Percentage points by which the ease of a takeaway is decreased when choosing //Hard//.
+modified: 20210407150819235
+stackorder: 60
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/HardEasePenalty
+type: text/vnd.tiddlywiki
+
+15

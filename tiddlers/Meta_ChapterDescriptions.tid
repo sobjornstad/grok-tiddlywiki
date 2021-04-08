@@ -1,0 +1,19 @@
+created: 20210207044406500
+modified: 20210407173531591
+tags: Meta
+title: Meta:ChapterDescriptions
+type: text/vnd.tiddlywiki
+
+<table class="xxxx" style="width: 100%;">
+<$list filter="[list[Outline]]">
+	<tr>
+		<td><$link/></td>
+		<td style="width: 100%;"><$edit-text tag="textarea" field="description" default=""/></td>
+	</tr>
+</$list>
+
+<style>
+table.xxxx td textarea {
+	width: 100%;
+}
+</style>

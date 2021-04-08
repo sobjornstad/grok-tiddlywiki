@@ -1,0 +1,15 @@
+created: 20210121000813997
+modified: 20210121001504559
+tags: Answer
+title: Ex:RubberDucking/answer
+type: text/vnd.tiddlywiki
+
+There were three problems with this snippet:
+
+# The final `]` to close the filter run was left off.
+# The `;` in `field:parent` should read `:`.
+# The `sort[]` needs to come after the `get[description]` operator to meet the goal proposed above, or the tiddler titles (which you never see) are sorted, rather than their descriptions/summaries.
+
+A corrected version:
+
+{{Sn:RubberDuckingCorrected||MagicSnippet}}

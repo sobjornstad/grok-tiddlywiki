@@ -1,0 +1,9 @@
+created: 20210130034039226
+length: s
+modified: 20210130174426726
+origin: Stylesheets
+tags: Exercise
+title: Ex:FunnyClass
+type: text/vnd.tiddlywiki
+
+Add `my-funny-class` from above (or any styling you like, as long as it is distinctive) to a global stylesheet in your wiki and apply the class to some text.

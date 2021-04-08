@@ -1,0 +1,50 @@
+created: 20210207180211360
+modified: 20210207180335891
+tags: Answer
+title: Ex:DateFormatter/answer
+type: text/vnd.tiddlywiki
+
+Here's my version. You presumably have something slightly different.
+
+```html
+\define show-date(fmt) <$view tiddler={{!!selectedtiddler}} field={{!!selectedfield}} format="date" template=<<__fmt__>>>(not a date)</$view>
+
+\define date-row(name, fmt)
+<tr>
+  <td>$name$</td>
+  <td><$macrocall $name="show-date" fmt=<<__fmt__>>/></td>
+</tr>
+\end
+
+Tiddler:
+<$select field="selectedtiddler" default="">
+    <option value="">(choose a tiddler)</option>
+    <$list filter="[!is[system]]">
+        <option value=<<currentTiddler>>><<currentTiddler>></option>
+    </$list>
+</$select>
+
+<!-- Don't show the field drop-down if no tiddler is selected, since it won't contain any options. -->
+<$reveal state="!!selectedtiddler" type="nomatch" text="">
+Field:
+<$select field="selectedfield" default="created">
+    <$list filter="[{!!selectedtiddler}fields[]]">
+        <option value=<<currentTiddler>>><<currentTiddler>></option>
+    </$list>
+</$select>
+</$reveal>
+
+<$list filter="[all[current]has[selectedtiddler]has[selectedfield]]">
+<table>
+    <tr>
+        <th>Format</th>
+        <th>Date</th>
+    </tr>
+    <$list filter="[prefix[$:/config/DateFormatter/Formats/]]" variable="currentFormat">
+        <$macrocall $name="date-row"
+            name={{{ [<currentFormat>removeprefix[$:/config/DateFormatter/Formats/]] }}} 
+            fmt={{{ [<currentFormat>get[text]] }}}/>
+    </$list>
+</table>
+</$list>
+```

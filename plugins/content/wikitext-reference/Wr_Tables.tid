@@ -1,0 +1,16 @@
+caption: Tables
+created: 20210131145854489
+modified: 20210213232523034
+tags: [[Wikitext Reference]]
+title: Wr:Tables
+type: text/vnd.tiddlywiki
+
+Tables are created by putting pipe characters (`|`) between the columns, and putting each row on a separate line. A `!` can be placed at the beginning of a cell to turn it into a header.
+
+{{Sn:WikitextTableReference||MagicSnippet}}
+
+Alignment can be accomplished by adding spaces next to the vertical bars. To left-align, put a space at the right; to right-align, put a space at the left; and to center-align, put a space on both sides. By default, header cells are centered and other cells are left-aligned. You can see this in action below:
+
+{{Sn:WikitextTableAlignment||MagicSnippet}}
+
+It's also possible to merge cells and apply further [[HTML]] markup. In most cases, you likely won't need these features, but if they sound useful, you can read about them in the [[TiddlyWiki documentation|https://tiddlywiki.com/#Tables%20in%20WikiText]].

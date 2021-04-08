@@ -1,0 +1,9 @@
+created: 20200718202059389
+length: m
+modified: 20210130174409534
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:ExcerptConfigurationTiddler
+type: text/vnd.tiddlywiki
+
+Make the size of the excerpt configurable via a configuration tiddler. Call the configuration tiddler `$:/config/LinkExcerptLength`.

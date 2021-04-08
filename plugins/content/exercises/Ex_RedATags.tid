@@ -1,0 +1,24 @@
+created: 20200716023056742
+length: m
+modified: 20210130174556191
+origin: Multi-Run Filters
+tags: Exercise
+title: Ex:RedATags
+type: text/vnd.tiddlywiki
+
+Write a filter to find all tiddlers that do not link to a tiddler that has a tag which is both red and begins with the letter A, sorted by title in reverse alphabetical order.
+
+Consider a "red" tag to be one with a color code of `#ff0000`, as in [[Classifying Tags]].
+
+English is terrible at expressing complicated conditions like this, so to be sure you read it right, here's the sentence decomposed hierarchically and written more precisely:
+
+* All tiddlers matching these criteria:
+** The tiddler does not link to:
+*** Another tiddler:
+**** That has a tag:
+***** Which is red (#ff0000)
+***** The name of which begins with a capital letter A
+* Sorted by title in reverse alphabetical order.
+
+
+//Tip//: Two useful operators here will be `prefix` (limit to tiddlers whose title begins with some text) and `tags` (get all tiddlers which are used as a tag at least once).

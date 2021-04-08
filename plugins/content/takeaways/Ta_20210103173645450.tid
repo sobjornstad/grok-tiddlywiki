@@ -1,0 +1,9 @@
+answer: `tabsList`, a filter describing the tiddlers to be used as tabs, and `default`, the title of the tab that is selected by default.
+created: 20210103173646735
+modified: 20210212133953087
+origin: Tabs
+qtype: rememberq
+question: What are the names and functions of the first two parameters to the `tabs` macro?
+tags: Takeaway
+title: Ta:20210103173645450
+type: text/vnd.tiddlywiki

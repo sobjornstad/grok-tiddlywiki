@@ -1,0 +1,10 @@
+caption: {{$:/core/images/quote}} Quotes
+created: 20210131145912549
+modified: 20210320145248231
+tags: [[Wikitext Reference]]
+title: Wr:Quotes
+type: text/vnd.tiddlywiki
+
+There are two forms of block quotes. The line form uses a single `>`, like plain-text email. This form can be nested. The block form opens and closes with `<<<` on a separate line.
+
+{{Sn:WikitextQuotes||MagicSnippet}}

@@ -1,0 +1,9 @@
+caption: Show due notifications
+created: 20201230133708020
+description: Show a banner in the sidebar when takeaways are due for review. Disable this if you're using an external spaced-repetition tool like Anki.
+modified: 20210407150742448
+tags: 
+title: $:/config/sobjornstad/TakeAway/Reviewer/ShowDueNotifications
+type: text/vnd.tiddlywiki
+
+yes

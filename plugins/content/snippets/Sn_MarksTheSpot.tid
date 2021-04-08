@@ -1,0 +1,13 @@
+created: 20210101173550409
+modified: 20210101173506420
+tags: 
+title: Sn:MarksTheSpot
+type: text/vnd.tiddlywiki
+
+\define findX()
+The current value of X is "<<X>>".
+\end
+
+<$set name=X value="marks the spot">
+	<<findX>>
+</$set>

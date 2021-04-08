@@ -1,0 +1,15 @@
+created: 20210208004312948
+modified: 20210327153324227
+tags: Answer
+title: Ex:WikifyWikipediaLink/answer
+type: text/vnd.tiddlywiki
+
+```html
+\define wikipediaLink(articleName)
+https://en.wikipedia.org/wiki/$articleName$
+\end
+
+<$wikify name="article" text={{!!wikipedia-article}}>
+	<$macrocall $name="wikipediaLink" articleName=<<article>>/>
+</$wikify>
+```

@@ -1,0 +1,8 @@
+created: 20210209040141986
+modified: 20210408135913882
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/QuestionCsvTemplate
+type: text/vnd.tiddlywiki
+
+title	qtype	origin	question	answer	seen	due	ease	ivl	lapses<$list filter="[all[tiddlers+shadows]tag[Takeaway]!is[draft]]">
+{{!!title}}	{{!!qtype}}	{{!!origin}}	{{!!question}}	{{!!answer}}	{{!!seen}}	{{!!due}}	{{!!ease}}	{{!!ivl}}	{{!!lapses}}</$list>

@@ -1,0 +1,18 @@
+created: 20210131153434996
+modified: 20210131153336667
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/license
+type: text/vnd.tiddlywiki
+
+TakeAway is available under the same license as the rest of //Grok TiddlyWiki//, ''CC BY-NC-ND 4.0''. Unlike most TiddlyWiki plugins, at this time the license does ''not'' permit you to reuse this plugin in derivative works (i.e., wikis other than the official edition of Grok TiddlyWiki available at https://groktiddlywiki.com) if you intend to distribute them to others. This is likely to change in the future.
+
+For details, please see the ''Copyright'' section at https://groktiddlywiki.com.
+<p class="gtw-cc-copyright" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a class="tc-tiddlylink-external" property="dct:title" rel="cc:attributionURL" href="https://groktiddlywiki.com">Grok TiddlyWiki</a> by <a class="tc-tiddlylink-external" rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sorenbjornstad.com">Soren Bjornstad</a> is licensed under <a class="tc-tiddlylink-external" href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0.<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+
+<style>
+.gtw-cc-copyright {
+	border: 1px solid;
+	padding: 5px;
+	text-align: center;
+}
+</style>

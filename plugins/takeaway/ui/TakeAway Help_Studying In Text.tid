@@ -1,0 +1,12 @@
+caption: Studying takeaways in-text
+created: 20210101234933890
+modified: 20210327160740119
+tags: Fragment
+title: TakeAway Help/Studying In Text
+type: text/vnd.tiddlywiki
+
+When you ''reach a takeaway in the text'' for the first time, you will see a question or prompt about something you just read. Think about the answer, then click //show answer//, check yourself, and choose //forgot// or //remembered// as appropriate. Hopefully you got it right since you just read the information needed to answer, but if not, take a moment to read back up in the text and find the correct answer.
+
+When you answer a takeaway in the text, whether you forgot or remembered it, TakeAway ''collects'' it, meaning it will be shown in future [[review|TakeAway Help/Reviewing]] sessions. You can choose //uncollect// either in the text or in review at any time if you decide you don't care about the information in the takeaway and don't want to see it in review anymore.
+
+Sometimes the provided takeaways ''won't cover everything'' you want to remember from the section -- for instance, you may notice a connection between something you've just learned about TiddlyWiki and some other software you use or a topic you study that the author of the book (or most of its audience) doesn't know about. In such cases, you can add your own takeaway by clicking the //add your own takeaway// link at the bottom of the list of takeaways. Enter a question and answer or a fill-in-the-blank/cloze deletion (to specify a blank to be filled in on a cloze deletion, put the words to hide in `{curly braces}`), then click the //New Q&A// or //New cloze// button as appropriate. You'll see your new takeaway added to the list, and once you've shown the answer it will begin appearing in review like any other takeaway.

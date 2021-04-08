@@ -1,0 +1,23 @@
+created: 20201122235410268
+length: h
+modified: 20210130175005982
+origin: Supplemental Exercises
+tags: Exercise
+title: Ex:MailMerge
+type: text/vnd.tiddlywiki
+
+Implement a mail merge in TiddlyWiki. Without writing JavaScript, you cannot actually send emails from TiddlyWiki, but you can produce a list of `mailto:` links that, when clicked, each open a new email in your email program with the email address, subject, and body for that recipient pre-filled. For low-volume tasks, this might be good enough.
+
+On the tiddler that implements the merge, you should be able to fill in fields that provide a filter for contact tiddlers you want to send the message to, and some kind of template tiddler that uses a variable or a setting of the current tiddler to substitute in values that change.
+
+You'll need to URL-encode the subject and body and put it into the link, which TiddlyWiki has a `encodeuri[]` filter operator to do. See https://en.wikipedia.org/wiki/Mailto for details of the mailto: URI structure; essentially, you want to produce links that look like this:
+
+```
+mailto:whoever@example.com?subject=TheSubject&body=TheBodyOfTheEmail
+```
+
+...where both `TheSubject` and `TheBodyOfTheEmail` are URL-encoded.
+
+''Warning'': This is well known in the community as a complex task that demands excellent knowledge of macros, filters, transclusions, and how they relate. It is harder than it looks, and even experienced users will find it challenging. That said, it's a great final exercise after reading this book, and it feels good to crack it!
+
+//Hint//: You will need the `$wikify` widget.

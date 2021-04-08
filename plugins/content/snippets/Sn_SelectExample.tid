@@ -1,0 +1,16 @@
+created: 20210206212257711
+modified: 20210408143644120
+tags: 
+title: Sn:SelectExample
+type: text/vnd.tiddlywiki
+
+What do you want to look at?
+
+<$select tiddler="$:/temp/SelectExample" default="">
+	<option value="">(choose an option)</option>
+	<option value="Exercise">Exercises</option>
+	<option value="Section">Sections</option>
+	<option value="Takeaway">Takeaways</option>
+</$select>
+
+<<list-links "[tag{$:/temp/SelectExample}first[5]]">>

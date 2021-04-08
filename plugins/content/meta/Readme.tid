@@ -1,0 +1,9 @@
+created: 20210131153434996
+modified: 20210131153336667
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/readme
+type: text/vnd.tiddlywiki
+
+This plugin contains most of the content of //Grok TiddlyWiki//. This mechanism allows you to edit the wiki freely, whether by deliberately making changes to the text of the book or system tiddlers or by using the embedded features (marking exercises complete, reviewing takeaways, etc.), and retain the ability to update the book to a newer version. Because of the [[shadowing|Shadow Tiddlers]] mechanism of TiddlyWiki, you can update the book by dragging the plugin into an old wiki from a newer version of the book.
+
+The latest plugin version may be found at https://groktiddlywiki.com/#Upgrade.

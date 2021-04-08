@@ -1,0 +1,10 @@
+caption: Hard multiplier
+created: 20201230000218198
+description: Multiplier for the interval of a takeaway when choosing //Hard//; e.g., 1.2 will make the interval 1.2 times as long as it currently is.
+modified: 20210407150823828
+stackorder: 30
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/HardMultiplier
+type: text/vnd.tiddlywiki
+
+1.2

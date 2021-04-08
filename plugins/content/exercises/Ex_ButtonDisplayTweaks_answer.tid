@@ -1,0 +1,28 @@
+created: 20200822192711306
+modified: 20210109221836629
+tags: Answer
+title: Ex:ButtonDisplayTweaks/answer
+type: text/vnd.tiddlywiki
+
+For a simple fix to the icon problem, just replace the text with an icon transclusion, e.g., `{{$:/core/images/quote}}`. This is probably good enough in many circumstances. However, TiddlyWiki lets you configure whether text, icon, or both is shown for each place a toolbar button can appear (for instance, both appear by default on the Tools tab of the sidebar). If you want this feature to work, you'll want to borrow the following snippet from one of the existing buttons:
+
+```html
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/core/images/save-button}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text"><$text text={{$:/language/Buttons/SaveWiki/Caption}}/></span>
+</$list>
+```
+
+Within the context of any button display, these variables will be defined as either "yes" or "no", and you can check using the above filters to see whether you should display each part. (Unless you plan to be translating your own wiki into different languages, you can safely hard-code the caption or put it in the `{{!!caption}}` field rather than putting it into a separate tiddler under `$:/language`.)
+
+A related problem is that the button will still be square and not match the existing buttons. To fix this, add the `class` and `selectedClass` attributes that are used on the existing buttons:
+
+```html
+<$button class=<<tv-config-toolbar-class>> selectedClass="tc-selected" ...>
+```
+
+For the tooltips, adding a `tooltip` attribute to the `<$button>` widget will do the trick.
+
+For the description, just set the `description` field on the tiddler.

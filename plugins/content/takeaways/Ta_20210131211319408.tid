@@ -1,0 +1,9 @@
+answer: Precede it with a tilde, `~CamelCase`.
+created: 20210131211320419
+modified: 20210311183354737
+origin: CamelCase
+qtype: rememberq
+question: How do you escape the word `CamelCase`, so that it does not turn into a link when camel-case linking is on?
+tags: Takeaway
+title: Ta:20210131211319408
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: The type (set to `application/javascript`) and the `module-type` field (set to `macro`).
+created: 20210109225318236
+modified: 20210218194638026
+origin: JavaScript Macros
+qtype: rememberq
+question: What two fields must you set on a tiddler containing a JavaScript macro to make it visible to TiddlyWiki?
+tags: Takeaway
+title: Ta:20210109225316323
+type: text/vnd.tiddlywiki

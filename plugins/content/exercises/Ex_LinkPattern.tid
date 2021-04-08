@@ -1,0 +1,28 @@
+complete: 
+created: 20201122171809633
+length: m
+modified: 20210130174503476
+origin: Your First Dynamic List
+tags: Exercise
+title: Ex:LinkPattern
+type: text/vnd.tiddlywiki
+
+There's a problem with this pattern that we've been using throughout this section to create a list of links to tiddlers:
+
+```html
+<$list filter="a filter">
+  <<currentTiddler>>
+</$list>
+```
+
+The problem is that if the name of the `currentTiddler` has a space in it, it is not linked. The only reason many of them have worked so far as that they're in CamelCase and as such are linked automatically.
+
+To explicitly create internal links, as we alluded to back in [[Widgets]], we can use the `$link` widget:
+
+```html
+<$link to="Tiddler Name to Link To">Text of the Link</$link>
+```
+
+Modify the list you created in [[Ex:BulletedMeetingList]], using the `$link` widget to fix this problem.
+
+//Hint//: `<<currentTiddler>>` will get replaced in more places than you might think.

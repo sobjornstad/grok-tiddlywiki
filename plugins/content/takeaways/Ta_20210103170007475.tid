@@ -1,0 +1,9 @@
+answer: The value in T's `list` field is ignored and the one in A's `list-before` field is used.
+created: 20210103170008818
+modified: 20210208152425399
+origin: Ordering Tiddlers
+qtype: rememberq
+question: How does TiddlyWiki order a tagged tiddler `A` if it is listed in the tag tiddler `T`'s `list` field, but `A` also has a `list-before` field?
+tags: Takeaway
+title: Ta:20210103170007475
+type: text/vnd.tiddlywiki

@@ -1,0 +1,28 @@
+created: 20200603201108320
+modified: 20210116203519491
+tags: Answer
+title: Ex:EisVariable/answer
+type: text/vnd.tiddlywiki
+
+Simply add a second `$set` widget:
+
+```html
+<$set name="disclaimer" value="(This paragraph does not represent the formal opinion of my company.)">
+<$set name="eis" value="Employee Information System">
+
+The <<eis>> at this nice company allows employees to perform tasks such as:
+
+* update their names and other personal information (on the front page after signing in)
+* view pay stubs ("remuneration" tab)
+* request vacation dates ("time off" tab)
+<<disclaimer>>
+
+You need to use the Really Annoying Five-Factor Authentication Process to get into the <<eis>> if it is a Tuesday, unless you have also purchased coffee (tea or pastries do not count) in the company cafeteria earlier in the day. <<disclaimer>>
+
+JaneDoe taught me about the <<eis>> in our EmployeeProfileSetupMeeting. <<disclaimer>>
+
+</$set>
+</$set>
+```
+
+Don't forget to add the second closing `</$set>` tag to match the opening one. In this case, you likely won't notice a difference if you forget, since TiddlyWiki will try its best to figure out what you meant, but if you have lots of content later in the tiddler, it might get confused by the lack of a closing tag.

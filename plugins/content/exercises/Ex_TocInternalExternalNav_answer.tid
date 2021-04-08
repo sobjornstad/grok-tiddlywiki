@@ -1,0 +1,8 @@
+created: 20200603195826629
+length: m
+modified: 20200603195917940
+tags: Answer
+title: Ex:TocInternalExternalNav/answer
+type: text/vnd.tiddlywiki
+
+The difference is that the `internal` version opens internal links within the tabbed display, whereas the `external` version opens them in a separate tiddler in the story river.

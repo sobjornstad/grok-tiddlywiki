@@ -1,0 +1,72 @@
+created: 20200718211403194
+creator: soren
+description: Buttons and input widgets allow you to create custom user interfaces that edit fields and take actions in the wiki.
+modified: 20210327170908081
+modifier: soren
+parent: Looking Under the Hood
+tags: Section
+title: Buttons and Input Widgets
+type: text/vnd.tiddlywiki
+
+So far, all we've done to customize TiddlyWiki is make new, more or less static content of various kinds show up in various places in the wiki: macros, tiddler content, sidebar tabs, snippets. This is all well and good, but sometimes we want to ''add interface elements the user can actively interact with'' as well.
+
+The most basic tools for active interaction are ''buttons'' and ''text boxes'' that the user can click on and type into to perform simple tasks. Let's look at how these work.
+
+
+!! Setting a value
+
+Perhaps the most common thing to do with a button is ''set the value of some field'' of a tiddler. Buttons are created, perhaps unsurprisingly, using the `$button` widget. Within a `$button` widget, we can use the `set` and `setTo` attributes of the widget to set a field to a value. `set` refers to a field using the same syntax as a [[transclusion|Transclusions]], but without the curly braces (the formal name for this is a //text reference//). `setTo` is the value the specified field will be set to.
+
+For example, we can set the current tiddler's `userwhoclicked` field to `Soren` with this button:
+
+{{Sn:UserWhoClicked||MagicSnippet}}
+
+When I click on this button, the tiddler now contains a field recording that I clicked the button.
+
+Of course, this won't be right if //you// click the button (unless by chance your name is also Soren). The `$:/status/UserName` tiddler contains the username TiddlyWiki uses to sign any tiddlers you edit, if you have this function on, so we could make it use that value instead:
+
+```html
+<$button set="!!userwhoclicked" setTo={{$:/status/UserName}}>
+  Big Red Button, Version 2
+</$button>
+```
+
+!! Getting the value from user input
+
+What if we want to allow the user to ''enter their own name''? We can do this by pairing the button with an `$edit-text` widget.
+
+{{Sn:EditableUserWhoClicked||MagicSnippet}}
+
+The user can now enter their name into an input text box, and when they click the save button, whatever is in that text box is copied into the `userwhoclicked` field of the current tiddler.
+
+You'll notice that the `$edit-text` widget is associated with a field of a specific tiddler (here, since we haven't explicitly named the field, it's the `text` field of the `$:/temp/EditingUserName` tiddler). In fact, as the user changes the contents of the text box, that field is being directly edited, and if the contents of the field change for some other reason, the text box will immediately update to match. We say that the text box is ''bound'' to the field.
+
+The tiddler holds the text the user has entered until the user clicks the button, at which point the button will retrieve the contents and do something with them. This is a common pattern in TiddlyWiki -- even core UI elements like the search box store their current contents in a tiddler. Because of the ubiquity of tiddlers used to store the state of the user interface and configuration values, buttons can do more than they would appear to at first glance by setting values!
+
+The tiddler we've bound the text box to in this case is a system tiddler whose name begins with `$:/temp/`, often called a ''temporary tiddler''. Tiddlers in `$:/temp/` are not saved with your wiki -- when you close the page or hit the refresh button, they are all gone. For a situation like this one, that's usually what you want, but if you want the value to persist across a reload, you should keep that tiddler somewhere else.
+
+The parameter `tag="input"` used above is usually going to be what you want. If you leave it off, you get a multiple-line text area, which could be helpful for entering text into the `text` field of some tiddler, but not much else.
+
+
+!! Styling
+
+Sometimes you might want a button to ''look like a link'' rather than a button. Buttons can be styled using CSS, just like anything else in the wiki, and TiddlyWiki provides some special CSS classes for exactly this use case. To create such a “button,” add the attribute `class="tc-btn-invisible tc-tiddlylink"` to your button widget.
+
+
+!! Exercises
+
+As we continue to move forward learning about more widgets like these, the definitive reference source is always https://tiddlywiki.com. A quick search there will get you details about widgets, field operators, terms, and so on. Looking at the documentation frequently is normal, even for experts who use spaced repetition to study TiddlyWiki. There are just too many options to remember them all!
+
+You now know enough to use the official documentation effectively and should start doing it whenever it would be helpful. From here on out, we will no longer link to the pages as they come up or tell you to look in the documentation for information you need to know for an exercise.
+
+
+{{Ex:MainSearchBoxBinding||ExerciseTemplate}}
+{{Ex:EditCurrentTiddler||ExerciseTemplate}}
+{{Ex:JumpToTiddler||ExerciseTemplate}}
+{{Ex:InputExistsText||ExerciseTemplate}}
+{{Ex:CaptionsByTag||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

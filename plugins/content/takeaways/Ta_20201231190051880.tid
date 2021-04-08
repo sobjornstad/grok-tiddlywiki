@@ -1,0 +1,9 @@
+answer: `ContactInformationTemplate` (with `JaneDoe` as the current tiddler)
+created: 20201231190053870
+modified: 20210209124317497
+origin: Templates and the Current Tiddler
+qtype: rememberq
+question: In the wikitext syntax `{{JaneDoe||ContactInformationTemplate}}`, which tiddler is being transcluded?
+tags: Takeaway
+title: Ta:20201231190051880
+type: text/vnd.tiddlywiki

@@ -1,0 +1,21 @@
+created: 20200718200917466
+modified: 20201122171229276
+tags: Answer
+title: Ex:BasicBacklinksList/answer
+type: text/vnd.tiddlywiki
+
+To display the list:
+
+```html
+Backlinks:
+
+<ul>
+<$list filter="[all[current]backlinks[]]">
+  <li>
+		<$link to=<<currentTiddler>>><<currentTiddler>></$link>
+  </li>
+</$list>
+</ul>
+```
+
+To make the `$:/yourname/TiddlerLinkSummary` template appear on every tiddler, you'll need to tag it `$:/tags/ViewTemplate`. Positioning it in the `list` is optional in this case, since it will appear after the listed items anyway by default.

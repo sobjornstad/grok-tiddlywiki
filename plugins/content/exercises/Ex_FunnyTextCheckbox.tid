@@ -1,0 +1,9 @@
+created: 20210130035045108
+length: m
+modified: 20210130174427177
+origin: Stylesheets
+tags: Exercise
+title: Ex:FunnyTextCheckbox
+type: text/vnd.tiddlywiki
+
+Add a checkbox to the control panel on a new subtab within the //Settings// tab called //Styles//, allowing this value to be toggled on and off, so the user can make text look funny only if they so desire.

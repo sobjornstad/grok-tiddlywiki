@@ -1,0 +1,9 @@
+answer: Changing one of the settings overrides a shadow tiddler that contains the default value.
+created: 20210107014509330
+modified: 20210407135600267
+origin: Shadow Tiddlers
+qtype: rememberq
+question: What mechanism does TiddlyWiki use to back most of the settings in the Control Panel, making it easy to restore the original settings if needed?
+tags: Takeaway
+title: Ta:20210107014504752
+type: text/vnd.tiddlywiki

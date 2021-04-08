@@ -1,0 +1,8 @@
+created: 20210207034004011
+modified: 20210315200808417
+origin: Hiding and Showing Things
+qtype: remembercz
+question: The `$view` widget differs from the `$transclude` widget in that it does not {wikify} the contents of the field it is accessing.
+tags: Takeaway
+title: Ta:20210207034003070
+type: text/vnd.tiddlywiki

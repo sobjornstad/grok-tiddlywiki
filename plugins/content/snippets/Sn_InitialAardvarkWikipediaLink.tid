@@ -1,0 +1,11 @@
+created: 20210116203723828
+modified: 20210117010022389
+tags: 
+title: Sn:InitialAardvarkWikipediaLink
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName)
+https://en.wikipedia.org/wiki/$articleName$
+\end
+
+<<wikipediaLink Aardvark>>

@@ -1,0 +1,7 @@
+created: 20200604022723842
+modified: 20200623131614385
+tags: Answer
+title: Ex:CircularTransclusion/answer
+type: text/vnd.tiddlywiki
+
+Same thing as if you transclude a tiddler into itself (because that's effectively what you //are// doing, if you think about it).

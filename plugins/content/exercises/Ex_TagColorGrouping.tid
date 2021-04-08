@@ -1,0 +1,9 @@
+created: 20201123000633554
+length: m
+modified: 20210130175017576
+origin: Supplemental Exercises
+tags: Exercise
+title: Ex:TagColorGrouping
+type: text/vnd.tiddlywiki
+
+Modify the display of tags in the `Tags` section of the `More` sidebar tab so that they are grouped by color.

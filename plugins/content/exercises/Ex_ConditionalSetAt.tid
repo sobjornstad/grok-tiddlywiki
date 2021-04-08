@@ -1,0 +1,9 @@
+created: 20210207215704886
+length: m
+modified: 20210207215628858
+origin: Hiding and Showing Things
+tags: Exercise
+title: Ex:ConditionalSetAt
+type: text/vnd.tiddlywiki
+
+Repeat the [[previous exercise|Ex:EmptyAtField]], but use a conditional `$set` widget.

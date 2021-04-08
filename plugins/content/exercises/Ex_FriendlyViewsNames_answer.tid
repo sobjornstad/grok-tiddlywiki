@@ -1,0 +1,9 @@
+created: 20200718044740351
+modified: 20200718044749279
+tags: Answer
+title: Ex:FriendlyViewsNames/answer
+type: text/vnd.tiddlywiki
+
+To do this, you simply set the `caption` field of each tiddler. The caption applies on tabs, in tables of contents, in tag pills, and pretty much anywhere else you can think of except the actual title line when looking at the tiddler.
+
+Note that the `default` parameter to the `tabs` macro still needs to refer to the title, not the caption. This may seem obvious since the title is always how TiddlyWiki refers to the tiddler internally, but it can be unexpected when the name that appears on the tab doesn't work to select that tab!

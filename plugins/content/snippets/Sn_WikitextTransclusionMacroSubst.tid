@@ -1,0 +1,9 @@
+created: 20210314125642771
+modified: 20210314125531595
+tags: 
+title: Sn:WikitextTransclusionMacroSubst
+type: text/vnd.tiddlywiki
+
+\define mymacro(myName) Hi $myName$!
+
+<<mymacro Soren>>

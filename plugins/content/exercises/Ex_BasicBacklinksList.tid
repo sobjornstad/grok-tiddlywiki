@@ -1,0 +1,9 @@
+created: 20200718200211240
+length: m
+modified: 20210130174303573
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:BasicBacklinksList
+type: text/vnd.tiddlywiki
+
+Create a tiddler called `$:/yourname/TiddlerLinkSummary`. Make this tiddler display a simple bulleted list of all backlinks of the current tiddler. Then make this content included at the bottom of every tiddler.

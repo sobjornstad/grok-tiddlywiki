@@ -1,0 +1,77 @@
+created: 20200603023508505
+description: TiddlyWiki can prevent your old notes from withering and being lost when you use its features appropriately.
+modified: 20210327170345909
+parent: Filing and Organizing
+tags: Section
+title: Creating Evergreen Notes
+type: text/vnd.tiddlywiki
+
+A recent exercise, [[Ex:FudgeAdviceReflection]], brings up some crucial points about how we organize our notes -- less about TiddlyWiki than about notes, but germane to TiddlyWiki. You can use TiddlyWiki without thinking about these points, but you'll be missing a lot of its value if you do. (If you're using TiddlyWiki for a purpose other than taking notes, some of this section may not apply, but most of it will likely still be helpful; you may just need to think a little bit about how it applies to your use case.)
+
+If you skipped the last two exercises in [[Creating Hierarchies with a Table of Contents]], go back and do them (the last one follows on from the penultimate one). Then let's review what we did. We were in the `EmployeeProfileSetupMeeting`, and we extracted a tiddler for a part of that meeting in which Jane told us to be careful about using the word “fudge” and made it a child -- a hierarchical subcomponent -- of that meeting.
+
+This section might be about to make you realize that, over your lifetime, you've lost track of a great deal of useful information that you could have saved, so buckle up!
+
+!! Why notes shouldn't stay where they're taken
+
+Let's think about what we did with the fudge note for a moment. Why are we taking the time to write down this piece of information anyway? I don't know your motivation for keeping notes, and maybe you've never even thought about it, but mine for making this note would go something like this. I hope that the notes will have one or more of these functions:
+
+# ''Integration'': The act of making the note will help me think harder about the ideas in it and how they relate to what I already know, thus increasing my chance of remembering it without needing the notes at all.
+# ''Reference'': When I'm about to talk about fudge in the future, even though I don't remember exactly what I needed to be careful about, I'll remember there was something about fudge that I made a note of, and I can then look it up.
+# ''Serendipity'': The note about fudge will end up in a location where I happen across it at a time when it's relevant, even if I have completely forgotten the information existed at all (perhaps when I'm making plans to send an email to the whole office about getting fudge).
+
+I am guessing that your motivation is not altogether different.
+
+None of these purposes are particularly well-served by keeping Jane's useful social tip ''within the notes about the meeting''. This may be a strange concept, because most people never move notes after they take them, and they take them in chronological bursts, perhaps divided into categories (e.g., a “meetings” notebook, a “project planning” notebook, a “calculus class” notebook). But think about it. In scenario (2), unless the situation in which Jane told us this information was particularly unusual or shocking, it's highly unlikely that a month from now we'll remember that Jane was the one who gave it to us in this particular onboarding meeting and know to look in this meeting. In scenario (3), the chance we will stumble upon this meeting again while writing new notes about fudge is similarly small. The concern with scenario (1) is less obvious, but if we spend some time making sure all of our notes are in the right place, chances are that will force us to think about the notes more thoroughly and connect them to related things we know about, which means we're much more likely to remember them later.
+
+You might object that we could just do a [[search|Searching]] for “fudge” to find it, so it doesn't matter where it is. I'm not bashing full-text search, because it's a fantastically useful tool, but it only goes so far. First of all, it only helps at all for scenario (2). No matter how good the search is, it doesn't help you find things you didn't know you were looking for, as in scenario (3), nor does it improve your memory, as in scenario (1). Second, while this is all fine at first, once you have several years of detailed notes, full-text search becomes considerably less helpful -- there are just too many matches to wade through for common words. (Most people have never been able to take notes that actually scale this far, so they haven't experienced this phenomenon!)
+
+(Sidebar: Machine-learning tools may be able to help suggest related notes in the future, as well as offering more intelligent options for full-text searches, thus helping with both (2) and (3), but the technology hasn't been tested in small-scale databases like personal notes yet as far as I'm aware, and it seems unlikely to ever do as well as relationships you describe yourself.)
+
+!! Making notes evergreen
+
+An important insight when organizing notes is that ''the context in which you learn something is usually not the one in which that information is useful long-term''. New and interesting ideas usually consist of placing an existing idea in a new context, and unless you're taking an exam, even ideas you need to regurgitate unmodified are unlikely to be needed exactly in their original context. (You don't need to know the Pythagorean Theorem when you're looking at your math textbook; you need to know it when you're looking at the plan of your new house and want to figure out if your couch will fit diagonally in a corner.) Therefore, your goal when taking notes should be to ''put the idea in the context where it will be most useful'', rather than the context where you learned it.
+
+Of course, you're unlikely to know ahead of time precisely what that most useful context will be -- after all, if you did, you'd already have your next great idea. To approximate this ideal, we should:
+
+# Strive to place each note in a ''retrieval context'', i.e., one which will be permanently applicable and in which we might find the note at a useful time.
+# Relate the note to ''as many relevant things as possible'' to increase the chance of serendipitous associations later.
+# Regularly ''return to each note'' to add additional links, insights, and references and move content around. Your thoughts change over time; your notes should change with them.
+
+[[Andy Matuschak|https://notes.andymatuschak.org/]] calls notes that follow this pattern ''evergreen notes''. These notes evolve and stay relevant, meaningful, and accessible over time, as opposed to traditional notes, which wither and die shortly after they're created as the original context ceases to matter. In his book //How to Take Smart Notes//, Sönke Ahrens likens the traditional note-taking pattern of storing notes chronologically to keeping your pants with your bleach because you bought them on the same day: chronology doesn't help you create any useful order here.
+
+!! Applying the principles
+
+Let's take each of the considerations for creating evergreen notes one at a time. First, the ''retrieval context''. The context we put a note in should be //permanently applicable// and //relevant to the situations where the note would be useful//.
+
+Clearly, the meeting with Jane is not a permanently applicable context; once a meeting has happened, unless it made a truly remarkable impression or went down in company history for some reason, it's likely to be entirely forgotten within a week or two. The applicable contexts here are probably something like “things to be careful about at this company,” “bringing food to the office,” and maybe “fudge” (though you're unlikely to need a great deal of information about fudge at the office, you might want some in a more general wiki that included your favorite recipes).
+
+In addition to being permanently applicable, the context should be one in which the note will actually be useful. We won't of course know exactly how the note will be useful in advance, so this can't be an exact science, but it's all too common to see people tag or otherwise classify their notes based on useless criteria. For instance, in the exercise that spawned this whole section, the scenario said that this was advice Jane gave us that shouldn't stray. We might then choose to classify this as “advice someone gave us that we shouldn't share” -- but this is a useless context. There is no situation in which we would plausibly say, “Hmm, what's some advice I've gotten at this company that I shouldn't tell John about?” These useless contexts not only waste our time but also make it harder to identify the most important parts of the note every time we return to it.
+
+In TiddlyWiki, we'll want to add links or tags to put the item in appropriate contexts. A “things to be careful about” tag sounds like a grand idea: as we're starting the job, every time we hear about or experience a sore or touchy point, we can make a tiddler describing it, and we can periodically review the contents and have them as a reference if something catches our attention. (“Wait, fudge? I'm getting a bad feeling about this.”) Let's go ahead and add such a tag to the fudge tiddler. The tag tiddler won't exist yet, but that's fine -- if we later find content we should include in it, we can add it.
+
+Second, ''relating the item to as many relevant things as possible''. In TiddlyWiki, we'll probably do this by linking. It's worth taking a few moments when you add a new evergreen note to sit and think about what similar concepts might be involved. Certainly, if you spot any phrases in the text of your tiddler that might make good links, you can use those. But if you stop to think about it, you might also recognize connections to other things you've been working on or thinking about that the text doesn't currently allude to. Add those links in too. If it's not immediately obvious how some interesting but vague connection relates to the current tiddler and I'm not moved to spend a lot of time thinking about it, I simply write something like `Cf. ThisOtherTiddler` at the bottom of the tiddler.
+
+If you feel like it, or if there's a particularly strong connection between these two notes, you can go to the tiddler at the other end of the link and see if it makes sense to work a mention to this tiddler into that as well. However, since TiddlyWiki will automatically list this tiddler as a backlink on the other tiddler, this isn't critical.
+
+Last, ''continuing to evolve our notes in the future''. The first two items make it possible to continually revisit and improve on our notes by ensuring that we'll regularly encounter the notes whenever they're relevant. But it's this final item -- revisiting and improving on our notes over time, and deleting them if they are clearly never going to be useful again -- that really makes them //evergreen// and prevents them from decaying into uselessness.
+
+Fortunately, TiddlyWiki is a low-friction editing environment: if we spot something that could use additional information, is related to another topic but doesn't have a link, or has gone out of date, all we have to do is click on the edit button and fix it. Do this! Notes that are out of date aren't useful, and the more out-of-date notes you have, the less useful the system as a whole becomes and the less motivated you'll be to refer to it and keep it updated. If you spot something wrong, fix it immediately. The [[broken windows theory|https://en.wikipedia.org/wiki/Broken_windows_theory]] definitely applies to notes.
+
+
+!! What notes should be evergreen?
+
+Creating and maintaining evergreen notes, as you can see, requires some effort. If you like being creative, having useful ideas, and keeping the most important information for your work close at hand, this effort is worth it. However, it's also important not to spend our time rereading and carefully maintaining useless notes; not only is this a waste of time, it makes our work dull and draws our attention away from the ideas that matter.
+
+A lot of notes don't deserve to become evergreen; they //should// wither and die. Your brain does this: if something's inconsequential in the long term, you forget it. So your notes should do the same. You just have to expend some conscious effort to help them along.
+
+The question to ask yourself when you review notes on a meeting or a task you completed or a random thought you had in the shower is: ''do I want this idea to outlive the day?'' If the answer is yes, figure out how to pull that idea out into a tiddler of its own (or maybe integrate it into an existing tiddler). If the answer is no, save your time for a more valuable endeavor and leave the idea where it sits. If later you still remember that you had it and realize you badly need it, you'll probably be able to find it eventually with some searching and some manual effort. If not, as will happen over 99% of the time, your notes and your brain will have that much less useless clutter in them.
+
+!! Exercises
+
+{{Ex:FudgeTiddlerRevisited||ExerciseTemplate}}
+{{Ex:IdentifyingRecentEvergreenNotes||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

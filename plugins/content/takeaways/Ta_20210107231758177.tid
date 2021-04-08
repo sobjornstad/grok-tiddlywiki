@@ -1,0 +1,9 @@
+answer: They are not saved, so they disappear when the wiki is closed and reopened.
+created: 20210107231759222
+modified: 20210302163838365
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: What special behavior do tiddlers whose names begin with `$:/temp` have?
+tags: Takeaway
+title: Ta:20210107231758177
+type: text/vnd.tiddlywiki

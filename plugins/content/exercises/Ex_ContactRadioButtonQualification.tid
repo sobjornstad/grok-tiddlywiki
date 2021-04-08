@@ -1,0 +1,9 @@
+created: 20210208023102625
+length: m
+modified: 20210208023021260
+origin: Qualification
+tags: Exercise
+title: Ex:ContactRadioButtonQualification
+type: text/vnd.tiddlywiki
+
+Return to the radio buttons we added to the ContactInformationTemplate in [[Ex:FamilyRadioButton]] to display the contact information of a family member of the contact. As written in the answer of that exercise, it is in need of a `qualify` macro so that if multiple contacts are open, they can have different family members selected at once. Add this macro call. (If you wrote your version in a way that doesn't require qualification to work correctly with multiple contacts open, first modify it to store the selected contact in a temp tiddler like the book's version does.)

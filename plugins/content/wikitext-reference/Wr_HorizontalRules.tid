@@ -1,0 +1,10 @@
+caption: Horizontal rules
+created: 20210131152830004
+modified: 20210320145050316
+tags: [[Wikitext Reference]]
+title: Wr:HorizontalRules
+type: text/vnd.tiddlywiki
+
+You can put a horizontal rule in your tiddler to mark a new, unnamed section by putting at least three hyphens on a line by themselves after a blank line:
+
+{{Sn:WikitextHorizontalRule||MagicSnippet}}

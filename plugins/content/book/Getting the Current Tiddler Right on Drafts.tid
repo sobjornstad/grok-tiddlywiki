@@ -1,0 +1,34 @@
+created: 20210206181426380
+description: The side-by-side preview won't display correctly when the current tiddler is used in certain ways, but you can work around it.
+modified: 20210317011739772
+parent: Tips and Tricks
+tags: Section
+title: Getting the Current Tiddler Right on Drafts
+type: text/vnd.tiddlywiki
+
+It's likely that you will often include content that depends on the value of the current tiddler in your tiddlers. This can sometimes get you in trouble if you're trying to see that content in the side-by-side preview while editing a tiddler. Specifically, the preview works fine if referring to fields on the current tiddler (since those will also be fields on the [[draft tiddler|Browsing Your Tiddlers]]), but it doesn't work if the current tiddler's title is used to retrieve content from somewhere else (since the tiddlers you aren't editing won't have their content change because you're editing a draft).
+
+For instance, imagine we are looking at a contact tiddler and we want to find all tiddlers that have a `family` list field containing the current contact. We might say:
+
+```html
+<<list-links "[contains:family<currentTiddler>]">>
+```
+
+This will display OK on the standard [[ViewTemplate|The View Template]] while viewing the tiddler, but will show no output in the preview when editing the tiddler, because the current tiddler at that point is actually called something like “Draft of My Contact”.
+
+If this gets annoying enough to be worth fixing, there is an easy fix: we just need to check if the current tiddler is a draft tiddler, and if it is, ''set the current tiddler to the tiddler this is a draft of'' instead. The original tiddler can be found in the `draft.of` field of the draft.
+
+```html
+<$tiddler tiddler={{{ [all[current]is[draft]then{!!draft.of}else<currentTiddler>] }}}>
+    <<list-links "[contains:family<currentTiddler>]">>
+</$tiddler>
+```
+
+(The `then` operator outputs its parameter if the input is non-empty, while the `else` operator outputs its parameter if the input is empty.)
+
+Notice that with the pattern above, if you are relying on both the name of the current tiddler //and// the values of its fields, your changes to the fields won't appear until you save since the current tiddler is now changed to the original rather than the draft. If that's a problem, you can always set a variable other than `currentTiddler` to the value of the original tiddler, and use `currentTiddler` when referring to fields and the other variable when referring to the name.
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

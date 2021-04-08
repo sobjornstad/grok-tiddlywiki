@@ -1,0 +1,9 @@
+created: 20210121000555417
+modified: 20210206195943593
+tags: 
+title: Sn:RubberDucking
+type: text/vnd.tiddlywiki
+
+<$list filter="[tag[Section]field;parent[Filtering and Formatting]sort[]get[description]">
+  <<currentTiddler>><br>
+</$list>

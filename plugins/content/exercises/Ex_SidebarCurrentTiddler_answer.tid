@@ -1,0 +1,7 @@
+created: 20200718044834605
+modified: 20200718044844812
+tags: Answer
+title: Ex:SidebarCurrentTiddler/answer
+type: text/vnd.tiddlywiki
+
+No tabs show up at all, because there is no `currentTiddler` value defined in the sidebar! If you think about it, this makes good sense -- the sidebar is not rendered in the context of any particular tiddler.

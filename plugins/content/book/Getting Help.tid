@@ -1,0 +1,20 @@
+created: 20200822204627346
+description: Where to look and who to ask for help on TiddlyWiki if you can't figure something out yourself.
+modified: 20210407130520047
+parent: Resources
+tags: Section
+title: Getting Help
+type: text/vnd.tiddlywiki
+
+The best place to get help on TiddlyWiki is the [[TiddlyWiki Google group|https://groups.google.com/g/tiddlywiki]]. If you are ever not sure how to accomplish something, searching the archives is quite likely to find either a drop-in solution or the insight you need to solve the problem yourself. If you can't find anything relevant, you can start a new thread -- people are invariably welcoming and helpful.
+
+When starting a new thread about [[a problem you're experiencing|When Things Go Wrong]], be sure to [[ask a good question|https://medium.com/@gordon_zhu/how-to-be-great-at-asking-questions-e37be04d0603]]; not only will you look like you care about other people's time and be more likely to get a response, but you'll learn more, produce an entry in the group archives that will be more likely to help others in the future, and possibly even solve your problem while writing the question.
+
+Besides technical questions about how to use TiddlyWiki, the group is also a great place to discuss philosophical and practical questions about TiddlyWiki.
+
+You also shouldn't miss:
+
+* The [[documentation|https://tiddlywiki.com/]] (enough said)
+* The [[dev wiki|https://tiddlywiki.com/dev/]], an addendum to the manual with information on things like creating plugins and writing JavaScript modules for TiddlyWiki
+* [[The Book of TiddlyWiki: Advanced Customization|https://my-tw-notes.droppages.com/TheBook.pdf]], a deeper dive into many of the concepts discussed in this book, particularly the stuff in Chapter 5, and a great reference if you're not sure where to start with a particular customization.
+* [[Standard Nomenclature|https://anthonymuscio.github.io/#Standard%20Nomenclature]], an exhaustive list of all the brackets and quotes and other mysterious syntax of [[wikitext|Wikitext]]. It's likely to be overwhelming for beginners, but once you've worked through most of this book, it may be quite helpful.

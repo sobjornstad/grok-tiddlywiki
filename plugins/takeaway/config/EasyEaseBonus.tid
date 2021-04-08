@@ -1,0 +1,10 @@
+caption: Easy bonus
+created: 20201230000015631
+description: Percentage points by which the ease of a takeaway is increased when choosing //Easy//.
+modified: 20210407150807215
+stackorder: 70
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/EasyEaseBonus
+type: text/vnd.tiddlywiki
+
+15

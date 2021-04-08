@@ -1,0 +1,12 @@
+complete: 
+created: 20200605153455384
+length: s
+modified: 20210322232758036
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:AddContactTemplates
+type: text/vnd.tiddlywiki
+
+Place the `ContactInformationTemplate` on all of the contacts in your wiki.
+
+(You may be wondering if there's a way to avoid even the repetition of adding the reference to the template to all your tiddlers. The answer is yes, and we'll [[be getting there in a couple chapters|The View Template]].)

@@ -1,0 +1,17 @@
+created: 20210207180143092
+length: M
+modified: 20210207181226974
+origin: Working with Dates
+tags: Exercise
+title: Ex:DateFormatter
+type: text/vnd.tiddlywiki
+
+Create a tiddler called `DateFormatter` that allows you to choose any non-system tiddler in the wiki and a field on that tiddler from drop-down menus, then displays the date stored in that field in at least five different formats. The formats displayed should be configurable by creating tiddlers in `$:/config/DateFormatter/Formats`.
+
+If the field chosen can't be interpreted as a date, the text `(not a date)` should appear where the formatted date otherwise would.
+
+//Tip//: The `fields[]` operator gets the names of the fields present on its input tiddlers.
+
+Here's an example of what it might look like:
+
+{{date-formatter-example.png}}

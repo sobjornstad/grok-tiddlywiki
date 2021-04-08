@@ -1,0 +1,9 @@
+answer: `<<wikipediaLink Aardvark>>` (quotation marks around `Aardvark` are optional)
+created: 20201231005613768
+modified: 20210302161705838
+origin: Macros
+qtype: rememberq
+question: What is the wikitext syntax to call the macro `wikipediaLink` with the single parameter `Aardvark`?
+tags: Takeaway
+title: Ta:20201231005612226
+type: text/vnd.tiddlywiki

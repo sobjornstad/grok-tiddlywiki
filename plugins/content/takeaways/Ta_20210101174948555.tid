@@ -1,0 +1,9 @@
+answer: `[[LinkTarget]backlinks[]]`
+created: 20210101174953282
+modified: 20210209124528120
+origin: Common Filter Operators
+qtype: rememberq
+question: Write a filter expression that finds all tiddlers that link to the tiddler `LinkTarget`.
+tags: Takeaway
+title: Ta:20210101174948555
+type: text/vnd.tiddlywiki

@@ -1,0 +1,7 @@
+created: 20210320143048952
+modified: 20210320143104510
+tags: $:/tags/Macro
+title: $:/sib/GeneralMacros
+type: text/vnd.tiddlywiki
+
+\define textual-button(imageName) <span class="gtw-textual-button">{{$:/core/images/$imageName$}}</span>

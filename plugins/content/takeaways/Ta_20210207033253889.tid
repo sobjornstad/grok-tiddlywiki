@@ -1,0 +1,9 @@
+answer: `name`, `value`, `filter`, and `emptyValue`.
+created: 20210207033254670
+modified: 20210313143710498
+origin: Hiding and Showing Things
+qtype: rememberq
+question: What four attributes of `$set` are used to make its value conditional on whether a filter has results?
+tags: Takeaway
+title: Ta:20210207033253889
+type: text/vnd.tiddlywiki

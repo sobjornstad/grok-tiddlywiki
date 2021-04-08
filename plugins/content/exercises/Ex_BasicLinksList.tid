@@ -1,0 +1,9 @@
+created: 20200718201206937
+length: m
+modified: 20210130174304842
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:BasicLinksList
+type: text/vnd.tiddlywiki
+
+Edit `$:/yourname/TiddlerLinkSummary` to show a list of the forward links as well. We don't want the wikitext to get too repetitive, so create a macro to hold the bits that are the same in both.

@@ -1,0 +1,9 @@
+created: 20201230213722534
+length: m
+modified: 20210130174516866
+origin: Anatomy of Filter Steps
+tags: Exercise
+title: Ex:MeaninglessSuffix
+type: text/vnd.tiddlywiki
+
+What happens if you add a suffix that doesn't have any meaning to a filter operator, such as `tag` or `title`?

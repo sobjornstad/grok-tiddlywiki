@@ -1,0 +1,7 @@
+created: 20210207001005874
+modified: 20210207001028213
+tags: 
+title: Sn:MagicDateSnippet
+type: text/vnd.tiddlywiki
+
+<$view field="at" format="date" template="DD MMM YYYY hh12:mm:ss pm"/>

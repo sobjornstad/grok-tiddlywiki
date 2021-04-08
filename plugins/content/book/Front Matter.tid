@@ -1,0 +1,15 @@
+caption: Front Matter
+created: 20200605170912534
+description: In which we examine why you would want to use TiddlyWiki, why you would want to learn it from this book, and how the book can teach you TiddlyWiki.
+list: [[Welcome to Grok TiddlyWiki]] [[Why TiddlyWiki?]] [[Philosophy of Grok TiddlyWiki]] [[How to Use This Book]]
+modified: 20210325120310802
+parent: Outline
+tags: Chapter
+title: Front Matter
+type: text/vnd.tiddlywiki
+
+//Grok TiddlyWiki//’s front matter explains why you should care about TiddlyWiki, why you should care about this book, and how you can best use the book. If that sounds important, read on; if it sounds boring, proceed to the first chapter, [[The Shape of TiddlyWiki|The Shape of TiddlyWiki]].
+
+!! In this chapter
+
+{{||ChapterOutlineTemplate}}

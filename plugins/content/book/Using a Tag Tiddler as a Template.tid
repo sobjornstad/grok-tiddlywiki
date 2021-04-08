@@ -1,0 +1,37 @@
+created: 20210123200513114
+description: A tag tiddler can be used as a template for tiddlers with that tag.
+modified: 20210327170931406
+parent: Tips and Tricks
+tags: Section
+title: Using a Tag Tiddler as a Template
+type: text/vnd.tiddlywiki
+
+Often you might want tiddlers with a certain tag to show specific information. As we've learned, you can accomplish this by including a [[template|Templates and the Current Tiddler]] that displays that information [[in the ViewTemplate|The View Template]].
+
+Once you start to have more than a few of these, it might get difficult to ''keep track of what the templates are called''. You could make them system tiddlers and put them in some folder, but since you have to remember and type out the name of the template tiddler every time you transclude a tiddler through it, this isn't always desirable. A nifty pattern allows you to ''use the tag tiddler itself as the template'', while still having the tag tiddler look normal when you view it. Supposing your tag is called `Reading`:
+
+```html
+<$list filter="[all[current]tag[Reading]!match[Reading]]">
+	<!-- ...include an interesting template here... -->
+	//Description//: {{!!description}}
+</$list>
+
+<$list filter="[all[current]match[Reading]]">
+	This nice tag, `Reading`, has some content on its tiddler here. For instance, we might choose to include a table of contents starting at the tag:
+	
+	<<toc-selective-expandable "Reading">>
+</$list>
+```
+
+Tag the tag tiddler with `$:/tags/ViewTemplate`, and you're set.
+
+!! Exercises
+
+{{Ex:NoCurrentTiddlerMatch||ExerciseTemplate}}
+{{Ex:ContactInformationTemplateTag||ExerciseTemplate}}
+{{Ex:TagTemplateStamp||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

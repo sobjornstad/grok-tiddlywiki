@@ -1,0 +1,8 @@
+created: 20210124035422845
+description: Tags always come in pairs
+modified: 20210124035402745
+tags: Lie
+title: Ltc:TagsComeInPairs
+type: text/vnd.tiddlywiki
+
+A few HTML tags, called //void tags//, don't come in pairs. We'll talk about void tags later in the section.

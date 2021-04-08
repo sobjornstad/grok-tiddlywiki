@@ -1,0 +1,63 @@
+created: 20201124224911613
+description: You can share your custom TiddlyWiki tools with other wikis and users by extracting them into plugins.
+modified: 20210327171210864
+parent: Getting Technical
+tags: Section
+title: Creating Plugins
+type: text/vnd.tiddlywiki
+
+If you've developed some functionality in [[System Tiddlers]] in your wiki that you think others might get some use out of, you may wish to ''package them'' as a [[plugin|Plugins]] to make them easier to distribute.
+
+(Actually, you can distribute //any// content in plugins, system tiddlers or not. Plugins are rarely used for anything other than common wiki functionality, but you might be able to come up with some creative uses. For instance, //Grok TiddlyWiki// distributes most of its content as a plugin. This takes advantage of the [[shadowing|Shadow Tiddlers]] mechanism to allow users to update their book by importing a new version while leaving any changes they may have made to their copy in place.)
+
+
+!! Folder structure and metadata
+
+Plugin development is usually more convenient on the Node.js version of TiddlyWiki, so begin by [[installing that|https://tiddlywiki.com/#GettingStarted%20-%20Node.js]] if you don't already have it. (If you don't want to use Node.js, a plugin has recently come out that lets you export plugins from within a single-file wiki. The resource links at the bottom of this section have more information.)
+
+''Create a new folder wiki'' to house your plugin. You'll use this to document the features of the plugin as well.
+
+Within the folder wiki, next to the `tiddlywiki.info` file, there is a `plugins` directory (if it doesn't exist yet, you can create it). ''Create a new directory'' here for your plugin, like you would if you were installing a third-party plugin. To this directory, ''add the tiddlers'' you want to bundle in the plugin. You can organize them into subfolders if you like, but note that this will have no impact on the hierarchy of the system tiddlers within the wiki -- the `title` field of each tiddler is the sole determiner of what the tiddlers are called.
+
+Then ''add a `plugin.info` file'' with some metadata in the plugin's folder (edit as appropriate for your plugin):
+
+```json
+{
+    "title": "$:/plugins/yourname/pluginname",
+    "description": "summary of the plugin's purpose",
+    "author": "yourname",
+    "version": "0.0.1",
+    "core-version": ">=5.0.8",
+    "source": "https://github.com/yourgithub/pluginname",
+    "list": "readme license"
+    "plugin-type": "plugin"
+}
+```
+
+''Pay special attention to the `list` field'', which I've added to this template from the standard one presented in the TiddlyWiki dev wiki. The tiddlers in here become tabs in the plugin's tiddler (the one you get when you click on it in the //Plugins// view of the //More// tab of the sidebar). It's good practice to include at least a readme briefly describing the plugin and where you can learn more, and a license (see https://choosealicense.com/ if you're not sure what this is or how to choose one; the MIT license is popular in the TiddlyWiki community).
+
+The `list` field is a [[tiddler list|Ordering Tiddlers]], but a weird one -- TiddlyWiki prepends the value of `title` plus a slash to the names listed here, so `readme` as shown in the template actually refers to `$:/plugins/yourgithub/pluginname/readme`. (I'm still sour about how long this took me to figure out the first time I made a plugin!)
+
+!! Editing
+
+While you're tweaking the plugin, writing the docs, and making sure everything is correct, if you want to test out or edit tiddlers directly in TiddlyWiki, you can start the listener in the wiki folder (`tiddlywiki --listen`) and edit from your browser.
+
+It's good practice to include a prominent link to your plugin tiddler (e.g., `$:/plugins/yourname/yourpluginname`) on one of the //startup tiddlers// for your wiki (i.e., the ones that appear when you load the wiki, as configured in GettingStarted), since users will need to drag and drop this link to install the plugin.
+
+!! Building
+
+If you know how to use [[Git|https://git-scm.com/]] or another source-control tool, now is a good time to create a repository and commit your folder wiki if you haven't already done so.
+
+Generally, to make your plugin available on the web, all you have to do is ''share your wiki''. The simplest way to share your wiki is to build it into a single file by running `tiddlywiki --build index`, which will place an `index.html` file in the `output` subdirectory of the wiki. You can then publish this file to the web any way you like, or even just email it to other users; an easy, free, and popular method is to use [[GitHub Pages|https://pages.github.com/]] to serve the page from the same GitHub repository you keep the source code of your plugin in. Users can drag and drop the plugin link to install it, as mentioned in the //Editing// section above.
+
+
+!! Resources
+
+* ''The TiddlyWiki Dev wiki'' is a bit short on detail and a bit out of date as of this writing, but [[offers some valuable guidance on the process|https://tiddlywiki.com/dev/#Developing%20plugins%20using%20Node.js%20and%20GitHub]].
+* The [[Sistan|http://sistan.tiddlyspot.com]] ''online tutorial'' presents several options for creating plugins in somewhat more detail than provided here, including options for building a plugin from within a single-file wiki, without using Node at all.
+* The [[PluginMechanism|https://tiddlywiki.com/#PluginMechanism]] ''page on tiddlywiki.com'' describes the details of how plugins are handled internally and how metadata is defined, as well as how to create plugins that depend on other plugins.
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

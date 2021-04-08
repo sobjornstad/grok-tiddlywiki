@@ -1,0 +1,10 @@
+caption: Initial remembered interval
+created: 20210213214003604
+description: Initial interval for newly seen takeaways if you choose “remembered” in-text; the number of days before first review.
+modified: 20210407150844217
+stackorder: 12
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/InitialRememberedInterval
+type: text/vnd.tiddlywiki
+
+5

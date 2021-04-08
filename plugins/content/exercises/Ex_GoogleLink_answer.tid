@@ -1,0 +1,9 @@
+created: 20210124040916272
+modified: 20210124040825864
+tags: Answer
+title: Ex:GoogleLink/answer
+type: text/vnd.tiddlywiki
+
+```html
+<a href="https://www.google.com">Google</a>
+```

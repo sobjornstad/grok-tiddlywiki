@@ -1,0 +1,42 @@
+created: 20200530170256021
+description: Links tell TiddlyWiki what ideas (tiddlers) in your wiki are related to each other.
+modified: 20210321011217939
+parent: The Shape of TiddlyWiki
+tags: Concept Section
+title: Links
+type: text/vnd.tiddlywiki
+
+''Links'' between [[tiddlers|Tiddlers]] are the most basic way to make your way around a TiddlyWiki and relate ideas to each other.
+
+Links may be created within a tiddler by surrounding the name of the tiddler to link to with `[[double square brackets]]`. Additionally, anything written in `CamelCase`, with no space between words and each word capitalized, will be automatically linked. (If you don't find camel-case linking helpful, you can turn it off, as we saw in [[Tweaking Your Settings]]. The utility of this feature depends on your personal preference and the purpose of your wiki.)
+
+If you want the displayed text to be different than the target of the link, you can write `[[link text|TargetTiddlerName]]` (that's a pipe `|` character separating the two parts of the link, found above the enter key on a US keyboard).
+
+Here's an example of these two kinds of links. {{Live Examples}}
+
+{{Sn:TweakingYourSettings||MagicSnippet}}
+
+!! Links define relationships
+
+As you likely expect from your past experience of links, clicking on a link to another tiddler opens that tiddler (usually as a new item in the [[story river|The TiddlyWiki Interface]]). In addition to this obvious function, however, TiddlyWiki links also ''define relationships between tiddlers'' and let you search based on these relationships. For instance, you can get a list of all tiddlers that link //to// a particular tiddler (these are called //backlinks//, and often allow you to find relationships between ideas you wouldn't have realized were related otherwise). Or you can get a list of all the people you linked to anywhere in your notes on a particular conference. This is a powerful idea that plays a large part in [[making TiddlyWiki human-shaped|Why TiddlyWiki?]]: our brains think most naturally in terms of links and relationships between things, not in hierarchies and attributes.
+
+As an example, here are the backlinks of this //Links// section, i.e., the other sections in the book that link here. In [[chapter 3|Filtering and Formatting]], you'll learn how to query your wiki like this, as well as how to turn the results into lists that update automatically, like this one.
+
+<<list-links "[<currentTiddler>backlinks[]] -[[Wr:Links]]">>
+
+You can link to tiddlers that don't exist yet. These links will be displayed in italics to indicate their target doesn't exist. Following the link will prompt you to create it. Tiddlers that have been linked to but don't exist yet are called ''missing'', and you can get a list of all missing tiddlers if you'd like to see what you wanted to talk about but haven't written yet.
+
+!! External links
+
+In addition to the //internal// links we've discussed so far (links that point to other tiddlers in the same wiki), you can include ''external links'' (ones that point to URLs on the web or your computer). External links are created the same way as internal ones, except the link target is a URL rather than a tiddler name. Alternatively, if you want the URL itself to be the link text, you can just paste the URL into your wikitext and it will automatically be turned into a link. You can tell an external link from an internal one because external links are underlined, while internal links are only in a different color (compare the following example with the previous one).
+
+{{Sn:LinkToGoogle||MagicSnippet}}
+
+Since the targets of external links aren't part of TiddlyWiki, you don't get backlinks or link-based searches for external links.
+
+External links will always open in a new tab or window so that you don't lose your place in the wiki. In TiddlyDesktop, clicking the link will open up your computer's default web browser and load the new site there.
+ 
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

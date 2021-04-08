@@ -1,0 +1,26 @@
+created: 20200531031717111
+description: Why this book exists and what it aims to do.
+modified: 20210321225117350
+parent: Front Matter
+tags: Section
+title: Philosophy of Grok TiddlyWiki
+type: text/vnd.tiddlywiki
+
+!! The role of this book
+
+This book's mission is to ''teach you TiddlyWiki from start to finish''. You can start with a vague idea of what TiddlyWiki is and finish with the ability to create a wiki for any purpose that fits your brain and works exactly how you want it to.
+
+This book is intended to be ''thorough'' and teach you to fully understand the concepts it covers. It's easy to use a tool like TiddlyWiki for months or years by copying and pasting snippets from the Web or trying random things until it works. While this random-stumbling-around-in-the-dark approach to problem-solving might allow you to accomplish your goal, you will get better only very slowly, and it will be frustrating every time, because you don't really understand what you're doing. This book will give you the terminology to think and talk about what you're doing and the insight into why things work the way they do that you need to easily solve new problems on your own.
+
+You will not by any means learn everything there is to know about TiddlyWiki in this book. You would not want to work through a book that long! However, by the time you finish the book, you will ''be able to think like a TiddlyWiki user'' and be deeply comfortable with the most important TiddlyWiki features. You will also have the knowledge and skills you need to figure the rest out yourself as you need it, by consulting the technical documentation, exploring the innards of TiddlyWiki, and occasionally asking for help from the community.
+
+This book will try to ''clear an easier path for you'' by making executive decisions on a few choices that tend to trip up new users, like what saver to use (in TiddlyWiki, you have to choose //how to save your wiki// before you can start using it -- yes, really). By the end of the book, you'll be in a better position to consider other options if the initial ones aren't right for you.
+
+
+!! The method
+
+Over the course of the book, we will create a TiddlyWiki that can be used for keeping notes on an average office job, stopping to explain each choice and tool provided by TiddlyWiki along the way. We'll cover the basics as well as some moderately advanced customizations and custom logic. No “programming” in the traditional sense is necessary to customize TiddlyWiki: if you can use tools like Microsoft Excel or HTML, you can learn this part of TiddlyWiki. And if you don't know Excel or HTML, millions of “non-technical” people have gotten good at those, so don't worry. (If the idea of programming excites you instead of scaring you, you can write plugins in JavaScript too…although you may be shocked to find how rarely you need or want to go beyond the tools TiddlyWiki provides. You'll find more nerdy details in the [[Getting Technical|Getting Technical]] chapter.)
+
+Taking notes on an office job might be a boring topic to focus this book around, but it's a general, unspecialized need with plenty of tricky questions to deal with, and unlike many other topics I could have chosen, I think most people reading this book will have gotten close enough to an office job or something similar to understand what we're talking about.
+
+In addition to reading the text, you'll do a series of ''exercises'' in your sample wiki, and you'll study ''takeaways'', short prompts intended to test and maintain your knowledge of material you've already seen. For more on these features, move on to the next section, [[How to Use This Book]].

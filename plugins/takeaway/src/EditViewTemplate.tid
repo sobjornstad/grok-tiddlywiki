@@ -1,0 +1,65 @@
+caption: Edit
+created: 20210103031204057
+modified: 20210407150224079
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/EditViewTemplate
+type: text/vnd.tiddlywiki
+
+\define deltid() <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+
+<table class="tr-view-form">
+<$list filter="[all[current]qtype[rememberq]]" variable=_>
+	<tr>
+		<th>Question</th><td><$edit-text tag=input type="text" default="" field="question" /></td>
+	</tr>
+	<tr>
+		<th>Answer</th><td><$edit-text tag=input type="text" default="" field="answer" /></td>
+	</tr>
+</$list>
+<$list filter="[all[current]qtype[remembercz]]" variable=_>
+	<tr>
+		<th>Cloze</th><td><$edit-text tag=input type="text" default="" field="question" /></td>
+	</tr>
+</$list>
+	<tr>
+		<th>Type</th>
+		<td>
+			<$radio field="qtype" value="rememberq">&nbsp;Question/Answer</$radio>&emsp;
+			<$radio field="qtype" value="remembercz">&nbsp;Cloze deletion</$radio>
+		</td>
+	</tr>
+</table>
+
+<$list filter="[all[shadows]field:title<currentTiddler>]" emptyMessage="You created this takeaway yourself."><<thisMacroExistsOnlySoTheListWidgetIsNotEmptyAndThusDoesNotDisplayTheNameOfTheTiddler>></$list>
+<$list filter="[is[shadow]field:title<currentTiddler>]">
+
+	<p><$button class="tc-btn-invisible tc-tiddlylink" actions=<<deltid>>>Reset this takeaway to default</$button> (this will erase scheduling information and any changes to text you may have made).</p>
+	
+	Was there an error or something hard to understand in this takeaway? If other learners might benefit from your edit, please
+	<$button class="tc-btn-invisible tc-tiddlylink">
+		<<sendFeedbackAction>>
+		<$action-setfield $tiddler={{$:/temp/FeedbackCollector}} comment="I've attached an improved version of this takeaway."/>
+		submit your version
+	</$button>.
+	
+</$list>
+
+
+
+<style>
+table.tr-view-form {
+	width: 100%;
+}
+
+table.tr-view-form th {
+	text-align: left;
+}
+
+table.tr-view-form td {
+	width: 100%;
+}
+
+table.tr-view-form td input[type=text] {
+	width: 100%;
+}
+</style>

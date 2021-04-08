@@ -1,0 +1,10 @@
+caption: Question prefix
+created: 20210101191430398
+description: If you study many subjects with Anki, you may want to add a prefix to all TiddlyWiki-related questions so you don't mix them up with other topics that use similar terminology. The prefix will only be used when exporting, not when viewing takeaways in the text.
+modified: 20210407150628717
+stackorder: 10
+tags: 
+title: $:/config/sobjornstad/TakeAway/Exporter/Prefix
+type: text/vnd.tiddlywiki
+
+TiddlyWiki: 

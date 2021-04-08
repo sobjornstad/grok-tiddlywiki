@@ -1,0 +1,20 @@
+created: 20200603224332671
+length: s
+modified: 20210327153236691
+tags: Answer
+title: Ex:QuotedMacroCall/answer
+type: text/vnd.tiddlywiki
+
+You get links that look like this:
+
+{{Sn:QuotedMacroExpansion||MagicSnippet}}
+
+In other words, TiddlyWiki did not expand the macro.
+
+Putting quotation marks around an attribute value in a widget or HTML tag makes it //literal// -- that is, TiddlyWiki doesn't try to look at it to see if it's a variable or macro call. This is very occasionally what you want, but usually it's a mistake.
+
+This is true even if your macro call has spaces in it, so this is the correct way to call `mymacro`, even though it may look wrong at first glance:
+
+```html
+<$macrocall $name="wikipediaLink" linktext=<<mymacro attribute "my other attribute">> articleName=Dingo/>
+```

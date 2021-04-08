@@ -1,0 +1,9 @@
+created: 20200822192549292
+length: m
+modified: 20210130174623441
+origin: Creating Tiddlers With Predefined Fields
+tags: Exercise
+title: Ex:SelectiveButtonDisplay
+type: text/vnd.tiddlywiki
+
+You may have noticed, as you completed the above exercise, that the list of items that have the page controls tag is quite a lot longer than the buttons that currently appear on the toolbar. Explore your wiki to figure out how the buttons are selectively shown or hidden.

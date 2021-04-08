@@ -1,0 +1,9 @@
+created: 20200603192759957
+length: m
+modified: 20210130174444781
+origin: Your First Dynamic List
+tags: Exercise
+title: Ex:JaneMeetingList
+type: text/vnd.tiddlywiki
+
+Modify the `MeetingList` so that only meetings that Jane attended are shown. Be careful not to exclude meetings that Jane attended along with other people.

@@ -1,0 +1,7 @@
+created: 20210407145646555
+description: {{$:/language/Filters/AllTags}}
+filter: [all[tiddlers+shadows]tags[]!is[system]sort[title]]
+modified: 20210407145515460
+tags: $:/tags/Filter
+title: $:/core/Filters/AllTags
+type: text/vnd.tiddlywiki

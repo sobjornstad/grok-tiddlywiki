@@ -1,0 +1,14 @@
+caption: {{$:/core/images/list-bullet}} List
+created: 20210214165852309
+modified: 20210408135951734
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/TakeawayIntextList
+type: text/vnd.tiddlywiki
+
+<div class="mm-intext-takeaway-list">
+<$list filter="[all[tiddlers+shadows]tag[Takeaway]origin<currentTiddler>sort[title]]">
+	<div class="mm-intext-takeaway">
+		{{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+	</div>
+</$list>
+</div>

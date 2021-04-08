@@ -1,0 +1,71 @@
+created: 20210206180622120
+description: TiddlyWiki offers tooling for displaying, retrieving, and computing differences between dates.
+modified: 20210327171005839
+parent: Tips and Tricks
+tags: Section
+title: Working with Dates
+type: text/vnd.tiddlywiki
+
+Dates are messy. The calendar is weird, for one thing: days of the week don't fall on the same days every year, there are leap years, there used to be the Julian calendar. Then time zones get in the way. Then we have a zillion different ways of writing the same dates and times.
+
+All this is to say, don't expect TiddlyWiki to work miracles here: dates are hard no matter what, and TiddlyWiki doesn't work that hard for us to make them easier. But if you understand a few things, you should be able to avoid getting entirely defeated by dates and times.
+
+!! Timestamp format
+
+As we learned in [[Meeting Tiddlers]], {{Datetime Format}}
+
+This format, sometimes called a ''timestamp'', is used for storing dates in the built-in `created` and `modified` dates. You should normally use this same format for any date fields that you create, so that you can take advantage of all the other date tools described below.
+
+It's possible to leave some digits of precision off, for instance, the milliseconds. Any missing digits are assumed to be zero (if this produces an invalid date, the result is relatively meaningless but will be an earlier day than the remaining digits would suggest).
+
+''Beware of leaving the time off entirely.'' If you do that, it will be midnight UTC, and if you live in the Western Hemisphere, your timezone has a negative [[UTC offset|https://en.wikipedia.org/wiki/UTC_offset]]. This will cause dates at midnight UTC to roll over to the previous day when converted to your local time (so if you say `20200602`, it will display as June 1, 2020). It's safer to specify a time of 12:00 noon if you don't care about the time -- this will always work right //almost// everywhere in the world (there are a handful of locations around the Pacific that have a +12 or higher offset, so if you live there you might need to bring it back a couple of hours).
+
+
+!! Displaying dates
+
+Way back in [[Meeting Tiddlers]], you were given the following mysterious magic snippet to check your work writing a date field:
+
+{{Sn:MagicDateSnippet||BasicSnippet}}
+
+This ought to be easier to understand now. The `$view` widget, as mentioned in [[Hiding and Showing Things]], allows you to look at the contents of fields. It's much like [[transcluding a field|Transclusions]], but it doesn't wikify the contents; instead, it can display them verbatim or apply a variety of other formats. In this case, we've chosen the `date` option, one of the widget's most important applications. We additionally have to supply a `template`, which is a date format string, consisting of placeholders describing what components of a date should go where. In this case, it shows the day of the month, the month name, the four-digit year, and the hour, minute, and second in 12-hour format, with AM or PM listed at the end. A list of all the placeholders can be found in the [[Date Format|https://tiddlywiki.com/#DateFormat]] section of the TiddlyWiki documentation.
+
+As another example, let's see on what day the `Metadata` tiddler describing the version of this book was last modified, in a long date format typical for the United States:
+
+{{Sn:MetadataDateUpdated||MagicSnippet}}
+
+
+!! Getting the current date
+
+As we discussed in [[Creating Tiddlers With Predefined Fields]], it's commonly helpful to ''retrieve the current date and time'' in order to prefill a field. This can be done with the `now` macro, which accepts any date format string, as described above, as an argument. For some reason, it does not default to the format string needed to produce the standard internal format, which isn't exactly easy to remember, so I find it helpful to add a [[global macro|Global Macros]] like the following:
+
+{{Sn:NowTimestamp||MagicSnippet}}
+
+
+!! Calculations with dates
+
+You can use the `days` filter operator to find tiddlers that have a date tiddler before or after a particular time relative to the current date. For instance, to find all meetings that have occurred in the last 7 days or have yet to occur, we could say:
+
+```html
+<<list-links "[tag[Meeting]days:at[-7]]">>
+```
+
+Unfortunately, the [[documentation|https://tiddlywiki.com/#days%20Operator]] of the `days` operator is, as of this writing, almost useless. I have read it dozens of times and am no closer to understanding what it means, and nobody I have talked to has professed to actually understand the operator. A more useful reference I often visit is this [[forum thread|https://groups.google.com/g/tiddlywiki/c/60yAONBAh04/]]; you might want to bookmark that now.
+
+
+!! Plugins
+
+For more complicated needs, a wide variety of [[plugins|Useful Plugins]] and tricks are available, including these:
+
+* [[Calculating “N days from now”|https://groups.google.com/g/tiddlywiki/c/y_GjM302u60]]
+* [[Date picker|http://kixam.github.io/TW5-datePicker/]] -- provides an `$edit-date` widget so you don't have to manually figure out what the appropriate timestamp is for an arbitrary date
+
+
+!! Exercises
+
+{{Ex:CreatedNowButton||ExerciseTemplate}}
+{{Ex:DateFormatter||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

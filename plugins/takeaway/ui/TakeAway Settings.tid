@@ -1,0 +1,8 @@
+caption: Settings
+created: 20210101235730652
+modified: 20210408140435585
+tags: [[TakeAway Tools]]
+title: TakeAway Settings
+type: text/vnd.tiddlywiki
+
+{{||$:/plugins/sobjornstad/TakeAway/Settings}}

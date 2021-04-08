@@ -1,0 +1,9 @@
+answer: The MIME type (//Type// dropdown) on the tiddler must be set to the correct file type.
+created: 20210103175645373
+modified: 20210208151841634
+origin: Images and Attachments
+qtype: rememberq
+question: If you create a new tiddler using the `_canonical_uri` field and the content doesn't appear when you save the tiddler, but you're sure the path to the file is correct, what did you likely forget?
+tags: Takeaway
+title: Ta:20210103175644610
+type: text/vnd.tiddlywiki

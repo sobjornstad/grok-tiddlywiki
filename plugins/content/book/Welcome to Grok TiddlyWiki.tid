@@ -1,0 +1,50 @@
+created: 20210110055215195
+description: An overview of the book and where you should get started.
+modified: 20210407173657781
+parent: Front Matter
+tags: Index Section
+title: Welcome to Grok TiddlyWiki
+type: text/vnd.tiddlywiki
+
+{{banner.png}}
+
+Welcome to ''Grok TiddlyWiki'', the definitive TiddlyWiki learning resource! //Grok TiddlyWiki// is a textbook that helps you build a deep, lasting understanding of and proficiency with TiddlyWiki through a combination of detailed explanations, practical exercises, and [[spaced-repetition reviews|TakeAway Help]] of prompts called //takeaways//.
+
+[[TiddlyWiki|https://tiddlywiki.com]] is a human-shaped tool for organizing information and taking notes. It stores and relates information in a non-linear but structured way, just like your brain, and it doesn't forget things. Maintaining a well-organized TiddlyWiki requires a modest amount of effort, and TiddlyWiki has a bit of a learning curve, but it's extremely powerful and customizable, and once you grok it, it will change the way you take notes, think about your work and your ideas, and relate to information in general for the better.
+
+TiddlyWiki shines at almost any task that involves organizing information and enabling creativity. People use TiddlyWiki for keeping notes at their jobs, collecting their ideas, keeping track of what they read, drafting books, building static websites, storing recipes, managing genealogical databases, planning tabletop role-playing campaigns, and much more.
+
+To [[grok|https://en.wikipedia.org/wiki/Grok]] something is to understand it on a deep level, so thoroughly that it changes you and becomes part of your identity. This word is particularly appropriate when discussing TiddlyWiki, since its method of organizing information may well change the way you understand and relate to information in general.
+
+
+!! Where do I start?
+
+* If you aren't sure if TiddlyWiki is for you yet, check out [[Why TiddlyWiki?]]
+* If you know you want to learn TiddlyWiki but don't know if you want to learn from this book, read about the [[Philosophy of Grok TiddlyWiki]] to see if it seems like a good fit for you.
+* If you're already partway through the book, or you want to see what topics are covered, visit the [[Outline]] or click the //Contents// tab in the sidebar.
+* If you're ready to get started, start at [[How to Use This Book]], or, if you're feeling impatient, at [[The Shape of TiddlyWiki|The Shape of TiddlyWiki]].
+
+
+!! Authorship/Support
+
+//Grok TiddlyWiki// is written and maintained by Soren Bjornstad ([[about|https://sorenbjornstad.com]]; [[blog|https://controlaltbackspace.org]]; [[public notes|https://zettelkasten.sorenbjornstad.com]]; [[contact|https://sorenbjornstad.com/contact]]). GTW is donation-supported: anyone who wants to learn TiddlyWiki can read it for free, but if you find it helpful, please consider chipping in a few dollars. I have spent hundreds of hours of my free time writing this book, and I want to be able to justify the ongoing effort needed to keep it up to date as TiddlyWiki changes.
+
+<a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">Visit the donation page</a> to contribute. ([[Meta:TODO]]: Update the link once the page is running.)
+
+You are free to copy and share //Grok TiddlyWiki// under certain conditions, pursuant to the CC BY-NC-ND 4.0 license; please see the [[copyright notice|Copyright]] for details.
+
+You can send me feedback on any section by clicking the //send feedback// button at the bottom of that section. Thanks [[to everyone|Acknowledgments]] who has offered help and feedback at every stage of //Grok TiddlyWiki//'s development.
+
+//Grok TiddlyWiki// is not affiliated with or endorsed by the TiddlyWiki project in any way, other than that I use TiddlyWiki and participate in the community.
+
+
+!! What version is this?
+
+|!Book version |{{Metadata##version}}|
+|!TiddlyWiki version |{{Metadata##tw-version}}|
+
+Every time I publish a new version of //Grok TiddlyWiki//, I increase the book's version number. You can always find the latest version at {{Metadata##project-url}}.
+
+The TiddlyWiki version indicates which version of TiddlyWiki this version of //Grok TiddlyWiki// expects you to have; I try to keep it up to date with the newest version, but if I'm behind, it should be fine to use a newer version of TiddlyWiki than listed here. In contrast, using an older version than listed might mean some things the book tells you to do mysteriously don't work, so that's not a good idea! If you have an older version currently, you can visit the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade.html]] to update your wiki to the latest version.
+
+{{Upgrade}}

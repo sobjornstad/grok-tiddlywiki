@@ -1,0 +1,9 @@
+answer: All widgets displayed on the screen are told what tiddler has changed and invited to refresh themselves if they believe they are affected by that change.
+created: 20210107232350696
+modified: 20210212135703753
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: Explain the process TiddlyWiki uses to ensure the screen is up to date after a tiddler is changed.
+tags: Takeaway
+title: Ta:20210107232346817
+type: text/vnd.tiddlywiki

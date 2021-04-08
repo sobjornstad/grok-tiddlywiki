@@ -1,0 +1,39 @@
+created: 20210131040820380
+modified: 20210131040812110
+tags: Answer
+title: Ex:TelephoneLink/answer
+type: text/vnd.tiddlywiki
+
+By now, having read all about [[Text Substitution]], you should be aware that this won't work:
+
+```html
+[[Call {{!!title}}|tel:{{!!phone}}]]
+```
+
+But you might be tempted to try using a widget, like this:
+
+```html
+<$link to="tel:{{!!phone}}"/>Call {{!!title}}</$link>
+```
+
+It might be helpful to review exactly why this doesn't work, as it's something most TiddlyWiki beginners have found themselves trying to do at one point or another. It's actually the same thing we saw in [[Ex:QuotedMacroCall]], back in [[The Finer Points of Macros]]. If you put any attribute value in "quotation marks", it is //literal//: TiddlyWiki won't do any further wikitext parsing on it. Instead of a literal value for an attribute, you can instead use a `<<macro transclusion>>`, a `{{field transclusion}}`, or a `{{{filtered transclusion}}}`.
+
+If you want to include both a literal part //and// a field or macro transclusion, squashed together (the technical term for this is //string concatenation//), you need to use either a macro with text substitution or a filter. Here's the macro version:
+
+```html
+\define phonelink() [[Call $(currentTiddler)$|$(phonenum)$]]
+<$set name="phonenum" value={{!!phone}}>
+	<<phonelink>>
+</$set>
+```
+
+Or with a `$link` widget:
+
+```html
+\define phonelink() tel:$(phonenum)$
+<$set name="phonenum" value={{!!phone}}>
+	<$link to=<<phonelink>>/>Call {{!!title}}</$link>
+</$set>
+```
+
+The filter version is left as the next exercise.

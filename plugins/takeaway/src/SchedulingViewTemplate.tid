@@ -1,0 +1,54 @@
+caption: Scheduling
+created: 20210101230352640
+modified: 20210407150300967
+seen: 
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/SchedulingViewTemplate
+type: text/vnd.tiddlywiki
+
+<table class="mm-schedule-table">
+	<tr>
+		<th>Collected</th>
+		<td>
+			<$list filter={{!!seen}} emptyMessage="no"><$text text=<<currentTiddler>>/></$list>
+			<$list filter="[all[current]seen[yes]]" variable=_>
+				(<<markUnseenLink>>)
+			</$list>
+			<$list filter="[all[current]!seen[yes]]" variable=_>
+				(<<markSeenLink>>)
+			</$list>
+		</td>
+	</tr>
+	<tr>
+		<th>Interval</th>
+		<$list filter="[all[current]ivl[1]]" variable=_>
+			<td>{{!!ivl}} day</td>
+		</$list>
+		<$list filter="[all[current]!ivl[1]]" variable=_>
+			<td>{{!!ivl}} days</td>
+		</$list>
+	</tr>
+	<tr>
+		<th>Ease</th>
+		<td>{{!!ease}}%</td>
+	</tr>
+	<tr>
+		<th>Lapses</th>
+		<td><$view field="lapses">0</$view></td>
+	</tr>
+	<tr>
+		<th>Next review</th>
+		<td>
+			<$view format="date" template="YYYY-0MM-0DD" field="due"/>
+			<$reveal type="nomatch" state="!!ivl" text="1">
+				(<<iforgotButton>>)
+			</$reveal>
+		</td>
+	</tr>
+</table>
+
+<style>
+.mm-schedule-table th {
+	text-align: left;
+}
+</style>

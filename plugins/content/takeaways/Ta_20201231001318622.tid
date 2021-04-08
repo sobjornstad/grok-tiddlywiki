@@ -1,0 +1,9 @@
+answer: The closing tag literally appears in the rendered output of the tiddler, like `</br>`.
+created: 20201231001320771
+modified: 20210302163854000
+origin: HTML
+qtype: rememberq
+question: What happens if you use a closing tag for an HTML void element within a tiddler?
+tags: Takeaway
+title: Ta:20201231001318622
+type: text/vnd.tiddlywiki

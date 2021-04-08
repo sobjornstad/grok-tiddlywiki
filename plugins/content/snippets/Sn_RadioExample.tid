@@ -1,0 +1,13 @@
+created: 20210206211525320
+modified: 20210408143635653
+tags: 
+title: Sn:RadioExample
+type: text/vnd.tiddlywiki
+
+What do you want to look at?
+
+<$radio tiddler="$:/temp/RadioExample" value="Exercise">&nbsp;Exercises</$radio>&ensp;
+<$radio tiddler="$:/temp/RadioExample" value="Section">&nbsp;Sections</$radio>&ensp;
+<$radio tiddler="$:/temp/RadioExample" value="Takeaway">&nbsp;Takeaways</$radio>
+
+<<list-links "[tag{$:/temp/RadioExample}first[5]]">>

@@ -1,0 +1,9 @@
+answer: `<$button to={{Linky!!target}}>Linky Target</$button>`
+created: 20210107232926736
+modified: 20210220190428774
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: Write wikitext to display a button that takes the user to the tiddler referenced in the `target` field of the `Linky` tiddler when clicked. The button text should be “Linky Target”.
+tags: Takeaway
+title: Ta:20210107232923263
+type: text/vnd.tiddlywiki

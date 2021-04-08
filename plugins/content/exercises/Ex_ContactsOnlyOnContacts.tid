@@ -1,0 +1,9 @@
+created: 20200718030804420
+length: m
+modified: 20210207182716511
+origin: The View Template
+tags: Exercise
+title: Ex:ContactsOnlyOnContacts
+type: text/vnd.tiddlywiki
+
+Adjust the `$:/yourname/TiddlerTypeTemplates/Contact` component of the ViewTemplate so that the contact information template is used only on tiddlers tagged `Contact`.

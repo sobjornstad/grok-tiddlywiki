@@ -1,0 +1,9 @@
+answer: `[{!!description}split[]first[100]join[]]`
+created: 20210107185224741
+modified: 20210209123642272
+origin: Creating a List of Links and Backlinks
+qtype: rememberq
+question: Write a filter expression that outputs the first 100 characters of the wikitext in the `description` field of the current tiddler as a single output tiddler.
+tags: Takeaway
+title: Ta:20210107185221794
+type: text/vnd.tiddlywiki

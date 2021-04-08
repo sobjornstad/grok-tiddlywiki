@@ -1,0 +1,17 @@
+caption: 2: Filing and Organizing
+created: 20200603003811441
+description: In which we learn how to create and organize tiddlers in ways that make them easy to find and reuse later.
+list: Searching [[Browsing Your Tiddlers]] [[Tiddler Titles]] [[Naming Conventions]] [[Slicing Up Content]] [[Creating Hierarchies with a Table of Contents]] [[Ordering Tiddlers]] [[Creating Evergreen Notes]]
+modified: 20210327172736911
+parent: Outline
+tags: Chapter
+title: Filing and Organizing
+type: text/vnd.tiddlywiki
+
+With only a few tiddlers, finding things is no big deal. But if you're serious enough about organizing information to be interested in TiddlyWiki, you're likely planning to have a lot of content, so you'll need something better than reading through the list of recently changed items.
+
+It's important to remember that while TiddlyWiki has excellent functionality for searching and querying tiddlers, it's a ''garbage-in, garbage-out'' tool: its ability to locate ideas and find connections between them is only as good as your commitment to understanding what information you're putting in, how you might want to use it, and how you should organize it. TiddlyWiki is your partner in understanding your notes and your ideas, not a magic box that spits insights back at you after you follow a prescriptive set of steps. We already discussed this mindset in some detail in the previous chapter, but as we look at the mechanisms for finding things in this chapter, we'll keep coming back to the habits you need to make them work well.
+
+!! In this chapter
+
+{{||ChapterOutlineTemplate}}

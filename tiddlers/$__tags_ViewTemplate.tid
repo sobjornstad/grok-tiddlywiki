@@ -1,0 +1,5 @@
+created: 20210206191129295
+list: $:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/plugins/sobjornstad/TakeAway/TakeAwayHelpTemplate $:/core/ui/ViewTemplate/body $:/core/ui/ViewTemplate/import $:/core/ui/ViewTemplate/plugin $:/plugins/sobjornstad/TakeAway/TakeawayViewTemplate $:/sib/Exercise/AnswerLink $:/sib/Navigator/SectionNavigation $:/sib/Navigator/Related
+modified: 20210407150414660
+title: $:/tags/ViewTemplate
+type: text/vnd.tiddlywiki

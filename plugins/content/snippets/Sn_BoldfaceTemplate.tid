@@ -1,0 +1,7 @@
+created: 20210131144834836
+modified: 20210131144753826
+tags: 
+title: Sn:BoldfaceTemplate
+type: text/vnd.tiddlywiki
+
+<strong><$transclude mode="block"/></strong>

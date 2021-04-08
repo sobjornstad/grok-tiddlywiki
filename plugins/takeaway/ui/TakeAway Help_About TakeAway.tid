@@ -1,0 +1,14 @@
+created: 20210110170118268
+modified: 20210317020057749
+tags: Fragment
+title: TakeAway Help/About TakeAway
+type: text/vnd.tiddlywiki
+
+''TakeAway'' is a tool that helps you remember what you read. The author of a TakeAway-enabled text writes a series of short questions and answers or fill-in-the-blank prompts, collectively called //takeaways//, that appear in each section of the text as you read. Takeaways invite you to engage with the material in one of several ways:
+
+* By ''recalling raw facts'' that are prerequisites for a full understanding of the content (“How many strings does a standard guitar have?”)
+* By ''connecting concepts'' and reflecting on their implications (“Why does keeping perishable food in the refrigerator help prevent it from spoiling?”)
+* By ''applying facts'' to answer a question or perform a hypothetical task (“Identify the error in the following C++ code that prevents it from compiling.”)
+* By ''generating a creative example'' of a possible application of your knowledge (“Suggest a situation in which you might prefer to ride a bicycle rather than drive a car.”) On this type of question, unlike the others, there are many possible answers, so the list of answers provided is not exhaustive; you will be asked to come up with an example you have never used before and assess yourself.
+
+As you read a TakeAway-enabled text, you will first answer these prompts at the end of each section, to check your understanding. Then, TakeAway will bring the prompts back for you to review on a regular basis, keeping you actively engaged with the material so that you don't read it once and then forget most of it, as happens with most books and articles.

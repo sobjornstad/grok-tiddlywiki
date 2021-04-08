@@ -1,0 +1,15 @@
+complete: 
+created: 20200605153051247
+length: m
+modified: 20210322233056530
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:ContainingCurrentTiddler
+type: text/vnd.tiddlywiki
+
+Suppose that in the `MeetingList`, we want each meeting to display not only its name, but also the name of the tiddler we're using to look at the information (or, more precisely, the current tiddler as defined by TiddlyWiki). That is, since we're viewing the output in the `MeetingList` tiddler, it should say `MeetingList`. The list might look something like this:
+
+* An item on MeetingList: EmployeeProfileSetupMeeting
+* An item on MeetingList: SecondMeeting
+
+Modify your list widget to achieve this output. The output should continue to be correct if you copy and paste (or transclude) the list widget into a different tiddler -- i.e., you cannot simply write `MeetingList` literally but must dynamically retrieve the title of the tiddler the list widget is in.

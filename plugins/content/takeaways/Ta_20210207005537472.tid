@@ -1,0 +1,9 @@
+answer: `<<now "YYYY">>`
+created: 20210207005539067
+modified: 20210313141813685
+origin: Working with Dates
+qtype: rememberq
+question: Write a call to the `now` macro that displays the current four-digit year.
+tags: Takeaway
+title: Ta:20210207005537472
+type: text/vnd.tiddlywiki

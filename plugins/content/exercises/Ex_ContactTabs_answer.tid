@@ -1,0 +1,7 @@
+created: 20200717223559611
+modified: 20210103173121744
+tags: Answer
+title: Ex:ContactTabs/answer
+type: text/vnd.tiddlywiki
+
+You should have noticed that field transclusions don't work. This is because the `tabs` macro, surprisingly, doesn't change the current tiddler when rendering each tab.

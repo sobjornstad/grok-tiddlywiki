@@ -1,0 +1,10 @@
+complete: 
+created: 20200605152649952
+length: m
+modified: 20210322233057274
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:CurrentTiddlerAndListWidget
+type: text/vnd.tiddlywiki
+
+In the section on [[dynamic lists|Your First Dynamic List]], we used the value of the variable `<<currentTiddler>>`, without knowing exactly what it was. Review the use of that variable in the dynamic lists section. What does this usage tell you about the interaction of the current tiddler and the `$list` widget?

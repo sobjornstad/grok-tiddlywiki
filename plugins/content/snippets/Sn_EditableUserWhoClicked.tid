@@ -1,0 +1,11 @@
+created: 20210116212617639
+modified: 20210117010422482
+tags: 
+title: Sn:EditableUserWhoClicked
+type: text/vnd.tiddlywiki
+userwhoclicked: 
+
+<$edit-text tiddler="$:/temp/EditingUserName" tag="input" default=""/>
+<$button set="!!userwhoclicked" setTo={{$:/temp/EditingUserName}}>Save User Who Clicked</$button>
+
+The `userwhoclicked` field is set to "{{!!userwhoclicked}}".

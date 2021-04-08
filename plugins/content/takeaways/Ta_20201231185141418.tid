@@ -1,0 +1,9 @@
+answer: You accidentally transcluded a tiddler into itself, either directly or by creating a loop (e.g., tiddler A transcludes tiddler B, while tiddler B transcludes tiddler A).
+created: 20201231185144000
+modified: 20210212135650555
+origin: Transclusions
+qtype: rememberq
+question: What does the error //Recursive transclusion error in transclude widget// suggest is wrong?
+tags: Takeaway
+title: Ta:20201231185141418
+type: text/vnd.tiddlywiki

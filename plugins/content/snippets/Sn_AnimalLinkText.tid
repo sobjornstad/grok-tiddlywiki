@@ -1,0 +1,17 @@
+created: 20210116210305365
+modified: 20210327153631877
+tags: 
+title: Sn:AnimalLinkText
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName, linkText)
+[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+\define animalLinkText(initialLetter)
+An animal which begins with $initialLetter$
+\end
+
+* <$macrocall $name="wikipediaLink" linkText=<<animalLinkText A>> articleName="Aardvark" />
+* <$macrocall $name="wikipediaLink" linkText=<<animalLinkText B>> articleName="Bee" />
+* <$macrocall $name="wikipediaLink" linkText=<<animalLinkText C>> articleName="Cow" />

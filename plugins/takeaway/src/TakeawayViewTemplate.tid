@@ -1,0 +1,20 @@
+created: 20210101225613955
+modified: 20210408140021653
+tags: $:/tags/ViewTemplate
+title: $:/plugins/sobjornstad/TakeAway/TakeawayViewTemplate
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]tag[Takeaway]]">
+	<div style="text-align: center;">
+		Viewing takeaway <$text text={{{ [all[current]get[title]removeprefix[Tr:]] }}}/> from section <$link to={{!!origin}}/>.
+	</div>
+	<div style="text-align: center;">
+		<<nextDueLink>>&nbsp;·
+		<$list filter="[all[current]seen[yes]]"><<markUnseenLink>>&nbsp;·</$list>
+		<<sendFeedbackLink>>&nbsp;·
+		<<helpLink>>
+	</div>
+	
+	<<tabs "$:/plugins/sobjornstad/TakeAway/TakeawayBackSide $:/plugins/sobjornstad/TakeAway/EditViewTemplate $:/plugins/sobjornstad/TakeAway/SchedulingViewTemplate" default:"$:/plugins/sobjornstad/TakeAway/EditViewTemplate">>
+</$list>
+

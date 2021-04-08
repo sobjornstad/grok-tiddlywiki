@@ -1,0 +1,56 @@
+created: 20201229004207931
+modified: 20210408143626253
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/CreateNewTrNote
+type: text/vnd.tiddlywiki
+
+\define getName() Tr:$(rightNow)$
+
+<table>
+<tr>
+	<th>Question/Cloze</th><td class="gtw-question-input"><$edit-text tiddler="$:/temp/addq" tag=input default="" field="question"/></td>
+</tr>
+<tr>
+	<th>Answer</th><td class="gtw-question-input"><$edit-text class="gtw-question-input" tiddler="$:/temp/addq" tag=input default="" field="answer"/></td>
+</tr>
+</table>
+
+<div style="text-align: center;">
+<$set name=rightNow value=<<now "[UTC]YYYY0MM0DD0hh0mm0ss0XXX">> >
+<$button>
+	<$action-createtiddler
+		$basetitle=<<getName>>
+		$savetitle="$:/temp/addq!!newtid"
+		tags="Takeaway"
+		question={{$:/temp/addq!!question}}
+		answer={{$:/temp/addq!!answer}}
+		qtype="rememberq"
+		origin=<<currentTiddler>>
+	/>
+	<!--<$action-navigate $to={{$:/temp/addq!!newtid}} $scroll="yes"/>-->
+	<$action-deletetiddler $tiddler="$:/temp/addq"/>
+		
+New Q&A</$button></$set>&ensp;
+<$set name=rightNow value=<<now "[UTC]YYYY0MM0DD0hh0mm0ss0XXX">> >
+<$button>
+	<$action-createtiddler
+		$basetitle=<<getName>>
+		$savetitle="$:/temp/addq!!newtid"
+		tags="Takeaway"
+		question={{$:/temp/addq!!question}}
+		qtype="remembercz"
+		origin=<<currentTiddler>>
+	/>
+	<$action-deletetiddler $tiddler="$:/temp/addq"/>
+		
+New cloze
+</$button>
+</$set>
+</div>
+
+
+<style>
+td.gtw-question-input, td.gtw-question-input input {
+	width: 100%;
+}
+</style>

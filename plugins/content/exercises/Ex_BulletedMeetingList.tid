@@ -1,0 +1,13 @@
+created: 20200603192826693
+length: m
+modified: 20210130174314210
+origin: Your First Dynamic List
+tags: Exercise
+title: Ex:BulletedMeetingList
+type: text/vnd.tiddlywiki
+
+Modify the `MeetingList` so that instead of separating the meetings with a simple line break, they form a bulleted list.
+
+//Hint 1//: Remember that HTML code for creating a bulleted list?
+
+//Hint 2//: The contents of the list widget are rendered once for every tiddler output by the filter. Which parts of the HTML code for creating a list need to be used repeatedly, and which need to be used only once?

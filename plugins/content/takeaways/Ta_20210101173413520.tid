@@ -1,0 +1,9 @@
+answer: `<$wikify name="w" text={{LotsOfWikitext}}> ...use variable here... </$wikify>`<br>(You could also put `{{LotsOfWikitext}}` in quotes. In this case, it has the same effect!)
+created: 20210101173414869
+modified: 20210212140600402
+origin: Wikification
+qtype: rememberq
+question: Write a `$wikify` widget call that wikifies the `LotsOfWikitext` tiddler and places the result in a variable called `w`.
+tags: Takeaway
+title: Ta:20210101173413520
+type: text/vnd.tiddlywiki

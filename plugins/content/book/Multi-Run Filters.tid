@@ -1,0 +1,124 @@
+created: 20200715220657649
+description: Filters can be made more complex and powerful by including more than one run.
+modified: 20210327175915876
+parent: More Organizational Tools
+tags: Section
+title: Multi-Run Filters
+type: text/vnd.tiddlywiki
+
+The last time we discussed filters, back in the [[Finding Things|Filing and Organizing]] chapter, we learned that there is such a thing as a [[filter run|Using Filter Expressions]], indicated by those outer square brackets, and that you can have more than one filter run in a filter. We also saw an example of this, in passing, when we discussed [[Text Substitution]] and this weird filter:
+
+```html
+[title[EmployeeProfileSetupMeeting]contains:participants[]][[SomeRandomGuy]]
+```
+
+So why would we want to use multiple filter runs? Essentially, they let us build up more complicated logic. With a single run, we can only find tiddlers that match //all// of a set of conditions. With multiple runs, we can combine AND, OR, and NOT conditions as much as we like, although due to the “pipeline” nature of filters, the logic works a little differently than the conventional Boolean logic used in Excel or a typical programming language.
+
+
+!! Creating OR conditions
+
+Let's imagine we want to find all tiddlers which are ''either meetings or journal entries''. If we limit ourselves to a single run, it's easy to find tiddlers which have //both// tags by using two steps in the run: `[tag[Journal]tag[Meeting]]`. But the only way we can find ones that have //either// tag without using multiple runs is to run two filters and manually combine the results in our heads. That's no good at all!
+
+Fortunately, all we have to do is ''create two runs'' by putting the filter steps in different outer sets of square brackets:
+
+```html
+[tag[Journal]] [tag[Meeting]]
+```
+
+TiddlyWiki will process each of these runs separately, gathering first all the tiddlers that are tagged //Journal// and then all the tiddlers that are tagged //Meeting//, and combine the results. Unless we add an additional sort step or the same tiddler has both tags (more on that in a moment), all of the tiddlers tagged //Journal// will come before all the tiddlers tagged //Meeting//.
+
+We can, of course, add additional steps to either of the filter runs. For instance, maybe we want to see all journal entries, along with only the meetings that included Jane:
+
+```html
+[tag[Journal]] [tag[Meeting]contains:participants[JaneDoe]]
+```
+
+Putting spaces between filter runs is optional but can help to make filters more readable. (Don't put spaces between filter //steps//, though: as noted in [[Using Filter Expressions]], your filter won't work as expected if you do that.)
+
+Another extremely common OR condition is a simple ''list of tiddlers''. For instance, imagine we want to get tiddlers A, B, and C:
+
+```html
+[[A]] [[B]] [[C]]
+```
+
+Or, since the names A, B, and C don't have spaces in them, we can just say:
+
+```html
+A B C
+```
+
+You may notice that this is exactly the same format as a [[tiddler list|Ordering Tiddlers]]. This, incidentally, is why, in a note at the end of [[Filters and Transclusions]], we were able to set the `filter` attribute of a list to simply the `{{!!family}}` list field and have it work like a filter.
+
+Don't, however, take this to mean that tiddler lists and filters are the same thing. While a tiddler list is a valid filter, most filters are not valid tiddler lists; you can't, for example, use a filter run like `[tag[Contact]]` as an element of a tiddler list and expect it to work.
+
+
+!! Dominant appending
+
+You might wonder what happens if the same tiddler comes up in multiple filter runs. Let's try it. Start with this filter:
+
+```html
+[tag[Meeting]]
+```
+
+You should see several meetings. Now try adding tiddlers that are tagged `OnboardingHr`, since we have at least one meeting that's part of that project:
+
+```html
+[tag[Meeting]] [tag[OnboardingHr]]
+```
+
+You should notice several things. First, no duplicate entries were created. But second, the //order// changed. Why's that?
+
+Think about how TiddlyWiki works //within// filter runs for a moment. It starts with the leftmost filter step, then passes the output of that step to the next step to the right, which does something with that output and produces its own output, and so on until we reach the end of the filter run.
+
+TiddlyWiki does something similar with filter runs. The output of the first filter run doesn't affect the input of the second filter run -- the second filter run gets a fresh set of input tiddlers -- but TiddlyWiki does execute each filter run in order from left to right and combine the results as it finishes each. It's the way it combines the results that can get tricky.
+
+We'll call the output of the filter run that's currently being executed the //current run// and the set of output produced from combining all of the previous filter runs the //accumulated results//. (The accumulated results can be empty -- for instance, if this is the first filter run, or if all previous filter runs returned no results.)
+
+When a run finishes, TiddlyWiki ''dominantly appends'' the output from the current run to the accumulated results. During a dominant append, if the item doesn't exist in the list of accumulated results already, it goes at the end of the list, as you would expect. However, if the item already exists in the accumulated results, it is actually //removed// from the list in its current position and then added back at the end. This is why you saw the order of the list change -- an item that wasn't already the last item in the accumulated results was shifted to the end because it also showed up in the second run.
+
+
+!! Run prefixes
+
+If you don't want the standard dominant-append behavior, you can place the character `=`, `+`, `-`, or `~` (or the equivalent named prefixes `:all`, `:and`, `:except`, and `:else`), directly in front of the filter run, e.g., `=[tag[Meeting]]`. These work as follows:
+
+; `=` or `:all`
+: Just ''slap the results of the runs together'', rather than performing deduplication by dominantly appending; `A B C` and `B C D` results in `A B C B C D`, rather than the default of `A B C D`.
+
+; `+` or `:and`
+: A few paragraphs up, we said each filter run gets its own input. That's not quite true; actually, each filter run gets its own input //unless// you put a `+` in front of it, in which case ''its input is the accumulated results and its output replaces everything output so far''. You can usually accomplish the same thing by just combining the filter runs together into one run (e.g., `[tag[Meeting]] +[tag[Journal]]` is an overly complex way to say `[tag[Meeting]tag[Journal]]`), but sometimes you'll want to do something like OR together the results of several filter runs and then AND their results with another run.
+
+; `-` or `:except`
+: ''Remove items in this run'' from the accumulated results, if they were present (Boolean NOT condition).
+
+; `~` or `:else`
+: ''If the list of accumulated results is currently empty'', execute this run and make its output the accumulated results. Otherwise, ignore the run completely.
+
+Several prefixes were added in 5.1.23 that are only available in the named variants. They're a little harder to understand, and TiddlyWiki users have gotten by without them for years, so you won't need to use them for the exercises and takeaways and you can skip them for now if you like, but at some point you might want to investigate them.
+
+<$details summary="More named prefixes">
+
+; `:filter`
+: Evaluate the filter run on each tiddler in the accumulated results and ''output elements where the filter expression does not evaluate to an empty list''. This differs from `+` in that `+` makes the output of its run the accumulated results. `:filter` doesn't use the output of its run at all, except to check whether it's non-empty. This 
+
+; `:intersection`
+: Like `+`, but ''the second filter run is evaluated completely before being ANDed''. The TiddlyWiki documentation gives this example: if you are trying to see what tags two tiddlers have in common, you might say `[[Tiddler 1]tags[]] +[[Tiddler 2]tags[]]`; but this wouldn't work because `[[Tiddler 2]]` is a constructor and will wipe out anything from the first filter run. `:intersection` evaluates the two filter runs in isolation, so that the ANDing takes place on the sets of tags once they've been expanded.
+
+; `:reduce`
+: ''Flatten the accumulated results into a single value'' by applying a filter expression to each tiddler in the accumulated results in turn. Within this inner filter expression, a variable `accumulator` contains the single value produced by the previous execution of the filter expression. The output of the last input tiddler becomes the run's output.
+
+You can read more about these run prefixes [[in the documentation|https://tiddlywiki.com/#Filter%20Expression]].
+
+</$details>
+
+
+
+!! Exercises
+
+{{Ex:JaneMeetingMultirun||ExerciseTemplate}}
+{{Ex:FudgeWithoutJane||ExerciseTemplate}}
+{{Ex:RedATags||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

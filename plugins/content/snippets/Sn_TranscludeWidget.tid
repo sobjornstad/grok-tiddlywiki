@@ -1,0 +1,16 @@
+created: 20210123194341409
+description: This is a nice wikitext snippet.
+modified: 20210206220012176
+tags: 
+title: Sn:TranscludeWidget
+type: text/vnd.tiddlywiki
+
+<$transclude tiddler=<<currentTiddler>> field="description"/>
+
+-----
+
+<$transclude field="description"/>
+
+-----
+
+{{!!description}}

@@ -1,0 +1,57 @@
+created: 20200718201238626
+modified: 20210107184950654
+tags: Answer
+title: Ex:BasicLinksList/answer
+type: text/vnd.tiddlywiki
+
+My tiddler now looks like this:
+
+```html
+\define linkDisplay(title, filterFragment)
+$title$:
+
+<ul>
+<$list filter="[all[current]$filterFragment$]">
+  <li>
+    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
+  </li>
+</$list>
+</ul>
+\end
+
+<<linkDisplay "Links" "links[]">>
+<<linkDisplay "Backlinks" "backlinks[]">>
+```
+
+Let's talk about `filterFragment` for a moment. The way shown above is the simplest way to handle it, and TiddlyWiki's core does this in a number of macros, but if we didn't want to use [[text substitution|Text Substitution]], or we wanted to be able to reuse this macro in places where we didn't always want just the current tiddler, we could also make the entire filter the parameter to the macro (we'll call it `filterString`) and use parameter substitution instead:
+
+```html
+\define linkDisplay(title, filterString)
+[...]
+<$list filter=<<__filterString__>>>
+[...]
+```
+
+Another option would be to use `subfilter`. This filter operator takes an argument which is itself a filter run, and passes the current data into that run. Here's how we could do that:
+
+```html
+\define linkDisplay(title, filterFragment)
+$title$:
+
+<ul>
+<$list filter="[all[current]subfilter<__filterFragment__>]">
+  <li>
+    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
+  </li>
+</$list>
+</ul>
+\end
+
+<<linkDisplay "Links" "[links[]]">>
+<<linkDisplay "Backlinks" "[backlinks[]]">>
+```
+
+Two things to note here:
+
+* Previously, the `filterFragment` parameter was just a single filter step. Now it has to be a complete filter run.
+* Using macro parameter substitution with `<<__param__>>` is valid inside a filter, so long as you use single angle brackets.

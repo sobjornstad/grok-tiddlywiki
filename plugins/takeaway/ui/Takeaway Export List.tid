@@ -1,0 +1,19 @@
+created: 20201229001011609
+modified: 20210408140409103
+tags: [[TakeAway Tools]]
+title: Takeaway Export List
+type: text/vnd.tiddlywiki
+
+This tiddler shows all of the takeaways that you have seen in a form suitable for export to TiddlyRemember. A note is seen if you have clicked its "show answer" link and have not clicked "forget".
+
+You can change the prefixes that are added to cards here in the [[export settings|$:/plugins/sobjornstad/TakeAway/Settings/Export]] screen.
+
+This tiddler is not intended to be read by humans unless something is wrong -- it will slow your wiki to a crawl when viewed in the browser and is not searchable. If you're trying to get an overview of all the takeaways in the book, you should close this tiddler and visit the [[Takeaway Browser]].
+
+{{$:/plugins/sobjornstad/TakeAway/TakeawaysCollected}}
+
+<$set name=needsContext value="yes">
+<$list filter="[tag[Takeaway]seen[yes]]">
+	{{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+</$list>
+</$set>

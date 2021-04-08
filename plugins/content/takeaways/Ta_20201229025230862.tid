@@ -1,0 +1,9 @@
+answer: Separate fields allow you to easily retrieve exactly that information or search and filter based on it later.
+created: 20201229025238374
+modified: 20210408141101560
+origin: Fields
+qtype: rememberq
+question: Why might you choose to separate information in a tiddler into multiple fields, rather than placing it all in the `text` field?
+tags: Takeaway
+title: Ta:20201229025230862
+type: text/vnd.tiddlywiki

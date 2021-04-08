@@ -1,0 +1,14 @@
+created: 20210130005356555
+modified: 20210206150314943
+tags: Template
+title: BasicSnippet
+type: text/vnd.tiddlywiki
+
+<!--
+<div style="float: right; margin-top:10px; font-size:14px;">
+	<$button message="tm-copy-to-clipboard" param={{!!text}} class="tc-btn-invisible tc-tiddlylink">copy wikitext to clipboard</$button>
+</div>
+<div style="clear: both;"/>
+-->
+
+<$transclude tiddler="$:/sib/Snippet/TiddlerAsWikitext"/>

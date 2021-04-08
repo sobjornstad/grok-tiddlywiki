@@ -1,0 +1,8 @@
+caption: {{$:/core/images/file}} Wikitext
+created: 20201231193531505
+modified: 20210320140852289
+tags: 
+title: $:/sib/Snippet/TiddlerAsWikitext
+type: text/vnd.tiddlywiki
+
+<$codeblock code={{!!text}} language="html"/>

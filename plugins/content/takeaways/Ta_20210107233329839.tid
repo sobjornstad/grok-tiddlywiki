@@ -1,0 +1,9 @@
+answer: `<$button set="!!target" setTo={{$:/temp/NewTarget}}>Reset Target</$button>`
+created: 20210107233332947
+modified: 20210209123815279
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: Write wikitext to display a button that sets the `target` field of the current tiddler to the value currently stored in the `text` field of the `$:/temp/NewTarget` tiddler. The button text should be "Reset Target".
+tags: Takeaway
+title: Ta:20210107233329839
+type: text/vnd.tiddlywiki

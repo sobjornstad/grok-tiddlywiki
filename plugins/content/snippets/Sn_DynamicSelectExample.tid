@@ -1,0 +1,20 @@
+created: 20210206212711611
+modified: 20210206213229673
+tags: 
+title: Sn:DynamicSelectExample
+type: text/vnd.tiddlywiki
+
+Section: 
+<$select tiddler="$:/temp/SectionSelectorExample"
+         default="">
+	<option value="">(choose a section)</option>
+	<$list filter="[tag[Section]]">
+		<option value=<<currentTiddler>>>
+			<<currentTiddler>>
+		</option>
+	</$list>
+</$select>
+
+<$list filter="[{$:/temp/SectionSelectorExample}!is[blank]]" variable="selectedTiddler" emptyMessage="Please choose a section.">
+	The blurb of the section //<<selectedTiddler>>// is “<$transclude tiddler=<<selectedTiddler>> field="description"/>”
+</$list>

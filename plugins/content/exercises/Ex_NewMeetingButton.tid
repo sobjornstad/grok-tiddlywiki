@@ -1,0 +1,9 @@
+created: 20200822192223876
+length: m
+modified: 20210130175101061
+origin: Creating Tiddlers With Predefined Fields
+tags: Exercise
+title: Ex:NewMeetingButton
+type: text/vnd.tiddlywiki
+
+Create a similar button for a new meeting. The `at` field should be populated with the current time in the standard TiddlyWiki date/time format.

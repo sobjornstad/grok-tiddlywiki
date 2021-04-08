@@ -1,0 +1,9 @@
+answer: `format="date"`
+created: 20210207005358389
+modified: 20210315200823862
+origin: Working with Dates
+qtype: rememberq
+question: What attribute and value passed to the `$view` widget causes it to format a field as a date?
+tags: Takeaway
+title: Ta:20210207005357385
+type: text/vnd.tiddlywiki

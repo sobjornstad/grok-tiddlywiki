@@ -1,0 +1,46 @@
+created: 20210329204050908
+modified: 20210408160522244
+tags: Meta
+title: Meta:PaletteBrowser
+type: text/vnd.tiddlywiki
+
+\define colorsplotch(col)
+	<div class="color-splotch" style="background: $col$;">
+\end
+
+\define copy-hex() <$action-sendmessage $message="tm-copy-to-clipboard" $param=<<hexvalue>>/>
+\define copy-mac() <$action-sendmessage $message="tm-copy-to-clipboard" $param="""<<color $(currentTiddler)$>>"""/>
+
+<div style="text-align: center;">Current palette: <$link to={{$:/palette}}/></div>
+
+<table>
+	<tr>
+		<th></th>
+		<th>HTML color code</th>
+		<th>TiddlyWiki name</th>
+		<th>Copy to clipboard</th>
+	</tr>
+<$list filter="[{$:/palette}indexes[]]">
+	<$list filter="[{$:/palette}getindex<currentTiddler>]" variable="hexvalue">
+		<tr>
+			<td><$macrocall $name=colorsplotch col=<<hexvalue>>/></td>
+			<td><<hexvalue>></td>
+		  <td><<currentTiddler>></td>
+			<td>
+				<$button class="tc-tiddlylink tc-btn-invisible" actions=<<copy-mac>>>`<<color>>` macro</$button> -- 
+				<$button class="tc-tiddlylink tc-btn-invisible" actions=<<copy-hex>>>hex code</$button>
+			</td>
+		</tr>
+	</$list>
+</$list>
+</table>
+
+<style>
+.color-splotch {
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #000000;
+	margin: 0;
+}
+</style>

@@ -1,0 +1,13 @@
+created: 20210116213457832
+modified: 20210116213407934
+tags: 
+title: Sn:NewTiddlerActionWidgetText
+type: text/vnd.tiddlywiki
+
+<$button>
+  <$action-sendmessage
+    $message="tm-new-tiddler"
+    title="My New Tiddler"
+    tags="[[My First Tag]] [[My Second Tag]]" />
+  New Tiddler
+</$button>

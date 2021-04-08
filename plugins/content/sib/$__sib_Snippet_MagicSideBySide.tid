@@ -1,0 +1,17 @@
+caption: {{$:/core/images/full-screen-button}} Side-by-side
+created: 20210116173017782
+modified: 20210320140908903
+tags: 
+title: $:/sib/Snippet/MagicSideBySide
+type: text/vnd.tiddlywiki
+
+<div class="msbs-snippet">
+
+{{||$:/sib/Snippet/TiddlerAsWikitext}}
+
+</div>
+<div class="msbs-snippet">
+
+{{||$:/sib/Snippet/TiddlerAsRendered}}
+
+</div>

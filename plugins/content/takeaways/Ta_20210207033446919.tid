@@ -1,0 +1,9 @@
+answer: `value`
+created: 20210207033447893
+modified: 20210311182548060
+origin: Hiding and Showing Things
+qtype: rememberq
+question: When the `filter` attribute is used to make a `$set` widget conditional, what attribute contains the value to be used if the filter returns at least one result?
+tags: Takeaway
+title: Ta:20210207033446919
+type: text/vnd.tiddlywiki

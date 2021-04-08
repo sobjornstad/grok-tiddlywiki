@@ -1,0 +1,9 @@
+created: 20200718033649271
+length: m
+modified: 20210207182939809
+origin: The View Template
+tags: Exercise
+title: Ex:EditTemplateInformation
+type: text/vnd.tiddlywiki
+
+Add the tiddlers under `$:/yourname/TiddlerTypeTemplates/` to the edit template as well. What do you notice about where they appear? Does it make sense to have them here?

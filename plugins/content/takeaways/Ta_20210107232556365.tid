@@ -1,0 +1,9 @@
+answer: `<td>` (//table data//)
+created: 20210107232600707
+modified: 20210311183124753
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: What HTML element creates a table cell when used within a `<tr>` element?
+tags: Takeaway
+title: Ta:20210107232556365
+type: text/vnd.tiddlywiki

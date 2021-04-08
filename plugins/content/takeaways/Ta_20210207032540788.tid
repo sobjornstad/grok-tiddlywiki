@@ -1,0 +1,8 @@
+created: 20210207032541862
+modified: 20210315200901488
+origin: Hiding and Showing Things
+qtype: remembercz
+question: The `$reveal` widget displays its contents only if a specified {c1::field} matches a {c1::value}.
+tags: Takeaway
+title: Ta:20210207032540788
+type: text/vnd.tiddlywiki

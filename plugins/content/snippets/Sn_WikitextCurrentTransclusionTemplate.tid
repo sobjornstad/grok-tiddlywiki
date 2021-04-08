@@ -1,0 +1,8 @@
+caption: Transclude the [[current tiddler|Templates and the Current Tiddler]] through a template
+created: 20210314125101154
+modified: 20210314125222415
+tags: 
+title: Sn:WikitextCurrentTransclusionTemplate
+type: text/vnd.tiddlywiki
+
+{{||Sn:CaptionFieldTemplate}}

@@ -1,0 +1,23 @@
+complete: 
+created: 20210121000924032
+length: s
+modified: 20210209021810824
+origin: When Things Go Wrong
+tags: Exercise
+title: Ex:InspectSquare
+type: text/vnd.tiddlywiki
+
+Using your browser's element inspector, determine:
+
+# What the `class` attribute of the blue square below is.
+# What the hidden message in this exercise says.
+
+<div class="bluuuuu" style="background-color: blue;" width=24px>&nbsp;<span style="display: none;">Help, I'm trapped in an HTML span!</span></div>
+
+<style>
+.bluuuuu {
+	margin: auto;
+	width: 10px;
+	height: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.2) }
+</style>

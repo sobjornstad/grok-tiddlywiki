@@ -1,0 +1,9 @@
+answer: An attribute.
+created: 20201231000805490
+modified: 20210223170420359
+origin: HTML
+qtype: rememberq
+question: In the HTML element `<div style="text-align: center;">Centered text!</div>`, what is the `style="text-align: center;"` part called?
+tags: Takeaway
+title: Ta:20201231000803648
+type: text/vnd.tiddlywiki

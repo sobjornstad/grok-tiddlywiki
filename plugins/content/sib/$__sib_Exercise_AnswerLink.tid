@@ -1,0 +1,15 @@
+created: 20200718200300480
+modified: 20210206145709509
+tags: $:/tags/EditTemplate $:/tags/ViewTemplate
+title: $:/sib/Exercise/AnswerLink
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]tag[Exercise]]">
+  Go to answer: {{{ [all[current]has[draft.of]get[draft.of]addsuffix[/answer]] ~[all[current]addsuffix[/answer]] }}}
+	{{||$:/sib/Exercise/CompletionCheckbox}}
+	
+</$list>
+
+<$list filter="[all[current]tag[Answer]]">
+  Go to question: {{{ [all[current]has[draft.of]get[draft.of]removesuffix[/answer]] ~[all[current]removesuffix[/answer]] }}}
+</$list>

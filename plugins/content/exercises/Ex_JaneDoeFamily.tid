@@ -1,0 +1,11 @@
+created: 20200603115901406
+length: m
+modified: 20210130174442565
+origin: Reviewing the Basics
+tags: Exercise
+title: Ex:JaneDoeFamily
+type: text/vnd.tiddlywiki
+
+Visit Jane Doe's tiddler and review the //family// and //manager// fields. These fields refer to several people who don't have tiddlers yet. Create those tiddlers, with all the appropriate metadata.
+
+You can assume that John Doe and Emily Doe are also managed by Chris Smith (though managing three family members unrelated to you sounds like a disaster waiting to happen). Your choice of phone numbers and email addresses does not matter, provided they are in the correct formats.

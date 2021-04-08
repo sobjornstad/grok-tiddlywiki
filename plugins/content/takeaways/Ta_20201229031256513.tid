@@ -1,0 +1,9 @@
+answer: TiddlyWiki implements hierarchies using tags, where a tiddler's tags represent its parent(s) in the hierarchy, and a tiddler can have more than one tag.
+created: 20201229031258882
+modified: 20210218193731038
+origin: Tags
+qtype: rememberq
+question: Explain why tiddlers can be in multiple places within one hierarchy.
+tags: Takeaway
+title: Ta:20201229031256513
+type: text/vnd.tiddlywiki

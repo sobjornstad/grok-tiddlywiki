@@ -1,0 +1,9 @@
+answer: `field`
+created: 20201230205238685
+modified: 20210302162939158
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: In the filter step `field:participants[Jane]`, what is the //operator//?
+tags: Takeaway
+title: Ta:20201230205236409
+type: text/vnd.tiddlywiki

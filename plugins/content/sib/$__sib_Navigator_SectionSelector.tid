@@ -1,0 +1,12 @@
+created: 20210131192658407
+modified: 20210209021626335
+tags: 
+title: $:/sib/Navigator/SectionSelector
+type: text/vnd.tiddlywiki
+
+<$select tiddler="$:/temp/SelectedSection" default="">
+	<option value="">(any section)</option>
+	<$list filter=<<selectorFilter>>>
+		<option value=<<currentTiddler>>><<currentTiddler>></option>
+	</$list>
+</$select>

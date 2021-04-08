@@ -1,0 +1,9 @@
+answer: Exactly once.
+created: 20210101172939240
+modified: 20210218134716965
+origin: Wikification
+qtype: rememberq
+question: When a transclusion or macro call is used as an HTML attribute, how many times does TiddlyWiki try to wikify it?
+tags: Takeaway
+title: Ta:20210101172937494
+type: text/vnd.tiddlywiki

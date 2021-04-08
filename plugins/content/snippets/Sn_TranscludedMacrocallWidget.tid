@@ -1,0 +1,17 @@
+created: 20210116210007489
+modified: 20210327153738242
+tags: 
+title: Sn:TranscludedMacrocallWidget
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName, linkText)
+[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+<$set name="linktext" value="An animal">
+
+* <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Aardvark" />
+* <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Bee" />
+* <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Cow" />
+	
+</$set>

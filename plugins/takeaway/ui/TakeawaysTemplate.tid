@@ -1,0 +1,7 @@
+created: 20201228235038564
+modified: 20210407150347758
+tags: Template
+title: TakeawaysTemplate
+type: text/vnd.tiddlywiki
+
+{{||$:/plugins/sobjornstad/TakeAway/TakeawayListForIntextTiddler}}

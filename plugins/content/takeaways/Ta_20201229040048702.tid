@@ -1,0 +1,9 @@
+answer: Surround it by double square brackets as if linking to it: `[[My Tiddler]]`.
+created: 20201229040049863
+modified: 20210208152006717
+origin: Contact Tiddlers
+qtype: rememberq
+question: How would you place a tiddler named `My Tiddler` in a list field, since it contains a space and tiddlers are separated by spaces in list fields?
+tags: Takeaway
+title: Ta:20201229040048702
+type: text/vnd.tiddlywiki

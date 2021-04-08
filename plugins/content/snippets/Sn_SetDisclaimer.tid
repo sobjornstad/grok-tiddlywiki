@@ -1,0 +1,9 @@
+created: 20210116203350735
+modified: 20210116203320466
+tags: 
+title: Sn:SetDisclaimer
+type: text/vnd.tiddlywiki
+
+<$set name="disclaimer" value="(This paragraph does not represent the formal opinion of my company.)">
+	...insert the text of your tiddler here...
+</$set>

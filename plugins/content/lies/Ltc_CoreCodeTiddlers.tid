@@ -1,0 +1,8 @@
+created: 20210116232945883
+description: even the core code of TiddlyWiki itself
+modified: 20210207060523909
+tags: Lie
+title: Ltc:CoreCodeTiddlers
+type: text/vnd.tiddlywiki
+
+While almost all of the core code of TiddlyWiki is stored in tiddlers, there is a small [[component|https://tiddlywiki.com/dev/#Microkernel]] called the //microkernel// that is not. This component is needed to “bootstrap” TiddlyWiki to the point that it is capable of reading the rest of its code from tiddlers.

@@ -1,0 +1,9 @@
+created: 20210207214626820
+length: m
+modified: 20210207214550313
+origin: Hiding and Showing Things
+tags: Exercise
+title: Ex:BacklinksConditionalDisplay
+type: text/vnd.tiddlywiki
+
+Update your template that [[displays a list of links and backlinks|Creating a List of Links and Backlinks]] so that the list doesn't appear if there are no links or backlinks.

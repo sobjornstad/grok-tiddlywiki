@@ -1,0 +1,9 @@
+answer: `{{!!title}}`
+created: 20201231190946737
+modified: 20210208151946643
+origin: Templates and the Current Tiddler
+qtype: rememberq
+question: What field transclusion is equivalent to the variable reference `<<currentTiddler>>`?
+tags: Takeaway
+title: Ta:20201231190945177
+type: text/vnd.tiddlywiki

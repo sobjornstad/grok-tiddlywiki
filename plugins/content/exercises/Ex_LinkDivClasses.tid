@@ -1,0 +1,9 @@
+created: 20200718201549864
+length: m
+modified: 20210130174459327
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:LinkDivClasses
+type: text/vnd.tiddlywiki
+
+One more step with the divs. In order to get them formatted correctly, we need to be able to identify each of them separately. The way we do this in HTML/CSS is by applying a //class// (that is, assigning a value to the `class` attribute of the HTML tag). Adjust the wikitext so that each div has a class. It's a good idea to prefix the class names with your initials and a `-`, or some similar convention -- this will ensure that you don't inadvertently pick the same class name that TiddlyWiki's core or a plugin does and mess up the formatting somewhere else on the page.

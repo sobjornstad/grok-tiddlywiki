@@ -1,0 +1,17 @@
+created: 20200603185133343
+length: m
+modified: 20210320170409142
+origin: Common Filter Operators
+tags: Exercise
+title: Ex:CreatingMoreFilters
+type: text/vnd.tiddlywiki
+
+Compose and run filters to answer the following questions:
+
+# How many tiddlers are in the wiki?
+# How many of those are system tiddlers?
+# What meetings contain a link to `JaneDoe`?
+#* //Hint//: Work backwards.
+# Which contact has the alphabetically earliest phone number?
+# Which tiddlers have text in a field called `at`?
+# Which tiddlers contain the words `JaneDoe` and `help` somewhere in their text field? Use only a single filter step.

@@ -1,0 +1,168 @@
+created: 20201122235533944
+modified: 20210326025720971
+tags: Answer
+title: Ex:MailMerge/answer
+type: text/vnd.tiddlywiki
+
+Most of the supplemental exercises don't have answers, but I can't pose an exercise this tricky without proving that I can implement it! There are almost certainly many, many other ways to achieve the same thing, some of them probably better.
+
+Here's a basic version which uses three tiddlers. It doesn't support multiple recipients on an email, cc:, bcc:, making substitutions in the subject of the email, HTML formatting, special characters requiring URL encoding in the email address, or probably a few other things, but it should satisfy the definition of “mail merge” and so do fine for explanatory purposes.
+
+First, the `MailMergeTemplate`. This is specific to the exact mail merge that you're trying to do, and you might have many of them in your wiki and create new ones on the fly. It contains the body of the email, plus transclusions needed to fill in the dynamic parts. It expects the contact to whom the message is being sent to be the current tiddler. Here's an example email:
+
+```html
+Hi {{!!title}},
+
+This is an email to let you know that you've screwed up and owe me $20. Any questions, please contact your boss, {{!!manager}}.
+
+Thanks much,
+
+The Management
+```
+
+Notice that, since this template is arbitrary wikitext, while in this sample we've only transcluded fields that are directly on the contact tiddler, we could also call macros, transclude the values of contact fields through templates, transclude filter outputs, or even use widgets, if we needed to build a more complex message.
+
+Next is the `MailMergeTemplateReader`. The purpose of this tiddler is to take two variables, `templateName` and `merger`, representing the `MailMergeTemplate` to be used and the contact which is being used for this iteration of the mail merge, and output the body text of the email. It should be possible to avoid using this intermediate tiddler, but life is easier with it.
+
+```html
+\define doTransclude() {{$(merger)$||$(templateName)$}}
+
+<<doTransclude>>
+```
+
+Note that this tiddler, unlike the actual `templateName` template, does //not// need to be transcluded as a template; it can just be transcluded as a normal tiddler as long as the variables are defined. This will be useful in a moment.
+
+Finally, the big kahuna, `MailMerge`. Here it is in one chunk, and then afterwards we'll take it piece by piece.
+
+```html
+\define concat() mailto:$(contactEmail)$?subject=$(mailtoSubject)$&body=$(bodyPart)$
+
+Filter for Contacts: <$edit-text tiddler="$:/temp/mailmergefilter" tag="input" default=""/>
+
+Template: <$edit-text tiddler="$:/temp/mailmergetemplate" tag="input" default=""/>
+
+Subject: <$edit-text tiddler="$:/temp/mailmergesubject" tag="input" default=""/>
+
+<table>
+  <tr>
+    <th>Contact</th>
+    <th>Address</th>
+    <th>Link</th>
+  </tr>
+<$list filter={{$:/temp/mailmergefilter}}>
+  <tr>
+  <td>
+    {{!!title}}
+  </td>
+  <td>
+    {{!!email}}
+  </td>
+  <td>
+    <$vars
+      contactEmail={{!!email}}
+      merger=<<currentTiddler>>
+      templateName={{$:/temp/mailmergetemplate}}
+      mailtoSubject={{$:/temp/mailmergesubject}}>
+    <$wikify name=wikified output=formattedtext text={{MailMergeTemplateReader}}>
+    <$set name=bodyPart value={{{ [<wikified>trim[]encodeuri[]] }}}>
+
+      <a class="tc-tiddlylink-external" href=<<concat>>>Email</a>
+
+    </$set>
+    </$wikify>
+    </$vars>
+
+  </td>
+  </tr>
+</$list>
+</table>
+```
+
+Let's break this down.
+
+```html
+\define concat() mailto:$(contactEmail)$?subject=$(mailtoSubject)$&body=$(bodyPart)$
+```
+
+This macro will put together the actual mailto link from its constituent parts, the contact email, the subject, and the body.
+
+```html
+Filter for Contacts: <$edit-text tiddler="$:/temp/mailmergefilter" tag="input" default=""/>
+
+Template: <$edit-text tiddler="$:/temp/mailmergetemplate" tag="input" default=""/>
+
+Subject: <$edit-text tiddler="$:/temp/mailmergesubject" tag="input" default=""/>
+```
+
+This will let the user define what mail merge is to be carried out: who the recipients are (as a filter), what template to use for the body of the message, and what the subject should be.
+
+```html
+<table>
+  <tr>
+    <th>Contact</th>
+    <th>Address</th>
+    <th>Link</th>
+  </tr>
+```
+
+Start creating a pretty table for the links, including the contacts' names and email addresses so we can quickly check them and make sure they're what we expected.
+
+```html
+<$list filter={{$:/temp/mailmergefilter}}>
+  <tr>
+  <td>
+    {{!!title}}
+  </td>
+  <td>
+    {{!!email}}
+  </td>
+```
+
+Filling in the first two columns is quite straightforward. Note that the list is populated by the filter stored in the temp tiddler associated with the input box the user typed the filter into.
+
+```html
+  <td>
+    <$vars
+      contactEmail={{!!email}}
+      merger=<<currentTiddler>>
+      templateName={{$:/temp/mailmergetemplate}}
+      mailtoSubject={{$:/temp/mailmergesubject}}>
+```
+
+Now we're into the complicated table cell, where the mailto link is put together. First, we need to set a few variables:
+
+* The `contactEmail` (the address we're sending this message to, used by the `concat` macro to build the link)
+* The `merger` (the tiddler which should be used to fill out the body template, used by the `MailMergeTemplateReader`)
+* The `templateName` (the template which will be filled out, again populated from the user's temp tiddler, used by the `MailMergeTemplateReader`)
+* The `mailtoSubject` (the subject which the user filled in, used by the `concat` macro to build the link)
+
+```html
+<$wikify name=wikified output=formattedtext text={{MailMergeTemplateReader}}>
+```
+
+Here's the magic. We've seen `$wikify` at least once before, when we [[rendered a small excerpt|Ex:LinkedTiddlerExcerpt]] of various tiddlers as part of [[Creating a List of Links and Backlinks]]. This takes the wikitext of `MailMergeTemplateReader` and converts it into HTML output, making variable substitutions and transclusions just as if TiddlyWiki was displaying the tiddler on the screen. This output is then downconverted to `formattedtext` (text that's not in full HTML, but includes nice things like line breaks). Because of our work in `MailMergeTemplateReader` and the variables we set in the previous snippet, the output contains the appropriate transcluded values for the specific contact being treated in this row of the table (that is, the values have been "merged"). We store this output in the variable `wikified`.
+
+```html
+<$set name=bodyPart value={{{ [<wikified>trim[]encodeuri[]] }}}>
+```
+
+We trim any spaces or line breaks off the beginning and end of our wikified text and URL-encode it, which makes it turn into a bunch of funny percent signs and weird characters that your email program will know how to decode into a message.
+
+```html
+<a class="tc-tiddlylink-external" href=<<concat>>>Email</a>
+```
+
+Lastly, we create the link using the `concat` macro, which reads from all the variables we have set so far and smashes them together (concatenates them) to create link text.
+
+```html
+  </$set>
+  </$wikify>
+  </$vars>
+
+  </td>
+  </tr>
+</$list>
+</table>
+```
+
+And we have a few widgets to close.

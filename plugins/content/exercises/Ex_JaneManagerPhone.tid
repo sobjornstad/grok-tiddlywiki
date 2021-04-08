@@ -1,0 +1,13 @@
+created: 20200604020227764
+length: M
+modified: 20210130175052699
+origin: Transclusions
+tags: Exercise
+title: Ex:JaneManagerPhone
+type: text/vnd.tiddlywiki
+
+Transclude a line into the text of Jane's tiddler that contains Chris Smith's phone number, in case she messes up so badly that you need to contact her manager immediately.
+
+How would you make it so that it currently refers to Chris's phone number, but if the `manager` field is updated, the new manager's phone number will appear instead? (You might not be able to get this one, but at least spend some time thinking about it and experimenting before you look at the answer.)
+
+//Hint//: Use a macro.

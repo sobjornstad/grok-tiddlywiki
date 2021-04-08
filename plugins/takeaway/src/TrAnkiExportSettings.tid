@@ -1,0 +1,25 @@
+created: 20210407143206502
+modified: 20210407191304385
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/TrAnkiExportSettings
+type: text/vnd.tiddlywiki
+
+These settings affect how the [[Takeaway Export List]] displays takeaways and thus what cards look like when they are [[exported to Anki via TiddlyRemember|TakeAway Help/Studying with Anki]].
+
+<table class="gtw-form">
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/sobjornstad/TakeAway/Exporter/]nsort[stackorder]]">
+<tr>
+	<th width="180px" style="text-align: left; vertical-align: top;">{{!!caption}}</th>
+	<td><$edit-text tag=input size=20/></td>
+	<td>{{!!description}}</td>
+</tr>
+</$list>
+</table>
+
+<$button>
+	<!-- NOT all[tiddlers+shadows] -- delete only modified -->
+	<$list filter="[prefix[$:/config/sobjornstad/TakeAway/Exporter/]]">
+		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+	</$list>
+	Reset Anki export settings to default
+</$button>

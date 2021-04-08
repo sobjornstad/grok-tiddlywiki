@@ -1,0 +1,9 @@
+answer: `<<toc-selective-expandable "My Start Tiddler">>`
+created: 20201229152256606
+modified: 20210317005921372
+origin: Creating Hierarchies with a Table of Contents
+qtype: rememberq
+question: What wikitext syntax displays a table of contents that displays tiddlers in a collapsable and expandable hierarchy, beginning from the tiddler `My Start Tiddler`?
+tags: Takeaway
+title: Ta:20201229152249751
+type: text/vnd.tiddlywiki

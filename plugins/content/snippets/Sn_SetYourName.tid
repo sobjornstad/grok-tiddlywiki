@@ -1,0 +1,11 @@
+created: 20210123194135490
+modified: 20210123194041349
+tags: 
+title: Sn:SetYourName
+type: text/vnd.tiddlywiki
+
+Your name: <$edit-text tiddler="$:/temp/ExampleNameField" tag="input" default="" />
+
+<$set name="username" filter="[[$:/temp/ExampleNameField]get[text]]" value={{$:/temp/ExampleNameField}} emptyValue="Nobody">
+	Hi <<username>>!
+</$set>

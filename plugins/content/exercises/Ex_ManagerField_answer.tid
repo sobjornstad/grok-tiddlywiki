@@ -1,0 +1,18 @@
+created: 20200603115947939
+length: s
+modified: 20200603210259360
+tags: Answer
+title: Ex:ManagerField/answer
+type: text/vnd.tiddlywiki
+
+* We could write "Jane Doe's manager is ChrisSmith" in Jane's tiddler.
+** //Advantages//: Simple and straightforward.
+** //Disadvantages//: The only thing TiddlyWiki will know about the relationship between Jane and Chris is that they are linked. It doesn't know Chris is Jane's manager.
+
+* We could link to the person's manager within the body text, and then tag the manager `Manager`.
+** //Advantages//: Similarly easy to create. But this time, TiddlyWiki has a vague conception that Chris is Jane's manager that we can query for.
+** //Disadvantages//: The relationship we've defined is really that "Jane is linked to Chris, who is a manager." A manager is unlikely to directly manage //all// other employees of the company unless it's a very small company. Thus, if we refer to the manager in the tiddler of a contact who is not a direct report, it will look like they are a direct report.
+
+* We could tag Jane Doe with a ChrisSmith tag.
+** //Advantages//: Easy and most semantically accurate of these alternatives. As we'll see in a future chapter, we can automatically create a hierarchical ("table of contents") view of managers and their employees.
+** //Disadvantages//: Creates a lot of extra tags. TiddlyWiki understands the relationship to be something like "Jane is a member of Chris['s team]," which is more precise than a link but less precise than a "manager" field.

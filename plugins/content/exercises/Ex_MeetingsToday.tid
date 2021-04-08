@@ -1,0 +1,14 @@
+created: 20200717221603330
+length: M
+modified: 20210130174530290
+origin: Tabs
+tags: Exercise
+title: Ex:MeetingsToday
+type: text/vnd.tiddlywiki
+
+Create a tiddler named `Today` and put a set of vertically arranged tabs on it showing all meetings that are happening on the current day (i.e., whose `at` field is today) and excluding drafts.
+
+* You can get today's date with the built-in `now` macro, like `<<now YYYY0MM0DD>>`.
+* You'll need to look up a couple of new filter operators in the [[list|https://tiddlywiki.com/#Filter Operators]].
+
+//Hint//: If you can't remember how to exclude drafts, review [[Common Filter Operators]].

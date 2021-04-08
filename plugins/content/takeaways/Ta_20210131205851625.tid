@@ -1,0 +1,9 @@
+answer: A single chunk of wikitext.
+created: 20210131205852639
+modified: 20210320191235261
+origin: Text Substitution
+qtype: rememberq
+question: A macro using text substitution is able to accomplish the equivalent of `{{ {{!!manager}}!!phone }}` because it results in what?
+tags: Takeaway
+title: Ta:20210131205851625
+type: text/vnd.tiddlywiki

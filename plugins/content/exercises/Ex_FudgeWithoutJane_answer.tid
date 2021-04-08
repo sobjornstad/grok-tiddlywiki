@@ -1,0 +1,15 @@
+created: 20200716022842367
+modified: 20210103171842279
+tags: Answer
+title: Ex:FudgeWithoutJane/answer
+type: text/vnd.tiddlywiki
+
+```
+[contains:text[fudge]] -[contains:participants[JaneDoe]]
+```
+
+Another option:
+
+```
+[search[fudge]] -[contains:participants[JaneDoe]]
+```

@@ -1,0 +1,9 @@
+answer: `set` and `setTo`.
+created: 20210107231454259
+modified: 20210220191950247
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: What two attributes of the `$button` widget do you use to make the button set a tiddler field to a value?
+tags: Takeaway
+title: Ta:20210107231453085
+type: text/vnd.tiddlywiki

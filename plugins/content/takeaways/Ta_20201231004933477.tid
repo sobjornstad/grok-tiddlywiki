@@ -1,0 +1,9 @@
+answer: The variable reference evaluates to nothing (nothing at all is displayed where you place the reference).
+created: 20201231004934903
+modified: 20210302161547356
+origin: Variables
+qtype: rememberq
+question: What happens if you refer to a variable that does not exist with wikitext like `<<nonexistentVariable>>`?
+tags: Takeaway
+title: Ta:20201231004933477
+type: text/vnd.tiddlywiki

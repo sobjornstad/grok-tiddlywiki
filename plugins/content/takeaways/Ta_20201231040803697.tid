@@ -1,0 +1,9 @@
+answer: `$name` (note the dollar sign)
+created: 20201231040804979
+modified: 20210326034304680
+origin: The Finer Points of Macros
+qtype: rememberq
+question: What attribute of the `$macrocall` widget is used to supply the name of the macro to call?
+tags: Takeaway
+title: Ta:20201231040803697
+type: text/vnd.tiddlywiki

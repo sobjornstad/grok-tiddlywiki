@@ -1,0 +1,9 @@
+answer: You forgot the outermost pair of square brackets in your filter expression.
+created: 20201230163601291
+modified: 20210302162911809
+origin: Using Filter Expressions
+qtype: rememberq
+question: What is the most common cause of the error message //Filter error: Missing [ in filter expression//?
+tags: Takeaway
+title: Ta:20201230163559681
+type: text/vnd.tiddlywiki

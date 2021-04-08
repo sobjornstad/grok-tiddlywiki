@@ -1,0 +1,14 @@
+caption: {{$:/core/images/italic}} Inline formatting
+created: 20210131145932529
+modified: 20210322015851587
+tags: [[Wikitext Reference]]
+title: Wr:InlineFormatting
+type: text/vnd.tiddlywiki
+
+{{Sn:WikitextInlineTextFormatting||MagicSnippet}}
+
+Using backticks to create monospaced text also inhibits further parsing of wikitext inside the backticks, so you can use this to talk about TiddlyWiki markup or prevent TiddlyWiki from treating computer code or other punctuation-heavy text as wiki markup.
+
+When creating bold italics (or any other combination of formatting), be sure to close the bold and italic in the opposite order you opened them, or you will [[get stuck in inline mode|Block Mode and Inline Mode]] and the remainder of the tiddler will be formatted incorrectly:
+
+{{Sn:WikitextBoldItalicBad||MagicSnippet}}

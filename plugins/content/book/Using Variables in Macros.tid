@@ -1,0 +1,71 @@
+created: 20200606025030461
+description: Macros can reference variables as well as parameters via text substitution.
+modified: 20210327153537750
+parent: Variables, Macros, and Transclusions
+tags: Section
+title: Using Variables in Macros
+type: text/vnd.tiddlywiki
+
+In many cases, macros get all the information they need to vary their output from their parameters. But it's also possible for them to get information from the values of variables where the macro is called.
+
+First of all, there's the obvious way, by simply using an ordinary ''variable transclusion'':
+
+{{Sn:MarksTheSpot||MagicSnippet}}
+
+However, as we just saw in the previous section, variable transclusions only work in a limited range of situations; sometimes we need [[Text Substitution]] to accomplish the goal of our macro. The syntax for performing ''text substitution on a variable'' is `$(variable)$` -- that is, add parentheses immediately inside the dollar signs that indicate the text substitution of a parameter. (Note that this only works within a macro -- you can't do text substitution of any kind outside a macro.)
+
+Let's look at our good old `getPhone` example again and make it work without parameters.
+
+```html
+\define getPhone()
+{{$(person)$!!phone}}
+\end
+
+<$set name=person value={{!!manager}}>
+	<<getPhone>>
+</$set>
+```
+
+Nothing tricky here beyond remembering the syntax. But why would we want to do this? Generally, if we have the choice, we don't; it's clearer what information the macro is using when we use parameters, and it's not a good thing when macros do something surprising. (See the [[Principle of Least Astonishment|https://en.wikipedia.org/wiki/Principle_of_least_astonishment]].)
+
+However, there are a few situations where text substitution on a variable can allow us to do something we couldn't do otherwise. Let's think back to the situation in [[Filters and Transclusions]] where we tried unsuccessfully to use a macro rather than including field transclusions in a filter. What we were trying to do was essentially this, if only it were valid syntax:
+
+```html
+\define myfilt(people)
+[enlist[$people$]]
+\end
+
+<$list filter=<<myfilt {{!!family}}>> />
+```
+
+Our attempts to fix this by changing the `myfilt` macro call to a `$macrocall` widget or by adding a variable were also unsuccessful, because we seemingly needed the also-invalid syntax:
+
+```html
+<$set name=myvalue value=<$macrocall $name="myfilt" people={{!!family}}/>>
+```
+
+With the ability to do variable text substitutions, now we can do it like this:
+
+```html
+\define myfilt()
+[enlist[$(people)$]]
+\end
+
+<$set name=people value={{!!family}}>
+	<$list filter=<<myfilt>> />
+</$set>
+```
+
+This isn't quite as clean as just transcluding the fields directly into the filter as we learned how to do in [[Filters and Transclusions]] -- and if the list of people contains weird characters we could land ourselves in trouble since we're using text substitution -- but it's much more elegant than some of the stuff we were trying to do before!
+
+You will find this pattern quite helpful when dealing with multiple layers of macros and widgets.
+
+!! Exercises
+
+{{Ex:TelephoneLink||ExerciseTemplate}}
+{{Ex:FilteredTelephoneLink||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

@@ -1,0 +1,12 @@
+caption: Styles
+created: 20210131152547938
+modified: 20210131154106270
+tags: [[Wikitext Reference]]
+title: Wr:Styles
+type: text/vnd.tiddlywiki
+
+You can apply arbitrary CSS styles or classes to blocks of text.
+
+{{Sn:WikitextStyles||MagicSnippet}}
+
+See [[Stylesheets]] for more information on styles and this syntax.

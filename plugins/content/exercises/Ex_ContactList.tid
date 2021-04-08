@@ -1,0 +1,12 @@
+complete: 
+created: 20200603192624309
+length: m
+modified: 20210130174338739
+origin: Your First Dynamic List
+tags: Exercise
+title: Ex:ContactList
+type: text/vnd.tiddlywiki
+
+Create a `ContactList`, similar to our `MeetingList`, that shows all contacts in alphabetical order by their first name.
+
+//Tip//: To create a new tiddler and start it with the contents of an existing tiddler, click the "more" drop-down on the existing tiddler's toolbar and choose ''Clone''.

@@ -1,0 +1,9 @@
+answer: `[[Awesome Tiddler]get[description]]` (or the long form, `[title[Awesome Tiddler]get[description]]`)
+created: 20201230235838368
+modified: 20210302161455574
+origin: Common Filter Operators
+qtype: rememberq
+question: Write a filter expression that outputs the value of the `description` field on the tiddler named `Awesome Tiddler`.
+tags: Takeaway
+title: Ta:20201230235837017
+type: text/vnd.tiddlywiki

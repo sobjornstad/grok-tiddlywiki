@@ -1,0 +1,32 @@
+created: 20200718011953409
+modified: 20200718012001987
+tags: Answer
+title: Ex:HolidayToday/answer
+type: text/vnd.tiddlywiki
+
+The easiest and cleanest way uses the [[transclude widget|https://tiddlywiki.com/#TranscludeWidget]] with the `index` attribute to get a property from a data tiddler:
+
+```html
+It's ''<$transclude tiddler=UsHolidays index=<<now "0MM/0DD">> />'' today!
+```
+
+However, we didn't discuss the `transclude` widget, so it's unlikely you thought of that! Here are two other ways to accomplish it; you might have come up with something yet different that also works fine.
+
+```html
+<$set name=formattedToday value=<<now "0MM/0DD">>>
+  It's ''<$text text={{{ [[UsHolidays]getindex<formattedToday>] }}} />'' today!
+</$set>
+```
+
+(Recall that the `text` widget is needed to prevent the holiday from turning into a link with the use of triple curly braces.)
+
+
+```html
+\define holidayTransclusion()
+  {{UsHolidays##$(formattedToday)$}}
+\end
+
+<$set name=formattedToday value=<<now "0MM/0DD">>>
+  It's ''<<holidayTransclusion>>'' today!
+</$set>
+```

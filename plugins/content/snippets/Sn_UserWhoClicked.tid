@@ -1,0 +1,11 @@
+created: 20210116212538921
+modified: 20210117010338851
+tags: 
+title: Sn:UserWhoClicked
+type: text/vnd.tiddlywiki
+
+<$button set="!!userwhoclicked" setTo="Soren">
+  Big Red Button
+</$button>
+
+User who clicked: "{{!!userwhoclicked}}"

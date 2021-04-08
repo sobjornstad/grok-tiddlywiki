@@ -1,0 +1,14 @@
+created: 20210116175307438
+description: are ordinarily rendered in inline mode
+modified: 20210121003920030
+tags: Lie
+title: Ltc:SpanInlineMode
+type: text/vnd.tiddlywiki
+
+It would be more correct to say that `<div>` elements //participate in a block formatting context//, while `<span>` elements //participate in an inline formatting context//. The context is how each element itself is laid out with respect to its neighbors. But the element's content is laid out in a different context, which means it might not use the same layout mode! For instance, `<span>` elements may contain elements which will be laid out in a block context, despite themselves being laid out in an inline context (this is generally not a good idea, but it does work).
+
+You can see this in the following example, where a paragraph (a block element) is nested inside of a span (an inline element) which also contains some raw text. The span containing the paragraph is shown in orange for clarity:
+
+{{Sn:BlockInlineContextLtc||MagicSnippet}}
+
+This is unlikely to be something you need to worry about when writing in wikitext, though, unless you are trying to create complex custom [[stylesheets|Stylesheets]] to format your tiddlers.

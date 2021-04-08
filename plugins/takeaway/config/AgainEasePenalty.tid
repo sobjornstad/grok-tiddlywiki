@@ -1,0 +1,10 @@
+caption: Forgot penalty
+created: 20201230000007996
+description: Percentage points by which the ease of a takeaway is decreased when choosing //Forgot//.
+modified: 20210407150759447
+stackorder: 55
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/AgainEasePenalty
+type: text/vnd.tiddlywiki
+
+20

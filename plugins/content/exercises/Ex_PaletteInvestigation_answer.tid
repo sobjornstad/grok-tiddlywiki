@@ -1,0 +1,25 @@
+created: 20200718202204205
+modified: 20210116212428438
+tags: Answer
+title: Ex:PaletteInvestigation/answer
+type: text/vnd.tiddlywiki
+
+The macro definition is found in `$:/core/macros/CSS`. (If you're American and don't appreciate the spelling `colour`, notice there is a `color` macro too that just calls `colour`!). The macro transcludes the tiddler named in `$:/palette` with this bit:
+
+```html
+<$transclude tiddler={{$:/palette}} index="$name$">
+```
+
+`$:/palette` is a configuration tiddler managed by TiddlyWiki that contains the name of whichever palette you've currently selected in the control panel. If you then open up the palette named therein (e.g., `$:/palettes/GruvboxDark`), you'll see a [[data tiddler|Data Tiddlers]] listing the names of colors and their CSS values (or, sometimes, another substitution with the `<<colour>>` macro).
+
+In the macro definition, you might wonder what's with all the other `$transclude` widgets:
+
+```html
+<$transclude tiddler={{$:/palette}} index="$name$">
+  <$transclude tiddler="$:/palettes/Vanilla" index="$name$">
+    <$transclude tiddler="$:/config/DefaultColourMappings/$name$"/>
+  </$transclude>
+</$transclude>
+```
+
+In case the `$transclude` widget is not able to transclude the tiddler for some reason (e.g., it doesn't exist), then the contents of the widget are used as a //fallback//. So if the palette isn't set, then the `Vanilla` palette is used, and if that's gone as well for some reason, a set of default mappings are used.

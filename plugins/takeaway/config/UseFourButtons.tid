@@ -1,0 +1,9 @@
+caption: Use four answer buttons
+created: 20201230132338280
+description: Show the //Hard// and //Easy// answer choices when reviewing. Changing this setting does not affect your review history and is completely reversible.
+modified: 20210407150748616
+tags: 
+title: $:/config/sobjornstad/TakeAway/Reviewer/UseFourButtons
+type: text/vnd.tiddlywiki
+
+yes

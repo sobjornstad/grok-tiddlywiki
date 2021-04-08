@@ -1,0 +1,22 @@
+created: 20210131142943468
+modified: 20210131143308457
+tags: 
+title: Sn:WikitextQuotes
+type: text/vnd.tiddlywiki
+
+> This is a quote.
+>> This is a quote within the quote.
+> But I don't like what was said in the quote within the quote...
+
+The quote ends when we start a new line that doesn't begin with `>`.
+
+<<<
+This is a quote. The quote
+
+will continue until we close it.
+
+> It's also possible to nest quotes by using the line form within the block form.
+
+<<< ---You can put a citation here if you like.
+
+The quote ends after the closing `<<<`.

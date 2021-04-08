@@ -1,0 +1,22 @@
+created: 20200718220801449
+length: m
+modified: 20210130174325776
+origin: Buttons and Input Widgets
+tags: Exercise
+title: Ex:CaptionsByTag
+type: text/vnd.tiddlywiki
+
+Create a tiddler called `CaptionsByTag`. This tiddler should contain an input widget into which the user types the name of a tag. A table underneath the input widget should show all of the tiddlers with this tag along with their captions, if any. That would look something like this:
+
+|!Tiddler|!Caption|
+|FudgeAtTheOffice|The Great Fudge Warning|
+
+//Note//: You'll have to use raw HTML tables to get this to display correctly -- wikitext tables don't work if you interrupt them with a `list` widget. An HTML table has this basic form:
+
+{{Sn:HtmlTable||MagicSnippet}}
+
+The equivalent wikitext table would be:
+
+{{Sn:WikitextTable||MagicSnippet}}
+
+`tr` stands for //table row//, `th` for //table header//, and `td` for //table data//.

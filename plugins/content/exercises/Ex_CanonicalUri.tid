@@ -1,0 +1,9 @@
+created: 20210130042001704
+length: m
+modified: 20210130220431659
+origin: Images and Attachments
+tags: Exercise
+title: Ex:CanonicalUri
+type: text/vnd.tiddlywiki
+
+Select a contact you didn't add an image for above. Place an image for this contact in a folder called `images` next to your example TiddlyWiki, and use the `_canonical_uri` field on a new tiddler to reference this contact's image. Check to be sure the image is displayed on the contact tiddler as expected.

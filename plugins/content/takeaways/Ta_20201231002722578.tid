@@ -1,0 +1,9 @@
+answer: `<br>` (Note that `<br>` is a void tag, so it does not have a matching closing tag.)
+created: 20201231002723798
+modified: 20210302161331531
+origin: Your First Dynamic List
+qtype: rememberq
+question: In HTML, what tag can you use to create an explicit line break?
+tags: Takeaway
+title: Ta:20201231002722578
+type: text/vnd.tiddlywiki

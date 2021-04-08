@@ -1,0 +1,11 @@
+created: 20210120032534130
+modified: 20210120032639775
+tags: 
+title: Sn:DirectAngleBrace
+type: text/vnd.tiddlywiki
+
+{{{ [[abc]addsuffix[def]] }}}
+
+<$set name="myVariable" value="abc">
+	{{{ [<myVariable>addsuffix[def]] }}}
+</$set>

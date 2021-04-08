@@ -1,0 +1,12 @@
+complete: 
+created: 20210130041146429
+length: M
+modified: 20210130174336965
+origin: Images and Attachments
+tags: Exercise
+title: Ex:ContactInformationPicture
+type: text/vnd.tiddlywiki
+
+Edit the ContactInformationTemplate so that it tries to include a picture for each contact. If the tiddler name is, for example, `JaneDoe`, and there is a tiddler called `JaneDoe/Picture`, Jane's picture, at most 300 pixels wide, should appear at the top of the tiddler. No error should be displayed if such a picture doesn't exist (//hint//: a filter operator called `is[tiddler]` will come in handy).
+
+Add an image for one of your contacts and confirm that everything displays as expected for contacts that have a picture and for contacts that do not.

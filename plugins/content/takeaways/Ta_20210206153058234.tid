@@ -1,0 +1,9 @@
+answer: `[tag[Contact]] [search[JaneDoe]] +[sort[]]`
+created: 20210206153059645
+modified: 20210302161304614
+origin: Multi-Run Filters
+qtype: rememberq
+question: Write a filter expression that finds all tiddlers that are either tagged `Contact` or contain the word `JaneDoe` in their `text` field. The list should be sorted alphabetically.
+tags: Takeaway
+title: Ta:20210206153058234
+type: text/vnd.tiddlywiki

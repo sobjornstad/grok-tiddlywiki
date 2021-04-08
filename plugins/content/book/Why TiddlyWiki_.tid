@@ -1,0 +1,72 @@
+created: 20200531034640143
+description: What makes TiddlyWiki worth learning and using?
+modified: 20210322012401157
+parent: Front Matter
+tags: Section
+title: Why TiddlyWiki?
+type: text/vnd.tiddlywiki
+
+There are a lot of tools for taking notes and storing information out in the world, and most of them are easier to learn than TiddlyWiki. So you might ask, why should you care? What makes TiddlyWiki good enough that it's worth working through a textbook to learn?
+
+Because TiddlyWiki offers an entirely new way of thinking (there's a reason this book is called //Grok TiddlyWiki//, and it's not just because [[grok|https://en.wikipedia.org/wiki/Grok]] is a fun word), it can be difficult to explain and the benefits can appear underwhelming to those who haven't experienced it. I'll try to share as much as I can in this section.
+
+!! Talking points
+
+(Click to expand.)
+
+<$details summary="Works like you think">
+
+Traditional information-management systems, both paper and digital, encourage or require you to put notes into “boxes” of one kind or another: notebooks, pages, categories, hierarchies. Notes, once added, stay static, stuck in the same place and time forever, so they quickly get out of date and you forget about them.
+
+Categories and hierarchies are sometimes unfairly maligned. In reality, they are powerful supplemental tools for thinking; sometimes, in order to think about a topic, we need to add additional order to a set of ideas to [[reduce them to a level of complexity we're capable of thinking about|https://zettelkasten.sorenbjornstad.com/#InformationalJig]], and these tools give us that ability. But as a general-purpose organization method, these tools are terrible: they prevent ideas from being effectively used outside their original context and force us to collapse distinctions that we might prefer to maintain. For notes to reach their full potential, we need to allow them to relate in a greater variety of ways. Further, we don't naturally think in hierarchies except when we are tackling a specific problem; we think in links and webs of ideas.
+
+If you doubt that we don't think in hierarchies, try this. Think of the color white. You can take this idea in an almost infinite number of directions with no effort at all: What are some white things? What other colors are there? What categories does white fit into? What metaphors involve whiteness? And from each of the ideas you generate as answers to those questions, you can quickly generate another set of associations. Three or four jumps, and the relationship between the two ideas is unrecoverable except by the path you traced. This is not the mark of hierarchical organization.
+
+TiddlyWiki mirrors the way you think. While you can create traditional categories and hierarchies where they're helpful, these aren't the primary way of organizing content. Instead, you break ideas out into small, reusable pieces called [[tiddlers|Tiddlers]], and relate them and further describe their properties using [[links|Links]], [[tags|Tags]], and [[fields|Fields]]. You can query based on all these properties and more using [[filters|Filters]], and weave tiddlers together into other tiddlers to create aggregations and summaries using [[transclusion|Transclusions]].
+
+These mechanisms, properly used, allow relationships between ideas to magically jump out at you, and you can easily find the related bits that you //just know// are there somewhere but can't ever seem to find in traditional notes systems. Sometimes you may even find notes you didn't remember you took but turn out to be exactly what you need. Almost every TiddlyWiki user has had the experience of having some brilliant new idea and going to the appropriate spot to add it, only to find that it's already there.
+
+Most notes systems fail at the seemingly elementary requirement of matching the way you think. (Why would you use a tool for thinking that doesn't match the way you think?) A few succeed, but those that do usually don't also have the advantages below.
+
+</$details><$details summary="Easy and flexible formatting">
+
+In TiddlyWiki, notes are written and formatted using a markup language called [[wikitext|Wikitext]] (rather like [[Markdown|https://en.wikipedia.org/wiki/Markdown]]). This language is relatively easy to learn and offers a more flexible way of formatting notes than WYSIWYG editors like those used by word processors or email programs.
+
+Advanced users or anyone needing detailed control over how their notes look can fall back to [[HTML]] and [[CSS|Stylesheets]], the same languages used for styling web pages. You can write [[macros|Macros]] or use [[templates|Templates and the Current Tiddler]], along with CSS, for full [[separation of content and presentation|https://en.wikipedia.org/wiki/Separation_of_content_and_presentation]]. You can even write parts of your notes directly in HTML or in Markdown (via a plugin) if you like.
+
+[img height=400 [side-by-side-wikitext.png]]
+
+</$details><$details summary="Radically customizable">
+
+Wikitext is mostly a formatting language, but it's also a declarative language for finding and making changes to notes. For instance, you can create an automatically-updating list of all the kinds of tea you've discussed in your wiki, each with a companion button that takes you to the webpage where you can reorder it and records that you've done so in a list of purchases. //Grok TiddlyWiki// implements an integrated spaced-repetition flashcards program, [[TakeAway|TakeAway Help]], entirely in wikitext!
+
+Almost every aspect of TiddlyWiki's user interface and behavior can be changed without leaving your wiki -- though the out-of-the-box situation is plenty good for many use cases already. There are [[scores of useful plugins|Useful Plugins]] on the web, and it's easy to create your own (in fact, [[plugins are nothing more than|Plugins]] an easily distributable bundle of the same content you normally put in a wiki). The ability to evolve your content and the tool you use to create the content simultaneously is uniquely efficient, empowering, and mind-expanding.
+
+</$details><$details summary="Free, future-proof, and portable">
+
+* TiddlyWiki is ''free as in beer''. Many notes apps are, but many of the better ones will cost you a monthly fee. A small monthly fee probably isn't a big deal, but who wouldn't prefer not having one if the software is just as good?
+* TiddlyWiki is ''free as in freedom''. Unlike proprietary tools like Evernote, Roam Research, and OneNote, you have complete freedom to use TiddlyWiki for any purpose you want, share it with others, and modify it if you need or want to. You will never lose access to your notes because a company decided the service wasn't profitable anymore. If you're planning to write a lot of notes, this should be non-negotiable.
+* TiddlyWiki has a ''commitment to longevity''. Its backwards-compatibility is excellent. When TiddlyWiki 5, which was an entirely new design without backwards compatibility, was introduced some years ago, the old version was not thrown out but continues to be actively maintained and considered a first-class citizen, with even the occasional new feature, for those users who still have large wikis on the old system that aren't worth migrating. This is vanishingly rare in the software world nowadays, and if you're looking at keeping a lot of important notes, it's an important quality. The only note tools I know of likely to achieve a better compatibility and longevity record than TiddlyWiki are plain-text files and paper, both of which are comparatively poor at organizing ideas.
+* TiddlyWiki is ''portable''. It runs in an ordinary web browser, so it works on virtually any computer or operating system. Many people have reported opening unmodified TiddlyWikis from years prior and having them still work just fine in a modern browser. If you want to share your wiki with someone, you can just email them the file and be virtually assured they can open it.
+* TiddlyWiki is ''decentralized''. You can choose to keep your wiki as a single HTML file that you can ship around or as a folder of content served by an included lightweight web server. If you go the file route but want your wiki accessible on more than one computer, you can keep it in cloud storage like Dropbox or GitHub, or use a web hosting service. Nobody gets to handle your data unless you choose to trust them, and if you become disenchanted with one provider or storage method, there are dozens of other options.
+
+</$details><$details summary="The bad">
+
+While I love TiddlyWiki, no software is perfect, so it's worth pointing out some of TiddlyWiki's flaws as well.
+
+* Most importantly, TiddlyWiki ''requires some effort to master''. This is inevitable for a tool as powerful as TiddlyWiki, but it's a significant barrier nonetheless. TiddlyWiki works differently from other tools you've used, and you need to develop a few new skills to take full advantage of it. Almost anyone can learn, and this book will help you, but if you're looking for something that works great right away without any commitment on your part, TiddlyWiki may not be for you. (You can get up and running with TiddlyWiki quickly enough, but you likely won't find it much better than any other tool until you learn a bit more.)
+* Handling ''images and attachments'' in TiddlyWiki can be somewhat troublesome. If you occasionally like to add images or attach files to your notes, this is unlikely to be a big deal. If the main thing you want to do with your note-taking app is organize images or other files, you may be better off looking for a different solution. See [[Images and Attachments]] for details.
+* TiddlyWiki's ''keyboard shortcuts'' are somewhat deficient compared to a desktop notes application, at least in a default setup, although this has improved recently. It is possible, however, to give at least the text entry fields some standard keybindings (e.g., vi-compatible) using the CodeMirror plugin.
+* Using TiddlyWiki to collaborate on a wiki with ''multiple users'' is still in its infancy. While there is some effort at changing this, particularly with the [[Bob plugin|https://github.com/OokTech/TW5-Bob]], TiddlyWiki is by and large a single-user tool.
+
+</$details>
+
+!! Experience TW for yourself
+
+If you have around an hour, check out the video [[Experience TiddlyWiki Fluency: Creating a Reading List|https://www.youtube.com/watch?v=vsdDs7oOLlg]], which will show you the experience of building a small tool in TiddlyWiki. You can also play around in some [[Public Wikis]], such as [[my Zettelkasten|https://zettelkasten.sorenbjornstad.com]].
+
+!! Sold?
+
+If TiddlyWiki sounds like what you've been looking for, proceed to [[Philosophy of Grok TiddlyWiki]] to see if this book is a good way for you to learn TiddlyWiki, or to [[The Shape of TiddlyWiki|The Shape of TiddlyWiki]] to jump in.
+
+If you end up using and liking this book, consider <a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">chipping in a few dollars</a> to support my work on it.

@@ -1,0 +1,11 @@
+created: 20200608014540307
+modified: 20200608014841522
+tags: Answer
+title: Ex:RedTagsFilter/answer
+type: text/vnd.tiddlywiki
+
+```html
+[color[#ff0000]tagging[]]
+```
+
+Note that, in theory, the first filter step `color[#ff0000]` could find other tiddlers that aren't tags and just so happen to have a `color` field set to `#ff0000`. However, this still gives the correct output because any tiddler that tags other tiddlers is by definition a tag, and `tagging[]` will ignore any input tiddler that doesn't tag at least one other tiddler.

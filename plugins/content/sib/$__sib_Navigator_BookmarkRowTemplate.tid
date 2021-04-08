@@ -1,0 +1,7 @@
+created: 20210320200248115
+modified: 20210320203053743
+tags: 
+title: $:/sib/Navigator/BookmarkRowTemplate
+type: text/vnd.tiddlywiki
+
+<$button actions=<<unbookmark-tiddler>> class="tc-btn-invisible">{{$:/core/images/delete-button}}</$button>&nbsp;<$link/>

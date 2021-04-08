@@ -1,0 +1,12 @@
+created: 20201122170015880
+length: m
+modified: 20210130174358750
+origin: Filters and Transclusions
+tags: Exercise
+title: Ex:DefaultToField
+type: text/vnd.tiddlywiki
+
+Modify the template you created in [[Ex:WikipediaLinkTemplate]] so that if the `articleName` variable is not defined, the article name will instead be taken from the `articlename` field of the current tiddler.
+
+* Note the lowercase //n// -- field names can't contain uppercase letters.
+* The `else` filter operator, which adds a constant string to the pipeline if there are no input tiddlers, will be useful here. You will also need to put `!is[blank]` before the `else` operator -- we'll explain why once you've completed this exercise.

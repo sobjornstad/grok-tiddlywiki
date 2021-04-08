@@ -1,0 +1,9 @@
+answer: In a field called `draft.of`.
+created: 20210207014109677
+modified: 20210302163100216
+origin: Getting the Current Tiddler Right on Drafts
+qtype: rememberq
+question: How does a draft tiddler store the name of the tiddler it is a draft of?
+tags: Takeaway
+title: Ta:20210207014108901
+type: text/vnd.tiddlywiki

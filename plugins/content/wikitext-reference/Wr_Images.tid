@@ -1,0 +1,20 @@
+caption: {{$:/core/images/picture}} Images
+created: 20210131152534431
+modified: 20210320145130516
+tags: [[Wikitext Reference]]
+title: Wr:Images
+type: text/vnd.tiddlywiki
+
+[[Image tiddlers|Images and Attachments]] can be simply displayed within other tiddlers via [[transclusion|Transclusions]]:
+
+{{Sn:WikitextImageTransclusion||MagicSnippet}}
+
+Using the `img` link-like syntax, you can also specify a size:
+
+{{Sn:WikitextImageImgify||MagicSnippet}}
+
+The `img` syntax can also directly include images available at a web URL:
+
+{{Sn:WikitextWebImage||MagicSnippet}}
+
+For more on including images in your wiki, see [[Images and Attachments]].

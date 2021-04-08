@@ -1,0 +1,11 @@
+created: 20200718044634233
+length: m
+modified: 20210130174651666
+origin: Adding to the Sidebar
+tags: Exercise
+title: Ex:ViewsOnSidebar
+type: text/vnd.tiddlywiki
+
+Place the new `$:/yourname/Views` tiddler onto the sidebar between the `Recent` and `Tools` tabs.
+
+//Hint//: You'll have to figure out how TiddlyWiki picks up tabs on the sidebar. A little bit of detective work right within your wiki should be sufficient; we've seen all the relevant mechanisms by now.

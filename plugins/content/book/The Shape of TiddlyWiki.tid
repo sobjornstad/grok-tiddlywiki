@@ -1,0 +1,25 @@
+caption: 1: The Shape of TiddlyWiki
+created: 20200603023507957
+description: In which we download and install TiddlyWiki, learn the basics of TiddlyWiki's data model, and begin creating some tiddlers in a sample wiki.
+list: [[Installing TiddlyWiki]] [[Downloading Grok TiddlyWiki]] [[The TiddlyWiki Interface]] [[Tweaking Your Settings]] Tiddlers Fields Wikitext Links Tags [[Requirements for the Sample Wiki]] [[Structuring Our Wiki]] [[Journal Tiddlers]] [[Contact Tiddlers]] [[Meeting Tiddlers]] [[Project Tiddlers]] [[Knowledge Tiddlers]] [[Reviewing the Basics]]
+modified: 20210408161212502
+parent: Outline
+tags: Chapter
+title: The Shape of TiddlyWiki
+type: text/vnd.tiddlywiki
+
+Welcome to TiddlyWiki! This first chapter will help you get your bearings. The wiki will already be useful at the end of this chapter; it just won't take advantage of many of the features that [[make TiddlyWiki special|Why TiddlyWiki?]].
+
+The chapter has three phases:
+
+# First, we'll ''set up a sample wiki'' for use in the rest of the book, by [[installing TiddlyWiki|Installing TiddlyWiki]], [[downloading a copy of this book|Downloading Grok TiddlyWiki]], [[exploring the TiddlyWiki interface|The TiddlyWiki Interface]], and [[tweaking settings|Tweaking Your Settings]].
+# Second, we'll learn about ''five basic concepts'' in TiddlyWiki: [[tiddlers|Tiddlers]], [[fields|Fields]], [[wikitext|Wikitext]], [[links|Links]], and [[tags|Tags]].
+# Last, we'll go through a ''seven-section tutorial'' to set up the basic structure of the sample wiki, [[gathering requirements|Requirements for the Sample Wiki]], [[outlining the structure of the wiki|Structuring Our Wiki]], and then creating [[journal entries|Journal Tiddlers]], [[contacts|Contact Tiddlers]], [[meeting notes|Meeting Tiddlers]], [[projects|Project Tiddlers]], and [[miscellaneous notes|Knowledge Tiddlers]] in accordance with the requirements and structure. Along the way, you'll learn how to navigate TiddlyWiki's interface, use the basic features of [[wikitext|Wikitext]], and model data in TiddlyWiki.
+
+This chapter will be unusual in that it will include few exercises. Instead, you'll be working nonstop in your sample wiki as you read. Once we move into chapter 2, we'll switch to discussing some concepts in the book and then turning you loose to try them out on your own.
+
+If you haven't yet read [[How to Use This Book]], you may wish to do so now. If you're feeling impatient, you can figure out how it works as you go along and return to that section later if needed.
+
+!! In this chapter
+
+{{||ChapterOutlineTemplate}}

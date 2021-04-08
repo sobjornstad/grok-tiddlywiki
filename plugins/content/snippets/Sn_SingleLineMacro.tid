@@ -1,0 +1,9 @@
+created: 20210116205742608
+modified: 20210116205652782
+tags: 
+title: Sn:SingleLineMacro
+type: text/vnd.tiddlywiki
+
+\define disclaimer() (This paragraph does not represent the formal opinion of my company.)
+
+<<disclaimer>>

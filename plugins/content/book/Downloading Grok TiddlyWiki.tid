@@ -1,0 +1,11 @@
+created: 20201230143321900
+description: How to make a copy of this book so you can save your progress.
+modified: 20210321144555504
+parent: The Shape of TiddlyWiki
+tags: Section
+title: Downloading Grok TiddlyWiki
+type: text/vnd.tiddlywiki
+
+//Grok TiddlyWiki// is a TiddlyWiki itself, as you may have noticed or suspected by now. To get the full value out of GTW, you'll want to create your own copy of this wiki; this will allow GTW to save information about your progress and personalize the book for you. If you don't create a copy, you won't be able to keep track of which exercises you've completed, review takeaways, create bookmarks, or save your place when you stop reading.
+
+{{SavingProgress}}

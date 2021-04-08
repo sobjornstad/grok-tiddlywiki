@@ -1,0 +1,9 @@
+created: 20210206182909132
+length: m
+modified: 20210206182844186
+origin: Common Filter Operators
+tags: Exercise
+title: Ex:JohnDoeInAnyField
+type: text/vnd.tiddlywiki
+
+In an [[exercise|Ex:JohnDoeSearch]] in the [[Searching]] section, we noted that a search for `JohnDoe` did not find places where John was mentioned somewhere other than the `text` field. Write and test a filter that finds mentions of John in any field.

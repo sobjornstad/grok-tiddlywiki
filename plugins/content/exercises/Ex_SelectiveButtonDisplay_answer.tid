@@ -1,0 +1,19 @@
+created: 20200822192613762
+modified: 20200822192625562
+tags: Answer
+title: Ex:SelectiveButtonDisplay/answer
+type: text/vnd.tiddlywiki
+
+The template `$:/core/ui/PageTemplate/pagecontrols` is responsible for actually rendering these controls. In here, you'll find, among other lines:
+
+```html
+\define config-title()
+$:/config/PageControlButtons/Visibility/$(listItem)$
+\end
+[...]
+<$set name="hidden" value=<<config-title>>>
+<$list filter="[<hidden>!text[hide]]" storyview="pop" variable="ignore">
+[...]
+```
+
+Thus, if the tiddler `$:/config/PageControlButtons/Visibility/NameOfYourButtonTiddler` has content of `hide`, the button isn't transcluded onto the toolbar. Toggling the checkbox next to your button on the ''Tools'' tab of the sidebar will change the contents of this tiddler, thus hiding or showing it.

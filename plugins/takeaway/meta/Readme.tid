@@ -1,0 +1,9 @@
+created: 20210131153434996
+modified: 20210131153336667
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/readme
+type: text/vnd.tiddlywiki
+
+TakeAway implements the mnemonic medium in TiddlyWiki.
+
+This plugin is currently tightly coupled to [[Grok TiddlyWiki|https://groktiddlywiki.com]] and not licensed for reuse, but I hope to make it available for other applications in the future. Please [[contact me|https://sorenbjornstad.com]] if you have applications in mind.

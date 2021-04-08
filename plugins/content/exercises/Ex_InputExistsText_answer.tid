@@ -1,0 +1,15 @@
+created: 20200718215113479
+modified: 20200718215113806
+tags: Answer
+title: Ex:InputExistsText/answer
+type: text/vnd.tiddlywiki
+
+```html
+Go to Tiddler:
+<$edit-text tiddler="$:/temp/goto" tag="input" default=""/>
+<$button to={{$:/temp/goto}}>Go</$button>
+<$list filter="[{$:/temp/goto}is[tiddler]]"
+       emptyMessage="""<span style="color: red;">Not found.</span>""">
+  <span style="color:green;">Exists!</span>
+</$list>
+```

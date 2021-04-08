@@ -1,0 +1,9 @@
+answer: `A D B C`
+created: 20210103164050397
+modified: 20210208151722427
+origin: Ordering Tiddlers
+qtype: rememberq
+question: Given a tag tiddler `T` with list `A B C`, and a tiddler `D` also tagged `T` with a `list-before` field set to `B`, what order do the tiddlers tagged by `T` appear in?
+tags: Takeaway
+title: Ta:20210103164048401
+type: text/vnd.tiddlywiki

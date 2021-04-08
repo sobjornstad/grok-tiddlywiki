@@ -1,0 +1,30 @@
+caption: Scheduler
+created: 20201230042714308
+modified: 20210407191155217
+stackorder: 20
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/Settings/Scheduler
+type: text/vnd.tiddlywiki
+
+If you're familiar with spaced repetition and want to play around with the parameters of the spacing algorithm, you can do that here. If that doesn't sound exciting, you do not need to and should not make any changes here.
+
+TakeAway uses an Anki/SM2-like algorithm. If you don't understand the terms used in these descriptions, read [[Spaced Repetition from the Ground Up|https://controlaltbackspace.org/memory/spaced-repetition-from-the-ground-up/]] for help.
+
+<table class="gtw-form">
+<$list filter="[all[tiddlers+shadows]prefix[$:/config/sobjornstad/TakeAway/Scheduler/]nsort[stackorder]]">
+<tr>
+	<th width="140px" style="text-align: left; vertical-align: top;">{{!!caption}}</th>
+	<td style="vertical-align: top;"><$edit-text tag=input size=4/></td>
+	<td>{{!!description}}</td>
+	<!--<td><$edit-text tag=input field="stackorder" size=4/></td>-->
+</tr>
+</$list>
+</table>
+
+<$button>
+	<!-- NOT all[tiddlers+shadows] -- delete only modified -->
+	<$list filter="[prefix[$:/config/sobjornstad/TakeAway/Scheduler/]]">
+		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+	</$list>
+	Reset scheduling settings to default
+</$button>

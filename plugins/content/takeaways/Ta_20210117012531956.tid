@@ -1,0 +1,9 @@
+answer: The comment ends after the first `-->`, so `comment. -->` appears in the output.
+created: 20210117012534804
+modified: 20210220190836399
+origin: Comments
+qtype: rememberq
+question: What is wrong with this comment?: `<!-- here is an <!-- especially commenty --> comment. -->`
+tags: Takeaway
+title: Ta:20210117012531956
+type: text/vnd.tiddlywiki

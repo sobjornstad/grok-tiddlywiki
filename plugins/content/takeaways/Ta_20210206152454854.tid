@@ -1,0 +1,9 @@
+answer: `~`
+created: 20210206152455981
+modified: 20210311183206458
+origin: Multi-Run Filters
+qtype: rememberq
+question: What prefix can you add to a filter run to ignore it unless the accumulated results are empty?
+tags: Takeaway
+title: Ta:20210206152454854
+type: text/vnd.tiddlywiki

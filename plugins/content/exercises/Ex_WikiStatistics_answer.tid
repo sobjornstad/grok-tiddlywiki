@@ -1,0 +1,17 @@
+created: 20201122040339373
+modified: 20201122171106156
+tags: Answer
+title: Ex:WikiStatistics/answer
+type: text/vnd.tiddlywiki
+
+```html
+<ul>
+  <li>There are <$text text={{{ [tag[Contact]count[]] }}}/> people in this wiki.</li>
+  <li>There are <$text text={{{ [tag[Meeting]links[]!tag[Contact]count[]] }}}/> non-contact tiddlers linked from meetings.</li>
+  <$set name="totalTiddlers" value={{{ [!is[system]count[]] }}}>
+    <li><$text text={{{ [tag[Contact]count[]divide<totalTiddlers>multiply[100]precision[3]] }}}/>% of all non-system tiddlers in the wiki are contacts.</li>
+  </$set>
+</ul>
+```
+
+Note the use of an HTML list. If we tried to do the list in pure wikitext with `*`, we would have been unable to place the third bullet point in the same list as the first two, as the `$set` widget coming in between causes TiddlyWiki to forget that a list was in progress. We could have put the set widget around the //entire// list, but then it would have been harder to understand what we were doing since the first part of the calculation would have been physically separated from the second part. Always prioritize readability in your wikitext!

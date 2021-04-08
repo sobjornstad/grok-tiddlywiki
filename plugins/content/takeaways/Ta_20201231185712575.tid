@@ -1,0 +1,9 @@
+answer: Nothing. The `||` causes TiddlyWiki to keep the current tiddler as `ContactList` while processing the transclusion.
+created: 20201231185715775
+modified: 20210220191218832
+origin: Templates and the Current Tiddler
+qtype: rememberq
+question: What happens to the current tiddler while TiddlyWiki reads the transclusion `{{||JaneDoe}}` within the tiddler `ContactList`?
+tags: Takeaway
+title: Ta:20201231185712575
+type: text/vnd.tiddlywiki

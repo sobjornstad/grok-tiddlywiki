@@ -1,0 +1,9 @@
+created: 20210206220358830
+length: m
+modified: 20210206220548966
+origin: Miscellaneous Widgets
+tags: Exercise
+title: Ex:ContactCard
+type: text/vnd.tiddlywiki
+
+Create a tiddler called `ContactCard` that displays a drop-down menu from which you can select any contact in the wiki. Underneath the drop-down menu, the selected contact is transcluded through the `ContactInformationTemplate`, showing the contact's details.

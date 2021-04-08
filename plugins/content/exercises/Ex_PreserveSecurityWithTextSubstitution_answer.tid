@@ -1,0 +1,9 @@
+created: 20210207223742670
+modified: 20210207224241431
+tags: Answer
+title: Ex:PreserveSecurityWithTextSubstitution/answer
+type: text/vnd.tiddlywiki
+
+Here's one way:
+
+{{Sn:AuthorizationUnbypass||MagicSnippet}}

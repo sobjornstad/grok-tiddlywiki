@@ -1,0 +1,7 @@
+created: 20201230212214599
+modified: 20201230212137678
+tags: Answer
+title: Ex:ConstructorAfterFilterStep/answer
+type: text/vnd.tiddlywiki
+
+One tiddler `EmployeeInformationSystem` is returned. The step `tag[Person]` is a no-op (short for //no operation//, meaning adding or removing it has no impact on the final result), because `title` is a constructor and ignores its input.

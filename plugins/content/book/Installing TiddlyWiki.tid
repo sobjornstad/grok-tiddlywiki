@@ -1,0 +1,31 @@
+created: 20200530172429726
+description: How to get TiddlyWiki set up on your computer.
+modified: 20210315152834730
+parent: The Shape of TiddlyWiki
+tags: Section
+title: Installing TiddlyWiki
+type: text/vnd.tiddlywiki
+
+TiddlyWiki, while having many virtues, is tricky to get started with. That's partly because it can do pretty much anything, so it's not always obvious what to do with it once you have it. Working through this book should take care of that part.
+
+Another problem is that there is a ridiculous array of options for what software to use with TiddlyWiki. I know, right: it's already a piece of software that runs in a browser, so why do you have to choose other software? Basically, because TiddlyWiki isn't a centralized service, there are many different places you can store your data. You can keep it on your local computer, make it accessible from a server you own, keep it on Dropbox, keep it in a GitHub repository, keep it on your phone, engrave it on a special spy pocketknife with a Bluetooth-enabled laser cutter...and each of these methods has its own associated plugin or browser extension or third-party web service account or downloaded tool. These tools are often called //savers//.
+
+I know your eyes are glazing over and you're questioning your choices in life, so let's forget about savers for the moment. We're both going to go download and install [[TiddlyDesktop|https://github.com/Jermolene/TiddlyDesktop/releases]], which is an all-in-one turnkey solution that just works and has no extra options or configuration settings to deal with. TiddlyDesktop is by no means the best option for everyone, so once you've gotten comfortable with TiddlyWiki, if you decide it's a good fit for you and you want to keep using it, you can [[look into the other options|Options for Saving and Hosting Your Wiki]] -- especially if you want to use your wiki from multiple computers.
+
+(//Note:// If you have some experience with TiddlyWiki already and have another saver that you prefer, you want to do all your work with GTW on a mobile device, or you don't think TiddlyDesktop will work for you for whatever reason, feel free to use [[a different saver|Options for Saving and Hosting Your Wiki]] instead. The rest of this book will only occasionally talk about TiddlyDesktop, and the saver you are using is rarely relevant at all as long as it's successfully saving your changes.)
+
+!! Installation process
+
+To install TiddlyDesktop, hit the link above, scroll down to the first "Assets" section, and download the appropriate file for your operating system (if you have a reasonably new computer, it'll be `win64`, `mac64`, or `linux64`, depending on whether you use Windows, MacOS, or Linux).
+
+If you're not sure how to proceed from there and you're using Windows or MacOS, there's a brief video [[here|https://tiddlywiki.com/#TiddlyDesktop]] that goes through the steps for both operating systems. On Linux, you just need to unzip the file, go into the `tiddlydesktop-someversion` folder it contains, and run the `nw` executable.
+
+Once we have TiddlyDesktop installed, there's one more step: we need to create a new, blank wiki file to put in it. This is easy enough: click the //Create new wiki// button on the toolbar, pick "Empty TiddlyWiki file," and choose a location and filename. It's important that you end the filename with `.html`, or funny things will happen when you try to open it (this is a known bug). After saving the new wiki, click the //open// button in its entry in the list of wikis to start it up.
+
+!! Backups
+
+Before we proceed, just one more thing. You probably won't care much if you lose your sample wiki. But if you're keeping real thoughts and ideas and notes in TiddlyWiki, ''you //must// back up your wiki regularly''. This is not an optional good practice or something you can do later “when you get around to it.” If you accidentally delete a bunch of content in TiddlyWiki, your hard drive crashes, or your computer gets confused and saves your wiki incorrectly, and you don't have a backup, everything will be gone forever. That might not seem like that big a deal right now, but once you've been using TiddlyWiki for a while, losing your wiki is the digital equivalent of having your house burn to the ground. If you don't have a regular backup strategy for your computer, you can check out my [[blog post|https://controlaltbackspace.org/filesystem/starting-off-with-a-backup/]] about that. Compared to losing data, it is easy, fast, and cheap!
+
+If you want to get started learning TiddlyWiki before developing a backup strategy, that's fair enough -- but if you don't already have everything on your hard drive backed up on a regular schedule, go put it on your to-do list or your calendar right now to come up with a backup strategy. Then you can come back and continue with the book.
+
+When you have the `GettingStarted` page of your new TiddlyWiki looking back at you, proceed to the next section.

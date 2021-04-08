@@ -1,0 +1,156 @@
+created: 20201124235605503
+description: HTML is a simple formatting language used to describe web pages, including TiddlyWikis. We can go “down a level” from wikitext to HTML when we need a bit more control over presentation.
+modified: 20210402111221609
+parent: Filtering and Formatting
+tags: Section
+title: HTML
+type: text/vnd.tiddlywiki
+
+''HTML'' (which stands for //Hypertext Markup Language//, but nobody calls it that) is a markup language that underlies all web pages and a substantial number of desktop and mobile applications, including TiddlyWiki. Your web browser, or TiddlyDesktop if you're displaying your wiki in TiddlyDesktop, reads HTML code to determine what to display on the screen.
+
+If you're a web developer or otherwise intimately familiar with HTML already, you can skim this section, but it's still worth reading through it, as it will highlight some places where TiddlyWiki may differ slightly from the HTML standards you may usually work with (for instance, different versions of HTML treat self-closing and void tags differently).
+
+
+!! HTML and wikitext
+
+HTML is not a difficult language, but it is somewhat verbose, so in TiddlyWiki we usually write our tiddlers in the lighter-weight and more convenient [[wikitext|Wikitext]] syntax instead. TiddlyWiki then converts the wikitext to HTML for us prior to handing it to the browser to display. However, when building more complicated formatting or dynamic tiddlers, it's often necessary, or sometimes just easier, to go a layer down and work directly in HTML.
+
+We don't have to choose whether to use HTML or wikitext in a given tiddler. In fact, wikitext is almost a perfect superset of HTML -- that is, valid HTML is also valid wikitext. (If you're already familiar with HTML, there are a couple of exceptions; you can only use tags that are valid in the `<body>` section of an HTML document, and whitespace is meaningful in wikitext in a few ways that it isn't in HTML.)
+
+Let's suppose that we have a simple bulleted list written in wikitext:
+
+{{Sn:HtmlWikitextList||MagicSnippet}}
+
+Let's further suppose that for some reason, we don't like the wikitext syntax. Instead, we can write the same bulleted list in HTML:
+
+{{Sn:HtmlHtmlList||MagicSnippet}}
+
+As you can see, the output of the two snippets is identical.
+
+
+!! HTML tags
+
+`<ul>`, `<li>`, `</ul>`, and `</li>` are called ''tags''. There are many different tags, each of which marks a section of text or other HTML markup as having some specific function. For example, `ul` creates an ''unordered list'' (//unordered// meaning that it isn't numbered), while `li` describes each ''list item''. {{Ltc:TagsComeInPairs||LieToChildrenTemplate}}; the start of a section of formatting is marked with an ''opening tag'' (`<ul>`), and the end is marked with a ''closing tag'' (`</ul>`), distinguished from an opening tag by the use of a forward slash before the name of the tag.
+
+Be careful not to use a //backslash// for a closing tag -- it won't work, and it may screw up the formatting for the remainder of the tiddler. The backslash `\` slants the opposite way from the forward slash `/`. On a US keyboard, the forward slash is in the lower-right on the same key as the question mark; the backslash is on an extra-long key above the enter key. If you have trouble remembering which is which, imagine the two slashes forming a hill which you climb over in reading order from left to right: `/\`. After you go up the hill and you're going //back down// the hill, that's the //back//slash.
+
+The characters `<` and `>`, in the context of HTML tags, are usually called ''angle brackets'' (not “less than” and “greater than”).
+
+If you're reading HTML out loud, you can pronounce the tags “open” and “close” plus the contents of the tag. So `<li>` is “open ell eye” and `</li>` is “close ell eye”.
+
+
+!! Elements and content
+
+The part of an HTML document between an opening tag and its matching closing tag, including the tags themselves, is called an ''element''. So the first //`li` element// in the example above is `<li>Item 1</li>`.
+
+The ''content'' (sometimes called the ''body'') of an element is the part between its opening and closing tags, excluding the tags. So the content of the `<ul>` element in the example above is the two `<li>` elements, and the content of the first `<li>` element is the text `Item 1`.
+
+
+!! HTML attributes
+
+HTML elements can have one or more ''attributes''. An attribute is found inside the opening tag of its element and looks like this:
+
+{{Sn:HtmlOrangeList||MagicSnippet}}
+
+In this example, `style` is an attribute of the `ul` tag, and its ''value'' `color: orange;` gives some more details about how we want to format the list (namely, that the text should be orange).
+
+If we want more than one attribute, we simply put more of them inside the tag, separated from the other attributes by a space:
+
+```html
+<ul class="mylist" style="color: orange;">
+```
+
+You can leave out the quotes around the value if and only if it doesn't contain any spaces or special characters. So this is OK:
+
+```html
+<ul class=mylist>
+```
+
+But this is wrong:
+
+```html
+<ul style=color: orange;>
+```
+
+If in doubt, just put in the quotes. Some people consider it better style to include them in all circumstances anyway.
+
+
+!! Finer points
+
+<$details summary="Self-closing tags">
+
+If you don't want to put any content in an element, you can close it immediately. For example, the following creates a bullet point with no associated text:
+
+{{Sn:HtmlNonSelfClosing||MagicSnippet}}
+
+This is irritating to type when you work with HTML all day, though, so the folks who developed HTML added this shorthand notation:
+
+{{Sn:HtmlSelfClosing||MagicSnippet}}
+
+`<li />` is called a ''self-closing tag''. The space before the slash is optional; many people find it easier to read with the space.
+
+
+</$details><$details summary="Void elements">
+
+Earlier we said tags always come in pairs, but this isn't quite true. Certain elements have only an opening tag and no closing tag, because they cannot have any content. These are called ''void elements''. For example, the `<br>` element creates a line break (i.e., the text following the `<br>` tag starts on a new line). It wouldn't make any sense for a line break to have content, so you don't close that element. There is no such thing as a `</br>` tag.
+
+The void elements are as follows:
+
+```html
+<area>, <base>, <br>, <col>, <command>, <embed>, <hr>, <img>, <input>, <keygen>, <link>, <meta>, <param>, <source>, <track>, <wbr>
+```
+
+In practice, you don't need to carefully memorize which elements are void when using TiddlyWiki. If you accidentally use a self-closing tag for a void element, nothing bad will happen, and if you accidentally use a full closing tag for a void element, the tag will literally appear in the output (try it with `</br>`), at which point you can correct it and go on your merry way. However, it's helpful to be aware that such things as void elements exist so you know what's going on when a tag like `</br>` suddenly appears in your output.
+
+
+</$details><$details summary="Nested elements">
+
+Elements can be ''nested'' (placed inside each other) to an arbitrary depth. Not all elements make sense placed inside each other, but many of them do. For instance, to create a multi-level list, you simply place a `<ul>` element inside an `<li>` element:
+
+{{Sn:HtmlCorrectlyNestedList||MagicSnippet}}
+
+Tags need to be closed in the same order they were opened. For instance, if you accidentally write the following instead of the previous example, the part of the page after the list is likely to look weird:
+
+{{Sn:HtmlIncorrectlyNestedList||MagicSnippet}}
+
+(You might not see the issue right away -- if so, examine the snippet carefully until you find it. As you work more with HTML, your eyes will start to light on the mistakes much faster.)
+
+
+</$details><$details summary="Whitespace">
+
+In general, whitespace in HTML does not matter. Specifically, ''any number of spaces or newlines are treated exactly the same as one space''. You can even add extra spaces in some spots, like before the closing angle bracket at the end of a tag. So we could just as easily write:
+
+{{Sn:HtmlNoWhitespace||MagicSnippet}}
+
+Or:
+
+{{Sn:HtmlWackoWhitespace||MagicSnippet}}
+
+However, it is hopefully obvious that both of these “styles” are bad form, as they're much harder to read. The standard is to start a new line after each opening tag that encloses an element too large to fit comfortably on a single line, and optionally indent a consistent number of spaces (usually 2 or 4) when doing so. Otherwise, avoid extra whitespace. I've done this in the real examples so far in this section and will continue to do it for the rest of the book.
+
+Now, the statement that whitespace doesn't make a difference isn't //entirely// true in TiddlyWiki. Blank lines are significant in wikitext -- specifically, to start a new paragraph, you leave at least one blank line. For this reason, if you're mixing wikitext and HTML, there are some situations where the number of newlines you enter matters. We'll talk about this more in the next chapter, in [[Block Mode and Inline Mode]]. For now, if something isn't displaying the way you expect in a mixed-wikitext-and-HTML situation, try adding or removing blank lines around the thing that isn't displaying the way you expect.
+
+
+</$details>
+
+!! HTML is generous
+
+It's worth noting that unlike many other formatting or programming languages, browsers and other tools that read HTML will "be generous in what they accept" -- that is, they will ''try to guess what you meant'' even if your HTML isn't written correctly. Most of the time they do a very good job at this; for example, if you forget to close a tag, close tags in the wrong order, or forget a quotation mark somewhere, most of the page will almost certainly still be readable, and it may even appear as if nothing is wrong at all.
+
+However, occasionally this can be a source of frustration when the browser guesses wrong and the page doesn't look the way you expect it to, since it will not produce a detailed error message like other languages will. If your HTML output doesn't look right, go back and take a close look to make sure you didn't make any typos and each opening tag has a matching closing tag in the correct location.
+
+
+!! Resources
+
+In general, the hardest part of HTML is knowing what tags and attributes to use; we learned almost everything else there is to know about HTML above. We'll be introducing most of the tags you need to be familiar with over the remainder of this book. If you ever don't remember what tag to use, you can try Google-searching something like `HTML tags for bulleted list`, or W3Schools has a popular [[reference guide|https://www.w3schools.com/tags/default.asp]] listing all standard HTML tags.
+
+!! Exercises
+
+{{Ex:ViewSource||ExerciseTemplate}}
+{{Ex:GoogleLink||ExerciseTemplate}}
+{{Ex:ImageHtml||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

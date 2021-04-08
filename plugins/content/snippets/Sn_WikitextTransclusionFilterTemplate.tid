@@ -1,0 +1,7 @@
+created: 20210131145658933
+modified: 20210131145600686
+tags: 
+title: Sn:WikitextTransclusionFilterTemplate
+type: text/vnd.tiddlywiki
+
+{{{ [tag[Exercise]first[]] || Sn:BoldfaceTemplate }}}

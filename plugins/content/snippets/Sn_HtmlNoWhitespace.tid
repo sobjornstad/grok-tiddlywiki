@@ -1,0 +1,7 @@
+created: 20210116193722640
+modified: 20210116193632773
+tags: 
+title: Sn:HtmlNoWhitespace
+type: text/vnd.tiddlywiki
+
+<ul><li>Item 1<ul><li>Subitem 1</li><li>Subitem 2</li></ul></li></ul>

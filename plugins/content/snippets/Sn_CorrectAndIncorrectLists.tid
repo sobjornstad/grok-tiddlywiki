@@ -1,0 +1,19 @@
+created: 20210116184450150
+modified: 20210116190643884
+tags: 
+title: Sn:CorrectAndIncorrectLists
+type: text/vnd.tiddlywiki
+
+A correct list:
+
+* Item 1
+* Item 2
+* Item 3
+
+Text after the correct list.
+
+An incorrect list:
+* Item 1
+* Item 2
+* Item 3
+Text after the incorrect list.

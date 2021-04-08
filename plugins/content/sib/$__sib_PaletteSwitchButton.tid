@@ -1,0 +1,33 @@
+created: 20210322234549335
+list-before: $:/core/ui/Buttons/save-wiki
+modified: 20210322235453069
+tags: $:/tags/PageControls
+title: $:/sib/PaletteSwitchButton
+type: text/vnd.tiddlywiki
+
+\define darken-palette() <$action-setfield $tiddler="$:/palette" $value="$:/palettes/Twilight"/>
+\define lighten-palette() <$action-setfield $tiddler="$:/palette" $value="$:/palettes/SpartanDay"/>
+
+\define darken-button()
+<$button actions=<<darken-palette>> class=<<tv-config-toolbar-class>> selectedClass="tc-selected" tooltip="Switch to dark mode">
+		<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+			 {{$:/core/images/palette}}
+		</$list>
+		<$list filter="[<tv-config-toolbar-text>match[yes]]">
+			<span class="tc-btn-text"><$text text="Dark mode"/></span>
+		</$list>
+	</$button>
+\end
+
+\define lighten-button()
+<$button actions=<<lighten-palette>> class=<<tv-config-toolbar-class>> selectedClass="tc-selected" tooltip="Switch to light mode">
+		<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+			 {{$:/core/images/palette}}
+		</$list>
+		<$list filter="[<tv-config-toolbar-text>match[yes]]">
+			<span class="tc-btn-text"><$text text="Light mode"/></span>
+		</$list>
+	</$button>
+\end
+
+<$list filter="[[$:/palette]text[$:/palettes/SpartanDay]]" emptyMessage=<<lighten-button>>><<darken-button>></$list>

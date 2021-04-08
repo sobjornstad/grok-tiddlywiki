@@ -1,0 +1,18 @@
+created: 20200718012242269
+length: s
+modified: 20210130174454312
+origin: Data Tiddlers
+tags: Exercise
+title: Ex:JsonHoliday
+type: text/vnd.tiddlywiki
+
+Create another data tiddler called `UsHolidaysJson` using the same data in a JSON format, and change your `TodaysHoliday` tiddler to look the holiday up in there instead. Everything should continue to work the same way on the transclusion side. The table looks like this in JSON:
+
+```json
+{
+  "01/01": "New Year's Day",
+  "07/04": "Independence Day",
+  "10/31": "Halloween",
+  "12/25": "Christmas Day"
+}
+```

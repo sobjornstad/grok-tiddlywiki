@@ -1,0 +1,10 @@
+caption: Easy multiplier
+created: 20201229235756173
+description: Extra multiplier for the interval of a takeaway when choosing //Easy//, in addition to the ease; e.g., 2.0 will make the interval twice as long as it would be if you had chosen //Good//.
+modified: 20210407150812698
+stackorder: 50
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/EasyMultiplier
+type: text/vnd.tiddlywiki
+
+1.3

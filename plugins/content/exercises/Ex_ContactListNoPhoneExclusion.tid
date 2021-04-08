@@ -1,0 +1,10 @@
+complete: 
+created: 20200603192656839
+length: m
+modified: 20210130174339217
+origin: Your First Dynamic List
+tags: Exercise
+title: Ex:ContactListNoPhoneExclusion
+type: text/vnd.tiddlywiki
+
+Modify the `ContactList` so that contacts with no phone number are excluded.

@@ -1,0 +1,23 @@
+created: 20210208023126941
+modified: 20210208023026763
+tags: Answer
+title: Ex:ContactRadioButtonQualification/answer
+type: text/vnd.tiddlywiki
+
+The version presented in the exercise, upgraded, looks like this:
+
+```html
+View phone number for family member: <$list filter={{!!family}}><$radio tiddler=<<qualify "$:/temp/FamilyContact">> value=<<currentTiddler>>>&nbsp;<<currentTiddler>></$radio>&ensp;</$list>
+
+<$set name="stateTiddlerName" value=<<qualify "$:/temp/FamilyContact">>>
+	<$transclude tiddler={{{ [<stateTiddlerName>get[text]] }}} field="phone"/>
+</$set>
+```
+
+Note that some gymnastics are required with the `$set` widget and the filtered transclusion passed to the `$transclude` widget. You might have been tempted to try simply:
+
+```html
+<$transclude tiddler=<<qualify "$:/temp/FamilyContact">> field="phone"/>
+```
+
+...but this does not work, for the same reason we had to use a `{{transcluded tiddler name}}` as the value of the `tiddler` attribute rather than a `"quoted tiddler name"` -- we want to transclude the tiddler //named within// the target of the `qualify` macro, not the tiddler that is the target of the qualify macro.

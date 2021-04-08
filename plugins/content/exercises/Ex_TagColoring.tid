@@ -1,0 +1,9 @@
+created: 20200608014124293
+length: s
+modified: 20210130174636052
+origin: Classifying Tags
+tags: Exercise
+title: Ex:TagColoring
+type: text/vnd.tiddlywiki
+
+Set the tags corresponding to tiddler types (`Contact`, `Journal`, `Meeting`, and `Project`) to solid red (`#ff0000`) and give them a tag icon (`$:/core/images/tag-button`).

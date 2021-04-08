@@ -1,0 +1,10 @@
+created: 20210131144220852
+modified: 20210131144250305
+tags: 
+title: Sn:WikitextTableAlignment
+type: text/vnd.tiddlywiki
+
+|!Number| !A|!B|!C |
+| 1|A1|B1|C1|
+| 2 |A2|B2|C2|
+|3 |A3|B3|C3|

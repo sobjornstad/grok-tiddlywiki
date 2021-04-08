@@ -1,0 +1,9 @@
+answer: `<$edit-text tag="input" tiddler=<<describedTiddler>> field="description"/>`
+created: 20210107233530534
+modified: 20210212135914066
+origin: Buttons and Input Widgets
+qtype: rememberq
+question: Write wikitext to display a single-line textbox which is bound to the `description` field of the tiddler whose name is stored in the `describedTiddler` variable.
+tags: Takeaway
+title: Ta:20210107233516001
+type: text/vnd.tiddlywiki

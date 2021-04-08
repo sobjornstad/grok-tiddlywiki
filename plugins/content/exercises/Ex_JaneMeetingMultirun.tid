@@ -1,0 +1,10 @@
+complete: 
+created: 20200715230504176
+length: s
+modified: 20210130174447066
+origin: Multi-Run Filters
+tags: Exercise
+title: Ex:JaneMeetingMultirun
+type: text/vnd.tiddlywiki
+
+Write a filter to find all meetings that are part of the `OnboardingHr` project or the `TopSecretHr` project and were attended by Jane.

@@ -1,0 +1,94 @@
+created: 20201230012621143
+modified: 20210407151107228
+tags: $:/tags/Macro
+title: $:/plugins/sobjornstad/TakeAway/SchedulerMacros
+type: text/vnd.tiddlywiki
+
+\define doReview(newIvl, newEase, newDueDate)
+	<$action-setfield
+		ivl=<<__newIvl__>>
+		ease=<<__newEase__>>
+		due={{{ [<__newDueDate__>trim[]] }}}/>
+	<<backToQuestionAction>>
+\end
+
+\define getNextDueDate() <$macrocall $name=daysFromDatestamp datestamp=<<now YYYY0MM0DD>> offset=<<nextInterval>>/>
+
+\define daysFromToday(days) <$macrocall $name=daysFromDatestamp datestamp=<<now YYYY0MM0DD>> offset=<<__days__>>/>
+
+\define reviewAction(ivlExpr, easeExpr)
+	<$vars
+		nextInterval=$ivlExpr$
+		nextEase=$easeExpr$>
+	<$wikify name=nextDueDate text="<<getNextDueDate>>" mode="inline">
+		<$macrocall $name=doReview
+			newIvl=<<nextInterval>>
+			newEase=<<nextEase>>
+			newDueDate=<<nextDueDate>> />
+	</$wikify>
+	</$vars>
+\end
+
+\define showTodayAction()
+	<<reviewAction
+	  ivlExpr:0
+		easeExpr:"{{!!ease}}">>
+\end
+
+\define againAction()
+	<!-- add a lapse only if we remembered it for longer than a day;
+	     ==> multiple consecutive failures is only one lapse,
+			 and failures before ever learning a card are not lapses -->
+	<$list filter="[{!!ivl}!match[1]]" variable=_>
+		<$action-setfield lapses={{{ [{!!lapses}add[1]] }}}/>
+	</$list>
+	<<reviewAction
+	  ivlExpr:1
+		easeExpr:"{{{ [{!!ease}subtract{$:/config/sobjornstad/TakeAway/Scheduler/AgainEasePenalty}max[130]] }}}">>
+\end
+
+\define hardAction()
+	<<reviewAction
+	  ivlExpr:"{{{ [{!!ivl}multiply{$:/config/sobjornstad/TakeAway/Scheduler/HardMultiplier}ceil[]] }}}"
+		easeExpr:"{{{ [{!!ease}subtract{$:/config/sobjornstad/TakeAway/Scheduler/HardEasePenalty}max[130]] }}}">>
+\end
+
+\define goodAction()
+	<<reviewAction
+	  ivlExpr:"{{{ [{!!ivl}multiply{!!ease}divide[100]ceil[]] }}}"
+		easeExpr:"{{!!ease}}">>
+\end
+
+\define easyAction()
+	<<reviewAction
+	  ivlExpr:"{{{ [{!!ivl}multiply{!!ease}multiply{$:/config/sobjornstad/TakeAway/Scheduler/EasyMultiplier}divide[100]ceil[]] }}}"
+		easeExpr:"{{{ [{!!ease}add{$:/config/sobjornstad/TakeAway/Scheduler/EasyEaseBonus}] }}}">>
+\end
+
+\define initialRememberedAction()
+	<<reviewAction
+	  ivlExpr:"{{$:/config/sobjornstad/TakeAway/Scheduler/InitialRememberedInterval}}"
+		easeExpr:"{{!!ease}}">>
+\end
+
+\define backToQuestionAction()
+	<$action-setfield
+	  $tiddler="$:/temp/TakeAwayReviewerAnswerState"
+		text="question"/>
+\end
+
+\define forwardToAnswerAction()
+	<$action-setfield
+	  $tiddler="$:/temp/TakeAwayReviewerAnswerState"
+		text="answer"/>
+\end
+
+\define startReviewSessionAction()
+	<$action-setfield $tiddler="$:/temp/TakeAwayReviewerAnswerState" text=""/>
+	<$action-setfield $tiddler="$:/config/sobjornstad/TakeAway/ReviewerSeed" $value=<<now "0hh:0mm:0ss">>/>
+	<$action-navigate $to="TakeAway Reviewer"/>
+\end
+
+\define hideLeechWarningAction()
+	<$action-setfield leechignores={{{ [all[current]get[leechignores]add[1]] ~[[1]] }}}/>
+\end

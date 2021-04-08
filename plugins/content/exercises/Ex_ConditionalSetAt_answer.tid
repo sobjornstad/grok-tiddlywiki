@@ -1,0 +1,16 @@
+created: 20210207215734574
+modified: 20210207215634063
+tags: Answer
+title: Ex:ConditionalSetAt/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$set name="meetingTime" filter="[all[current]has[at]]" value={{!!at}} emptyValue="(no time specified)">
+
+| !Time|<<meetingTime>>|
+| !Participants|{{!!participants}}|
+
+</$set>
+```
+
+(Note the need for an empty line after `$set` to make the table start in [[block mode|Block Mode and Inline Mode]].)

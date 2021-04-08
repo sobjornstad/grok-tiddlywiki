@@ -1,0 +1,15 @@
+created: 20200716023335690
+modified: 20200718013941413
+tags: Answer
+title: Ex:RedATags/answer
+type: text/vnd.tiddlywiki
+
+```
+[is[tiddler]]
+-[tags[]prefix[A]color[#ff0000]tagging[]backlinks[]]
++[!sort[]]
+```
+
+If you want, you can get away with doing the sort //before// doing the second filter run, as part of the `[is[tiddler]]` run; since the second run only removes items, it won't disturb the order. The pattern shown above is more generally useful, though, since it works even after other ORs and ANDs.
+
+Note that, for reasons described in [[Ex:RedTagsFilter/answer]], the `tags[]` step is not actually necessary. However, writing it this way is clearer, and it may make the filter run faster in a large wiki, since it will reduce the number of tiddlers that need to be run through the next three filter steps.

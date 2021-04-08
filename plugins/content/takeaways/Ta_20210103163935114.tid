@@ -1,0 +1,9 @@
+answer: If you don't want to edit the tiddler containing the list, perhaps because it is a shadow tiddler or belongs to someone else.
+created: 20210103163936808
+modified: 20210302163311379
+origin: Ordering Tiddlers
+qtype: rememberq
+question: What is the primary reason you would want to use `list-before` and `list-after` rather than directly editing the `list` field of a tiddler?
+tags: Takeaway
+title: Ta:20210103163935114
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: Transclude the image tiddler, like `{{image.png}}`.
+created: 20210103174824402
+modified: 20210223170323820
+origin: Images and Attachments
+qtype: rememberq
+question: How can you quickly display an image that is part of your wiki within another tiddler if you don't need to adjust its size or other parameters?
+tags: Takeaway
+title: Ta:20210103174822368
+type: text/vnd.tiddlywiki

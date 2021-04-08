@@ -1,0 +1,67 @@
+created: 20200603023508492
+description: TiddlyWiki can produce hierarchical tables of contents from tag structures.
+modified: 20210327170332835
+parent: Filing and Organizing
+tags: Section
+title: Creating Hierarchies with a Table of Contents
+type: text/vnd.tiddlywiki
+
+Being able to browse by tags and links is nice. For many use cases that's enough, and indeed it's often better not to tie ourselves into trying to organize all of our notes into a single hierarchy. Sometimes, though, we have a cluster of notes about a particular topic that naturally forms into a ''hierarchy'' -- for example, an individual project -- and being able to view that hierarchy in a table of contents is a valuable way to see an overview of the topic. And certain applications of TiddlyWiki, such as writing a book, really do benefit from a hierarchy covering the entire contents of the wiki.
+
+Important disclaimer: you can only use the built-in table-of-contents functionality with a hierarchy built out of tags, not one built out of fields or links. Fortunately, that's how we chose to do it in our example wiki. The TiddlyWiki Locator [[plugin|Plugins]] is useful if you need more powerful tools, including navigating hierarchies built of fields or links.
+
+
+!! Creating structure tiddlers
+
+First, let's create some basic structure under our onboarding project. Let's say the project is broadly divided into three parts. We'll need to create a tiddler for each of them to define the hierarchy:
+
+* HR stuff about the company and government-mandated training -- `OnboardingHr`
+* Introductions and social events/notes -- `OnboardingPeople`
+* Training for the position -- `OnboardingTraining`
+
+Go ahead and create those three tiddlers and tag them `OnboardingProcess`, thus marking them as direct members of the idea `OnboardingProcess`. Rather than create new tiddlers and tag them manually, here's a handy timesaver: click the more drop-down <<textual-button "down-arrow">> on the `OnboardingProcess` tiddler and choose <<textual-button "new-here-button">> //New here//. A new tiddler will open, already tagged `OnboardingProcess`.
+
+There's no need to put any content in the tiddlers for the time being. If we later find we need to give an overview of that part of the onboarding process, or we have information about it that doesn't seem to deserve its own tiddler, we can add it at that time.
+
+!! Creating the table of contents
+
+The most basic table of contents is created with `<<toc "Root">>`, where `Root` is the name of the tiddler you want the table of contents to start at. In our case, this will be:
+
+```html
+<<toc "OnboardingProcess">>
+```
+
+The funny double angle brackets `<<>>` introduce a reference to a variable or a macro call. You don't need to worry about what that is for now; we'll learn a whole lot more about it in [[Chapter 4|Variables, Macros, and Transclusions]].
+
+Go ahead and edit the `OnboardingProcess` tiddler and drop that in. You'll see that a numbered list of the items tagged `OnboardingProcess` shows up. But oops, the `EmployeeProfileSetupMeeting` probably doesn't belong at the top level now that we've added our three subparts of the onboarding project. It makes more sense to have it in `OnboardingHr`, agreed? Let's open it up, remove the `OnboardingProcess` tag, and add the `OnboardingHr` tag. If we save it and go back up to `OnboardingProcess` now, we'll see that now it's indented into a second level.
+
+This is great, but what happens if we have a project tiddler that has dozens of tiddlers in it? This list is going to get long really fast! Try changing the code to this:
+
+```html
+<<toc-expandable "OnboardingProcess">>
+```
+
+You'll see that only the topmost level of the hierarchy is displayed now, and little chevrons <<textual-button "right-arrow">> appear next to the items. If you click the chevron by `OnboardingHr`, it turns to point down <<textual-button "down-arrow">> and the next level shows up.
+
+But wait...why are there chevrons next to `OnboardingPeople` and `OnboardingTraining`? Those don't have any content yet! If you click on one of them, you'll see that the chevron changes direction but nothing else happens. That's irritating, isn't it?
+
+All right, third time's the charm:
+
+```html
+<<toc-selective-expandable "OnboardingProcess">>
+```
+
+Ah, that's better! (If only it were so easy to solve annoying behavior in all of tech.) Now the chevrons only show up by the elements that can actually be expanded.
+
+
+!! Exercises
+
+{{Ex:TocAddition||ExerciseTemplate}}
+{{Ex:TocInternalExternalNav||ExerciseTemplate}}
+{{Ex:TocCaptions||ExerciseTemplate}}
+{{Ex:FudgeAdviceTiddler||ExerciseTemplate}}
+{{Ex:FudgeAdviceReflection||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

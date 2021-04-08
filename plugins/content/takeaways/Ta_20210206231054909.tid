@@ -1,0 +1,9 @@
+answer: As the values of transclusions (that is, `<$vars <<name>>="value">` is invalid).
+created: 20210206231058460
+modified: 20210315201017003
+origin: Miscellaneous Widgets
+qtype: rememberq
+question: Unlike with the `$set` widget, variables set by the `$vars` widget cannot have names specified how?
+tags: Takeaway
+title: Ta:20210206231054909
+type: text/vnd.tiddlywiki

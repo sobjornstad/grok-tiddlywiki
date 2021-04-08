@@ -1,0 +1,69 @@
+created: 20200822201508518
+description: External tools can access the data in your TiddlyWiki by reading files and calling a Node.js CLI.
+modified: 20210327171132790
+parent: Getting Technical
+prerequisite: A basic background in shell scripting or some other scripting language like Python
+tags: Section
+title: Writing Shell Scripts Against a TiddlyWiki
+type: text/vnd.tiddlywiki
+
+(''Prerequisite'' for this section: {{!!prerequisite}}.)
+
+If you're a [[Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy]] person and believe that programs should do one thing well and integrate well with other programs, you might be wondering whether your data is all going to be trapped in TiddlyWiki. Good news: if you install the Node.js backend on your computer and host your wiki there, you can easily integrate with other programs in whatever way you please. (It's also possible to quickly convert a single-file wiki to a Node.js folder wiki, so if you prefer to use a single file but sometimes need to get at the contents programmatically, you can extract a new folder wiki from the file to a temporary directory and then operate on that.)
+
+
+!! File structure
+
+The Node.js backend stores text tiddlers in individual files, which are easy for a script or other application to read. The format is much like email: first the fields of the tiddler are listed with the name separated from the value by a colon and a space, and then after one blank line comes the contents of the `text` field.
+
+Binary files, such as images, are instead included directly, and the fields are stored in a separate text file with a `.meta` extension. So if your tiddler is called `image.png`, its fields will be stored in `image.png.meta`.
+
+For the most part, the names of tiddlers are used as their filenames, with a `.tid` extension added. However, a few characters are changed so as to avoid those that are invalid in filenames on some operating systems. It's also possible to add additional transformations as TiddlyWiki filters, for instance to put tiddlers with particular tags in a different folder. The details can be found in the [[Customizing Tiddler File Naming|https://tiddlywiki.com/#Customising Tiddler File Naming]] tiddler in the TW documentation.
+
+
+!! The TiddlyWiki CLI
+
+When simply looking at the files is not enough, the ''`tiddlywiki` command'', installed with the npm package, lets you perform most any operation you need, such as rendering tiddlers to HTML or plain text, or selecting tiddlers that match a filter and writing them into a new wiki.
+
+The TiddlyWiki CLI has a rather unconventional and puzzling syntax that often confuses new users. Most CLIs would use positional parameters with the first parameter being the operation to perform:
+
+```bash
+tiddlywiki render FILTER
+```
+
+Or perhaps a positional parameter for the operations and double-dashed options for the details:
+
+```bash
+tiddlywiki render --filter=FILTER
+```
+
+Instead, TiddlyWiki uses double-dashed options for the actual //operations//, and positional arguments for the details on each operation:
+
+```bash
+tiddlywiki --render FILTER
+```
+
+You can, and often must, chain these together. So to set the source wiki and then save the wiki folder, you would do:
+
+```bash
+tiddlywiki --load SOURCE_WIKI --render FILTER
+```
+
+This is important because the CLI is stateless. From the help message, you might expect this to work:
+
+```bash
+tiddlywiki --load SOURCE_WIKI
+tiddlywiki --render FILTER
+```
+
+But it doesn't -- the first command sets the wiki to load but doesn't persist that setting, then exits, so it amounts to a no-op. The second command will continue to use the default (looking for a wiki in the current folder).
+
+
+!! Editing wiki files
+
+If you're going to edit wiki files on disk, rather than just reading them, be aware that you will need to ''restart the server to pick up the changes'', as it assumes it is the exclusive user of the folder while it's running and does not watch files on disk. The plugin [[Bob|https://github.com/OokTech/TW5-Bob]] adds listening functionality along with some other helpful features and is worth a look if you plan to do this more than occasionally,
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

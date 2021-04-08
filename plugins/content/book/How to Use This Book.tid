@@ -1,0 +1,135 @@
+created: 20200605170324446
+description: How the book plans to do it, if you cooperate.
+modified: 20210407150353990
+parent: Front Matter
+tags: Section
+title: How to Use This Book
+type: text/vnd.tiddlywiki
+
+//Grok TiddlyWiki// is a TiddlyWiki itself and incorporates a few interface features and learning tools that may be new to you. The system is hopefully intuitive enough that you can figure most of it out on your own, but if you prefer to read about it first, or if you get confused by something, check out the notes below.
+
+
+!! Reading and navigating
+
+<$details summary="Typographical conventions">
+
+* [[Internal links|How to Use This Book]] take you to another section in the book. [[External links|https://google.com]] take you to a website outside of //Grok TiddlyWiki// (external links open in a new browser tab).
+* ''Bold type'' is used to call out important terms and points that you may wish to skim the text for.
+* //Italics// identify things you select on the screen and terms that may be unfamiliar but are not particularly important.
+* `Monospaced text` indicates something you type into TiddlyWiki (most often [[wikitext|Wikitext]]).
+* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the assertion being made is not strictly accurate. Normally, this is done because the details are more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the full truth.
+
+</$details><$details summary="Structure and navigation">
+
+* The book is organized into ''chapters'' and ''sections''.
+* You can find a ''hierarchical overview with summaries of each section'' in the [[Outline]], which you can access at any time by clicking //outline// in the sidebar underneath the //Grok TiddlyWiki// title (the sidebar is found at the top of the page if your monitor is too narrow to fit the content and the sidebar side-by-side).
+* When you click on an internal link, you will navigate to the new section, but the section you were previously in stays open. The ''Open'' tab of the sidebar will let you see all the sections you have open and flip between them, much like tabs in your web browser. You can drag and drop the open sections to reorder them.
+* The ''Bookmarks'' tab of the sidebar contains any sections you have bookmarked. Bookmark or unbookmark any section by clicking the bookmark button <<textual-button "star-filled">> at the top of the section. As with the //Open// tab, you can drag and drop bookmarks to reorder them.
+* The ''Contents'' tab of the sidebar contains an abbreviated version of the outline, if you already know what you're looking for.
+* From the footer of each section, you can ''navigate forwards, backwards, or up a level''. You can also find a list of ''related material'' in the footer; click //show related topics//.
+* When you open //Grok TiddlyWiki//, any sections that you had open when you stopped reading will reopen, provided that you [[saved your changes|Downloading Grok TiddlyWiki]].
+
+</$details><$details summary="Tools">
+
+Underneath the title and the navigation links (home, outline, exercises, takeaways, donate), you'll see several more buttons. Here's what they do:
+
+* <<textual-button "close-all-button">> -- ''Close all sections'' you have open.
+* <<textual-button "permaview-button">> -- ''copy a //permaview//'', or a link that freezes all your open sections, to your clipboard. If you later click on or paste this link into your browser, you'll be brought back exactly where you were at the time you clicked this button.
+* <<textual-button "storyview-zoomin">> -- ''change the //story view//''. If you are familiar with TiddlyWiki and would like the [[story river|The TiddlyWiki Interface]] to display more than one section at once, you can switch to the //classic// storyview. The default in //Grok TiddlyWiki// is //zoomin//.
+* <<textual-button "palette">> -- toggle between ''light and dark mode''.
+* <<textual-button "save-button">> -- ''save a copy'' of the wiki to your hard drive. Learn more in [[Downloading Grok TiddlyWiki]].
+* <<textual-button "down-arrow">> -- ''see the rest'' of TiddlyWiki's options.
+
+</$details>
+
+
+!! The Trinity of //Grok TiddlyWiki//
+
+//Book// is a somewhat misleading way to describe //Grok TiddlyWiki//. GTW is really an interactive learning environment for TiddlyWiki that bundles three complementary modes of learning into one TiddlyWiki:
+
+* It ''explains concepts'' using English text and code examples.
+* It ''assigns exercises'' that help you apply and practice what you've learned.
+* It ''presents takeaways'', questions about key terms, concepts, or skills, for review as you continue through the book, to help you retain what you've learned over a longer period of time.
+
+Click on each mode below for a description of what it entails.
+
+<$details summary="Explanations">
+
+//Grok TiddlyWiki// is organized into chapters and sections. Each chapter covers a broad range of related topics, while each section covers one feature of TiddlyWiki, pattern of TiddlyWiki use, or organizational principle. Many sections will take as little as five minutes to read, but others ask you to follow along and do things in TiddlyWiki as you read, and still others are about unfamiliar concepts and may need several readings, so these will take longer. In most cases, the text is followed by exercises and/or takeaways (see below).
+
+Despite TiddlyWiki's emphasis on enabling nonlinear thinking, a linear mode of presentation is better for building understanding where it doesn't already exist, so this book is ''designed to be worked through from start to finish''; the sections build on each other, and it may be hard to do some of the later exercises without having done the previous ones. Even if you already know the basics of TiddlyWiki, starting from [[chapter 1|The Shape of TiddlyWiki]] shouldn't be a huge sacrifice. The first parts will go fast if you already know them well, but you may pick up some useful terms, concepts, and features that you haven't run across yet.
+
+Although I have made some concessions in the interest of placing related material together, the chapters generally go in increasing order of complexity and decreasing order of utility, so you can stop for a while whenever you feel you've learned what you need to know for the time being. If you do need to skip ahead, or you come back to the book later to use it as a reference, I try to link back to previous material required to understand each section, when practical. In addition to appearing throughout the text, all of the links found in a section are aggregated under the //show related topics// link in the footer.
+
+
+</$details><$details summary="Exercises">
+
+The only way to fully understand what you learn about software is by using it, and if you don't understand what you've learned, you won't remember it either. Thus, for this book to be useful, you'll need to do some ''hands-on exercises''. In some sections of the book, particularly the earlier ones where you don't have much experience of TiddlyWiki yet, you'll be asked to open up your wiki and follow along with the text to see what happens; in others, a concept will first be fully explained, then at the end of the section you'll be asked to use what you've learned to make some changes to your wiki or fix some problems.
+
+You should plan to do ''most or all of the exercises'' to cement your understanding. The exercises are not fun, optional diversions! Aside from the importance of hands-on exercises in developing understanding, some of the exercises guide you into discovering something important about TiddlyWiki on your own, then add additional context and explanation in the answer to the exercise. These insights may or may not be discussed again later in the book, so you'll likely miss some important points if you skip all the exercises.
+
+Exercises have a letter next to them to indicate about how long I'm guessing they'll take you:
+
+* (s), for //seconds// -- from a few seconds to 2 minutes (<$text text={{{ [tag[Exercise]field:length[s]!field:origin[Supplemental Exercises]count[]] }}}/> total)
+* (m), for //minutes// -- from 2 minutes to 15 minutes (<$text text={{{ [tag[Exercise]field:length[m]!field:origin[Supplemental Exercises]count[]] }}}/> total)
+* (M), for //minutes//, but bigger -- from 15 minutes to 40 minutes (<$text text={{{ [tag[Exercise]field:length[M]!field:origin[Supplemental Exercises]count[]] }}}/> total)
+* (h), for //hours// -- 40 minutes or more, up to a couple of hours (only supplemental exercises are this long)
+
+Of course, these estimates are not guarantees -- depending on your past experience with tools similar to TiddlyWiki, you might take longer or shorter than average for most exercises, and like when solving a math problem, you might happen to work something difficult out on the first try, or struggle with something for 20 minutes that would have been instantly obvious to you on a different day.
+
+If there are both exercises and takeaways in a given section, you should usually ''do the exercises before proceeding to the takeaways'', as some of the takeaways may check knowledge you won't have until you complete the exercises. (We'll talk about takeaways in a moment.) The headings are always presented in this order, so as long as you don't try to skip ahead, you'll be fine.
+
+Some exercises, and some parts of the text, include ''code snippets'' that you are supposed to copy into your own wiki. If you're completely new to TiddlyWiki, I recommend //retyping// these snippets rather than using the copy-paste functionality on your computer. This isn't a hard requirement, but you will get the hang of the [[syntax of the snippets|Wikitext]] faster if you do.
+
+When you're done with an exercise, you can tick the //Complete// box in the upper-right. This will change its color to make it easy to see what you've completed, as well as mark it off your list in the [[Exercise Browser]], where you can search through all exercises in the book and see a list of the ones you haven't yet completed. (Click //exercises// under the //Grok TiddlyWiki// title to go here at any time.)
+
+A number of longer exercises are provided in the [[Supplemental Exercises]] chapter at the end of the book, if you get through most or all of the book and want to try some more guided exercises rather than jumping into implementing your own wikis immediately. You are not expected to do these unless you want to, and they are not included in the exercise counts above.
+
+Here's an exercise to try:
+
+{{Ex:SampleExercise||ExerciseTemplate}}
+
+</$details><$details summary="Takeaways">
+
+Why are tools like TiddlyWiki often intimidating to newcomers and difficult to learn? One of the biggest reasons is that they present a ''vast array of new terms and concepts''. If you jump into the documentation with no experience, it may well look like complete gibberish. Even when it's partly comprehensible, you'll be spending your mental energy trying to remember the basics, rather than understanding the new ideas presented by what you're reading.
+
+However, these terms and concepts rarely challenge learners in themselves. Each concept is easy enough to understand at the beginning, at least when the concepts are introduced in an appropriate order and explained in detail, as happens in any decent textbook. When a large number of them appear over a short period of time, though, each concept is quickly forgotten, creating a treadmill of forgetting where learners must keep running just to relearn what they've already ostensibly learned, never mind picking up the new material.
+
+This suggests a way to make learning much easier: all we need to do is ''stop that process of forgetting''. That might sound like a silly claim -- anything sounds easy when you leave out the most important part -- but it turns out there's a straightforward, scientifically backed study method called //spaced repetition// that can virtually eliminate forgetting for any ideas you choose. A spaced-repetition algorithm produces 95% recall for as long as you want; all you have to do is regularly spend a small amount of time reviewing the items the algorithm presents to you. Yet although spaced repetition is extremely powerful, taking advantage of it is often a complex skill in itself and a big time sink when learning a new topic: since most books and learning resources don't use it, learners must understand how to extract the knowledge from the text into spaced-repetition prompts and spend extra time doing so.
+
+Enter [[TakeAway|TakeAway Help]], a native TiddlyWiki [[mnemonic medium|https://numinous.productions/ttft/#introducing-mnemonic-medium]] which is making its debut in this book. In a TakeAway-enabled book, most sections end with a heading called //Takeaways//. Instead of you having to identify and rephrase all the important concepts, the author does it for you, extracting the ideas presented in the section into a form that can be efficiently reviewed. (If the author passes over ideas you'd like to remember or phrases them in a way you don't appreciate, you can also edit the author's takeaways or add your own.)
+
+Takeaways are prompts in one of two formats:
+
+* A ''question-and-answer pair'' (e.g., //What letter does the word “tiddler” start with?// / “t”).
+* A ''cloze deletion'', or fill-in-the-blank prompt (e.g., //The word “tiddler” starts with the letter {...}.//).
+
+Takeaways serve two purposes. First, they allow you to immediately ''check your understanding'' of the concepts to be sure you're reading actively; we've all had the experience of reading a section and then discovering we have no idea what it said. Just think about the answer to each takeaway and click //show answer// to confirm you got it right.
+
+Second, TakeAway will help you ''build long-term understanding'' and prevent you from backsliding by suggesting you periodically review the takeaways you've previously encountered; a banner notification will appear in the book when it's time to review. TakeAway tracks how well you remember each takeaway and uses that information to decide when to show it again. All you have to do is open the text periodically and review the takeaways, and you'll remember the concepts. (For maximum retention and the easiest study sessions, it's best to review as close to daily as possible, but if you miss some days here and there, things will still work fine.)
+
+Takeaways mean that it's safe to take a break from working through the text for a while, and you will forget very little of the knowledge you've gained so far -- provided that you continue to open the text and review the takeaways every day or two, which should only take you a few minutes at most. Even if you don't review for a while, you'll be able to pick up what you've forgotten faster by reviewing the takeaways.
+
+If you're already familiar with spaced repetition and prefer using [[Anki|https://apps.ankiweb.net]] to review, an Anki add-on that imports takeaways from the book is also available; see [[the appropriate section of the TakeAway help|TakeAway Help/Studying with Anki]] for how to set that up.
+
+Here's a takeaway to try:
+
+<div class="mm-takeaway-example">
+	{{Tr:20210117001839027||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+</div>
+
+</$details>
+
+
+!! Live examples
+
+{{Live Examples}}
+
+{{Sn:JaneDoeJournalStart||MagicSnippet}}
+
+
+!! Sending feedback
+
+While //Grok TiddlyWiki// is a complete and full-quality learning resource, it can always be improved, and I hope to publish new versions regularly. If something doesn't make sense to you, doesn't display correctly on your device, or you have any other questions or suggestions, use the //send feedback// <<textual-button "mail">> link at the bottom of any section or when reviewing any takeaway to email the author with an automatic reference to the section or takeaway. If you  provide your email address, I will do my best to get back to you.
+
+Alternatively, you can use the information on my [[contact page|https://sorenbjornstad.com/contact/]] to get in touch directly.

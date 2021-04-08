@@ -1,0 +1,74 @@
+created: 20210209032151416
+modified: 20210407173550709
+tags: Meta
+title: Meta:Review Instructions
+type: text/vnd.tiddlywiki
+
+Thanks for your help reviewing //Grok TiddlyWiki//! 
+
+Please start out by hopping over to [[How to Use This Book]] to get an idea of how the book is designed, especially if you have never used a spaced-repetition flashcards tool (such flashcards are an integral part of the book). Once you've read that, and the instructions below, visit the [[Outline]] to start reading.
+
+I would appreciate if you can keep track of how long you spend working through everything. This doesn't have to be exact, and of course you'll probably be slower than future readers since you'll be writing down feedback from time to time, but I would appreciate at least knowing if the typical time for readers of a given skill level is, e.g., 10 hours or 200 hours.
+
+
+!! Sending comments
+
+The book has a built-in feedback mechanism that is fully operational now and will remain in the published version -- on any section or takeaway, just click the //send feedback// link (this is at the bottom of each section). You need to be connected to the Internet for this to work; a popup should appear a moment after you click the send button, indicating that your feedback was successfully submitted. If you //don't// see that popup, please let me know that something is not working.
+
+Note that as the system is currently designed, there is only one “send feedback” tiddler, so you need to send each piece of feedback before you try choosing the //send feedback// option on another tiddler, or your first set of feedback will be overwritten. I will look into improving this for a future version.
+
+For comments that are not attached to a particular section, or if you'd just prefer to gather them together in one place before sending, you can send email directly to me (`contact@sorenbjornstad.com`). If you remember, please include the words "Grok TiddlyWiki" in the subject so I can filter feedback into a separate folder. An alternative option would be editing your copy of the wiki directly, and sending it to me when you're done (just be sure there's a way I can quickly get a list of everything you wrote/changed, e.g., by linking to some tiddler everywhere you write feedback).
+
+If you'd like to talk directly, I'm also available for conversations most evenings, except Sundays, from 7:00 to 8:00 CST (UTC-6 until summer time begins on March 14, UTC-5 thereafter). Call me at +1 (219) 649-1767 or email me an invitation from your favorite video calling application (please send invitations at least 24 hours in advance, as I only check my personal email once a day and might miss it otherwise). If that time doesn't work for you but you'd like to talk, let me know when you're available and we can try to work something out.
+
+If you have questions, discussions, feedback, or anything else that you think would benefit other reviewers as well, visit [[the Google Group|https://groups.google.com/g/groktiddlywiki]].
+
+
+!! Timing
+
+Tentatively, I would like to have comments in by Friday, March 12 -- that gives you about a month. This may be optimistic, though, as I have no idea how long a typical read will take. If it doesn't look like you're going to be able to make that without knocking yourself out, please let me know what seems reasonable for you.
+
+If you are coming up with a lot of suggestions as you go through and are not using the direct "send feedback" mechanism, I would appreciate receiving comments in batches so I can start working on revisions before then.
+
+
+!! Things to focus on
+
+I don't necessarily expect a point-by-point response to each of the items below -- though feel free to do that if you want to -- but these should give you an idea of the areas I think I would benefit most from your thoughts on. If you can think of other areas for improvement, don't hesitate to include those as well.
+
+!!! Text / explanations
+
+* Did I say anything outright wrong? (I'm sure I did, nobody else has looked at this yet.)
+* Were any explanations hard to understand? Typos?
+* Did I skip over obviously useful analogies or common misconceptions?
+
+
+!!! Exercises
+
+* Were the exercises too hard? Too easy? Lacking enough information?
+* Were the time estimates about right for you? (Check [[How to Use This Book]] for details on the size indicators.)
+* Did the exercises expect things to be present in your sample wiki that weren't yet? Since I didn't write all of the exercises in order, I suspect I may have made a few errors. I plan to go through and check this myself, but you can help a lot here too.
+* Are the answers correct?
+
+
+!!! Mnemonic medium / TakeAway
+
+* Did you understand how to use TakeAway? Was the help understandable? Was the user interface intuitive?
+* Were any of the takeaway prompts/questions difficult to understand, or particularly hard to remember the answers to? Precise wording can make a huge difference on these.
+* When you are done with the book and have been reviewing takeaways for a while, please export your scheduling data via [[$:/plugins/sobjornstad/TakeAway/FileExport]] and send the resulting TSV file to me. (If you have edited questions/answers to include private information, you can open the file in a spreadsheet application like Excel and trim out the `question` and `answer` columns first.) This will allow me to find any prompts that are unusually difficult for a range of people.
+** If you want to use the Anki sync instead of the built-in TiddlyWiki reviewer, you can export a `.apkg` file from Anki instead, ticking the "include scheduling information" box.
+
+!!! Interface
+
+* Were you able to find everything in the book when you were looking at it, whether that was a section or one of the interactive features?
+* Does anything display oddly on your screen? I've done a fair bit of custom styling for the interactive features and have only tested on a couple of screen sizes and devices, so there might be some ugly stuff.
+
+!!! Resources
+
+* What major [[Resources]] and plugins would be worth including that I don't know about or haven't included? I have a pretty short list right now. I'm not looking to create a complete list (David Gifford has already done that, and I'm linking there), but there are surely more than a handful that deserve special recognition.
+
+!!! General
+
+* Did I miss any concepts or features that you use all the time or think are essential?
+* Did I give too much time to something that you don't think is important?
+* If you aren't already an expert, were your TiddlyWiki skills improved by working your way through the book?
+* Roughly how long did it take you to get through the book, and what parts of it did you do (e.g., did you complete all the exercises)?

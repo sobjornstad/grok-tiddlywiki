@@ -1,0 +1,9 @@
+answer: `tiddlywiki --build index`
+created: 20210109231641995
+modified: 20210321231707502
+origin: Creating Plugins
+qtype: rememberq
+question: What TiddlyWiki Node.js command will create a single-file wiki from a folder wiki?
+tags: Takeaway
+title: Ta:20210109231640740
+type: text/vnd.tiddlywiki

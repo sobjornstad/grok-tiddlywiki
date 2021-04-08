@@ -1,0 +1,11 @@
+created: 20200603193925777
+modified: 20200603210315569
+tags: Answer
+title: Ex:ContactList/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$list filter="[tag[Contact]sort[]]">
+	<<currentTiddler>><br>
+</$list>
+```

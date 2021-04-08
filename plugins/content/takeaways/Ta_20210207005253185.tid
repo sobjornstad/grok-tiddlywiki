@@ -1,0 +1,9 @@
+answer: The `$view` widget.
+created: 20210207005254137
+modified: 20210315201045747
+origin: Working with Dates
+qtype: rememberq
+question: What widget is used for displaying a date stored as a timestamp in a field of a tiddler in a user-friendly date format?
+tags: Takeaway
+title: Ta:20210207005253185
+type: text/vnd.tiddlywiki

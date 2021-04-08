@@ -1,0 +1,9 @@
+created: 20210207214347738
+length: m
+modified: 20210207214506421
+origin: Hiding and Showing Things
+tags: Exercise
+title: Ex:ViewTemplateExplicitHideReveal
+type: text/vnd.tiddlywiki
+
+Repeat the [[previous exercise|Ex:ViewTemplateExplicitHide]], but use a `$reveal` widget instead of a `$list` widget.

@@ -1,0 +1,16 @@
+created: 20210320202428418
+modified: 20210407165201863
+tags: $:/tags/Macro
+title: $:/sib/Navigator/BookmarkMacros
+type: text/vnd.tiddlywiki
+
+\define bookmark-tiddler()
+<$action-listops 
+  $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
+	$field="text"
+	$subfilter="[[]addsuffix<currentTiddler>]"/>
+\end
+
+\define unbookmark-tiddler()
+	<$action-listops $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks" $field="text" $filter="[enlist{$:/GTWBookmarks}] -[all[current]]"/>
+\end

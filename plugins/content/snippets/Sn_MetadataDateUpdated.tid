@@ -1,0 +1,7 @@
+created: 20210207001648789
+modified: 20210207001547418
+tags: 
+title: Sn:MetadataDateUpdated
+type: text/vnd.tiddlywiki
+
+<$view tiddler="Metadata" field="modified" format="date" template="DDD, MMM DDth, YYYY"/>

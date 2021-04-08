@@ -1,0 +1,17 @@
+created: 20210206220547886
+modified: 20210208022519353
+tags: Answer
+title: Ex:FamilyRadioButton/answer
+type: text/vnd.tiddlywiki
+
+Here's a simple version that just shows the phone number:
+
+```html
+View phone number for family member: <$list filter={{!!family}}><$radio tiddler=<<qualify "$:/temp/FamilyContact">> value=<<currentTiddler>>>&nbsp;<<currentTiddler>></$radio>&ensp;</$list>
+
+<$set name="stateTiddlerName" value=<<qualify "$:/temp/FamilyContact">>>
+	<$transclude tiddler={{{ [<stateTiddlerName>get[text]] }}} field="phone"/>
+</$set>
+```
+
+Notice that we don't transclude the tiddler `$:/temp/FamilyContact` itself, like `<$transclude tiddler="$:/temp/FamilyContact"/>`, we transclude //the transcluded value of// `$:/temp/FamilyContact`. You might have to think about this for a moment: we stored the name of the selected contact in the tiddler `$:/temp/FamilyContact`, so we don't want to transclude the tiddler `$:/temp/FamilyContact` -- we would be trying to get the value of the `phone` field of `$:/temp/FamilyContact` itself (which it presumably does not have). Instead, we want to transclude the `phone` field of the tiddler which is named within that tiddler (i.e., the contact tiddler we selected). This means we effectively have to transclude twice.

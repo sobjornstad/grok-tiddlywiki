@@ -1,0 +1,9 @@
+answer: There is no `/` before the `>`, so the remainder of the tiddler [[will be gobbled up|Ex:UnclosedMacroCall]].
+created: 20201231041937385
+modified: 20210402023729750
+origin: The Finer Points of Macros
+qtype: rememberq
+question: What is wrong with this macro call?: `<$macrocall $name=wikipediaLink articleTitle="Philosophy">`
+tags: Takeaway
+title: Ta:20201231041935247
+type: text/vnd.tiddlywiki

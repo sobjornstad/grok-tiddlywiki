@@ -1,0 +1,29 @@
+created: 20210123182104528
+lapses: 5
+modified: 20210407194337860
+tags: Fragment
+title: TakeAway Help/Leeches
+type: text/vnd.tiddlywiki
+
+''Leeches'' are takeaways that you keep on forgetting. Because you keep forgetting them over and over, they cause frustration and take up a disproportionate amount of your review time. TakeAway will display a banner like this one when it finds a leech:
+
+{{||$:/plugins/sobjornstad/TakeAway/LeechBanner}}
+
+The number of times you have to forget a takeaway before this banner appears is called the //leech threshold//. It defaults to 4, but can be adjusted in the [[settings|TakeAway Settings]]. For purposes of leech detection, you're only considered to have “forgotten” a takeaway if you answer something other than “forgot” and then forget it again. That is, pressing “forgot” several days in a row doesn't count as having forgotten the takeaway -- in that case, you never really knew it at all.
+
+
+!! Why leeches happen
+
+Leeches are usually a symptom of some other problem, not the problem in themselves:
+
+* The takeaway might be worded in a way that's confusing to you (see [[Editing takeaways|TakeAway Help/Editing]]). This could be the result of the author writing the takeaway poorly, or you having a different mental model of the topic or different related knowledge than most other people.
+* You may not fully understand the topic the takeaway is asking about.
+* You may be confusing this takeaway with another one (//memory interference//).
+
+!! Fixing leeches
+
+When you see the leech banner, take a moment to see if you can ''identify why you're struggling'', then fix the problem, perhaps by doing some background reading or editing the takeaway text. Click //hide warning// when you've taken care of it. The warning will appear again at each multiple of the leech threshold; by default, this is when you've forgotten the takeaway 8 times, 12 times, 16 times, etc.
+
+Another entirely reasonable option, if you don't believe the information in the takeaway is particularly valuable to you, is to simply ''uncollect it'', preventing it from showing up in reviews again. This will allow you to reallocate your limited study time to material that isn't as frustrating or difficult to retain.
+
+For much more on leeches in spaced-repetition study, check out the article [[Dealing with Leeches|https://controlaltbackspace.org/memory/dealing-with-leeches/]]. The article is focused on Anki, but most of its guidance will apply to TakeAway too.

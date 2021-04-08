@@ -1,0 +1,9 @@
+created: 20200718034820651
+modified: 20210207183128249
+tags: Answer
+title: Ex:DontOverrideViewTemplateTag/answer
+type: text/vnd.tiddlywiki
+
+Add a `list-before` field to `$:/yourname/TiddlerTypeTemplates/Contact` and set its value to `$:/core/ui/ViewTemplate/body`, then similarly for `/Meeting`. Take another look at [[Ordering Tiddlers]] if you don't remember how this works.
+
+Setting `list-after` to `$:/core/ui/ViewTemplate/classic` would have the same effect, but I bet you're going to have no idea why you set the field to that specific value when you look at it 6 months from now. Saying it comes before `body` is much more intuitive. It also protects you better against future changes -- if you used `list-after` and `classic` were to move to some other location on the tiddler display, your template might move around with it to a confusing spot. However, it's unlikely you will ever not want this template to appear right before the text of the tiddler, no matter where the text might move to.

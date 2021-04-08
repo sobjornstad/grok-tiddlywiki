@@ -1,0 +1,11 @@
+created: 20200718214905520
+length: m
+modified: 20210130174457312
+origin: Buttons and Input Widgets
+tags: Exercise
+title: Ex:JumpToTiddler
+type: text/vnd.tiddlywiki
+
+Create a tiddler `JumpToTiddler` that has an input field and a `Go` button. When the button is clicked, the tiddler named in the input field should open.
+
+//Hint//: One of the attributes of the `button` widget we didn't discuss here will help.

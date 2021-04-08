@@ -1,0 +1,17 @@
+created: 20200603182411293
+length: m
+modified: 20210130174548248
+origin: Naming Conventions
+tags: Exercise
+title: Ex:ProblematicTiddlerNames
+type: text/vnd.tiddlywiki
+
+Explain what is potentially problematic about each of these tiddler names:
+
+# `Company Entry Doors`
+# `Windows`
+# `Tiddlywiki`
+# `VisitingTheDMV`
+# `Onboarding: Office chair selection`
+
+None of these are necessarily //wrong// -- although they might be depending on your naming conventions -- but they each exhibit a possible danger we discussed above.

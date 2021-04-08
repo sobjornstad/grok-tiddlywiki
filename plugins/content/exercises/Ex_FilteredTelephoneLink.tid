@@ -1,0 +1,9 @@
+created: 20210131040945181
+length: m
+modified: 20210131040911376
+origin: Using Variables in Macros
+tags: Exercise
+title: Ex:FilteredTelephoneLink
+type: text/vnd.tiddlywiki
+
+Repeat the [[previous exercise|Ex:TelephoneLink]], but this time use a filter rather than a macro to combine the `tel:` part and the phone number. You may need to visit the TiddlyWiki documentation to find an appropriate filter operator.

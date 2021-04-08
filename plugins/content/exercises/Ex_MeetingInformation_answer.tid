@@ -1,0 +1,13 @@
+created: 20200718032732675
+modified: 20210207182913412
+tags: Answer
+title: Ex:MeetingInformation/answer
+type: text/vnd.tiddlywiki
+
+Add to some tiddler tagged $:/tags/ViewTemplate, such as `$:/yourname/TiddlerTypeTemplates/Meeting`:
+
+```html
+<$list filter="[all[current]tag[Meeting]]">
+  {{||MeetingInformationTemplate}}
+</$list>
+```

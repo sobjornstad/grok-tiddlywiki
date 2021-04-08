@@ -1,0 +1,11 @@
+created: 20201230212410211
+length: m
+modified: 20210130174542977
+origin: Anatomy of Filter Steps
+tags: Exercise
+title: Ex:NonexistentTiddlerFilter
+type: text/vnd.tiddlywiki
+
+What do you think happens if you use the `title` constructor to add a tiddler that does not exist to the pipeline?
+
+Check your answer by running a filter in TiddlyWiki.

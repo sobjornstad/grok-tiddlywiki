@@ -1,0 +1,19 @@
+complete: 
+created: 20200603184510002
+length: M
+modified: 20210327181810640
+origin: Using Filter Expressions
+tags: Exercise
+title: Ex:CreatingBasicFilters
+type: text/vnd.tiddlywiki
+
+Write and test filter expressions for the following criteria:
+
+# All tiddlers tagged with `Application`.
+# All tiddlers tagged with both `Application` and `OnboardingProcess`.
+#* You'll need to add the `OnboardingProcess` tag to at least one application if you haven't done so already, if you want to see any results.
+# The tiddler `JaneDoe`, but only if it is tagged with `Application`.
+#* You won't get any results for this one, obviously, since Jane is not an application, so afterwards you might want to try adding the tag to Jane's tiddler so you can see how it behaves then.
+# All tiddlers that link to the tiddler `EmployeeProfileSetupMeeting`.
+#* //Hint//: In addition to `links[]`, there is a `backlinks[]` operator.
+# All tiddlers that link to the tiddler `EmployeeProfileSetupMeeting` and are //not// daily-journal tiddlers.

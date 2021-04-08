@@ -1,0 +1,10 @@
+caption: Time modifier for due dates
+created: 20210102002153151
+description: //If your local time zone is UTC+12 or greater, read on. Otherwise, ignore this setting and be happy.// TiddlyWiki's `days[]` operator has an odd notion of time zones, which can cause takeaways to become due a day early if your UTC offset is negative and the time portion is left off the datestamp. To fix this, TakeAway puts all due dates at noon UTC and then ignores the time portion, which causes the takeaways to properly become due at midnight local time in almost all time zones. However, it fails if you are at UTC+12 or greater, in which case your takeaways may become due a day //late//. To fix this, decrease this value so that N + your UTC offset < 24. The default value is 12.
+modified: 20210407150849764
+stackorder: 90
+tags: 
+title: $:/config/sobjornstad/TakeAway/Scheduler/TimeOffset
+type: text/vnd.tiddlywiki
+
+12

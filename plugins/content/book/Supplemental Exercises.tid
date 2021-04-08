@@ -1,0 +1,17 @@
+created: 20201122225852336
+description: In which are offered some optional challenges to improve your TiddlyWiki skills, should you choose to accept them.
+modified: 20210207045751387
+parent: Outline
+tags: Chapter
+title: Supplemental Exercises
+type: text/vnd.tiddlywiki
+
+If you're looking for a challenge or some extra practice after finishing most or all of the book, here are some larger exercises you can try.
+
+{{Ex:TagColorGrouping||ExerciseTemplate}}
+{{Ex:HostingOptions||ExerciseTemplate}}
+{{Ex:MoreSidebarTabs||ExerciseTemplate}}
+{{Ex:StylesheetExperiments||ExerciseTemplate}}
+{{Ex:MailMerge||ExerciseTemplate}}
+{{Ex:StretchText||ExerciseTemplate}}
+{{Ex:NewWiki||ExerciseTemplate}}

@@ -1,0 +1,29 @@
+caption: Preview
+created: 20201229003054682
+modified: 20210407150628703
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/TakeawayBackSide
+type: text/vnd.tiddlywiki
+
+<!-- Render the current tiddler as a TiddlyRemember note, whether Q&A or cloze type. -->
+
+<$set name=qprefixed value={{{ [<needsContext>match[yes]!is[blank]then<currentTiddler>!search:question:regexp{$:/config/sobjornstad/TakeAway/Exporter/InhibitPrefixIfQuestionMatch}get[question]addprefix{$:/config/sobjornstad/TakeAway/Exporter/Prefix}] }}}>
+<$set name=qtext value={{{ [<qprefixed>is[blank]then{!!question}else<qprefixed>] }}}>
+
+	<$list filter="[<currentTiddler>qtype[rememberq]]">
+		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id={{{ [{!!title}split[:]last[]] }}} reference={{!!origin}}/>
+	</$list>
+
+	<$list filter="[<currentTiddler>qtype[remembercz]]">
+		<$macrocall $name=remembercz id={{{ [{!!title}split[:]last[]] }}} text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}}/>
+	</$list>
+
+	<$reveal text="yes" type="match" default=<<requireQtype>>>
+		<$list filter="[<currentTiddler>!qtype[rememberq]!qtype[remembercz]]">
+			<div style="color: orange;">Not sure how to display a note with qtype '{{!!qtype}}'! qtype should be `rememberq` or `remembercz`.</div>
+			<br>
+		</$list>
+	</$reveal>
+
+</$set>
+</$set>

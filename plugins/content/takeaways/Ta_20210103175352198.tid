@@ -1,0 +1,9 @@
+answer: `[img [attachments/image.png]]`
+created: 20210103175354872
+modified: 20210208152300227
+origin: Images and Attachments
+qtype: rememberq
+question: If you have a folder on your computer called `attachments` located in the same folder as your TiddlyWiki file, what wikitext syntax do you use to display the `image.png` image in that folder in a tiddler? (Do not make the image a tiddler in your wiki.)
+tags: Takeaway
+title: Ta:20210103175352198
+type: text/vnd.tiddlywiki

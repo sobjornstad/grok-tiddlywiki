@@ -1,0 +1,51 @@
+caption: Bulk update
+created: 20201230022957637
+modified: 20210408135934749
+stackorder: 100
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/Settings/BulkUpdate
+type: text/vnd.tiddlywiki
+
+-------
+
+@@text-align:center;
+! !!! WARNING !!!
+
+Do NOT press these buttons unless you are certain you know what you are doing.<br>
+''They take effect instantly and cannot be undone'', and they can wipe out hours of review history in a single click.
+@@
+
+-------
+
+<$details summary="I understand, and I have made a backup copy of my wiki">
+
+* Mark all takeaways that are currently seen unseen again: <$button>
+	<$list filter="[all[tiddlers+shadows]tag[Takeaway]seen[yes]]">
+		<<setSeennessAction "">>
+	</$list>
+	Mark All Unseen
+</$button>
+
+* Mark all takeaways seen: <$button>
+	<$list filter="[all[tiddlers+shadows]tag[Takeaway]]">
+		<<setSeennessAction "yes">>
+	</$list>
+	Mark All Seen
+</$button>
+
+* Shift the interval of all takeaways that are currently due tomorrow back one day: <$button>
+	<$list filter="[all[tiddlers+shadows]tag[Takeaway]seen[yes]days:due[+1]!days:due[+1]]">
+		<<showTodayAction>>
+		<$action-setfield ivl=1/>
+	</$list>
+	Show Tomorrow's Reviews Today
+</$button>
+
+* Delete/reset all takeaways completely (reverting to shadow version): <$button>
+	<$list filter="[tag[Takeaway]]">
+		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+	</$list>
+	Reset All Takeaways
+</$button>
+
+</$details>

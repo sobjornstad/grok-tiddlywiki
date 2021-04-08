@@ -1,0 +1,33 @@
+created: 20200718014509693
+description: Macros can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
+modified: 20210316172113253
+parent: Looking Under the Hood
+tags: Section
+title: Global Macros
+type: text/vnd.tiddlywiki
+
+So far, macros have been very useful for reducing repetition and implementing [[Text Substitution]] within tiddlers, but we haven't seen any way to make them available in more than one tiddler, which has somewhat limited their usefulness.
+
+Now that we've looked at [[system tiddlers|System Tiddlers]], however, there's an easy way to make a macro available in all tiddlers, which is a useful shortcut if you find yourself needing the same formatting or snippets of text over and over again and a [[template|Templates and the Current Tiddler]] isn't convenient. Such macros are commonly referred to as ''global macros''.
+
+The trick is a special tag, [[$:/tags/Macro]] (don't forget the capital `M` -- as always, tiddler titles are case-sensitive). When TiddlyWiki displays a tiddler, it looks through all tiddlers with this tag, gathers the macros they contain, and effectively prepends them to the tiddler being displayed. (It's a little more complicated behind the scenes, but it's safe to think of it this way.) Therefore, they're available for use in every tiddler.
+
+
+!! Semi-shared macros
+
+If you want to make a macro available in more than one tiddler, but not in all of them, another option is to use the `\import` pragma. This takes a filter as an argument, so to import macros from all tiddlers tagged `MyAwesomePrivateMacros`, you would put the following at the top of a tiddler:
+
+```html
+\import [tag[MyAwesomePrivateMacros]]
+```
+
+Internally, TiddlyWiki actually imports your global macros using this `\import` pragma on the //page template// (`$:/core/ui/PageTemplate`), which is responsible for transcluding all other parts of the wiki that appear on screen at any given time.
+
+!! Exercises
+
+{{Ex:MakeGlobalMacros||ExerciseTemplate}}
+{{Ex:ReadingDefaultMacros||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

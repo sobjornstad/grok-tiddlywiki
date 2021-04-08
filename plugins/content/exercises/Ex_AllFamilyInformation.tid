@@ -1,0 +1,16 @@
+complete: 
+created: 20201122034146442
+length: m
+modified: 20210130174257195
+origin: Filters and Transclusions
+tags: Exercise
+title: Ex:AllFamilyInformation
+type: text/vnd.tiddlywiki
+
+Edit the `ContactInformationTemplate` so that a contact's family members each get their own bullet point, nested underneath the `Family` bullet point, listing their name and phone number, like this:
+
+* ''Family'':
+** JohnDoe: 888-555-9999
+** EmilyDoe: 888-555-1111
+
+//Tip:// While it's possible to make this show up correctly while writing the bulleted list in wikitext, if you're struggling with the formatting, it may be easier to switch the list that's already there to an HTML list. As a reminder, to nest lists in HTML, put another `<ul>` opening tag inside an `<li>` tag.

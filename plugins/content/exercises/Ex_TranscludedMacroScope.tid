@@ -1,0 +1,9 @@
+created: 20200605160614741
+length: m
+modified: 20210130174613280
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:TranscludedMacroScope
+type: text/vnd.tiddlywiki
+
+In [[The Finer Points of Macros]], we learned that the scope of a macro is until the end of the tiddler. But what about when we transclude a tiddler containing a macro into another tiddler?

@@ -1,0 +1,11 @@
+created: 20200605153225001
+length: m
+modified: 20210130174525925
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:MethodsOfTransclusion
+type: text/vnd.tiddlywiki
+
+Create a new tiddler called `JaneTransclusion`. Transclude the content of the `JaneDoe` tiddler here -- but without writing the text `{{JaneDoe}}` anywhere in the tiddler. Once you do this successfully, find at least one other way to do it. (The answer will show you seven ways that use only tools we've already seen, so there is no shortage of options.)
+
+//Tip//: If the information about Jane ends up all in one line, try adding some blank lines to your wikitext.

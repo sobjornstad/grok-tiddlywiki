@@ -1,0 +1,9 @@
+answer: As with a variable, nothing is present in the output where the wikitext referring to the macro was.
+created: 20201231010507567
+modified: 20210302160600933
+origin: Macros
+qtype: rememberq
+question: What happens if you call a macro that doesn't exist?
+tags: Takeaway
+title: Ta:20201231010504984
+type: text/vnd.tiddlywiki

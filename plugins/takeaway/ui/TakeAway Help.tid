@@ -1,0 +1,13 @@
+created: 20201229002232803
+description: TakeAway is a tool that helps you remember what you read.
+list: [[TakeAway Help/Saving Your Progress]] [[TakeAway Help/Studying In Text]] [[TakeAway Help/Reviewing]] [[TakeAway Help/Editing]] [[TakeAway Help/General Takeaway Functions]] [[TakeAway Help/Studying with Anki]] [[TakeAway Settings]]
+modified: 20210408140425070
+tags: [[TakeAway Tools]]
+title: TakeAway Help
+type: text/vnd.tiddlywiki
+
+{{TakeAway Help/About TakeAway}}
+
+Select a tab to learn more about TakeAway.
+
+<<tabs "[all[current]list[]]" default:"TakeAway Help/Saving Your Progress">>

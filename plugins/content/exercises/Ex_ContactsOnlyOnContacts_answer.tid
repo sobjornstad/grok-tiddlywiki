@@ -1,0 +1,17 @@
+created: 20200718031215831
+modified: 20200718032246136
+tags: Answer
+title: Ex:ContactsOnlyOnContacts/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$list filter="[all[current]tag[Contact]]">
+  {{||ContactInformationTemplate}}
+</$list>
+```
+
+As usual, there's more than one way to do this. In particular, there are other filters you could use, for example `[<currentTiddler>tag[Contact]]`.
+
+`all[current]` is usually the fastest, however -- if you start a filter run with an `all`, TiddlyWiki will fetch the tiddlers defined by the `all` instead of fetching every non-shadow tiddler in the wiki as it otherwise does. In the case of `all[current]`, this means your filter run will only have to process a single tiddler. In contrast, other filters may have to look at all the tiddlers in the wiki and determine if they match the following criteria.
+
+This said, unless you have a large wiki, you are unlikely to ever notice the difference. I tend to find `all[current]` the fastest //and// the clearest, so it seems like a no-brainer to me.

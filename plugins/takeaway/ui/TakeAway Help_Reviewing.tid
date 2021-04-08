@@ -1,0 +1,25 @@
+caption: Reviewing takeaways
+created: 20210101234951214
+modified: 20210407150748605
+tags: Fragment
+title: TakeAway Help/Reviewing
+type: text/vnd.tiddlywiki
+
+When you open //Grok TiddlyWiki//, you may notice a banner in the sidebar that indicates you “have takeaways due for review.” When you see this banner, take a few minutes to review what you've read previously before diving into something new.
+
+After opening the [[TakeAway Reviewer]] by clicking the link in the banner, you'll see a question or fill-in-the-blank prompt, just like you did while reading the text initially. As you did before, try to recall the answer, then click //show answer// to see how you did. This time, however, you'll want to tell TakeAway ''whether you remembered the answer'', and optionally ''how well you knew it'':
+
+* ''Forgot'' -- you didn't remember the answer.
+* ''Hard'' -- you remembered the answer, and you'd like to see this takeaway more often in the future (it was too hard to answer).
+* ''Good'' -- you remembered the answer, and you had to think a little bit but not too hard.
+* ''Easy'' -- you remembered the answer, and you'd like to see this takeaway less often in the future (it was too easy to answer).
+
+Most of the time you will choose //Forgot// or //Good//, depending on whether you forgot or remembered the takeaway. //Hard// and //Easy// allow you to give further ''hints to the scheduler'' if you don't like how often you're seeing a takeaway. If you don't find these choices helpful, you can hide them:
+
+<$checkbox tiddler="$:/config/sobjornstad/TakeAway/Reviewer/UseFourButtons" field=text checked="yes" unchecked="no">&nbsp;Show //Hard// and //Easy// answer choices</$checkbox>
+
+Once you answer, TakeAway will use your ''rating'' (again, hard, good, or easy) and your ''past performance'' on remembering this takeaway to determine what day to show it next. It will aim to show you the takeaway ''shortly before it thinks you'll forget it'', at a time when it thinks you have roughly a 90% chance of still remembering, so that you don't waste time reviewing ideas you already know well.
+
+As long as you continue to remember the takeaway, the period between reviews will keep getting longer. If you have trouble remembering a takeaway, it will be scheduled less aggressively in the future. This study method is called //spaced repetition//, and it works spectacularly well. As long as you continue to review your takeaways regularly, the information in them will stay in your memory.
+
+At the bottom of the reviewer, you'll see the number of takeaways you've //collected// (i.e., [[seen in the text|TakeAway Help/Studying In Text]] and answered for the first time) and the number of takeaways that are currently due. The latter number will go down as you study until it reaches 0, at which point you'll be told you're done for now.

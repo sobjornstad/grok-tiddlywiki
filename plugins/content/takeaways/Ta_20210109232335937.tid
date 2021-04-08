@@ -1,0 +1,9 @@
+answer: On separate lines at the top of the tiddler file, with a colon separating the field name and its value.
+created: 20210109232337191
+modified: 20210220192013259
+origin: Writing Shell Scripts Against a TiddlyWiki
+qtype: rememberq
+question: How are fields other than `text` stored within tiddler files in a folder wiki?
+tags: Takeaway
+title: Ta:20210109232335937
+type: text/vnd.tiddlywiki

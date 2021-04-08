@@ -1,0 +1,15 @@
+created: 20200718201457359
+length: s
+modified: 20210130174352985
+origin: Creating a List of Links and Backlinks
+tags: Exercise
+title: Ex:CreatingLinkDivs
+type: text/vnd.tiddlywiki
+
+Let's do a bit of formatting now. It probably will look better if the excerpt starts on a new line after the title, especially once we get this into two columns. An easy way to do that in HTML is to place the excerpt macro call in a `<div>` tag (short for //division//), which is a generic way to group content together, so go ahead and do that and check that it works.
+
+In addition, let's wrap the `Links` and `Backlinks` sections, including the titles, each in a div (you can do this within the macro). We'll need to have them in separate divs to get them to appear in two columns.
+
+Lastly, wrap the whole thing (both the Links and Backlinks sections) in one more div.
+
+Aside from the excerpts appearing on separate lines from the tiddler titles, you should not see any difference in output yet -- we've merely made it possible to style with CSS.

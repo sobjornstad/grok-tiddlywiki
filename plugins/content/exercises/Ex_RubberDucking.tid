@@ -1,0 +1,14 @@
+complete: 
+created: 20210121000751424
+length: m
+modified: 20210206195909837
+origin: When Things Go Wrong
+tags: Exercise
+title: Ex:RubberDucking
+type: text/vnd.tiddlywiki
+
+Locate a rubber duck or another appropriate object you can explain your TiddlyWiki problems to, and find the problem(s) with the following filter snippet by explaining to your chosen listener what it's doing. Check your answer by fixing the problem.
+
+The goal of this filter is to display, in alphabetical order, the summaries of all tiddlers in this chapter, which are stored in their `description` fields.
+
+{{Sn:RubberDucking||MagicSnippet}}

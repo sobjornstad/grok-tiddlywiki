@@ -1,0 +1,9 @@
+created: 20200718011939334
+length: m
+modified: 20210130174433057
+origin: Data Tiddlers
+tags: Exercise
+title: Ex:HolidayToday
+type: text/vnd.tiddlywiki
+
+Create a tiddler called `TodaysHoliday` which says `It's ''The Day'' today!`, where `The Day` is the name of the holiday that is occurring today, according to the data tiddler. Unless you happen to be doing this exercise on one of the four holidays listed above, you'll need to make up and add your own holiday with today's date so you can check the result.

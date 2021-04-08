@@ -1,0 +1,11 @@
+created: 20200603203254646
+modified: 20200603203639598
+tags: Answer
+title: Ex:PrettyWikipediaLink/answer
+type: text/vnd.tiddlywiki
+
+```html
+\define wikipediaLink(articleName)
+  [[Wikipedia: $articleName$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+```

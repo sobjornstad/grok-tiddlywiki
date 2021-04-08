@@ -1,0 +1,9 @@
+answer: Place the fallback in the content/body of the widget.
+created: 20210207033933255
+modified: 20210302163950222
+origin: Hiding and Showing Things
+qtype: rememberq
+question: How can you provide fallback content to the `$view` widget to be used if the tiddler field it specifies does not exist?
+tags: Takeaway
+title: Ta:20210207033930875
+type: text/vnd.tiddlywiki
