@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210408161257454
+modified: 20210408172710727
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -19,9 +19,6 @@ type: text/vnd.tiddlywiki
 
 
 !! Technical
-
-* Retest on Mac and Windows
-* Make $:/sib/Dateops work correctly with leap years (I believe there's a new version on the forum someone created for me, but need to test)
 
 
 !! Todo list

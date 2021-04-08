@@ -1,5 +1,5 @@
 created: 20201229224422563
-modified: 20210408143158395
+modified: 20210408170108553
 tags: [[TakeAway Tools]]
 title: TakeAway Reviewer
 type: text/vnd.tiddlywiki
@@ -79,11 +79,3 @@ div.tr-leech-warning {
 	margin-bottom: 1em;
 }
 </style>
-
-
-
-<!-- TODO: leap year is handled incorrectly in the datetime calculation thing: adding 1 on the 28th gives the 28th again
-https://groups.google.com/g/tiddlywiki/c/y_GjM302u60
-
-<<daysFromDatestamp "20200228" 1>>
--->

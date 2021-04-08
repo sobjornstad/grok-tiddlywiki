@@ -1,5 +1,5 @@
 created: 20201230012621143
-modified: 20210407151107228
+modified: 20210408171516499
 tags: $:/tags/Macro
 title: $:/plugins/sobjornstad/TakeAway/SchedulerMacros
 type: text/vnd.tiddlywiki
@@ -12,9 +12,21 @@ type: text/vnd.tiddlywiki
 	<<backToQuestionAction>>
 \end
 
-\define getNextDueDate() <$macrocall $name=daysFromDatestamp datestamp=<<now YYYY0MM0DD>> offset=<<nextInterval>>/>
+\define getNextDueDate()
+<$set name="parm" value={{{ [[YYYY0MM0DD]addsuffix{$:/config/sobjornstad/TakeAway/Scheduler/TimeOffset}addsuffix[00]] }}}>
+	<$wikify name="thismoment" text="<$macrocall $name=now format=<<parm>>/>">
+		<$macrocall $name="dateadd" basedate=<<thismoment>> days=<<nextInterval>>/>{{$:/config/sobjornstad/TakeAway/Scheduler/TimeOffset}}00
+	</$wikify>
+</$set>
+\end
 
-\define daysFromToday(days) <$macrocall $name=daysFromDatestamp datestamp=<<now YYYY0MM0DD>> offset=<<__days__>>/>
+\define daysFromToday(days)
+<$set name="parm" value={{{ [[YYYY0MM0DD]addsuffix{$:/config/sobjornstad/TakeAway/Scheduler/TimeOffset}addsuffix[00]] }}}>
+	<$wikify name="thismoment" text="<$macrocall $name=now format=<<parm>>/>">
+		<$macrocall $name="dateadd" basedate=<<thismoment>> days=<<__days__>>/>{{$:/config/sobjornstad/TakeAway/Scheduler/TimeOffset}}00
+	</$wikify>
+</$set>
+\end
 
 \define reviewAction(ivlExpr, easeExpr)
 	<$vars
