@@ -1,0 +1,38 @@
+created: 20200531011856906
+description: How to take notes on meetings, excising existing notes and using TiddlyWiki's timestamp format to identify when the meeting happened.
+modified: 20210409024613679
+parent: The Shape of TiddlyWiki
+tags: Section
+title: Meeting Tiddlers
+type: text/vnd.tiddlywiki
+
+The next tiddler type to consider is the ''meeting''. If you stop and think about it, we probably already have a meeting, we just haven't created a tiddler for it yet: Jane met with our fearless wiki-writing protagonist to help her set up her computer, according to the journal entry we wrote. So let's create a meeting tiddler.
+
+!! Excising a meeting
+
+It's common in TiddlyWiki to write something in a tiddler and then realize it should be its own smaller tiddler. In fact, it's so common there's a special button on the edit toolbar for this operation, called ''excising''. Let's excise the line about Jane welcoming our protagonist from our journal entry. To do this, edit the journal tiddler, select the sentence, and click the appropriate button <<textual-button "excise">> on the editor toolbar (just a little bit to the right of the heading icons). Let's call the new tiddler `EmployeeProfileSetupMeeting`.
+
+You can see there's a choice for what we want to replace the excised text with: link, transclusion, or macro. Transclusions and macros are kind of fancy, so let's stick with the basic and easy-to-understand link for now; we'll explore [[transclusions|Transclusions]] and [[macros|Macros]] in detail in chapter 4. Click //Perform excision//, and the selected text will be replaced with a link. Save the tiddler and click the link, and we're looking at our new meeting tiddler, containing the text we originally selected.
+
+
+!! Adding metadata
+
+Let's edit our new meeting tiddler and give it a tag of `Meeting`, to start with. We're also going to want to add some other metadata: we said in our requirements that we wanted to be able to find meeting notes based on (1) when the meeting happened and (2) who attended.
+
+Let's start with ''who attended''. We have at least two obvious options here. One is to simply make sure that we link to everyone involved in the meeting somewhere within the text of the tiddler. Another is to explicitly list out the participants in a field. The former option is probably easier, but you're more likely to forget someone, and you won't be able to distinguish between people who were //at// the meeting and people who were merely discussed at the meeting. Let's be a bit more precise and create a field, called `participants`, and set its value to `JaneDoe`. (We'd be more precise to add ourselves too; but most people do not often take notes on meetings they're not at, so this likely isn't necessary unless you frequently receive meeting notes from others that you'd like to import into your wiki.)
+
+The other way we wanted to be able to slice our meetings is by ''when they happened''. One straightforward way to handle this would be to use the created time on the tiddler, which TiddlyWiki fills in automatically whenever you create one. However, this means that if we start our meeting notes prior to the meeting (to stub out an agenda if we're running the meeting), or fill them in afterwards (because we didn't have our laptop at the meeting), the time will be wrong. So for the sake of demonstration, let's create our own date/time field.
+
+{{Datetime Format}}
+
+This can be a little irritating to work with, but there are several ways we can make it easier: plugins are available that can create a special date/time picker we can include on our meeting tiddlers, or we can autofill the time when we create the tiddler, thus making it easier to make any minor adjustments necessary. Let's do it manually for the moment so you learn how it works. (In an [[exercise|Ex:NewMeetingButton]] in chapter 5, we'll improve this using the autofill approach.) Create a new field called `at`, work out what the current date and time for you right now is, and fill that in as the value.
+
+To check your work, paste the following magic snippet into the body of the tiddler and have a peek at the live preview. We'll learn how this works in [[Working with Dates]].
+
+{{Sn:MagicDateSnippet||BasicSnippet}}
+
+Save this tiddler, and we've got our first meeting.
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

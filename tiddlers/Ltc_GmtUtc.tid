@@ -1,0 +1,14 @@
+created: 20210323235617632
+description: Greenwich Mean Time
+modified: 20210409025028533
+tags: Lie
+title: Ltc:GmtUtc
+type: text/vnd.tiddlywiki
+
+Actually, GMT and UTC are not quite the same thing. You probably do //not// want to bother with the difference, because it is completely irrelevant for most purposes, but if you're feeling pedantic or curious about time zones:
+
+* ''UTC'' (//Coordinated Universal Time//, and yes I know [[that isn't the right order of the letters|https://en.wikipedia.org/wiki/Coordinated_Universal_Time#Etymology]]) is a [[time standard|https://en.wikipedia.org/wiki/Coordinated_Universal_Time]] by which other time zones are compared. The standard is kept based on atomic measurements, but is periodically adjusted by inserting [[leap seconds|https://en.wikipedia.org/wiki/Leap_second]], to keep it close to UT1, with the goal of preventing them from drifting more than a second apart. The correct way to describe the US Eastern time zone, not on Daylight Saving Time, for comparative purposes, is “UTC minus 5 hours”.
+* ''UT1'' is [[another time standard|https://en.wikipedia.org/wiki/Universal_Time#Versions]] based on the progress of the Earth's motion around the Sun. UT1 is relevant here because for many purposes, like navigation, people consider //it//, rather than “UTC”, the reference for “GMT”.
+* ''GMT'' is also the [[name of a time zone|https://en.wikipedia.org/wiki/Greenwich_Mean_Time]] which has an offset of UTC+0. Prior to the introduction of the UTC standard, it was the normal means of measuring time zone offsets.
+
+Confused yet? Good.

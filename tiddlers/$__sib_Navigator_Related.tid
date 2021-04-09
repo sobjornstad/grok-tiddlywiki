@@ -1,0 +1,91 @@
+created: 20210206184132111
+modified: 20210409015113274
+tags: 
+title: $:/sib/Navigator/Related
+type: text/vnd.tiddlywiki
+
+\define linkDisplay(title, filter, cssClass)
+<div class=<<__cssClass__>>>
+<div style="text-align: center;">$title$:</div>
+
+<ul>
+<$list filter=<<__filter__>> emptyMessage="<div style='text-align: center;'>//(none)//</div>">
+  <li>
+        <$link/>&ensp;
+				<span style="font-size: 80%;">
+					<$list filter="[enlist{!!tags}sort[]]">
+						<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
+					</$list>
+				</span>
+        <div class="sib-excerpt">{{!!description}}</div>
+  </li>
+</$list>
+</ul>
+</div>
+\end
+
+
+<$reveal stateTitle="$:/temp/ReferenceState"
+			   stateIndex=<<currentTiddler>>
+			   type="match"
+			   text="hide"
+			   default="hide">
+	<div style="text-align: center;">
+	<$button setTitle="$:/temp/ReferenceState"
+					 setIndex=<<currentTiddler>>
+					 setTo="show"
+					 class="tc-btn-invisible tc-tiddlylink">
+					 {{$:/core/images/unfold-button}} show related topics
+	</$button>
+	</div>
+</$reveal>
+
+<$reveal stateTitle="$:/temp/ReferenceState"
+			   stateIndex=<<currentTiddler>>
+			   type="match"
+			   text="show"
+			   default="hide">
+	<div style="text-align: center;">
+	<$button setTitle="$:/temp/ReferenceState"
+					 setIndex=<<currentTiddler>>
+					 setTo="hide"
+					 class="tc-btn-invisible tc-tiddlylink">
+		{{$:/core/images/fold-button}} hide related topics
+	</$button>
+	</div>
+	<div class="gtw-bordered-element sib-link-display">
+		<$set name="xrefName" value={{{ [[Mentioned by //]addsuffix<currentTiddler>addsuffix[//]] }}}>
+			<$macrocall $name=linkDisplay title=<<xrefName>>  filter="[all[current]links[]sort[]]" cssClass="sib-links"/>
+		</$set>
+		<$set name="xrefName" value={{{ [[Mentions of //]addsuffix<currentTiddler>addsuffix[//]] }}}>
+			<$macrocall $name=linkDisplay title=<<xrefName>> filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]" cssClass="sib-backlinks"/>
+		</$set>
+	</div>
+</$reveal>
+
+
+<style>
+div.sib-link-display {
+	margin-top: 0.5em;
+  overflow: auto;
+}
+div.sib-link-display div ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+div.sib-link-display div ul div.sib-excerpt {
+  padding-left: 1em;
+  color: <<colour muted-foreground>>;
+}
+
+div.sib-links {
+  width: 50%;
+  float: left;
+  padding-right: 0.5em;
+}
+div.sib-backlinks {
+  width: 50%;
+  float: right;
+  padding-left: 0.5em;
+}
+</style>

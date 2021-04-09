@@ -1,0 +1,16 @@
+created: 20200603185304662
+modified: 20210409164804517
+tags: Answer
+title: Ex:CreatingMoreFilters/answer
+type: text/vnd.tiddlywiki
+
+I won't list the actual answers because you've likely played with your wiki enough by now that your answers will be slightly different from mine, but here are the filters you can use:
+
+# `[count[]]`
+# `[is[system]count[]]`
+# `[[JaneDoe]backlinks[]tag[Meeting]]`
+# `[tag[Contact]sort[phone]]` (and take the first in the list)
+# `[has[at]]` (or, more verbosely, `[!field:at[]]`)
+# `[search[JaneDoe help]]`
+
+On #6, you may notice several [[system tiddlers|System Tiddlers]] related to Advanced Search in the list. That's because what you're typing into the search box is stored in those tiddlers! We'll learn how this works in [[Buttons and Input Widgets]].

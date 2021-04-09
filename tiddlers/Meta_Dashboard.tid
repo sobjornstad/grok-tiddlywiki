@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210408172710727
+modified: 20210409152434992
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -13,12 +13,15 @@ type: text/vnd.tiddlywiki
 
 !! Content
 
-* If I can, try running through exercises to make sure they all work as intended.
+* [In progress] If I can, try running through exercises to make sure they all work as intended.
 * Make sure that we have sufficient creative and why questions -- these can be the hardest to spot at first. And generally revise question wording?
 * Create a little video introducing the book for "How to Use This Book". (Do this closer to the end in case things change...) Could have a landing page with this, too?
+* [[Creating Evergreen Notes]]: clarify the relationship between a retrieval context and relating to as many items as possible, including in the takeaways.
+* Review takeaways for "on a Mac"
 
 
 !! Technical
+
 
 
 !! Todo list

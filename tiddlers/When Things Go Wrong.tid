@@ -1,0 +1,68 @@
+created: 20210120014333991
+description: As your wikitext gets more complicated, it occasionally might not do what you were expecting; here's how you can figure out what you did wrong.
+modified: 20210409174355191
+parent: Filtering and Formatting
+tags: Section
+title: When Things Go Wrong
+type: text/vnd.tiddlywiki
+
+<<<
+Error messages can be terrifying when you aren't prepared for them; but they can be fun when you have the right attitude. Just remember that you really haven't hurt the computer's feelings, and that nobody will hold the errors against you.
+
+---Donald Knuth, //The TeXbook//
+<<<
+
+In this chapter, we started looking at some more complicated features of [[wikitext|Wikitext]]. The more complicated wikitext gets, the more likely you use it incorrectly by mistake. So before we finish out the chapter, let's talk briefly about what to do when some wikitext you're writing doesn't do what you think it should. TiddlyWiki, like all software, is pretty fussy: if you leave out a period in the wrong spot, you might get a totally different effect than the one you intended. As you continue to work on the exercises and with your own wikis, you will no doubt run into problems on occasion.
+
+Finding the errors will get easier as you learn more about TiddlyWiki. You'll get much faster at spotting minor syntax mistakes, and you'll understand why things don't work that would have baffled you earlier. I also try to call out some of the most common errors in exercises and takeaways throughout the book, with the hopes that you'll be able to learn about at least a few of the errors ahead of time instead of through the school of hard knocks. In the meantime, let's look at some cognitive tools for working through problems when your prior experience fails you.
+
+
+!! Use the scientific method
+
+If you ever find yourself unsure how something works, try it! Devise and carry out a simple ''experiment'' that will answer the question. And take a page from science and isolate the single variable that you're wondering about. If you're not sure how a `$list` widget behaves, don't test it in the middle of a three-page-long tiddler with a complicated filter; copy and paste the widget you're having trouble with into a new tiddler by itself, simplify the filter to `[tag[MyTestTag]]` (adding that tag to a couple tiddlers if necessary), and explore from there. Once you've answered the question, you can bring your new understanding back to your original problem.
+
+Similarly, consider ''splitting complex tasks into pieces'' and making sure that each piece is correct before proceeding to the next. That way, if everything doesn't work perfectly, it will be much more obvious where to look for the problem. If you're trying to use a `$list` widget, get your filter working in $:/AdvancedSearch before trying to use it in the widget. Make sure the content of your widget looks right by itself, and only then wrap it in the widget and change it to pick up the `<<currentTiddler>>` from the widget.
+
+
+!! Talk to the duck
+
+Grab a rubber duck or some similar object and put it in front of your monitor. Your task is to ''explain what you're trying to do, from the beginning, to the duck''. The duck has a basic understanding of what TiddlyWiki is, so you don't have to try to explain, e.g., what a web browser or a tiddler is, but the duck still knows much less than you do, being a duck, so you should explain thoroughly and without leaving out any steps.
+
+This works because, after looking at some wikitext for a while, we start to see each part of the wikitext as doing what we think it //should// do, or what we //meant// it to do, rather than what it's actually doing. Having to start the explanation over and go through it in detail means we're more likely to see where the reality doesn't align with our perception.
+
+You can always talk to a real person instead, whether they know anything about TiddlyWiki or not – but a rubber duck is surprisingly functional and doesn't require you to find someone to bother, so there's less friction involved in trying this technique with an inanimate object.
+
+
+!! Display the values of variables
+
+In the next chapter, we'll start discussing [[variables, macros, and transclusions|Variables, Macros, and Transclusions]]. Oftentimes you will use variables, macros, and transclusions as part of widgets or filters (for instance, you might use the value of a variable in a filter). If your widget or filter isn't working right and you are at all uncertain about what's in the variable, try ''using the variable by itself in your wikitext'' and see what shows up in the preview. If the variable's value is wrong, investigating how it got set to the wrong value will likely point you to the problem.
+
+
+!! Use your web browser's inspector
+
+If something isn't displaying on the screen the way you expect, you might be able to spot what's going wrong by ''taking a closer look at the HTML source'' of the page. However, the standard “view source” option that we used in the [[Ex:ViewSource]] exercise in the [[HTML]] section won't work well here. For one, “view source” doesn't convert wikitext to HTML, so you can only get part of the picture. For another, the source for an average TiddlyWiki could be dozens or hundreds of pages long, and we hardly want to scan through it to find the spot on the page that's not working.
+
+There's a better way: if you right-click anywhere on the page in TiddlyWiki, whether you're using it in a browser or in TiddlyDesktop, there will be an //Inspect// option. Choosing this option will open another window to the side of your wiki, which will let you explore the HTML of the page.
+
+Now, simply click the pointer icon in the far top-left corner of the inspector and hover the mouse over the area on the page exhibiting the problem. You'll see each area on the page highlighted as your cursor moves over it; each highlighted area represents an HTML element. When you find an element related to your problem, click and the relevant HTML will be highlighted in the inspector window. Taking a close look at the HTML generated by your wikitext may make the problem obvious.
+
+
+!! Take a break
+
+If you start getting frustrated, ''step away from the computer'' for ten to twenty minutes. Ideally, go outside and take a walk, and don't think about the problem at all for at least five minutes; let your mind wander. You'll often have solved the problem by the time you get back, and even if you haven't, you'll be less frustrated and more likely to spot mistakes.
+
+
+!! Ask for help
+
+If you really run out of ideas, you can ask the TiddlyWiki community for assistance; see [[Getting Help]] to learn how.
+
+
+!! Exercises
+
+{{Ex:InspectSquare||ExerciseTemplate}}
+{{Ex:RubberDucking||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

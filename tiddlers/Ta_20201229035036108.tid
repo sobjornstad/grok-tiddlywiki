@@ -1,0 +1,13 @@
+answer: When the phrase you search for fails to retrieve a relevant tiddler (e.g., you searched for `Robert`, but in the tiddler you called him //Bob//).
+created: 20201229035037606
+due: 202104131200
+ease: 250
+ivl: 5
+modified: 20210409024258215
+origin: Contact Tiddlers
+qtype: rememberq
+question: In the context of full-text search, what is a //false negative//?
+seen: yes
+tags: Takeaway
+title: Ta:20201229035036108
+type: text/vnd.tiddlywiki

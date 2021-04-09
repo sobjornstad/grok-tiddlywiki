@@ -1,0 +1,13 @@
+answer: The suffix is silently ignored.
+created: 20201230213930371
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409161738792
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: What happens if you add a suffix to a filter operator that doesn't support suffixes?
+seen: yes
+tags: Takeaway
+title: Ta:20201230213928787
+type: text/vnd.tiddlywiki

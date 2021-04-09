@@ -1,0 +1,8 @@
+created: 20210409122941649
+description: the most recent 100 tiddlers you edited
+modified: 20210409123258096
+tags: Lie
+title: Ltc:MostRecentHundred
+type: text/vnd.tiddlywiki
+
+Actually, TiddlyWiki selects entire days on which tiddlers were edited, one by one, stopping when it has selected a total of at least 100 tiddlers. This means that, if you count, there are usually slightly more than 100. For instance, suppose that TiddlyWiki has selected 98 tiddlers so far and reaches August 12, on which 4 tiddlers were edited. Since TiddlyWiki will always include all edits for any day it selects, the list will end up with 102 tiddlers in it.

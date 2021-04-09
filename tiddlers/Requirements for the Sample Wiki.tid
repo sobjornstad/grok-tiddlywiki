@@ -1,0 +1,24 @@
+created: 20200530170905243
+description: What do we want the example wiki we're building in this book to be able to do?
+modified: 20210409021002777
+parent: The Shape of TiddlyWiki
+tags: Section
+title: Requirements for the Sample Wiki
+type: text/vnd.tiddlywiki
+
+Over the course of this book, we're going to be developing an example wiki. But before we start making anything, it's a good idea to be clear on what we're trying to accomplish. What do we want to be able to do with this example wiki?
+
+To frame what we need to keep track of, let's suppose that we're just starting a new job in a new office -- that's probably the moment in an office worker's life when thorough notes are most obviously critical. (This is not to say there's a point at which you should stop taking notes. In fact, good notes, well-organized and continually updated, get more useful the longer you've been taking them and the more you have of them.)
+
+Here's what we want to do with our sample wiki.
+
+* Keep a simple ''reckoning of what we do'' on a day-to-day basis. 
+** By the way, if you don't keep a work diary in real life, you should consider starting: you can make it as simple or complex as you want, and the benefits have been well documented around the web.
+* Keep track of ''people'' we meet, their ''contact information'', their ''managers'', anyone else at the company they're ''related to'', ''what they do'', and what ''projects they're involved in''.
+** In the real world, you'll probably have an easily-accessed company directory integrated with your communications software that has some of this information in it, and you likely don't want to double up and include the information in TiddlyWiki, or you'll just have to update it manually if it changes in the directory. For purposes of demonstration, we'll pretend your employer is really backwards and doesn't have any kind of directory, but most likely you'll need to track only a subset of this information. (Unless you're a freelancer -- then you likely really will need to track large parts of it manually. Whether you should do this in TiddlyWiki instead of in a contacts app may be a difficult question, and we won't get into that here.)
+* Gather notes on the ''progress of projects'' we're working on.
+* Keep any ''information we learn'' about company processes and about domain knowledge related to the job (e.g., regulations, industry standards, terminology, software applications) in a form where we can find and update it later.
+* ''Take notes at meetings'' and find them later, searching on when the meeting happened, who attended, or what the content was related to.
+* ''Link easily to other resources'' our team uses, such as tasks in a team task manager or entries in a company wiki or knowledge base.
+
+You might notice one important component of personal organization is missing from this list: task management. Some people like to handle tasks in TiddlyWiki and it's entirely possible to do so if you like, but personally I find managing tasks in TiddlyWiki quite finicky and really good software dedicated to managing a to-do list invaluable, so I stop my wiki notes at the project level.

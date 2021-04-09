@@ -1,0 +1,13 @@
+answer: Which tag you want to look for.
+created: 20210327180931096
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409165646046
+origin: Common Filter Operators
+qtype: rememberq
+question: You need to use `tagging[]` instead of `tag[]` when you don't know what at the time you write the filter?
+seen: yes
+tags: Takeaway
+title: Ta:20210327180930007
+type: text/vnd.tiddlywiki

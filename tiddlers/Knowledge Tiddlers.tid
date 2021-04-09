@@ -1,0 +1,66 @@
+created: 20200531022953084
+description: How to organize information that doesn't fall into a clear category, and why such information should be pulled out into separate units of information and related to others.
+modified: 20210409030938606
+parent: The Shape of TiddlyWiki
+tags: Section
+title: Knowledge Tiddlers
+type: text/vnd.tiddlywiki
+
+We've almost made it through all of the types of tiddlers we identified in [[Structuring Our Wiki]]. The remaining type we listed out is the non-type: what we called the ''knowledge tiddler''. Studying the amorphous nature of knowledge tiddlers will lead us to some important insights about organizing information which we will build on in the next chapter, [[Filing and Organizing]].
+
+!! Creating missing tiddlers
+
+We already have a knowledge tiddler that we need to create. Remember how back when we were [[working on Jane's tiddler|Contact Tiddlers]], we decided that the employee information system was a concept that should be called out with a link? Let's start a knowledge tiddler about the employee information system.
+
+How should we create this tiddler? As with everything in TiddlyWiki, we have several options. If we have a good memory, we might simply recall that we need to create a tiddler called `EmployeeInformationSystem`, and in that case we could just click the <<textual-button "new-button">> new tiddler button and write it up. Alternatively, we could go back to Jane's tiddler, where there will be an italicized link indicating it doesn't exist, click on it, and edit from there. However, let's try a new method. TiddlyWiki actually keeps track of what tiddlers have been linked to but don't exist, so we can check periodically and create any that seem important. These tiddlers that are linked to but have not been created are called ''missing tiddlers''.
+
+Click into the //More// tab in the sidebar, then //Missing//. You should see `EmployeeInformationSystem` listed. If you click on it, you'll see a pop-up similar to what you get when you click on a tag: above the line is the missing tiddler itself, and underneath are all the tiddlers that link to it. This is a nifty way to figure out what a missing tiddler is supposed to be about if you can't quite remember from the title -- often seeing the places where you mentioned it will be sufficient to jog your memory.
+
+!! Describing the Employee Information System
+
+Let's click on `EmployeeInformationSystem` and edit it. We could start with some notes about the system:
+
+{{Sn:EmployeeInformationSystemExample||MagicSnippet}}
+
+Wait...remember how we're supposed to consider if there are any concepts that need links? Have a read and see if you can identify some things that might deserve links and separate tiddlers! Then continue below.
+
+* The ''Really Annoying Five-Factor Authentication Process'' (RAFFAP) is probably the most obvious candidate here. Perhaps we don't have all that much to say about it, but we would likely at least want to maintain a link to the company documentation on it.
+* It could be worth creating tiddlers for ''the process of retrieving pay stubs or requesting vacation'' -- particularly the latter, since there are probably a number of further considerations involved in taking vacation (e.g., having your boss and/or teammates approve your plans). If you don't know much about the process yet, you could simply leave the tiddler missing and fill it in when you learn more, or if you don't like leaving missing tiddlers, drop in a sentence that says “Vacation time is requested in the EmployeeInformationSystem.”
+* The ''company cafeteria'' is certainly a concept, but unless you're one of those people who keep exhaustive spreadsheets about everything, it's unlikely you want to take notes on it, so it won't need a tiddler. Similarly, ''coffee, tea, and pastries'' are concepts, but presumably nothing more needs to be said about them here, and you have no need to correlate mentions of tea across all of your work notes.
+
+For the moment, for the sake of not getting sidetracked, let's leave all of them unlinked.
+
+
+!! Classifying the Employee Information System
+
+Here's a million-dollar question: how exactly does the EIS relate to our OnboardingProcess project? Is it a //part// of the project? Is it just related to the project? This is an important question because it determines whether we should ''tag'' the EIS with OnboardingProcess, or merely ''link'' them together.
+
+I'm personally inclined to say that ''the EIS is merely related to the project'': we're presumably going to find use for the EIS in many contexts outside our company onboarding, and it has no particular relationship to the project except that we were shown how to use it as part of the project. However, this isn't necessarily a transferable rule even for any pair of a project and an application associated with that project. If our project was to purchase and set up a label printer, we'd have a strong case for considering the label-printing software part of that project, even though it could be used outside of that project in the future -- it's an integral part of the project, compared to the EIS, which is an incidental part of being onboarded.
+
+Fortunately, making the wrong decision here is hardly going to be fatal. These questions are not meant to give the impression that you have to immediately know the “right” answer every time -- they're meant to get you thinking about the different options and why you might choose one over another. Once you've been using TiddlyWiki for a while, you'll probably just go, “Hmm. I think I'm going to use a tag here,” and then do it, and never think about it again unless it proves to be confusing or problematic for some reason. It's much like learning a new language: at first you have to stop from time to time and think really hard if you want to get your grammar right, but if you keep practicing, soon enough it flows out naturally, even if you might still mix something up once in a while.
+
+So, if we've decided on a link, let's add a sentence to the end of the tiddler's text:
+
+```html
+JaneDoe taught me about the EIS in our EmployeeProfileSetupMeeting.
+```
+
+This will nicely tie together all the relevant pieces of information for us.
+
+!! Tags
+
+Since this is a knowledge tiddler, it doesn't have a tag identifying exactly what type of information it is like the others did. However, it might still be nice to classify it: this is a software application, so let's tag it with `Application`.
+
+It's important not to create a blizzard of tags -- the more tags you have, the harder it is to scan through them and figure out what they are and what other tiddlers you might want to apply them to -- so before adding a tag, it's good to make sure you can ''identify a situation in which you would actually use that tag''. Here's the use case we could identify for Applications:
+
+> From time to time, we may wish to see a list of the tools we have available at our disposal, if we get stuck on a problem or we know there's an app that does what we need but just can't quite remember what it's called or where to look for it.
+
+(In many cases, it's helpful to put a little blurb like this one in the tag tiddler itself, so if you ever forget where the tag should be applied, you can look it up. Feel free to do this in your example wiki if you want to.)
+
+According to this rule, we wouldn't tag the EIS tiddler `Coffee`, because we agreed there's no benefit to tracking where we talk about coffee in this wiki, or `TrainedByJaneDoe`, because (a) it's difficult to imagine any situation in which we would need to know what applications Jane trained us to use, and (b) we have already linked this tiddler to Jane's tiddler and thus can easily get a list of applications Jane is associated with, which is likely to be more than enough to gather this data in the unlikely event we need it, even if we have to sort out a few applications that are related to Jane in some other way. (We'll learn how you would go about seeing a list of exactly the tiddlers that link to or from Jane's tiddler and are applications in chapter 3, when we talk about [[filters|Filters]].)
+
+We might, however, have a case for tagging this tiddler `ThingsThatAreHarderOnTuesdays`, if that proves to be a common category at the company, since we might want to use that information to plan our weeks!
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

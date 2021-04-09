@@ -1,0 +1,13 @@
+answer: `Jane`
+created: 20201230205259591
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409161713518
+origin: Anatomy of Filter Steps
+qtype: rememberq
+question: In the filter step `field:participants[Jane]`, what is the //parameter//?
+seen: yes
+tags: Takeaway
+title: Ta:20201230205258398
+type: text/vnd.tiddlywiki

@@ -1,0 +1,13 @@
+answer: E.g., link from the meeting to the project, link from the project to the meeting, put a `meetings` list field on the project, tag the meeting with the project tiddler, create a giant table mapping meetings to projects
+created: 20210131212437525
+due: 202104131200
+ease: 250
+ivl: 5
+modified: 20210409025824923
+origin: Project Tiddlers
+qtype: rememberq
+question: Suggest a way to relate a meeting to a project (try to pick a new one).
+seen: yes
+tags: Takeaway
+title: Ta:20210131212436299
+type: text/vnd.tiddlywiki

@@ -1,0 +1,13 @@
+answer: `MyTiddler` is in CamelCase.
+created: 20201229030107646
+due: 202104131200
+ease: 250
+ivl: 5
+modified: 20210408180643582
+origin: Links
+qtype: rememberq
+question: Why will TiddlyWiki create a link to a tiddler called `MyTiddler` when `MyTiddler` is mentioned in wikitext, even though its name is not in double square brackets?
+seen: yes
+tags: Takeaway
+title: Ta:20200822212437920
+type: text/vnd.tiddlywiki

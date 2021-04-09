@@ -1,0 +1,13 @@
+answer: `field:has[money]` (The short form `has[money]` doesn't work, because `has` is a built-in filter operator; this keeps only tiddlers that have a non-empty field called `money`.)
+created: 20201230235255697
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409165425911
+origin: Common Filter Operators
+qtype: rememberq
+question: Write a filter step that finds all tiddlers which have a field `has` set to the exact value `money`.
+seen: yes
+tags: Takeaway
+title: Ta:20201230235250718
+type: text/vnd.tiddlywiki

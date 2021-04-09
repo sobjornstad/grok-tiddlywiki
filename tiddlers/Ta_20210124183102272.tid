@@ -1,0 +1,13 @@
+answer: Place <code>&#96;&#96;&#96;</code> above and below the section of text you want to include in the code block.
+created: 20210124183103500
+due: 202104131200
+ease: 250
+ivl: 5
+modified: 20210409022802316
+origin: Journal Tiddlers
+qtype: rememberq
+question: What is the wikitext syntax to create a code (monospaced) block with multiple lines?
+seen: yes
+tags: Takeaway
+title: Ta:20210124183102272
+type: text/vnd.tiddlywiki

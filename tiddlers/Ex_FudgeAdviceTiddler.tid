@@ -1,0 +1,17 @@
+created: 20200603200012761
+length: s
+modified: 20210409134556285
+origin: Creating Hierarchies with a Table of Contents
+tags: Exercise
+title: Ex:FudgeAdviceTiddler
+type: text/vnd.tiddlywiki
+
+Suppose that, during our meeting, Jane gave us some advice about the company that probably shouldn't stray. We might want to put that in a separate tiddler to reduce the chance we accidentally copy and paste it over to someone else who asks what happened at the meeting.
+
+Create such a tiddler with the following text, and make it a child of the `EmployeeProfileSetupMeeting`, so we'll still be able to keep track of it:
+
+```html
+JaneDoe told me, while we were together at the EmployeeProfileSetupMeeting, that I should be very careful about saying the word "fudge" in this office, due to an incident involving Robert at the 2018 Christmas party that nobody wants to talk about.
+```
+
+Check the `OnboardingProcess` table of contents again. Did you get a third level of hierarchy?

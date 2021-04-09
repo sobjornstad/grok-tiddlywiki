@@ -1,0 +1,13 @@
+answer: TiddlyWiki's default full-text search only looks in the `title` and `text` fields.
+created: 20201229133710673
+due: 202104131200
+ease: 250
+ivl: 5
+modified: 20210409032203738
+origin: Searching
+qtype: rememberq
+question: Why might a search for `lemons` not find a tiddler which has an `ingredients` field containing the word //lemons//?
+seen: yes
+tags: Takeaway
+title: Ta:20201229133709005
+type: text/vnd.tiddlywiki

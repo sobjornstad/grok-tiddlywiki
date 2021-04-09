@@ -1,0 +1,34 @@
+created: 20200603023508364
+description: TiddlyWiki allows fast and convenient full-text searching, although it doesn't look everywhere.
+modified: 20210409032047883
+parent: Filing and Organizing
+tags: Section
+title: Searching
+type: text/vnd.tiddlywiki
+
+Right now, we only have a handful of tiddlers. Earlier, we saw how to use the ''Recent'' list to find tiddlers that we've touched recently. But what happens when we know what we're looking for, but we have dozens or hundreds or thousands of tiddlers? Scrolling through the list of recently updated tiddlers isn't going to cut it anymore.
+
+!! Standard search
+
+Probably the most basic way of finding things on a computer is to do a ''full-text search''. Let's try that right now: close out of any tiddlers you have open and find Jane's tiddler. Click in the search box in the upper right and type `Jane`.
+
+You'll see a drop-down separated into //Title matches// and //All matches//. As you can see, matches within the title of a tiddler are prioritized, but we can also see tiddlers where we referred to Jane anywhere in the text field. Click on `JaneDoe`, and the appropriate tiddler opens up.
+
+It's a smart idea to try to include the keywords you're most likely to search for in the titles of your tiddlers. Since the title is so short, you will nearly always have many fewer title matches than body matches, making it easier to spot the one you're looking for.
+
+Pressing Ctrl+Shift+F will focus the search box. After the search results pop open, you can use the up and down arrow keys to navigate through the results, and Enter to select the one you want to open.
+
+
+!! Advanced search
+
+If you click the magnifying glass icon <<textual-button "advanced-search-button">> to the right of the search box, you'll be taken to [[$:/AdvancedSearch]]. The only tab that will likely make sense to you right now is //Standard//, which does exactly the same thing as the search box in the sidebar. However, once you learn about [[System Tiddlers]], [[Shadow Tiddlers]], and [[Filters]], the respective tabs in this tiddler will be very handy, so keep advanced search in mind as you continue with TiddlyWiki.
+
+
+!! Exercises
+
+{{Ex:SearchExploration||ExerciseTemplate}}
+{{Ex:JohnDoeSearch||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

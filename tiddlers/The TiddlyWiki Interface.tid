@@ -1,0 +1,53 @@
+created: 20201125202250940
+description: Study an annotated screenshot of TiddlyWiki's interface to help you put names to what you're seeing.
+modified: 20210408174210230
+parent: The Shape of TiddlyWiki
+tags: Section
+title: The TiddlyWiki Interface
+type: text/vnd.tiddlywiki
+
+Let's take a quick look at the interface of a brand-new TiddlyWiki, in annotated form:
+
+<$link to="interface.png">{{interface.png}}</$link>
+
+You can see that the screen is divided into two parts, the ''story river'' (red highlight) and the ''sidebar'' (magenta highlight). If your screen is too narrow to show both side-by-side (for instance, if you're viewing the wiki on a smartphone), the sidebar will come at the top of the page and the story river below it.
+
+The story river shows the tiddlers which are currently open. We'll talk more about [[tiddlers|Tiddlers]] and their function in a moment; for now, just think of them as containers for the content of your wiki, like files or sheets of paper. When you open a new tiddler, it gets a new “card” over in the story river and leaves existing tiddlers open, so you can easily work with several tiddlers at once. The toolbar in the upper-right corner of each tiddler (the ''view toolbar'') lets you edit it, close it, delete it, get a link to it, collapse it, and so on.
+
+The sidebar allows you to navigate to tiddlers that you don't have open and take various system actions. The toolbar at the top-right (the ''page toolbar'') lets you create new tiddlers, adjust options, and save your wiki by default, but it's possible to customize what buttons show up here. Then there is a fast full-text search for all tiddlers in the wiki; we'll discuss this in the [[Searching]] section. Last come four tabs which contain the majority of the sidebar's functionality:
+
+; Open
+: A concise list of the tiddlers in the story river, useful if you have a ton of them open at once or you want to reorder them (just drag and drop).
+; Recent
+: A list of tiddlers you've changed recently.
+; Tools
+: System actions like importing content, advanced search, changing the colors, and so on. You can place the tools you use most frequently on the page toolbar by checking or unchecking the box next to each tool.
+; More
+: A variety of other ways to find tiddlers, which we'll discuss in detail in [[Browsing Your Tiddlers]].
+
+It's possible to customize what appears in the sidebar -- for example, compare the sidebar of //Grok TiddlyWiki// to the annotated one above. We'll learn how that works in [[chapter 6|Looking Under the Hood]].
+
+!! About takeaways
+
+A brief digression from TiddlyWiki is in order here to explain how the //Takeaways// heading of each section in this book works.
+
+<$details summary="What is TakeAway?">
+
+{{TakeAway Help/About TakeAway}}
+
+</$details>
+<$details summary="How do I use TakeAway?">
+
+{{TakeAway Help/Studying In Text}}
+
+Tomorrow, or whenever it's time for your first review session, a banner will appear in the sidebar indicating that it's time to begin a review session; when you see this banner, take a moment to click the link and review what you've previously learned before diving into new sections.
+
+</$details>
+
+For more information on why takeaways are useful, see [[How to Use This Book]]. For more information on the TakeAway tool itself, see the [[TakeAway Help]]; you can access this help at any time by clicking the //help// link anywhere in TakeAway's interface.
+
+Below you will see your first takeaways.
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}
