@@ -1,0 +1,13 @@
+answer: After the closing `</$set>` tag.
+created: 20201231004134568
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409192701819
+origin: Variables
+qtype: rememberq
+question: When you define a variable using the `$set` widget, the variable's value ceases to be accessible at what point in your wikitext?
+seen: yes
+tags: Takeaway
+title: Ta:20201231004133545
+type: text/vnd.tiddlywiki

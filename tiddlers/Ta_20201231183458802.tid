@@ -1,0 +1,13 @@
+answer: `{{Book 2!!author}}`
+created: 20201231183501395
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409201550297
+origin: Transclusions
+qtype: rememberq
+question: What wikitext syntax would you use to transclude the contents of the `author` field of the `Book 2` tiddler?
+seen: yes
+tags: Takeaway
+title: Ta:20201231183458802
+type: text/vnd.tiddlywiki

@@ -1,0 +1,13 @@
+answer: `text`
+created: 20201231183700864
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409201554247
+origin: Transclusions
+qtype: rememberq
+question: When you transclude a tiddler without supplying a field name, like `{{IncludedTiddler}}`, what field is transcluded?
+seen: yes
+tags: Takeaway
+title: Ta:20201231183659048
+type: text/vnd.tiddlywiki

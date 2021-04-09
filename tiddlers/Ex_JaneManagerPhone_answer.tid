@@ -1,0 +1,40 @@
+created: 20200604020245387
+modified: 20210409201410771
+tags: Answer
+title: Ex:JaneManagerPhone/answer
+type: text/vnd.tiddlywiki
+
+Here's the obvious and straightforward way, which has the major disadvantage of silently not updating if the manager changes and perhaps making you call the wrong number at an inopportune time:
+
+```html
+Jane's manager's phone number is {{ChrisSmith!!phone}}.
+```
+
+Now for trying to make it grab the manager's name from the `manager` field on the fly. You may have been tempted to try:
+
+
+```html
+{{ {{!!manager}}!!phone }}
+```
+
+...but unfortunately this does not work.
+
+There are actually two separate reasons it doesn't work. First, TiddlyWiki doesn't parse other wikitext within `{{double curly braces}}`, it only looks for a tiddler name/field. Second, even if it did, it would fail for the same reason that this didn't work in an [[exercise|Ex:MacroAdjacency]] in [[Macros]]:
+
+```html
+<<wikipediaLink>>Aardvark
+```
+
+If you need a refresher, TiddlyWiki processes the contents of transclusions (of variables and macros, as we saw before, as well as of fields) separately from the surrounding content, so the result of `{{!!manager}}` (namely, `ChrisSmith`) is an entirely separate piece of wikitext to TiddlyWiki. Thus, what it would see would be three separate, unconnected pieces: `{{`, `ChrisSmith`, and `!!phone }}`.
+
+Here's a method that works and uses only tools we've already seen. If you worked at it long enough, you might have gotten this or something similar:
+
+```html
+\define getPhone(person)
+{{$person$!!phone}}
+\end
+
+Jane's manager's phone number is: <$macrocall $name="getPhone" person={{!!manager}} />
+```
+
+That said, understanding //why// this works when `{{ {{!!manager}}!!phone }}` doesn't is likely beyond your TiddlyWiki knowledge at this point, so don't feel too bad if you didn't get it. We'll see the explanation in [[Text Substitution]].

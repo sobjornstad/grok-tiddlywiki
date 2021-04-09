@@ -1,0 +1,50 @@
+created: 20200530170346174
+description: Variables let you assign a name to an arbitrary value, then use the name in place of the value in multiple places.
+modified: 20210409192158115
+parent: Variables, Macros, and Transclusions
+tags: Section Concept
+title: Variables
+type: text/vnd.tiddlywiki
+
+''Variables'' are a simple way to define some wikitext in one place and refer to it in many places.
+
+!! How variables work
+
+A variable has a ''name'', which is how you refer to the variable, and a ''value'', which is the other piece of wikitext that it stands in for.
+
+As a silly example, let's suppose corporate requires us to include a disclaimer at the end of every paragraph we write:
+
+> (This paragraph does not represent the formal opinion of my company.)
+
+We can make this text into a variable using a ''`$set` widget'', like this:
+
+{{Sn:SetDisclaimer||MagicSnippet}}
+
+As you can see in the example above, the `$set` widget doesn't itself display anything in the rendered version of your tiddler. However, in between the `<$set>` tags, TiddlyWiki will keep track of the fact that the variable `disclaimer` is set to the stated value. (Once we pass the closing `</$set>` tag, TiddlyWiki will forget about the variable. When this happens, we say that the variable has ''gone out of scope''.)
+
+In order to actually use the variable, we put its name between double angle brackets `<<>>` in the spot where we want its value to show up. Let's edit our `EmployeeInformationSystem` tiddler to use this disclaimer:
+
+{{Sn:EmployeeInformationSystemDisclaimer||MagicSnippet}}
+
+Copy this into your version of the tiddler, and you should see the disclaimer appear in the rendered output at each spot where `<<disclaimer>>` appears in the wikitext.
+
+
+!! Why use variables?
+
+Eliminating repetition can save typing, which is nice but hardly anything to write home about. Much more importantly, if you want to change a snippet after you create it, ''you only have to change it in one place''. If you only use the snippet a couple of times, changing it in multiple places is no big deal, but there might be some things you end up using dozens or hundreds of times throughout your wiki. And sometimes a full wikitext snippet will be many lines long and easy to mistype, while a reference to a variable is short, concise, and easy to understand.
+
+Additionally, some variables are ''set automatically by TiddlyWiki'', which can allow you to access information you otherwise wouldn't have. For instance, when we created a list widget to show all our meetings in the previous chapter, TiddlyWiki automatically set the `<<currentTiddler>>` variable to refer to the item which was currently being processed by the list widget.
+
+In the real world, you will use [[macros|Macros]] or [[transclusions|Transclusions]] more often than variables when you want to use some wikitext in many places throughout your wiki. But all three of these mechanisms serve the same basic purpose -- avoiding repetition -- and offer the same benefits discussed here.
+
+!! Exercises
+
+{{Ex:UpdatingDisclaimer||ExerciseTemplate}}
+{{Ex:EisVariable||ExerciseTemplate}}
+{{Ex:SpacedVariable||ExerciseTemplate}}
+{{Ex:VariableAfterSet||ExerciseTemplate}}
+{{Ex:NestedSets||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

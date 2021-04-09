@@ -1,0 +1,74 @@
+created: 20200603011212616
+description: Macros extend the concept of variables by allowing portions of the value to change each time the macro is referenced.
+modified: 20210409193756611
+parent: Variables, Macros, and Transclusions
+tags: Section Concept
+title: Macros
+type: text/vnd.tiddlywiki
+
+Sometimes we repeat text which is exactly the same, and [[variables|Variables]] let us eliminate that repetition. But often, we want to repeat some text which is //mostly// the same, but which ''varies in a small part or two''.
+
+For instance, suppose we are linking to Wikipedia articles over and over again, and we're getting tired of copying and pasting the URLs. Wikipedia article URLs have a very predictable format: for an article named `Article Name` in the English encyclopedia, the URL looks like `https://en.wikipedia.org/wiki/Article Name`. The only part that ever changes is the name of the article.
+
+In situations like this, we can use a ''macro''. A macro is simply a variable with some bits that change depending on how you refer to it; the bits that change are called ''parameters'' or ''arguments''. A macro definition for creating Wikipedia links could look like this:
+
+```html
+\define wikipediaLink(articleName)
+https://en.wikipedia.org/wiki/$articleName$
+\end
+```
+
+To get the value of the macro (this is referred to as ''calling'' or ''invoking'' it), we use the same double angle brackets that we would for a variable, but we include the values of the parameters as well (this is called ''passing'' the parameters to the macro). Specifically, we place them inside the double angle brackets after the macro name, separated from the macro name and from each other by a space:
+
+```html
+<<wikipediaLink Aardvark>>
+```
+
+Let's put it together:
+
+{{Sn:InitialAardvarkWikipediaLink||MagicSnippet}}
+
+Let's get this example in your wiki: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: unlike in [[Your First Dynamic List]], `\define` and `\end` use a //backslash//, not a forward slash. Review the linked section if you can't remember which is which.) You should see the link appear, as it does in the preview above.
+
+The process of TiddlyWiki handling a call to your macro is called ''macro expansion'', and we say that the macro has been ''expanded'' when the result shows up in our formatted tiddler, and that the result is the ''expansion'' of the macro call.
+
+!! Anatomy of a macro
+
+Let's take a closer look at what's going on here. Our macro started with this line:
+
+```html
+\define wikipediaLink(articleName)
+```
+
+The word starting with a backslash indicates a kind of ''pragma'', which is a really fancy name for an instruction that comes at the top of a tiddler and changes the way TiddlyWiki reads the rest of the tiddler. Specifically, the `\define` pragma tells TiddlyWiki that every time it sees a reference to `wikipediaLink`, it should follow the instructions in this macro.
+
+`wikipediaLink`, of course, is the name of the macro.
+
+The part in parentheses, called the ''parameter list'', describes the parameters of the macro. When TiddlyWiki sees a macro call, it will look at each of the parameters passed and match them up to the names in the parentheses, based on what order they come in. In our example, it concludes that `articleName` should be `Aardvark` within the macro. (In the [[next section|The Finer Points of Macros]], we'll see an example with more than one parameter.)
+
+Everything between the line beginning with `\define` and the line beginning with `\end` is called the ''body'' of the macro. When we call the macro, TiddlyWiki will stop processing wikitext and rendering your tiddler for a moment, read the body of the macro, and see:
+
+```html
+https://en.wikipedia.org/wiki/$articleName$
+```
+
+It will spot the bit between the dollar signs, notice that we said `articleName` represented `Aardvark` in this case, and substitute in the word `Aardvark`, yielding an expansion of `https://en.wikipedia.org/wiki/Aardvark`. Finally, it will go back to processing wikitext, starting with the expansion of the macro, at which point it will notice that this is a web URL, which should be turned into a link, and display the link on-screen.
+
+Lastly, there's the line:
+
+```html
+\end
+```
+
+This indicates that we've come to the end of the macro. A macro can go on for as many lines as we want it to, until we come to the `\end`.
+
+!! Exercises
+
+{{Ex:PrettyWikipediaLink||ExerciseTemplate}}
+{{Ex:MacroAdjacency||ExerciseTemplate}}
+{{Ex:EmptyMacroCall||ExerciseTemplate}}
+{{Ex:MacroPosition||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

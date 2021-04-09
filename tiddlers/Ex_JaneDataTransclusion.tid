@@ -1,0 +1,9 @@
+created: 20200604013708933
+length: m
+modified: 20210409200122678
+origin: Transclusions
+tags: Exercise
+title: Ex:JaneDataTransclusion
+type: text/vnd.tiddlywiki
+
+One of the complaints we had about our [[Contact Tiddlers]] when we initially created them was that you couldn't see any of the fields on them without clicking on the //info// button. Remedy that by adding a section to the `JaneDoe` tiddler titled `Information about Jane`, containing a bulleted list or table that shows Jane's email address, phone number, family members, and manager.

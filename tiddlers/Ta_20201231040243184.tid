@@ -1,0 +1,13 @@
+answer: Place the parameter in triple double-quotes: `<<macroname """the parameter "containing" quotes""">>`
+created: 20201231040248490
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409195506171
+origin: The Finer Points of Macros
+qtype: rememberq
+question: What is the simplest way to pass a parameter to a macro that contains double quotes?
+seen: yes
+tags: Takeaway
+title: Ta:20201231040243184
+type: text/vnd.tiddlywiki

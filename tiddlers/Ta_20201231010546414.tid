@@ -1,0 +1,13 @@
+answer: All pragmas must come at the top of a tiddler, before anything that is not a pragma.
+created: 20201231010548664
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409193832146
+origin: Macros
+qtype: rememberq
+question: What restriction is placed on the location of pragmas, such as `\define`, within a tiddler?
+seen: yes
+tags: Takeaway
+title: Ta:20201231010546414
+type: text/vnd.tiddlywiki

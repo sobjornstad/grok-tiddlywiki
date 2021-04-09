@@ -1,0 +1,13 @@
+answer: The `name` attribute needs a dollar sign, `$name`, to distinguish it from a macro parameter called `name`.
+created: 20201231041224734
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409195608566
+origin: The Finer Points of Macros
+qtype: rememberq
+question: What is wrong with this macro call?: `<$macrocall name=wikipediaLink articleTitle="Philosophy"/>`
+seen: yes
+tags: Takeaway
+title: Ta:20201231041222739
+type: text/vnd.tiddlywiki

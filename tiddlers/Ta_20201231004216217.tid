@@ -1,0 +1,12 @@
+created: 20201231004217204
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409192705016
+origin: Variables
+qtype: remembercz
+question: When a variable ceases to be accessible at a closing `</$set>` tag, the variable is said to have gone {out of scope}.
+seen: yes
+tags: Takeaway
+title: Ta:20201231004216217
+type: text/vnd.tiddlywiki

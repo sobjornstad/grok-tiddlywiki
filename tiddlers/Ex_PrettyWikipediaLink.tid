@@ -1,0 +1,10 @@
+complete: 
+created: 20200603203233591
+length: m
+modified: 20210409193309339
+origin: Macros
+tags: Exercise
+title: Ex:PrettyWikipediaLink
+type: text/vnd.tiddlywiki
+
+To create a pretty external link where the text differs from the URL, we can use the syntax `[[text|http://example.com]]`. Update the `wikipediaLink` macro to output a link that looks like [[Wikipedia: Aardvark|https://en.wikipedia.org/wiki/Aardvark]].

@@ -1,0 +1,12 @@
+complete: 
+created: 20200605152806072
+length: s
+modified: 20210409202939804
+origin: Templates and the Current Tiddler
+tags: Exercise
+title: Ex:MeetingListWithoutCurrentTiddler
+type: text/vnd.tiddlywiki
+
+Modify the `MeetingList` so that it does not use the variable reference `<<currentTiddler>>` but has identical functionality.
+
+//Hint//: Try transcluding a field.

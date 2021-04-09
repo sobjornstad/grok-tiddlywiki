@@ -1,0 +1,13 @@
+answer: `<$macrocall $name="wikipediaLink" name="Aardvark" />`
+created: 20201231040927890
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409195600416
+origin: The Finer Points of Macros
+qtype: rememberq
+question: Use a `$macrocall` widget to achieve the same effect as the following wikitext: `<<wikipediaLink name:"Aardvark">>`
+seen: yes
+tags: Takeaway
+title: Ta:20201231040925049
+type: text/vnd.tiddlywiki

@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210409152434992
+modified: 20210409222146378
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -18,6 +18,8 @@ type: text/vnd.tiddlywiki
 * Create a little video introducing the book for "How to Use This Book". (Do this closer to the end in case things change...) Could have a landing page with this, too?
 * [[Creating Evergreen Notes]]: clarify the relationship between a retrieval context and relating to as many items as possible, including in the takeaways.
 * Review takeaways for "on a Mac"
+* [[Text Substitution]] is still not that clear :(
+* [[Ex:SubstitutionBackporting]]  could possibly be used to explain that <__substitutions__> won't work when the result isn't wikified
 
 
 !! Technical

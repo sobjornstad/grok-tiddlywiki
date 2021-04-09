@@ -1,0 +1,13 @@
+answer: The current tiddler changes to `EmilyDoe`, the `JaneDoe` tiddler is rendered, and then the current tiddler returns to `ContactList`.
+created: 20201231185755191
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409212720052
+origin: Templates and the Current Tiddler
+qtype: rememberq
+question: What happens to the current tiddler while TiddlyWiki reads the transclusion `{{EmilyDoe||JaneDoe}}` within the tiddler `ContactList`?
+seen: yes
+tags: Takeaway
+title: Ta:20201231185753892
+type: text/vnd.tiddlywiki

@@ -1,0 +1,59 @@
+created: 20200530170328830
+description: Transclusions are like variables, but their value is stored in a field of a tiddler.
+modified: 20210409195700028
+parent: Variables, Macros, and Transclusions
+tags: Section Concept
+title: Transclusions
+type: text/vnd.tiddlywiki
+
+''Field transclusions'' are much like [[variable references|Variables]], except instead of being set to a specific value by a `$set` widget or a macro definition, their value comes from a tiddler.
+
+Specifically, a field transclusion, as its name suggests, references ''the contents of a particular field of a tiddler''. If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` and try that:
+
+```html
+* JaneDoe -- {{JaneDoe!!phone}}
+```
+
+You should see:
+
+* JaneDoe -- 888-555-1234
+
+Either the left or the right side of the reference can be left off. Just `{{JaneDoe}}` refers to the `text` field of the `JaneDoe` tiddler, while just `{{!!phone}}` refers to the `phone` field of the current tiddler.
+
+Just like you can use the value of a variable or the result of a macro call as an attribute of a widget, you can use the value of a field transclusion as an attribute of a widget. For example, suppose we had a field on the current tiddler called `wikipedia-reference` that contained the name of a Wikipedia article it was based on, and we wanted to create a link to it:
+
+```html
+<$macrocall $name="wikipediaLink" article={{!!wikipedia-reference}} />
+```
+
+Notice the similarity in form between the three wikitext methods we've encountered for referring to other content:
+
+* `[[double square brackets]]` -- to link to content
+* `<<double angle brackets>>` -- to get content from a variable or macro
+* `{{double curly braces}}` -- to get content from a tiddler field
+
+Directly including entire tiddlers within other tiddlers, like `{{My Other Tiddler}}`, is uncommon in most wikis; linking is usually a more useful way of relating ideas. However, transclusion is invaluable in combination with filters for creating dynamic lists, tables, and other content. In fact, the whole interface of TiddlyWiki is actually created by transcluding a bunch of special tiddlers! Transclusion becomes even more useful once you understand //templates//, which we'll cover in the [[next section|Templates and the Current Tiddler]].
+
+!! A note on terminology
+
+Technically, the form `<<double angle brackets>>` is called a ''variable transclusion'' or ''macro transclusion''. In the document-management-systems world, the word //transclusion// refers to including some other document or content at the location of the reference, and macros and variables do this just like field transclusions do.
+
+However, in non-technical contexts, people often use the term //transclusion// by itself to refer to a field transclusion. We will try to explicitly state what kind of transclusion we mean if it might be unclear, but for the most part you should read //transclusion// without a modifier as //field transclusion// in the remainder of this book.
+
+
+!! Exercises
+
+{{Ex:JaneDataTransclusion||ExerciseTemplate}}
+{{Ex:FudgeTransclusion||ExerciseTemplate}}
+{{Ex:SearchingInTransclusions||ExerciseTemplate}}
+{{Ex:LinkingInTransclusions||ExerciseTemplate}}
+{{Ex:MultipleTransclusion||ExerciseTemplate}}
+{{Ex:SelfTransclusion||ExerciseTemplate}}
+{{Ex:CircularTransclusion||ExerciseTemplate}}
+{{Ex:JaneManagerPhone||ExerciseTemplate}}
+{{Ex:VariableTransclusion||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

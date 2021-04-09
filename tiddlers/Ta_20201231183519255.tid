@@ -1,0 +1,13 @@
+answer: `{{!!description}}`
+created: 20201231183520841
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409201552593
+origin: Transclusions
+qtype: rememberq
+question: What wikitext syntax would you use to transclude the `description` field of the current tiddler?
+seen: yes
+tags: Takeaway
+title: Ta:20201231183519255
+type: text/vnd.tiddlywiki

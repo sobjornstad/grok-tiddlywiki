@@ -1,0 +1,13 @@
+answer: `There are <$text text={{{ [count[]] }}}/> non-shadow tiddlers in this wiki.`
+created: 20201231201437800
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409220111795
+origin: Filters and Transclusions
+qtype: rememberq
+question: Add a `$text` widget to the following line so the result of the filter isn't a link: `There are {{{ [count[]] }}} non-shadow tiddlers in this wiki.`
+seen: yes
+tags: Takeaway
+title: Ta:20201231201436093
+type: text/vnd.tiddlywiki

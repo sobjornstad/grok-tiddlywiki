@@ -1,0 +1,10 @@
+complete: 
+created: 20210207223713616
+length: s
+modified: 20210409221714125
+origin: Text Substitution
+tags: Exercise
+title: Ex:PreserveSecurityWithTextSubstitution
+type: text/vnd.tiddlywiki
+
+Change the filter in [[Ex:BypassSecurityWithTextSubstitution]] so that it is not vulnerable to this kind of manipulation. (Of course, the user could still just edit the tiddler and remove the authentication altogether. TiddlyWiki is not a suitable environment when users need to have limited access.)

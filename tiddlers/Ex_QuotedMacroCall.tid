@@ -1,0 +1,13 @@
+created: 20200603224209604
+length: s
+modified: 20210409194800219
+origin: The Finer Points of Macros
+tags: Exercise
+title: Ex:QuotedMacroCall
+type: text/vnd.tiddlywiki
+
+Take the example //The $macrocall widget can take variables as parameters// and modify it so that the inner macro calls are surrounded in quotation marks, like so:
+
+{{Sn:QuotedMacroExpansion||$:/sib/Snippet/TiddlerAsWikitext}}
+
+What happens? Why do you think this happened?

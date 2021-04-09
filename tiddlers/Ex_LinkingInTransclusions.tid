@@ -1,0 +1,11 @@
+created: 20200604021802285
+length: s
+modified: 20210409200451386
+origin: Transclusions
+tags: Exercise
+title: Ex:LinkingInTransclusions
+type: text/vnd.tiddlywiki
+
+In general, if we reference ChrisSmith in the `manager` field of the `JaneDoe` tiddler, Jane does not show up as a backlink in `ChrisSmith`'s //Backlinks// tab on the info page, because //Backlinks// shows only links in the `text` field. However, now we have a link in the text since we have transcluded the value of the `manager` field into the text. So now that we have a link, we should have a reference back to `JaneDoe` from `ChrisSmith`.
+
+Test this hypothesis by looking in the //Backlinks// tab of `ChrisSmith`. What did you find? Why might this be?

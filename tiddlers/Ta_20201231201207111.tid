@@ -1,0 +1,13 @@
+answer: `{{{ [[LinkBonanza]links[]count[]] }}}`
+created: 20201231201209935
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409220100956
+origin: Filters and Transclusions
+qtype: rememberq
+question: Write a filter transclusion to display the number of links to unique tiddlers contained in the tiddler `LinkBonanza`.
+seen: yes
+tags: Takeaway
+title: Ta:20201231201207111
+type: text/vnd.tiddlywiki

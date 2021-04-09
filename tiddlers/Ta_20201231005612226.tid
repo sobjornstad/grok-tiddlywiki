@@ -1,0 +1,13 @@
+answer: `<<wikipediaLink Aardvark>>` (quotation marks around the value `Aardvark` are optional, since it contains no spaces)
+created: 20201231005613768
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409193602541
+origin: Macros
+qtype: rememberq
+question: What is the wikitext syntax to call the macro `wikipediaLink` with the single parameter `Aardvark`?
+seen: yes
+tags: Takeaway
+title: Ta:20201231005612226
+type: text/vnd.tiddlywiki

@@ -1,0 +1,147 @@
+created: 20200605144511058
+description: Macros process parameters in a peculiar way, by //substitution// of their text, which is quite useful but also causes more confusion than almost anything else in TiddlyWiki.
+modified: 20210409221348542
+parent: Variables, Macros, and Transclusions
+tags: Section
+title: Text Substitution
+type: text/vnd.tiddlywiki
+
+We need to circle back around to answer a perplexing question from earlier. In an [[exercise|Ex:JaneManagerPhone]] in the [[Transclusions]] section, this didn't work:
+
+```html
+{{ {{!!manager}}!!phone }}
+```
+
+Yet this did:
+
+```html
+\define getPhone(person)
+{{$person$!!phone}}
+\end
+
+<$macrocall $name="getPhone" person={{!!manager}}/>
+```
+
+What's up with that? At first glance, these snippets appear to be doing exactly the same thing.
+
+This is one of the most confusing aspects of TiddlyWiki (some might say //the// most confusing), and it can sometimes trip up even veteran users. Fortunately, there is a reasonable explanation, albeit an obscure one, and once you understand the explanation you'll be able to tell what will work and what won't without having to try it.
+
+!! Text substitution
+
+It turns out that there's something entirely different about [[macros|Macros]] as compared to any other part of wikitext: Macros have their parameters replaced by ''text substitution'' (elsewhere you may see this called //textual substitution// or just //substitution//; we will use the term //text substitution// throughout this book). This is an extremely simple and dumb mechanism: TiddlyWiki simply takes the text that was provided in the parameter and dumps it into the body of the macro where the placeholder value was. While it's doing this, it completely ''stops understanding wikitext'' -- it only worries about replacing the placeholders.
+
+To see how this works and how it differs from using variables or transclusions outside of macros, let's define an example macro that prints some text if a person attended a meeting:
+
+```html
+\define participantInMeeting(meeting, name)
+<$list filter="[title[$meeting$]contains:participants[$name$]]">
+  The participant was in the meeting.
+</$list>
+\end
+```
+
+If we call this macro as `<<participantInMeeting EmployeeProfileSetupMeeting JaneDoe>>`, we'll get `The participant was in the meeting.` If we instead call it as `<<participantInMeeting EmployeeProfileSetupMeeting AnotherPersonAltogether>>`, we'll get nothing at all.
+
+Notice that we're using the `$list` widget in a clever way we haven't seen yet: to [[display some wikitext only if some condition is met|Hiding and Showing Things]]. We know the filter will have either one result, namely the title of the meeting (if the participant was in the meeting), in which case the contents of the list widget will get displayed once, or zero results (if the participant was not in the meeting), in which case the contents of the list widget will not be displayed at all. We don't care exactly what the output of the filter is, only whether there was any.
+
+Here's how this relates to text substitution. Suppose we call the macro thus:
+
+```html
+<<participantInMeeting "EmployeeProfileSetupMeeting" "]][[SomeRandomGuy">>
+```
+
+`]][[SomeRandomGuy` is a pretty weird name for a person (see [[Bobby Tables|https://explainxkcd.com/327/]]), but this causes the filter to become:
+
+```html
+[title[EmployeeProfileSetupMeeting]contains:participants[]][[SomeRandomGuy]]
+```
+
+We then see `The participant was in the meeting.` -- but `]][[SomeRandomGuy` is //not// part of the participants field! (We created a second filter run -- a new set of outer `[square brackets]` -- for `SomeRandomGuy`, so that no matter what the output of the first filter run was, `SomeRandomGuy` would also be part of the output. We'll see more on [[multiple filter runs|Multi-Run Filters]] soon.)
+
+In contrast, if we use variable references inside the filter, we don't see the message:
+
+```html
+<$set name=participant value="]][[SomeRandomGuy">
+<$set name=meetingTitle value="EmployeeProfileSetupMeeting">
+<$list filter="[title<meetingTitle>contains:participants<participant>]">
+  The participant was in the meeting.
+</$list>
+</$set>
+</$set>
+```
+
+In this case, the `participant` variable can have as many weird characters in it as we want, and we still get the correct result. That's because this time, TiddlyWiki has more smarts: looking at the filter, it sees instructions that the value of the variable `participant` should be matched against a field, so as it checks this, it won't be wondering if there's a filter operator inside `participant`. It ''looks at the value of the variable separately from the text of the filter expression'' as it figures out what to do.
+
+Why doesn't it know that when we use a macro? Well, when we call a macro, TiddlyWiki first goes in and replaces all of the values with the parameters of the macro via text substitution, then ''in an entirely separate step'' it starts deciding how to render the wikitext that comes out of the macro (in this case, as part of a `$list` widget). By the time it gets to evaluating the filter in the `$list` widget, it only has a single chunk of wikitext, and it has no way of telling whether the `]]` was originally part of a macro parameter (and thus intended to be matched to a value in the `participants` field) or whether it was part of the macro body (and thus intended to mark the end of the filter run).
+
+Clear as mud? Let's look at an example.
+
+
+!! When you want text substitution
+
+Although the simplicity and context-blindness of text substitution can cause problems, much of the time it's actually helpful. We saw earlier that this doesn't return the manager's phone number:
+
+```html
+{{ {{!!manager}}!!phone }}
+```
+
+Specifically, this doesn't work because TiddlyWiki doesn't process wikitext within the `{{ outer curly braces }}`. Even if it did, what TiddlyWiki would see after it processed the inner `{{!!manager}}` would be three different chunks: `{{ `, `ChrisSmith`, and `!!phone }}`.
+
+But this does work:
+
+```html
+\define getPhone(person)
+{{$person$!!phone}}
+\end
+
+<$macrocall $name="getPhone" person={{!!manager}} />
+```
+
+Let's walk through the steps TiddlyWiki takes to render this to understand why this one works. 
+
+# When TiddlyWiki reaches the `$macrocall` widget, it goes to ''expand the macro''. As it does this, it first looks up `{{!!manager}}` to get the value of the parameter `person` to pass to the macro. The value is `ChrisSmith` (or whoever the manager of the person represented by the current tiddler is), so this value is passed into the macro.
+# TiddlyWiki performs a ''text substitution operation'' on the body of the macro using this parameter value, dumping the value `ChrisSmith` into the macro body in place of the `$person$` placeholder. The result of this substitution is the single chunk of wikitext `{{ChrisSmith!!phone}}`. This expansion replaces the `$macrocall` widget.
+# Now that the macro is expanded, TiddlyWiki starts ''parsing the output of that macro as wikitext'', sees the transclusion chunk `{{ChrisSmith!!phone}}`, and replaces that with the value of the `phone` field. (If the `phone` field contained further transclusions, TiddlyWiki would repeat this step again.)
+
+In other words, text substitution resulted in a single chunk of valid wikitext, which meant TiddlyWiki could understand what we were asking for.
+
+
+!! When you don't want text substitution
+
+If you don't need text substitution in a macro, you can use a different placeholder syntax, `<<__parameter__>>`, and avoid the possibility of bad effects. If you have the option to do this, you usually should.
+
+In all of our examples so far in this section, we have needed text substitution. Here's a modified `participantInMeeting` macro where we wouldn't need it:
+
+```html
+\define inMeetingIfFilterTrue(filter)
+<$list filter="$filter$">
+  The participant was in the meeting.
+</$list>
+\end
+
+<<inMeetingIfFilterTrue "[title[EmployeeProfileSetupMeeting]contains:participants[JaneDoe]]">>
+```
+
+This could land us in trouble, for example, if we passed in a filter that contained a double quote. Instead, we can do it this way:
+
+```html
+\define inMeetingIfFilterTrue(filter)
+<$list filter=<<__filter__>>>
+  The participant was in the meeting.
+</$list>
+\end
+```
+
+This works just like standard variable transclusions using the `<<variable>>` syntax in every way, except that by adding the extra double underscores, the reference is to a parameter of the macro rather than a variable.
+
+
+!! Exercises
+
+{{Ex:BypassSecurityWithTextSubstitution||ExerciseTemplate}}
+{{Ex:PreserveSecurityWithTextSubstitution||ExerciseTemplate}}
+{{Ex:SubstitutionBackporting||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

@@ -1,0 +1,13 @@
+answer: `<$macrocall $name="showRedText" text={{!!warning}}/>`
+created: 20201231183816473
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409201602515
+origin: Transclusions
+qtype: rememberq
+question: What wikitext syntax would you use to call a macro named `showRedText` with a parameter `text` set to the value of the `warning` field of the current tiddler?
+seen: yes
+tags: Takeaway
+title: Ta:20201231183815120
+type: text/vnd.tiddlywiki

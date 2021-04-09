@@ -1,0 +1,7 @@
+created: 20210409193703559
+modified: 20210409193742699
+tags: Answer
+title: Ex:EmptyMacroCall/answer
+type: text/vnd.tiddlywiki
+
+There is no output at all, just like if you refer to a variable that has gone out of scope or was never created.

@@ -1,0 +1,12 @@
+complete: 
+created: 20200603222900757
+length: m
+modified: 20210409194829943
+origin: The Finer Points of Macros
+tags: Exercise
+title: Ex:MacroCallAsParameter
+type: text/vnd.tiddlywiki
+
+Rewrite the example in //The `$macrocall` widget can take variables as parameters// to call a macro `animalLinkText` to get the value of the `linkText` parameter to the `wikipediaLink` macro. In other words, replace the `<<linktext>>` variable that's currently there with a macro.
+
+The `animalLinkText` macro should take a letter as a parameter and output the text `An animal which begins with {LETTER}`, where `{LETTER}` is the parameter passed. Update the example to display the appropriate link text for each of the three animals.

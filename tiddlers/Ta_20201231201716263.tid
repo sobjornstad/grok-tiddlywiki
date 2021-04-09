@@ -1,0 +1,13 @@
+answer: `[parent{!!title}]`
+created: 20201231201718070
+due: 202104141200
+ease: 250
+ivl: 5
+modified: 20210409220119359
+origin: Filters and Transclusions
+qtype: rememberq
+question: Write a filter to find all tiddlers whose `parent` field is set to the title of the current tiddler. Use a field transclusion.
+seen: yes
+tags: Takeaway
+title: Ta:20201231201716263
+type: text/vnd.tiddlywiki
