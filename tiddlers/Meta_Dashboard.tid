@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210502190118074
+modified: 20210502190504577
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -14,7 +14,6 @@ type: text/vnd.tiddlywiki
 !! Content
 
 * Create a little video introducing the book for "How to Use This Book". (Do this closer to the end in case things change...) Could have a landing page with this, too?
-* The pattern explicated in [[Using a Tag Tiddler as a Template]] does not actually work (it works, but not when it's on the ViewTemplate, because it ends up showing up twice on the tag tiddler). I'm leaning towards just removing this and all references to it, as it's not very important.
 
 
 !! Technical
