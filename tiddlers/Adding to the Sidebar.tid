@@ -1,0 +1,44 @@
+created: 20200718041838565
+description: Arbitrary tiddlers can be added to the sidebar to expose custom navigation options or any other content you like.
+modified: 20210502190226638
+parent: Looking Under the Hood
+tags: Section
+title: Adding to the Sidebar
+type: text/vnd.tiddlywiki
+
+It's frequently useful to add content or navigational functions to the sidebar. In particular, there are several types of custom navigation that would be immediately helpful for our office-notes wiki:
+
+* There is currently no easy way to order and ''look at journal tiddlers by date'', something which will likely be a common task.
+* Similarly, ''listing our meetings by date'' would be helpful. We already have a `MeetingList`, but right now we have to remember that it exists and search for it.
+* We might like a ''hierarchical view of our projects'', or at least a list of them, in the sidebar so we can quickly navigate through them.
+
+Let's create a new tab in the sidebar called `Views` to store custom ways of looking at some of our tiddlers. Within the `Views` tab, we'll add some vertical tabs, just like the default `More` tab does, for `Journal`, `Meetings`, and `Projects`.
+
+The first step is to ''create a tiddler for each inner tab''. As noted earlier, we already have a tiddler that can serve as the meeting list, `MeetingList`; you may, however, want to clean out some extra crud that we have added to it in previous exercises, so that it just shows a simple list of meetings. For the journal list, clone the meeting list and tweak the filter so that it selects tiddlers with the `Journal` tag instead of the `Meeting` tag. 
+
+For the project list, let's look at a slightly different method. All of our tiddlers are tagged `Project`, so why not just make `Project` -- the tagging tiddler -- into the list? This fits perfectly with the standard dual function of tags in TiddlyWiki as both tiddlers (units of content) and a mechanism for building structure. Go ahead and edit this tiddler, or create it if it doesn't exist in your wiki, and add an appropriate TOC macro to it. (Have a look at [[Creating Hierarchies with a Table of Contents]] if you've forgotten how.)
+
+The next step is to create a tiddler that ''combines those inner tabs into a single tiddler''. Let's call this tiddler `$:/yourname/Views`. We'll set things up so that we can add new tabs by simply tagging the tab tiddler `$:/yourname/Views`:
+
+```html
+<<tabs
+  tabsList:"[tag[$:/yourname/Views]]"
+  default:"JournalList"
+  class:"tc-vertical">>
+```
+
+Go back and tag each of the inner-tab tiddlers with `$:/yourname/Views`. You should immediately see tabs appear for them within the `$:/yourname/Views` tiddler.
+
+The last step is to make the Views tiddler itself show up as a new tab on the sidebar. This is left as an exercise.
+
+
+!! Exercises
+
+{{Ex:ViewsOnSidebar||ExerciseTemplate}}
+{{Ex:FriendlyViewsNames||ExerciseTemplate}}
+{{Ex:SidebarCurrentTiddler||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

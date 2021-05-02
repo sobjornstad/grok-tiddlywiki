@@ -1,9 +1,0 @@
-created: 20210207181906852
-length: m
-modified: 20210207183220583
-origin: Using a Tag Tiddler as a Template
-tags: Exercise
-title: Ex:ContactInformationTemplateTag
-type: text/vnd.tiddlywiki
-
-Move the `ContactInformationTemplate` from `$:/yourname/TiddlerTypeTemplates/Contact` to the `Contact` tiddler using this pattern.
