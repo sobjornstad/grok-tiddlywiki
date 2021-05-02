@@ -1,6 +1,6 @@
 answer: All of the (non-shadow) tiddlers in the wiki.
 created: 20201230213543900
-modified: 20210223170407843
+modified: 20210409161733822
 origin: Anatomy of Filter Steps
 qtype: rememberq
 question: If a filter run does not begin with a constructor, what are the input tiddlers of the first step in the run?

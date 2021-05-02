@@ -1,6 +1,6 @@
 answer: The suffix is silently ignored.
 created: 20201230213930371
-modified: 20210226140317379
+modified: 20210409161738792
 origin: Anatomy of Filter Steps
 qtype: rememberq
 question: What happens if you add a suffix to a filter operator that doesn't support suffixes?

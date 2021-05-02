@@ -1,6 +1,6 @@
 answer: `participants`
 created: 20201230205249605
-modified: 20210302162952274
+modified: 20210409161712058
 origin: Anatomy of Filter Steps
 qtype: rememberq
 question: In the filter step `field:participants[Jane]`, what is the //suffix//?

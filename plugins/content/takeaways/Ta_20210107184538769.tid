@@ -1,6 +1,6 @@
 answer: `caption`
 created: 20210107184540021
-modified: 20210213204323694
+modified: 20210418141631978
 origin: Adding to the Sidebar
 qtype: rememberq
 question: What field of a tiddler do you set to change the wording displayed on a tab rendered with the `tabs` macro?

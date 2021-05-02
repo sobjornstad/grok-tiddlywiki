@@ -1,6 +1,6 @@
 answer: `set` and `setTo`.
 created: 20210107231454259
-modified: 20210220191950247
+modified: 20210418160744788
 origin: Buttons and Input Widgets
 qtype: rememberq
 question: What two attributes of the `$button` widget do you use to make the button set a tiddler field to a value?

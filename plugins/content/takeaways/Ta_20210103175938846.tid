@@ -1,6 +1,6 @@
 answer: Store the images/files in a folder outside of the wiki and reference them from within the wiki.
 created: 20210103175940169
-modified: 20210209124421487
+modified: 20210418131836696
 origin: Images and Attachments
 qtype: rememberq
 question: If you need to attach many images or other files to your single-file wiki, what approach should you take to avoid your wiki becoming too large?

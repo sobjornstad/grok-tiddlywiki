@@ -1,6 +1,6 @@
 answer: `Jane`
 created: 20201230205259591
-modified: 20210302162954404
+modified: 20210409161713518
 origin: Anatomy of Filter Steps
 qtype: rememberq
 question: In the filter step `field:participants[Jane]`, what is the //parameter//?

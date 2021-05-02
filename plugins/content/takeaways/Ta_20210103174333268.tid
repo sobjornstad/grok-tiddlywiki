@@ -1,6 +1,6 @@
 answer: `currentTab`
 created: 20210103174335087
-modified: 20210302162950034
+modified: 20210410192122649
 origin: Tabs
 qtype: rememberq
 question: When rendering each tab in a `tabs` macro call, what variable contains the title of the tiddler being rendered?

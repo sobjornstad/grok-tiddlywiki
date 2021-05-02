@@ -1,5 +1,5 @@
 created: 20210109225557968
-modified: 20210329214924356
+modified: 20210502163242181
 origin: Stylesheets
 qtype: remembercz
 question: Inline stylesheets are not {scoped to} the tiddler containing them.

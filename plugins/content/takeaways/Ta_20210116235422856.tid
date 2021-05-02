@@ -1,6 +1,6 @@
 answer: By leaving a blank line in your wikitext.
 created: 20210116235424609
-modified: 20210220191912655
+modified: 20210418131947884
 origin: Block Mode and Inline Mode
 qtype: rememberq
 question: If you are in inline mode within some wikitext, how do you re-enter block mode prior to a block-mode element such as a list?

@@ -1,6 +1,6 @@
 answer: `*`
 created: 20210206183229677
-modified: 20210316171323521
+modified: 20210409165638425
 origin: Common Filter Operators
 qtype: rememberq
 question: What suffix to the `search` operator causes it to find matches in any field of a tiddler?

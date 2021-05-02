@@ -1,6 +1,6 @@
-answer: `\define coloredText(text, color: "red")`
+answer: `\define coloredText(text, color:"red")`
 created: 20201231040554973
-modified: 20210320152555978
+modified: 20210409195527271
 origin: The Finer Points of Macros
 qtype: rememberq
 question: How would you change the following macro definition to supply a default value `red` for the parameter `color`?: `\define coloredText(text, color)`

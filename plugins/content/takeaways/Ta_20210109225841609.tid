@@ -1,6 +1,6 @@
 answer: `@@text-align: center;` at the start of the block, and `@@` at the end.
 created: 20210109225843207
-modified: 20210218194512614
+modified: 20210502163255271
 origin: Stylesheets
 qtype: rememberq
 question: What wikitext syntax can you use to apply the style attribute `text-align: center` to a block of wikitext?

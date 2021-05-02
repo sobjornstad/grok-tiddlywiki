@@ -1,6 +1,6 @@
 answer: The `text` (content) field is stored in a separate file, alongside a `.meta` file containing the other fields.
 created: 20210109232512868
-modified: 20210218193655174
+modified: 20210502164049691
 origin: Writing Shell Scripts Against a TiddlyWiki
 qtype: rememberq
 question: How are tiddlers containing binary data (e.g., images) stored in a folder wiki?

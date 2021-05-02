@@ -1,6 +1,6 @@
 answer: `ContactInformationTemplate` (with `JaneDoe` as the current tiddler)
 created: 20201231190053870
-modified: 20210209124317497
+modified: 20210409212751159
 origin: Templates and the Current Tiddler
 qtype: rememberq
 question: In the wikitext syntax `{{JaneDoe||ContactInformationTemplate}}`, which tiddler is being transcluded?

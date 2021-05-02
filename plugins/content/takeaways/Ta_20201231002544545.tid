@@ -1,6 +1,6 @@
 answer: `<<currentTiddler>>`
 created: 20201231002546410
-modified: 20210226133304719
+modified: 20210409173106630
 origin: Your First Dynamic List
 qtype: rememberq
 question: Within the content of a `$list` widget, what placeholder represents the output of the filter that is currently being processed (by default)?

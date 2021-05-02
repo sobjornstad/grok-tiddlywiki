@@ -1,6 +1,6 @@
 answer: The `qualify` macro.
 created: 20210208023220835
-modified: 20210302162843801
+modified: 20210502162612438
 origin: Qualification
 qtype: rememberq
 question: What macro creates a name that is unique among all places the call to the macro is transcluded?

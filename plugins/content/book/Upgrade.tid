@@ -1,7 +1,7 @@
 created: 20210407135618740
-modified: 20210407135456546
+modified: 20210502170701666
 tags: Fragment
 title: Upgrade
 type: text/vnd.tiddlywiki
 
-To update an old version of //Grok TiddlyWiki// to this version without losing your takeaway progress and other customizations, drag the following link into your wiki: <$link to="$:/plugins/sobjornstad/GrokTiddlyWiki"><$text text={{{ [[Grok TiddlyWiki version ]addsuffix{Metadata##version}] }}}/></$link>. Sections, takeaways, exercises, and any other tiddlers that you have changed will be untouched during an upgrade.
+To update an old copy of //Grok TiddlyWiki// to this version without losing your takeaway progress and other customizations, drag the following link into your wiki: <$link to="$:/plugins/sobjornstad/GrokTiddlyWiki"><$text text={{{ [[Grok TiddlyWiki version ]addsuffix{Metadata##version}] }}}/></$link>. Sections, takeaways, exercises, and any other tiddlers that you have changed will be untouched during an upgrade.

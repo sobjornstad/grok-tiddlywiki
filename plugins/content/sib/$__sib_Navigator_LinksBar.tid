@@ -1,6 +1,6 @@
 created: 20210120005004574
 list-after: $:/core/ui/SideBarSegments/site-subtitle
-modified: 20210325120310784
+modified: 20210502171932430
 tags: $:/tags/SideBarSegment
 title: $:/sib/Navigator/LinksBar
 type: text/vnd.tiddlywiki
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 [[outline|Outline]]&nbsp;·
 [[exercises|Exercise Browser]]&nbsp;·
 [[takeaways|Takeaway Browser]]&nbsp;·
-<a href={{$:/sib/DonationLink}} class="tc-tiddlylink tc-tiddlylink-resolves">donate</a>
+<a href={{$:/sib/DonationLink}} class="tc-tiddlylink tc-tiddlylink-resolves">pay what you like</a>
 </div>
 <style>
 .gtw-sidebar-links a, .gtw-sidebar-links button {

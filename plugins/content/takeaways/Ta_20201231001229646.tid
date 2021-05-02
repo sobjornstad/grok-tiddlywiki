@@ -1,5 +1,5 @@
 created: 20201231001236890
-modified: 20210313141733244
+modified: 20210409171715214
 origin: HTML
 qtype: remembercz
 question: In HTML, a //void element// is one that has only a/n {c1::opening tag} and no {c1::closing tag}.

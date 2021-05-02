@@ -1,6 +1,6 @@
 created: 20210120034946005
 description: Portions of tiddlers can be hidden and shown selectively using the `$list` widget and the `$reveal` widget.
-modified: 20210327170940605
+modified: 20210418165505272
 parent: Tips and Tricks
 showtest: 
 tags: Section
@@ -91,7 +91,7 @@ In addition to its ability to override whether parsing occurs in block or inline
 
 !!! `$view` fallbacks
 
-The `$view` widget is much like the `$transclude` widget but displays the field contents in different formats rather than wikifying them, like dates or URL-encoded text. It supports fallbacks exactly the same way as `$transclude` does:
+The `$view` widget is much like the `$transclude` widget but displays the field contents in different formats, like dates or URL-encoded text, rather than wikifying them. It supports fallbacks exactly the same way as `$transclude` does:
 
 {{Sn:ViewFallback||MagicSnippet}}
 

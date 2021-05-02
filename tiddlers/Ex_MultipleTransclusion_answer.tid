@@ -1,9 +1,0 @@
-created: 20200604022456155
-modified: 20210409200940104
-tags: Answer
-title: Ex:MultipleTransclusion/answer
-type: text/vnd.tiddlywiki
-
-Generally, this works the way you would hope -- first TiddlyWiki renders the “furthest down” tiddler, then it moves one level up and includes that content in that tiddler, and so on until it comes to the “top-level” transclusion.
-
-There are some edge cases, which mostly involve the complexities of TiddlyWiki's concept of the //current tiddler//. We'll talk about the current tiddler in the [[next section|Templates and the Current Tiddler]].

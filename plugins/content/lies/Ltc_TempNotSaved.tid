@@ -1,0 +1,8 @@
+created: 20210418152518443
+description: are not saved with your wiki
+modified: 20210418152628904
+tags: Lie
+title: Ltc:TempNotSaved
+type: text/vnd.tiddlywiki
+
+Actually, it depends on [[what saver|Options for Saving and Hosting Your Wiki]] you are using -- some savers won't discard temporary tiddlers. But you should always assume that they'll go away, to avoid creating a wiki that only works with some savers.

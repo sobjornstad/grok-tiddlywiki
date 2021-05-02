@@ -1,6 +1,6 @@
 answer: Italic text (the `em` HTML element) is an inline-mode element. When TiddlyWiki is inside an inline-mode element, it will not look for block-mode elements like new paragraphs.
 created: 20210116235910756
-modified: 20210302163133206
+modified: 20210410142936982
 origin: Block Mode and Inline Mode
 qtype: rememberq
 question: Using the concept of inline mode, explain why opening italics with `//` and never closing them results in the remainder of the tiddler turning into a single paragraph.

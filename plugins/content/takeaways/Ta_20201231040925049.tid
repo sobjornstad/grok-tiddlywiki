@@ -1,6 +1,6 @@
-answer: `<$macrocall $name=wikipediaLink name=Aardvark/>`
+answer: `<$macrocall $name="wikipediaLink" name="Aardvark" />`
 created: 20201231040927890
-modified: 20210302161352298
+modified: 20210409195600416
 origin: The Finer Points of Macros
 qtype: rememberq
 question: Use a `$macrocall` widget to achieve the same effect as the following wikitext: `<<wikipediaLink name:"Aardvark">>`

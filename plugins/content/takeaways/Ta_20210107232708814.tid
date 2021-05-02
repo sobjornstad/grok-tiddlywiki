@@ -1,6 +1,6 @@
 answer: `<table>`, `<tr>`, `<td>`, and `<th>`.
 created: 20210107232710161
-modified: 20210220191857589
+modified: 20210418160910734
 origin: Buttons and Input Widgets
 qtype: rememberq
 question: What four basic HTML elements are used to construct tables?

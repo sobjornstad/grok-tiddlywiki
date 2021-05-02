@@ -1,6 +1,6 @@
 answer: You probably want to store multiple pieces of information about each contact, and a data tiddler can only store one value per index.
 created: 20210103184743122
-modified: 20210220192048757
+modified: 20210410193229772
 origin: Data Tiddlers
 qtype: rememberq
 question: Why are data tiddlers likely a poor choice for storing the email addresses of contacts?

@@ -1,5 +1,5 @@
 created: 20210206182950019
-modified: 20210206182853664
+modified: 20210409164849480
 tags: Answer
 title: Ex:JohnDoeInAnyField/answer
 type: text/vnd.tiddlywiki
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 [search:*[JohnDoe]]
 ```
 
-To prevent $:/AdvancedSearch from appearing in your search results because you have typed text containing `JohnDoe` in the search box, you might want to use:
+To prevent tiddlers related to $:/AdvancedSearch from appearing in your search results because you have typed text containing `JohnDoe` in the search box, you might want to use:
 
 ```html
 [!is[system]search:*[JohnDoe]]

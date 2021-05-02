@@ -1,6 +1,6 @@
 created: 20200603200012761
 length: s
-modified: 20210130213850591
+modified: 20210409134556285
 origin: Creating Hierarchies with a Table of Contents
 tags: Exercise
 title: Ex:FudgeAdviceTiddler
@@ -14,4 +14,4 @@ Create such a tiddler with the following text, and make it a child of the `Emplo
 JaneDoe told me, while we were together at the EmployeeProfileSetupMeeting, that I should be very careful about saying the word "fudge" in this office, due to an incident involving Robert at the 2018 Christmas party that nobody wants to talk about.
 ```
 
-Check the `OnboardingProcess` table of contents again. Did you get a third level of hierarchy? In your new `MeetingList`, did you get a second level?
+Check the `OnboardingProcess` table of contents again. Did you get a third level of hierarchy?

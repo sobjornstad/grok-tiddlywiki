@@ -1,6 +1,6 @@
 answer: A field of the tiddler where the template is being transcluded.
 created: 20210208023607305
-modified: 20210315201040313
+modified: 20210502162616280
 origin: Qualification
 qtype: rememberq
 question: The `qualify` macro is usually //not// needed when storing state used on a template where?

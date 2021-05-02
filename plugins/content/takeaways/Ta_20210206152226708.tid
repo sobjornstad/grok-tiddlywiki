@@ -1,6 +1,6 @@
 answer: //Dominant appending// (the tiddler appears in the last place it showed up and is removed from any prior position in the list).
 created: 20210206152230480
-modified: 20210408141203117
+modified: 20210410183041079
 origin: Multi-Run Filters
 qtype: rememberq
 question: When the same tiddler appears in the output of multiple consecutive filter runs, what concept does TiddlyWiki use to determine where the tiddler should be listed?

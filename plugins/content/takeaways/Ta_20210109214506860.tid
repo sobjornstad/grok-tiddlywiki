@@ -1,6 +1,6 @@
 answer: `actions`
 created: 20210109214508545
-modified: 20210302161216287
+modified: 20210418162313498
 origin: Creating Tiddlers With Predefined Fields
 qtype: rememberq
 question: What attribute of a `$button` widget do you use to specify action widgets that it can trigger?

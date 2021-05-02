@@ -1,5 +1,5 @@
 created: 20210207215123361
-modified: 20210407135909459
+modified: 20210502160129548
 tags: Answer
 title: Ex:EmptyAtField/answer
 type: text/vnd.tiddlywiki
@@ -10,3 +10,5 @@ type: text/vnd.tiddlywiki
 ```
 
 You might have also used a `$transclude` widget; in this case it's equivalent since there is no wikitext to wikify in the `at` field if we're using it normally. In [[Working with Dates]], we'll learn that the `$view` widget has some special features for dates that usually make it more useful than the `$transclude` widget.
+
+It's worth noting that TiddlyWiki here makes a distinction between an empty `at` field and an `at` field that doesn't exist at all: if the `at` field exists but is empty, it won't use the fallback. If you don't want there to be a difference between these states, use a filter with the `has` operator instead.

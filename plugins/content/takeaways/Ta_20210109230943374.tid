@@ -1,6 +1,6 @@
 answer: `/home/alice/myplugin-wiki/plugins/MyPlugin`
 created: 20210109230944603
-modified: 20210217215031612
+modified: 20210502163553026
 origin: Creating Plugins
 qtype: rememberq
 question: If you are creating a plugin called `MyPlugin`, and your `tiddlywiki.info` file is in the folder `/home/alice/myplugin-wiki`, in what folder should you place the tiddlers that make up your plugin?

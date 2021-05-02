@@ -1,5 +1,5 @@
 created: 20201122031957511
-modified: 20201122032411150
+modified: 20210409201513490
 tags: Answer
 title: Ex:VariableTransclusion/answer
 type: text/vnd.tiddlywiki
@@ -12,4 +12,4 @@ The variable reference is accessible within the transcluded tiddler -- the scope
 
 Then when viewing Tiddler 1, `test` appears, even though `myVariable` was not physically defined in Tiddler 2.
 
-This “bleed-over” proves quite useful in many situations, especially ones that involve templates (a concept we'll discuss in the next section).
+This “bleed-over” proves quite useful in many situations, especially ones that involve templates (a concept we'll discuss in the [[next section|Templates and the Current Tiddler]]).

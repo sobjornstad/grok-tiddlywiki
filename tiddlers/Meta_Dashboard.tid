@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210409222146378
+modified: 20210502174457238
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -13,13 +13,10 @@ type: text/vnd.tiddlywiki
 
 !! Content
 
-* [In progress] If I can, try running through exercises to make sure they all work as intended.
 * Make sure that we have sufficient creative and why questions -- these can be the hardest to spot at first. And generally revise question wording?
 * Create a little video introducing the book for "How to Use This Book". (Do this closer to the end in case things change...) Could have a landing page with this, too?
-* [[Creating Evergreen Notes]]: clarify the relationship between a retrieval context and relating to as many items as possible, including in the takeaways.
-* Review takeaways for "on a Mac"
-* [[Text Substitution]] is still not that clear :(
-* [[Ex:SubstitutionBackporting]]  could possibly be used to explain that <__substitutions__> won't work when the result isn't wikified
+* [[Ex:SubstitutionBackporting]]  could possibly be used to explain that <__substitutions__> won't work when the result isn't wikified. It is mentioned in [[Summary of Macro and Transclusion Syntax]], but it seems weird to only mention this in the summary.
+* The pattern explicated in [[Using a Tag Tiddler as a Template]] does not actually work (it works, but not when it's on the ViewTemplate, because it ends up showing up twice on the tag tiddler). I'm leaning towards just removing this and all references to it, as it's not very important.
 
 
 !! Technical
@@ -32,6 +29,8 @@ type: text/vnd.tiddlywiki
 
 
 !! Nice-to-have things, maybe for a later edition
+
+* [[Text Substitution]] is still not that clear :(
 
 For takeaways:
 

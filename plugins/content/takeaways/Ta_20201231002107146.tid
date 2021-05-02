@@ -1,6 +1,6 @@
 answer: The names of widget elements begin with a dollar sign (`$`), like `<$list>` or `<$link>`.
 created: 20201231002109497
-modified: 20210302163303970
+modified: 20210418131756234
 origin: Widgets
 qtype: rememberq
 question: How can widgets can be distinguished from HTML tags in wikitext?

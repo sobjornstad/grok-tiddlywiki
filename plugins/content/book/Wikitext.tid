@@ -1,6 +1,6 @@
 created: 20210115203325002
 description: Wikitext is a markup language used to format tiddlers.
-modified: 20210324115251577
+modified: 20210408175519881
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Wikitext
@@ -20,7 +20,7 @@ Another useful tool as you're learning is TiddlyWiki's ''editor toolbar'', which
 
 {{side-by-side-wikitext.png}}
 
-Sometimes text in the raw markup language (with TiddlyWiki, wikitext) is called ''source'', and the displayed version is called ''output''. In the screenshot above, the left half is source and the right half is output. The process of turning source into output and displaying it on the screen is called ''rendering''.
+Sometimes text in the raw markup language (in TiddlyWiki, that's wikitext) is called ''source'', and the displayed version is called ''output''. In the screenshot above, the left half is source and the right half is output. The process of turning source into output and displaying it on the screen is called ''rendering''.
 
 !! Takeaways
 

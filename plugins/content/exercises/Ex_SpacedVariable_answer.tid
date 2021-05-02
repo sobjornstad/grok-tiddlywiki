@@ -1,7 +1,9 @@
 created: 20201121235528457
-modified: 20201121235504160
+modified: 20210409192453536
 tags: Answer
 title: Ex:SpacedVariable/answer
 type: text/vnd.tiddlywiki
 
 It becomes impossible to reference (if you write `<<some variable>>`, nothing will appear). This is because words after the first space in the angle brackets are treated as //parameters// rather than as part of the name of the variable. This will make sense in a moment when we talk about [[Macros]].
+
+You might wonder if you could say `<<"the eis">>` to refer to a variable name containing a space, by analogy to the way you can include multiple words in the value of an [[HTML attribute|HTML]], but this isn't valid syntax.

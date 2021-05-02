@@ -1,6 +1,6 @@
-answer: `+`
+answer: `+` (or `:and`)
 created: 20210206152410753
-modified: 20210302160620109
+modified: 20210410183109577
 origin: Multi-Run Filters
 qtype: rememberq
 question: What prefix can you add to a filter run to AND it with the accumulated results of previous runs?

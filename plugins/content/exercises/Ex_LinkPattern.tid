@@ -1,7 +1,7 @@
 complete: 
 created: 20201122171809633
 length: m
-modified: 20210130174503476
+modified: 20210409203059428
 origin: Your First Dynamic List
 tags: Exercise
 title: Ex:LinkPattern
@@ -15,7 +15,7 @@ There's a problem with this pattern that we've been using throughout this sectio
 </$list>
 ```
 
-The problem is that if the name of the `currentTiddler` has a space in it, it is not linked. The only reason many of them have worked so far as that they're in CamelCase and as such are linked automatically.
+The problem is that if the name of the `currentTiddler` has a space in it, it is not linked. The only reason the results have displayed correctly so far is that they're in CamelCase and as such are linked automatically.
 
 To explicitly create internal links, as we alluded to back in [[Widgets]], we can use the `$link` widget:
 
@@ -23,6 +23,6 @@ To explicitly create internal links, as we alluded to back in [[Widgets]], we ca
 <$link to="Tiddler Name to Link To">Text of the Link</$link>
 ```
 
-Modify the list you created in [[Ex:BulletedMeetingList]], using the `$link` widget to fix this problem.
+Add a space to the title of one of your meeting tiddlers, so you can see the problem, then modify the `MeetingList` you created in [[Ex:BulletedMeetingList]], using the `$link` widget to fix this problem.
 
 //Hint//: `<<currentTiddler>>` will get replaced in more places than you might think.

@@ -1,10 +1,10 @@
 created: 20210116205525709
-modified: 20210116210039159
+modified: 20210409194304260
 tags: 
 title: Sn:DefaultMacroParameterValues
 type: text/vnd.tiddlywiki
 
-\define wikipediaLink(articleName, linkText: "Wikipedia Link")
+\define wikipediaLink(articleName, linkText:"Wikipedia Link")
 [[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
 \end
 

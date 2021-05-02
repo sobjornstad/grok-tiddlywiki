@@ -1,6 +1,6 @@
 answer: Use a pragma `\import [prefix[W]]`.
 created: 20210107015425774
-modified: 20210208151940525
+modified: 20210418134733750
 origin: Global Macros
 qtype: rememberq
 question: How would you load macros found in all tiddlers that begin with the letter `W` into the context of the current tiddler?

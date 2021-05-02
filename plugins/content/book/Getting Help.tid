@@ -1,6 +1,6 @@
 created: 20200822204627346
 description: Where to look and who to ask for help on TiddlyWiki if you can't figure something out yourself.
-modified: 20210407130520047
+modified: 20210502164446089
 parent: Resources
 tags: Section
 title: Getting Help
@@ -16,5 +16,5 @@ You also shouldn't miss:
 
 * The [[documentation|https://tiddlywiki.com/]] (enough said)
 * The [[dev wiki|https://tiddlywiki.com/dev/]], an addendum to the manual with information on things like creating plugins and writing JavaScript modules for TiddlyWiki
-* [[The Book of TiddlyWiki: Advanced Customization|https://my-tw-notes.droppages.com/TheBook.pdf]], a deeper dive into many of the concepts discussed in this book, particularly the stuff in Chapter 5, and a great reference if you're not sure where to start with a particular customization.
+* [[The Book of TiddlyWiki: Advanced Customization|https://my-tw-notes.droppages.com/TheBook.pdf]], a deeper dive into many of the concepts discussed in this book, particularly the stuff in Chapters 6 and 7, and a great reference if you're not sure where to start with a particular customization.
 * [[Standard Nomenclature|https://anthonymuscio.github.io/#Standard%20Nomenclature]], an exhaustive list of all the brackets and quotes and other mysterious syntax of [[wikitext|Wikitext]]. It's likely to be overwhelming for beginners, but once you've worked through most of this book, it may be quite helpful.

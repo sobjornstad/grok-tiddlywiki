@@ -1,6 +1,6 @@
 created: 20200822195432205
 description: Every little bit of page formatting can be customized by adding CSS to your wiki.
-modified: 20210327171048437
+modified: 20210502163153128
 parent: Getting Technical
 prerequisite: Basic knowledge of CSS
 tags: Section
@@ -32,7 +32,7 @@ See the [[documentation|https://tiddlywiki.com/#Styles%20and%20Classes%20in%20Wi
 
 !! Stylesheets in tiddlers
 
-For styles and stylesheets you want to use in more than a single template or tiddler, a more robust and philosophically sound approach is to place them in ''tiddlers of their own''.
+For styles and stylesheets you want to use in more than a single template or tiddler, a more robust approach is to place them in ''tiddlers of their own''.
 
 Tiddlers tagged `$:/tags/Stylesheet` will be incorporated in the global stylesheet and apply to all tiddlers in the wiki at all times. Any changes to such tiddlers take effect as soon as you save the tiddler.
 

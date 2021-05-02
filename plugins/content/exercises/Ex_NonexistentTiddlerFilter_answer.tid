@@ -1,11 +1,11 @@
 created: 20201230212441389
-modified: 20201230212730462
+modified: 20210409161640155
 tags: Answer
 title: Ex:NonexistentTiddlerFilter/answer
 type: text/vnd.tiddlywiki
 
 This works fine: the nonexistent tiddler name is passed through to any following filter steps and can be manipulated just like tiddlers that do exist. Of course, some filter steps will not make much sense in this case (`tag` and `links` will never return any results, for instance).
 
-Later on, we'll see that we can use filters to do things like manipulate text or do math. The inputs in this case will be random strings of text or numbers rather than tiddlers, but many filter operators will still work great.
+Later on, we'll see that we can use filters to do things like manipulate text or do math. The inputs in this case will often be arbitrary strings of text or numbers rather than tiddler names, but many filter operators will still work great.
 
-You can use the `is` operator with the `tiddler` parameter to identify tiddlers that don't exist. For instance, if you said `[title[I Don't Exist]is[tiddler]]`, you would get no results.
+You can use the `is` operator with the `tiddler` parameter to filter out tiddlers that don't exist. For instance, if you said `[title[I Don't Exist]is[tiddler]]`, you would get no results, since `I Don't Exist` is not a tiddler.

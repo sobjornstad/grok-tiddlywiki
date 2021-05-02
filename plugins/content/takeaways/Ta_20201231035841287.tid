@@ -1,6 +1,6 @@
 answer: At the end of that tiddler.
 created: 20201231035843620
-modified: 20210223170326284
+modified: 20210409195450696
 origin: The Finer Points of Macros
 qtype: rememberq
 question: When does a macro defined at the top of a tiddler go out of scope?

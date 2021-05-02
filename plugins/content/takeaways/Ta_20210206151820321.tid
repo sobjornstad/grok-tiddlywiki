@@ -1,6 +1,6 @@
 answer: `[tag[Journal]] [tag[Meeting]]`
 created: 20210206151821987
-modified: 20210314155110652
+modified: 20210410183003166
 origin: Multi-Run Filters
 qtype: rememberq
 question: Write a filter expression that shows all tiddlers that are tagged `Journal` or `Meeting`.

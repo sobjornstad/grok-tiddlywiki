@@ -1,5 +1,5 @@
 created: 20200603211145810
-modified: 20210117013629310
+modified: 20210409193524051
 tags: Answer
 title: Ex:MacroPosition/answer
 type: text/vnd.tiddlywiki
@@ -8,6 +8,4 @@ In either case, you get ugly and useless output:
 
 {{Sn:TextBeforeMacro||MagicSnippet}}
 
-Lesson 1: Pragmas, including `\define`, have to be the very first thing in a tiddler (except for other pragmas). If anything else at all comes before them, they're treated as normal text. Irritatingly, this includes [[comments|Comments]], so you have to put any explanations of your macros after the macros.
-
-Lesson 2: If you call a macro that doesn't exist, you get //no output at all// -- the macro call just disappears.
+Pragmas, including `\define`, have to be the very first thing in a tiddler (except for other pragmas). If anything else at all comes before them, they're treated as normal text. Irritatingly, this includes [[comments|Comments]], so you have to put any explanations of your macros after the macros.

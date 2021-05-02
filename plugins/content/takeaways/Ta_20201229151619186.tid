@@ -1,6 +1,6 @@
 answer: The draft tiddler containing the new version replaces the original tiddler (and the draft tiddler is deleted).
 created: 20201229151625095
-modified: 20210302162848957
+modified: 20210409125211638
 origin: Browsing Your Tiddlers
 qtype: rememberq
 question: What manipulations to tiddlers are carried out when you save (or //confirm//) changes to a tiddler?

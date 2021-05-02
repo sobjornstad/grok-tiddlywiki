@@ -1,6 +1,6 @@
 answer: TiddlyWiki will go back to using the shadow tiddler when a tiddler by that name is referenced.
 created: 20210107014148939
-modified: 20210208152446683
+modified: 20210418134041794
 origin: Shadow Tiddlers
 qtype: rememberq
 question: What happens if you delete a tiddler that is overriding a shadow tiddler?

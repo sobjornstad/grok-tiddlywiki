@@ -1,6 +1,6 @@
 answer: TiddlyWiki may decide to rerun the macro at any time if the tiddler or element containing it needs to be refreshed.
 created: 20210109225119121
-modified: 20210212140605438
+modified: 20210502163007403
 origin: JavaScript Macros
 qtype: rememberq
 question: Why are side effects in JavaScript macros dangerous?

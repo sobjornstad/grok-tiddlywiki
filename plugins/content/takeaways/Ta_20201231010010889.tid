@@ -1,6 +1,6 @@
 answer: With the text `\end` on a separate line.
 created: 20201231010012028
-modified: 20210311153809790
+modified: 20210409193613036
 origin: Macros
 qtype: rememberq
 question: A macro definition that is more than one line long must be ended how?

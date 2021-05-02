@@ -1,7 +1,0 @@
-created: 20201121235653529
-modified: 20210409192628067
-tags: Answer
-title: Ex:NestedSets/answer
-type: text/vnd.tiddlywiki
-
-This prints `1 2 1`. Scopes //nest//; a variable takes the value of the innermost `$set` widget available (or nothing if the variable reference isn't inside any `$set` widget referring to that variable name at all). Later on, we'll learn that this even applies across multiple tiddlers.

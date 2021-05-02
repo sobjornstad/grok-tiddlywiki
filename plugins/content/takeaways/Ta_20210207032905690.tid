@@ -1,6 +1,6 @@
 answer: `<$reveal state="!!show" type="match" text="yes"> ... </$reveal>`
 created: 20210207032906948
-modified: 20210314155001576
+modified: 20210418165627569
 origin: Hiding and Showing Things
 qtype: rememberq
 question: Write a `$reveal` widget that displays its contents when the field `show` of the current tiddler contains the word `yes`.

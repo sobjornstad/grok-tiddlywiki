@@ -1,6 +1,6 @@
 answer: `!is[system]`
 created: 20201230163302373
-modified: 20210311182413287
+modified: 20210418131943487
 origin: Using Filter Expressions
 qtype: rememberq
 question: What filter step removes all system tiddlers from consideration?

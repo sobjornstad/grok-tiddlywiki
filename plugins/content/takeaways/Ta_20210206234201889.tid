@@ -1,6 +1,6 @@
 answer: `<$select field="selection"><$list filter="[tag[Ingredient]]"><option value={{!!title}}>{{!!caption}}</option></$list></$select>`
 created: 20210206234203279
-modified: 20210315200750045
+modified: 20210502161126497
 origin: Miscellaneous Widgets
 qtype: rememberq
 question: Write a `$select` widget that allows you to choose from all items with the tag `Ingredient`, placing the value of the selected ingredient's `title` field inside the `selection` field of the current tiddler. The text of each drop-down selection should be the `caption` field of the ingredient.

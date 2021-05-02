@@ -1,6 +1,6 @@
 answer: `<$set name="hasContacts" filter="[tag[Contact]]" value="yes" emptyValue="no"> ... </$set>`
 created: 20210207033544029
-modified: 20210314155103689
+modified: 20210418165754561
 origin: Hiding and Showing Things
 qtype: rememberq
 question: Write a `$set` widget that sets the variable `hasContacts` to `yes` if at least one tiddler in the wiki is tagged `Contact`, to `no` otherwise.

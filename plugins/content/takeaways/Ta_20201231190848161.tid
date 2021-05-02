@@ -1,6 +1,6 @@
 answer: The contents of the `$list` widget are rendered once for each output tiddler in the filter, with the current tiddler set to each output tiddler in turn.
 created: 20201231190849927
-modified: 20210407135548087
+modified: 20210409212823534
 origin: Templates and the Current Tiddler
 qtype: rememberq
 question: How is the current tiddler affected by a `$list` widget?

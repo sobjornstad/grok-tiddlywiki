@@ -1,9 +1,0 @@
-created: 20200604021822338
-modified: 20210409200812952
-tags: Answer
-title: Ex:LinkingInTransclusions/answer
-type: text/vnd.tiddlywiki
-
-Jane does not show up as a backlink, for the same reason that transcluded text didn't show up in a search in [[Ex:SearchingInTransclusions]]: the link to `ChrisSmith` is not actually part of the `JaneDoe` tiddler, but only appears there when the tiddler is viewed.
-
-This is consequential enough for the topology of links between tiddlers that there's a special name for it: a link is said to be a ''hard link'' if it, in the words of the [[documentation|https://tiddlywiki.com/#Hard%20and%20Soft%20Links]], “can be detected by a superficial examination of wikitext.” Basically, that means the CamelCase tiddler name or the tiddler name in ``[[double square brackets]]`` or as the `to` parameter of a `$link` widget must be directly present in the text field. Links that appear as a result of a transclusion with `{{}}` or `<<>>`, or `$link` widgets where the `to` parameter is transcluded with `{{}}` or `<<>>`, will instead be ''soft links'' -- they will show up when you view the tiddler, but TiddlyWiki won't know about them when you use filters or other methods of querying.

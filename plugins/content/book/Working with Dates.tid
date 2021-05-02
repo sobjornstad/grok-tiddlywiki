@@ -1,12 +1,12 @@
 created: 20210206180622120
 description: TiddlyWiki offers tooling for displaying, retrieving, and computing differences between dates.
-modified: 20210327171005839
+modified: 20210502161621186
 parent: Tips and Tricks
 tags: Section
 title: Working with Dates
 type: text/vnd.tiddlywiki
 
-Dates are messy. The calendar is weird, for one thing: days of the week don't fall on the same days every year, there are leap years, there used to be the Julian calendar. Then time zones get in the way. Then we have a zillion different ways of writing the same dates and times.
+Dates are messy. The calendar is weird, for one thing: days of the week don't fall on the same days every year, there are leap years, there used to be the [[Julian calendar|https://en.wikipedia.org/wiki/Julian_calendar]]. Then time zones get in the way. Then we have a zillion different ways of writing the same dates and times.
 
 All this is to say, don't expect TiddlyWiki to work miracles here: dates are hard no matter what, and TiddlyWiki doesn't work that hard for us to make them easier. But if you understand a few things, you should be able to avoid getting entirely defeated by dates and times.
 

@@ -1,6 +1,6 @@
 answer: E.g., listing all tiddlers with a specific tag, displaying the sections in the //More// tab of the sidebar, showing all to-do items whose start date is after today
 created: 20201231003001255
-modified: 20210223170930937
+modified: 20210418132016314
 origin: Your First Dynamic List
 qtype: rememberq
 question: Give an example of a situation in which you might want to create a dynamic list of tiddlers (try to pick a new one).

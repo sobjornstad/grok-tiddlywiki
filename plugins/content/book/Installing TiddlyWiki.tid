@@ -1,6 +1,6 @@
 created: 20200530172429726
 description: How to get TiddlyWiki set up on your computer.
-modified: 20210315152834730
+modified: 20210408173457806
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Installing TiddlyWiki
@@ -16,11 +16,13 @@ I know your eyes are glazing over and you're questioning your choices in life, s
 
 !! Installation process
 
-To install TiddlyDesktop, hit the link above, scroll down to the first "Assets" section, and download the appropriate file for your operating system (if you have a reasonably new computer, it'll be `win64`, `mac64`, or `linux64`, depending on whether you use Windows, MacOS, or Linux).
+To install TiddlyDesktop, hit the link above, expand the “Assets” section of the most recent release, and download the appropriate file for your operating system (if you have a reasonably new computer, it'll be `win64`, `mac64`, or `linux64`, depending on whether you use Windows, MacOS, or Linux).
 
 If you're not sure how to proceed from there and you're using Windows or MacOS, there's a brief video [[here|https://tiddlywiki.com/#TiddlyDesktop]] that goes through the steps for both operating systems. On Linux, you just need to unzip the file, go into the `tiddlydesktop-someversion` folder it contains, and run the `nw` executable.
 
-Once we have TiddlyDesktop installed, there's one more step: we need to create a new, blank wiki file to put in it. This is easy enough: click the //Create new wiki// button on the toolbar, pick "Empty TiddlyWiki file," and choose a location and filename. It's important that you end the filename with `.html`, or funny things will happen when you try to open it (this is a known bug). After saving the new wiki, click the //open// button in its entry in the list of wikis to start it up.
+Once we have TiddlyDesktop installed, there's one more step: we need to create a new, blank wiki file to put in it. This is easy enough: click the //Create new wiki// button on the toolbar, pick “Empty TiddlyWiki file,” and choose a location and filename. It's important that you end the filename with `.html`, or funny things will happen when you try to open it (this is a known bug). After you save the new wiki, TiddlyDesktop should open it automatically in a new window. If it doesn't, or next time you start TiddlyDesktop, click the //open// button in its entry in the list of wikis to start it up.
+
+{{open-button.png}}
 
 !! Backups
 

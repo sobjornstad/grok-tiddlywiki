@@ -1,46 +1,49 @@
 created: 20200603023508396
 description: TiddlyWiki provides a variety of options for getting an overview of many tiddlers at once.
-modified: 20210327183248845
+modified: 20210409125120827
 parent: Filing and Organizing
 tags: Section
 title: Browsing Your Tiddlers
 type: text/vnd.tiddlywiki
 
-Aside from searching, TiddlyWiki provides a number of special views for browsing tiddlers. Let's take a look at the available options. All of these are found under the ''More'' tab of the sidebar.
+When you don't know what you're looking for precisely enough to formulate a [[full-text search|Searching]], you can browse through lists of tiddlers. Let's take a look at the available options. All of these are found under the ''More'' tab of the sidebar.
 
 ; All
-: As the name would suggest, this {{Ltc:AllListsAllTiddlers||LieToChildrenTemplate}}.
+: As the name suggest, this tab lists {{Ltc:AllListsAllTiddlers||LieToChildrenTemplate}} in alphabetical order.
 
 ; Recent
-: This lists the most recent 100 tiddlers you edited in reverse chronological order. This is exactly the same view that's on the //Recent// tab.
+: This tab lists {{Ltc:MostRecentHundred||LieToChildrenTemplate}} in reverse chronological order. This is exactly the same view that's on the //Recent// tab.
 
 ; Tags
-: This lists all of the tiddlers in your wiki that are used to tag at least one other tiddler. Clicking on a tag pops open the same menu that's available when clicking a tag that shows up within a tiddler, allowing you to view the tag itself or any of the tiddlers tagged.
+: This tab shows tag pills for all of the tiddlers in your wiki that are used to tag at least one other tiddler. Clicking on a tag pill pops open the tag menu, allowing you to navigate to the tag tiddler itself or any of the tiddlers it is tagging.
 
 ; Missing
-: This lists all tiddlers in your wiki that have been linked to by at least one other tiddler, but don't actually exist. It was described in more detail in the [[Knowledge Tiddlers]] section.
+: This tab lists all tiddlers in your wiki that have been linked to by at least one other tiddler, but don't yet exist. You can click on a missing tiddler to see a menu much like that for a tag, with the missing tiddler listed at the top and all the tiddlers that link to it underneath. (We discussed this view previously in the [[Knowledge Tiddlers]] section.)
 
 ; Drafts
-: Tiddlers that are being edited are called //drafts//. When you edit a tiddler in TiddlyWiki, the original tiddler is preserved as-is while you're editing it, while a new "draft" tiddler is created and houses your changes. When you save, the draft replaces the original tiddler. This pane shows any currently open drafts. Typically, all draft tiddlers will be open already and as such you'll have little reason to come in here, but occasionally a crash or network issue could cause drafts to be left in the wiki but not saved, in which case you can look for them here so you can finish your edits.
+: When you edit a tiddler in TiddlyWiki, the original tiddler is preserved as-is, while a new “draft” tiddler is created to house your changes. When you accept the changes with the <<textual-button "done-button">> confirm changes button, the draft replaces the original tiddler.
+: <br>The drafts tab shows any currently open drafts. Typically, all draft tiddlers will be open already (since you're editing them), so you'll have little reason to come in here, but occasionally a crash or network issue could cause drafts to be left in the wiki but not saved, in which case you can look for them here so you can finish your edits.
 
 ; Orphans
-: Orphans are tiddlers that have not been linked to by any other tiddler. Being mentioned in a field is not sufficient to make a tiddler un-orphaned; the link must be in the body text.
+: This tab shows tiddlers that have not been linked to within the `text` field of any other tiddler. If your wiki relies heavily on linking for relating ideas, looking for orphans periodically can help you identify which tiddlers are at risk of getting lost.
 
 ; Types
-: This displays tiddlers that aren't of a standard text type, like images or PDFs. We'll talk more about those later.
+: This tab lists tiddlers that aren't of a standard text type, such as images or PDFs. We'll talk more about those in [[Images and Attachments]].
 
 ; Plugins
-: This shows a straightforward list of any [[plugin|Plugins]] tiddlers that you've installed in the wiki. If you are ever not sure how to use a plugin, you can likely find its documentation or at least a link to it by opening its tiddler here.
+: This tab lists all [[plugin|Plugins]] tiddlers that you've installed in the wiki, split into three categories, //Languages//, //Plugins//, and //Themes//. If you are ever unsure how to use a plugin, you can likely find its documentation or a link to it by opening its tiddler here.
 
-Assuming you're following along, you'll notice that we skipped ''System'', ''Shadows'', and ''Explorer''. Understanding what these do requires knowing about some internals of TiddlyWiki we haven't covered yet, so we'll come back to these later (in [[System Tiddlers]] and [[Shadow Tiddlers]]).
+If you're following along in your own wiki, you'll notice that we skipped ''System'', ''Shadows'', and ''Explorer''. Understanding what these do requires knowing about some internals of TiddlyWiki we haven't covered yet, so we'll come back to these tabs later (in the [[System Tiddlers]] and [[Shadow Tiddlers]] sections).
 
 !! Managing Open Tiddlers
 
-There's one more little piece to cover here, and that's the ''Open'' tab of the sidebar. As the name suggests, it shows you at a glance all the tiddlers that are currently open, and it lets you close them or scroll to them. However, it has one other trick, one that's nearly impossible to replicate any other way, and unfortunately it's the least discoverable: you can ''drag and drop the tiddlers'' to change the order they're listed in the story river.
+There's one more piece to cover here -- the ''Open'' tab of the sidebar. As the name suggests, it shows you at a glance all the tiddlers that are currently open in the story river. You can close or jump to an open tiddler by clicking on the <<textual-button "close-button">> button or the link, respectively.
 
-Why is that important? Imagine you're working on a tiddler and you have eight more open above it, and you realize you need to pull up another tiddler as a reference (extremely common). When you open a tiddler by searching or clicking in the sidebar, it'll open at the top of the story river. If you didn't have the option to reorder, you would now have to repeatedly scroll through eight unrelated tiddlers, or close them all even though you weren't ready to, just to move back and forth between them!
+The ''Open'' tab has another trick that's difficult to replicate any other way, and unfortunately it's the least discoverable: you can ''drag and drop the tiddlers'' in the list to change the order they appear in the story river.
 
-Another possibility is to choose the //Open in new window// option under the more menu <<textual-button "down-arrow">> of a tiddler in view mode (you can't open a tiddler in edit mode in a new window, unfortunately).
+Why is that important? Imagine you're working on a tiddler and you have eight more open above it, and you realize you need to pull up another tiddler as a reference. When you open a tiddler by searching or clicking in the sidebar, it'll open at the top of the story river. If you didn't have the option to reorder, you would now have to repeatedly scroll through eight unrelated tiddlers, or close them all even though you weren't ready to, just to move back and forth between them!
+
+Another way to see several related tiddlers at once is to choose the //Open in new window// option under the more menu <<textual-button "down-arrow">> of a tiddler in view mode (you can't edit a tiddler in a new window, unfortunately).
 
 If you find yourself doing this often, there's a nifty plugin available as part of [[Stroll|https://giffmex.org/stroll/stroll.html]] that adds a second column to the story river so you can move tiddlers side by side. But if you only need this occasionally, the additional complexity might not be worth it.
 

@@ -1,6 +1,6 @@
 created: 20210320182859703
 description: Review all the syntax used for reusing and relating content in TiddlyWiki.
-modified: 20210327170704692
+modified: 20210410143748530
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Summary of Macro and Transclusion Syntax
@@ -12,7 +12,7 @@ You can find a condensed version of this section in the [[Wikitext Reference]], 
 
 !! Available in wikitext and filter expressions
 
-The following types of references work both within [[wikitext|Wikitext]] and [[filter expressions|Filters and Transclusions]]. In filter expressions, you use ''one of each type of bracket''. In wikitext, you use two.
+The following types of references work both within [[wikitext|Wikitext]] and [[filter expressions|Filters and Transclusions]]. In filter expressions, you use only ''one of each type of bracket''. In wikitext, you use two.
 
 ; `[[square brackets]]`
 : To link or refer to the title of a tiddler.
@@ -25,7 +25,7 @@ The following types of references work both within [[wikitext|Wikitext]] and [[f
 * `{{tiddler}}` to transclude the `text` field of a tiddler
 * `{{tiddler!!field}}` to transclude a different field of a tiddler
 * `{{!!field}}` to transclude a field of the [[current tiddler|Templates and the Current Tiddler]]
-* `{{tiddler##index}}` to transclude a property of a [[data tiddler|Data Tiddlers]]
+* `{{tiddler##index}}` to transclude a property of a [[data tiddler|Data Tiddlers]] (we'll learn about data tiddlers in [[chapter 5|More Organizational Tools]])
 * `{{tiddler||Template}}` to transclude a tiddler [[through a template|Templates and the Current Tiddler]]
 * `{{||Template}}` to transclude the current tiddler through a template
 
@@ -45,4 +45,4 @@ Some extra syntax for variables and parameters is available within [[macro|Macro
 * `<<__angle brackets with underscores__>>` refer to a parameter of the macro without text substitution. Inside a filter expression, use `<__single angle brackets but double underscores__>`.
 * `$dollar signs$` refer to a parameter of the macro using text substitution.
 
-Neither the `<<variable>>` and `<<__parameter__>>` syntax works if the contents of your macro [[will not be wikified|Wikification]] where you intend to call it, for instance because you are providing it as an attribute of a [[widget|Widgets]] or [[HTML tag|HTML]]; the text-substitution-based forms must be used in that case.
+Neither the `<<variable>>` nor the `<<__parameter__>>` syntax works if the contents of your macro [[will not be wikified|Wikification]] where you intend to call it, for instance because you are providing it as an attribute of a [[widget|Widgets]] or [[HTML tag|HTML]]; the text-substitution-based forms must be used in that case.

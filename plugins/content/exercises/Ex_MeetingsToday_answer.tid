@@ -1,14 +1,11 @@
 created: 20200717222830000
-modified: 20200717222901397
+modified: 20210410190508516
 tags: Answer
 title: Ex:MeetingsToday/answer
 type: text/vnd.tiddlywiki
 
 ```html
-<$set name=today value=<<now YYYY0MM0DD>>>
-  <<tabs
-		"[tag[Meeting]sameday:at<today>!has[draft.of]]" 	
-		state:"$:/state/MeetingsListTabs"
-		class:"tc-vertical">>
+<$set name=today value=<<now YYYY0MM0DD0hh>>>
+  <<tabs "[tag[Meeting]sameday:at<today>!is[draft]]" class:"tc-vertical">>
 </$set>
 ```

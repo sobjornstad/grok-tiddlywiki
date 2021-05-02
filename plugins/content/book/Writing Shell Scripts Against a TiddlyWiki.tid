@@ -1,6 +1,6 @@
 created: 20200822201508518
 description: External tools can access the data in your TiddlyWiki by reading files and calling a Node.js CLI.
-modified: 20210327171132790
+modified: 20210502164024462
 parent: Getting Technical
 prerequisite: A basic background in shell scripting or some other scripting language like Python
 tags: Section
@@ -9,14 +9,14 @@ type: text/vnd.tiddlywiki
 
 (''Prerequisite'' for this section: {{!!prerequisite}}.)
 
-If you're a [[Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy]] person and believe that programs should do one thing well and integrate well with other programs, you might be wondering whether your data is all going to be trapped in TiddlyWiki. Good news: if you install the Node.js backend on your computer and host your wiki there, you can easily integrate with other programs in whatever way you please. (It's also possible to quickly convert a single-file wiki to a Node.js folder wiki, so if you prefer to use a single file but sometimes need to get at the contents programmatically, you can extract a new folder wiki from the file to a temporary directory and then operate on that.)
+If you're a [[Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy]] person and believe that programs should do one thing well and integrate well with other programs, you might be wondering whether your data is going to be trapped in TiddlyWiki. Good news: if you install the Node.js backend on your computer and host your wiki there, you can easily integrate with other programs in whatever way you please. (It's also possible to quickly convert a single-file wiki to a Node.js folder wiki, so if you prefer to use a single file but sometimes need to get at the contents programmatically, you can extract a new folder wiki from the file to a temporary directory and then operate on that.)
 
 
 !! File structure
 
 The Node.js backend stores text tiddlers in individual files, which are easy for a script or other application to read. The format is much like email: first the fields of the tiddler are listed with the name separated from the value by a colon and a space, and then after one blank line comes the contents of the `text` field.
 
-Binary files, such as images, are instead included directly, and the fields are stored in a separate text file with a `.meta` extension. So if your tiddler is called `image.png`, its fields will be stored in `image.png.meta`.
+Tiddlers containing non-textual data, such as images, are instead included unmodified, and the fields associated with their tiddlers are stored in a separate text file with a `.meta` extension. So if you have an image tiddler called `image.png`, there will be an `image.png` PNG file which can be opened in a normal image viewer, and an `image.png.meta` file containing the fields of the tiddler.
 
 For the most part, the names of tiddlers are used as their filenames, with a `.tid` extension added. However, a few characters are changed so as to avoid those that are invalid in filenames on some operating systems. It's also possible to add additional transformations as TiddlyWiki filters, for instance to put tiddlers with particular tags in a different folder. The details can be found in the [[Customizing Tiddler File Naming|https://tiddlywiki.com/#Customising Tiddler File Naming]] tiddler in the TW documentation.
 
@@ -25,7 +25,7 @@ For the most part, the names of tiddlers are used as their filenames, with a `.t
 
 When simply looking at the files is not enough, the ''`tiddlywiki` command'', installed with the npm package, lets you perform most any operation you need, such as rendering tiddlers to HTML or plain text, or selecting tiddlers that match a filter and writing them into a new wiki.
 
-The TiddlyWiki CLI has a rather unconventional and puzzling syntax that often confuses new users. Most CLIs would use positional parameters with the first parameter being the operation to perform:
+The TiddlyWiki CLI has a rather unconventional syntax that often confuses new users. Most CLIs would use positional parameters with the first parameter being the operation to perform:
 
 ```bash
 tiddlywiki render FILTER
@@ -56,7 +56,7 @@ tiddlywiki --load SOURCE_WIKI
 tiddlywiki --render FILTER
 ```
 
-But it doesn't -- the first command sets the wiki to load but doesn't persist that setting, then exits, so it amounts to a no-op. The second command will continue to use the default (looking for a wiki in the current folder).
+But it doesn't -- the first command sets the wiki to load but doesn't persist that setting, then exits, so it amounts to a no-op. The second command will continue to use the default source location (the current directory).
 
 
 !! Editing wiki files

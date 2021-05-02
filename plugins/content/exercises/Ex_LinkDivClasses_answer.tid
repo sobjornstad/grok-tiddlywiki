@@ -1,5 +1,5 @@
 created: 20200718201623464
-modified: 20210327153127895
+modified: 20210418151529023
 tags: Answer
 title: Ex:LinkDivClasses/answer
 type: text/vnd.tiddlywiki
@@ -18,7 +18,7 @@ $title$:
 <ul>
 <$list filter="[all[current]$filterFragment$]">
   <li>
-    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
+    <$link />
     <div class="sib-excerpt">
       <$macrocall $name="excerptify" title={{!!title}}/>
     </div>

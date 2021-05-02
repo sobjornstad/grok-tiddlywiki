@@ -1,6 +1,6 @@
 answer: The subcommands/operations are introduced by double-dashes, like `--render`, while the options are positional.
 created: 20210109232620274
-modified: 20210223170500298
+modified: 20210502164054250
 origin: Writing Shell Scripts Against a TiddlyWiki
 qtype: rememberq
 question: What unusual syntax does the `tiddlywiki` CLI have?

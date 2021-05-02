@@ -1,5 +1,5 @@
 created: 20210107015742014
-modified: 20210408141104082
+modified: 20210418140240400
 origin: The View Template
 qtype: remembercz
 question: Every time TiddlyWiki displays a tiddler in the story river, it uses a {template} (TiddlyWiki concept) to determine what the tiddler should look like.

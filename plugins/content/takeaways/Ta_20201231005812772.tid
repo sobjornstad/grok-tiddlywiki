@@ -1,5 +1,5 @@
 created: 20201231005815791
-modified: 20210321231656226
+modified: 20210409193610654
 origin: Macros
 qtype: remembercz
 question: In `\define wikipediaLink(articleName)`, the part `(articleName)` is called the {parameter list} of the macro.

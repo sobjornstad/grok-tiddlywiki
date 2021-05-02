@@ -1,5 +1,5 @@
 created: 20200718202204205
-modified: 20210116212428438
+modified: 20210418152036717
 tags: Answer
 title: Ex:PaletteInvestigation/answer
 type: text/vnd.tiddlywiki
@@ -22,4 +22,4 @@ In the macro definition, you might wonder what's with all the other `$transclude
 </$transclude>
 ```
 
-In case the `$transclude` widget is not able to transclude the tiddler for some reason (e.g., it doesn't exist), then the contents of the widget are used as a //fallback//. So if the palette isn't set, then the `Vanilla` palette is used, and if that's gone as well for some reason, a set of default mappings are used.
+In case the `$transclude` widget is not able to transclude the tiddler for some reason (e.g., it doesn't exist), then the contents of the widget are used as a //fallback// (more on this in [[Hiding and Showing Things]]). So if the palette isn't set, then the `Vanilla` palette is used, and if that's gone as well for some reason, a set of default mappings are used.

@@ -1,13 +1,13 @@
 created: 20210116172454679
-modified: 20210116174551449
+modified: 20210410142121440
 tags: 
 title: Sn:BlockInlineComparison
 type: text/vnd.tiddlywiki
 
 <div style="background-color: red;">Element 1</div>
-<div style="background-color: blue;">Element 2</div>
+<div style="background-color: yellow;">Element 2</div>
 
 <hr>
 
 <span style="background-color: red;">Element 1</span>
-<span style="background-color: blue;">Element 2</span>
+<span style="background-color: yellow;">Element 2</span>

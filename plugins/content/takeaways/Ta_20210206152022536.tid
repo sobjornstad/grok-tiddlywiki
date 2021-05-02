@@ -1,6 +1,6 @@
-answer: A tiddler list is a basic filter expression consisting of several runs each selecting a single tiddler.
+answer: A tiddler list is a basic filter expression, consisting of several runs, each of which select a single tiddler.
 created: 20210206152024753
-modified: 20210313142131766
+modified: 20210410183030931
 origin: Multi-Run Filters
 qtype: rememberq
 question: Explain the relationship between tiddler lists and filter expressions.

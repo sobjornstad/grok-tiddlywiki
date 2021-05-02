@@ -1,6 +1,6 @@
 created: 20201230190557655
 description: Filter steps have operators, suffixes, parameters, inputs, and outputs.
-modified: 20210402105656827
+modified: 20210409154639337
 parent: Filtering and Formatting
 tags: Section
 title: Anatomy of Filter Steps
@@ -38,7 +38,7 @@ We can also talk about the ''inputs'' or ''input tiddlers'' and ''outputs'' or '
 * If the filter run is `[title[JaneDoe]tag[Person]]`, the sole input tiddler to `tag[Person]` is `JaneDoe`. (`title` is a constructor.)
 * If the filter run is `[tag[Application]tag[Person]]`, the input tiddlers to `tag[Person]` are all the tiddlers in the wiki tagged with `Application`.
 
-The ''output tiddlers'', similarly, are the tiddlers that get passed off to the next step in the run (or become the result of the entire filter run, if this is the last step). In the `[tag[Application]tag[Person]]` example above, the outputs of `tag[Application]` are all the tiddlers in the wiki tagged with `Application`. Or to put it another way, the outputs of `tag[Application]` are the inputs to `[tag[Person]`.
+''Output tiddlers'', similarly, are the tiddlers that get passed off to the next step in the run (or become the result of the entire filter run, if this is the last step). In the `[tag[Application]tag[Person]]` example above, the outputs of `tag[Application]` are all the tiddlers in the wiki tagged with `Application`. Or to put it another way, the outputs of `tag[Application]` are the inputs to `tag[Person]`.
 
 
 !! Multiple suffixes and parameters

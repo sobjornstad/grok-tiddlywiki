@@ -1,5 +1,5 @@
 created: 20200605153253139
-modified: 20210327160213134
+modified: 20210409203429985
 tags: Answer
 title: Ex:MethodsOfTransclusion/answer
 type: text/vnd.tiddlywiki
@@ -46,7 +46,7 @@ Another way would be to create another tiddler, call it `JaneDoeStandin`, put `{
 
 `{{JaneDoe!!text}}` is technically not writing `{{JaneDoe}}`, though this solution seems a bit cheap!
 
-Similarly but a little bit more cleverly, `{{JaneDoe||JaneDoe}}` (transclude the tiddler `JaneDoe` with the current tiddler as `JaneDoe`) means the same thing as `{{JaneDoe}}`. (`{{||JaneDoe}}` won't work, though, because that makes the current tiddler `JaneTransclusion`, and the `ContactInformationTemplate` included within `JaneDoe` depends on the current tiddler being `JaneDoe`.)
+Similarly but a little bit more cleverly, `{{JaneDoe||JaneDoe}}` (transclude the tiddler `JaneDoe` with the current tiddler as `JaneDoe`) means the same thing as `{{JaneDoe}}`. (`{{||JaneDoe}}` won't work, though, because that makes the current tiddler `JaneTransclusion`, and the `ContactInformationTemplate` transcluded within `JaneDoe` depends on the current tiddler being `JaneDoe`.)
 
 Here are two other ways that use widgets we haven't seen yet:
 

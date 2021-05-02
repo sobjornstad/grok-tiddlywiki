@@ -1,11 +1,11 @@
 created: 20200605160659838
-modified: 20200605161059521
+modified: 20210409211952840
 tags: Answer
 title: Ex:TranscludedMacroScope/answer
 type: text/vnd.tiddlywiki
 
-To test this, you could place a macro in a tiddler, transclude that macro in another tiddler, and see if you can call the macro. If you do this, you'll find that your macro call disappears, which is what happens when the macro is not defined (we saw this in an [[earlier exercise|Ex:MacroPosition]]).
+To test this, you could place a macro in a tiddler, transclude that macro in another tiddler, and see if you can call the macro. If you do this, you'll find that your `<<macro call>>` doesn't produce any output, which is what happens when the macro is not defined (we saw this in an [[earlier exercise|Ex:MacroPosition]]).
 
 We can conclude from this experiment that the macro goes out of scope at the end of the transclusion. It makes no difference whether the tiddler containing the macro was transcluded via a template or not.
 
-There are ways we can make macros available in other tiddlers, but transclusion is not one of them.
+There are ways we can make macros available in other tiddlers, but transcluding the tiddler containing the macros is not one of them.

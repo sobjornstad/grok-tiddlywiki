@@ -1,6 +1,6 @@
 answer: After all of the other fields, separated from them by a blank line.
 created: 20210109232421364
-modified: 20210302161340406
+modified: 20210502164048174
 origin: Writing Shell Scripts Against a TiddlyWiki
 qtype: rememberq
 question: How is the `text` field stored within a tiddler file in a folder wiki?

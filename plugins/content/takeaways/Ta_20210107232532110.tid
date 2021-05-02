@@ -1,6 +1,6 @@
 answer: `<tr>` (//table row//)
 created: 20210107232533466
-modified: 20210220191046514
+modified: 20210418160904076
 origin: Buttons and Input Widgets
 qtype: rememberq
 question: What HTML element creates a row when used within a `<table>` element?

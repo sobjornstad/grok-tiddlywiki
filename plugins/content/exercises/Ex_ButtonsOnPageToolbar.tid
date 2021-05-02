@@ -1,9 +1,9 @@
 created: 20200822192414704
 length: m
-modified: 20210130174317744
+modified: 20210418161630255
 origin: Creating Tiddlers With Predefined Fields
 tags: Exercise
 title: Ex:ButtonsOnPageToolbar
 type: text/vnd.tiddlywiki
 
-Add these new buttons to the toolbar above the search box in the sidebar. This will require applying a tag to their tiddlers.
+Add these new buttons (created in [[Ex:NewContactButton]] and [[Ex:NewMeetingButton]]) to the toolbar above the search box in the sidebar. This will require applying a tag to their tiddlers.

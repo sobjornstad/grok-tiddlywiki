@@ -1,6 +1,6 @@
 answer: The `$list` widget.
 created: 20201231002447038
-modified: 20210220191842029
+modified: 20210409173104856
 origin: Your First Dynamic List
 qtype: rememberq
 question: What widget would you use to sequentially display each of the outputs of a filter?

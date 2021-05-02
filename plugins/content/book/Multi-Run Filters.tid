@@ -1,6 +1,6 @@
 created: 20200715220657649
 description: Filters can be made more complex and powerful by including more than one run.
-modified: 20210327175915876
+modified: 20210410180812102
 parent: More Organizational Tools
 tags: Section
 title: Multi-Run Filters
@@ -93,12 +93,12 @@ If you don't want the standard dominant-append behavior, you can place the chara
 ; `~` or `:else`
 : ''If the list of accumulated results is currently empty'', execute this run and make its output the accumulated results. Otherwise, ignore the run completely.
 
-Several prefixes were added in 5.1.23 that are only available in the named variants. They're a little harder to understand, and TiddlyWiki users have gotten by without them for years, so you won't need to use them for the exercises and takeaways and you can skip them for now if you like, but at some point you might want to investigate them.
+Several prefixes were added in version 5.1.23 that are only available in the named variants. They're a little harder to understand, and TiddlyWiki users have gotten by without them for years, so you won't need to use them for the exercises and takeaways and you can skip them for now if you like, but at some point you might want to investigate them.
 
 <$details summary="More named prefixes">
 
 ; `:filter`
-: Evaluate the filter run on each tiddler in the accumulated results and ''output elements where the filter expression does not evaluate to an empty list''. This differs from `+` in that `+` makes the output of its run the accumulated results. `:filter` doesn't use the output of its run at all, except to check whether it's non-empty. This 
+: Evaluate the filter run on each tiddler in the accumulated results and ''output elements where the filter expression does not evaluate to an empty list''. This differs from `+` in that `+` makes the output of its run the accumulated results. `:filter` doesn't use the output of its run at all, except to check whether it's non-empty.
 
 ; `:intersection`
 : Like `+`, but ''the second filter run is evaluated completely before being ANDed''. The TiddlyWiki documentation gives this example: if you are trying to see what tags two tiddlers have in common, you might say `[[Tiddler 1]tags[]] +[[Tiddler 2]tags[]]`; but this wouldn't work because `[[Tiddler 2]]` is a constructor and will wipe out anything from the first filter run. `:intersection` evaluates the two filter runs in isolation, so that the ANDing takes place on the sets of tags once they've been expanded.

@@ -1,6 +1,6 @@
 answer: It is a tiddler list where each element is automatically prefixed with the title of your plugin (e.g., `$:/plugins/alice/myplugin/`).
 created: 20210109231033412
-modified: 20210212135713739
+modified: 20210502163557713
 origin: Creating Plugins
 qtype: rememberq
 question: What is unusual about the `list` field in a `plugin.info` file?

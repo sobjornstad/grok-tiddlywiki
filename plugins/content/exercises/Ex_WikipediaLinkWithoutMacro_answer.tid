@@ -1,5 +1,5 @@
 created: 20201122165740509
-modified: 20201122165716071
+modified: 20210409215022017
 tags: Answer
 title: Ex:WikipediaLinkWithoutMacro/answer
 type: text/vnd.tiddlywiki
@@ -10,4 +10,4 @@ type: text/vnd.tiddlywiki
 </$set>
 ```
 
-You may notice that the link is a different color than is usual in your wiki. If this bothers you, add the attribute `class="tc-tiddlylink-external"` to the `<a>` tag, which will tell TiddlyWiki to use the same styling that it would if you created an external link with `[[double brackets]]`.
+Depending on the [[palette|Tweaking Your Settings]] you have selected, you may notice that the link is a different color than is usual in your wiki. If this bothers you, add the attribute `class="tc-tiddlylink-external"` to the `<a>` tag, which will tell TiddlyWiki to use the same styling that it would if you created an external link with `[[double square brackets]]`.

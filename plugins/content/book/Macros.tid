@@ -1,6 +1,6 @@
 created: 20200603011212616
 description: Macros extend the concept of variables by allowing portions of the value to change each time the macro is referenced.
-modified: 20210407124803205
+modified: 20210409193756611
 parent: Variables, Macros, and Transclusions
 tags: Section Concept
 title: Macros
@@ -44,7 +44,7 @@ The word starting with a backslash indicates a kind of ''pragma'', which is a re
 
 `wikipediaLink`, of course, is the name of the macro.
 
-The part in parentheses, called the ''parameter list'', describes the parameters of the macro. When TiddlyWiki sees a macro call, it will look at each of the parameters passed and match them up to the names in the parentheses, based on what order they come in. In our example, it concludes that `articleName` should be `Aardvark` within the macro. (In the [[next section|The Finer Points of Macros]], we'll see an example with multiple parameters.)
+The part in parentheses, called the ''parameter list'', describes the parameters of the macro. When TiddlyWiki sees a macro call, it will look at each of the parameters passed and match them up to the names in the parentheses, based on what order they come in. In our example, it concludes that `articleName` should be `Aardvark` within the macro. (In the [[next section|The Finer Points of Macros]], we'll see an example with more than one parameter.)
 
 Everything between the line beginning with `\define` and the line beginning with `\end` is called the ''body'' of the macro. When we call the macro, TiddlyWiki will stop processing wikitext and rendering your tiddler for a moment, read the body of the macro, and see:
 
@@ -66,6 +66,7 @@ This indicates that we've come to the end of the macro. A macro can go on for as
 
 {{Ex:PrettyWikipediaLink||ExerciseTemplate}}
 {{Ex:MacroAdjacency||ExerciseTemplate}}
+{{Ex:EmptyMacroCall||ExerciseTemplate}}
 {{Ex:MacroPosition||ExerciseTemplate}}
 
 !! Takeaways

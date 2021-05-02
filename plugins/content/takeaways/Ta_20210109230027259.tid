@@ -1,6 +1,6 @@
 answer: If you use the wikitext content type, you can use transclusions of macros or fields as part of the stylesheet.
 created: 20210109230029770
-modified: 20210218194629943
+modified: 20210502163301208
 origin: Stylesheets
 qtype: rememberq
 question: Why might you choose not to use the `text/css` content type for a tiddler containing CSS?

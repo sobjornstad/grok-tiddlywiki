@@ -1,6 +1,6 @@
 answer: e.g., searching for `Katherine` when you called her `Kate`, searching for `start here` when you wrote `begin here`
 created: 20201229035424934
-modified: 20210214223421013
+modified: 20210409024305263
 origin: Contact Tiddlers
 qtype: rememberq
 question: Give an example of a full-text search that yields a false negative, including both the phrase you search for and the reason it doesn't work (try to pick a new example).

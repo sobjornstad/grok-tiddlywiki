@@ -1,5 +1,5 @@
 created: 20210109225041456
-modified: 20210311183209173
+modified: 20210502163005576
 origin: JavaScript Macros
 qtype: remembercz
 question: A JavaScript macro should not have any {side effect}s when run.

@@ -1,8 +1,0 @@
-created: 20210116211707689
-modified: 20210409213112784
-tags: 
-title: Sn:ChapterFilterTransclusion
-type: text/vnd.tiddlywiki
-
-<!-- Ignore the all[shadows+tiddlers] step for now: you'll learn why we need that later. -->
-{{{ [all[shadows+tiddlers]tag[Section]first[5]] }}}

@@ -1,9 +1,9 @@
 answer: no
 created: 20210408142451078
-invertsort: 
-modified: 20210408171756911
+invertsort: !
+modified: 20210418132052266
 seen: yes
-sort: ivl
+sort: lapses
 title: $:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState
 type: text/vnd.tiddlywiki
 viewer: table

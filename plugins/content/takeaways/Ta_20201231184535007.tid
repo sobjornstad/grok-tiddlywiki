@@ -1,9 +1,9 @@
 answer: A hard link appears in the wikitext of a tiddler, while a soft link only appears in the tiddler when it's rendered (e.g., because it was transcluded into that tiddler).
 created: 20201231184536280
-modified: 20210220190833287
+modified: 20210409201629413
 origin: Transclusions
 qtype: rememberq
-question: Explain the difference in definition between a hard link and a soft link.
+question: Explain the difference between a hard link and a soft link.
 tags: Takeaway
 title: Ta:20201231184535007
 type: text/vnd.tiddlywiki

@@ -1,6 +1,6 @@
 answer: `[img width=350 [image.png]]`
 created: 20210103174918105
-modified: 20210302161141996
+modified: 20210410185218452
 origin: Images and Attachments
 qtype: rememberq
 question: What wikitext syntax would you use to display an image stored in the tiddler `image.png`, with a maximum width of 350 pixels?

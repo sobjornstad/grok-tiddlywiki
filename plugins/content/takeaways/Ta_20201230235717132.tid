@@ -1,6 +1,6 @@
 answer: `[tag[Contact]sort[email]]`
 created: 20201230235719487
-modified: 20210302160607717
+modified: 20210409165449594
 origin: Common Filter Operators
 qtype: rememberq
 question: Write a filter expression that outputs all tiddlers with the `Contact` tag, sorted alphabetically by their `email` field.

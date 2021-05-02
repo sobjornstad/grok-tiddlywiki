@@ -1,6 +1,6 @@
 answer: `<$button actions=<<myactions>>>Act</$button>`
 created: 20210109214554641
-modified: 20210302161213567
+modified: 20210418162322397
 origin: Creating Tiddlers With Predefined Fields
 qtype: rememberq
 question: Given a macro called `myactions` with no parameters that generates some action widgets, write wikitext for a button labeled //Act// that triggers those action widgets.

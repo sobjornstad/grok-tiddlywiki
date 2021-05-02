@@ -1,6 +1,6 @@
 answer: `field`
 created: 20201230205238685
-modified: 20210302162939158
+modified: 20210409161710002
 origin: Anatomy of Filter Steps
 qtype: rememberq
 question: In the filter step `field:participants[Jane]`, what is the //operator//?

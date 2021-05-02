@@ -1,5 +1,5 @@
 created: 20200718200917466
-modified: 20201122171229276
+modified: 20210418142212216
 tags: Answer
 title: Ex:BasicBacklinksList/answer
 type: text/vnd.tiddlywiki
@@ -11,9 +11,7 @@ Backlinks:
 
 <ul>
 <$list filter="[all[current]backlinks[]]">
-  <li>
-		<$link to=<<currentTiddler>>><<currentTiddler>></$link>
-  </li>
+  <li><$link /></li>
 </$list>
 </ul>
 ```

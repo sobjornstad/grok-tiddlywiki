@@ -1,9 +1,9 @@
 created: 20210207215057345
 length: m
-modified: 20210207215647534
+modified: 20210502155943685
 origin: Hiding and Showing Things
 tags: Exercise
 title: Ex:EmptyAtField
 type: text/vnd.tiddlywiki
 
-Update the `MeetingInformationTemplate` to use a fallback to display the text `(no time specified)` if the `at` field is empty.
+Update the `MeetingInformationTemplate` to use a fallback to display the text `(no time specified)` if there is no `at` field on the tiddler.

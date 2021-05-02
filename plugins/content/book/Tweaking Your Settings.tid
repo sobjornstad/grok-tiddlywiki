@@ -1,6 +1,6 @@
 created: 20200530195556288
 description: A quick look at some of the TiddlyWiki options you're most likely to want to change.
-modified: 20210320140410679
+modified: 20210408175014952
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Tweaking Your Settings
@@ -8,16 +8,16 @@ type: text/vnd.tiddlywiki
 
 If you've been following along so far, you should be looking at a `GettingStarted` tiddler in your new wiki. Let's take a few minutes to personalize it so you have somewhere comfortable to work while you do the exercises in this book.
 
-Start by setting the title and subtitle to something interesting in the `GettingStarted` tiddler. You'll see them change immediately at the top of the sidebar as you do. This kind of dynamic updating is one of the coolest features of TiddlyWiki; we'll learn more about how that works in chapter 6, [[Looking Under the Hood]].
+Start by setting the title and subtitle to something interesting in the `GettingStarted` tiddler. You'll see them change immediately at the top of the sidebar as you do.
 
 You may also wish to click the “retain story ordering” button, if only because this means you don't have to decide what tiddlers to open when you start the wiki. With this option on, anytime you start up the wiki, any tiddlers you had open when you closed it down will be reopened.
 
-Close out of `GettingStarted` and click the gear icon in the upper-right to open the control panel. There are a //lot// of settings available here, and many of them are interesting, but once you get familiar with TiddlyWiki, they are mostly self-explanatory. Thus, we'll look at a handful that will improve our initial experience, and once you've gotten the hang of TiddlyWiki, you can come back and explore the other options.
+Close out of `GettingStarted` and click the gear icon on the page toolbar to open the control panel. There are a //lot// of settings available here, and many of them are interesting, but once you get familiar with TiddlyWiki, they are mostly self-explanatory. Thus, we'll look at a handful that will improve our initial experience, and once you've gotten the hang of TiddlyWiki, you can come back and explore the other options.
 
 !! Info tab
 
 ; Animation duration
-: Maybe I'm just an impatient person, but I find that dragging animations out over 400&nbsp;ms (almost half a second) makes my wiki feel really laggy. If you decrease it too far, though, you'll get vertigo; I find 200--250 is a nice compromise. To test values, create a new tiddler using the <span class="gtw-textual-button">{{$:/core/images/new-button}}</span> button at the top-left of the sidebar, then close the new tiddler with the round X button on its toolbar, and observe the speed and subjective experience of watching it open and close. Rinse and repeat until you find something comfortable.
+: Maybe I'm just an impatient person, but I find that dragging animations out over 400&nbsp;ms (almost half a second) makes my wiki feel really laggy. If you decrease it too far, though, you'll get vertigo; I find 200--250 is a nice compromise. To test values, create a new tiddler using the <<textual-button "new-button">> add button on the page toolbar, then close the new tiddler with the <<textual-button "cancel-button">> cancel button in its upper-right, and observe the speed and subjective experience of watching it open and close. Rinse and repeat until you find something comfortable.
 
 !! Appearance tab
 
@@ -27,7 +27,7 @@ Close out of `GettingStarted` and click the gear icon in the upper-right to open
 ; Toolbars tab/View Toolbar
 : Tick the box next to //info//. The info button is really useful, and if it's hidden in the "more" menu when you're starting out, you may not remember it's even there!
 
-; Theme Tweaks
+; Theme Tweaks tab
 : If you have a large screen, you'll likely want to increase the amount of space allocated to the story river compared to the sidebar, or most of the space on your screen will be wasted. The easiest way is to change //Sidebar layout// to //Fluid story, fixed sidebar//. Unfortunately, this often makes the story river too wide (extremely long lines [[are much harder to read|https://practicaltypography.com/line-length.html]]), so you may want to increase the //Sidebar width// as well to compensate.
 
 !! Settings tab

@@ -1,6 +1,6 @@
 answer: `[[my text|MyTiddler]]`
 created: 20210116004751472
-modified: 20210311183436107
+modified: 20210418131753420
 origin: Links
 qtype: rememberq
 question: What is the wikitext syntax to link to a tiddler called `MyTiddler`, with the link text `my text`?

@@ -1,6 +1,6 @@
 answer: The EditTemplate (`$:/core/ui/EditTemplate`)
 created: 20210107020851974
-modified: 20210311182755943
+modified: 20210418140322398
 origin: The View Template
 qtype: rememberq
 question: What built-in TiddlyWiki template controls what appears when you edit a tiddler in the story river?

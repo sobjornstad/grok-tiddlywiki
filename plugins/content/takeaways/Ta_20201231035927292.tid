@@ -1,6 +1,6 @@
 answer: `\define myMacro()`
 created: 20201231035928615
-modified: 20210329214904095
+modified: 20210409195456151
 origin: The Finer Points of Macros
 qtype: rememberq
 question: What is the wikitext syntax to define a macro `myMacro` with no parameters?

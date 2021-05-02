@@ -1,6 +1,6 @@
 answer: It creates a new `<span>` or `<div>` element to contain its contents, which may be illegal or have unwanted effects in some places.
 created: 20210207033028546
-modified: 20210313141411912
+modified: 20210418165634896
 origin: Hiding and Showing Things
 qtype: rememberq
 question: Why does the `$reveal` widget lead to incorrectly formatted output in some contexts?

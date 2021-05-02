@@ -1,11 +1,11 @@
 created: 20210207223547576
-modified: 20210207223854238
+modified: 20210409221631732
 tags: Answer
 title: Ex:BypassSecurityWithTextSubstitution/answer
 type: text/vnd.tiddlywiki
 
 Congratulations, you are a //TiddlyWiki hacker//!
 
-Hilariously, all it really takes is a single `]`, because this causes the filter syntax to become invalid, which causes the output tiddler `Filter error: Missing [ in filter expression` to appear and the list to trigger once. You could use any number of variations on the theme of making the filter syntax invalid.
+Hilariously, all it really takes is a single `]`, because this causes the filter syntax to become invalid, which causes the tiddler `Filter error: Missing [ in filter expression` to appear in the output and the contents of the `$list` widget to render once. You could use any number of variations on the theme of making the filter syntax invalid.
 
-A more complete version would be `x]][x` -- that is, create an unconditional filter run for the tiddler `[[x]]` so there's some output to the filter, then open a new run which tries to match the text `x` against the password (presumably this will fail, but that will be OK because we've already added a tiddler to the final output of the filter run).
+A more complete version, riffing on the example we saw above, would be `x]][x` -- that is, create an unconditional filter run for the tiddler `[[x]]` so there's some output to the filter, then open a new run which tries to match the text `x` against the password (presumably this will fail, but that will be OK because we've already added a tiddler to the final output of the filter run). Again, we will discuss how [[multiple filter runs|Multi-Run Filters]] work in the next chapter.

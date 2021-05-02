@@ -1,6 +1,6 @@
 answer: `format="date"`
 created: 20210207005358389
-modified: 20210315200823862
+modified: 20210502162407228
 origin: Working with Dates
 qtype: rememberq
 question: What attribute and value passed to the `$view` widget causes it to format a field as a date?

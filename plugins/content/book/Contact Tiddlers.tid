@@ -1,6 +1,6 @@
 created: 20200530203548943
 description: How to track the people we meet at work, linking to the ideas they're involved in and modeling their attributes as discrete fields of information.
-modified: 20210327170040889
+modified: 20210409024212388
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Contact Tiddlers
@@ -10,15 +10,15 @@ The second tiddler type to consider is the ''contact''. Let's create a contact a
 
 !! Creating a contact tiddler
 
-Start by adding a [[link|Links]] to a contact to your [[journal tiddler|Journal Tiddlers]]. As a reminder, to edit an existing tiddler, click the pencil icon in the upper-right corner of the tiddler.
+Let's start by adding a [[link|Links]] to a contact to our [[journal tiddler|Journal Tiddlers]]. As a reminder, to edit an existing tiddler, click the pencil icon in the upper-right corner of the tiddler.
 
 Recall that to create a link, you can either surround the name of the tiddler you want to link to with `[[double square brackets]]`, or just write the text in [[CamelCase]]. I like CamelCase for personal notes for its simplicity of use, even though it's not quite as pretty, so let's try that. (Note that `JaneDoe` doesn't appear as a link in the following live example, because this book's wiki has CamelCase linking turned off -- but it will when you paste it into your own wiki, because we left it turned on there.)
 
 {{Sn:JaneDoeJournalStart||MagicSnippet}}
 
-When you type this into a tiddler in your wiki, if you have the live preview open you'll see the text `JaneDoe` immediately change color to indicate a link. It will be in italics, which indicates the tiddler doesn't yet exist. Let's click the link to open the nonexistent tiddler, then click the edit button to create it.
+When you type or paste this into your journal tiddler, if you have the live preview open you'll see the text `JaneDoe` immediately change color to indicate a link. It will be in italics, which indicates the tiddler doesn't yet exist. Let's click the link to open the nonexistent tiddler, then click the edit button to create it.
 
-We'll want to tag our contacts `Contact`, so go ahead and click in the //Tag name// box under the title, type `Contact`, and press Enter. A <<tag-pill Contact>>tag pill will appear. Notice that the tag picker would allow you to select an existing tag from the drop-down if it already existed; you can continue typing to filter the list of tags, and use the up and down arrow keys and the Enter key to pick a tag from the list.
+We'll want to tag our contacts `Contact`, so go ahead and click in the //Tag name// box under the title, type `Contact`, and press Enter. A <<tag-pill Contact>>tag pill will appear. Notice the drop-down menu that allows you to select an existing tag; you can continue typing to filter the list of tags, and use the up and down arrow keys and the Enter key to pick a tag from the list.
 
 We don't necessarily even have to add any content to Jane's tiddler. Maybe to start with, we just want to let TiddlyWiki know that ''Jane is a contact''. So let's save the tiddler; either use the check icon <<textual-button "done-button">> again, or press Control+Enter (if you don't learn any other keyboard shortcuts, this is a really helpful one). If you look back up at the journal tiddler, you'll see that `JaneDoe` is no longer in italics, meaning it now exists.
 
@@ -40,7 +40,7 @@ We said back in our requirements that we wanted to keep track of some informatio
 
 > Keep track of people we meet, their contact information, their managers, anyone else at the company they're related to, what they do, and what projects they're involved in.
 
-We've already satisfied “keep track of people we meet” by mentioning Jane in our journal and creating a tiddler for her, and we'll satisfy “what projects they're involved in” by linking to Jane's tiddler from the relevant projects, once we create them. For “what they do,” let's write a brief description of Jane and her role in the company in the body of the tiddler:
+We've already satisfied “keep track of people we meet” by mentioning Jane in our journal and creating a tiddler for her, and we'll satisfy “what projects they're involved in” by linking to Jane's tiddler from the relevant projects, once we create them. For “what they do,” let's put a brief description of Jane and her role in the company in the text of the tiddler:
 
 ```html
 Jane works in the HR department managing the employee information system and onboarding new hires.
@@ -50,13 +50,13 @@ Easy enough, but hold up just a second -- are there other things we might want t
 
 I see at least two distinct concepts here that we might want to keep notes on, the HR department and the employee information system. You could argue that the onboarding process for this company is a concept as well. It's up to you whether these are ideas you'll want to keep track of, but if they are, you'll want to link to them. (This is one case where it's not so effective to create structure retroactively once you decide you need it: if you've created fifteen tiddlers that refer to the employee information system without calling it out as a concept, you have to go back and relink all of them once you realize they should be related. Further, you quite likely didn't use the same words to refer to the system in every case, so a search might not be that effective at finding all the instances. You may not even know it would be useful to //have// these relationships unless you've been linking as you go along!)
 
-For our purposes, let's say we don't really care about keeping track of every note that discusses the HR department, nor about keeping notes about the department itself, so we'll leave that one off. However, the employee information system is probably going to be important, so let's link that one up. 
+For our purposes, let's say we don't really care about keeping track of every note that discusses the HR department, nor about keeping notes about the department itself, so we'll leave that one off. However, the employee information system is probably going to be important, so let's link that one up by putting it in CamelCase. 
 
 ```html
 Jane works in the HR department managing the EmployeeInformationSystem and onboarding new hires.
 ```
 
-You'll notice the link is in italics again since we haven't created the tiddler. It's up to you how fussy you want to be about creating tiddlers once you link to them. Many people like to simply leave them missing, and add content only when they have some content to put in them. Others prefer to create them immediately with some dummy content, or no content, so that it's more obvious if they misspell a concept the second time (if it shows up missing and it's something you think you would have referred to previously, that's a red flag). Personally, I generally create missing tiddlers once I know some tags that apply to them (e.g., Jane is a `Contact`), or once I have some useful content to put in them.
+You'll notice the link is in italics again since we haven't created the tiddler. It's up to you how fussy you want to be about creating tiddlers once you link to them. Many people like to leave them missing, and add content only when they have some content to put in them. Others prefer to create them immediately with some dummy content, or no content, so that it's more obvious if they misspell a concept the second time (if it shows up missing and it's something you think you would have referred to previously, that's a red flag). Personally, I generally create missing tiddlers once I know some tags that apply to them (e.g., Jane is a `Contact`), or once I have some useful content to put in them.
 
 One more thing here: you might notice that I didn't link to `JaneDoe`, I just wrote “Jane,” even though I said just a little while ago that it was best practice to always link to contacts. That's because it's a pet peeve of mine to see a link to the current tiddler //within that tiddler// (since you're already there, if you click on it, nothing happens). So this is the one exception. If you're not as fussy as I am, you might just make it a habit to always link.
 
@@ -67,11 +67,11 @@ There were a couple more pieces of information about Jane we wanted to keep trac
 * contact information
 * relationships to other people at the company -- manager and family
 
-Since this is a textbook example, let's keep life simple and say that at our company, email address and phone numbers are the only contact information we need to know. We'll also consider only one type of “family relation,” whether it's the person's spouse, child, or third cousin twice removed.
+Since this is a textbook example, let's keep life simple and say that at our company, email address and company phone number are the only contact information we need to know. We'll also consider only one type of “family relation,” whether it's the person's spouse, child, or third cousin twice removed.
 
-We could just write this information in the body of the tiddler. However, it's likely we'd end up doing that in a slightly different way on each tiddler, and if we decided we wanted to get a list of all the phone numbers of our contacts, we'd have to go through and pick them out manually. If we put each piece of information in a separate [[field|Fields]], we can easily search on or reference just that information from elsewhere in the wiki -- for instance, we could find everyone whose phone number starts with the area code 612, or create a table of all our contacts and their email addresses. You'll see much more on this later!
+We could just write this information in the text of the tiddler. However, as we create more contacts, it's likely we'd end up doing that in a slightly different way on each contact's tiddler. As a result, if we later decided we wanted to get a list of all the phone numbers of our contacts, we'd have to go through and pick them out manually. If we instead put each piece of information in a separate [[field|Fields]], we can easily search on or reference just that information from elsewhere in the wiki -- for instance, we could find everyone whose phone number starts with the area code 612, or create a table of all our contacts and their email addresses. You'll see much more on this later.
 
-So instead, let's create some fields. We can map the information onto fields this way:
+So let's create some fields. We can map the information onto fields this way:
 
 |!Name|!Value|
 |`email`|`janedoe@company.com`|
@@ -79,16 +79,16 @@ So instead, let's create some fields. We can map the information onto fields thi
 |`manager`|`ChrisSmith`|
 |`family`|`JohnDoe EmilyDoe`|
 
-To actually add the fields, simply click under the body of the tiddler where it says //Add a new field//, fill in the name and value, and click the //add// button or press the Enter key.
+To actually add the fields, look under the text of the tiddler where it says //Add a new field//, fill in the //field name// and //field value// textboxes as appropriate, and click the //add// button or press the Enter key.
 
 A couple of notes about fields:
 
 * Field names can only contain ''lowercase letters'', ''numbers'', ''hyphens'' (`-`), ''underscores'' (`_`), and ''periods'' (`.`) -- notice that spaces are not in this list. I usually stick to lowercase letters and occasionally hyphens.
 * We'll want to be sure we ''use the same field names'' on every contact tiddler, or else we won't be able to cross-reference the values across different tiddlers. The drop-down for //field name// will show the names you've used in the past to reduce the chances of misremembering what you called it.
 * Similarly, it's a good idea to be sure to use a ''consistent format'' across all tiddlers. For instance, for the phone number, decide that you use the `nnn-nnn-nnnn` format, rather than `nnnnnnnnnn` or `(nnn) nnn-nnnn`, and then use that across all contact tiddlers.
-* The `family` field is an example of a ''tiddler list'' (or just ''list''), which consists of tiddler names separated by spaces. If your tiddler names have spaces in them, you put each tiddler in double square brackets as if it were a link: `[[John Doe]] [[Emily Doe]]`. TiddlyWiki understands that lists are a series of separate tiddler names and can work with the values separately. We'll learn [[more about lists|Ordering Tiddlers]] in the next chapter.
+* The `family` field is an example of a ''tiddler list'' (or just ''list''), which consists of tiddler names separated by spaces. If your tiddler names have spaces in them, you put each tiddler name in double square brackets as if it were a link: `[[John Doe]] [[Emily Doe]]`. TiddlyWiki understands that lists are a series of separate tiddler names and can work with the values individually. We'll learn [[more about lists|Ordering Tiddlers]] in the next chapter.
 
-Go ahead and save the tiddler. You'll see that fields don't show up anywhere on the tiddler body itself, but if you click the info button <<textual-button "info-button">> and then the //Fields// tab, they'll appear there.
+Go ahead and save the `JaneDoe` tiddler. You'll see that your custom fields don't show up anywhere on the tiddler itself, but if you click the info button <<textual-button "info-button">> and then the //Fields// tab, they'll appear there.
 
 !! Outstanding issues
 
@@ -98,7 +98,7 @@ You've probably noticed there are some annoying things about our implementation 
 # Further, the people in the `family` and `manager` fields shown in the info area aren't linked, so you'd have to go search for them if you wanted more information. The exercise mentioned in #1 will solve this issue too.
 # You have to remember to add the fields every time you create a contact, and there is no prompting about what information to include in the field. We'll discuss how to create custom buttons that [[create tiddlers with prefilled fields|Creating Tiddlers With Predefined Fields]] in chapter 6.
 
-For now, we have a working if suboptimal implementation of contacts, so let's proceed to creating some more tiddler types and getting the rest of our wiki structure set out.
+For now, we have a working if suboptimal implementation of contacts, so let's proceed to creating some more tiddler types.
 
 !! Takeaways
 

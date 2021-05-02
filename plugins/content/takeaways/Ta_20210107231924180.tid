@@ -1,6 +1,6 @@
 answer: `tag="input"`
 created: 20210107231925433
-modified: 20210311183121618
+modified: 20210418160807449
 origin: Buttons and Input Widgets
 qtype: rememberq
 question: What attribute and value passed to the `$edit-text` widget causes it to accept only a single line of text?

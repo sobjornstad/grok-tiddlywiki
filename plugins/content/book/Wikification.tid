@@ -1,7 +1,7 @@
 created: 20201124152747833
 description: TiddlyWiki converts wikitext into HTML for display by //wikifying// it. This process may sometimes need to be triggered manually.
 imageurl: https://upload.wikimedia.org/wikipedia/commons/b/bb/Kittyply_edit1.jpg?download
-modified: 20210407124051324
+modified: 20210410141854575
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Wikification
@@ -19,7 +19,7 @@ Wikification can be understood as a sort of preprocessing or pre-rendering: firs
 
 Obviously, processing and formatting wikitext is one of the most essential functions of TiddlyWiki. It happens anytime a tiddler is displayed. However, just because you put some wikitext somewhere in TiddlyWiki does not guarantee it will be wikified.
 
-In general, ''anytime a chunk of wikitext ends up in the body of a tiddler that is being displayed'', TiddlyWiki tries to wikify it. The chunk might be the entire text of the tiddler or the result of a single field or variable transclusion or macro call. (As we discussed in [[Text Substitution]], it will never be composed of the result of //several// of these things next to each other, or the result of one of these things plus some raw text in the body of the main tiddler: the contents of each transclusion is a separate “chunk.”) If the result of wikifying one of these things still contains wikifiable wikitext -- for instance, the result of wikifying the `{{tiddler!!field}}` transclusion syntax is some wikitext contained in the `field` field -- TiddlyWiki will try to wikify that as well. It will repeat this step until there is no more unwikified wikitext, or until it detects that it has gotten stuck in an infinite loop (recall [[Ex:SelfTransclusion]]).
+In general, ''anytime a chunk of wikitext ends up in the body of a tiddler that is being displayed'', TiddlyWiki tries to wikify it. The chunk might be the entire text of the tiddler or the result of a single field or variable transclusion or macro call. (As we discussed in [[Text Substitution]], it will never be composed of the result of //several// of these things next to each other, or the result of one of these things plus some raw text in the body of the main tiddler: the result of each transclusion is a separate chunk.) If the result of wikifying one of these things still contains wikifiable wikitext -- for instance, the result of wikifying the `{{tiddler!!field}}` transclusion syntax is some wikitext contained in the `field` field -- TiddlyWiki will try to wikify that as well. It will repeat this step until there is no more unwikified wikitext, or until it detects that it has gotten stuck in an infinite loop (recall [[Ex:SelfTransclusion]]).
 
 However, there is one huge exception: when you use a transclusion (whether of a field or a macro/variable) as a parameter to an HTML or widget attribute, ''the result of this transclusion is //not// wikified''. In other words, TiddlyWiki doesn't attempt to repeatedly wikify the result of the initial transclusion like it does with body text; it does it exactly once and then stops.
 
@@ -64,11 +64,9 @@ Now, if we populate the `imageurl` field on some tiddler with a URL and include 
 
 However, what if you want to ''keep part of the URL in another tiddler''? In the above URL, perhaps we are using a lot of images from Wikimedia Commons in our wiki, and we want to store the base URL `https://upload.wikimedia.org/wikipedia/commons` in a tiddler called `WikimediaCommonsUrl`. Then in the `imageurl` we could just use: `{{WikimediaCommonsUrl}}/b/bb/Kittyply_edit1.jpg?download`. This way, if Wikimedia Commons ever changes its web address (unlikely, to be sure!), we can quickly update all our links.
 
-If you try this, though, you'll find that the image doesn't appear. Since it might be hard to see exactly //why// it doesn't work, try selecting the image with your browser's element inspector (if you've forgotten how that works, review [[When Things Go Wrong]]). After a close look at the HTML, the problem should be obvious: the `src` attribute literally begins with `{{WikimediaCommonsUrl}}`, it hasn't been replaced with the contents of that tiddler. Since that isn't a valid URL of an image, no image is displayed.
+If you try this, though, you'll find that the image doesn't appear; instead a “broken image” icon will appear. Since it might be hard to see exactly //why// it doesn't work, try selecting the image with your browser's element inspector (if you've forgotten how that works, review [[When Things Go Wrong]]). After a close look at the HTML, the problem should be obvious: the `src` attribute literally begins with `{{WikimediaCommonsUrl}}`, it hasn't been replaced with the contents of that tiddler. Since that isn't a valid URL of an image, no image is displayed.
 
-How, then, can we get the transclusion to expand? You might be tempted to create a macro, since macros often seem to solve problems like this (specifically, those related to the lack of [[Text Substitution]]). But that won't help with this one. The problem is that no matter what you do, the macro or variable will still yield wikitext when invoked, and that won't get wikified when it eventually gets passed in as the value of the `src` attribute.
-
-What we need is a way to wikify the wikitext //while it's still in a variable//, rather than waiting until it's actually rendered as part of a tiddler (because it never will be rendered as part of a tiddler the way we're using it). The appropriately named `$wikify` widget provides this capability. We can modify our example to use this widget as follows:
+How, then, can we get the transclusion to expand? What we need is a way to wikify the wikitext //while it's still in a variable//, rather than waiting until it's actually rendered as part of a tiddler (because it never will be rendered as part of a tiddler the way we're using it). The appropriately named `$wikify` widget provides this capability. We can modify our example to use this widget as follows:
 
 ```html
 <$wikify name=wikifiedImageUrl text={{!!imageurl}}>

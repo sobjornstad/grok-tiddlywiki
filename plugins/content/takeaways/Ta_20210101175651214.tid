@@ -1,6 +1,6 @@
 answer: `$(myVariable)​$`
 created: 20210101175652476
-modified: 20210320191243566
+modified: 20210410140537406
 origin: Using Variables in Macros
 qtype: rememberq
 question: What is the syntax to text-substitute a variable (not a parameter) called `myVariable` in the definition of a macro?

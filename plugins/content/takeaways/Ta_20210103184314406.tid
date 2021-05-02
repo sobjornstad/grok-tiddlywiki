@@ -1,6 +1,6 @@
 answer: `k: v` (on a separate line)
 created: 20210103184316716
-modified: 20210215140942298
+modified: 20210410193204887
 origin: Data Tiddlers
 qtype: rememberq
 question: In a data tiddler formatted as a dictionary, how would you write the key-value pair where `k` was the key and `v` was the value?

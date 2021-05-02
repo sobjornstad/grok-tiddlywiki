@@ -1,6 +1,6 @@
 answer: `fields[]`
 created: 20210207180626371
-modified: 20210302163044166
+modified: 20210502162428834
 origin: Working with Dates
 qtype: rememberq
 question: What filter operator finds the names of all the fields used on the input tiddlers?

@@ -1,6 +1,6 @@
 answer: `is[draft]`
 created: 20210207014043275
-modified: 20210313141712966
+modified: 20210418163720035
 origin: Getting the Current Tiddler Right on Drafts
 qtype: rememberq
 question: What filter step checks if the input tiddler is a draft tiddler?

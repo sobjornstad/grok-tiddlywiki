@@ -1,5 +1,5 @@
 created: 20201122170037082
-modified: 20210317204417479
+modified: 20210409215623786
 tags: Answer
 title: Ex:DefaultToField/answer
 type: text/vnd.tiddlywiki
@@ -8,9 +8,7 @@ In your `WikipediaLinkTemplate`:
 
 ```html
 <$set name="theArticle" value={{{ [<articleName>!is[blank]else{!!articlename}] }}}>
-    <a
-      class="tc-tiddlylink-external"
-      href={{{ [{WikipediaMetadata!!url}addsuffix<theArticle>] }}}>
+    <a class="tc-tiddlylink-external" href={{{ [{WikipediaMetadata!!url}addsuffix<theArticle>] }}}>
         <<theArticle>>
     </a>
 </$set>

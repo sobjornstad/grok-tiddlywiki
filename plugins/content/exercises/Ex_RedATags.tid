@@ -1,14 +1,14 @@
 created: 20200716023056742
 length: m
-modified: 20210130174556191
+modified: 20210418134717626
 origin: Multi-Run Filters
 tags: Exercise
 title: Ex:RedATags
 type: text/vnd.tiddlywiki
 
-Write a filter to find all tiddlers that do not link to a tiddler that has a tag which is both red and begins with the letter A, sorted by title in reverse alphabetical order.
+Write a filter to find all tiddlers that do not link to a tiddler that has a tag which is both red and begins with the letter C, sorted by title in reverse alphabetical order.
 
-Consider a "red" tag to be one with a color code of `#ff0000`, as in [[Classifying Tags]].
+Consider a “red” tag to be one with a color code of `#ff0000`, as in [[Classifying Tags]].
 
 English is terrible at expressing complicated conditions like this, so to be sure you read it right, here's the sentence decomposed hierarchically and written more precisely:
 
@@ -17,8 +17,11 @@ English is terrible at expressing complicated conditions like this, so to be sur
 *** Another tiddler:
 **** That has a tag:
 ***** Which is red (#ff0000)
-***** The name of which begins with a capital letter A
+***** The name of which begins with a capital letter C
 * Sorted by title in reverse alphabetical order.
 
+//Tip 1//: The `prefix` operator returns items from its input whose title begins with a given string of text.
 
-//Tip//: Two useful operators here will be `prefix` (limit to tiddlers whose title begins with some text) and `tags` (get all tiddlers which are used as a tag at least once).
+//Tip 2//: The `is[]` filter step will find all (non-[[shadow|Shadow Tiddlers]]) tiddlers in the wiki.
+
+A quick way to test your answer is to add a link from a tiddler that appears in the output to any contact; the tiddler should disappear from the list since it's now linking to a tiddler that has a red tag whose name begins with C.

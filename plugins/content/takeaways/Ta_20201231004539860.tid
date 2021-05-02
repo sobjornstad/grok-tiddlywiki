@@ -1,6 +1,6 @@
 answer: `<<myvar>>`
 created: 20201231004541137
-modified: 20210320204835032
+modified: 20210409192722422
 origin: Variables
 qtype: rememberq
 question: What is the wikitext syntax to refer to the value of a variable named `myvar`?

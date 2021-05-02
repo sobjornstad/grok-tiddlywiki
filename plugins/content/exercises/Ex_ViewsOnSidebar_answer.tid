@@ -1,9 +1,9 @@
 created: 20200718044652683
-modified: 20200718044706450
+modified: 20210418141317095
 tags: Answer
 title: Ex:ViewsOnSidebar/answer
 type: text/vnd.tiddlywiki
 
 Tag the tiddler with `$:/tags/SideBar`, then set its `list-before` field to `$:/core/ui/SideBar/Tools`, or its `list-after` field to `$:/core/ui/SideBar/Recent`.
 
-You can find the tag by poking around in `$:/tags` and seeing what looks promising, and the names of the other tabs for the `list-after` field by clicking on the tag pill once you've identified the correct tag. Another good way is to search the ''Shadows'' tab of Advanced Search for the text of one of the tabs (e.g., `Recent`) and see what comes up.
+You can find what tag to use by poking around in `$:/tags` and seeing what looks promising, or by searching for one of the other tabs (e.g., `Recent`) in the ''Shadows'' tab of Advanced Search, finding the shadow tiddler that handles that tab, and seeing what it's tagged.

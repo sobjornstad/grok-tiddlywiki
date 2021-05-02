@@ -1,6 +1,6 @@
 created: 20200603023508416
 description: Filter expressions, runs, and steps work together to select tiddlers.
-modified: 20210327181538331
+modified: 20210409152325684
 parent: Filtering and Formatting
 tags: Section
 title: Using Filter Expressions
@@ -10,7 +10,7 @@ So that's what [[filters|Filters]] //are//...now what do they look like, and how
 
 Filters, or, more formally, ''filter expressions'', consist of one or more ''filter runs'', which each contain one or more ''filter steps''. For now, we'll only worry about filter expressions containing a single run -- you'll be able to accomplish most basic tasks without needing multiple runs. However, know that individual runs [[can be combined in various ways|Multi-Run Filters]] to form a more complex filter expression, and we'll discuss this further in chapter 5.
 
-If you've ever used any shell language (Bash, MS-DOS, PowerShell, etc.) -- or even if you haven't -- you can think of a filter run as a ''pipeline''. You put a list of tiddlers into the left end of the pipeline; unless you say otherwise, {{Ltc:AllTiddlersInTheLeft||LieToChildrenTemplate}} go in the left end. The tiddlers then pass from left to right through a series of steps in the pipeline. Each step can remove tiddlers from the list that don't match some criteria, generate and output a new list of tiddlers based on the existing list, or ignore the existing list and spit out an entirely new list. Whatever list that step produces, the next step then gets to make its own changes to the list, until we come to the right side of the pipeline and the current state of the list is our result.
+If you've ever used any shell language (Bash, MS-DOS, PowerShell, etc.) -- or even if you haven't -- you can think of a filter run as a ''pipeline''. You put a list of tiddlers into the left end of the pipeline; unless you say otherwise, {{Ltc:AllTiddlersInTheLeft||LieToChildrenTemplate}} go in the left end. The tiddlers then pass from left to right through a series of steps in the pipeline. Each step can remove tiddlers from the list that don't match some criteria, generate and output a new list of tiddlers based on the existing list, or ignore the existing list and spit out an entirely new list. The next step then gets to make its own changes to the list output by this step, and so on until we come to the right side of the pipeline and the output of the last step is the result of the filter run.
 
 Here are some very simple filter expressions:
 
@@ -25,16 +25,16 @@ Notice that these filter expressions are also filter runs, since we are consider
 
 Let's try using some of these filters. To do so, open <<textual-button "advanced-search-button">> Advanced Search, which you can find under the ''Tools'' tab in the sidebar or by pressing Ctrl+Shift+A. Then pick the ''Filter'' tab and type in one of the expressions above. You'll see a list of the tiddlers that match.
 
-If you try the last filter listed above, `[links[]]`, you might notice a whole bunch of funny-looking tiddlers show up, with names starting with `$:/`. What's up with those? These are [[system tiddlers|System Tiddlers]]; they contain configuration settings or bits and pieces of TiddlyWiki itself. If you don't want to see the system tiddlers, add `!is[system]` to the beginning of the filter run to eliminate them (read `!` as //not//). So that will look like `[!is[system]links[]]`.
+If you try the last filter listed above, `[links[]]`, you might notice a whole bunch of funny-looking tiddlers show up, with names starting with `$:/`. What's up with those? Those are [[system tiddlers|System Tiddlers]]; they contain configuration settings or bits and pieces of TiddlyWiki itself. If you don't want to see the system tiddlers, add `!is[system]` to the beginning of the filter run to eliminate them (read `!` as //not//). So that will look like `[!is[system]links[]]`.
 
 Let's look at that one again: `[!is[system]links[]]`. This run has two steps: first we eliminate all tiddlers that are system tiddlers (alternatively, you could choose to think of it as “keep all tiddlers that are not system tiddlers”), then we look at each of the tiddlers in that reduced list and spit out all of the tiddlers it links to.
 
 !! Common mistakes
 
-Filter expressions are quite sensitive to minor mistakes in punctuation. Once you've become familiar with these, spotting and fixing them will be trivial, but at first they may be extremely frustrating. These three errors are particularly common:
+Filter expressions are quite sensitive to minor mistakes in punctuation. Once you've become familiar with the most common mistakes, spotting and fixing them will be trivial, but at first they may be extremely frustrating. These three errors are particularly common:
 
 * ''Forgetting the outer set of square brackets'', which define a filter run. Just `tag[Contact]`, for instance, is not a valid filter expression, as it consists of a single filter step, not a complete filter run. If you see the text //Filter error: Missing [ in filter expression// instead of the list of tiddlers you expected, this is likely your problem.
-* ''Including the opening square bracket but not the closing one''. For some runs, the filter expression may //look// symmetric even if all the brackets haven't been closed yet (for example, `[tag[Contact]`). A useful habit to develop is inserting both the left and the right square bracket, then pressing the left arrow key to put the cursor back between them -- this way, you won't have to remember how many brackets need to be closed.
+* ''Including the opening square bracket but not the closing one''. For some runs, the filter expression may //look// symmetric even if all the brackets haven't been closed yet (for example, `[tag[Contact]`). A useful habit to develop is inserting both the left and the right square bracket whenever you come to a left square bracket, then pressing the left arrow key to put the cursor back between them -- this way, you won't have to remember how many brackets need to be closed.
 * ''Putting a space between filter steps'', like <code>[!is[system]&nbsp;links[]]</code>. What this actually does is filter on the values of the [[field|Fields]] called ` links` (a space followed by the word //links//). Since field names can't have spaces in them, this will never do anything useful. It's never been clear to me why TiddlyWiki doesn't just ignore the space, seeing as [[there is nothing else you could have meant|https://zettelkasten.sorenbjornstad.com/#DoWhatIMean]], but for now you will get the wrong results if you do that, so don't do it.
 
 !! Exercises

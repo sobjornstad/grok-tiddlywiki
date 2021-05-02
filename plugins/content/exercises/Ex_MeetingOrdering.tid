@@ -1,9 +1,9 @@
 created: 20200608023312103
 length: m
-modified: 20210327155008087
+modified: 20210409135454496
 origin: Ordering Tiddlers
 tags: Exercise
 title: Ex:MeetingOrdering
 type: text/vnd.tiddlywiki
 
-Create several more meeting tiddlers under the `OnboardingHr` tag, then try dragging and dropping them around using the tag pill list. Open up the `OnboardingProcess` tiddler as well, so you can see the effects on the table of contents.
+Create several more meeting tiddlers under the `OnboardingHr` tag, then try dragging and dropping them around using the tag pill list. Have the `OnboardingProcess` tiddler open as you do so, so you can see the effects on the table of contents.

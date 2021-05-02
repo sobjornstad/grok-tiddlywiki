@@ -1,6 +1,6 @@
 created: 20200606025030461
 description: Macros can reference variables as well as parameters via text substitution.
-modified: 20210327153537750
+modified: 20210410135535433
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Using Variables in Macros
@@ -28,7 +28,7 @@ Let's look at our good old `getPhone` example again and make it work without par
 
 Nothing tricky here beyond remembering the syntax. But why would we want to do this? Generally, if we have the choice, we don't; it's clearer what information the macro is using when we use parameters, and it's not a good thing when macros do something surprising. (See the [[Principle of Least Astonishment|https://en.wikipedia.org/wiki/Principle_of_least_astonishment]].)
 
-However, there are a few situations where text substitution on a variable can allow us to do something we couldn't do otherwise. Let's think back to the situation in [[Filters and Transclusions]] where we tried unsuccessfully to use a macro rather than including field transclusions in a filter. What we were trying to do was essentially this, if only it were valid syntax:
+However, there are some situations where text substitution on a variable can allow us to do something we couldn't do otherwise. Let's think back to the situation in [[Filters and Transclusions]] where we tried unsuccessfully to use a macro rather than including field transclusions in a filter. What we were trying to do was essentially this, if only it were valid syntax:
 
 ```html
 \define myfilt(people)
@@ -56,7 +56,7 @@ With the ability to do variable text substitutions, now we can do it like this:
 </$set>
 ```
 
-This isn't quite as clean as just transcluding the fields directly into the filter as we learned how to do in [[Filters and Transclusions]] -- and if the list of people contains weird characters we could land ourselves in trouble since we're using text substitution -- but it's much more elegant than some of the stuff we were trying to do before!
+This isn't quite as clean as just transcluding the fields directly into the filter as we learned how to do in [[Filters and Transclusions]] -- and if the list of people contains weird characters we could land ourselves in trouble since we're using text substitution -- but it's much better than some of the stuff we were trying to do before!
 
 You will find this pattern quite helpful when dealing with multiple layers of macros and widgets.
 

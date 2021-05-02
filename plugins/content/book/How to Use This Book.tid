@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20210407150353990
+modified: 20210502173007941
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -17,7 +17,7 @@ type: text/vnd.tiddlywiki
 * ''Bold type'' is used to call out important terms and points that you may wish to skim the text for.
 * //Italics// identify things you select on the screen and terms that may be unfamiliar but are not particularly important.
 * `Monospaced text` indicates something you type into TiddlyWiki (most often [[wikitext|Wikitext]]).
-* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the assertion being made is not strictly accurate. Normally, this is done because the details are more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the full truth.
+* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the statement being made is not strictly accurate. Normally, this is done because the details are more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the full truth.
 
 </$details><$details summary="Structure and navigation">
 
@@ -70,9 +70,9 @@ You should plan to do ''most or all of the exercises'' to cement your understand
 
 Exercises have a letter next to them to indicate about how long I'm guessing they'll take you:
 
-* (s), for //seconds// -- from a few seconds to 2 minutes (<$text text={{{ [tag[Exercise]field:length[s]!field:origin[Supplemental Exercises]count[]] }}}/> total)
-* (m), for //minutes// -- from 2 minutes to 15 minutes (<$text text={{{ [tag[Exercise]field:length[m]!field:origin[Supplemental Exercises]count[]] }}}/> total)
-* (M), for //minutes//, but bigger -- from 15 minutes to 40 minutes (<$text text={{{ [tag[Exercise]field:length[M]!field:origin[Supplemental Exercises]count[]] }}}/> total)
+* (s), for //seconds// -- from a few seconds to 2 minutes (<$text text={{{ [all[tiddlers+shadows]tag[Exercise]field:length[s]!field:origin[Supplemental Exercises]count[]] }}}/> total)
+* (m), for //minutes// -- from 2 minutes to 15 minutes (<$text text={{{ [all[tiddlers+shadows]tag[Exercise]field:length[m]!field:origin[Supplemental Exercises]count[]] }}}/> total)
+* (M), for //minutes//, but bigger -- from 15 minutes to 40 minutes (<$text text={{{ [all[tiddlers+shadows]tag[Exercise]field:length[M]!field:origin[Supplemental Exercises]count[]] }}}/> total)
 * (h), for //hours// -- 40 minutes or more, up to a couple of hours (only supplemental exercises are this long)
 
 Of course, these estimates are not guarantees -- depending on your past experience with tools similar to TiddlyWiki, you might take longer or shorter than average for most exercises, and like when solving a math problem, you might happen to work something difficult out on the first try, or struggle with something for 20 minutes that would have been instantly obvious to you on a different day.
@@ -115,7 +115,7 @@ If you're already familiar with spaced repetition and prefer using [[Anki|https:
 Here's a takeaway to try:
 
 <div class="mm-takeaway-example">
-	{{Tr:20210117001839027||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+	{{Ta:20210117001839027||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
 </div>
 
 </$details>

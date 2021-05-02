@@ -1,6 +1,6 @@
 answer: `$:/config/PageControlButtons/Visibility/MyButton`
 created: 20210109221829400
-modified: 20210321015104247
+modified: 20210418162728540
 origin: Creating Tiddlers With Predefined Fields
 qtype: rememberq
 question: If a tiddler called `MyButton` is part of the page controls, what tiddler controls whether it is visible above the search box?

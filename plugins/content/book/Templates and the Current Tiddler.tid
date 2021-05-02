@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20210327160409746
+modified: 20210409202820469
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Templates and the Current Tiddler
@@ -23,7 +23,7 @@ Here are some places you can ''access the current tiddler'':
 
 * Via the `<<currentTiddler>>` variable.
 * In a field transclusion that does not name any tiddler. `{{!!field}}` refers to the `field` field of the current tiddler, as noted in [[Transclusions]].
-* Via the `all[current]` [[filter operator|Common Filter Operators]].
+* Via the `all[current]` [[filter step|Common Filter Operators]].
 * Many [[widgets|Widgets]] assume the tiddler to operate on is the current tiddler unless you say otherwise.
 
 Here are some things that ''change the current tiddler'':
@@ -74,12 +74,12 @@ In reality, of course, you don't have to put the `$set` there, it just happens w
 
 Going back to the exercise, we did a nice job of displaying Jane's contact information on //Jane's// tiddler...but what about every other contact's tiddler? If we want the contact fields to appear on every contact's tiddler, the most obvious way would be to copy and paste the same list of information and field references to every contact tiddler, but that sounds pretty unpleasant. This sounds like an ideal place to use transclusion, which lets us include the same content in many different tiddlers without repeating the content.
 
-Let's try this, then: let's excise the "Information about Jane" section from her tiddler (if you've forgotten, there is a button on the toolbar to do this, or you can press Ctrl+E). Call the excised tiddler `ContactInformationTemplate`, and replace it with a transclusion; `{{ContactInformationTemplate}}` should appear in the wikitext of `JaneDoe`.
+Let's try this, then: let's excise the “Information about Jane” section from her tiddler (if you've forgotten, there is a button on the toolbar to do this, or you can press Ctrl+E). Call the excised tiddler `ContactInformationTemplate`, and replace it with a transclusion; `{{ContactInformationTemplate}}` should appear in the wikitext of `JaneDoe`. (If you've done [[Ex:JaneManagerPhone]], you might want to include the macro in the excision as well, so that the logic to select the contact's manager's phone number works correctly.)
 
 Nice. But wait...none of the information is showing up now! Did you catch why?
 
 <$details summary="Answer">
-When we transclude `ContactInformation` into `JaneDoe`, the current tiddler is changed to `ContactInformation`, which means we don't have access to the fields on `JaneDoe` anymore. We could change the transclusions to look like, e.g., `{{JaneDoe!!phone}}`, but then this `ContactInformation` tiddler could only be used with the `JaneDoe` tiddler -- and being able to reuse the `ContactInformation` tiddler was the entire point of extracting it into a separate tiddler.
+When we transclude the `ContactInformationTemplate` into `JaneDoe`, the current tiddler is changed to `ContactInformationTemplate`, which means we don't have access to the fields on `JaneDoe` anymore. We could get around this by changing the transclusions on the `ContactInformationTemplate` to look like, e.g., `{{JaneDoe!!phone}}`, but then this `ContactInformationTemplate` tiddler could only be used with the `JaneDoe` tiddler -- and being able to reuse the `ContactInformationTemplate` tiddler was the entire point of extracting it into a separate tiddler.
 </$details>
 
 In this use case, suddenly the behavior that looked nice just a moment ago is exactly what we don't want.
@@ -107,7 +107,7 @@ There's a shorter way to write this. Just like we can write `{{!!field}}` to tra
 
 It's important to remember that, since [[everything's a tiddler|Tiddlers]], ''a template is not really a thing in itself''; that is, unlike in many other similar tools, your TiddlyWiki is not separated into two kinds of content, tiddlers and templates. Rather, when you transclude a tiddler through a template, you are using a particular tiddler //as// a template, to display the content in the other tiddler. A tiddler can be used as a template in one place, and as an ordinary content tiddler with a link to it, or for that matter as a tag, in another. (We'll see a practical example of this in [[Using a Tag Tiddler as a Template]].) In fact, in many cases, transclusion will have exactly the same effect whether the transcluded tiddler is treated as a template or not. For instance, `{{EmployeeProfileSetupMeeting}}`, `{{||EmployeeProfileSetupMeeting}}`, and `{{JaneDoe||EmployeeProfileSetupMeeting}}` should all do the same thing if you try them: the contents of the `EmployeeProfileSetupMeeting` tiddler appears. That's because the `EmployeeProfileSetupMeeting` tiddler doesn't contain any references that depend on the current tiddler, such as `{{!!field transclusions}}`.
 
-Look out as you move forward: the syntax for templates uses two consecutive pipe characters (`||`), while the syntax for links with different displayed text and target uses only a single pipe (`|`). This is one of those little warts on TiddlyWiki's syntax that can be hard to remember, and you won't get a useful error if you use the wrong one in the wrong place.
+Look out as you move forward: the syntax for templates uses two consecutive pipe characters (`||`), while the syntax for [[links|Links]] with different displayed text and target uses only a single pipe (`|`). This is one of those little warts on TiddlyWiki's syntax that can be hard to remember, and you won't get a useful error if you use the wrong one in the wrong place.
 
 
 !! When is an error not an error?

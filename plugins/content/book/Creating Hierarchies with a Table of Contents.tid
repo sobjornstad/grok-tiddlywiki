@@ -1,12 +1,12 @@
 created: 20200603023508492
 description: TiddlyWiki can produce hierarchical tables of contents from tag structures.
-modified: 20210327170332835
+modified: 20210409134640967
 parent: Filing and Organizing
 tags: Section
 title: Creating Hierarchies with a Table of Contents
 type: text/vnd.tiddlywiki
 
-Being able to browse by tags and links is nice. For many use cases that's enough, and indeed it's often better not to tie ourselves into trying to organize all of our notes into a single hierarchy. Sometimes, though, we have a cluster of notes about a particular topic that naturally forms into a ''hierarchy'' -- for example, an individual project -- and being able to view that hierarchy in a table of contents is a valuable way to see an overview of the topic. And certain applications of TiddlyWiki, such as writing a book, really do benefit from a hierarchy covering the entire contents of the wiki.
+Being able to browse by tags and links is nice. For many use cases that's enough, and indeed it's often better not to tie ourselves into trying to organize all of our notes into a single hierarchy. Sometimes, though, we have a cluster of notes about a particular topic that ''naturally forms into a hierarchy'' -- for example, an individual project -- and being able to view that hierarchy in a table of contents is a valuable way to see an overview of the topic. And certain applications of TiddlyWiki, such as writing a book, really do benefit from a hierarchy covering the entire contents of the wiki.
 
 Important disclaimer: you can only use the built-in table-of-contents functionality with a hierarchy built out of tags, not one built out of fields or links. Fortunately, that's how we chose to do it in our example wiki. The TiddlyWiki Locator [[plugin|Plugins]] is useful if you need more powerful tools, including navigating hierarchies built of fields or links.
 
@@ -25,15 +25,15 @@ There's no need to put any content in the tiddlers for the time being. If we lat
 
 !! Creating the table of contents
 
-The most basic table of contents is created with `<<toc "Root">>`, where `Root` is the name of the tiddler you want the table of contents to start at. In our case, this will be:
+The most basic table of contents is created with the wikitext `<<toc "Root">>`, where `Root` is the name of the tiddler you want the table of contents to start at. In our case, this will be:
 
 ```html
 <<toc "OnboardingProcess">>
 ```
 
-The funny double angle brackets `<<>>` introduce a reference to a variable or a macro call. You don't need to worry about what that is for now; we'll learn a whole lot more about it in [[Chapter 4|Variables, Macros, and Transclusions]].
+The funny double angle brackets `<<>>` introduce a reference to a variable or a macro call. You don't need to worry about what those are for now; we'll learn a whole lot more about them in [[Chapter 4|Variables, Macros, and Transclusions]].
 
-Go ahead and edit the `OnboardingProcess` tiddler and drop that in. You'll see that a numbered list of the items tagged `OnboardingProcess` shows up. But oops, the `EmployeeProfileSetupMeeting` probably doesn't belong at the top level now that we've added our three subparts of the onboarding project. It makes more sense to have it in `OnboardingHr`, agreed? Let's open it up, remove the `OnboardingProcess` tag, and add the `OnboardingHr` tag. If we save it and go back up to `OnboardingProcess` now, we'll see that now it's indented into a second level.
+Go ahead and edit the `OnboardingProcess` tiddler and drop that snippet in. You'll see that a numbered list of the items tagged `OnboardingProcess` shows up. But oops, the `EmployeeProfileSetupMeeting` probably doesn't belong at the top level now that we've added our three subparts of the onboarding project. It makes more sense to have it in `OnboardingHr`, agreed? Let's open it up, remove the `OnboardingProcess` tag, and add the `OnboardingHr` tag. If we save it and go back up to `OnboardingProcess` now, we'll see that now it's indented into a second level.
 
 This is great, but what happens if we have a project tiddler that has dozens of tiddlers in it? This list is going to get long really fast! Try changing the code to this:
 

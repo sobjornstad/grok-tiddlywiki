@@ -1,6 +1,6 @@
 answer: TiddlyWiki's default full-text search only looks in the `title` and `text` fields.
 created: 20201229133710673
-modified: 20210220190918287
+modified: 20210409032203738
 origin: Searching
 qtype: rememberq
 question: Why might a search for `lemons` not find a tiddler which has an `ingredients` field containing the word //lemons//?

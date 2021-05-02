@@ -1,6 +1,6 @@
 answer: Each in a separate file containing their fields.
 created: 20210109232308241
-modified: 20210302161343355
+modified: 20210502164041560
 origin: Writing Shell Scripts Against a TiddlyWiki
 qtype: rememberq
 question: How are tiddlers stored in a folder wiki (the format used by the Node.js version of TiddlyWiki)?

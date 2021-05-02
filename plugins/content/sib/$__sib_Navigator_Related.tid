@@ -1,15 +1,15 @@
 created: 20210206184132111
-modified: 20210206230716831
+modified: 20210409015113274
 tags: 
 title: $:/sib/Navigator/Related
 type: text/vnd.tiddlywiki
 
-\define linkDisplay(title, filterFragment, cssClass)
+\define linkDisplay(title, filter, cssClass)
 <div class=<<__cssClass__>>>
 <div style="text-align: center;">$title$:</div>
 
 <ul>
-<$list filter="[all[current]$filterFragment$sort[]]" emptyMessage="<div style='text-align: center;'>//(none)//</div>">
+<$list filter=<<__filter__>> emptyMessage="<div style='text-align: center;'>//(none)//</div>">
   <li>
         <$link/>&ensp;
 				<span style="font-size: 80%;">
@@ -55,10 +55,10 @@ type: text/vnd.tiddlywiki
 	</div>
 	<div class="gtw-bordered-element sib-link-display">
 		<$set name="xrefName" value={{{ [[Mentioned by //]addsuffix<currentTiddler>addsuffix[//]] }}}>
-			<$macrocall $name=linkDisplay title=<<xrefName>>  filterFragment="links[]" cssClass="sib-links"/>
+			<$macrocall $name=linkDisplay title=<<xrefName>>  filter="[all[current]links[]sort[]]" cssClass="sib-links"/>
 		</$set>
 		<$set name="xrefName" value={{{ [[Mentions of //]addsuffix<currentTiddler>addsuffix[//]] }}}>
-			<$macrocall $name=linkDisplay title=<<xrefName>>  filterFragment="backlinks[]" cssClass="sib-backlinks"/>
+			<$macrocall $name=linkDisplay title=<<xrefName>> filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]" cssClass="sib-backlinks"/>
 		</$set>
 	</div>
 </$reveal>

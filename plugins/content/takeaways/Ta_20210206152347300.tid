@@ -1,6 +1,6 @@
-answer: `=`
+answer: `=` (or `:all`)
 created: 20210206152348589
-modified: 20210226140244325
+modified: 20210410183058421
 origin: Multi-Run Filters
 qtype: rememberq
 question: What prefix can you add to a filter run to inhibit dominant appending and allow duplicate values in the list?

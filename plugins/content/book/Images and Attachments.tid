@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20210320144441313
+modified: 20210410185207915
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -54,13 +54,15 @@ You can reduce the number of backups saved by various means, but that only hides
 
 <$details summary="Using Node.JS">
 
-If you're technical enough to know a little bit about running a web server, or just a lot about Javascript or Node.JS, you can ''use a folder wiki'' instead of a single-file wiki, which eliminates the problem because the attachments are stored as separate files and don't have to be rewritten unless they're changed. If you don't have any particular reason to prefer single-file TiddlyWiki, this is likely your best option.
+If you're technical enough to know a little bit about running a web server, or just a lot about Javascript or Node.JS, you can ''use a folder wiki'' instead of a single-file wiki, which eliminates the file-size problem because the attachments are stored as separate files and don't have to be rewritten unless they're changed. If you don't have any particular reason to prefer single-file TiddlyWiki, this is likely your best option.
 
 Take a look at the [[Options for Saving and Hosting Your Wiki]] appendix for details.
 
+If you're editing the wiki over a network (i.e., not from the computer on which you're running the server), this method might still be slow if you have a lot of images, since all of the images will still be sent to your browser when you open the wiki. To avoid this, you can configure the server to [[lazy-load|https://tiddlywiki.com/#LazyLoading]] the images.
+
 </$details><$details summary="Linking to external content">
 
-One way to avoid the issue is to ''link to content stored elsewhere'' instead of putting it in your wiki at all. For instance, you can link to an image on the web with the `img` syntax:
+One way to avoid the issue is to ''link to content stored elsewhere'' instead of putting it in your wiki at all. For instance, you can display an image stored on the web using the `img` syntax:
 
 ```html
 [img [https://example.com/url/of/my/image.png]]
@@ -68,7 +70,7 @@ One way to avoid the issue is to ''link to content stored elsewhere'' instead of
 
 Similarly, you could link to a PDF instead of transcluding it.
 
-You can also link to files ''on your computer'' by placing them in a folder next to your TiddlyWiki. Say that you're using TiddlyDesktop, and you have a single-file TiddlyWiki, `C:\Users\Soren\Documents\TiddlyWiki\tw.html`. You could create a folder called `C:\Users\Soren\Documents\TiddlyWiki\attachments`. Then, when you want to have a file available for linking from TiddlyWiki, put it in this folder and use an image or link reference like this:
+You can also link to files ''on your computer'' by placing them in a folder next to your TiddlyWiki. Say that you're using TiddlyDesktop, and you have a single-file TiddlyWiki, `C:\Users\Soren\Documents\TiddlyWiki\tw.html`. You could create a folder called `C:\Users\Soren\Documents\TiddlyWiki\attachments`. Then, when you want to have a file available for linking from TiddlyWiki, put it in this folder and display an image or link to a PDF like this:
 
 ```html
 [img [attachments/myimage.png]]

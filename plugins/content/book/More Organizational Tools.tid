@@ -2,13 +2,13 @@ caption: 5: More Organizational Tools
 created: 20200607150802909
 description: In which we cover miscellaneous TiddlyWiki features that didn't fit in any of the previous chapters, including images, tabs, and more on filters and tags.
 list: [[Classifying Tags]] [[Multi-Run Filters]] [[Images and Attachments]] Tabs [[Data Tiddlers]]
-modified: 20210317013924387
+modified: 20210410143903634
 parent: Outline
 tags: Chapter
 title: More Organizational Tools
 type: text/vnd.tiddlywiki
 
-At this point, we've covered most of the important features of TiddlyWiki. In the next chapter, we'll be looking at how to use what we've learned to customize TiddlyWiki's interface and behavior. Before we get there, though, let's pick up a few miscellaneous features that we haven't covered yet.
+At this point, we've covered most of the important features of TiddlyWiki. In the next chapter, we'll be exploring how we can use what we've learned to customize TiddlyWiki's interface and behavior. Before that, though, let's look at a few miscellaneous features that we haven't covered yet.
 
 !! In this chapter
 

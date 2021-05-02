@@ -1,6 +1,6 @@
 answer: `The password is "purple<!-- elephant-->".`
 created: 20210117013406348
-modified: 20210302161047061
+modified: 20210409173415228
 origin: Comments
 qtype: rememberq
 question: Make the following wikitext appear to say that the password is "purple" when it's rendered, by inserting a comment: `The password is "purple elephant".`

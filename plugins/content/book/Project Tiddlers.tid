@@ -1,6 +1,6 @@
 created: 20200531014330950
 description: How to organize meetings and knowledge into overarching projects.
-modified: 20210327170100300
+modified: 20210409025641932
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Project Tiddlers
@@ -21,15 +21,15 @@ There's our project tiddler, but it's missing something: the meeting we had with
 
 Option (1) works, but if you have a large project, your project tiddler might be primarily composed of links to tiddlers relating to the project. In general, it's usually better for tiddlers to indicate that they're a part of some whole, rather than the whole listing out all of its parts; it's easy in TiddlyWiki to identify all of the parts of a whole in any number of ways, but the reverse tends to be fussier. Further, it's irritating to have to open and edit the “whole” tiddler every time you add a “part” tiddler, and it's easier to forget to do that than to forget to add a “whole” reference to the “part” tiddler. (If you happen to know anything about [[relational database|https://en.wikipedia.org/wiki/Relational_database]] design, you'll see a clear parallel here. TiddlyWiki is in fact arguably a weird kind of relational database, though without rigid schemas.)
 
-Option (2) is a solid choice and particularly easy to implement, but links carry less information about what exactly the relationship between the two tiddlers is than tags or fields do. With a link, we just know they're related in some way. With a field or tag, we can know specifically that the meeting is part of the project -- rather than the project being part of the meeting, or the project being mentioned in the meeting as a horrific disaster that should not be replicated in the design of the next project.
+Option (2) is a solid choice and particularly easy to implement, but links carry less information about what exactly the relationship between the two tiddlers is than tags or fields do. With a link, we just know they're related in some way. With a field or tag, we can know specifically that the meeting is part of the project -- rather than the project being part of the meeting, or the project being mentioned in the meeting as a horrific disaster that needs to be avoided in the next project.
 
 Option (3) provides the most information about the precise relationship between the two tiddlers. However, since you'll be creating your own custom field, you'll have to create your own customizations in TiddlyWiki to make the field do anything useful aside from showing up in the “fields” section of the Info tab, so this requires extra work.
 
 Option (4) is easy, fast, and effective, and tags are understood as the primary means of creating hierarchies and memberships in various plugins and parts of TiddlyWiki's core. Additionally, you get the autocomplete functionality of tags when searching for a “whole” tiddler to attach your “part” tiddler to. This sounds like an obvious coup, but the disadvantage is that if you have a large wiki, you may end up cluttering up your tag space by using this mechanism for many different things -- that is, dozens or hundreds of tags will show up in your tag picker, making it harder to find the ones you want. There are a number of ways to mitigate this, such as [[color-coding them|Classifying Tags]] or adding prefixes to their names to describe their functions, but it's still a disadvantage, and some experienced users of TiddlyWiki prefer to use fields in many cases for this reason.
 
-Let's go with option 4 for this wiki: it's an important part of TiddlyWiki to understand, whether or not it turns out to be your preferred method, and it's a quick and easy way to get started.
+Let's go with option (4) for this wiki: it's an important part of TiddlyWiki to understand, whether or not it turns out to be your preferred method, and it's a quick and easy way to get started.
 
-To make the `EmployeeProfileSetupMeeting` a part of the `OnboardingProcess` project, then, simply edit the `EmployeeProfileSetupMeeting` tiddler and add a tag `OnboardingProcess`. To check your work, go back up to the `OnboardingProcess` tiddler, click the info button, and choose the //Tagging// tab; you'll see that `OnboardingProcess` is now tagging `EmployeeProfileSetupMeeting`. You can also click on the `OnboardingProcess` tag; above the line you'll see the `OnboardingProcess` tiddler itself (the “whole” tiddler, or the “tag” tiddler), and below the line you'll see a list of everything tagged with that tag (currently, only `EmployeeProfileSetupMeeting`).
+To make the `EmployeeProfileSetupMeeting` a part of the `OnboardingProcess` project, then, simply edit the `EmployeeProfileSetupMeeting` tiddler and add a tag `OnboardingProcess`. To check your work, go back up to the `OnboardingProcess` tiddler, click the info button, and choose the //Tagging// tab; you'll see that `OnboardingProcess` is now tagging `EmployeeProfileSetupMeeting`. You can also see the relationship by clicking on the `OnboardingProcess` tag pill on the `EmployeeProfileSetupMeeting` tiddler; above the line you'll see the `OnboardingProcess` tiddler itself (the “whole” tiddler, or the “tag” tiddler), and below the line you'll see a list of everything tagged with that tag (currently, only `EmployeeProfileSetupMeeting`).
 
 
 !! Exercises

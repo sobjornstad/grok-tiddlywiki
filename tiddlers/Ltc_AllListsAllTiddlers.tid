@@ -1,8 +1,0 @@
-created: 20210131163920553
-description: all of your tiddlers
-modified: 20210409123355214
-tags: Lie
-title: Ltc:AllListsAllTiddlers
-type: text/vnd.tiddlywiki
-
-Actually, neither [[System Tiddlers]] nor [[Shadow Tiddlers]] -- which in a small wiki will be //most// of the tiddlers -- appear in the ''All'' list. But those won't contain any of your content unless you intentionally put it into such tiddlers, so you don't need to worry about them for now.

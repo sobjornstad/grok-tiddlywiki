@@ -1,6 +1,6 @@
 answer: Nothing. TiddlyWiki is aware of when it needs to reprocess the filter, so any changes appear immediately.
 created: 20201230162600759
-modified: 20210202190128835
+modified: 20210409151516563
 origin: Filters
 qtype: rememberq
 question: When you create a dynamic list that is populated by a filter, what must you do to update the list to match changes in the wiki?

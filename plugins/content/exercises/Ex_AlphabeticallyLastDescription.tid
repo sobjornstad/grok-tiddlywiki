@@ -1,6 +1,6 @@
 created: 20200603185508516
 length: M
-modified: 20210320143929180
+modified: 20210409165233536
 origin: Common Filter Operators
 tags: Exercise
 title: Ex:AlphabeticallyLastDescription
@@ -10,7 +10,7 @@ What is the alphabetically last description that any button on the editor toolba
 
 You'll need some additional information for this one:
 
-* Remember that everything's a tiddler? Buttons in TiddlyWiki's interface are tiddlers too!
+* Remember that [[everything's a tiddler|Tiddlers]]? Buttons in TiddlyWiki's interface are tiddlers too!
 * A tiddler is part of the editor toolbar if it is tagged `$:/tags/EditorToolbar`.
 * You'll need to start your filter with `all[shadows]` to get any results.
 * As you go along, you'll eventually get to a point where you have a bunch of results that are wrapped in curly braces, like `{{$:/language/Buttons/Paint/Description}}`. When you get here, add the following filter steps to the end of your filter: `split[{{]split[}}]`.
@@ -20,4 +20,4 @@ And here are two hints if you need them:
 # How do you think we would define the description of a button in the TiddlyWiki data model?
 # The content of a language tiddler, like `$:/language/Buttons/Paint/Description`, is stored in its `text` field.
 
-This one is intended to be a little bit above your level at the moment -- we won't get to some of the concepts involved until chapter 6, [[Looking Under the Hood]] -- so you might not be able to figure it out. But spend at least half an hour or so on it before you look at the answer.
+This one is intended to be a little bit above your level at the moment -- we won't get to some of the concepts involved until chapter 6, [[Looking Under the Hood]] -- so you might not be able to figure it out. But spend some time working on it before you look at the answer.

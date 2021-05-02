@@ -1,6 +1,6 @@
 answer: Explaining the problem to a rubber duck (or a person).
 created: 20210120233231796
-modified: 20210315200724711
+modified: 20210409174807110
 origin: When Things Go Wrong
 qtype: rememberq
 question: What troubleshooting technique helps you to identify places where you believe your wikitext does one thing, but it actually does something else?

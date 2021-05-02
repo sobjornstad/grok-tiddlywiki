@@ -1,6 +1,6 @@
 created: 20200717215952541
 description: The `tabs` macro facilitates compact display of a number of related tiddlers, as in the sidebar of a stock TiddlyWiki.
-modified: 20210131174907117
+modified: 20210410185554583
 parent: More Organizational Tools
 tags: Section
 title: Tabs
@@ -14,11 +14,11 @@ A typical call to the `tabs` macro looks like this:
 <<tabs tabsList:"foo bar baz" default:"foo">>
 ```
 
-`tabsList`, in its simplest incarnation, is just a list of tiddler titles, but it can actually be any filter (recall that a list of tiddler titles is in the same format of [[a series of simple filter runs|Multi-Run Filters]]!), which makes it possible to choose how many and what tabs should be shown on the fly. For instance, we can create tabs for all of the basic `Concept`s tagged in this book:
+`tabsList`, in its simplest incarnation, is just a list of tiddler titles, but it can actually be any filter (recall that a list of tiddler titles is in the same format of [[a series of simple filter runs|Multi-Run Filters]]), which makes it possible to choose what tabs should be shown on the fly. For instance, we can create tabs for all of the basic `Concept`s tagged in this book:
 
 {{Sn:ConceptTabs||MagicSnippet}}
 
-Now, if we add new concepts to the wiki, they'll immediately show up as new tabs. The `caption` field of each tiddler will be used as the text on the tab, if available; otherwise the tiddler title will be used.
+Now, if we add new concepts to the wiki, they'll immediately show up as new tabs. The `caption` field of each tiddler, if it exists, will be used as the text on the tab; otherwise the title will be used.
 
 The optional `default` parameter, set to the title of one of the tiddlers being made into a tab, chooses which tab starts selected. If you leave it blank, you'll have to click on a tab to see anything expand.
 

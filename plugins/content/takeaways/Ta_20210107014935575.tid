@@ -1,6 +1,6 @@
 answer: `is[shadow]` selects //overridden// shadow tiddlers; `all[shadows]` selects all shadow tiddlers, whether overridden or not.
 created: 20210107015005532
-modified: 20210209124306408
+modified: 20210418134234513
 origin: Shadow Tiddlers
 qtype: rememberq
 question: Explain the difference between the definition of a "shadow tiddler" used by the `is[shadow]` and `all[shadows]` filter steps.

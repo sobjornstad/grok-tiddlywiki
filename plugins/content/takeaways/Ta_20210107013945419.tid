@@ -1,6 +1,6 @@
 answer: Shadow tiddlers are parts of their plugin tiddler, rather than truly separate tiddlers.
 created: 20210107013949322
-modified: 20210208152629467
+modified: 20210418134031544
 origin: Shadow Tiddlers
 qtype: rememberq
 question: How does TiddlyWiki's method of storing shadow tiddlers differ from its method of storing normal tiddlers?

@@ -1,6 +1,6 @@
 created: 20210322221603280
 description: Legal notices and information on redistributing //Grok TiddlyWiki//.
-modified: 20210407185909034
+modified: 20210409015237820
 parent: Appendices
 tags: Section
 title: Copyright
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 Copyright © 2021 Soren Bjornstad.
 
-The text of //Grok TiddlyWiki//, as well as all custom TiddlyWiki templates and logic found in the wiki under `$:/sib/` and `$:/plugins/sobjornstad/`, is available under the ''CC BY-NC-ND 4.0'' [[license|https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1]]. In summary, this means you are free to copy and share it with whomever you want, and to modify and remix it for your own personal use. You may //not// distribute all or part of //Grok TiddlyWiki// or its custom logic commercially, nor modify or adapt it and distribute a modified version, without first getting my permission.
+//Grok TiddlyWiki//, as well as all custom TiddlyWiki templates and logic found in the wiki under `$:/sib/` and `$:/plugins/sobjornstad/`, is available under the ''CC BY-NC-ND 4.0'' [[license|https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1]]. In summary, this means you are free to copy and share it with whomever you want, and to modify and remix it for your own personal use. You may //not// distribute all or part of //Grok TiddlyWiki// or its custom logic commercially, nor modify or adapt it and distribute a modified version, without first getting my permission.
 
 If you are interested in commercially distributing or adapting //Grok TiddlyWiki// in some way, or in using TakeAway for your own project, [[let's talk|https://sorenbjornstad.com/contact]].
 

@@ -1,6 +1,6 @@
 answer: `@@.my-favorite-class` at the start of the block, and `@@` at the end.
 created: 20210109225756671
-modified: 20210226140314183
+modified: 20210502163250430
 origin: Stylesheets
 qtype: rememberq
 question: What wikitext syntax can you use to apply the class `my-favorite-class` to a block of wikitext?

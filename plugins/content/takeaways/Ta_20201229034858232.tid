@@ -1,6 +1,6 @@
 answer: When you find the phrase you searched for in a tiddler, but the tiddler is not relevant to what you were looking for (e.g., you searched for `Jane` and got a tiddler about another person //Janet//).
 created: 20201229034900398
-modified: 20210208152300195
+modified: 20210409024249243
 origin: Contact Tiddlers
 qtype: rememberq
 question: In the context of full-text search, what is a //false positive//?

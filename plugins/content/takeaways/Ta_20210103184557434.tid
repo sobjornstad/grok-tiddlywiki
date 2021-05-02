@@ -1,6 +1,6 @@
 answer: `{{DataStore##X}}`
 created: 20210103184600258
-modified: 20210302162944431
+modified: 20210410193222028
 origin: Data Tiddlers
 qtype: rememberq
 question: What is the wikitext syntax to transclude the value at index `X` from a data tiddler `DataStore`?

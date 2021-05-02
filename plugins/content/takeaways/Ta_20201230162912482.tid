@@ -1,5 +1,5 @@
 created: 20201230162914568
-modified: 20210321231646226
+modified: 20210409152338772
 origin: Using Filter Expressions
 qtype: remembercz
 question: A filter run can be thought of as a {pipeline} (logistics/transportation metaphor), where each step processes its input and produces new output.

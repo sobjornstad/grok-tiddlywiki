@@ -1,5 +1,5 @@
 created: 20200718201238626
-modified: 20210107184950654
+modified: 20210418142500773
 tags: Answer
 title: Ex:BasicLinksList/answer
 type: text/vnd.tiddlywiki
@@ -12,9 +12,7 @@ $title$:
 
 <ul>
 <$list filter="[all[current]$filterFragment$]">
-  <li>
-    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
-  </li>
+  <li><$link /></li>
 </$list>
 </ul>
 \end
@@ -40,9 +38,7 @@ $title$:
 
 <ul>
 <$list filter="[all[current]subfilter<__filterFragment__>]">
-  <li>
-    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
-  </li>
+  <li><$link /></li>
 </$list>
 </ul>
 \end

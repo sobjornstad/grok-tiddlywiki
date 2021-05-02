@@ -1,6 +1,6 @@
 created: 20200605144511058
 description: Macros process parameters in a peculiar way, by //substitution// of their text, which is quite useful but also causes more confusion than almost anything else in TiddlyWiki.
-modified: 20210327153447552
+modified: 20210502174421506
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Text Substitution
@@ -22,13 +22,13 @@ Yet this did:
 <$macrocall $name="getPhone" person={{!!manager}}/>
 ```
 
-What's up with that? These snippets would appear to be doing exactly the same thing.
+What's up with that? At first glance, these snippets appear to be doing exactly the same thing.
 
 This is one of the most confusing aspects of TiddlyWiki (some might say //the// most confusing), and it can sometimes trip up even veteran users. Fortunately, there is a reasonable explanation, albeit an obscure one, and once you understand the explanation you'll be able to tell what will work and what won't without having to try it.
 
 !! Text substitution
 
-It turns out that there's something entirely different about [[macros|Macros]] as compared to any other part of wikitext: Macros have their parameters replaced by ''text substitution'' (elsewhere you may see this called //textual substitution// or just //substitution//; we will use the term //text substitution// throughout this book). This is an extremely dumb mechanism: TiddlyWiki simply takes the text that was provided in the parameter and dumps it into the body of the macro where the placeholder value was. While it's doing this, it completely ''stops processing wikitext'' -- it only worries about replacing the placeholders.
+It turns out that there's something entirely different about [[macros|Macros]] as compared to any other part of wikitext: Macros have their parameters replaced by ''text substitution'' (elsewhere you may see this called //textual substitution// or just //substitution//; we will use the term //text substitution// throughout this book). This is an extremely simple and dumb mechanism: TiddlyWiki simply takes the text that was provided in the parameter and dumps it into the body of the macro where the placeholder value was. While it's doing this, it completely ''stops understanding wikitext'' -- it only worries about replacing the placeholders.
 
 To see how this works and how it differs from using variables or transclusions outside of macros, let's define an example macro that prints some text if a person attended a meeting:
 
@@ -70,14 +70,16 @@ In contrast, if we use variable references inside the filter, we don't see the m
 </$set>
 ```
 
-In this case, the `participant` variable can have as many weird characters in it as we want, and we still get the correct result. That's because this time, TiddlyWiki has more smarts: looking at the filter, it sees instructions that the value of the variable `participant` should be matched against a field, so as it checks this, it won't be wondering if there's a filter operator inside `participant`. It ''looks at the value of the field separately from the rest of the filter'' as it figures out what to do.
+In this case, the `participant` variable can have as many weird characters in it as we want, and we still get the correct result. That's because this time, TiddlyWiki has more smarts: looking at the filter, it sees instructions that the value of the variable `participant` should be matched against a field, so as it checks this, it won't be wondering if there's a filter operator inside `participant`. It ''looks at the value of the variable separately from the text of the filter expression'' as it figures out what to do.
 
 Why doesn't it know that when we use a macro? Well, when we call a macro, TiddlyWiki first goes in and replaces all of the values with the parameters of the macro via text substitution, then ''in an entirely separate step'' it starts deciding how to render the wikitext that comes out of the macro (in this case, as part of a `$list` widget). By the time it gets to evaluating the filter in the `$list` widget, it only has a single chunk of wikitext, and it has no way of telling whether the `]]` was originally part of a macro parameter (and thus intended to be matched to a value in the `participants` field) or whether it was part of the macro body (and thus intended to mark the end of the filter run).
+
+Clear as mud? Let's work through an example, discussing the steps that TiddlyWiki takes as it renders.
 
 
 !! When you want text substitution
 
-Now, although the simplicity and context-blindness of text substitution can cause problems, most of the time it's actually helpful. We saw before that this doesn't return the manager's phone number:
+Although the simplicity and context-blindness of text substitution can cause problems, much of the time it's actually helpful. We saw earlier that this doesn't return the manager's phone number:
 
 ```html
 {{ {{!!manager}}!!phone }}
@@ -98,10 +100,10 @@ But this does work:
 Let's walk through the steps TiddlyWiki takes to render this to understand why this one works. 
 
 # When TiddlyWiki reaches the `$macrocall` widget, it goes to ''expand the macro''. As it does this, it first looks up `{{!!manager}}` to get the value of the parameter `person` to pass to the macro. The value is `ChrisSmith` (or whoever the manager of the person represented by the current tiddler is), so this value is passed into the macro.
-# It performs a dumb ''text substitution operation'' on the contents of the macro using this parameter value. The result of this substitution is the single chunk of wikitext `{{ChrisSmith!!phone}}`. This text replaces the `$macrocall` widget.
+# TiddlyWiki performs a ''text substitution operation'' on the body of the macro using this parameter value, dumping the value `ChrisSmith` into the macro body in place of the `$person$` placeholder. The result of this substitution is the single chunk of wikitext `{{ChrisSmith!!phone}}`. This expansion replaces the `$macrocall` widget.
 # Now that the macro is expanded, TiddlyWiki starts ''parsing the output of that macro as wikitext'', sees the transclusion chunk `{{ChrisSmith!!phone}}`, and replaces that with the value of the `phone` field. (If the `phone` field contained further transclusions, TiddlyWiki would repeat this step again.)
 
-In other words, text substitution resulted in a single chunk of wikitext, which meant TiddlyWiki could understand what we were asking for.
+In other words, text substitution resulted in a single chunk of valid wikitext, which meant TiddlyWiki could understand what we were asking for.
 
 
 !! When you don't want text substitution
@@ -130,7 +132,7 @@ This could land us in trouble, for example, if we passed in a filter that contai
 \end
 ```
 
-This works just like standard variable substitutions with `<<variable>>` in every way, except that by adding the extra double underscores, the reference is to a parameter of the macro rather than a variable.
+This works just like standard variable transclusions using the `<<variable>>` syntax in every way, except that by adding the extra double underscores, the reference is to a parameter of the macro rather than a variable.
 
 
 !! Exercises

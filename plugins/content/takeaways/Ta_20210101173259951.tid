@@ -1,6 +1,6 @@
 answer: The `$wikify` widget.
 created: 20210101173304101
-modified: 20210302163126534
+modified: 20210418131933827
 origin: Wikification
 qtype: rememberq
 question: What widget can be used to wikify text and store the result in a variable, rather than waiting until it appears directly within the body of a tiddler?

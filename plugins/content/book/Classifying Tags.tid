@@ -1,16 +1,16 @@
 created: 20200607151655161
 description: The colors and icons of tags can be customized to make it easier to tell tags with different functions apart.
-modified: 20210320144350268
+modified: 20210410144008928
 parent: More Organizational Tools
 tags: Section
 title: Classifying Tags
 type: text/vnd.tiddlywiki
 
-When we use lots of tags, it starts getting trickier to pick out the ones we want. In particular, we often end up using tags for multiple purposes, which can be somewhat confusing. Already in our example wiki, we're using tags to ''pick out types of tiddlers'' (e.g., meeting, contact, knowledge), to ''create hierarchies'', and to ''add miscellaneous bits of metadata'' to things (e.g., whether something is a software application).
+When we use have lots of tags in a wiki, it can become difficult to find the ones we want. In particular, we often end up using tags for multiple purposes, which can be somewhat confusing. Already in our example wiki, we're using tags to ''pick out types of tiddlers'' (e.g., meeting, contact, knowledge), to ''create hierarchies'', and to ''add miscellaneous bits of metadata'' to things (e.g., whether something is a software application).
 
 One great way to tell apart tags used for different purposes is to add colors and icons to them. TiddlyWiki makes this easy to do using the <<textual-button "tag-button">> ''tag manager'', which you can find under the //Tools// tab in the sidebar.
 
-One tricky point can be getting the same color across multiple tags -- the color picker does not save recently used colors. The easiest way is to pick a tag that already has the color you want, click the color picker, and copy the hex code from the bottom (that's the bit that looks like `#000000`). Then you can paste that in for the new tag.
+One tricky point can be getting the same color across multiple tags, since the color picker does not save recently used colors. The easiest way is to pick a tag that already has the color you want, click the color picker, and copy the hex code from the bottom (that's the bit that looks like `#000000`). Then you can paste that in for the new tag.
 
 
 !! Exercises

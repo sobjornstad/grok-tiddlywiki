@@ -1,9 +1,11 @@
 created: 20200718033728129
-modified: 20200718033941916
+modified: 20210418135804196
 tags: Answer
 title: Ex:EditTemplateInformation/answer
 type: text/vnd.tiddlywiki
 
-A trick with the edit template is that you can't easily add content to the preview section -- it has to go either above or below the editor (and the preview if the previewer is enabled). Of course it is possible to do so if you really want to, but you have to override a shadow tiddler.
+To add these tiddlers to the edit template, tag them `$:/tags/EditTemplate`.
 
-In this case, however, it probably isn't particularly useful anyway -- we put these templates on there so that we could easily see the values of tiddler fields, but when we're editing we can easily see all of the fields to begin with.
+A trick with the edit template is that you can't easily add content to the preview section -- it has to go either above or below the editor (and the preview if the previewer is showing). Of course it is possible to do so if you really want to, but you have to override a shadow tiddler.
+
+In this case, however, it probably isn't particularly useful anyway -- we put these templates on there so that we could easily see the values of some tiddler fields, but when we're editing we can easily see all of the fields to begin with.

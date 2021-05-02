@@ -1,7 +1,9 @@
 created: 20210107235020864
-modified: 20210107234945156
+modified: 20210418160148065
 tags: Answer
 title: Ex:MainSearchBoxBinding/answer
 type: text/vnd.tiddlywiki
 
-The answer is the `text` field of `$:/temp/search`. The easiest way to find this answer is to type a weird word in the search box that you won't find anywhere else (e.g., `oobleckblargle`), then open up Advanced Search and search for the same word on the `System` tab. The tiddler will appear in the list.
+The answer is the `text` field of `$:/temp/search`. (You may also have found `$:/temp/search/input`, which is an auxiliary tiddler used for the `keyboard-driven-input` that handles the autocomplete functions of the search box, and often contains the same text.)
+
+The easiest way to find this answer is to type a weird word in the search box that you won't find anywhere else (e.g., `oobleckblargle`), then open up Advanced Search and search for the same word on the `System` tab. The tiddler will appear in the list.

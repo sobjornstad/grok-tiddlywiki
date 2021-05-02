@@ -1,6 +1,6 @@
 answer: The CLI is stateless, so no record of a different wiki being loaded is preserved to the next call. A second `--operation` needs to be added to the end of the command line to get a useful effect.
 created: 20210109232707605
-modified: 20210302163050637
+modified: 20210502164057041
 origin: Writing Shell Scripts Against a TiddlyWiki
 qtype: rememberq
 question: Why is the TiddlyWiki CLI command `tiddlywiki --load SOURCE_WIKI` a no-op?

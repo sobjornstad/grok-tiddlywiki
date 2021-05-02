@@ -1,6 +1,6 @@
 answer: E.g., when transcluding an entire tiddler containing multiple paragraphs, when transcluding a complex template
 created: 20210116235726982
-modified: 20210220190443770
+modified: 20210410142927530
 origin: Block Mode and Inline Mode
 qtype: rememberq
 question: Give an example of when you might want to transclude a field in block mode (try to pick a new one).

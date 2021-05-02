@@ -1,6 +1,6 @@
 answer: `\define myMacro(a, b, c)`
 created: 20201231040041862
-modified: 20210321232054808
+modified: 20210409195459234
 origin: The Finer Points of Macros
 qtype: rememberq
 question: What is the wikitext syntax to define a macro `myMacro` with three parameters, `a`, `b`, and `c`?

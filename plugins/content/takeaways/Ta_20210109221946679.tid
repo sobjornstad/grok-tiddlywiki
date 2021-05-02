@@ -1,6 +1,6 @@
 answer: Add a `tooltip` attribute to the `$button` widget.
 created: 20210109221947919
-modified: 20210226134702084
+modified: 20210418162732371
 origin: Creating Tiddlers With Predefined Fields
 qtype: rememberq
 question: How do you add a tooltip to a button?

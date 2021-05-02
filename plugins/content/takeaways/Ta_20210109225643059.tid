@@ -1,6 +1,6 @@
 answer: Inline stylesheets within a tiddler are not scoped to that tiddler, so custom classes prevent the styles from accidentally applying to other tiddlers.
 created: 20210109225644650
-modified: 20210213211416805
+modified: 20210502163245714
 origin: Stylesheets
 qtype: rememberq
 question: Why should you (almost) always use a class name with any CSS that you intend to apply only to a single tiddler?

@@ -1,6 +1,6 @@
 created: 20200530170355218
 description: Shadow tiddlers are tiddlers that are provided by plugins; they can be overridden if you want to customize a plugin.
-modified: 20210316172040052
+modified: 20210418133931793
 parent: Looking Under the Hood
 tags: Concept Section
 title: Shadow Tiddlers
@@ -16,27 +16,27 @@ There's one very important exception, though: if your wiki also has a normal tid
 
 Here's why this is useful: If you have a plugin (including the TiddlyWiki core, which, as we just saw in the [[Plugins]] section, is a plugin), sometimes you might want to make some minor changes to it -- say there's a typo in the user interface, or it prints text in red and that's hard to read on your screen and you would rather see it in orange. Rather than having to get a copy of the plugin's source code and rewrite the whole thing, you can simply ''override the relevant shadow tiddler''.
 
-From your perspective, to edit a shadow tiddler, you just find the relevant tiddler (usually in the ''Explorer'' view under the ''More'' sidebar tab), then edit it and make your changes. When you do this, you'll get a dialog box informing you that you are about to edit a shadow tiddler. If you agree, behind the scenes, TiddlyWiki copies the shadow tiddler out of the plugin into a real tiddler in your wiki, so that when you save your changes they end up in a normal tiddler.
+From your perspective, to edit a shadow tiddler, you just find the relevant tiddler (usually in the ''Explorer'' view under the ''More'' sidebar tab, or using Advanced Search), then edit it and make your changes. When you do this, you'll get a dialog box informing you that you are about to edit a shadow tiddler. If you agree, behind the scenes, TiddlyWiki copies the shadow tiddler out of the plugin into a real tiddler in your wiki, so that when you save your changes they end up in a normal tiddler.
 
 If you delete an overridden shadow tiddler, TiddlyWiki returns to using the version in the plugin. This is a nice way to start over if you ever mess up or want to restore the default behavior.
 
-When editing an overridden shadow tiddler, if you click the very rightmost drop-down button on the edit toolbar, there is an option called "differences from shadow (if any)". If you also have the preview pane open, this will visually show what's been removed (in red) and added (in green) in comparison to the default version of the shadow tiddler stored in the plugin, which can be useful if you have to manually merge changes (see the section below), or if you don't remember anymore what you changed three months ago. Programmers call this view a //diff//.
+When editing an overridden shadow tiddler, if you click the very rightmost drop-down button on the edit toolbar, there is an option called “differences from shadow (if any)”. If you also have the preview pane open, this will visually show what's been removed (in red) and added (in green) in comparison to the default version of the shadow tiddler stored in the plugin, which can be useful if you have to manually merge changes (see the section below), or if you don't remember anymore what you changed three months ago. Programmers call this view a //diff//.
 
 
 !! The dangers of over-overriding
 
-Before you get too excited about overriding shadow tiddlers, beware: if you override too many, ''it may become very difficult to upgrade your wiki and your plugins''. If a new version of the plugin changes the tiddler you overrode, you won't see those changes, since your overridden shadow tiddler prevents TiddlyWiki from ever looking at the plugin's new version. In this case, you may experience odd behavior as the plugin relies on a new version of a tiddler that it doesn't have access to, and you'll have to manually pick out the changes and merge together your two versions.
+Before you get too excited about overriding shadow tiddlers, beware: if you override too many, ''it may become very difficult to upgrade your wiki and your plugins''. If a new version of the plugin changes the tiddler you overrode, you won't see those changes, since your overridden shadow tiddler prevents TiddlyWiki from ever looking at the plugin's new version. In this case, you may experience odd behavior, since the newly upgraded plugin relies on a new version of a tiddler that it doesn't have access to, and you'll have to manually pick out the changes and merge together your two versions to fix the problem.
 
-Doing this for a handful of targeted shadow tiddlers is no big deal. But if you shadow your entire wiki, you're going to be in for a world of hurt! So it's worth taking a moment before editing a shadow tiddler to be sure there's no other way of making the changes you're looking for (perhaps there's actually a mechanism designed for customizing the thing you're trying to change). People discussing solutions on the TiddlyWiki forums will sometimes say things like, “No shadow tiddlers were harmed in this customization,” meaning nothing had to be overridden.
+Doing this for a handful of targeted shadow tiddlers is no big deal. But if you override large portions of your wiki, you're going to be in for a world of hurt! So it's worth taking a moment before editing a shadow tiddler to be sure there's no other way of making the changes you're looking for (perhaps there's actually a mechanism designed for customizing the thing you're trying to change). People discussing solutions on the TiddlyWiki forums will sometimes say things like, “No shadow tiddlers were harmed in this customization,” meaning nothing had to be overridden.
 
-Most configuration settings are also internally handled by overriding shadow tiddlers. There's generally no need to worry about doing this, since the core or plugin author will be aware that it's a configurable setting and won't change anything in the default value that would require you to merge your changes.
+Most configuration settings are also internally handled by overriding shadow tiddlers. There's generally no need to worry about doing this, since the core or plugin author will be aware that it's a configurable setting and won't change anything that would require you to merge your changes.
 
 
 !! Finding shadow tiddlers
 
 All shadow tiddlers are listed in the ''Shadows'' view under the ''More'' sidebar tab, and you can search for shadow tiddlers on the ''Shadows'' tab of Advanced Search.
 
-You can identify shadow tiddlers in the ''Shadows'' view, the ''Explorer'' view, and the shadows tab of Advanced Search because they're shown in bold font. If you've overridden a shadow tiddler, it will show in normal font.
+You can identify shadow tiddlers in the ''Shadows'' view, the ''Explorer'' view, and the shadows tab of Advanced Search because they're shown in a bold font. If you've overridden a shadow tiddler, it will show in a normal font.
 
 A filter for `[is[shadow]]` will bring up a list of ''only the overridden shadow tiddlers''; this can be useful if you want to see a list of your customizations in a given wiki, or if you upgrade your TiddlyWiki to the latest version, something's not working right, and you need to know what shadows you might need to manually merge.
 

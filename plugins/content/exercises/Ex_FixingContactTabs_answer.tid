@@ -1,5 +1,5 @@
 created: 20200717224206811
-modified: 20210103173338907
+modified: 20210410192040152
 tags: Answer
 title: Ex:FixingContactTabs/answer
 type: text/vnd.tiddlywiki
@@ -8,15 +8,17 @@ Create a template tiddler called `ContactTabTemplate` with the following content
 
 ```html
 <$set name=currentTiddler value=<<currentTab>>>
+
 	{{!!text}}
+	
 </$set>
 ```
 
-(You can use any method you like to set the current tiddler.)
+You can use any method you like to set the current tiddler. Note the blank lines to force the text field to be transcluded in [[block mode|Block Mode and Inline Mode]].
 
 Then add a `template:ContactTabTemplate` parameter to the `tabs` macro used to render your contact tabs.
 
-The TiddlyWiki documentation gives the following version:
+The TiddlyWiki documentation gives the following equivalent version using the `$transclude` widget, which we've so far mentioned only in passing, and the `$tiddler` widget, which we haven't seen at all:
 
 ```html
 <$tiddler tiddler=<<currentTab>>>
@@ -24,9 +26,9 @@ The TiddlyWiki documentation gives the following version:
 </$tiddler>
 ```
 
-This has the same effect, using fancy widgets we haven't discussed yet.
+We'll talk about both widgets in [[chapter 7|Tips and Tricks]].
 
-Another way would be to transclude the tiddler in `currentTab` using double curly braces within the template tiddler, since doing a transclusion this way sets the current tiddler as it does so. You have to use text substitution to get the value of `currentTab` into the braces, though:
+Another way would be to transclude the tiddler named in the `currentTab` variable using double curly braces, since doing a transclusion this way sets the current tiddler as it does so. You have to use [[text substitution|Text Substitution]] to get the value of `currentTab` into the braces, though:
 
 ```html
 \define makeCurrentTiddler()
@@ -36,4 +38,4 @@ Another way would be to transclude the tiddler in `currentTab` using double curl
 <<makeCurrentTiddler>>
 ```
 
-It's a lot less obvious what you're doing this way, so one of the preceding methods is probably preferable.
+But when you reread this one later, it'll be much less obvious what you were trying to accomplish, so one of the preceding methods is probably preferable.

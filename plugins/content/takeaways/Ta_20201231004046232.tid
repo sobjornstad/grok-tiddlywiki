@@ -1,6 +1,6 @@
 answer: The `$set` widget.
 created: 20201231004049739
-modified: 20210311183505081
+modified: 20210409192654547
 origin: Variables
 qtype: rememberq
 question: What widget do you use to set a single variable to an arbitrary value?

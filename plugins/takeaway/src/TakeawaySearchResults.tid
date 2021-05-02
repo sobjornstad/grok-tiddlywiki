@@ -1,7 +1,7 @@
 caption: Takeaways
 created: 20210207160444220
-modified: 20210407150408987
-second-search-filter: [tag[Note]search:question,answer<userInput>sort[title]limit[250]]
+modified: 20210409024418426
+second-search-filter: [tag[Takeaway]search:question,answer<userInput>sort[title]limit[250]]
 tags: $:/tags/SearchResults
 title: $:/plugins/sobjornstad/TakeAway/TakeawaySearchResults
 type: text/vnd.tiddlywiki

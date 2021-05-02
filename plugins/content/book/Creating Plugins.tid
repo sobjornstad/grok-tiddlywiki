@@ -1,6 +1,6 @@
 created: 20201124224911613
 description: You can share your custom TiddlyWiki tools with other wikis and users by extracting them into plugins.
-modified: 20210327171210864
+modified: 20210502163507094
 parent: Getting Technical
 tags: Section
 title: Creating Plugins
@@ -15,7 +15,7 @@ If you've developed some functionality in [[System Tiddlers]] in your wiki that 
 
 Plugin development is usually more convenient on the Node.js version of TiddlyWiki, so begin by [[installing that|https://tiddlywiki.com/#GettingStarted%20-%20Node.js]] if you don't already have it. (If you don't want to use Node.js, a plugin has recently come out that lets you export plugins from within a single-file wiki. The resource links at the bottom of this section have more information.)
 
-''Create a new folder wiki'' to house your plugin. You'll use this to document the features of the plugin as well.
+''Create a new folder wiki'' to house your plugin. You'll use this wiki to document the features of the plugin as well.
 
 Within the folder wiki, next to the `tiddlywiki.info` file, there is a `plugins` directory (if it doesn't exist yet, you can create it). ''Create a new directory'' here for your plugin, like you would if you were installing a third-party plugin. To this directory, ''add the tiddlers'' you want to bundle in the plugin. You can organize them into subfolders if you like, but note that this will have no impact on the hierarchy of the system tiddlers within the wiki -- the `title` field of each tiddler is the sole determiner of what the tiddlers are called.
 

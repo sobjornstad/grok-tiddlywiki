@@ -1,6 +1,6 @@
 answer: There is a forward slash at the end of the opening tag, and no closing tag at all: `<tag />`
 created: 20201231001144780
-modified: 20210315200657175
+modified: 20210409171711532
 origin: HTML
 qtype: rememberq
 question: In HTML, what syntax distinguishes a //self-closing tag// from a normal one?

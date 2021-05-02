@@ -1,6 +1,6 @@
 answer: If the plugin updated the tiddler you overrode, it may be relying on changes to that tiddler -- but the updates won't be visible in your wiki, since your version is unchanged and blocks the shadow tiddler from being referenced.
 created: 20210107014642356
-modified: 20210408141158071
+modified: 20210418134204077
 origin: Shadow Tiddlers
 qtype: rememberq
 question: Why can upgrading a plugin that contains a shadow tiddler you have overridden cause problems with your wiki?

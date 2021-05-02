@@ -1,5 +1,5 @@
 created: 20201231012246842
-modified: 20210220191152749
+modified: 20210409192738162
 origin: Variables
 qtype: remembercz
 question: The two attributes used in the most basic form of the `$set` widget are {c1::`name`} and {c1::`value`}.

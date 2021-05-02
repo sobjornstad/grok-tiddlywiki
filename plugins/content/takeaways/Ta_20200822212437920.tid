@@ -1,6 +1,6 @@
 answer: `MyTiddler` is in CamelCase.
 created: 20201229030107646
-modified: 20210321133126564
+modified: 20210408180643582
 origin: Links
 qtype: rememberq
 question: Why will TiddlyWiki create a link to a tiddler called `MyTiddler` when `MyTiddler` is mentioned in wikitext, even though its name is not in double square brackets?

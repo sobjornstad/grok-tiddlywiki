@@ -1,6 +1,6 @@
 created: 20200530170315795
 description: Plugins are bundles of tiddlers that provide new functionality.
-modified: 20210316171740008
+modified: 20210418133307463
 parent: Looking Under the Hood
 tags: Concept Section
 title: Plugins
@@ -8,11 +8,11 @@ type: text/vnd.tiddlywiki
 
 We've been talking about plugins occasionally throughout the book, so it's worth taking a moment to explain what exactly plugins are and how they work.
 
-Plugins are essentially just bundles of [[tiddlers|Tiddlers]]. They're typically composed of [[system tiddlers|System Tiddlers]] which contain some kind of code or interface element or tool, but in theory the tiddlers can be named anything and contain anything. To put this more formally, a plugin is a single tiddler that contains multiple "virtual" tiddlers, known as //shadow// tiddlers. We'll learn about how shadow tiddlers behave [[in the next section|Shadow Tiddlers]].
+Plugins are essentially just bundles of [[tiddlers|Tiddlers]]. They're typically composed of [[system tiddlers|System Tiddlers]] which contain some kind of code or interface element or tool, but in theory the tiddlers can be named anything and contain anything. To put this more formally, a plugin is a single tiddler that contains multiple “virtual” tiddlers, known as //shadow// tiddlers. We'll learn about how shadow tiddlers behave [[in the next section|Shadow Tiddlers]].
 
-You can install a plugin by finding any link to it, usually on a plugin demo or documentation TiddlyWiki on the web, and ''dragging and dropping'' it into your wiki -- this copies the tiddler and therefore the plugin. Many “official” plugins can also be installed through the //Plugins// section of the Control Panel. (If you [[use TiddlyWiki on Node.JS|Options for Saving and Hosting Your Wiki]], you have some other options as well that may make it easier to keep the plugins up to date.)
+You can install a plugin by finding any link to it, usually on a plugin demo or documentation TiddlyWiki on the web, and ''dragging and dropping'' it into your wiki -- this copies the tiddler and therefore the plugin. Many “official” plugins can also be installed through the //Plugins// section of the Control Panel. (If you [[use TiddlyWiki on Node.JS|Options for Saving and Hosting Your Wiki]], you have [[some other options|https://tiddlywiki.com/#Installing%20custom%20plugins%20on%20Node.js]] as well that may make it easier to keep the plugins up to date.)
 
-If you look at the ''Plugins'' section of the ''More'' tab in the sidebar, you'll see at least one plugin even in a clean install -- most of TiddlyWiki's core code is actually implemented as a plugin, [[$:/core]]. Clicking on a plugin will show you a special tiddler that contains a little bit of information about the plugin as well as a list of all the bundled tiddlers it has installed into your wiki. Deleting the plugin tiddler will remove the plugin from your wiki, including all its shadow tiddlers (don't try this with core though!).
+If you look at the ''Plugins'' section of the ''More'' tab in the sidebar, you'll see at least one plugin even in a clean install -- most of TiddlyWiki's core code is actually implemented as a plugin, [[$:/core]]. Clicking on a plugin in this view will show you a special tiddler that contains a little bit of information about the plugin as well as a list of all the bundled tiddlers it has installed into your wiki. Deleting the plugin tiddler will remove the plugin from your wiki, including all its shadow tiddlers (don't try this with core though!).
 
 The [[Useful Plugins]] appendix lists some publicly available TiddlyWiki plugins that I find particularly useful.
 

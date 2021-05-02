@@ -1,6 +1,6 @@
 created: 20200603023508451
 description: You can create lists of tiddlers that automatically update to show all the tiddlers that currently match a filter.
-modified: 20210327170451932
+modified: 20210409172018970
 parent: Filtering and Formatting
 tags: Section
 title: Your First Dynamic List
@@ -8,14 +8,14 @@ type: text/vnd.tiddlywiki
 
 Searching with filters is all very nice, but what if we want to look for the same thing all the time? For instance, we probably often need to go back and look at our notes from recent meetings. It would be nice to have a list of all our meetings from newest to oldest, rather than having to remember what we called each meeting or exactly when it was and search for it.
 
-Fortunately, one of the things TiddlyWiki does best is create dynamic lists -- lists of tiddlers or other content that automatically update as the wiki changes. Dynamic lists take a filter and do something with all of the tiddlers that filter returns. In [[Slicing Up Content]], we said the role of a tiddler carrying a dynamic list was much like that of a sentence: it describes the relationships between other things.
+Fortunately, one of the things TiddlyWiki does best is create dynamic lists -- lists of tiddlers or other content that automatically update as the wiki changes. Dynamic lists take a filter and do something with all of the tiddlers that filter returns. In [[Slicing Up Content]], we said the role of a tiddler containing a dynamic list was much like that of a sentence: it describes the relationships between other things.
 
 Let's create a new tiddler and call it `MeetingList`. If we want to give it a tag, we could tag it `Tool`.
 
 
 !! Creating a `$list` widget
 
-The ''list widget'' is among the most important and frequently used TiddlyWiki widgets. This widget is named quite appropriately for our purpose, since we're trying to create a list, but you can also use a list widget to accomplish some other things that don't necessarily look like they involve listing anything. We'll see more of those uses later.
+The ''`$list` widget'' is among the most important and frequently used TiddlyWiki widgets. This widget is named quite appropriately for our purpose, since we're trying to create a list, but you can also use a list widget to accomplish some other things that don't necessarily look like they involve listing anything. We'll see more of those uses later.
 
 Here's how we create a list of meetings from the output of a filter:
 
@@ -33,7 +33,7 @@ When the list widget is used without any contents, like we did above, it simply 
 </$list>
 ```
 
-That's better! But you're probably wondering, what the heck is this `<<currentTiddler>>` thing? We'll be talking more about the concept of the [[current tiddler|Templates and the Current Tiddler]], as well as the `<<double angle bracket>>` [[syntax|Variables]], in [[chapter 4|Variables, Macros, and Transclusions]]. For now, just think of it as a placeholder for "the item in the list currently being processed". (If you've done any programming, the `$list` widget is much like a loop: the contents of the widget are displayed once for each output tiddler in the filter.)
+That's better! But you're probably wondering, what the heck is this `<<currentTiddler>>` thing? We'll be talking more about the concept of the [[current tiddler|Templates and the Current Tiddler]], as well as the `<<double angle bracket>>` [[syntax|Variables]], in [[chapter 4|Variables, Macros, and Transclusions]]. For now, just think of it as a placeholder for “the item in the list currently being processed”. (If you've done any programming, the `$list` widget is much like a loop: the contents of the widget are displayed once for each output tiddler in the filter.)
 
 There's one more problem here, which is that we haven't actually listed our meetings from newest to oldest. Let's fix that by adding a `sort` filter step:
 

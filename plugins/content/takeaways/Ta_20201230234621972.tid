@@ -1,6 +1,6 @@
 answer: All tiddlers in the wiki that are tagged with both `NeedsUpdate` and `Person`.
 created: 20201230234625127
-modified: 20210223172401157
+modified: 20210409161746568
 origin: Anatomy of Filter Steps
 qtype: rememberq
 question: What are the output tiddlers to the filter step `tag[Person]` in the filter run `[tag[NeedsUpdate]tag[Person]]`?

@@ -1,6 +1,6 @@
 created: 20200603210614777
 description: Macros come in many forms.
-modified: 20210407130152385
+modified: 20210409194428148
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: The Finer Points of Macros
@@ -52,6 +52,8 @@ If we don't like the order that the macro parameters are specified in, or there 
 
 Sometimes this is called using //named parameters//, in contrast to using //positional parameters//.
 
+A space may optionally be added after the colon `:`, but most people find it easier to read without a space.
+
 
 </$details><$details summary="Macros can have optional parameters">
 
@@ -59,7 +61,7 @@ We can specify a default value for a parameter. Then we only need to provide a v
 
 {{Sn:DefaultMacroParameterValues||MagicSnippet}}
 
-The space after the colon `:` is optional.
+Again, a space may optionally be added after the colon.
 
 </$details><$details summary="Macros can be defined on a single line">
 
@@ -70,7 +72,7 @@ You can place short macros that contain only one line on the same line as the `\
 
 </$details><$details summary="Macros can be called using a $macrocall widget">
 
-In addition to the handy `<<double angle bracket>>` syntax, it's possible to call a macro using a `$macrocall` [[widget|Widgets]]. This is a common pattern in TiddlyWiki: most things you can do with convenient wikitext syntax can also be done with HTML tags or widgets. The widgets may offer some additional options for advanced use.
+In addition to the handy `<<double angle bracket>>` syntax, it's possible to call a macro using a `$macrocall` [[widget|Widgets]]. As we discussed in the widgets section, this is a common pattern in TiddlyWiki: anything you can do with convenient wikitext syntax can also be done with HTML tags or widgets, and those forms may offer some additional options for advanced use.
 
 Here's how we could create our aardvark link with a widget:
 

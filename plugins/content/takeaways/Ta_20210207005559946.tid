@@ -1,6 +1,6 @@
 answer: The `days` operator.
 created: 20210207005601117
-modified: 20210407135550961
+modified: 20210502162426032
 origin: Working with Dates
 qtype: rememberq
 question: What filter operator finds tiddlers with dates that are before or after a specific time?

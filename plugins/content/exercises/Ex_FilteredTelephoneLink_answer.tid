@@ -1,17 +1,17 @@
 created: 20210131041013435
-modified: 20210131041108662
+modified: 20210410140457181
 tags: Answer
 title: Ex:FilteredTelephoneLink/answer
 type: text/vnd.tiddlywiki
 
 ```html
-<$link to={{{ [[tel:]addsuffix{!!phone}] }}}>Call {{!!title}}</$link>
+<a href={{{ [[tel:]addsuffix{!!phone}] }}}>Call {{!!title}}</a>
 ```
 
 Or alternatively:
 
 ```html
-<$link to={{{ [{!!phone}addprefix[tel:]] }}}>Call {{!!title}}</$link>
+<a href={{{ [{!!phone}addprefix[tel:]] }}}>Call {{!!title}}</a>
 ```
 
 This suggests a general fact: most anything you can do with [[text substitution|Text Substitution]] in a macro, you can also achieve with a [[filtered transclusion|Filters and Transclusions]]. Which you choose is largely personal preference, although sometimes one might be significantly clearer and easier than the other, in which case you should probably choose that one.

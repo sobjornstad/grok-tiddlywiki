@@ -1,12 +1,12 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20210327153520902
+modified: 20210409195700028
 parent: Variables, Macros, and Transclusions
 tags: Section Concept
 title: Transclusions
 type: text/vnd.tiddlywiki
 
-''Field transclusions'' are much like [[variables|Variables]], except instead of being set to a specific value by a `$set` widget or a macro definition, their value comes from a tiddler.
+''Field transclusions'' are much like [[variable references|Variables]], except instead of being set to a specific value by a `$set` widget or a macro definition, their value comes from a tiddler.
 
 Specifically, a field transclusion, as its name suggests, references ''the contents of a particular field of a tiddler''. If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` and try that:
 

@@ -1,6 +1,6 @@
-answer: `<<wikipediaLink Aardvark>>` (quotation marks around `Aardvark` are optional)
+answer: `<<wikipediaLink Aardvark>>` (quotation marks around the value `Aardvark` are optional, since it contains no spaces)
 created: 20201231005613768
-modified: 20210302161705838
+modified: 20210418131939440
 origin: Macros
 qtype: rememberq
 question: What is the wikitext syntax to call the macro `wikipediaLink` with the single parameter `Aardvark`?

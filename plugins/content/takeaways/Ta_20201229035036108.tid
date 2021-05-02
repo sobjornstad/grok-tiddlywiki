@@ -1,6 +1,6 @@
 answer: When the phrase you search for fails to retrieve a relevant tiddler (e.g., you searched for `Robert`, but in the tiddler you called him //Bob//).
 created: 20201229035037606
-modified: 20210208151555698
+modified: 20210409024258215
 origin: Contact Tiddlers
 qtype: rememberq
 question: In the context of full-text search, what is a //false negative//?

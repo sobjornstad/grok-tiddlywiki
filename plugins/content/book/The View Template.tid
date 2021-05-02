@@ -1,6 +1,6 @@
 created: 20200718024513554
 description: The ViewTemplate is a special template TiddlyWiki uses internally to render each story in the story river; you can customize it to add custom content to all tiddlers or a subset of tiddlers.
-modified: 20210316172256509
+modified: 20210418135236805
 parent: Looking Under the Hood
 tags: Section
 title: The View Template
@@ -35,7 +35,7 @@ What we need to do is define our own view tiddler and sneak it into the list whe
 
 Let's call our new tiddler `$:/yourname/TiddlerTypeTemplates/Contact`; this will leave space for us to add similar templates for other types of tiddlers. Drop in `{{||ContactInformationTemplate}}` there, add the `$:/tags/ViewTemplate` tag, remove `{{||ContactInformationTemplate}}` from all your contacts so the information isn't displayed twice, and you should be set.
 
-Actually, there are two small problems. The first is that instead of a header `Information about JaneDoe`, the double exclamation point is ''literally appearing on each tiddler''. This is because the transclusion is starting in inline mode. Unfortunately, this can be really tricky to fix; I find the easiest way is begin with a block-level HTML element instead of wikitext, so here change the `!! title` to `<h2>title</h2>`. In this case, there's no way TiddlyWiki can parse it wrong; an `<h2>` simply cannot be an inline element, whereas `!!` can be since it could be part of some running text.
+Actually, there are two small problems. The first is that instead of a header `Information about JaneDoe`, the double exclamation point is ''literally appearing on each tiddler''. This is because the transclusion is starting in [[inline mode|Block Mode and Inline Mode]]. Unfortunately, this can be tricky to fix; I find the easiest way is begin with a block-level HTML element instead of wikitext, so here change the `!! title` to `<h2>title</h2>`. In this case, there's no way TiddlyWiki can parse it wrong; an `<h2>` simply cannot be an inline element, whereas `!!` can be since it could be part of some running text.
 
 The second is that our contact information is now appearing ''even on tiddlers that aren't contacts''! Oops. Fixing this part is left as an exercise.
 

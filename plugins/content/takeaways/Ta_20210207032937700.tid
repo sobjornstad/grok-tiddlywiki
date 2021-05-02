@@ -1,6 +1,6 @@
 answer: It contains the text against which the value of the field specified in the `state` attribute will be matched.
 created: 20210207032938912
-modified: 20210311183446397
+modified: 20210418165631401
 origin: Hiding and Showing Things
 qtype: rememberq
 question: What is the purpose of the `text` attribute to the `$reveal` widget?

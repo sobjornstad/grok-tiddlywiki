@@ -1,6 +1,6 @@
-answer: `~`
+answer: `~` (or `:else`)
 created: 20210206152455981
-modified: 20210311183206458
+modified: 20210410183144993
 origin: Multi-Run Filters
 qtype: rememberq
 question: What prefix can you add to a filter run to ignore it unless the accumulated results are empty?

@@ -1,6 +1,6 @@
 answer: By placing the conditions for each branch of the OR in a separate filter run.
 created: 20210206151742797
-modified: 20210315200852792
+modified: 20210410181916526
 origin: Multi-Run Filters
 qtype: rememberq
 question: In a filter expression, you create an OR condition how?

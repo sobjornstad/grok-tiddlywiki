@@ -1,6 +1,6 @@
 created: 20210116171851507
 description: TiddlyWiki reads wikitext in two modes, one where elements stack horizontally and one where they stack vertically, and you occasionally have to consider which mode you should use.
-modified: 20210326025601627
+modified: 20210410142730527
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Block Mode and Inline Mode
@@ -24,7 +24,7 @@ It's possible to alter this behavior using [[CSS|Stylesheets]], but since our fo
 
 [[Wikitext rendering|Wikification]] in TiddlyWiki adds an additional layer of complexity. As TiddlyWiki reads [[wikitext|Wikitext]], it is either reading in inline mode or block mode. In ''inline mode'', it recognizes only the elements of wikitext that make sense in an inline context, such as links or bold formatting. In ''block mode'', it recognizes elements that are blocks of their own, such as lists, blockquotes, or code snippets. ''Within block elements, TiddlyWiki enters inline mode''; you re-enter block mode by leaving a blank line in your wikitext. (Note, however, that you cannot re-enter block mode with a blank line at all if you are inside certain elements that are inherently restricted to inline mode, like links or italic text -- in this case you must close that element before adding a blank line.)
 
-This is why you need a blank line on either side of, e.g., lists, for them to display correctly (see the following snippet for an example). If you don't put a blank line before the list, TiddlyWiki reads the first `*` as part of a paragraph -- `*` is a perfectly valid character to have within a paragraph, after all -- and the remainder of the list is read in inline mode, which usually won't look very good. Similarly, if you don't put a blank line after the list, TiddlyWiki is still in inline mode at the end of the final list item, and it will not start a new paragraph until it leaves inline mode.
+This is why you need a blank line on either side of, e.g., lists, for them to display correctly (see the following snippet for an example). If you don't put a blank line before the list, TiddlyWiki reads the first `*` as part of a paragraph -- `*` is a perfectly valid character to have within a paragraph, after all -- and the remainder of the list is read in inline mode, which usually won't look very good. Similarly, if you don't put a blank line after the list, TiddlyWiki stays in inline mode at the end of the final list item, and it will not start a new paragraph until it leaves inline mode.
 
 {{Sn:CorrectAndIncorrectLists||MagicSnippet}}
 
@@ -42,7 +42,7 @@ In many cases, TiddlyWiki will do the right thing on its own: it chooses a mode 
 </$list>
 ```
 
-This doesn't work right -- can you spot the problem? There isn't a blank line before `{{!!text}}`, so the transclusion happens in inline mode! You can fix this by either putting an extra line there, or forcing the transclusion to take place in block mode using the `$transclude` widget:
+This doesn't work right -- can you spot the problem? There isn't a blank line before `{{!!text}}`, so the transclusion happens in inline mode! You can fix this either by putting a blank line just before `{{!!text}}`, or by forcing the transclusion to take place in block mode using the `mode` attribute of the `$transclude` widget:
 
 ```html
 <$list filter="[tag[Meeting]search[fudge]]">
@@ -52,7 +52,7 @@ This doesn't work right -- can you spot the problem? There isn't a blank line be
 </$list>
 ```
 
-You can read more about the `$transclude` widget and the problem with block/inline-mode transclusion [[in the TiddlyWiki documentation|https://tiddlywiki.com/#TranscludeWidget]].
+You can read more about the `$transclude` widget and block/inline-mode transclusion [[in the TiddlyWiki documentation|https://tiddlywiki.com/#TranscludeWidget]]. We'll also discuss this widget in [[Hiding and Showing Things]].
 
 !! Inline-mode markup errors
 

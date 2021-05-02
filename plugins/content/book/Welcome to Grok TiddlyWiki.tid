@@ -1,12 +1,10 @@
 created: 20210110055215195
 description: An overview of the book and where you should get started.
-modified: 20210407173657781
+modified: 20210502172412032
 parent: Front Matter
 tags: Index Section
 title: Welcome to Grok TiddlyWiki
 type: text/vnd.tiddlywiki
-
-{{banner.png}}
 
 Welcome to ''Grok TiddlyWiki'', the definitive TiddlyWiki learning resource! //Grok TiddlyWiki// is a textbook that helps you build a deep, lasting understanding of and proficiency with TiddlyWiki through a combination of detailed explanations, practical exercises, and [[spaced-repetition reviews|TakeAway Help]] of prompts called //takeaways//.
 
@@ -25,15 +23,24 @@ To [[grok|https://en.wikipedia.org/wiki/Grok]] something is to understand it on 
 * If you're ready to get started, start at [[How to Use This Book]], or, if you're feeling impatient, at [[The Shape of TiddlyWiki|The Shape of TiddlyWiki]].
 
 
-!! Authorship/Support
+!! How much does it cost?
 
-//Grok TiddlyWiki// is written and maintained by Soren Bjornstad ([[about|https://sorenbjornstad.com]]; [[blog|https://controlaltbackspace.org]]; [[public notes|https://zettelkasten.sorenbjornstad.com]]; [[contact|https://sorenbjornstad.com/contact]]). GTW is donation-supported: anyone who wants to learn TiddlyWiki can read it for free, but if you find it helpful, please consider chipping in a few dollars. I have spent hundreds of hours of my free time writing this book, and I want to be able to justify the ongoing effort needed to keep it up to date as TiddlyWiki changes.
+Anyone who wants to learn TiddlyWiki can read //Grok TiddlyWiki// for free.
 
-<a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">Visit the donation page</a> to contribute. ([[Meta:TODO]]: Update the link once the page is running.)
+That said, a book this size doesn't pay for itself. I have spent hundreds of hours of my free time writing it, and I want to be able to justify the ongoing effort needed to keep it up to date as TiddlyWiki changes. So ''if you read the book and find it helpful, and you have the means to do so, please consider paying for it''. You can pay whatever you think the book is worth, from $5 to $100.
+
+Pay by clicking <a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">here</a> or on the //pay what you like// link in the sidebar at any time. Payments are processed by Stripe and take only a few moments to complete. ([[Meta:TODO]]: Update link)
+
+I may introduce a premium version of //Grok TiddlyWiki// in the future, most likely including extra media like videos. If you pay at least $20 now, you will be eligible to receive that version at no additional cost if and when it becomes available.
 
 You are free to copy and share //Grok TiddlyWiki// under certain conditions, pursuant to the CC BY-NC-ND 4.0 license; please see the [[copyright notice|Copyright]] for details.
 
-You can send me feedback on any section by clicking the //send feedback// button at the bottom of that section. Thanks [[to everyone|Acknowledgments]] who has offered help and feedback at every stage of //Grok TiddlyWiki//'s development.
+
+!! Who made this? How do I get in touch?
+
+//Grok TiddlyWiki// is written and maintained by Soren Bjornstad ([[about|https://sorenbjornstad.com]]; [[blog|https://controlaltbackspace.org]]; [[public notes|https://zettelkasten.sorenbjornstad.com]]; [[contact|https://sorenbjornstad.com/contact]]).
+
+You can send me feedback on any section by clicking the //send feedback// link at the bottom of that section. Thanks [[to everyone|Acknowledgments]] who has offered help and feedback at every stage of //Grok TiddlyWiki//'s development.
 
 //Grok TiddlyWiki// is not affiliated with or endorsed by the TiddlyWiki project in any way, other than that I use TiddlyWiki and participate in the community.
 
