@@ -1,0 +1,10 @@
+created: 20210502185915679
+modified: 20210502185939977
+tags: 
+title: Sn:AttributeParameterSubstitution
+type: text/vnd.tiddlywiki
+
+\define myText(text) Text: <<__text__>>
+
+* ''OK:'' <<myText "test text">>
+* ''Bad:'' <$text text=<<myText "test text">>>
