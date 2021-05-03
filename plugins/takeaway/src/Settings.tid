@@ -1,7 +1,7 @@
 caption: TakeAway
 created: 20210101233014514
 modified: 20210407190938188
-tags: $:/tags/ControlPanel/SettingsTab
+tags: $:/tags/ControlPanel/SettingsTab $:/tags/ControlPanel/Settings
 title: $:/plugins/sobjornstad/TakeAway/Settings
 type: text/vnd.tiddlywiki
 

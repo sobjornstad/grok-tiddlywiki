@@ -1,6 +1,6 @@
 created: 20200531034640143
 description: What makes TiddlyWiki worth learning and using?
-modified: 20210322012401157
+modified: 20210502213352466
 parent: Front Matter
 tags: Section
 title: Why TiddlyWiki?
@@ -65,8 +65,10 @@ While I love TiddlyWiki, no software is perfect, so it's worth pointing out some
 
 If you have around an hour, check out the video [[Experience TiddlyWiki Fluency: Creating a Reading List|https://www.youtube.com/watch?v=vsdDs7oOLlg]], which will show you the experience of building a small tool in TiddlyWiki. You can also play around in some [[Public Wikis]], such as [[my Zettelkasten|https://zettelkasten.sorenbjornstad.com]].
 
+<iframe style="width: 100%; height: 3in;" src="https://www.youtube.com/embed/vsdDs7oOLlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 !! Sold?
 
-If TiddlyWiki sounds like what you've been looking for, proceed to [[Philosophy of Grok TiddlyWiki]] to see if this book is a good way for you to learn TiddlyWiki, or to [[The Shape of TiddlyWiki|The Shape of TiddlyWiki]] to jump in.
+If TiddlyWiki sounds like what you've been looking for, proceed to [[Philosophy of Grok TiddlyWiki]] to see if this book is a good way for you to learn TiddlyWiki, to [[How to Use This Book]] to learn more about how the book works, or to [[The Shape of TiddlyWiki|The Shape of TiddlyWiki]] to jump in.
 
 If you end up using and liking this book, consider <a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">chipping in a few dollars</a> to support my work on it.

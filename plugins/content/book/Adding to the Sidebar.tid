@@ -1,6 +1,6 @@
 created: 20200718041838565
 description: Arbitrary tiddlers can be added to the sidebar to expose custom navigation options or any other content you like.
-modified: 20210418141520167
+modified: 20210502190226638
 parent: Looking Under the Hood
 tags: Section
 title: Adding to the Sidebar
@@ -16,7 +16,7 @@ Let's create a new tab in the sidebar called `Views` to store custom ways of loo
 
 The first step is to ''create a tiddler for each inner tab''. As noted earlier, we already have a tiddler that can serve as the meeting list, `MeetingList`; you may, however, want to clean out some extra crud that we have added to it in previous exercises, so that it just shows a simple list of meetings. For the journal list, clone the meeting list and tweak the filter so that it selects tiddlers with the `Journal` tag instead of the `Meeting` tag. 
 
-For the project list, let's look at a slightly different method. All of our tiddlers are tagged `Project`, so why not just make `Project` -- the tagging tiddler -- into the list? This fits perfectly with the standard dual function of tags in TiddlyWiki as both tiddlers (units of content) and a mechanism for building structure. Go ahead and edit this tiddler, or create it if it doesn't exist in your wiki, and add an appropriate TOC macro to it. (Have a look at [[Creating Hierarchies with a Table of Contents]] if you've forgotten how.) We'll see a bit more on this in [[Using a Tag Tiddler as a Template]].
+For the project list, let's look at a slightly different method. All of our tiddlers are tagged `Project`, so why not just make `Project` -- the tagging tiddler -- into the list? This fits perfectly with the standard dual function of tags in TiddlyWiki as both tiddlers (units of content) and a mechanism for building structure. Go ahead and edit this tiddler, or create it if it doesn't exist in your wiki, and add an appropriate TOC macro to it. (Have a look at [[Creating Hierarchies with a Table of Contents]] if you've forgotten how.)
 
 The next step is to create a tiddler that ''combines those inner tabs into a single tiddler''. Let's call this tiddler `$:/yourname/Views`. We'll set things up so that we can add new tabs by simply tagging the tab tiddler `$:/yourname/Views`:
 

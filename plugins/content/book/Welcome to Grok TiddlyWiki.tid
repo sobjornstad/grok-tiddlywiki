@@ -1,6 +1,6 @@
 created: 20210110055215195
 description: An overview of the book and where you should get started.
-modified: 20210502172412032
+modified: 20210503025840257
 parent: Front Matter
 tags: Index Section
 title: Welcome to Grok TiddlyWiki
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 Welcome to ''Grok TiddlyWiki'', the definitive TiddlyWiki learning resource! //Grok TiddlyWiki// is a textbook that helps you build a deep, lasting understanding of and proficiency with TiddlyWiki through a combination of detailed explanations, practical exercises, and [[spaced-repetition reviews|TakeAway Help]] of prompts called //takeaways//.
 
-[[TiddlyWiki|https://tiddlywiki.com]] is a human-shaped tool for organizing information and taking notes. It stores and relates information in a non-linear but structured way, just like your brain, and it doesn't forget things. Maintaining a well-organized TiddlyWiki requires a modest amount of effort, and TiddlyWiki has a bit of a learning curve, but it's extremely powerful and customizable, and once you grok it, it will change the way you take notes, think about your work and your ideas, and relate to information in general for the better.
+[[TiddlyWiki|https://tiddlywiki.com]] is a human-shaped tool for organizing information and taking notes. It stores and relates information in a non-linear but structured way, just like your brain, and it doesn't forget things. Maintaining a well-organized TiddlyWiki requires a modest amount of effort, and TiddlyWiki has a bit of a learning curve, but it's extremely powerful and customizable, and once you grok it, it will change the way you take notes, think about your work and your ideas, and relate to information in general.
 
 TiddlyWiki shines at almost any task that involves organizing information and enabling creativity. People use TiddlyWiki for keeping notes at their jobs, collecting their ideas, keeping track of what they read, drafting books, building static websites, storing recipes, managing genealogical databases, planning tabletop role-playing campaigns, and much more.
 
@@ -25,15 +25,11 @@ To [[grok|https://en.wikipedia.org/wiki/Grok]] something is to understand it on 
 
 !! How much does it cost?
 
-Anyone who wants to learn TiddlyWiki can read //Grok TiddlyWiki// for free.
+//Grok TiddlyWiki// is free to read. You are also free to copy and share the book under certain conditions, pursuant to the CC BY-NC-ND 4.0 license; please see the [[copyright notice|Copyright]] for details.
 
-That said, a book this size doesn't pay for itself. I have spent hundreds of hours of my free time writing it, and I want to be able to justify the ongoing effort needed to keep it up to date as TiddlyWiki changes. So ''if you read the book and find it helpful, and you have the means to do so, please consider paying for it''. You can pay whatever you think the book is worth, from $5 to $100.
+That said, I have spent hundreds of hours writing this book already, and the project isn't done – ongoing effort will be needed to keep it up to date as TiddlyWiki changes. So if you read the book and find it helpful, and you have the means to do so, ''please consider donating'' to support my work. You can give whatever you think the book is worth, from $5 to $100.
 
-Pay by clicking <a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">here</a> or on the //pay what you like// link in the sidebar at any time. Payments are processed by Stripe and take only a few moments to complete. ([[Meta:TODO]]: Update link)
-
-I may introduce a premium version of //Grok TiddlyWiki// in the future, most likely including extra media like videos. If you pay at least $20 now, you will be eligible to receive that version at no additional cost if and when it becomes available.
-
-You are free to copy and share //Grok TiddlyWiki// under certain conditions, pursuant to the CC BY-NC-ND 4.0 license; please see the [[copyright notice|Copyright]] for details.
+<a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">Donate here</a>, or use the //donate// link in the sidebar.
 
 
 !! Who made this? How do I get in touch?
