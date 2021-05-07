@@ -72,11 +72,11 @@ In reality, of course, you don't have to put the `$set` there, it just happens w
 
 !! When the current tiddler shouldn't change
 
-Going back to the exercise, we did a nice job of displaying Jane's contact information on //Jane's// tiddler...but what about every other contact's tiddler? If we want the contact fields to appear on every contact's tiddler, the most obvious way would be to copy and paste the same list of information and field references to every contact tiddler, but that sounds pretty unpleasant. This sounds like an ideal place to use transclusion, which lets us include the same content in many different tiddlers without repeating the content.
+Going back to the exercise, we did a nice job of displaying Jane's contact information on //Jane's// tiddler…but what about every other contact's tiddler? If we want the contact fields to appear on every contact's tiddler, the most obvious way would be to copy and paste the same list of information and field references to every contact tiddler, but that sounds pretty unpleasant. This sounds like an ideal place to use transclusion, which lets us include the same content in many different tiddlers without repeating the content.
 
 Let's try this, then: let's excise the “Information about Jane” section from her tiddler (if you've forgotten, there is a button on the toolbar to do this, or you can press Ctrl+E). Call the excised tiddler `ContactInformationTemplate`, and replace it with a transclusion; `{{ContactInformationTemplate}}` should appear in the wikitext of `JaneDoe`. (If you've done [[Ex:JaneManagerPhone]], you might want to include the macro in the excision as well, so that the logic to select the contact's manager's phone number works correctly.)
 
-Nice. But wait...none of the information is showing up now! Did you catch why?
+Nice. But wait…none of the information is showing up now! Did you catch why?
 
 <$details summary="Answer">
 When we transclude the `ContactInformationTemplate` into `JaneDoe`, the current tiddler is changed to `ContactInformationTemplate`, which means we don't have access to the fields on `JaneDoe` anymore. We could get around this by changing the transclusions on the `ContactInformationTemplate` to look like, e.g., `{{JaneDoe!!phone}}`, but then this `ContactInformationTemplate` tiddler could only be used with the `JaneDoe` tiddler -- and being able to reuse the `ContactInformationTemplate` tiddler was the entire point of extracting it into a separate tiddler.

@@ -1,6 +1,6 @@
 created: 20200603023508383
 description: Carefully naming tiddlers and concepts has many benefits, but is often more art than science.
-modified: 20210409130108005
+modified: 20210504022745346
 parent: Filing and Organizing
 tags: Section
 title: Tiddler Titles
@@ -32,7 +32,7 @@ Giving your idea or note a title is coming up with a name for that thing. For mo
 
 !! In practice
 
-We just spent the last few paragraphs describing //why// you should create good titles for things without obvious names, but not //how// to do it. The //how// is much more art than science, and it differs somewhat from wiki to wiki; if you start thinking carefully about what you're trying to accomplish, you'll get better at writing titles over time. That said, here are a few suggestions to help guide your experimentation:
+We just spent the last few paragraphs describing //why// you should create good titles for things without obvious names, but not //how// to do it. The //how// is much more art than science, and it differs somewhat from wiki to wiki, but if you get in the habit of reflecting on what you're writing about as you create a title, you'll get better at choosing titles over time. That said, here are a few suggestions to help guide your experimentation:
 
 * Make sure that your tiddlers are really focused on a ''single idea''. If you have multiple ideas, you should have multiple tiddlers. This is an important skill to develop to get the most out of TiddlyWiki in general, but it's also quite helpful in producing titles. Scoping the title appropriately may make it easier to figure out what content goes in the tiddler, and vice versa.
 * If a noun phrase (e.g., “Good keyboards” or “Benefits of using a good keyboard”) doesn't seem like it would describe the idea in the tiddler with sufficient precision, try ''making a claim'' instead (e.g., “Using a good keyboard makes injury less likely”).

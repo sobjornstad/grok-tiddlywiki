@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20210502224137597
+modified: 20210504002706505
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -108,7 +108,7 @@ Enter [[TakeAway|TakeAway Help]], a native TiddlyWiki [[mnemonic medium|https://
 Takeaways are prompts in one of two formats:
 
 * A ''question-and-answer pair'' (e.g., //What letter does the word “tiddler” start with?// / “t”).
-* A ''cloze deletion'', or fill-in-the-blank prompt (e.g., //The word “tiddler” starts with the letter {...}.//).
+* A ''cloze deletion'', or fill-in-the-blank prompt (e.g., //The word “tiddler” starts with the letter {…}.//).
 
 Takeaways serve two purposes. First, they allow you to immediately ''check your understanding'' of the concepts to be sure you're reading actively; we've all had the experience of reading a section and then discovering we have no idea what it said. Just think about the answer to each takeaway and click //show answer// to confirm you got it right.
 
@@ -136,6 +136,6 @@ Here's a takeaway to try:
 
 !! Sending feedback
 
-While //Grok TiddlyWiki// is a complete and full-quality learning resource, it can always be improved, and I hope to publish new versions regularly. If something doesn't make sense to you, doesn't display correctly on your device, or you have any other questions or suggestions, use the //send feedback// <<textual-button "mail">> link at the bottom of any section or when reviewing any takeaway to email the author with an automatic reference to the section or takeaway. If you  provide your email address, I will do my best to get back to you.
+//Grok TiddlyWiki// can always be improved, and I hope to publish new versions regularly. If you find a typo or factual error, something doesn't make sense to you or doesn't display correctly on your device, or you have any other questions or suggestions, use the //send feedback// <<textual-button "mail">> link at the bottom of any section or when reviewing any takeaway to email me with an automatic reference to the section or takeaway. If you provide your email address, I will do my best to get back to you.
 
 Alternatively, you can use the information on my [[contact page|https://sorenbjornstad.com/contact/]] to get in touch directly.

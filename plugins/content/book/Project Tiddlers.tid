@@ -1,12 +1,12 @@
 created: 20200531014330950
 description: How to organize meetings and knowledge into overarching projects.
-modified: 20210409025641932
+modified: 20210504021610224
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Project Tiddlers
 type: text/vnd.tiddlywiki
 
-Now for ''project tiddlers''. Let's create ourselves a project for completing the company onboarding process. Create a new tiddler (that's the <<textual-button "new-button">> button in the upper-right corner, if you forgot, or Alt+N if you have your hands on the keyboard already), name it `OnboardingProcess`, and tag it with `Project`.
+Now for ''project tiddlers''. Let's create ourselves a project for completing the company onboarding process. Create a new tiddler (that's the <<textual-button "new-button">> button in the upper-right corner, if you forgot, or Alt+N if you have your hands on the keyboard already), name it `OnboardingProcess`, and tag it `Project`.
 
 What kind of information do we want to keep track of for projects? We might imagine including deadlines, stakeholders, approvals, and so on, but it's probably going to depend a bit on the project, and at this point we're too new to understand how the company operates and what processes our projects will move through, so let's refrain from adding fields until we know we need them. However, we do already know that every project we're assigned will have an entry in the company's ticket-tracking system with an associated ID number, so let's create a field called `ticketnum`. Our protagonist's onboarding is ticket number 245188, so put that in as the field value. Let's throw something in the body describing the project for good measure: how about `A project where we waste a bunch of perfectly good time learning all about this nice company.`.
 

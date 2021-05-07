@@ -1,6 +1,6 @@
 created: 20201124235605503
 description: HTML is a simple formatting language used to describe web pages, including TiddlyWikis. We can go “down a level” from wikitext to HTML when we need a bit more control over presentation.
-modified: 20210409171247949
+modified: 20210504115246378
 parent: Filtering and Formatting
 tags: Section
 title: HTML
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 ''HTML'' (which stands for //Hypertext Markup Language//, but nobody calls it that) is a markup language that underlies all web pages and a substantial number of desktop and mobile applications, including TiddlyWiki. Your web browser, or TiddlyDesktop if you're displaying your wiki in TiddlyDesktop, reads HTML code to determine what to display on the screen.
 
-If you're a web developer or otherwise familiar with HTML already, you can skim this section, but it's still worth reading through it, as it will highlight some places where TiddlyWiki may differ slightly from the HTML standards you may usually work with (for instance, different versions of HTML treat self-closing and void tags differently).
+If you're a web developer or otherwise familiar with HTML already, you can skim this section, but it's still worth reading through it – it will highlight how wikitext and HTML work together, as well as how TiddlyWiki may differ slightly from the HTML standards you usually work with (for instance, different versions of HTML treat self-closing and void tags differently).
 
 
 !! HTML and wikitext

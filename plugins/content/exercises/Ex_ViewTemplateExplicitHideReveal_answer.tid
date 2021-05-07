@@ -6,6 +6,6 @@ type: text/vnd.tiddlywiki
 
 ```html
 <$reveal state="!!hide-contactinfo" type="nomatch" text="yes">
-	... the rest of the template
+	…the rest of the template
 </$reveal>
 ```

@@ -1,6 +1,6 @@
 created: 20200608015232773
 description: A set of tiddlers, such as those with a particular tag, can be given a specific order using a tiddler list.
-modified: 20210409135638529
+modified: 20210504025014452
 parent: Filing and Organizing
 tags: Section
 title: Ordering Tiddlers
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 Sometimes a set of tiddlers has a particular //order//. For instance, this book is composed in TiddlyWiki with each section as a tiddler, and the sections should be read in a certain order. We need some way of telling TiddlyWiki what that order is.
 
-We could simply create a tiddler that contained links to each of the tiddlers in order, but then we'd have to remember to manually change that tiddler every time we created a new one, and it wouldn't help TiddlyWiki display them in the correct order in [[tables of contents|Creating Hierarchies with a Table of Contents]] or tag pills.
+We could simply create a tiddler that contained links to each of the tiddlers in order, but then we'd have to remember to manually change that tiddler every time we created a new one, and it wouldn't help TiddlyWiki display them in the correct order in [[tables of contents|Creating Hierarchies with a Table of Contents]] or tag pills. We need something more formal.
 
 
 !! The tiddler list
@@ -38,7 +38,7 @@ So that's all well and good, but editing a `list` field to move things around so
 
 Fortunately, TiddlyWiki offers us several ways to drag and drop tiddlers into the right order and automatically modify the `list` field to match. In fact, we've used one of these drag-and-drop views already: the //Open// tab in the sidebar. That one just happens to be reordering a list of open tiddlers rather than a list of tiddlers with a particular tag.
 
-The easy way to reorder tiddlers with a particular tag is to simply find a tag pill for that tag, click on the pill, and drag and drop the entries in the list. If the tag tiddler doesn't currently have a `list` field, your first drag-and-drop will create it, with all the tiddlers in alphabetical order except the one you just moved.
+The easy way to reorder tiddlers with a particular tag is to find a tag pill for that tag, click on the pill, and drag and drop the entries in the list. If the tag tiddler doesn't currently have a `list` field, your first drag-and-drop will create it, with all the tiddlers in alphabetical order except the one you just moved.
 
 You can also insert such a reorderable list anywhere you want using `list-links-draggable`:
 

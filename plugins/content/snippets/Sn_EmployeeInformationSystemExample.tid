@@ -1,5 +1,5 @@
 created: 20210116192623958
-modified: 20210116192534122
+modified: 20210504022048490
 tags: 
 title: Sn:EmployeeInformationSystemExample
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 The Employee Information System at this nice company allows employees to perform tasks such as:
 
 * update their names and other personal information (on the front page after signing in)
-* view pay stubs ("remuneration" tab)
-* request vacation dates ("time off" tab)
+* view pay stubs (“remuneration” tab)
+* request vacation dates (“time off” tab)
 
 You need to use the Really Annoying Five-Factor Authentication Process to get into the Employee Information System if it is a Tuesday, unless you have also purchased coffee (tea or pastries do not count) in the company cafeteria earlier in the day.

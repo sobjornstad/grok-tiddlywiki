@@ -1,6 +1,6 @@
 created: 20200603023508396
 description: TiddlyWiki provides a variety of options for getting an overview of many tiddlers at once.
-modified: 20210409125120827
+modified: 20210504022432324
 parent: Filing and Organizing
 tags: Section
 title: Browsing Your Tiddlers
@@ -21,8 +21,8 @@ When you don't know what you're looking for precisely enough to formulate a [[fu
 : This tab lists all tiddlers in your wiki that have been linked to by at least one other tiddler, but don't yet exist. You can click on a missing tiddler to see a menu much like that for a tag, with the missing tiddler listed at the top and all the tiddlers that link to it underneath. (We discussed this view previously in the [[Knowledge Tiddlers]] section.)
 
 ; Drafts
-: When you edit a tiddler in TiddlyWiki, the original tiddler is preserved as-is, while a new “draft” tiddler is created to house your changes. When you accept the changes with the <<textual-button "done-button">> confirm changes button, the draft replaces the original tiddler.
-: <br>The drafts tab shows any currently open drafts. Typically, all draft tiddlers will be open already (since you're editing them), so you'll have little reason to come in here, but occasionally a crash or network issue could cause drafts to be left in the wiki but not saved, in which case you can look for them here so you can finish your edits.
+: When you edit a tiddler in TiddlyWiki, the original tiddler is preserved as-is, while a new “draft” tiddler is created to house your changes. When you accept the changes with the confirm changes button <<textual-button "done-button">>, the draft replaces the original tiddler.
+: <br>The drafts tab shows any drafts that currently exist. Typically, all draft tiddlers will be open already (since you're editing them), so you'll have little reason to come in here, but occasionally a crash or network issue could cause drafts to be left in the wiki but not saved, in which case you can look for them here so you can finish your edits.
 
 ; Orphans
 : This tab shows tiddlers that have not been linked to within the `text` field of any other tiddler. If your wiki relies heavily on linking for relating ideas, looking for orphans periodically can help you identify which tiddlers are at risk of getting lost.

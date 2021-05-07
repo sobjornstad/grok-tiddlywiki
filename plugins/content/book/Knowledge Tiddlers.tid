@@ -1,12 +1,12 @@
 created: 20200531022953084
 description: How to organize information that doesn't fall into a clear category, and why such information should be pulled out into separate units of information and related to others.
-modified: 20210409030938606
+modified: 20210504022221627
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Knowledge Tiddlers
 type: text/vnd.tiddlywiki
 
-We've almost made it through all of the types of tiddlers we identified in [[Structuring Our Wiki]]. The remaining type we listed out is the non-type: what we called the ''knowledge tiddler''. Studying the amorphous nature of knowledge tiddlers will lead us to some important insights about organizing information which we will build on in the next chapter, [[Filing and Organizing]].
+We've almost made it through all of the types of tiddlers we identified in [[Structuring Our Wiki]]. The remaining type we listed out is the non-type: what we called the ''knowledge tiddler''. Studying the amorphous nature of knowledge tiddlers will lead us to some important insights about organizing information which we'll build on in the next chapter, [[Filing and Organizing]].
 
 !! Creating missing tiddlers
 
@@ -22,7 +22,7 @@ Let's click on `EmployeeInformationSystem` and edit it. We could start with some
 
 {{Sn:EmployeeInformationSystemExample||MagicSnippet}}
 
-Wait...remember how we're supposed to consider if there are any concepts that need links? Have a read and see if you can identify some things that might deserve links and separate tiddlers! Then continue below.
+Wait…remember how we're supposed to consider if there are any concepts that need links? Have a read and see if you can identify some things that might deserve links and separate tiddlers! Then continue below.
 
 * The ''Really Annoying Five-Factor Authentication Process'' (RAFFAP) is probably the most obvious candidate here. Perhaps we don't have all that much to say about it, but we would likely at least want to maintain a link to the company documentation on it.
 * It could be worth creating tiddlers for ''the process of retrieving pay stubs or requesting vacation'' -- particularly the latter, since there are probably a number of further considerations involved in taking vacation (e.g., having your boss and/or teammates approve your plans). If you don't know much about the process yet, you could simply leave the tiddler missing and fill it in when you learn more, or if you don't like leaving missing tiddlers, drop in a sentence that says “Vacation time is requested in the EmployeeInformationSystem.”
@@ -51,7 +51,7 @@ This will nicely tie together all the relevant pieces of information for us.
 
 Since this is a knowledge tiddler, it doesn't have a tag identifying exactly what type of information it is like the others did. However, it might still be nice to classify it: this is a software application, so let's tag it with `Application`.
 
-It's important not to create a blizzard of tags -- the more tags you have, the harder it is to scan through them and figure out what they are and what other tiddlers you might want to apply them to -- so before adding a tag, it's good to make sure you can ''identify a situation in which you would actually use that tag''. Here's the use case we could identify for Applications:
+It's important not to create a blizzard of tags -- the more tags you have, the harder it is to scan through them and figure out what they are and what other tiddlers you might want to apply them to -- so before creating a new tag, it's good to make sure you can ''identify a situation in which you would actually use that tag''. Here's the use case we could identify for Applications:
 
 > From time to time, we may wish to see a list of the tools we have available at our disposal, if we get stuck on a problem or we know there's an app that does what we need but just can't quite remember what it's called or where to look for it.
 

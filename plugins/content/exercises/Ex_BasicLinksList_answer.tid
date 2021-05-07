@@ -25,9 +25,9 @@ Let's talk about `filterFragment` for a moment. The way shown above is the simpl
 
 ```html
 \define linkDisplay(title, filterString)
-[...]
+[…]
 <$list filter=<<__filterString__>>>
-[...]
+[…]
 ```
 
 Another option would be to use `subfilter`. This filter operator takes an argument which is itself a filter run, and passes the current data into that run. Here's how we could do that:

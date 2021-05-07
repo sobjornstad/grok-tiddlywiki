@@ -1,6 +1,6 @@
 created: 20210110055215195
 description: An overview of the book and where you should get started.
-modified: 20210503025840257
+modified: 20210504002255447
 parent: Front Matter
 tags: Index Section
 title: Welcome to Grok TiddlyWiki
@@ -25,7 +25,7 @@ To [[grok|https://en.wikipedia.org/wiki/Grok]] something is to understand it on 
 
 !! How much does it cost?
 
-//Grok TiddlyWiki// is free to read. You are also free to copy and share the book under certain conditions, pursuant to the CC BY-NC-ND 4.0 license; please see the [[copyright notice|Copyright]] for details.
+//Grok TiddlyWiki// is free to read. You are also free to copy and share the book under certain conditions, pursuant to the CC BY-NC-ND 4.0 license; please see the [[copyright notice|Copyright]] for details on the terms and conditions.
 
 That said, I have spent hundreds of hours writing this book already, and the project isn't done – ongoing effort will be needed to keep it up to date as TiddlyWiki changes. So if you read the book and find it helpful, and you have the means to do so, ''please consider donating'' to support my work. You can give whatever you think the book is worth, from $5 to $100.
 
@@ -34,11 +34,11 @@ That said, I have spent hundreds of hours writing this book already, and the pro
 
 !! Who made this? How do I get in touch?
 
-//Grok TiddlyWiki// is written and maintained by Soren Bjornstad ([[about|https://sorenbjornstad.com]]; [[blog|https://controlaltbackspace.org]]; [[public notes|https://zettelkasten.sorenbjornstad.com]]; [[contact|https://sorenbjornstad.com/contact]]).
+//Grok TiddlyWiki// is written and maintained by Soren Bjornstad ([[about|https://sorenbjornstad.com]]; [[blog|https://controlaltbackspace.org]]; [[public notes|https://zettelkasten.sorenbjornstad.com]]; [[contact|https://sorenbjornstad.com/contact]]). I am not affiliated with or endorsed by the TiddlyWiki project.
 
-You can send me feedback on any section by clicking the //send feedback// link at the bottom of that section. Thanks [[to everyone|Acknowledgments]] who has offered help and feedback at every stage of //Grok TiddlyWiki//'s development.
+You can send me feedback on any section by clicking the //send feedback// link at the bottom of that section. Thanks [[to everyone|Acknowledgments]] who has offered feedback and other forms of assistance at every stage of //Grok TiddlyWiki//'s development.
 
-//Grok TiddlyWiki// is not affiliated with or endorsed by the TiddlyWiki project in any way, other than that I use TiddlyWiki and participate in the community.
+If you're looking for personalized help learning TiddlyWiki or getting a wiki set up, I am occasionally available for online tutoring for an hourly fee; [[contact me|https://sorenbjornstad.com/contact]] if that sounds like something you might be interested in.
 
 
 !! What version is this?

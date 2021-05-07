@@ -1,6 +1,6 @@
 created: 20201125202250940
 description: Study an annotated screenshot of TiddlyWiki's interface to help you put names to what you're seeing.
-modified: 20210408174210230
+modified: 20210504014557703
 parent: The Shape of TiddlyWiki
 tags: Section
 title: The TiddlyWiki Interface
@@ -21,7 +21,7 @@ The sidebar allows you to navigate to tiddlers that you don't have open and take
 ; Recent
 : A list of tiddlers you've changed recently.
 ; Tools
-: System actions like importing content, advanced search, changing the colors, and so on. You can place the tools you use most frequently on the page toolbar by checking or unchecking the box next to each tool.
+: A list of system actions like importing content, advanced search, changing the colors, and so on. You can place the tools you use most frequently on the page toolbar by checking or unchecking the box next to each tool.
 ; More
 : A variety of other ways to find tiddlers, which we'll discuss in detail in [[Browsing Your Tiddlers]].
 

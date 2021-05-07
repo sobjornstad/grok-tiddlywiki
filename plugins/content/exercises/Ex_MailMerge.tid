@@ -16,7 +16,7 @@ You'll need to URL-encode the subject and body and put it into the link, which T
 mailto:whoever@example.com?subject=TheSubject&body=TheBodyOfTheEmail
 ```
 
-...where both `TheSubject` and `TheBodyOfTheEmail` are URL-encoded.
+…where both `TheSubject` and `TheBodyOfTheEmail` are URL-encoded.
 
 ''Warning'': This is well known in the community as a complex task that demands excellent knowledge of macros, filters, transclusions, and how they relate. It is harder than it looks, and even experienced users will find it challenging. That said, it's a great final exercise after reading this book, and it feels good to crack it!
 

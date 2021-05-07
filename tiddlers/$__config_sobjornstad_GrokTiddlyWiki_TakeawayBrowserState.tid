@@ -1,8 +1,8 @@
 answer: no
 created: 20210408142451078
 invertsort: !
-modified: 20210418132052266
-seen: yes
+modified: 20210507012436768
+seen: ^$|initial
 sort: lapses
 title: $:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState
 type: text/vnd.tiddlywiki

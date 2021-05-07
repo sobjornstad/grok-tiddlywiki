@@ -1,6 +1,6 @@
 created: 20200530170256021
 description: Links tell TiddlyWiki what ideas (tiddlers) in your wiki are related to each other.
-modified: 20210409015528847
+modified: 20210504015504198
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Links
@@ -28,7 +28,7 @@ You can link to tiddlers that don't exist yet. These links will be displayed in 
 
 !! External links
 
-In addition to the //internal// links we've discussed so far (links that point to other tiddlers in the same wiki), you can include ''external links'' (ones that point to URLs on the web or your computer). External links are created the same way as internal ones, except the link target is a URL rather than a tiddler name. Alternatively, if you want the URL itself to be the link text, you can just paste the URL into your wikitext and it will automatically be turned into a link. You can tell an external link from an internal one because external links are underlined, while internal links are only in a different color (compare the following example with the previous one).
+In addition to the //internal// links we've discussed so far (ones that point to other tiddlers in the same wiki), you can include ''external links'' (ones that point to URLs on the web or your computer). External links are created the same way as internal ones, except the link target is a URL rather than a tiddler name. Alternatively, if you want the URL itself to be the link text, you can just paste the URL into your wikitext and it will automatically be turned into a link. You can tell an external link from an internal one because external links are underlined, while internal links are only in a different color (compare the following example with the previous one).
 
 {{Sn:LinkToGoogle||MagicSnippet}}
 

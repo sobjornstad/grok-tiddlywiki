@@ -1,6 +1,6 @@
 created: 20200603181515580
 description: //Naming conventions// are rules about how sets of things should be named. Creating your own conventions will make it easier to create titles and easier to find tiddlers later.
-modified: 20210409131322043
+modified: 20210504023207883
 parent: Filing and Organizing
 tags: Section
 title: Naming Conventions
@@ -13,12 +13,12 @@ type: text/vnd.tiddlywiki
 
 Sometimes it's helpful to include a bit of additional information in a title by convention. For instance, in my personal reading notes, I suffix the names of sources with the year of publication, and I prefix the names of people and organizations with `Mr`, `Ms`, or `The`. This makes it quick and easy to identify whether a tiddler I'm looking at is about an idea, a source, or a person.
 
-Of course, I could get the same information by looking at the tags, fields, and text of each tiddler. But to do that, I would have to open it up or create some extra tooling to see those values in a convenient format. Unless you intentionally hide it, it's rare to not be able to see the //title// of a tiddler, so if you have a simple piece of information you frequently need to see, it makes sense to include it in the title.
+Of course, I could get the same information by looking at the tags, fields, and text of each tiddler. But to do that, I would have to open each of the tiddlers, or create some extra tooling to see those values in a convenient format. Unless you intentionally hide it, it's rare to not be able to see the //title// of a tiddler, so if you have a simple piece of information you frequently need to see, it makes sense to include it in the title.
 
 
 !! Capitalization
 
-TiddlyWiki titles are, irritatingly, ''case-sensitive'' -- you can create tiddlers called `Apple Computer` and `Apple computer`, and TiddlyWiki considers them different things. As such, it's a good idea to make sure you always capitalize things consistently, or you may end up creating duplicates.
+TiddlyWiki titles are, irritatingly, ''case-sensitive'' -- you can create tiddlers called `Apple Computer` and `Apple computer`, and TiddlyWiki considers them different things. As such, it's a good idea to make sure you always capitalize things consistently, or you may end up creating duplicate tiddlers by mistake.
 
 Some languages use Title Case, Where All Words Are Capitalized Except a Few Little Ones. Others prefer to capitalize only nouns in the phrase, or only the first letter. It doesn't matter what you pick, but pick a standard and always use it for your tiddler titles.
 
@@ -32,14 +32,14 @@ Some people like to capitalize tags differently than content tiddlers (for insta
 
 !! Plurals
 
-Another way you can end up creating duplicate tiddlers by accident is to write one of them in the singular and the other in the plural. This is especially common with tags. For this reason, I like to always ''write all nouns in the singular''. So instead of tagging tiddlers with `CoffeeOptions`, we would use `CoffeeOption`. This isn't as ungrammatical as it may look at first glance, since each tiddler with the tag is a single coffee option. If you prefer, you could just as easily choose to make all nouns plural, but it's best to pick one and stick with it.
+Another way you can end up creating duplicate tiddlers by mistake is to write one of the titles in the singular and the other in the plural. This is especially common with tags. For this reason, I like to always ''write all nouns in the singular''. So instead of tagging tiddlers with `CoffeeOptions`, we would tag them with `CoffeeOption`. This isn't as ungrammatical as it may look at first glance, since each tiddler with the tag is a single coffee option. If you prefer, you could just as easily choose to make all nouns plural, but it's best to pick one and stick with it.
 
 
 !! Namespacing
 
 If you have a lot of tiddlers of the same type or on the same topic, you might want to ''begin all of their titles the same way''. For instance, we might begin all tiddlers related to the onboarding project with `Onboarding`. Often, people will separate portions of the tiddler name with a slash (`/`) or a colon (`:`), e.g., `Onboarding/People` or `Onboarding:People`.
 
-As another example, in this book's wiki, all of the exercise tiddlers begin with `Ex:`, the code snippet tiddlers begin with `Sn:`, and the takeaways begin with `Ta:`.
+As another example, in this book's wiki, all of the exercise tiddlers begin with `Ex:`, the code snippet tiddlers begin with `Sn:`, and the takeaway tiddlers begin with `Ta:`.
 
 The advantages are that the related tiddlers then sort together in alphabetical listings, you immediately know that you thought of them as a unit even without looking at any fields other than the title (see //Conventions//, above), and it feels nice and clean. The disadvantage is that you end up thinking more hierarchically, which isn't always desirable: it now seems like this tiddler is //part// of this single, specific other thing, and less related to anything else it may be linked or otherwise connected to. Your titles may also look a little less pretty.
 

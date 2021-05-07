@@ -74,7 +74,7 @@ OK, now let's just pass the results of calling that macro to the `$list` widget:
 <$list filter=<<myfilt ...>> >
 ```
 
-Wait a sec...how do we call `myfilt` with the value of the `family` field? `<<myfilt {{!!family}}>>` sounds nice, but isn't valid. We have to use a `$macrocall` widget to pass transclusions as parameters to a macro. But sadly, this isn't valid syntax either:
+Wait a sec…how do we call `myfilt` with the value of the `family` field? `<<myfilt {{!!family}}>>` sounds nice, but isn't valid. We have to use a `$macrocall` widget to pass transclusions as parameters to a macro. But sadly, this isn't valid syntax either:
 
 ```html
 <$list filter=<$macrocall $name="myfilt" people={{!!family}}/>>
@@ -86,7 +86,7 @@ You can't put a widget inside an attribute of another widget. We could turn the 
 <$set name=filtersnippet value=...
 ```
 
-...Wait, same problem! Dang it!
+…Wait, same problem! Dang it!
 
 There is in fact a way to solve this problem with macros; we'll learn how to do it in [[Using Variables in Macros]]. But it should be clear that using a macro here is a whole lot more work than we want to deal with. All we really want is to pass the contents of the `family` field into the `enlist` operator.
 

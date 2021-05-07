@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20210410185207915
+modified: 20210504010223774
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -52,9 +52,9 @@ You can reduce the number of backups saved by various means, but that only hides
 
 !! Possible solutions
 
-<$details summary="Using Node.JS">
+<$details summary="Using Node.js">
 
-If you're technical enough to know a little bit about running a web server, or just a lot about Javascript or Node.JS, you can ''use a folder wiki'' instead of a single-file wiki, which eliminates the file-size problem because the attachments are stored as separate files and don't have to be rewritten unless they're changed. If you don't have any particular reason to prefer single-file TiddlyWiki, this is likely your best option.
+If you're technical enough to know a little bit about running a web server, or just a lot about JavaScript or Node.js, you can ''use a folder wiki'' instead of a single-file wiki, which eliminates the file-size problem because the attachments are stored as separate files and don't have to be rewritten unless they're changed. If you don't have any particular reason to prefer single-file TiddlyWiki, this is likely your best option.
 
 Take a look at the [[Options for Saving and Hosting Your Wiki]] appendix for details.
 

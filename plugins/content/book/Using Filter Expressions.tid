@@ -1,12 +1,12 @@
 created: 20200603023508416
 description: Filter expressions, runs, and steps work together to select tiddlers.
-modified: 20210409152325684
+modified: 20210504030835351
 parent: Filtering and Formatting
 tags: Section
 title: Using Filter Expressions
 type: text/vnd.tiddlywiki
 
-So that's what [[filters|Filters]] //are//...now what do they look like, and how do we use them?
+So that's what [[filters|Filters]] //are//…now what do they look like, and how do we use them?
 
 Filters, or, more formally, ''filter expressions'', consist of one or more ''filter runs'', which each contain one or more ''filter steps''. For now, we'll only worry about filter expressions containing a single run -- you'll be able to accomplish most basic tasks without needing multiple runs. However, know that individual runs [[can be combined in various ways|Multi-Run Filters]] to form a more complex filter expression, and we'll discuss this further in chapter 5.
 
@@ -23,7 +23,7 @@ Notice that these filter expressions are also filter runs, since we are consider
 
 !! Trying some filters
 
-Let's try using some of these filters. To do so, open <<textual-button "advanced-search-button">> Advanced Search, which you can find under the ''Tools'' tab in the sidebar or by pressing Ctrl+Shift+A. Then pick the ''Filter'' tab and type in one of the expressions above. You'll see a list of the tiddlers that match.
+Let's try using some of these filters. To do so, open Advanced Search <<textual-button "advanced-search-button">>. You can find this option in the ''Tools'' tab in the sidebar or next to the search box, or you can press Ctrl+Shift+A. Then pick the ''Filter'' tab and type in one of the expressions above. You'll see a list of the tiddlers that match.
 
 If you try the last filter listed above, `[links[]]`, you might notice a whole bunch of funny-looking tiddlers show up, with names starting with `$:/`. What's up with those? Those are [[system tiddlers|System Tiddlers]]; they contain configuration settings or bits and pieces of TiddlyWiki itself. If you don't want to see the system tiddlers, add `!is[system]` to the beginning of the filter run to eliminate them (read `!` as //not//). So that will look like `[!is[system]links[]]`.
 

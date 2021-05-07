@@ -1,14 +1,14 @@
 created: 20201121231218670
 description: The variety of ways you can save and store your wiki.
-modified: 20210418152647499
+modified: 20210504013511473
 parent: Appendices
 tags: Section
 title: Options for Saving and Hosting Your Wiki
 type: text/vnd.tiddlywiki
 
-In [[Installing TiddlyWiki]], we decided to use TiddlyDesktop to save and manage our wiki. However, once you have the hang of TiddlyWiki, TiddlyDesktop is not necessarily the best fit. For instance, it doesn't let you access your wiki across the internet or make it available to other users. Or you might be frustrated with the limitations on [[Images and Attachments]] in a single-file wiki and want to store it in a folder and host it on NodeJS.
+In [[Installing TiddlyWiki]], we decided to use TiddlyDesktop to save and manage our wiki. However, once you have the hang of TiddlyWiki, TiddlyDesktop is not necessarily the best fit. For instance, it doesn't let you access your wiki across the internet or make it available to other users. Or you might be frustrated with the limitations on [[Images and Attachments]] in a single-file wiki and want to store your wiki as a folder of individual tiddlers and host it on Node.js.
 
-If this sounds like something you want to explore, you can find a list of all the available savers in the [[Getting Started|https://tiddlywiki.com/#GettingStarted]] tiddler on tiddlywiki.com. Several particularly interesting ones:
+If this sounds like something you'd like to explore, you can find a list of all the available savers in the [[Getting Started|https://tiddlywiki.com/#GettingStarted]] tiddler on tiddlywiki.com. Several particularly interesting ones:
 
 * [[TiddlyDesktop|https://tiddlywiki.com/#Saving%20on%20TiddlyDesktop]] is the tool that //Grok TiddlyWiki// has generally been assuming you are using.
 * The [[GitHub saver|https://tiddlywiki.com/#Saving%20to%20a%20Git%20service]] allows you to save your changes to a public or private Git repository hosted on GitHub.

@@ -35,11 +35,11 @@ As you can see, `XYZ` is rendered by this snippet. Let's follow along with Tiddl
 # `<<testVar1>>` is a new chunk of wikitext that can be further processed, so TiddlyWiki wikifies that as well. This time that process substitutes the value of the variable `testVar1`, yielding `XYZ`.
 # At this point, there is nothing left to do with the text `XYZ`, since it is already plain text with no wikitext syntax, so TiddlyWiki shows `XYZ` on the screen and moves on to the rest of the tiddler.
 
-However, if we make a minor change so that `testVar2` is the attribute of a widget...
+However, if we make a minor change so that `testVar2` is the attribute of a widget…
 
 {{Sn:TestVar122||MagicSnippet}}
 
-...now the literal text `<<testVar1>>` prints out:
+…now the literal text `<<testVar1>>` prints out:
 
 # In the first `$set` widget, the variable `testVar1` gets set to the text `XYZ`.
 # In the second `$set` widget, the variable `testVar2` gets set to the text `<<testVar1>>`.

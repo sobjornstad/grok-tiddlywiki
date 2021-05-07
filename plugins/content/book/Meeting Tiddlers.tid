@@ -1,6 +1,6 @@
 created: 20200531011856906
 description: How to take notes on meetings, excising existing notes and using TiddlyWiki's timestamp format to identify when the meeting happened.
-modified: 20210409024613679
+modified: 20210504021428623
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Meeting Tiddlers
@@ -19,7 +19,7 @@ You can see there's a choice for what we want to replace the excised text with: 
 
 Let's edit our new meeting tiddler and give it a tag of `Meeting`, to start with. We're also going to want to add some other metadata: we said in our requirements that we wanted to be able to find meeting notes based on (1) when the meeting happened and (2) who attended.
 
-Let's start with ''who attended''. We have at least two obvious options here. One is to simply make sure that we link to everyone involved in the meeting somewhere within the text of the tiddler. Another is to explicitly list out the participants in a field. The former option is probably easier, but you're more likely to forget someone, and you won't be able to distinguish between people who were //at// the meeting and people who were merely discussed at the meeting. Let's be a bit more precise and create a field, called `participants`, and set its value to `JaneDoe`. (We'd be more precise to add ourselves too; but most people do not often take notes on meetings they're not at, so this likely isn't necessary unless you frequently receive meeting notes from others that you'd like to import into your wiki.)
+Let's start with ''who attended''. We have at least two obvious options here. One is to simply make sure that we link to everyone involved in the meeting somewhere within the text of the tiddler. Another is to explicitly list out the participants in a field. The former option is probably easier, but you're more likely to forget someone, and you won't be able to distinguish between people who were //at// the meeting and people who were merely //discussed// at the meeting. Let's be a bit more precise and create a field, called `participants`, and set its value to `JaneDoe`. (We'd be more precise to add ourselves too; but most people do not often take notes on meetings they're not at, so this likely isn't necessary unless you frequently receive meeting notes from others that you'd like to import into your wiki.)
 
 The other way we wanted to be able to slice our meetings is by ''when they happened''. One straightforward way to handle this would be to use the created time on the tiddler, which TiddlyWiki fills in automatically whenever you create one. However, this means that if we start our meeting notes prior to the meeting (to stub out an agenda if we're running the meeting), or fill them in afterwards (because we didn't have our laptop at the meeting), the time will be wrong. So for the sake of demonstration, let's create our own date/time field.
 

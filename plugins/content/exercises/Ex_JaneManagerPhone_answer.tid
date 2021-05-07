@@ -17,7 +17,7 @@ Now for trying to make it grab the manager's name from the `manager` field on th
 {{ {{!!manager}}!!phone }}
 ```
 
-...but unfortunately this does not work.
+…but unfortunately this does not work.
 
 There are actually two separate reasons it doesn't work. First, TiddlyWiki doesn't parse other wikitext within `{{double curly braces}}`, it only looks for a tiddler name/field. Second, even if it did, it would fail for the same reason that this didn't work in an [[exercise|Ex:MacroAdjacency]] in [[Macros]]:
 

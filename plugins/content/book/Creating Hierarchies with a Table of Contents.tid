@@ -1,6 +1,6 @@
 created: 20200603023508492
 description: TiddlyWiki can produce hierarchical tables of contents from tag structures.
-modified: 20210409134640967
+modified: 20210504024417453
 parent: Filing and Organizing
 tags: Section
 title: Creating Hierarchies with a Table of Contents
@@ -13,7 +13,7 @@ Important disclaimer: you can only use the built-in table-of-contents functional
 
 !! Creating structure tiddlers
 
-First, let's create some basic structure under our onboarding project. Let's say the project is broadly divided into three parts. We'll need to create a tiddler for each of them to define the hierarchy:
+Let's look at how we can create a table of contents for our onboarding project. We'll begin by creating some basic structure underneath it. Let's say the project is broadly divided into three parts. We'll need to create a tiddler for each of these parts to define the hierarchy:
 
 * HR stuff about the company and government-mandated training -- `OnboardingHr`
 * Introductions and social events/notes -- `OnboardingPeople`
@@ -33,7 +33,7 @@ The most basic table of contents is created with the wikitext `<<toc "Root">>`, 
 
 The funny double angle brackets `<<>>` introduce a reference to a variable or a macro call. You don't need to worry about what those are for now; we'll learn a whole lot more about them in [[Chapter 4|Variables, Macros, and Transclusions]].
 
-Go ahead and edit the `OnboardingProcess` tiddler and drop that snippet in. You'll see that a numbered list of the items tagged `OnboardingProcess` shows up. But oops, the `EmployeeProfileSetupMeeting` probably doesn't belong at the top level now that we've added our three subparts of the onboarding project. It makes more sense to have it in `OnboardingHr`, agreed? Let's open it up, remove the `OnboardingProcess` tag, and add the `OnboardingHr` tag. If we save it and go back up to `OnboardingProcess` now, we'll see that now it's indented into a second level.
+Go ahead and edit the `OnboardingProcess` tiddler and drop that snippet in. You'll see that a numbered list of the items tagged `OnboardingProcess` shows up. But oops, the `EmployeeProfileSetupMeeting` probably doesn't belong at the top level now that we've added our three subparts of the onboarding project. It makes more sense to have it in `OnboardingHr`, agreed? Let's open the `EmployeeProfileSetupMeeting`, remove the `OnboardingProcess` tag, and add the `OnboardingHr` tag. If we save it and go back up to `OnboardingProcess` now, we'll see that now it's indented into a second level.
 
 This is great, but what happens if we have a project tiddler that has dozens of tiddlers in it? This list is going to get long really fast! Try changing the code to this:
 
@@ -43,7 +43,7 @@ This is great, but what happens if we have a project tiddler that has dozens of 
 
 You'll see that only the topmost level of the hierarchy is displayed now, and little chevrons <<textual-button "right-arrow">> appear next to the items. If you click the chevron by `OnboardingHr`, it turns to point down <<textual-button "down-arrow">> and the next level shows up.
 
-But wait...why are there chevrons next to `OnboardingPeople` and `OnboardingTraining`? Those don't have any content yet! If you click on one of them, you'll see that the chevron changes direction but nothing else happens. That's irritating, isn't it?
+But wait…why are there chevrons next to `OnboardingPeople` and `OnboardingTraining`? Those don't have any content yet! If you click on one of them, you'll see that the chevron changes direction but nothing else happens. That's irritating, isn't it?
 
 All right, third time's the charm:
 

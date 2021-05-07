@@ -20,4 +20,4 @@ Note that some gymnastics are required with the `$set` widget and the filtered t
 <$transclude tiddler=<<qualify "$:/temp/FamilyContact">> field="phone"/>
 ```
 
-...but this does not work, for the same reason we had to use a `{{transcluded tiddler name}}` as the value of the `tiddler` attribute rather than a `"quoted tiddler name"` -- we want to transclude the tiddler //named within// the target of the `qualify` macro, not the tiddler that is the target of the qualify macro.
+…but this does not work, for the same reason we had to use a `{{transcluded tiddler name}}` as the value of the `tiddler` attribute rather than a `"quoted tiddler name"` -- we want to transclude the tiddler //named within// the target of the `qualify` macro, not the tiddler that is the target of the qualify macro.

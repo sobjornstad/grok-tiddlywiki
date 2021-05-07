@@ -1,15 +1,15 @@
 created: 20200603182330605
 length: m
-modified: 20210130174535631
+modified: 20210504023335969
 origin: Naming Conventions
 tags: Exercise
 title: Ex:NamingConventionImagination
 type: text/vnd.tiddlywiki
 
-Make up a wiki you could imagine yourself creating, and write a set of naming conventions for it. This should include:
+Identify a wiki you could imagine yourself creating, then write a set of naming conventions for it. These should include:
 
 * How exactly titles should be capitalized, including how acronyms and other weirdnesses will be handled.
 * Whether you use CamelCase titles, and if so, what you do if there's only one word or it otherwise doesn't match the capitalization rules required to create a link.
-* Any special rules you want to include (e.g., names of sources end with the date, or the word `Source`).
+* Any special rules that seem appropriate (e.g., names of sources end with their publication date or the word `Source`).
 
 You can refer to the [[naming conventions for my Zettelkasten|https://zettelkasten.sorenbjornstad.com/#OurNamingConventions]] for an example.

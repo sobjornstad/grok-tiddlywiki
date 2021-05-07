@@ -23,7 +23,7 @@ Here's how we create a list of meetings from the output of a filter:
 <$list filter="[tag[Meeting]]"></$list>
 ```
 
-That was easy. But wait, there's something wrong...all of the meeting names are run together in a single line, without even a space between them!
+That was easy. But wait, there's something wrong…all of the meeting names are run together in a single line, without even a space between them!
 
 When the list widget is used without any contents, like we did above, it simply plops each tiddler title that the filter returns right after the previous one. In HTML, line breaks only happen when you explicitly ask for them, either with a rich formatting tag like `</p>` to indicate the end of a paragraph or `</li>` to indicate the end of a list item, or with the simple `<br>` for a line break. Let's fix this by adding a `<br>` between each item:
 
