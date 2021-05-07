@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <title>Donate to Grok TiddlyWiki</title>
+    </head>
+    <body>
+        <!-- Load Stripe.js on your website. -->
+        <script src="https://js.stripe.com/v3"></script>
+
+        <div id="content">
+            <h1>Donate to Grok TiddlyWiki</h1>
+
+            <p>
+            Anyone who wants to learn TiddlyWiki can read <a href="https://groktiddlywiki.com">Grok TiddlyWiki</a> for free.
+            </p>
+
+            <p>
+            That said, I have spent hundreds of hours of my free time writing this book already,
+                and the project isn't done &ndash; ongoing effort will be needed to keep it up to date as TiddlyWiki changes.
+            So if you read the book and find it helpful,
+                and you have the means to do so,
+                please consider donating.
+            </p>
+
+            <p>
+            You can donate whatever you think the book is worth.
+            Your donation will support me, <a href="https://sorenbjornstad.com">Soren Bjornstad,</a> in improving this resource and keeping it up to date.
+            </p>
+
+            <p>
+            Payments are processed by <a href="https://stripe.com">Stripe</a>. All major credit cards are accepted. I do not see or retain your card information.
+            </p>
+
+            <p>
+                Any questions? Feel free to <a href="mailto:contact@sorenbjornstad.com">email me</a>.
+            </p>
+
+
+            <h2>Choose an amount</h2>
+
+            <div id="payment-buttons">
+
+            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+            USD: <button
+              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+              id="checkout-button-price_1ImoFMLOBSsxwTamxmtnvozX"
+              role="link"
+              type="button"
+            >
+              $5
+            </button>
+
+            <button
+              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+              id="checkout-button-price_1I892eLOBSsxwTamICoMe9Ge"
+              role="link"
+              type="button">
+              $10
+            </button>
+
+            <button
+              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+              id="checkout-button-price_1ImoFxLOBSsxwTamL9gPY9B4"
+              role="link"
+              type="button">
+              $20
+            </button>
+
+            <button
+              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+              id="checkout-button-price_1ImoGDLOBSsxwTamoYYfENjl"
+              role="link"
+              type="button">
+              $30
+            </button>
+
+            <button
+              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+              id="checkout-button-price_1ImoGULOBSsxwTamj5LbZr3R"
+              role="link"
+              type="button">
+              $50
+            </button>
+
+            <button
+              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+              id="checkout-button-price_1ImoGkLOBSsxwTamekHM7Kx8"
+              role="link"
+              type="button">
+              $100
+            </button>
+            </div>
+
+            <div id="error-message"></div>
+
+            <p>
+                <em>Note:</em> You will not receive any goods or services in exchange for your donation. I am not a nonprofit organization and donations are not tax-deductible.
+            </p>
+
+
+        </div>
+
+        <script>
+        var onfail = function (result) {
+          if (result.error) {
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        };
+
+        (function() {
+          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1I892eLOBSsxwTamICoMe9Ge');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1I892eLOBSsxwTamICoMe9Ge', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+              submitType: 'donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+        (function() {
+          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1ImoFMLOBSsxwTamxmtnvozX');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1ImoFMLOBSsxwTamxmtnvozX', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+              submitType: 'donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+        (function() {
+          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1ImoFxLOBSsxwTamL9gPY9B4');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1ImoFxLOBSsxwTamL9gPY9B4', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+              submitType: 'donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+
+        (function() {
+          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1ImoGDLOBSsxwTamoYYfENjl');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1ImoGDLOBSsxwTamoYYfENjl', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+              submitType: 'donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+        (function() {
+          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1ImoGULOBSsxwTamj5LbZr3R');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1ImoGULOBSsxwTamj5LbZr3R', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+              submitType: 'donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+        (function() {
+          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1ImoGkLOBSsxwTamekHM7Kx8');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1ImoGkLOBSsxwTamekHM7Kx8', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+              submitType: 'donate',
+            })
+            .then(onfail);
+          });
+        })();
+        </script>
+
+
+        <style>
+        div#content {
+            width: 90%;
+            max-width: 600px;
+            background-color: aliceblue;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100%;
+            font-family: Helvetica, Arial, sans-serif;
+            padding: 20px;
+        }
+
+        div#payment-buttons {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        div#payment-buttons button {
+            margin-left: 0.3rem;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        body {
+            background-color: #444444;
+        }
+
+        </style>
+    </body>
+</html>
