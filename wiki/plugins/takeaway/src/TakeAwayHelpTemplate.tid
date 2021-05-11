@@ -1,5 +1,6 @@
 created: 20210123234617682
-modified: 20210407150331106
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20210511024142037
 tags: $:/tags/ViewTemplate
 title: $:/plugins/sobjornstad/TakeAway/TakeAwayHelpTemplate
 type: text/vnd.tiddlywiki

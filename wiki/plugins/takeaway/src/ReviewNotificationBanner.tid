@@ -1,6 +1,6 @@
 created: 20201230045026595
-list-before: $:/sib/Navigator/LinksBar
-modified: 20210408135922597
+list-before: $:/core/ui/SideBarSegments/page-controls
+modified: 20210511025059714
 tags: $:/tags/SideBarSegment
 title: $:/plugins/sobjornstad/TakeAway/ReviewNotificationBanner
 type: text/vnd.tiddlywiki

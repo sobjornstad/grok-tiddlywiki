@@ -1,9 +1,9 @@
 answer: no
 created: 20210408142451078
 invertsort: !
-modified: 20210507012436768
-seen: ^$|initial
-sort: lapses
+modified: 20210511025650272
+seen: .*
+sort: question
 title: $:/config/sobjornstad/GrokTiddlyWiki/TakeawayBrowserState
 type: text/vnd.tiddlywiki
 viewer: table

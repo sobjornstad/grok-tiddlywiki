@@ -1,4 +1,4 @@
-.PHONY: all book web reversion shadowify preview publish clean
+.PHONY: all book web preview publish clean
 
 # All target
 all: book web

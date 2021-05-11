@@ -49,7 +49,9 @@ for i in Ltc_*; do
 done
 
 find . -mindepth 1 -not -name 'Ta_*' -not -name 'Meta_*' -not -name '$__*' -exec mv -t ../plugins/content/book '{}' +
-mv '$__config_SecretPasswordExample.tid' ../plugins/content/book/
+mv -f '$__config_SecretPasswordExample.tid' ../plugins/content/book/
+mv -f '$__favicon.ico.png'* ../plugins/content/book/
+mv -f '$__config_sobjornstad_GrokTiddlyWiki_'*.tid ../plugins/content/book/
 
 for i in '$__sib_'*; do
     mv "$i" ../plugins/content/sib/
