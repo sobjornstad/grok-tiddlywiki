@@ -39,35 +39,33 @@
 
             <div id="payment-buttons">
 
-            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
             USD: <button
               style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-              id="checkout-button-price_1ImoFMLOBSsxwTamxmtnvozX"
+              id="checkout-button-price_1IoJSKLOBSsxwTamqSnfJtPF"
               role="link"
-              type="button"
-            >
+              type="button">
               $5
             </button>
 
             <button
               style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-              id="checkout-button-price_1I892eLOBSsxwTamICoMe9Ge"
+              id="checkout-button-price_1IoJW7LOBSsxwTam3RH7zFsM"
               role="link"
               type="button">
               $10
             </button>
 
             <button
-              style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-              id="checkout-button-price_1ImoFxLOBSsxwTamL9gPY9B4"
-              role="link"
-              type="button">
-              $20
+             style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+             id="checkout-button-price_1IpXbRLOBSsxwTamXQdvJcov"
+             role="link"
+             type="button">
+             $20
             </button>
 
             <button
               style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-              id="checkout-button-price_1ImoGDLOBSsxwTamoYYfENjl"
+              id="checkout-button-price_1IpXe0LOBSsxwTamsEJiqqGh"
               role="link"
               type="button">
               $30
@@ -75,7 +73,7 @@
 
             <button
               style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-              id="checkout-button-price_1ImoGULOBSsxwTamj5LbZr3R"
+              id="checkout-button-price_1IpXgYLOBSsxwTamMxdKw319"
               role="link"
               type="button">
               $50
@@ -83,7 +81,7 @@
 
             <button
               style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-              id="checkout-button-price_1ImoGkLOBSsxwTamekHM7Kx8"
+              id="checkout-button-price_1IpXhjLOBSsxwTam3qSK1p5s"
               role="link"
               type="button">
               $100
@@ -107,13 +105,47 @@
           }
         };
 
+        <!-- $5 -->
         (function() {
-          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+          var stripe = Stripe('pk_live_51I88vzLOBSsxwTam8a1q6nXcdgMQYC2IyV912NFovU8eBWso6AGbCEa0X8f5qWz6TZKpAwvuBEeynZMsiRxmaObJ00AMFVSObc');
 
-          var checkoutButton = document.getElementById('checkout-button-price_1I892eLOBSsxwTamICoMe9Ge');
+          var checkoutButton = document.getElementById('checkout-button-price_1IoJSKLOBSsxwTamqSnfJtPF');
           checkoutButton.addEventListener('click', function () {
             stripe.redirectToCheckout({
-              lineItems: [{price: 'price_1I892eLOBSsxwTamICoMe9Ge', quantity: 1}],
+              lineItems: [{price: 'price_1IoJSKLOBSsxwTamqSnfJtPF', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+        <!-- $10 -->
+        (function() {
+          var stripe = Stripe('pk_live_51I88vzLOBSsxwTam8a1q6nXcdgMQYC2IyV912NFovU8eBWso6AGbCEa0X8f5qWz6TZKpAwvuBEeynZMsiRxmaObJ00AMFVSObc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1IoJW7LOBSsxwTam3RH7zFsM');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1IoJW7LOBSsxwTam3RH7zFsM', quantity: 1}],
+              mode: 'payment',
+              successUrl: 'https://groktiddlywiki.com/thankyou',
+              cancelUrl: 'https://groktiddlywiki.com/donate',
+            })
+            .then(onfail);
+          });
+        })();
+
+
+        <!-- $20 -->
+        (function() {
+           var stripe = Stripe('pk_live_51I88vzLOBSsxwTam8a1q6nXcdgMQYC2IyV912NFovU8eBWso6AGbCEa0X8f5qWz6TZKpAwvuBEeynZMsiRxmaObJ00AMFVSObc');
+
+          var checkoutButton = document.getElementById('checkout-button-price_1IpXbRLOBSsxwTamXQdvJcov');
+          checkoutButton.addEventListener('click', function () {
+            stripe.redirectToCheckout({
+              lineItems: [{price: 'price_1IpXbRLOBSsxwTamXQdvJcov', quantity: 1}],
               mode: 'payment',
               successUrl: 'https://groktiddlywiki.com/thankyou',
               cancelUrl: 'https://groktiddlywiki.com/donate',
@@ -123,29 +155,14 @@
           });
         })();
 
+        <!-- $30 -->
         (function() {
-          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+          var stripe = Stripe('pk_live_51I88vzLOBSsxwTam8a1q6nXcdgMQYC2IyV912NFovU8eBWso6AGbCEa0X8f5qWz6TZKpAwvuBEeynZMsiRxmaObJ00AMFVSObc');
 
-          var checkoutButton = document.getElementById('checkout-button-price_1ImoFMLOBSsxwTamxmtnvozX');
+          var checkoutButton = document.getElementById('checkout-button-price_1IpXe0LOBSsxwTamsEJiqqGh');
           checkoutButton.addEventListener('click', function () {
             stripe.redirectToCheckout({
-              lineItems: [{price: 'price_1ImoFMLOBSsxwTamxmtnvozX', quantity: 1}],
-              mode: 'payment',
-              successUrl: 'https://groktiddlywiki.com/thankyou',
-              cancelUrl: 'https://groktiddlywiki.com/donate',
-              submitType: 'donate',
-            })
-            .then(onfail);
-          });
-        })();
-
-        (function() {
-          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
-
-          var checkoutButton = document.getElementById('checkout-button-price_1ImoFxLOBSsxwTamL9gPY9B4');
-          checkoutButton.addEventListener('click', function () {
-            stripe.redirectToCheckout({
-              lineItems: [{price: 'price_1ImoFxLOBSsxwTamL9gPY9B4', quantity: 1}],
+              lineItems: [{price: 'price_1IpXe0LOBSsxwTamsEJiqqGh', quantity: 1}],
               mode: 'payment',
               successUrl: 'https://groktiddlywiki.com/thankyou',
               cancelUrl: 'https://groktiddlywiki.com/donate',
@@ -156,13 +173,14 @@
         })();
 
 
+        <!-- $50 -->
         (function() {
-          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+          var stripe = Stripe('pk_live_51I88vzLOBSsxwTam8a1q6nXcdgMQYC2IyV912NFovU8eBWso6AGbCEa0X8f5qWz6TZKpAwvuBEeynZMsiRxmaObJ00AMFVSObc');
 
-          var checkoutButton = document.getElementById('checkout-button-price_1ImoGDLOBSsxwTamoYYfENjl');
+          var checkoutButton = document.getElementById('checkout-button-price_1IpXgYLOBSsxwTamMxdKw319');
           checkoutButton.addEventListener('click', function () {
             stripe.redirectToCheckout({
-              lineItems: [{price: 'price_1ImoGDLOBSsxwTamoYYfENjl', quantity: 1}],
+              lineItems: [{price: 'price_1IpXgYLOBSsxwTamMxdKw319', quantity: 1}],
               mode: 'payment',
               successUrl: 'https://groktiddlywiki.com/thankyou',
               cancelUrl: 'https://groktiddlywiki.com/donate',
@@ -172,29 +190,14 @@
           });
         })();
 
+        <!-- $100 -->
         (function() {
-          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
+          var stripe = Stripe('pk_live_51I88vzLOBSsxwTam8a1q6nXcdgMQYC2IyV912NFovU8eBWso6AGbCEa0X8f5qWz6TZKpAwvuBEeynZMsiRxmaObJ00AMFVSObc');
 
-          var checkoutButton = document.getElementById('checkout-button-price_1ImoGULOBSsxwTamj5LbZr3R');
+          var checkoutButton = document.getElementById('checkout-button-price_1IpXhjLOBSsxwTam3qSK1p5s');
           checkoutButton.addEventListener('click', function () {
             stripe.redirectToCheckout({
-              lineItems: [{price: 'price_1ImoGULOBSsxwTamj5LbZr3R', quantity: 1}],
-              mode: 'payment',
-              successUrl: 'https://groktiddlywiki.com/thankyou',
-              cancelUrl: 'https://groktiddlywiki.com/donate',
-              submitType: 'donate',
-            })
-            .then(onfail);
-          });
-        })();
-
-        (function() {
-          var stripe = Stripe('pk_test_51I88vzLOBSsxwTamgEj140qidCnhs5hOjGpVTrM8vBTT8bjl0hAib3zfqjjzMoiEReNAQuFxFXxvk2RlI1E0zdUh00Vvgk2xlc');
-
-          var checkoutButton = document.getElementById('checkout-button-price_1ImoGkLOBSsxwTamekHM7Kx8');
-          checkoutButton.addEventListener('click', function () {
-            stripe.redirectToCheckout({
-              lineItems: [{price: 'price_1ImoGkLOBSsxwTamekHM7Kx8', quantity: 1}],
+              lineItems: [{price: 'price_1IpXhjLOBSsxwTam3qSK1p5s', quantity: 1}],
               mode: 'payment',
               successUrl: 'https://groktiddlywiki.com/thankyou',
               cancelUrl: 'https://groktiddlywiki.com/donate',

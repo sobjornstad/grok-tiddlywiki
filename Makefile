@@ -5,10 +5,7 @@ all: book web
 
 
 ## Building the TW book ##
-book: wiki/pubfolder/output/index.html
-
-wiki/pubfolder/output/index.html: reversion shadowify wiki/plugins/* wiki/scripts/* wiki/tiddlers/*
-	cd wiki && scripts/export.sh
+book: reversion shadowify wiki/pubfolder/output/index.html
 
 reversion:
 	cd wiki && scripts/reversion.sh
@@ -16,15 +13,18 @@ reversion:
 shadowify:
 	cd wiki && scripts/shadowify.sh
 
+wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/*
+	cd wiki && scripts/export.sh
+
 
 ## Building the website (including the latest version of the book) ##
 web: _build/donate _build/thankyou _build/index.html
 
 _build/donate: web/donate
-	cp -r web/donate _build/donate
+	cp -r web/donate _build
 
 _build/thankyou: web/thankyou
-	cp -r web/thankyou _build/thankyou
+	cp -r web/thankyou/ _build
 
 _build/index.html: wiki/pubfolder/output/index.html
 	cp wiki/pubfolder/output/index.html _build/index.html

@@ -1,18 +1,18 @@
 created: 20210322221603280
 description: Legal notices and information on redistributing //Grok TiddlyWiki//.
-modified: 20210504000448370
+modified: 20210510120717198
 parent: Appendices
 tags: Section
 title: Copyright
 type: text/vnd.tiddlywiki
 
-Copyright © 2021 Soren Bjornstad.
+Content copyright © 2021 Soren Bjornstad. The TiddlyWiki core and the plugins found in this wiki belong to their respective owners and are used under license.
 
-//Grok TiddlyWiki//, as well as all custom TiddlyWiki templates and logic found in the wiki under `$:/sib/` and `$:/plugins/sobjornstad/`, is available under the ''CC BY-NC-ND 4.0'' [[license|https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1]]. In summary, this means you are free to copy and share it with whomever you want, and to modify and remix it for your own personal use. You may //not// distribute all or part of //Grok TiddlyWiki// or its custom logic commercially, nor modify or adapt it and distribute a modified version, without first getting my permission. And while I have tried my best to be understandable and accurate, //Grok TiddlyWiki// is offered as-is with no warranty, and I will not be liable for any consequences that may arise from your use or redistribution of this free resource.
+//Grok TiddlyWiki//, including all custom TiddlyWiki templates and logic found in the wiki under `$:/sib/` and `$:/plugins/sobjornstad/`, is available under the ''CC BY-NC-ND 4.0'' [[license|https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1]]. In summary, this means you are free to copy and share it with whomever you want, and to modify and remix it for your own personal use. You may //not// distribute all or part of //Grok TiddlyWiki// or its custom logic commercially, nor modify or adapt it and distribute a modified version, without first getting my permission. And while I have tried my best to be understandable and accurate, //Grok TiddlyWiki// is offered as-is with no warranty, and I will not be liable for any consequences that may arise from your use or redistribution of this free resource.
 
 If you are interested in commercially distributing or adapting //Grok TiddlyWiki// in some way, or in using TakeAway for your own project, [[let's talk|https://sorenbjornstad.com/contact]].
 
-Some of the plugins found in the wiki, as well as the TiddlyWiki core itself, are made available under licenses other than CC BY-NC-ND 4.0 -- either the MIT license or the 3-clause BSD license. Both of these licenses allow for freer use than CC BY-NC-ND 4.0, so this should not pose any difficulty, but it is ultimately your legal responsibility to ensure you comply with those licenses as well when redistributing //Grok TiddlyWiki//.
+Some of the plugins found in the wiki, as well as the TiddlyWiki core itself, are available under licenses other than CC BY-NC-ND 4.0 -- either the MIT license or the 3-clause BSD license. Both of these licenses allow for freer use than CC BY-NC-ND 4.0, so this should not pose any difficulty, but it is ultimately your legal responsibility to ensure you comply with those licenses as well when redistributing //Grok TiddlyWiki//.
 
 The summary above is for your convenience only and does not alter or supersede the text of any of these licenses, nor does it constitute legal advice. See the full licenses for your exact rights and obligations.
 
