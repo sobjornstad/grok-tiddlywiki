@@ -1,0 +1,9 @@
+created: 20210206210742073
+modified: 20210512022735796
+tags: 
+title: Sn:CountWidget
+type: text/vnd.tiddlywiki
+
+There are <$text text={{{ [all[tiddlers+shadows]tag[Section]count[]] }}}/> sections in this book.
+
+There are <$count filter="[all[tiddlers+shadows]tag[Section]]"/> sections in this book.

@@ -1,0 +1,13 @@
+answer: `<$tiddler tiddler=<<myTiddler>>>{{||Example Template}}</$tiddler>` (you could also use a `$transclude` widget inside)
+created: 20210206233415186
+due: 202105161200
+ease: 250
+ivl: 5
+modified: 20210512023556342
+origin: Miscellaneous Widgets
+qtype: rememberq
+question: Write a `$tiddler` widget with content that transcludes the tiddler specified in the `myTiddler` variable through the `Example Template` tiddler.
+seen: yes
+tags: Takeaway
+title: Ta:20210206233413592
+type: text/vnd.tiddlywiki
