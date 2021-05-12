@@ -1,6 +1,6 @@
 caption: {{$:/core/images/storyview-zoomin}} Flashcards
 created: 20210214165949835
-modified: 20210408135943928
+modified: 20210512023241364
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayIntextCards
 type: text/vnd.tiddlywiki
@@ -17,7 +17,6 @@ type: text/vnd.tiddlywiki
 					show answer
 				</$button>
 			</div>
-			<div>&nbsp;</div>
 		</div>
 	</$reveal>
 	

@@ -1,6 +1,6 @@
 answer: No variable set by the `$vars` widget is defined until the start of the widget's body, so the value of `var2` will be empty, not `one`.
 created: 20210206231222176
-modified: 20210502161006318
+modified: 20210512023440484
 origin: Miscellaneous Widgets
 qtype: rememberq
 question: What is likely wrong with the `$vars` widget `<$vars var1="one" var2=<<var1>>>`?
