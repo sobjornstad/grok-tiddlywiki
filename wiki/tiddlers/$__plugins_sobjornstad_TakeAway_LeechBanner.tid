@@ -1,0 +1,26 @@
+created: 20210123182210610
+modified: 20210516124613505
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/LeechBanner
+type: text/vnd.tiddlywiki
+
+	<$set name=leechThreshold filter="[all[current]get[leechignores]add[1]] ~[[1]] +[multiply{$:/config/sobjornstad/TakeAway/Scheduler/LeechThreshold}]">
+	<$list filter="[all[current]get[lapses]compare:number:gteq<leechThreshold>]" variable="numLapses">
+		<div class="tr-leech-warning">
+			It looks like you're struggling with this takeaway -- you've forgotten and relearned it <<numLapses>> times. You may wish to edit or uncollect it.<br>[[help|TakeAway Help/Leeches]]&nbsp;· <$button actions=<<hideLeechWarningAction>> class="tc-btn-invisible tc-tiddlylink">hide warning</$button>
+		</div>
+	</$list>
+	</$set>
+
+<style>
+div.tr-leech-warning {
+	border: 1px solid;
+	padding: 5px;
+	text-align: center;
+	margin: auto;
+	width: 90%;
+	background-color: <<color tiddler-info-tab-background>>;
+	/*background-color: #404040;*/
+	margin-bottom: 1em;
+}
+</style>
