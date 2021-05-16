@@ -1,5 +1,5 @@
 created: 20210123182210610
-modified: 20210407150859092
+modified: 20210516124613505
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/LeechBanner
 type: text/vnd.tiddlywiki
@@ -16,5 +16,11 @@ type: text/vnd.tiddlywiki
 div.tr-leech-warning {
 	border: 1px solid;
 	padding: 5px;
+	text-align: center;
+	margin: auto;
+	width: 90%;
+	background-color: <<color tiddler-info-tab-background>>;
+	/*background-color: #404040;*/
+	margin-bottom: 1em;
 }
 </style>

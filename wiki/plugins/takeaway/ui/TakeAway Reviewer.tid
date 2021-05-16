@@ -1,5 +1,5 @@
 created: 20201229224422563
-modified: 20210408170108553
+modified: 20210516124631918
 tags: [[TakeAway Tools]]
 title: TakeAway Reviewer
 type: text/vnd.tiddlywiki
@@ -69,13 +69,3 @@ type: text/vnd.tiddlywiki
 <div style="text-align: center;">
 	[[browse takeaways|Takeaway Browser]]&nbsp;· [[help|TakeAway Help]]
 </div>
-
-<style>
-div.tr-leech-warning {
-	text-align: center;
-	margin: auto;
-	width: 90%;
-	background-color: #404040;
-	margin-bottom: 1em;
-}
-</style>

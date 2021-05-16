@@ -1,5 +1,5 @@
 created: 20201230011501771
-modified: 20210512023543668
+modified: 20210512024056988
 tags: $:/tags/Stylesheet
 title: $:/plugins/sobjornstad/TakeAway/Stylesheet
 type: text/vnd.tiddlywiki
@@ -82,9 +82,6 @@ div.mm-takeaway-example .tr-selfidentification {
 div.mm-intext-takeaway-list, div.mm-intext-takeaway-card {
 	border-bottom: 1px solid <<color tab-border>>;
 }
-div.mm-intext-takeaway-card {
-	/*padding-bottom: 4ex;*/
-}
 
 .mm-intext-takeaway-card .tr-nav {
 	margin-bottom: 0;
@@ -92,7 +89,6 @@ div.mm-intext-takeaway-card {
 }
 
 div.mm-intext-takeaway {
-  /*margin-bottom: 8ex;*/
 	margin-bottom: 36px;
 }
 
