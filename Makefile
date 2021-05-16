@@ -18,7 +18,7 @@ wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/*
 
 
 ## Building the website (including the latest version of the book) ##
-web: _build/donate _build/thankyou _build/index.html
+web: _build/donate _build/thankyou _build/read/index.html
 
 _build/donate: web/donate
 	cp -r web/donate _build
@@ -26,8 +26,9 @@ _build/donate: web/donate
 _build/thankyou: web/thankyou
 	cp -r web/thankyou/ _build
 
-_build/index.html: wiki/pubfolder/output/index.html
-	cp wiki/pubfolder/output/index.html _build/index.html
+_build/read/index.html: wiki/pubfolder/output/index.html
+	mkdir -p _build/read/
+	cp wiki/pubfolder/output/index.html _build/read/index.html
 
 
 #TW_BASE = /home/soren/cabinet/Me/Records/zettelkasten/tw-wiki/
@@ -40,10 +41,6 @@ preview:
 	cd _build && twistd web -n --path=. --port="tcp:port=8001"
 
 publish:
-	mkdir -p _build
-	#cd $(TW_BASE) && scripts/shadowify.sh && scripts/export.sh
-	#cp -r "$(TW_OUTPUT)" _build
-	cp index.html _build  # TODO: Remove this once we're ready to actually publish the wiki
 	aws s3 cp _build/ s3://groktiddlywiki-webserve --recursive
 	aws cloudfront create-invalidation --distribution-id E165ACBA2QEFAJ --paths '/*'
 
