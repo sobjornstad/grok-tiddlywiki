@@ -1,6 +1,6 @@
 created: 20210110055215195
 description: An overview of the book and where you should get started.
-modified: 20210511022256560
+modified: 20210521203800003
 parent: Front Matter
 tags: Index Section
 title: Welcome to Grok TiddlyWiki
@@ -46,7 +46,7 @@ If you're looking for one-on-one help learning TiddlyWiki or getting a wiki set 
 |!Book version |{{Metadata##version}}|
 |!TiddlyWiki version |{{Metadata##tw-version}}|
 
-Every time I publish a new version of //Grok TiddlyWiki//, I increase the book's version number. You can always find the latest version at {{Metadata##project-url}}.
+Every time I publish a new version of //Grok TiddlyWiki//, I increase the book's version number. To see what's changed in recent versions, visit [[Changes]]. You can always find the latest version at {{Metadata##project-url}}.
 
 The TiddlyWiki version indicates which version of TiddlyWiki this version of //Grok TiddlyWiki// expects you to have; I try to keep it up to date with the newest version, but if I'm behind, it should be fine to use a newer version of TiddlyWiki than listed here. In contrast, using an older version than listed might mean some things the book tells you to do mysteriously don't work, so that's not a good idea! If you have an older version currently, you can visit the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade.html]] to update your wiki to the latest version.
 

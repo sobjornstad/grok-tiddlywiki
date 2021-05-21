@@ -1,0 +1,16 @@
+created: 20210521203810921
+description: What's new in recently released versions of //Grok TiddlyWiki//.
+modified: 20210521204358005
+parent: Appendices
+tags: Section
+title: Changes
+type: text/vnd.tiddlywiki
+
+This section lists all changes made to //Grok TiddlyWiki// since the previous released version.
+
+!! Changes in //Grok TiddlyWiki// 1.0.1
+
+* The //Takeaways// tab of the sidebar search box was mistakenly finding only collected takeaways; this has been fixed.
+* Corrected the filter on several live examples in [[Wr:Transclusions]] so that they show output as intended.
+* Evened out the spacing at the bottom of the in-text takeaway reviewer once all cards have been collected.
+* Fixed several typos and confusingly worded sentences.
