@@ -1,7 +1,7 @@
 autoinclude: Reviewing the Basics
 created: 20200603030418783
 length: m
-modified: 20210130174758467
+modified: 20210521201654599
 origin: Reviewing the Basics
 tags: Exercise
 title: Ex:CamelCaseKnowledgeTiddlers
@@ -12,3 +12,5 @@ Try changing the title of one of your knowledge tiddlers to not be in CamelCase 
 * Notice the drop-down showing you any links that will break when you rename the tiddler.
 * Visit the tiddlers those other links were contained in and update the links to match. You'll have to use the `[[square bracket syntax]]` now.
 * What are some of the advantages and disadvantages of camel-case linking? If you have a TiddlyWiki use case in mind for yourself, do you think camel-case links will be a good idea there?
+
+//Note:// If you rename tiddlers often, the [[Relink plugin|Useful Plugins]] can update the links automatically.
