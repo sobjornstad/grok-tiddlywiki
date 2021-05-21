@@ -1,6 +1,6 @@
 created: 20200603023508416
 description: Filter expressions, runs, and steps work together to select tiddlers.
-modified: 20210504030835351
+modified: 20210521202335795
 parent: Filtering and Formatting
 tags: Section
 title: Using Filter Expressions
@@ -12,14 +12,13 @@ Filters, or, more formally, ''filter expressions'', consist of one or more ''fil
 
 If you've ever used any shell language (Bash, MS-DOS, PowerShell, etc.) -- or even if you haven't -- you can think of a filter run as a ''pipeline''. You put a list of tiddlers into the left end of the pipeline; unless you say otherwise, {{Ltc:AllTiddlersInTheLeft||LieToChildrenTemplate}} go in the left end. The tiddlers then pass from left to right through a series of steps in the pipeline. Each step can remove tiddlers from the list that don't match some criteria, generate and output a new list of tiddlers based on the existing list, or ignore the existing list and spit out an entirely new list. The next step then gets to make its own changes to the list output by this step, and so on until we come to the right side of the pipeline and the output of the last step is the result of the filter run.
 
-Here are some very simple filter expressions:
+Here are some very simple filter expressions. Each of them has just one run containing one step:
 
 * `[title[JaneDoe]]` -- this returns the tiddler `JaneDoe`
 ** This is such a common usage that you can leave out the word `title`, resulting in just `[[JaneDoe]]`.
 * `[tag[Contact]]` -- this returns all tiddlers tagged `Contact`
 * `[links[]]` -- this returns all the tiddlers that have been linked to by any tiddler in your wiki
 
-Notice that these filter expressions are also filter runs, since we are considering only filter expressions containing a single run, and an expression is composed of one or more filter runs in sequence.
 
 !! Trying some filters
 
