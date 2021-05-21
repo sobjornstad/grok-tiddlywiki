@@ -1,7 +1,7 @@
 created: 20210131145658933
-modified: 20210131145600686
+modified: 20210521201912850
 tags: 
 title: Sn:WikitextTransclusionFilterTemplate
 type: text/vnd.tiddlywiki
 
-{{{ [tag[Exercise]first[]] || Sn:BoldfaceTemplate }}}
+{{{ [all[tiddlers+shadows]tag[Exercise]first[]] || Sn:BoldfaceTemplate }}}
