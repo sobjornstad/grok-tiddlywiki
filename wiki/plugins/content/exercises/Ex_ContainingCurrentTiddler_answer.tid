@@ -1,5 +1,5 @@
 created: 20200605153116452
-modified: 20210409203238134
+modified: 20210521203020996
 tags: Answer
 title: Ex:ContainingCurrentTiddler/answer
 type: text/vnd.tiddlywiki
@@ -14,7 +14,7 @@ type: text/vnd.tiddlywiki
 </$set>
 ```
 
-It turns out this is a sufficiently common pattern that there's an attribute you can add to the `$list` widget to make it easier, `variable`. `variable` defaults to `currentTiddler`, but if you set it to something else, the current tiddler will be unmodified and that other variable will contain the current item being listed:
+It turns out this is a sufficiently common pattern that there's an attribute you can add to the `$list` widget to make it easier, called `variable`. This attribute defaults to `currentTiddler`, but if you set it to something else, the current tiddler will be unmodified and that other variable will contain the current item being listed:
 
 ```html
 <ul>
