@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210511023331527
+modified: 20210521202446299
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -40,6 +40,7 @@ Other:
 * Improve the reliability of the feedback sender; save feedback locally for review [Stephane]
 * Are people OK with the s/m/M/h system, or would T-shirt sizes be better? (Odin)
 * Add a brief blip about dynamic stylesheets.
+* The Tips and Tricks chapter could cover a few more useful, advanced filter operators (e.g., `sortsub`).
 
 !! Solicitations
 
