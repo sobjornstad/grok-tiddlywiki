@@ -41,6 +41,7 @@ preview:
 	cd _build && twistd web -n --path=. --port="tcp:port=8001"
 
 publish:
+	rm -f _build/twistd.log
 	aws s3 cp _build/ s3://groktiddlywiki-webserve --recursive
 	aws cloudfront create-invalidation --distribution-id E165ACBA2QEFAJ --paths '/*'
 
