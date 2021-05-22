@@ -12,5 +12,5 @@ type: text/vnd.tiddlywiki
 \end
 
 \define unbookmark-tiddler()
-	<$action-listops $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks" $field="text" $filter="[enlist{$:/GTWBookmarks}] -[all[current]]"/>
+	<$action-listops $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks" $field="text" $filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks}] -[all[current]]"/>
 \end
