@@ -10,7 +10,7 @@
 |semibold    | Source Sans Pro Semibold | normal      | normal     |
 +------------+--------------------------+-------------+------------+
 
-TW font embed instructions: https://groups.google.com/g/tiddlywiki/c/7HPSS67j4uU
+TW font embed instructions: https://groups.google.com/g/tiddlywiki/c/utsLmgHZAhM
 
 Copyright 2010, 2012 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
 
