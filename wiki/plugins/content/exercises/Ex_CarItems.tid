@@ -1,12 +1,12 @@
 complete: 
 created: 20210206151036838
 length: M
-modified: 20210409025814435
+modified: 20210606143448300
 origin: Project Tiddlers
 tags: Exercise
 title: Ex:CarItems
 type: text/vnd.tiddlywiki
 
-Suppose you have a tiddler `MyCar`, along with a series of tiddlers describing the items you keep in your car. Why should the items most likely list that they belong in your car, rather than the car listing the items it contains?
+Suppose you have a tiddler `MyCar`, along with a series of tiddlers describing the items you keep in your car. Why should each item state that it belongs in your car, rather than the car listing out all of the items it contains?
 
 Create the car tiddler in your example wiki and relate several items to it, using each of the four methods discussed in this section. What methods do you like best?

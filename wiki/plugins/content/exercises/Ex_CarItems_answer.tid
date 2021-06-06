@@ -1,7 +1,7 @@
 created: 20210206151218118
-modified: 20210206151139771
+modified: 20210606143443369
 tags: Answer
 title: Ex:CarItems/answer
 type: text/vnd.tiddlywiki
 
-The items should most likely list that they belong to your car because this mechanism is less fussy: you don't have to manually update the car tiddler when you add a new item to your car, and you can say that an item belongs in multiple locations by editing only the item.
+Each item should most likely state that it belongs in your car because this mechanism is less fussy: you don't have to manually update the car tiddler when you add a new item to your car, and you can say that an item belongs in multiple locations by editing only the item.
