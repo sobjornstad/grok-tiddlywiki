@@ -1,9 +1,9 @@
 answer: `[!has[caption]count[]]`
 created: 20201230235624237
-modified: 20210409165443129
+modified: 20210606024942222
 origin: Common Filter Operators
 qtype: rememberq
-question: Write a filter expression that finds the number of tiddlers in the wiki which do //not// have text in a field called `caption`.
+question: Write a filter expression that finds the number of tiddlers in the wiki which do //not// have a field called `caption`, or have no text in it.
 tags: Takeaway
 title: Ta:20201230235622890
 type: text/vnd.tiddlywiki
