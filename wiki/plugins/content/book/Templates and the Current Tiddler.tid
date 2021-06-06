@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20210502190238853
+modified: 20210606144208615
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Templates and the Current Tiddler
@@ -97,7 +97,7 @@ As you may have guessed, TiddlyWiki is fully capable of this; it's called ''tran
 
 Add that in the `JaneDoe` tiddler in place of plain `{{ContactInformationTemplate}}`, and you should immediately see Jane's information show up again, because we told TiddlyWiki to transclude `ContactInformationTemplate`, but to make the current tiddler during the transclusion be `JaneDoe`, rather than `ContactInformationTemplate`. Sweet!
 
-There's a shorter way to write this. Just like we can write `{{!!field}}` to transclude the `field` field of the current tiddler, we can write `{{||template}}` to transclude the current tiddler through `template` (i.e., not change the current tiddler at all while transcluding `template`). So here we can just say:
+There's a shorter and more flexible way to write this. Just like we can write `{{!!field}}` to transclude the `field` field of the current tiddler, we can write `{{||template}}` to transclude the current tiddler through `template` (i.e., not change the current tiddler at all while transcluding `template`). So here we can just say:
 
 ```html
 {{||ContactInformationTemplate}}
