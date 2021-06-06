@@ -1,6 +1,6 @@
 created: 20200603185508516
 length: M
-modified: 20210409165233536
+modified: 20210606030005775
 origin: Common Filter Operators
 tags: Exercise
 title: Ex:AlphabeticallyLastDescription
@@ -13,7 +13,7 @@ You'll need some additional information for this one:
 * Remember that [[everything's a tiddler|Tiddlers]]? Buttons in TiddlyWiki's interface are tiddlers too!
 * A tiddler is part of the editor toolbar if it is tagged `$:/tags/EditorToolbar`.
 * You'll need to start your filter with `all[shadows]` to get any results.
-* As you go along, you'll eventually get to a point where you have a bunch of results that are wrapped in curly braces, like `{{$:/language/Buttons/Paint/Description}}`. When you get here, add the following filter steps to the end of your filter: `split[{{]split[}}]`.
+* Your filter expression will have more steps than any we've seen so far. Add one step to the filter expression at a time, inspecting the result to determine how you need to modify the list (what step you need to add) next. You'll eventually reach a point where you have a bunch of results that are wrapped in curly braces, like `{{$:/language/Buttons/Paint/Description}}`. When you get here, add the following filter steps to the end of your filter: `split[{{]split[}}]`.
 
 And here are two hints if you need them:
 
