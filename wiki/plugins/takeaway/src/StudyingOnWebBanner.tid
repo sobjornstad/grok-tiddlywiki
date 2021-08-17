@@ -1,0 +1,18 @@
+created: 20210817154209775
+modified: 20210817184047172
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/StudyingOnWebBanner
+type: text/vnd.tiddlywiki
+
+<$reveal state="$:/info/url/hostname" type="match" text="groktiddlywiki.com">
+	<div style="display: inline-block;">
+		<div style="display: inline-block; vertical-align: top; margin-top: 1rem; margin-left: 1em;">
+			<span style="height: 44px; fill: orange;">{{$:/core/images/warning}}</span>
+		</div>
+		<div style="display: inline-block; margin-left: 1em; margin-right: 1em;">
+			You're currently studying on the web at groktiddlywiki.com.<br>
+			''Your progress in takeaways and exercises will not be saved''<br>
+			unless you [[make your own copy|Downloading Grok TiddlyWiki]] of //Grok TiddlyWiki// now.<br>
+	</div>
+	</div>
+</$reveal>
