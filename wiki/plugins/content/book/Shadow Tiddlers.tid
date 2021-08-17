@@ -1,6 +1,6 @@
 created: 20200530170355218
 description: Shadow tiddlers are tiddlers that are provided by plugins; they can be overridden if you want to customize a plugin.
-modified: 20210418133931793
+modified: 20210817225909687
 parent: Looking Under the Hood
 tags: Concept Section
 title: Shadow Tiddlers
@@ -36,13 +36,13 @@ Most configuration settings are also internally handled by overriding shadow tid
 
 All shadow tiddlers are listed in the ''Shadows'' view under the ''More'' sidebar tab, and you can search for shadow tiddlers on the ''Shadows'' tab of Advanced Search.
 
-You can identify shadow tiddlers in the ''Shadows'' view, the ''Explorer'' view, and the shadows tab of Advanced Search because they're shown in a bold font. If you've overridden a shadow tiddler, it will show in a normal font.
+You can identify shadow tiddlers in the ''Shadows'' view, the ''Explorer'' view, and the shadows tab of Advanced Search because they're shown in a bold font. If you've overridden a shadow tiddler, it will show in a normal font. (//Grok TiddlyWiki// disables this mechanism because it uses shadow tiddlers for much of its content, so look in another wiki if you want to see how this works.)
 
 A filter for `[is[shadow]]` will bring up a list of ''only the overridden shadow tiddlers''; this can be useful if you want to see a list of your customizations in a given wiki, or if you upgrade your TiddlyWiki to the latest version, something's not working right, and you need to know what shadows you might need to manually merge.
 
 By default, filters do not match shadow tiddlers that have not been overridden. Up until now, we've been lying and saying that //all// the tiddlers in the wiki get put in the left end of a filter run. Actually, it is only all non-shadow tiddlers: the input of a filter run that doesn't start with an `all[something]` filter step is `all[tiddlers]`, which explicitly excludes shadow tiddlers (unless they have been overridden). If you want to see shadow tiddlers, both overridden and not overridden, start your filter run with `all[shadows]`. We actually witnessed this behavior in the exercise [[Ex:AlphabeticallyLastDescription]], all the way back in [[Common Filter Operators]], but we didn't have the context to explain it at the time.
 
-If you want to really get //all// tiddlers, both shadow and non-shadow, start your filter run with `all[tiddlers+shadows]`.
+If you want to really get //all// tiddlers, both shadow and non-shadow, start your filter run with `all[tiddlers+shadows]`. You will frequently see this step at the start of filter runs in live examples in //Grok TiddlyWiki//, since much of the content of the book is packaged as shadow tiddlers in the $:/plugins/sobjornstad/GrokTiddlyWiki plugin.
 
 
 !! Takeaways

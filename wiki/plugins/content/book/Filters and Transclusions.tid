@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20210409214117294
+modified: 20210817230432791
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Filters and Transclusions
@@ -16,6 +16,8 @@ Filters and transclusions interact in two useful ways:
 As we know, we can transclude the `text` field of a tiddler by placing its title in `{{double curly braces}}`. We can transclude the result of a filter expression by placing it in `{{{triple curly braces}}}`; this is sometimes called a ''filtered transclusion''. Here's a filtered transclusion of the names of the alphabetically first five sections in this book:
 
 {{Sn:ChapterFilterTransclusion||MagicSnippet}}
+
+(The `all[tiddlers+shadows]` step is required here and in many live examples to come because of the way //Grok TiddlyWiki// is packaged; in your own wiki, you wouldn't need this step. If you're too curious to wait for the explanation, jump ahead to [[Shadow Tiddlers]].)
 
 The spaces directly inside the curly braces are not required, but they're highly recommended: if you leave them out, there are so many brackets next to each other that it is nearly impossible to tell whether you've inserted the right number of them.
 
