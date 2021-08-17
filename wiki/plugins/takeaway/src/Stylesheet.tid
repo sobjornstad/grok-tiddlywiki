@@ -1,5 +1,5 @@
 created: 20201230011501771
-modified: 20210521203615470
+modified: 20210817193254476
 tags: $:/tags/Stylesheet
 title: $:/plugins/sobjornstad/TakeAway/Stylesheet
 type: text/vnd.tiddlywiki
@@ -98,4 +98,8 @@ div.mm-intext-no-more-takeaways {
 
 div.mm-intext-takeaway:last-child {
   margin-bottom: 0;
+}
+
+td.gtw-question-input, td.gtw-question-input input {
+	width: 100%;
 }

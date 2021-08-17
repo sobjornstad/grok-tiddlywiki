@@ -1,6 +1,6 @@
 caption: Preview
 created: 20201229003054682
-modified: 20210407150628703
+modified: 20210817195856770
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayBackSide
 type: text/vnd.tiddlywiki
@@ -9,13 +9,14 @@ type: text/vnd.tiddlywiki
 
 <$set name=qprefixed value={{{ [<needsContext>match[yes]!is[blank]then<currentTiddler>!search:question:regexp{$:/config/sobjornstad/TakeAway/Exporter/InhibitPrefixIfQuestionMatch}get[question]addprefix{$:/config/sobjornstad/TakeAway/Exporter/Prefix}] }}}>
 <$set name=qtext value={{{ [<qprefixed>is[blank]then{!!question}else<qprefixed>] }}}>
+<$set name="qid" value={{{ [<previewTakeawayType>then[Preview]!is[blank]] ~[{!!title}split[:]last[]] }}}>
 
-	<$list filter="[<currentTiddler>qtype[rememberq]]">
-		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id={{{ [{!!title}split[:]last[]] }}} reference={{!!origin}}/>
+	<$list filter="[<previewTakeawayType>match[rememberq]] ~[<currentTiddler>qtype[rememberq]]" variable=_>
+		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id=<<qid>> reference={{!!origin}}/>
 	</$list>
 
-	<$list filter="[<currentTiddler>qtype[remembercz]]">
-		<$macrocall $name=remembercz id={{{ [{!!title}split[:]last[]] }}} text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}}/>
+	<$list filter="[<previewTakeawayType>match[remembercz]] ~[<currentTiddler>qtype[remembercz]]" variable=_>
+		<$macrocall $name=remembercz id=<<qid>> text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}}/>
 	</$list>
 
 	<$reveal text="yes" type="match" default=<<requireQtype>>>
@@ -25,5 +26,6 @@ type: text/vnd.tiddlywiki
 		</$list>
 	</$reveal>
 
+</$set>
 </$set>
 </$set>

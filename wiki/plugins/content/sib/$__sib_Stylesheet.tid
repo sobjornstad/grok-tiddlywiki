@@ -1,5 +1,5 @@
 created: 20210116181556596
-modified: 20210408160939407
+modified: 20210817193348391
 tags: $:/tags/Stylesheet
 title: $:/sib/Stylesheet
 type: text/vnd.tiddlywiki
@@ -119,11 +119,3 @@ a.tc-tiddlylink-shadow {
 .tc-sidebar-lists button.gtw-close-link {
 	color: <<color muted-foreground>>;
 }
-
-
-/* The palette makes it just a wee bit too hard to see internal links. This drives up the font weight just enough to make them easier to see without making them look bold.
-a.tc-tiddlylink-resolves, a.tc-tiddlylink-shadow.tc-tiddlylink-resolves {
-	font-family: "Source Sans Pro Semibold";
-	font-weight: normal;
-	font-style: normal;
-} */
