@@ -9,7 +9,7 @@ if [ ! -f "tiddlywiki.info" ]; then
 fi
 
 rm -rf pubfolder
-tiddlywiki . --savewikifolder pubfolder "$FILT"
+"$(npm bin)/tiddlywiki" . --savewikifolder pubfolder "$FILT"
 pushd pubfolder
 
 pushd tiddlers
@@ -25,5 +25,5 @@ for write in "${confarr[@]}"; do
 done
 popd
 
-tiddlywiki --rendertiddler '$:/core/save/all' index.html "text/plain"
+"$(npm bin)/tiddlywiki" --rendertiddler '$:/core/save/all' index.html "text/plain"
 popd

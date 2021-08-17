@@ -1,17 +1,20 @@
-.PHONY: all book web preview publish clean
+.PHONY: all book web preview publish clean reversion shadowify
 
 # All target
 all: book web
 
 
 ## Building the TW book ##
-book: reversion shadowify wiki/pubfolder/output/index.html
+book: wiki/package-lock.json reversion shadowify wiki/pubfolder/output/index.html
+
+wiki/package-lock.json: wiki/tiddlywiki-git
+	cd wiki && npm install
 
 reversion:
 	cd wiki && scripts/reversion.sh
 
 shadowify:
-	cd wiki && scripts/shadowify.sh
+	cd wiki && scripts/shadowify.sh 2>/dev/null
 
 wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/*
 	cd wiki && scripts/export.sh
@@ -35,7 +38,7 @@ _build/read/index.html: wiki/pubfolder/output/index.html
 #TW_OUTPUT = $(TW_BASE)/pubfolder/output/*
 
 edit:
-	cd wiki && tiddlywiki --listen port=8000
+	cd wiki && "$$(npm bin)/tiddlywiki" --listen port=8000
 
 preview:
 	cd _build && twistd web -n --path=. --port="tcp:port=8001"
