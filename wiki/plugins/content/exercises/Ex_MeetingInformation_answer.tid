@@ -1,5 +1,5 @@
 created: 20200718032732675
-modified: 20210207182913412
+modified: 20210817202054114
 tags: Answer
 title: Ex:MeetingInformation/answer
 type: text/vnd.tiddlywiki
@@ -8,6 +8,10 @@ Add to some tiddler tagged $:/tags/ViewTemplate, such as `$:/yourname/TiddlerTyp
 
 ```html
 <$list filter="[all[current]tag[Meeting]]">
+
   {{||MeetingInformationTemplate}}
+	
 </$list>
 ```
+
+(The blank lines around `{{||MeetingInformationTemplate}}` may or may not be required -- it's required if the template contains //only// a wikitext table, or it won't be recognized [[as a separate block|Block Mode and Inline Mode]].)
