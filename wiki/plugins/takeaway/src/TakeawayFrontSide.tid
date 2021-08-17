@@ -1,10 +1,12 @@
 created: 20201230010120117
-modified: 20210407150322918
+modified: 20210817222337196
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayFrontSide
 type: text/vnd.tiddlywiki
 
-<$list filter="[<currentTiddler>qtype[rememberq]]">
+<$list filter="[<currentTiddler>qtype[rememberq]]" variable=_>
+	{{||$:/plugins/sobjornstad/TakeAway/ContextualHelp/CreativeQuestion}}
+
 	<div class="rememberq remembertwo">
 		<div class="rquestion tr-ritem">
 			<div>Q:</div>
@@ -17,7 +19,7 @@ type: text/vnd.tiddlywiki
 		</div>
 	</div>
 </$list>
-<$list filter="[<currentTiddler>qtype[remembercz]]">
+<$list filter="[<currentTiddler>qtype[remembercz]]" variable=_>
 	<div class="remembercz">
 		<span class="cloze-identifier">cloze: </span>
 		<span class="cloze-text"><$wikify name="w" mode="inline" output="html" text={{{ [{!!question}splitregexp[{.*?}]join[<span class="gtw-cloze-occlusion">{…}</span>]] }}}><<w>></$wikify></span>

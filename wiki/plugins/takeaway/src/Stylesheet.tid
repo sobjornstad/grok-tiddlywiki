@@ -1,5 +1,5 @@
 created: 20201230011501771
-modified: 20210817193254476
+modified: 20210817222101510
 tags: $:/tags/Stylesheet
 title: $:/plugins/sobjornstad/TakeAway/Stylesheet
 type: text/vnd.tiddlywiki
@@ -102,4 +102,20 @@ div.mm-intext-takeaway:last-child {
 
 td.gtw-question-input, td.gtw-question-input input {
 	width: 100%;
+}
+
+div.tr-contextual-help {
+	border: 1px solid;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: auto;
+	width: 90%;
+	background-color: <<color tiddler-info-tab-background>>;
+	/*background-color: #404040;*/
+	margin-bottom: 1em;
+}
+
+div.tr-contextual-help h3 {
+	text-align: center;
 }

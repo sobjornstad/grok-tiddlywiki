@@ -1,0 +1,21 @@
+created: 20210817222020209
+modified: 20210817222114300
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/ContextualHelp/CreativeQuestion
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]search:question[Give an example]]">
+<$list filter=<<help-wanted "creative-question">> variable=_>
+<div class="tr-contextual-help">
+
+!!! Tip:
+
+This is a //creative question// with a potentially infinite number of answers. Use your understanding of the topic to make up a new answer you've never given before. You are not necessarily wrong if you don't see your new example when you show the answer -- the answer will include only a couple of possibilities.
+
+You can identify creative takeaways by the text “(try to pick a new one)” at the end of the prompt. Spaced-repetition nerds can see [[this explanation|https://zettelkasten.sorenbjornstad.com/#CreativePattern]] of the pattern.
+
+<div style="text-align: center;"><$button actions=<<help-seen "creative-question">> class="tc-btn-invisible tc-tiddlylink">I've got it, don't remind me again</$button></div>
+
+</div>
+</$list>
+</$list>
