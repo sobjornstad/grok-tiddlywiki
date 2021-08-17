@@ -1,3 +1,9 @@
-pubfolder/
+# private content
+business/
+
+# build outputs
 _build/
+wiki/pubfolder/
+
+# not meaningful changes
 wiki/tiddlers/$__StoryList.tid

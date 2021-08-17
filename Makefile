@@ -39,10 +39,16 @@ edit:
 
 preview:
 	cd _build && twistd web -n --path=. --port="tcp:port=8001"
+	xdg-open http://localhost:8001/read/index.html
 
 publish:
-	rm -f _build/twistd.log
-	aws s3 cp _build/ s3://groktiddlywiki-webserve --recursive
+	-kill $(cat _build/twistd.pid)
+	rm -f _build/twistd.*
+	# Root /index.html sits in the container with a redirect on it and is NOT updated.
+	# If I add more subfolders they have to be listed below:
+	aws s3 sync --delete _build/read/ s3://groktiddlywiki-webserve/read
+	aws s3 sync --delete _build/thankyou/ s3://groktiddlywiki-webserve/thankyou
+	aws s3 sync --delete _build/donate/ s3://groktiddlywiki-webserve/donate
 	aws cloudfront create-invalidation --distribution-id E165ACBA2QEFAJ --paths '/*'
 
 clean:
