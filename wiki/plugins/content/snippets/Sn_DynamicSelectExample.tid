@@ -1,5 +1,5 @@
 created: 20210206212711611
-modified: 20210502160454991
+modified: 20210817225459766
 tags: 
 title: Sn:DynamicSelectExample
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 Section: 
 <$select tiddler="$:/temp/SectionSelectorExample" default="">
 	<option value="">(choose a section)</option>
-	<$list filter="[tag[Section]]">
+	<$list filter="[all[tiddlers+shadows]tag[Section]]">
 		<option value=<<currentTiddler>>>
 			<<currentTiddler>>
 		</option>

@@ -1,5 +1,5 @@
 created: 20210206212257711
-modified: 20210408143644120
+modified: 20210817225115804
 tags: 
 title: Sn:SelectExample
 type: text/vnd.tiddlywiki
@@ -13,4 +13,4 @@ What do you want to look at?
 	<option value="Takeaway">Takeaways</option>
 </$select>
 
-<<list-links "[tag{$:/temp/SelectExample}first[5]]">>
+<<list-links "[all[tiddlers+shadows]tag{$:/temp/SelectExample}first[5]]">>
