@@ -1,19 +1,20 @@
 created: 20210107230620928
-modified: 20210109213707316
+modified: 20210818191940696
 tags: Answer
 title: Ex:EditCurrentTiddler/answer
 type: text/vnd.tiddlywiki
 
-The attempted code:
+Quick and easy:
 
 ```html
 <$edit-text tiddler=<<currentTiddler>> field="userwhoclicked" tag="input" default=""/>
 ```
 
-The issue: you can only type one character at a time into the text box! After that one character, your cursor leaves the text box and you have to click or tab back into it again.
+''A historical note'' that continues to have both practical and pedagogical relevance: Before TiddlyWiki 5.2.0, it was impractical to directly edit a field on the current tiddler, as the text box would lose focus every time you typed a single character, making typing anything into it infuriating. For this reason, when you browse existing wikis or look at old sample code, you may still see temporary tiddlers being used as the targets of edit boxes where they don't look like they would be useful.
 
-What's up with this? Recall that whenever we make any change in the wiki, it is immediately reflected elsewhere -- for instance, a tiddler that is changed so that it newly matches a filter will immediately show up in any lists that use that filter. TiddlyWiki does this by notifying each widget displayed on the screen that a tiddler has changed and giving it a chance to refresh itself if it thinks it might need to display something different as a result of that tiddler changing. (Specifically, the //root widget//, at the "top" of the wiki, sends the news to all of its immediate child widgets, like the sidebar and the story river, then each of those transmit the news to their children, and so on until the message has propagated everywhere it is relevant.)
+To understand why this happened previously, recall that whenever we make any change in the wiki, it is immediately reflected elsewhere -- for instance, a tiddler that is changed so that it newly matches a filter will immediately show up in any lists that use that filter. TiddlyWiki does this by notifying each widget displayed on the screen that a tiddler has changed and giving it a chance to refresh itself if it thinks it might need to display something different as a result of that tiddler changing. (Specifically, the //root widget//, at the "top" of the wiki, sends the news to all of its immediate child widgets, like the sidebar and the story river, then each of those transmit the news to their children, and so on until the message has propagated everywhere it is relevant.)
 
-In this case, that doesn't turn out well for us. The tiddler being displayed in the story river obviously needs to update itself when that tiddler changes, but in so doing it also re-renders the text box within that tiddler, which causes your browser to remove the focus from that text box.
+In versions prior to 5.2.0, anytime any field on a tiddler was changed, all transclusions of that tiddler were refreshed. That included the display of the whole tiddler in the story river and all its contents, since tiddlers are displayed in the story river [[by transcluding them through a template|The View Template]].
+The display of the tiddler in the story river of course included the edit widget -- and when a text box is removed from the page and re-rendered, its focus is lost.
 
-As a result, you always need to use a second tiddler, such as a temporary tiddler, in some way if you want to change the tiddler containing the text box.
+In 5.2.0, the refresh mechanism has been improved so that transclusions of a tiddler are only refreshed when the specific field being transcluded has changed. This change not only avoids unnecessary refreshes and improve performance, it also prevents this lost-focus issue -- since the text box is included within the `text` field of the tiddler specifically, changing any other field using the text box won't trigger a refresh of the widget.

@@ -1,11 +1,11 @@
 created: 20210107230556451
 length: m
-modified: 20210130174856977
+modified: 20210818190539836
 origin: Buttons and Input Widgets
 tags: Exercise
 title: Ex:EditCurrentTiddler
 type: text/vnd.tiddlywiki
 
-The `$edit-text` widget can edit any field on any tiddler, so you might wonder why, in our example above, we wouldn't just let the user edit the `userwhoclicked` field directly.
+The `$edit-text` widget can edit any field on any tiddler, so we don't have to use a temporary tiddler if we don't want to. In the example above, we could just update the `userwhoclicked` field directly as the user types.
 
-Look up the documentation for the `edit-text` widget to find out how to select an appropriate field and try this out. What happens?
+Look up the documentation for the `$edit-text` widget to learn how to select which field the widget should edit, then change the example to behave accordingly.

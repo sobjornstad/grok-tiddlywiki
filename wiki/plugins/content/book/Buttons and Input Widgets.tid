@@ -1,7 +1,7 @@
 created: 20200718211403194
 creator: soren
 description: Buttons and input widgets allow you to create custom user interfaces that edit fields and take actions in the wiki.
-modified: 20210418152718566
+modified: 20210818190733312
 modifier: soren
 parent: Looking Under the Hood
 tags: Section
@@ -55,7 +55,7 @@ Sometimes you might want a button to ''look like a link'' rather than a button. 
 
 As we continue to move forward learning about more widgets like these, the definitive reference source is always https://tiddlywiki.com. A quick search there will get you details about widgets, field operators, terms, and so on. Looking at the documentation frequently is normal, even for experts who use spaced repetition to study TiddlyWiki. There are just too many options to remember them all!
 
-You now know enough to use the official documentation effectively and should start doing it whenever it would be helpful. From here on out, we will no longer link to the pages as they come up or tell you to look in the documentation for information you need to know for an exercise.
+You now know enough about TiddlyWiki to use the official documentation effectively and should start doing it whenever it would be helpful. From here on out, we will no longer link to the pages as they come up or include details about how to look in the documentation for information you need to know for an exercise.
 
 
 {{Ex:MainSearchBoxBinding||ExerciseTemplate}}
