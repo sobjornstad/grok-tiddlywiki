@@ -1,6 +1,6 @@
 created: 20200531034640143
 description: What makes TiddlyWiki worth learning and using?
-modified: 20210817224629775
+modified: 20210818005714970
 parent: Front Matter
 tags: Section
 title: Why TiddlyWiki?
@@ -12,7 +12,7 @@ Because TiddlyWiki offers an entirely new way of thinking (there's a reason this
 
 !! Talking points
 
-(Click to expand.)
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget}}
 
 <$details summary="Works like you think">
 

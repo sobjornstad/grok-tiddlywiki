@@ -1,6 +1,6 @@
 created: 20201124235605503
 description: HTML is a simple formatting language used to describe web pages, including TiddlyWikis. We can go “down a level” from wikitext to HTML when we need a bit more control over presentation.
-modified: 20210504115246378
+modified: 20210818005856549
 parent: Filtering and Formatting
 tags: Section
 title: HTML
@@ -76,6 +76,8 @@ If in doubt, just put in the quotes. Some people consider it better style to inc
 
 
 !! Finer points
+
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget}}
 
 <$details summary="Self-closing tags">
 

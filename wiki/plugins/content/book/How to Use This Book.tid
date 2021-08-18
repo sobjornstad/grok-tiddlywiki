@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20210504002706505
+modified: 20210818005827783
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -16,6 +16,8 @@ The [[Grok TiddlyWiki Tour|https://www.youtube.com/watch?v=vUkNxbaNHcY]] demonst
 
 
 !! Reading and navigating
+
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget}}
 
 <$details summary="Typographical conventions">
 

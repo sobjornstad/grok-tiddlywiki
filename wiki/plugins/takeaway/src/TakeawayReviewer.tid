@@ -1,0 +1,21 @@
+created: 20210818022144250
+modified: 20210818024337562
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/ContextualHelp/TakeawayReviewer
+type: text/vnd.tiddlywiki
+
+<$list filter=<<help-wanted "takeaway-reviewer">> variable=_>
+<div class="tr-contextual-help">
+
+!!! Tip:
+
+The takeaways presented here, if any, are currently //due for review//, meaning TakeAway thinks you should look briefly at them again to avoid forgetting the answers soon. When you have takeaways due for review, take a few moments to review them prior to learning new material.
+
+If you review regularly, you can expect to remember most of the answers at review time. However, forgetting 10--15% of them is normal -- it's impossible for TakeAway to perfectly predict exactly how long you'll remember a particular item, so it will guess wrong on occasion. TakeAway will help you relearn items you've forgotten by showing them more often, but if you find you no longer understand why the answer is correct, you should use the link provided with each takeaway to go back and re-read the original text rather than try to memorize the takeaway by rote.
+
+See the [[TakeAway help page on reviewing|TakeAway Help/Reviewing]] for more information on how reviewing and the scheduling algorithm work.
+
+<div style="text-align: center;"><$button actions=<<help-seen "takeaway-reviewer">> class="tc-btn-invisible tc-tiddlylink">I've got it, don't remind me again</$button></div>
+
+</div>
+</$list>

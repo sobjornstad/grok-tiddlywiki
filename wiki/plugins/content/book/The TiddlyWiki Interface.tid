@@ -1,6 +1,6 @@
 created: 20201125202250940
 description: Study an annotated screenshot of TiddlyWiki's interface to help you put names to what you're seeing.
-modified: 20210504014557703
+modified: 20210818012127580
 parent: The Shape of TiddlyWiki
 tags: Section
 title: The TiddlyWiki Interface
@@ -10,7 +10,9 @@ Let's take a quick look at the interface of a brand-new TiddlyWiki, in annotated
 
 <$link to="interface.png">{{interface.png}}</$link>
 
-You can see that the screen is divided into two parts, the ''story river'' (red highlight) and the ''sidebar'' (magenta highlight). If your screen is too narrow to show both side-by-side (for instance, if you're viewing the wiki on a smartphone), the sidebar will come at the top of the page and the story river below it.
+Before we get started, it's worth pointing out that the interface of TiddlyWiki is highly customizable and extensible, as we will learn in chapter 6, [[Looking Under the Hood]]. If you carefully compare the screenshot above to the interface of //Grok TiddlyWiki//, you'll notice some differences -- for instance, many toolbars will have a different set of buttons, and the tabs in the sidebar will be different. The interface described in this section and in the remainder of the book is that of a stock `empty.html` TiddlyWiki downloaded from https://tiddlywiki.com, except where we change it during the course of the exercises. To avoid confusion, use the example wiki you created in [[Installing TiddlyWiki]] anytime you want to study the interface or see how TiddlyWiki behaves by default.
+
+With that out of the way, take a look at the screenshot again. You can see that the screen is divided into two parts, the ''story river'' (red highlight) and the ''sidebar'' (magenta highlight). If your screen is too narrow to show both side-by-side (for instance, if you're viewing the wiki on a smartphone), the sidebar will come at the top of the page and the story river below it.
 
 The story river shows the tiddlers which are currently open. We'll talk more about [[tiddlers|Tiddlers]] and their function in a moment; for now, just think of them as containers for the content of your wiki, like files or sheets of paper. When you open a new tiddler, it gets a new “card” over in the story river and leaves existing tiddlers open, so you can easily work with several tiddlers at once. The toolbar in the upper-right corner of each tiddler (the ''view toolbar'') lets you edit it, close it, delete it, get a link to it, collapse it, and so on.
 
@@ -25,28 +27,6 @@ The sidebar allows you to navigate to tiddlers that you don't have open and take
 ; More
 : A variety of other ways to find tiddlers, which we'll discuss in detail in [[Browsing Your Tiddlers]].
 
-It's possible to customize what appears in the sidebar -- for example, compare the sidebar of //Grok TiddlyWiki// to the annotated one above. We'll learn how that works in [[chapter 6|Looking Under the Hood]].
-
-!! About takeaways
-
-A brief digression from TiddlyWiki is in order here to explain how the //Takeaways// heading of each section in this book works.
-
-<$details summary="What is TakeAway?">
-
-{{TakeAway Help/About TakeAway}}
-
-</$details>
-<$details summary="How do I use TakeAway?">
-
-{{TakeAway Help/Studying In Text}}
-
-Tomorrow, or whenever it's time for your first review session, a banner will appear in the sidebar indicating that it's time to begin a review session; when you see this banner, take a moment to click the link and review what you've previously learned before diving into new sections.
-
-</$details>
-
-For more information on why takeaways are useful, see [[How to Use This Book]]. For more information on the TakeAway tool itself, see the [[TakeAway Help]]; you can access this help at any time by clicking the //help// link anywhere in TakeAway's interface.
-
-Below you will see your first takeaways.
 
 !! Takeaways
 

@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20210504010223774
+modified: 20210818005944766
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -51,6 +51,8 @@ You can reduce the number of backups saved by various means, but that only hides
 (For the curious, text is so much smaller than images that serious difficulties are unlikely. You would have to write over 16 million average-length words of English, or 32,000 densely filled pages, to reach 100 MB of text. If you write 3 pages every day, it will still take you 30 years to write that much.)
 
 !! Possible solutions
+
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget}}
 
 <$details summary="Using Node.js">
 

@@ -1,8 +1,10 @@
 created: 20201229224422563
-modified: 20210516124631918
+modified: 20210818023338187
 tags: [[TakeAway Tools]]
 title: TakeAway Reviewer
 type: text/vnd.tiddlywiki
+
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/TakeawayReviewer}}
 
 <div class="tr-reviewer">
 <$list filter="[!days:due[-1]] [days:due[0]] +[tag[Takeaway]seen[yes]has[due]shuffle{$:/config/sobjornstad/TakeAway/ReviewerSeed}first[]]" emptyMessage="<center>Congratulations! You're all caught up.</center>">

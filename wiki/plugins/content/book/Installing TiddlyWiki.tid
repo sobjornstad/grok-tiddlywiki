@@ -1,6 +1,6 @@
 created: 20200530172429726
 description: How to get TiddlyWiki set up on your computer.
-modified: 20210817231218315
+modified: 20210818005955868
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Installing TiddlyWiki
@@ -19,6 +19,8 @@ I know your eyes are glazing over and you're questioning your choices in life, s
 To install TiddlyDesktop, hit the link above, expand the “Assets” section of the most recent release, and download the appropriate file for your operating system (if you have a reasonably new computer, it'll be `win64`, `mac64`, or `linux64`, depending on whether you use Windows, MacOS, or Linux).
 
 If you're not sure how to proceed from there:
+
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget}}
 
 <$details summary="Windows">
 

@@ -1,12 +1,14 @@
 created: 20200603210614777
 description: Macros come in many forms.
-modified: 20210409194428148
+modified: 20210818010023807
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: The Finer Points of Macros
 type: text/vnd.tiddlywiki
 
 We just skimmed the surface of macros in the previous section, and you may be left with quite a few questions. Let's try to tackle some of the most important ones.
+
+{{$:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget}}
 
 <$details summary="Macros have scope">
 
