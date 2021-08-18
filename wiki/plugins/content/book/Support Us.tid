@@ -1,0 +1,21 @@
+created: 20210818143231603
+description: If you've made it this far, please consider chipping in some money or time to help the open-source projects you're using.
+modified: 20210818144726320
+parent: Appendices
+tags: Section
+title: Support Us
+type: text/vnd.tiddlywiki
+
+If you've made it this far in //Grok TiddlyWiki// and expect to continue using and enjoying TiddlyWiki, please consider contributing financially to or helping out with the GTW and/or TiddlyWiki projects. Such open-source projects thrive when a wide variety of people get involved. Here are some options.
+
+For GTW:
+
+* ''<a href={{$:/sib/DonationLink}}>Donate to the Grok TiddlyWiki project</a>'' to support me in keeping this book up to date.
+* ''Provide feedback on the book''. In addition to using the //send feedback// link at the bottom of any section to provide targeted feedback on that section, you can send general thoughts on how well the book has worked for you to `contact@sorenbjornstad.com`.
+
+For TiddlyWiki itself:
+
+* ''Become a contributor to the TiddlyWiki organization'' or fund an ongoing project [[on OpenCollective|https://opencollective.com/tiddlywikidotorg]]. Such contributions help keep the project running smoothly, and they also give you a small stake in the community (if you fund a feature, for instance, your take on that feature will be prioritized).
+* ''Share your new expertise'' on the [[TiddlyWiki forums|https://groups.google.com/g/tiddlywiki]].
+* ''Share TiddlyWiki tools you create as plugins'' (see [[Creating Plugins]]) or, if you know some JavaScript, [[help out with the core development of TiddlyWiki|https://github.com/Jermolene/TiddlyWiki5]].
+* ''Share TiddlyWiki with your friends''. The more users we have, the stronger and healthier the community.

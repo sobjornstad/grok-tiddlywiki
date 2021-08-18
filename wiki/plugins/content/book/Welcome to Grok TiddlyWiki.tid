@@ -1,6 +1,6 @@
 created: 20210110055215195
 description: An overview of the book and where you should get started.
-modified: 20210521203800003
+modified: 20210818144929255
 parent: Front Matter
 tags: Index Section
 title: Welcome to Grok TiddlyWiki
@@ -30,6 +30,8 @@ To [[grok|https://en.wikipedia.org/wiki/Grok]] something is to understand it on 
 That said, I have spent hundreds of hours writing this book already, and the project isn't done – ongoing effort will be needed to keep it up to date as TiddlyWiki changes. So if you read the book and find it helpful, and you have the means to do so, ''please consider donating'' to support my work. You can give whatever you think the book is worth, from $5 to $100.
 
 <a href={{$:/sib/DonationLink}} class="tc-tiddlylink-external">Donate here</a>, or use the //donate// link in the sidebar.
+
+You can find other suggestions for helping out both //Grok TiddlyWiki// and the TiddlyWiki project in the [[Support Us]] appendix.
 
 
 !! Who made this? How do I get in touch?
