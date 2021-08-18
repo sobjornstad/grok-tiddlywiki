@@ -1,6 +1,6 @@
 created: 20200603023508416
 description: Filter expressions, runs, and steps work together to select tiddlers.
-modified: 20210521202335795
+modified: 20210818203650408
 parent: Filtering and Formatting
 tags: Section
 title: Using Filter Expressions
@@ -34,7 +34,7 @@ Filter expressions are quite sensitive to minor mistakes in punctuation. Once yo
 
 * ''Forgetting the outer set of square brackets'', which define a filter run. Just `tag[Contact]`, for instance, is not a valid filter expression, as it consists of a single filter step, not a complete filter run. If you see the text //Filter error: Missing [ in filter expression// instead of the list of tiddlers you expected, this is likely your problem.
 * ''Including the opening square bracket but not the closing one''. For some runs, the filter expression may //look// symmetric even if all the brackets haven't been closed yet (for example, `[tag[Contact]`). A useful habit to develop is inserting both the left and the right square bracket whenever you come to a left square bracket, then pressing the left arrow key to put the cursor back between them -- this way, you won't have to remember how many brackets need to be closed.
-* ''Putting a space between filter steps'', like <code>[!is[system]&nbsp;links[]]</code>. What this actually does is filter on the values of the [[field|Fields]] called ` links` (a space followed by the word //links//). Since field names can't have spaces in them, this will never do anything useful. It's never been clear to me why TiddlyWiki doesn't just ignore the space, seeing as [[there is nothing else you could have meant|https://zettelkasten.sorenbjornstad.com/#DoWhatIMean]], but for now you will get the wrong results if you do that, so don't do it.
+* ''Putting a space between filter steps'', like <code>[!is[system]&nbsp;links[]]</code>. What this actually does is filter on the values of the [[field|Fields]] called ` links` (a space followed by the word //links//). Unless that is actually what you want, leave out the space.
 
 !! Exercises
 

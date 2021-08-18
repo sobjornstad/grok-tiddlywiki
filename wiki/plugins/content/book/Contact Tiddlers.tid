@@ -1,6 +1,6 @@
 created: 20200530203548943
 description: How to track the people we meet at work, linking to the ideas they're involved in and modeling their attributes as discrete fields of information.
-modified: 20210504021143720
+modified: 20210818165302118
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Contact Tiddlers
@@ -83,7 +83,6 @@ To actually add the fields, look under the text of the tiddler where it says //A
 
 A couple of notes about fields:
 
-* Field names can only contain ''lowercase letters'', ''numbers'', ''hyphens'' (`-`), ''underscores'' (`_`), and ''periods'' (`.`) -- notice that spaces are not in this list. I usually stick to lowercase letters and occasionally hyphens.
 * We'll want to be sure we ''use the same field names'' on every contact tiddler, or else we won't be able to cross-reference the values across different tiddlers. The drop-down for //field name// will show the names you've used in the past to reduce the chances of misremembering what you called it.
 * Similarly, it's a good idea to be sure to use a ''consistent format'' across all tiddlers. For instance, for the phone number, decide that you use the `nnn-nnn-nnnn` format, rather than `nnnnnnnnnn` or `(nnn) nnn-nnnn`, and then use that across all contact tiddlers.
 * The `family` field is an example of a ''tiddler list'' (or just ''list''), which consists of tiddler names separated by spaces. If your tiddler names have spaces in them, you put each tiddler name in double square brackets as if it were a link: `[[John Doe]] [[Emily Doe]]`. TiddlyWiki understands that lists are a series of separate tiddler names and can work with the values individually. We'll learn [[more about lists|Ordering Tiddlers]] in the next chapter.
