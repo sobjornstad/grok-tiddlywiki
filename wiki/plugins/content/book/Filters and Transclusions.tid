@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20210817230432791
+modified: 20210818210356183
 parent: Variables, Macros, and Transclusions
 tags: Section
 title: Filters and Transclusions
@@ -92,7 +92,7 @@ You can't put a widget inside an attribute of another widget. We could turn the 
 
 There is in fact a way to solve this problem with macros; we'll learn how to do it in [[Using Variables in Macros]]. But it should be clear that using a macro here is a whole lot more work than we want to deal with. All we really want is to pass the contents of the `family` field into the `enlist` operator.
 
-Here's the syntax that allows us to do that:
+Here's the syntax that allows us to do that.
 
 ```html
 <ul>
@@ -116,13 +116,16 @@ If the value we wanted to use was in a variable rather than a tiddler field, we 
 </ul>
 ```
 
-Note that ''you cannot transclude the result of macro calls with parameters'' into a filter -- only variables / macros with no parameters are acceptable. But you can easily get around this by storing the result of a macro call in a variable and then using it in the filter -- just like we stored the result of a field transclusion in the variable `familyfield` and then used the variable in the filter in the example immediately above.
-
 Curly braces or angle brackets can be used by themselves, not preceded by an operator, to directly introduce an arbitrary value into the filter pipeline. This is the equivalent of specifying a literal title with square brackets:
 
 {{Sn:DirectAngleBrace||MagicSnippet}}
 
+Lastly, you can also transclude the result of macro calls with constant parameters into a filter:
+
+{{Sn:MacroCallTransclusion||MagicSnippet}}
+
 Sometimes a filter parameter that is transcluded into the filter with `{braces}` or `<angle brackets>` is called a ''soft parameter'', in contrast to an unchanging ''hard parameter'' specified with `[square brackets]`.
+
 
 !! Side note
 

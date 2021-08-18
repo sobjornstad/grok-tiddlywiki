@@ -1,0 +1,9 @@
+created: 20210818205917912
+modified: 20210818210256048
+tags: 
+title: Sn:MacroCallTransclusion
+type: text/vnd.tiddlywiki
+
+\define partial-name(suffix) Tiddler $suffix$
+
+{{{ [<partial-name "Forty-Two">] }}}
