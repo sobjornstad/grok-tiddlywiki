@@ -1,0 +1,31 @@
+created: 20210818031724336
+modified: 20210818122128913
+tags: 
+title: Sn:BadImageTransclusions
+type: text/vnd.tiddlywiki
+
+<!-- Set the current tiddler to this section, so it doesn't matter what tiddler the example snippet is stored in -->
+<$tiddler tiddler="Constant strings cannot be combined with transclusions">
+
+1
+{{<<currentTiddler>>.png}}
+
+2
+[img [<<currentTiddler>>.png]]
+
+3
+[img [{{!!title}}.png]]
+
+4
+<$image source={{!!title}}.png/>
+
+5
+<$image source="{{!!title}}.png"/>
+
+6
+<$image source={{!!title}}".png"/>
+
+7
+<img src="{{!!title}}.png">
+
+</$tiddler>

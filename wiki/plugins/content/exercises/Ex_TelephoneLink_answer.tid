@@ -1,5 +1,5 @@
 created: 20210131040820380
-modified: 20210410140415666
+modified: 20210818142017227
 tags: Answer
 title: Ex:TelephoneLink/answer
 type: text/vnd.tiddlywiki
@@ -37,3 +37,5 @@ Or with an `a` element:
 ```
 
 The filter version is left as the next exercise.
+
+You can find a more detailed treatment of this issue in the [[Common Misunderstandings]] chapter: [[Constant strings cannot be combined with transclusions]].

@@ -1,0 +1,11 @@
+created: 20210818121339333
+modified: 20210818122148124
+tags: 
+title: Sn:ImageTransclusionName
+type: text/vnd.tiddlywiki
+
+<$tiddler tiddler="Constant strings cannot be combined with transclusions">
+
+The image should be called "{{!!title}}.png".
+
+</$tiddler>

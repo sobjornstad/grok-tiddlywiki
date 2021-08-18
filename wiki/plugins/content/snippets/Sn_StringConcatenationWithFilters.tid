@@ -1,0 +1,13 @@
+created: 20210818122739980
+modified: 20210818123224153
+tags: 
+title: Sn:StringConcatenationWithFilters
+type: text/vnd.tiddlywiki
+
+<$set name="person" value="Soren Bjornstad">
+<$set name="role" value="author of Grok TiddlyWiki">
+
+<$text text={{{ [<role>addsuffix[, ]addsuffix<person>addsuffix[.]addprefix[This example is approved by the ]] }}}/>
+
+</$set>
+</$set>
