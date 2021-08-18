@@ -1,6 +1,6 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20210504023921527
+modified: 20210818155535963
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
@@ -15,7 +15,7 @@ Many new users of TiddlyWiki start by creating what experienced users would cons
 
 However, while size does matter, it's not the critical factor in how content should be broken up into tiddlers. After all, if it were, TiddlyWiki could break our content up into lots of tiddlers all by itself, perhaps using one tiddler per paragraph or word, and save us some work. Dividing content into tiddlers really has more to do with conceptual boundaries than physical ones -- that is, the appearance of the text or other content on the screen isn't important, but rather how the objects and ideas described by the content relate to each other.
 
-We will now benefit from a new metaphor for [[tiddlers|Tiddlers]]. Tiddlers serve as ''models of nouns'' -- people, things, ideas. Nouns have various properties; we represent this by adding fields, like //phone number//, //source//, //author//, //temperature//, and so on, to our tiddlers.
+We will now benefit from a new metaphor for [[tiddlers|Tiddlers]]. Tiddlers serve as ''models of nouns'' -- people, things, ideas. Nouns have various properties or aspects; we represent this by adding fields, like //phone number//, //source//, //author//, //temperature//, and so on, to our tiddlers.
 
 Simple nouns may be sufficiently described by several of these fields. More complex ones likely also need some text that we write out to describe them -- but since TiddlyWiki can't understand and reuse the content in the text field as well as it can the content in our other custom fields, it's best to be sure that we can't store the information in a field before writing it in the text field. For instance, we shouldn't create a bulleted list like this in a tiddler describing a person:
 
