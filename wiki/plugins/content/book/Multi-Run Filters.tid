@@ -1,6 +1,6 @@
 created: 20200715220657649
 description: Filters can be made more complex and powerful by including more than one run.
-modified: 20210410180812102
+modified: 20210818205007521
 parent: More Organizational Tools
 tags: Section
 title: Multi-Run Filters
@@ -93,7 +93,7 @@ If you don't want the standard dominant-append behavior, you can place the chara
 ; `~` or `:else`
 : ''If the list of accumulated results is currently empty'', execute this run and make its output the accumulated results. Otherwise, ignore the run completely.
 
-Several prefixes were added in version 5.1.23 that are only available in the named variants. They're a little harder to understand, and TiddlyWiki users have gotten by without them for years, so you won't need to use them for the exercises and takeaways and you can skip them for now if you like, but at some point you might want to investigate them.
+Several prefixes were added in version 5.1.23 and 5.2.0 that are only available in the named variants. They're a little harder to understand, and TiddlyWiki users have gotten by without them for years, so you won't need to use them for the exercises and takeaways and you can skip them for now if you like, but at some point you might want to investigate them.
 
 <$details summary="More named prefixes">
 
@@ -103,8 +103,14 @@ Several prefixes were added in version 5.1.23 that are only available in the nam
 ; `:intersection`
 : Like `+`, but ''the second filter run is evaluated completely before being ANDed''. The TiddlyWiki documentation gives this example: if you are trying to see what tags two tiddlers have in common, you might say `[[Tiddler 1]tags[]] +[[Tiddler 2]tags[]]`; but this wouldn't work because `[[Tiddler 2]]` is a constructor and will wipe out anything from the first filter run. `:intersection` evaluates the two filter runs in isolation, so that the ANDing takes place on the sets of tags once they've been expanded.
 
+; `:map`
+: Apply this filter run to each item in the accumulated results in turn, and ''replace each item in the accumulated results with the output of the mapped filter run''.
+
 ; `:reduce`
-: ''Flatten the accumulated results into a single value'' by applying a filter expression to each tiddler in the accumulated results in turn. Within this inner filter expression, a variable `accumulator` contains the single value produced by the previous execution of the filter expression. The output of the last input tiddler becomes the run's output.
+: ''Flatten the accumulated results into a single value'' by applying this filter run to each tiddler in the accumulated results in turn. Within this inner filter run, a variable `accumulator` contains the single value produced by the previous execution of the filter run. The output of the last input tiddler becomes the run's output.
+
+; `:sort`
+: Apply this filter run to each tiddler in the accumulated results in turn, and ''sort the accumulated results by the key produced by this filter expression''. That is, the filter run followed by `:sort` transforms each input into the form needed for sorting. This is the same thing as the `sortsub` operator, but it's often easier to use because you don't have to define a separate variable containing the sort filter.
 
 You can read more about these run prefixes [[in the documentation|https://tiddlywiki.com/#Filter%20Expression]].
 
