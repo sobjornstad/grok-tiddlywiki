@@ -1,0 +1,15 @@
+caption: 8: Common Misunderstandings
+created: 20210818000720603
+description: In which we clear up some common mistakes and mixed-up mental models.
+list: [[Macros are not functions]]
+modified: 20210818004753349
+parent: Outline
+tags: Chapter
+title: Common Misunderstandings
+type: text/vnd.tiddlywiki
+
+Certain aspects of TiddlyWiki's behavior may be unintuitive or unexpected, particularly if you have prior experience with tools that do similar things to TiddlyWiki but function differently. This chapter calls out some of these potential confusions and explains why they're wrong and how you should think about them instead.
+
+!! In this chapter
+
+{{||ChapterOutlineTemplate}}

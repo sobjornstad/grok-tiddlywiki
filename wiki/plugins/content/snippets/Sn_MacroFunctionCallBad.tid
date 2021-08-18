@@ -1,0 +1,12 @@
+created: 20210818001607196
+description: Macros are not functions
+modified: 20210818003451927
+tags: 
+title: Sn:MacroFunctionCallBad
+type: text/vnd.tiddlywiki
+
+\define test-macro() {{{ [<currentTiddler>get[description]] }}}
+
+The value of the `description` field of the current tiddler is "<<test-macro>>".
+
+<$transclude tiddler=<<test-macro>> field="description"/>

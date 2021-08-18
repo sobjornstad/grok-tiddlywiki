@@ -1,0 +1,67 @@
+created: 20210818000912323
+description: TiddlyWiki macros do not behave like functions in other programming languages.
+modified: 20210818005048044
+parent: Common Misunderstandings
+tags: Section
+title: Macros are not functions
+type: text/vnd.tiddlywiki
+
+If you're familiar with programming languages like JavaScript or C++, it may be tempting to think of [[macro calls|Macros]] (or [[variables|Variables]] whose values are set with `\define`) like function calls. If you're using this mental model, you assume that where you write `<<test-macro>>`, you get the result of evaluating the `test-macro` macro as [[wikitext|Wikitext]].
+
+This is not how macros work. Rather, the exact text of the macro, with any [[text substitutions|Text Substitution]] the macro might include completed, is inserted wherever the `<<macro transclusion>>` is found. ''Wikitext is not parsed or rendered'' during this process!
+
+A more helpful mental model, if you know these tools, might be a (La)TeX macro or a `#define` directive in the C/C++ preprocessor.
+
+
+!! Example of the mistake
+
+<<<
+I want to create a variable in a tiddler whose value comes from a filter. The variable will be used to define a tiddler whose `description` field should be transcluded. When I hard-code this tiddler's name, it works fine:
+
+{{Sn:MacroFunctionCallOk||MagicSnippet}}
+
+But if I set the variable to the result of a filtered transclusion, it doesn't work properly -- or, rather, sometimes it works and sometimes it doesn't:
+
+{{Sn:MacroFunctionCallBad||MagicSnippet}}
+
+What am I doing wrong?
+<<<
+
+
+!! Explanation
+
+Up top, we learned that wikitext is not parsed or rendered during a macro call (the process of parsing and evaluating wikitext is called [[wikifying|Wikification]]). Sometimes you won't even notice this, because if the result of the macro call ends up directly within the body of a tiddler, TiddlyWiki will wikify it again immediately. That's why the second paragraph of the second snippet still works: the macro call within the body of the tiddler, and after the macro call takes place, the result (which is the literal text `{{{ [<currentTiddler>get[description]] }}}`) is wikified by TiddlyWiki.
+
+However, this breaks down when you use the macro call as the attribute of an HTML tag or widget, as in `<$transclude tiddler=<<test-macro>> field="description"/>`. In this case, TiddlyWiki doesn't do a wikification step; it just passes the result of the macro call to the tag or widget. (This is a design choice -- in many cases, it's what you want since stray formatting tags could otherwise end up messing up your widgets.) That means that you're asking TiddlyWiki to transclude a tiddler called `{{{ [<currentTiddler>get[description]] }}}`, which presumably does not exist.
+
+
+!! Solutions
+
+In this case, the filter is sufficiently simple that we're probably best off just using it directly in the `$transclude` widget:
+
+{{Sn:MacroFunctionCallDirect||MagicSnippet}}
+
+Or, since we have a sufficiently simple filter, we can just say:
+
+```html
+<$transclude tiddler={{!!description}} field="description"/>
+```
+
+Sometimes you might need to use the variable in many places, or it might change on the fly, so simply repeating its value everywhere won't work. In that case, you can use the `$wikify` widget to force the result of the macro call to be wikified into a variable, then continue from there:
+
+{{Sn:MacroFunctionCallWikify||MagicSnippet}}
+
+Now the `$wikify` widget evaluates the wikitext `{{{ [<my_tiddler>get[projectId]] }}}`, storing the result, `Macros are not functions`, in the `myResult` variable. Then the `$transclude` widget uses that variable to decide what tiddler to transclude.
+
+!! Further reading
+
+* [[Text Substitution]] -- the only change that //is// made to a macro's text when the macro is called
+* [[Wikification]] -- when automatic wikification takes place and how to use the $wikify widget when it doesn't
+
+
+!! Exercises
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}
