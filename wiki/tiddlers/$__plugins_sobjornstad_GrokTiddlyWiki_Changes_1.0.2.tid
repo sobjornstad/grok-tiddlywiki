@@ -1,0 +1,15 @@
+commit: 154024773664662ac0bb4cbdbdc932a7dd3371e5
+created: 20210818142336453
+date: 202106061200
+modified: 20210818142913718
+tag: v1.0.2
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/1.0.2
+type: text/vnd.tiddlywiki
+version: 1.0.2
+
+* Deleting any bookmark was causing all bookmarks to be deleted. This has been fixed and you can now safely delete bookmarks.
+* Fixed instructions for embedding a font in TW (if you're poking around in the system tiddlers wondering how I did it, you can now find the correct forum thread for reference).
+* Expanded the prompt for [[Ex:AlphabeticallyLastDescription]] to incorporate user feedback.
+* Fixed several more incorrect filters on live examples in [[Sn:RubberDucking]].
+* Fixed several more typos and confusingly worded sentences.

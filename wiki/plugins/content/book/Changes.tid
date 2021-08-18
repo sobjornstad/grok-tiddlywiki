@@ -1,6 +1,6 @@
 created: 20210521203810921
 description: What's new in recently released versions of //Grok TiddlyWiki//.
-modified: 20210606144706886
+modified: 20210818143153790
 parent: Appendices
 tags: Section
 title: Changes
@@ -8,17 +8,13 @@ type: text/vnd.tiddlywiki
 
 This section lists all changes made to //Grok TiddlyWiki// since the previous released version.
 
-!! //Grok TiddlyWiki// 1.0.2
+<$list filter="[prefix[$:/plugins/sobjornstad/GrokTiddlyWiki/Changes/]!sort[date]]">
 
-* Deleting any bookmark was causing all bookmarks to be deleted. This has been fixed and you can now safely delete bookmarks.
-* Fixed instructions for embedding a font in TW (if you're poking around in the system tiddlers wondering how I did it, you can now find the correct forum thread for reference).
-* Expanded the prompt for [[Ex:AlphabeticallyLastDescription]] to incorporate user feedback.
-* Fixed several more incorrect filters on live examples in [[Sn:RubberDucking]].
-* Fixed several more typos and confusingly worded sentences.
+!! //Grok TiddlyWiki// {{!!version}}
 
-!! //Grok TiddlyWiki// 1.0.1
+|!Release date |<$view format="date" field="date" template="DD MMM YYYY"/>|
+|!Git commit |<code>{{!!commit}}</code>|
 
-* The //Takeaways// tab of the sidebar search box was mistakenly finding only collected takeaways; this has been fixed.
-* Corrected the filter on several live examples in [[Wr:Transclusions]] so that they show output as intended.
-* Evened out the spacing at the bottom of the in-text takeaway reviewer once all cards have been collected.
-* Fixed several typos and confusingly worded sentences.
+<$transclude mode="block"/>
+
+</$list>

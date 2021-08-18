@@ -1,0 +1,14 @@
+commit: 4fc99def0b99c60bbf7ac682968ce83756209c3b
+created: 20210818142754702
+date: 202105211200
+modified: 20210818142920230
+tag: v1.0.1
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/1.0.1
+type: text/vnd.tiddlywiki
+version: 1.0.1
+
+* The //Takeaways// tab of the sidebar search box was mistakenly finding only collected takeaways; this has been fixed.
+* Corrected the filter on several live examples in [[Wr:Transclusions]] so that they show output as intended.
+* Evened out the spacing at the bottom of the in-text takeaway reviewer once all cards have been collected.
+* Fixed several typos and confusingly worded sentences.
