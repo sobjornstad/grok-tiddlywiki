@@ -1,5 +1,5 @@
 created: 20200718012215079
-modified: 20210103183448937
+modified: 20210818185038784
 tags: Answer
 title: Ex:VeryOrdinaryDay/answer
 type: text/vnd.tiddlywiki
@@ -14,19 +14,19 @@ To show text only if a condition is true, we can use the `list` widget paired wi
 </$set>
 ```
 
-If we didn't want to use `emptyMessage` (or didn't know about it), we could use a second list widget that had the opposite condition. Unfortunately, the opposite condition is rather hard to compose as of 5.1.22, as there is no filter operator to determine whether an index exists in a data tiddler. The best I've been able to come up with is the following abuse of a filter:
+If we didn't want to use `emptyMessage` (or didn't know about it), we could use a second list widget that had the opposite condition. The opposite condition is somewhat more difficult to compose, as there is no filter operator to determine whether an index exists in a data tiddler. Instead, we can team up `then`, `else`, and `is[blank]`:
 
 ```html
 <$set name=formattedToday value=<<now "0MM/0DD">>>
   <$list filter="[[UsHolidays]getindex<formattedToday>]">
     It's ''<<currentTiddler>>'' today!
   </$list>
-	<$list filter="[[UsHolidays]getindex<formattedToday>] ~[[notaholiday]] -[[UsHolidays]getindex<formattedToday>]">
-		Sadly, it's a very ordinary day today.
+  <$list filter="[[UsHolidays]getindex<formattedToday>then[]else[holiday]!is[blank]]">
+    Sadly, it's a very ordinary day today.
 	</$list>
 </$set>
 ```
 
-That is, get the value of the index, then if the list is empty add the tiddler `notaholiday` to the list, then finally remove the value of the index from the list (so if there //was// something there initially, the list will turn out empty, and otherwise it will contain only `notaholiday`).
+That is, first get the value of the index. Then if that value is not empty (meaning the index existed), change the value to an empty one, and if the value is empty, change it to a non-empty one. Lastly, remove all empty values (the distinction between an empty value and a nonexistent one is explained in [[this exercise answer|Ex:DefaultToField/answer]]). The net effect is that the body of the `$list` widget is shown if `getindex[]` returns an empty value, and nothing is shown otherwise.
 
-It's nearly always possible to do something in a filter, but it's not always pleasant! This would also break if a holiday called `notaholiday` got added to the list, however unlikely that might be.
+This `then`--`else`--`is[blank]` pattern may come in handy in other places as well.
