@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20210818005944766
+modified: 20210818172314460
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -13,7 +13,7 @@ This is, perhaps unexpectedly, one of the more troublesome aspects of TiddlyWiki
 
 !! Importing files
 
-This part is slick. Want a file to be part of your TiddlyWiki? Just ''drag and drop it'' out of your computer's file manager onto the TiddlyWiki window. A banner will appear at the top of the screen that says "Drop here." When you drop the file, a special tiddler called `$:/Import` will appear. Click ''Import'', and a new tiddler is created containing the content. `$:/Import` will show a link to the newly added tiddler.
+This part is slick. Want a file to be part of your TiddlyWiki? Just ''drag and drop it'' out of your computer's file manager onto the TiddlyWiki window. A banner will appear at the top of the screen that says “Drop here.” When you drop the file, a special tiddler called `$:/Import` will appear. Click ''Import'', and a new tiddler is created containing the content. `$:/Import` will show a link to the newly added tiddler.
 
 This works for text, images, PDFs, and even binary files (though this last option is usually a bad idea, as TiddlyWiki can lock up if you try to open the tiddler for a large binary file, and you won't be able to read it anyway). You can import multiple files at once by dragging multiple files; you'll have the chance to review and uncheck any that you don't want before you import.
 
@@ -42,6 +42,13 @@ For more control over the image, you can use a special link syntax, `[img [image
 Another common type of file to embed in your wiki is a PDF. You can't set the size a PDF displays at, but you can transclude a PDF tiddler, like `{{mydocument.pdf}}`, and a mini-embedded PDF viewer will appear at that point in the tiddler. Be aware this can slow down the loading of the tiddler since your browser has to load the entire PDF before it can finish displaying the tiddler, so be careful not to put it somewhere that might get loaded or re-loaded frequently, like on your wiki's front page or in the sidebar.
 
 
+!! Directly adding images to your tiddlers
+
+Above we discussed how importing images works when you import the image first and then create a tiddler that displays it. But often you'll be editing a tiddler and only then realize you need to import an image. In this case, you can ''drag and drop the image directly into the editor'' or paste it from the clipboard. In either case, a small popup will appear (you may need to scroll down to see it in some cases) offering to import the image. When you accept, it will both import the image and insert `[img [image.png]]` into the tiddler you're editing, where //image.png// is the name of the imported image tiddler.
+
+Aside from this automatic insertion of appropriate wikitext markup, directly adding an image to a tiddler works exactly like importing it on its own and then referencing it from within a tiddler later.
+
+
 !! The problem with TiddlyWiki attachments
 
 Here's the essential problem with all this: in single-file TiddlyWikis, ''anything you attach to your wiki gets embedded in the file''. That's no big deal if you only add a few small images or documents to your wiki, but if you start adding tens or dozens of large images, that file will balloon in size. And that's a big problem, because //every time TiddlyWiki saves//, it makes a new copy of the file for backup purposes. If your wiki is 100 MB, and you save your wiki just 20 times, you're now using 2 GB of space on your hard drive. Plus, it takes a long time to write a 100 MB file to your hard drive or load it into the browser, so performance will start to slow down.
@@ -49,6 +56,7 @@ Here's the essential problem with all this: in single-file TiddlyWikis, ''anythi
 You can reduce the number of backups saved by various means, but that only hides the problem for longer; eventually your wiki is still going to get really big.
 
 (For the curious, text is so much smaller than images that serious difficulties are unlikely. You would have to write over 16 million average-length words of English, or 32,000 densely filled pages, to reach 100 MB of text. If you write 3 pages every day, it will still take you 30 years to write that much.)
+
 
 !! Possible solutions
 
