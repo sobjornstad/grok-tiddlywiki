@@ -1,6 +1,6 @@
 created: 20210124164801589
 list-before: $:/sib/Navigator/Related
-modified: 20210511024245816
+modified: 20210819132450925
 tags: $:/tags/ViewTemplate
 title: $:/sib/Navigator/SectionNavigation
 type: text/vnd.tiddlywiki
@@ -17,7 +17,7 @@ type: text/vnd.tiddlywiki
 		</$list>
 		<$list filter="[<prevSection>!is[blank]tag[Chapter]]" variable=_>
 			<$list variable="lastSectionInPreviousChapter" filter="[list<prevSection>last[]]">
-				&#11176;&nbsp;<$link to=<<lastSectionInPreviousChapter>>>Last section in previous chapter: <$text text=<<lastSectionInPreviousChapter>>>/</$text></$link>
+				&larr;&nbsp;<$link to=<<lastSectionInPreviousChapter>>>Last section in previous chapter: <$text text=<<lastSectionInPreviousChapter>>>/</$text></$link>
 				<br>
 			</$list>
 			&#10232;&nbsp;<$link to=<<prevSection>>>Previous chapter: <<prevSection>></$link>
@@ -37,7 +37,7 @@ type: text/vnd.tiddlywiki
 		</$list>
 		<$list filter="[<nextSection>!is[blank]tag[Chapter]]" variable=_>
 			<$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
-				<$link to=<<firstSectionInThisChapter>>>First section in this chapter: <$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&#11177;
+				<$link to=<<firstSectionInThisChapter>>>First section in this chapter: <$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
 				<br>
 			</$list>
 			<$link to=<<nextSection>>>Next chapter: <<nextSection>></$link>&nbsp;&#10233;
@@ -49,7 +49,7 @@ type: text/vnd.tiddlywiki
 			<$list filter="[list[Outline]after<upChapter>then[]else[x]!is[blank]]" variable=_>
 				<$list filter="[all[current]tag[Chapter]]">
 					<$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
-						<$link to=<<firstSectionInThisChapter>>>First section in this chapter: <$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&#11177;
+						<$link to=<<firstSectionInThisChapter>>>First section in this chapter: <$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
 						<br>
 					</$list>
 					//at last chapter//
