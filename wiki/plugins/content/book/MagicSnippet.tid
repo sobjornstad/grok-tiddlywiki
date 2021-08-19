@@ -1,10 +1,13 @@
 created: 20201231200111052
-modified: 20210206150314961
+modified: 20210819204041169
 tags: Template
 title: MagicSnippet
 type: text/vnd.tiddlywiki
 
 \define deltid() <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+
+<$list filter="[<renderingStatic>!match[yes]]" variable=_ emptyMessage={{$:/sib/Snippet/MagicSideBySide}}>
+
 <div style="float: right; margin-top:10px; font-size:14px;">
 <$list filter="[is[shadow]field:title<currentTiddler>]">
 modified by you (<$button class="tc-btn-invisible tc-tiddlylink" actions=<<deltid>>>restore original</$button>)&nbsp;·
@@ -13,3 +16,5 @@ modified by you (<$button class="tc-btn-invisible tc-tiddlylink" actions=<<delti
 	
 </div>
 <<tabs "$:/sib/Snippet/TiddlerAsWikitext $:/sib/Snippet/TiddlerAsRendered $:/sib/Snippet/MagicSideBySide $:/sib/Snippet/MagicEditor" default:"$:/sib/Snippet/MagicSideBySide" class:"sib-magic-bottom-border">>
+
+</$list>

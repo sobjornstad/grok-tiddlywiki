@@ -1,0 +1,30 @@
+created: 20210819134549516
+modified: 20210819205745578
+tags: 
+title: $:/StaticBanner
+type: text/vnd.tiddlywiki
+
+<div class="sib-static-alert">
+<div style="max-width: 35em;">
+
+This is a stripped-down version of a single section of //Grok TiddlyWiki//, optimized for fast loading and readability by search engines. ''Some features are missing.''
+
+For the full //Grok TiddlyWiki// experience, please visit {{||$:/sib/Navigator/AnchorFromStaticPage}}.
+
+</div>
+</div>
+
+<style>
+.sib-static-alert {
+	max-width: 60em;
+	margin: auto;
+	color: red;
+	background-color: <<colour background>>;
+	padding: 1em;
+	text-align: center;
+}
+
+.sib-static-alert div {
+	margin: auto;
+}
+</style>

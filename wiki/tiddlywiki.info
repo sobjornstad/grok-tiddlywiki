@@ -52,23 +52,17 @@
             "text/plain"
         ],
         "static": [
-            "--rendertiddler",
-            "$:/core/templates/static.template.html",
-            "static.html",
+            "--render",
+            "[all[tiddlers+shadows]!is[system]!prefix[Ta:]!prefix[Sn:]!prefix[Meta:]!prefix[TakeAway Help/]] -[[TakeAway Reviewer]]",
+            "[encodeuri[]search-replace[/],[%2F]search-replace[:],[%3A]addprefix[static/]addsuffix[.html]]",
             "text/plain",
-            "--rendertiddler",
-            "$:/core/templates/alltiddlers.template.html",
-            "alltiddlers.html",
-            "text/plain",
-            "--rendertiddlers",
-            "[!is[system]]",
             "$:/core/templates/static.tiddler.html",
-            "static",
-            "text/plain",
+            "renderingStatic",
+            "yes",
             "--rendertiddler",
             "$:/core/templates/static.template.css",
             "static/static.css",
             "text/plain"
-        ]
+        ],
     }
 }

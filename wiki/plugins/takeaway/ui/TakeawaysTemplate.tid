@@ -1,9 +1,15 @@
 created: 20201228235038564
-modified: 20210818010841369
+modified: 20210819150443077
 tags: Template
 title: TakeawaysTemplate
 type: text/vnd.tiddlywiki
 
+\define when-empty() Takeaways are not available in the static version of //Grok TiddlyWiki//. Visit {{||$:/sib/Navigator/AnchorFromStaticPage}} to study takeaways.
+
+<$list filter="[<renderingStatic>!match[yes]]" variable=_ emptyMessage=<<when-empty>>>
+
 {{$:/plugins/sobjornstad/TakeAway/ContextualHelp/TakeAway}}
 
 {{||$:/plugins/sobjornstad/TakeAway/TakeawayListForIntextTiddler}}
+
+</$list>
