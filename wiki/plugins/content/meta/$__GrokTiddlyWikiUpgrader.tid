@@ -1,0 +1,51 @@
+created: 20210820145716584
+list-after: $:/sib/TooManyTiddlersBanner
+modified: 20210820151950816
+tags: $:/tags/SideBarSegment
+title: $:/GrokTiddlyWikiUpgrader
+type: text/vnd.tiddlywiki
+
+\define deletes() 
+
+<$list filter="[<storyTiddler>!is[blank]]" variable=_>
+<$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]]" variable=_ emptyMessage="You're all up to date, nothing to see here!">
+
+The following content tiddlers that you have modified (either manually or through a tool such as the TakeAway reviewer) have been removed in the version of //Grok TiddlyWiki// you've upgraded to, most likely because they are no longer relevant in a new version of TiddlyWiki, or they have been superseded by other content:
+
+<<list-links "[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]]" emptyMessage:"(none)">>
+
+If you would like to keep any of these tiddlers, please rename them to something else so that they disappear from the list. Then click the button below to complete the upgrade.
+
+<$button>
+	Delete tiddlers and complete upgrade
+	<$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]]">
+		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+	</$list>
+</$button>
+
+</$list>
+</$list>
+
+<$list filter="[<storyTiddler>is[blank]]" variable=_>
+<$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]]" variable=_>
+	<div class="gtw-upgrade-banner">
+		<div style="display: inline-block; vertical-align: center; margin-top: 6px; margin-left: 1em;">
+			<span style="height: 44px;">{{$:/core/images/info-button}}</span>
+		</div>
+		<div style="display: inline-block; margin-left: 1em;">
+			An upgrade to //Grok TiddlyWiki// is in progress.<br>
+			[[Open the upgrader|$:/GrokTiddlyWikiUpgrader]] to finish the upgrade.
+		</div>
+	</div>
+</$list>
+</$list>
+
+
+<style>
+.gtw-upgrade-banner {
+	background-color: <<color tiddler-background>>;
+	display: inline-block;
+	margin-right: 2em;
+	padding-right: 1em;
+}
+</style>
