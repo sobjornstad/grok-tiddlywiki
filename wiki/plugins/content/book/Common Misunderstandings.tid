@@ -1,8 +1,8 @@
-caption: 8: Common Misunderstandings
+caption: Common Misunderstandings
 created: 20210818000720603
 description: In which we clear up some common mistakes and mixed-up mental models.
 list: [[Macros are not functions]] [[Constant strings cannot be combined with transclusions]]
-modified: 20210818125337298
+modified: 20210820160521867
 parent: Outline
 tags: Chapter
 title: Common Misunderstandings

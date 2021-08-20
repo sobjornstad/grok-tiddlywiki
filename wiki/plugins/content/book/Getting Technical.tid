@@ -1,8 +1,8 @@
-caption: 9: Getting Technical
+caption: 8: Getting Technical
 created: 20200822193159541
 description: In which software developers and other computer geeks can learn how to extend and interact with TiddlyWiki using JavaScript, CSS, and external programs.
 list: [[JavaScript Macros]] Stylesheets [[Creating Plugins]] [[Writing Shell Scripts Against a TiddlyWiki]]
-modified: 20210818000716858
+modified: 20210820160548929
 parent: Outline
 tags: Chapter
 title: Getting Technical
