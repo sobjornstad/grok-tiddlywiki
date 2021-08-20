@@ -1,0 +1,39 @@
+commit: 
+created: 20210820154424759
+date: 
+modified: 20210820155900623
+tag: v1.1.0
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/1.1.0
+type: text/vnd.tiddlywiki
+version: 1.1.0
+
+!!! Text
+
+* Updated for TiddlyWiki 5.2.0:
+** Field names [[no longer have character restrictions|Contact Tiddlers]].
+** Images [[can be directly inserted into tiddlers|Images and Attachments]].
+** Comments (only) [[can appear before and between pragmas|Ex:MacroPosition/answer]].
+** The `$edit-text` widget [[can edit the tiddler it's contained in|Ex:EditCurrentTiddler/answer]].
+** `:map` and `:sort` [[filter prefixes|Multi-Run Filters]] have been added.
+** Macro calls with parameters can be [[transcluded into a filter|Filters and Transclusions]].
+* Added a chapter on Common Misunderstandings and started it with several items. I'll add more as I encounter them in the forums and elsewhere.
+* Broke out the instructions for installing TiddlyWiki by operating system, and give sample instructions for a Linux install.
+* Added an appendix on ways to support //Grok TiddlyWiki// and TiddlyWiki itself.
+* Added an explanation of why `all[tiddlers+shadows]` appears in so many live examples.
+* Applied various minor wording and formatting tweaks; thanks to everyone who has pointed out typographical errors and made suggestions!
+
+
+!!! Interface
+
+* If you study takeaways in-text on the web, you'll now receive a warning when you finish the section that you should create your own copy of GTW if you want to preserve your progress.
+* Improved the interface for adding your own takeaways. The interface for Q&A and cloze is now clearly separated, usage guidance is attached to each, and it's no longer possible to accidentally create a blank takeaway by pressing the button without typing anything.
+* Added contextual help throughout the interface, where a small //Tip// box appears the first time you use a new feature.
+* Improved the Changes appendix so it shows the date and commit hash of each release.
+* Changed the arrow symbols used to enter the first/last section of a chapter in the navigation bar, as the symbols we were using weren't in the embedded font and could be missing on some devices.
+
+
+!!! Miscellaneous
+
+* Added an upgrader tool that guides you through the process of deleting any takeaways or other tiddlers that have become out of date in the new version.
+* Created a [[static version|https://groktiddlywiki.com/static/]] of the book for search engines and people on low-bandwidth connections; most of the interactive features are missing, but it's enough for a quick check of a page. A large banner explains this and provides a permalink to the tiddler within the wiki version. The `<noscript>` element in the wiki version also points to the static version.

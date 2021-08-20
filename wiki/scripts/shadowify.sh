@@ -58,6 +58,10 @@ for i in '$__sib_'*; do
     mv "$i" ../plugins/content/sib/
 done
 
+for i in '$__plugins_sobjornstad_GrokTiddlyWiki_Changes'*; do
+    mv "$i" ../plugins/content/meta/changes/
+done
+
 
 ### Cleanup ###
 popd >/dev/null
