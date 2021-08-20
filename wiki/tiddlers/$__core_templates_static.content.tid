@@ -1,5 +1,5 @@
 created: 20210819133724771
-modified: 20210819133925300
+modified: 20210820141218620
 title: $:/core/templates/static.content
 type: text/vnd.tiddlywiki
 
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 
 Welcome to Grok TiddlyWiki, the definitive TiddlyWiki learning resource! Grok TiddlyWiki is a textbook that helps you build a deep, lasting understanding of and proficiency with TiddlyWiki through a combination of detailed explanations, practical exercises, and spaced-repetition reviews of prompts called takeaways.
 
-Since //Grok TiddlyWiki// is itself a TiddlyWiki and runs entirely in your browser, you will need to turn on JavaScript or switch to a JavaScript-capable browser to continue.
+Since //Grok TiddlyWiki// is itself a TiddlyWiki and runs entirely in your browser, you will need to turn on JavaScript or switch to a JavaScript-capable browser to continue. You can also visit the [[static HTML version|https://groktiddlywiki.com/static/]], but you'll miss out on a number of interactive features.
 
 The following tiddlers are included in this wiki:
 
