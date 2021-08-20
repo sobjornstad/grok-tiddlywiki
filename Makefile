@@ -5,7 +5,7 @@ all: book web
 
 
 ## Building the TW book ##
-book: wiki/package-lock.json reversion shadowify wiki/pubfolder/output/index.html
+book: wiki/package-lock.json reversion shadowify wiki/pubfolder/output/index.html wiki/pubfolder/output/static/
 
 wiki/package-lock.json: wiki/tiddlywiki-git
 	cd wiki && npm install
@@ -19,9 +19,16 @@ shadowify:
 wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/*
 	cd wiki && scripts/export.sh
 
+# An inaccurate way to specify this rule, but trying to match tiddlers with
+# their doubly URL-encoded names in GNU Make sounds like a nightmare I don't
+# need. This appears to work fine since index.html should always update when
+# any wiki content is updated, but possible ordering problems?
+wiki/pubfolder/output/static/: wiki/pubfolder/output/index.html
+	cd wiki/pubfolder && "$$(npm bin)/tiddlywiki" --build static
+
 
 ## Building the website (including the latest version of the book) ##
-web: _build/donate _build/thankyou _build/read/index.html
+web: _build/donate _build/thankyou _build/read/index.html _build/static _build/static/index.html
 
 _build/donate: web/donate
 	cp -r web/donate _build
@@ -32,6 +39,13 @@ _build/thankyou: web/thankyou
 _build/read/index.html: wiki/pubfolder/output/index.html
 	mkdir -p _build/read/
 	cp wiki/pubfolder/output/index.html _build/read/index.html
+
+_build/static: wiki/pubfolder/output/static
+	mkdir -p _build/static/
+	cp wiki/pubfolder/output/static/* _build/static/
+
+_build/static/index.html: _build/static/Welcome%20to%20Grok%20TiddlyWiki.html
+	cp $< $@
 
 
 #TW_BASE = /home/soren/cabinet/Me/Records/zettelkasten/tw-wiki/

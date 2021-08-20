@@ -10,7 +10,7 @@ fi
 ### Setup ###
 shopt -s nullglob
 shopt -s extglob
-pushd tiddlers
+pushd tiddlers >/dev/null
 
 
 ### TakeAway plugin ###
@@ -59,4 +59,4 @@ done
 
 
 ### Cleanup ###
-popd
+popd >/dev/null

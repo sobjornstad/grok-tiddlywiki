@@ -8,13 +8,20 @@ if [ ! -f "tiddlywiki.info" ]; then
     exit 1
 fi
 
+# create new public wiki
 rm -rf pubfolder
 "$(npm bin)/tiddlywiki" . --savewikifolder pubfolder "$FILT"
-pushd pubfolder
 
-pushd tiddlers
+# add build commands to public wiki's tiddlywiki.info
+jq ".build = $(jq '.build' <tiddlywiki.info)" <pubfolder/tiddlywiki.info >pubfolder/tiddlywiki.info.new
+rm pubfolder/tiddlywiki.info
+mv pubfolder/tiddlywiki.info.new pubfolder/tiddlywiki.info
+
+pushd pubfolder >/dev/null
+pushd tiddlers >/dev/null
 sed -Ei'' -e '/^tags:/d' '$__core_ui_SideBar_Recent.tid' '$__core_ui_SideBar_Tools.tid'
 sed -Ei'' -e 's/^(list:).*/\1 [[Welcome to Grok TiddlyWiki]]/' '$__StoryList.tid'
+
 # Write new values to config tiddlers. Touches only tiddler text, no other fields.
 mapfile -t confarr <"$public_edits_file"
 for write in "${confarr[@]}"; do
@@ -23,7 +30,7 @@ for write in "${confarr[@]}"; do
     mv out.txt "$key"
     perl -pi -e 'chomp if eof' "$key"  # remove final newline of file
 done
-popd
+popd >/dev/null
 
 "$(npm bin)/tiddlywiki" --rendertiddler '$:/core/save/all' index.html "text/plain"
-popd
+popd >/dev/null

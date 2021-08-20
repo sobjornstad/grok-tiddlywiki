@@ -16,41 +16,6 @@
         "tiddlywiki/snowwhite"
     ],
     "build": {
-        "index": [
-            "--rendertiddler",
-            "$:/core/save/all",
-            "index.html",
-            "text/plain"
-        ],
-        "empty": [
-            "--rendertiddler",
-            "$:/core/save/all",
-            "empty.html",
-            "text/plain",
-            "--rendertiddler",
-            "$:/core/save/all",
-            "empty.hta",
-            "text/plain"
-        ],
-        "externalimages": [
-            "--savetiddlers",
-            "[is[image]]",
-            "images",
-            "--setfield",
-            "[is[image]]",
-            "_canonical_uri",
-            "$:/core/templates/canonical-uri-external-image",
-            "text/plain",
-            "--setfield",
-            "[is[image]]",
-            "text",
-            "",
-            "text/plain",
-            "--rendertiddler",
-            "$:/core/save/all",
-            "externalimages.html",
-            "text/plain"
-        ],
         "static": [
             "--render",
             "[all[tiddlers+shadows]!is[system]!prefix[Ta:]!prefix[Sn:]!prefix[Meta:]!prefix[TakeAway Help/]] -[[TakeAway Reviewer]]",
@@ -63,6 +28,6 @@
             "$:/core/templates/static.template.css",
             "static/static.css",
             "text/plain"
-        ],
+        ]
     }
 }
