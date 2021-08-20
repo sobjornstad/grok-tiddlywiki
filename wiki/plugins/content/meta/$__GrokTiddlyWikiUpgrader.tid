@@ -1,10 +1,11 @@
 created: 20210820145716584
 list-after: $:/sib/TooManyTiddlersBanner
-modified: 20210820161304419
+modified: 20210820163316220
 tags: $:/tags/SideBarSegment
 title: $:/GrokTiddlyWikiUpgrader
 type: text/vnd.tiddlywiki
 
+<!---------- Deleting tiddlers ---------->
 <$list filter="[<storyTiddler>!is[blank]]" variable=_>
 <$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]first[]]" variable=_ emptyMessage="You're all up to date, nothing to see here!">
 
@@ -39,6 +40,22 @@ If you would like to keep any of these tiddlers, please rename them to something
 </$list>
 
 
+<!---------- Version upgrade ---------->
+
+<$list filter="[<storyTiddler>is[blank]]" variable=_>
+<$list filter="[<version>compare:version:lt{Metadata##tw-version}]" variable=_>
+	<div class="gtw-upgrade-banner">
+		<div style="text-align: center;">
+			<span style="height: 44px;">{{$:/core/images/info-button}}</span>
+		</div>
+		<div style="display: inline-block; margin-left: 1em;">
+			This version of //Grok TiddlyWiki// was written for TiddlyWiki {{Metadata##tw-version}}, but it's running on an older version, TiddlyWiki <<version>>. Some features may not work correctly. Please update it to the latest version using the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade]].
+		</div>
+	</div>
+</$list>
+</$list>
+
+<!---------- Common ---------->
 <style>
 .gtw-upgrade-banner {
 	background-color: <<color tiddler-background>>;
