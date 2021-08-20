@@ -19,7 +19,7 @@
         "static": [
             "--render",
             "[all[tiddlers+shadows]!is[system]!prefix[Ta:]!prefix[Sn:]!prefix[Meta:]!prefix[TakeAway Help]] -[[TakeAway Reviewer]]",
-            "[encodeuri[]search-replace[/],[%2F]search-replace[:],[%3A]addprefix[static/]addsuffix[.html]]",
+            "[encodeuri[]search-replace[/],[%2F]search-replace[:],[%3A]search-replace[?],[%3F]addprefix[static/]addsuffix[.html]]",
             "text/plain",
             "$:/core/templates/static.tiddler.html",
             "renderingStatic",

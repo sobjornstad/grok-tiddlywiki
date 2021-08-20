@@ -16,7 +16,7 @@ reversion:
 shadowify:
 	cd wiki && scripts/shadowify.sh 2>/dev/null
 
-wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/*
+wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/* wiki/tiddlywiki.info
 	cd wiki && scripts/export.sh
 
 # An inaccurate way to specify this rule, but trying to match tiddlers with
