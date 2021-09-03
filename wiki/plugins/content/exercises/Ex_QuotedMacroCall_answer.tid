@@ -1,6 +1,6 @@
 created: 20200603224332671
 length: s
-modified: 20210409194936560
+modified: 20210903004321832
 tags: Answer
 title: Ex:QuotedMacroCall/answer
 type: text/vnd.tiddlywiki
@@ -13,8 +13,8 @@ In other words, TiddlyWiki did not expand the macro.
 
 Putting quotation marks around a macro call or variable reference passed to an HTML attribute makes it //literal// -- that is, TiddlyWiki doesn't try to look at it to see if it's a variable or macro call. This is very occasionally what you want, but usually it's a mistake.
 
-This is true even if your macro call has spaces in it, so this is the correct way to call `mymacro`, even though it may look wrong at first glance:
+The quotation marks should be omitted even if the macro call has spaces in it. So for some made-up macro `mymacro` with two parameters, this would the correct way to call it, even though it may look wrong at first glance:
 
 ```html
-<$macrocall $name="wikipediaLink" linktext=<<mymacro attribute "my other attribute">> articleName=Dingo/>
+<$macrocall $name="wikipediaLink" linktext=<<mymacro attribute1 "attribute two">> articleName=Dingo/>
 ```
