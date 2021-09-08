@@ -1,6 +1,6 @@
 created: 20200531011856906
 description: How to take notes on meetings, excising existing notes and using TiddlyWiki's timestamp format to identify when the meeting happened.
-modified: 20210504021428623
+modified: 20210908153643241
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Meeting Tiddlers
@@ -25,9 +25,9 @@ The other way we wanted to be able to slice our meetings is by ''when they happe
 
 {{Datetime Format}}
 
-This can be a little irritating to work with, but there are several ways we can make it easier: plugins are available that can create a special date/time picker we can include on our meeting tiddlers, or we can autofill the time when we create the tiddler, thus making it easier to make any minor adjustments necessary. Let's do it manually for the moment so you learn how it works. (In an [[exercise|Ex:NewMeetingButton]] in chapter 5, we'll improve this using the autofill approach.) Create a new field called `at`, work out what the current date and time for you right now is, and fill that in as the value.
+This can be a little irritating to work with, but there are several ways we can make it easier: plugins are available that can create a special date/time picker we can include on our meeting tiddlers, or we can autofill the time when we create the tiddler, thus making it easier to make any minor adjustments necessary. Let's do it manually for the moment so you learn how it works. (In an [[exercise|Ex:NewMeetingButton]] in chapter 5, we'll improve this using the autofill approach.) Create a new field called `at`, work out your current date and time in TiddlyWiki's date format, as described in the preceding paragraph, fill that in as the value of the `at` field, and click the ''add'' button.
 
-To check your work, paste the following magic snippet into the body of the tiddler and have a peek at the live preview. We'll learn how this works in [[Working with Dates]].
+To check your work, paste the following magic snippet into the text of the tiddler and have a peek at the live preview, which should show the date you've entered in a nice human-readable format. We'll learn what exactly this snippet does in [[Working with Dates]].
 
 {{Sn:MagicDateSnippet||BasicSnippet}}
 
