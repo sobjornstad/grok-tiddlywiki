@@ -1,10 +1,10 @@
 created: 20210123233814789
-modified: 20210504014413497
+modified: 20210911214545388
 tags: Fragment
 title: SavingProgress
 type: text/vnd.tiddlywiki
 
-If you're currently viewing this page on the web, you should download a copy now by clicking this save button: {{$:/core/ui/Buttons/save-wiki}}.
+If you're currently viewing this page on the web, you should download a copy now by clicking the save icon at the end of this paragraph: {{$:/core/ui/Buttons/save-wiki}}
 
 You are free to modify your saved copy for personal use, and to share unmodified copies with others, but not to redistribute modified versions or earn money from redistribution. See the [[copyright notice|Copyright]] for details.
 
