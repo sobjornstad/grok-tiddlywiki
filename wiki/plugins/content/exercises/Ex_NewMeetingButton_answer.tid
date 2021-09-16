@@ -1,5 +1,5 @@
 created: 20200822192244439
-modified: 20210109215136937
+modified: 20210916023513508
 tags: Answer
 title: Ex:NewMeetingButton/answer
 type: text/vnd.tiddlywiki
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 	$message="tm-new-tiddler"
 	title="New Meeting"
 	tags="Meeting"
-	at=<<now YYYYMMDDhhmm00000>>
+	at=<<now YYYY0MM0DD0hh0mm00000>>
 	participants=""/>
 \end
 
