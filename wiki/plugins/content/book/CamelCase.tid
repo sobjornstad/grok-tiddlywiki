@@ -1,6 +1,6 @@
 created: 20200822214806325
 description: Whether you should use CamelCase titles, what makes something CamelCase, and how you can get rid of CamelCase linking.
-modified: 20210322011650952
+modified: 20210918131544342
 parent: Appendices
 tags: Section
 title: CamelCase
@@ -28,8 +28,18 @@ The rules for determining whether a given word is in CamelCase are not always ob
 * `Camel2Camel`
 * `3Camels`
 * `camelCaseWord`
+* `Camel-Case`
 
-The rule that has always served me well is that to be considered CamelCase, the word must begin with a capital letter //and// contain at least one uppercase letter that immediately follows a lowercase letter. The above cases all fail that test.
+To be considered CamelCase, the word must:
+
+* Begin with an uppercase letter.
+* Contain at least one uppercase letter that immediately follows a lowercase letter.
+* Contain only letters and numbers -- no spaces or punctuation.
+
+The above cases all fail that test.
+
+(Folks who have been around for long enough may remember that in TiddlyWiki Classic, [[the rules were different, even going so far as to allow punctuation in some places|https://talk.tiddlywiki.org/t/the-using-of-camelcases-and-what-the-tilde-is-doing/287/16?u=sobjornstad]]. They were made quite a bit stricter in TiddlyWiki 5.)
+
 
 
 !! Temporarily turning off CamelCase linking
@@ -42,7 +52,7 @@ Fortunately, there's an easy fix in this situation. Just insert the following pr
 \rules except wikilink
 ```
 
-Note that like any other pragma, this must go at the very beginning of your tiddler. If other lines come before it, they must be either empty lines or other pragmas (e.g., `\define` or `\import`). Otherwise, the text `\rules except wikilink` will appear literally.
+Note that like any other pragma, this must go at the very beginning of your tiddler. If other lines come before it, they must be empty lines, [[comments|Comments]], or other pragmas (e.g., `\define` or `\import`). Otherwise, the text `\rules except wikilink` will appear literally.
 
 
 !! Takeaways
