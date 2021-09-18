@@ -1,26 +1,22 @@
 commit: 
 created: 20210820154424759
-date: 
-modified: 20210820155900623
+date: 202109181200
+modified: 20210918141559725
 tag: v1.1.0
 tags: 
 title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/1.1.0
 type: text/vnd.tiddlywiki
 version: 1.1.0
 
+I have bumped the minor version number because the interface has improved significantly in several places. Changes to the content are mostly incremental. I've made updates for TiddlyWiki 5.2.0, but they aren't included in this edition since 5.2.0 is still in prerelease at this time.
+
 !!! Text
 
-* Updated for TiddlyWiki 5.2.0:
-** Field names [[no longer have character restrictions|Contact Tiddlers]].
-** Images [[can be directly inserted into tiddlers|Images and Attachments]].
-** Comments (only) [[can appear before and between pragmas|Ex:MacroPosition/answer]].
-** The `$edit-text` widget [[can edit the tiddler it's contained in|Ex:EditCurrentTiddler/answer]].
-** `:map` and `:sort` [[filter prefixes|Multi-Run Filters]] have been added.
-** Macro calls with parameters can be [[transcluded into a filter|Filters and Transclusions]].
-* Added a chapter on Common Misunderstandings and started it with several items. I'll add more as I encounter them in the forums and elsewhere.
+* Added a back-matter section on Common Misunderstandings and started it with several items. I'll add more as I encounter them in the forums and elsewhere.
 * Broke out the instructions for installing TiddlyWiki by operating system, and give sample instructions for a Linux install.
 * Added an appendix on ways to support //Grok TiddlyWiki// and TiddlyWiki itself.
 * Added an explanation of why `all[tiddlers+shadows]` appears in so many live examples.
+* Improved accuracy and completeness of the description of what makes a title CamelCase.
 * Applied various minor wording and formatting tweaks; thanks to everyone who has pointed out typographical errors and made suggestions!
 
 
