@@ -1,6 +1,6 @@
 created: 20210818000912323
 description: TiddlyWiki macros do not behave like functions in other programming languages.
-modified: 20210818005048044
+modified: 20211005133426764
 parent: Common Misunderstandings
 tags: Section
 title: Macros are not functions
@@ -57,11 +57,3 @@ Now the `$wikify` widget evaluates the wikitext `{{{ [<my_tiddler>get[projectId]
 
 * [[Text Substitution]] -- the only change that //is// made to a macro's text when the macro is called
 * [[Wikification]] -- when automatic wikification takes place and how to use the $wikify widget when it doesn't
-
-
-!! Exercises
-
-
-!! Takeaways
-
-{{||TakeawaysTemplate}}

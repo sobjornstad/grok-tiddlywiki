@@ -1,6 +1,6 @@
 created: 20210818025604551
 description: You often cannot combine a `{{transclusion}}` and some other text simply by placing them next to each other.
-modified: 20210818132147779
+modified: 20211005133547813
 parent: Common Misunderstandings
 tags: Section
 title: Constant strings cannot be combined with transclusions
@@ -71,4 +71,4 @@ Notice that we directly substituted a variable into the macro with the `$(parent
 
 As a result, we actually //can't// pass `<<currentTiddler>>` in as a parameter; this is an irritating limitation, but for now it's how TiddlyWiki works. See [[Filters and Transclusions]] and [[Using Variables in Macros]] for more on this situation.
 
-!! Takeaways
+(You can put `<<currentTiddler>>` in quotation marks to make the syntax valid, but then you're just passing the string `<<currentTiddler>>` rather than the name of the current tiddler to the macro, which isn't very helpful.)
