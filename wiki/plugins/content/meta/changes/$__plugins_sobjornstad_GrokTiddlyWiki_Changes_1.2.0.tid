@@ -1,0 +1,18 @@
+commit: 
+created: 20211005133750459
+date: 202110051200
+modified: 20211005134351766
+tag: v1.2.0
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/1.2.0
+type: text/vnd.tiddlywiki
+version: 1.2.0
+
+This version of //Grok TiddlyWiki// contains content updates to align the text with the following improvements in TiddlyWiki 5.2.0:
+
+* Field names [[no longer have character restrictions|Contact Tiddlers]].
+* Images can now be [[directly inserted|Images and Attachments]] into tiddlers.
+* HTML [[comments|Comments]] can now [[appear before and between pragmas|Ex:MacroPosition/answer]].
+* The `$edit-text` widget can now [[edit the tiddler it's contained in|Ex:EditCurrentTiddler/answer]].
+* `:map` and `:sort` [[filter run prefixes|Multi-Run Filters]] were added.
+* Macro calls with parameters can now be [[transcluded into a filter|Filters and Transclusions]].
