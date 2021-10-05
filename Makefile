@@ -48,9 +48,7 @@ _build/static/index.html: _build/static/Welcome%20to%20Grok%20TiddlyWiki.html
 	cp $< $@
 
 
-#TW_BASE = /home/soren/cabinet/Me/Records/zettelkasten/tw-wiki/
-#TW_OUTPUT = $(TW_BASE)/pubfolder/output/*
-
+## Utility functions
 edit:
 	cd wiki && "$$(npm bin)/tiddlywiki" --listen port=8000
 
@@ -63,9 +61,10 @@ publish:
 	rm -f _build/twistd.*
 	# Root /index.html sits in the container with a redirect on it and is NOT updated.
 	# If I add more subfolders they have to be listed below:
-	aws s3 sync --delete _build/read/ s3://groktiddlywiki-webserve/read
-	aws s3 sync --delete _build/thankyou/ s3://groktiddlywiki-webserve/thankyou
 	aws s3 sync --delete _build/donate/ s3://groktiddlywiki-webserve/donate
+	aws s3 sync --delete _build/read/ s3://groktiddlywiki-webserve/read
+	aws s3 sync --delete _build/static/ s3://groktiddlywiki-webserve/static
+	aws s3 sync --delete _build/thankyou/ s3://groktiddlywiki-webserve/thankyou
 	aws cloudfront create-invalidation --distribution-id E165ACBA2QEFAJ --paths '/*'
 
 clean:
