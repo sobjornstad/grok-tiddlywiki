@@ -1,6 +1,6 @@
 caption: Preview
 created: 20201229003054682
-modified: 20210817195856770
+modified: 20211129224824785
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayBackSide
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 
 <$set name=qprefixed value={{{ [<needsContext>match[yes]!is[blank]then<currentTiddler>!search:question:regexp{$:/config/sobjornstad/TakeAway/Exporter/InhibitPrefixIfQuestionMatch}get[question]addprefix{$:/config/sobjornstad/TakeAway/Exporter/Prefix}] }}}>
 <$set name=qtext value={{{ [<qprefixed>is[blank]then{!!question}else<qprefixed>] }}}>
-<$set name="qid" value={{{ [<previewTakeawayType>then[Preview]!is[blank]] ~[{!!title}split[:]last[]] }}}>
+<$set name="qid" value={{{ [<previewTakeawayType>!is[blank]then[Preview]] ~[{!!title}split[:]last[]] }}}>
 
 	<$list filter="[<previewTakeawayType>match[rememberq]] ~[<currentTiddler>qtype[rememberq]]" variable=_>
 		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id=<<qid>> reference={{!!origin}}/>
