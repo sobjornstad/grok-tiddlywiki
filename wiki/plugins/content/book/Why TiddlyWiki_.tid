@@ -1,6 +1,6 @@
 created: 20200531034640143
 description: What makes TiddlyWiki worth learning and using?
-modified: 20210818005714970
+modified: 20211129231939612
 parent: Front Matter
 tags: Section
 title: Why TiddlyWiki?
@@ -56,7 +56,7 @@ While I love TiddlyWiki, no software is perfect, so it's worth pointing out some
 
 * Most importantly, TiddlyWiki ''requires some effort to master''. This is inevitable for a tool as powerful as TiddlyWiki, but it's a significant barrier nonetheless. TiddlyWiki works differently from other tools you've used, and you need to develop a few new skills to take full advantage of it. Almost anyone can learn, and this book will help you, but if you're looking for something that works great right away without any commitment on your part, TiddlyWiki may not be for you. (You can get up and running with TiddlyWiki quickly enough, but you likely won't find it much better than any other tool until you learn a bit more.)
 * Handling ''images and attachments'' in TiddlyWiki can be somewhat troublesome. If you occasionally like to add images or attach files to your notes, this is unlikely to be a big deal. If the main thing you want to do with your note-taking app is organize images or other files, you may be better off looking for a different solution. See [[Images and Attachments]] for details.
-* TiddlyWiki's ''keyboard shortcuts'' are somewhat deficient compared to a desktop notes application, at least in a default setup, although this has improved recently. It is possible, however, to give at least the text entry fields some standard keybindings (e.g., vi-compatible) using the CodeMirror plugin.
+* TiddlyWiki's ''keyboard shortcuts'' are somewhat deficient compared to a desktop notes application, at least in a default setup, although this has improved recently. It is possible, however, to give at least the text entry fields some standard keybindings (e.g., vi-compatible) using the [[CodeMirror plugin|Useful Plugins]].
 * Using TiddlyWiki to collaborate on a wiki with ''multiple users'' is still in its infancy. While there is some effort at changing this, particularly with the [[Bob plugin|https://github.com/OokTech/TW5-Bob]], TiddlyWiki is by and large a single-user tool.
 
 </$details>
