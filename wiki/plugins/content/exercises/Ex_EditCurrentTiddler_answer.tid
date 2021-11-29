@@ -1,5 +1,5 @@
 created: 20210107230620928
-modified: 20210818191940696
+modified: 20211129232159174
 tags: Answer
 title: Ex:EditCurrentTiddler/answer
 type: text/vnd.tiddlywiki
@@ -17,4 +17,4 @@ To understand why this happened previously, recall that whenever we make any cha
 In versions prior to 5.2.0, anytime any field on a tiddler was changed, all transclusions of that tiddler were refreshed. That included the display of the whole tiddler in the story river and all its contents, since tiddlers are displayed in the story river [[by transcluding them through a template|The View Template]].
 The display of the tiddler in the story river of course included the edit widget -- and when a text box is removed from the page and re-rendered, its focus is lost.
 
-In 5.2.0, the refresh mechanism has been improved so that transclusions of a tiddler are only refreshed when the specific field being transcluded has changed. This change not only avoids unnecessary refreshes and improve performance, it also prevents this lost-focus issue -- since the text box is included within the `text` field of the tiddler specifically, changing any other field using the text box won't trigger a refresh of the widget.
+In 5.2.0, the refresh mechanism has been improved so that transclusions of a tiddler are only refreshed when the specific field being transcluded has changed. This change not only avoids unnecessary refreshes and improves performance, it also prevents this lost-focus issue -- since the text box is included within the `text` field of the tiddler specifically, changing any other field using the text box won't trigger a refresh of the widget.
