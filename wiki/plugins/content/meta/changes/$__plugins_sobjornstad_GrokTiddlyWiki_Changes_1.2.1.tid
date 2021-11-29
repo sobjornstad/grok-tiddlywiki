@@ -1,0 +1,12 @@
+commit: 
+created: 20211129232645958
+date: 202111291200
+modified: 20211129232842857
+tag: v1.2.1
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/1.2.1
+type: text/vnd.tiddlywiki
+version: 1.2.1
+
+* Fixed the Takeaway Export List showing an ID of “Preview” for all takeaways under certain circumstances, resulting in broken syncing to Anki.
+* Fixed several typos and minor wording mistakes.
