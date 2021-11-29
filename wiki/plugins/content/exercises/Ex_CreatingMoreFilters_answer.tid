@@ -1,5 +1,5 @@
 created: 20200603185304662
-modified: 20210409164804517
+modified: 20211129231027978
 tags: Answer
 title: Ex:CreatingMoreFilters/answer
 type: text/vnd.tiddlywiki
@@ -11,6 +11,6 @@ I won't list the actual answers because you've likely played with your wiki enou
 # `[[JaneDoe]backlinks[]tag[Meeting]]`
 # `[tag[Contact]sort[phone]]` (and take the first in the list)
 # `[has[at]]` (or, more verbosely, `[!field:at[]]`)
-# `[search[JaneDoe help]]`
+# `[search:text[JaneDoe help]]` (just `[search[JaneDoe help]]` is fine too, but note that this will also find matches in the `title` and `tags` fields, which might lead to more false positives)
 
 On #6, you may notice several [[system tiddlers|System Tiddlers]] related to Advanced Search in the list. That's because what you're typing into the search box is stored in those tiddlers! We'll learn how this works in [[Buttons and Input Widgets]].
