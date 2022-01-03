@@ -1,5 +1,5 @@
 created: 20200822192244439
-modified: 20210916023513508
+modified: 20220103160317608
 tags: Answer
 title: Ex:NewMeetingButton/answer
 type: text/vnd.tiddlywiki
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 	$message="tm-new-tiddler"
 	title="New Meeting"
 	tags="Meeting"
-	at=<<now YYYY0MM0DD0hh0mm00000>>
+	at=<<now [UTC]YYYY0MM0DD0hh0mm00000>>
 	participants=""/>
 \end
 
@@ -18,3 +18,7 @@ type: text/vnd.tiddlywiki
   New Meeting
 </$button>
 ```
+
+Note the use of `[UTC]` in the format string for the `now` macro. If you don't tell TiddlyWiki to use UTC, the time will be filled into the `at` field in your local time zone. Since TiddlyWiki assumes that date fields contain UTC timestamps, the time will get “converted” again when you display it, yielding an incorrect time (off by whatever your UTC offset is).
+
+You can hop ahead to [[Working with Dates]] if you'd like to learn more about this.
