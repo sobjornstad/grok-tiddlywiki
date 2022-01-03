@@ -1,9 +1,9 @@
-answer: `<$vars one="1" two="2"> ... </$vars>`
+answer: `<$let one="1" two="2"> ... </$let>`
 created: 20210206230537330
 modified: 20210512023552611
 origin: Miscellaneous Widgets
 qtype: rememberq
-question: Write a `$vars` widget that sets the variable `one` to `1` and the variable `two` to `2`.
+question: Write a `$let` widget that sets the variable `one` to `1` and the variable `two` to `2`.
 tags: Takeaway
 title: Ta:20210206230535658
 type: text/vnd.tiddlywiki

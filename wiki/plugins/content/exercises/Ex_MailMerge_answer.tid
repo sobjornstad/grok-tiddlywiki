@@ -1,5 +1,5 @@
 created: 20201122235533944
-modified: 20210326025720971
+modified: 20220103170507084
 tags: Answer
 title: Ex:MailMerge/answer
 type: text/vnd.tiddlywiki
@@ -58,7 +58,7 @@ Subject: <$edit-text tiddler="$:/temp/mailmergesubject" tag="input" default=""/>
     {{!!email}}
   </td>
   <td>
-    <$vars
+    <$let
       contactEmail={{!!email}}
       merger=<<currentTiddler>>
       templateName={{$:/temp/mailmergetemplate}}
@@ -70,7 +70,7 @@ Subject: <$edit-text tiddler="$:/temp/mailmergesubject" tag="input" default=""/>
 
     </$set>
     </$wikify>
-    </$vars>
+    </$let>
 
   </td>
   </tr>
@@ -122,7 +122,7 @@ Filling in the first two columns is quite straightforward. Note that the list is
 
 ```html
   <td>
-    <$vars
+    <$let
       contactEmail={{!!email}}
       merger=<<currentTiddler>>
       templateName={{$:/temp/mailmergetemplate}}
@@ -157,7 +157,7 @@ Lastly, we create the link using the `concat` macro, which reads from all the va
 ```html
   </$set>
   </$wikify>
-  </$vars>
+  </$let>
 
   </td>
   </tr>

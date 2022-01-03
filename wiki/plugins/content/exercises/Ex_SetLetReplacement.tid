@@ -1,0 +1,10 @@
+complete: 
+created: 20210206220327975
+length: m
+modified: 20220103170539532
+origin: Miscellaneous Widgets
+tags: Exercise
+title: Ex:SetLetReplacement
+type: text/vnd.tiddlywiki
+
+Locate several places in your sample wiki where you have used `$set` widgets and replace them with equivalent `$let` widgets.

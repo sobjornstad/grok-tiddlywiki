@@ -1,5 +1,5 @@
 created: 20200605153253139
-modified: 20210409203429985
+modified: 20220103170432924
 tags: Answer
 title: Ex:MethodsOfTransclusion/answer
 type: text/vnd.tiddlywiki
@@ -51,11 +51,11 @@ Similarly but a little bit more cleverly, `{{JaneDoe||JaneDoe}}` (transclude the
 Here are two other ways that use widgets we haven't seen yet:
 
 ```html
-<$vars currentTiddler=JaneDoe>
+<$let currentTiddler=JaneDoe>
 
   {{!!text}}
 
-</$vars>
+</$let>
 ```
 
 ```html

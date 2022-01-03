@@ -1,6 +1,6 @@
 created: 20210206154042167
 description: The `qualify` macro lets you avoid having state in one use of a template affect another use of a template.
-modified: 20210317012814076
+modified: 20220103170403292
 parent: Tips and Tricks
 tags: Section
 title: Qualification
@@ -11,7 +11,7 @@ When we write templates that rely on ''maintaining state'' (that is, values stor
 This will become more clear with an example. Put the following on a template called `SelectiveTemplate` in your example wiki:
 
 ```html
-<$vars stateTiddlerName="$:/temp/IsOpen">
+<$let stateTiddlerName="$:/temp/IsOpen">
 	<$reveal state=<<stateTiddlerName>> type="match" text="yes">
 			<$button set=<<stateTiddlerName>> setTo="no">Close</$button>
 
@@ -21,7 +21,7 @@ This will become more clear with an example. Put the following on a template cal
 	<$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
 			<$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
 	</$reveal>
-</$vars>
+</$let>
 ```
 
 Leaving the template tiddler open, add a template transclusion `{{||SelectiveTemplate}}` to some other tiddler. Now, click the //Open// button on one of the tiddlers. You'll see that the other tiddler's expandable section opens as well.
@@ -33,7 +33,7 @@ One solution is to place the state in a field on the tiddler itself, using somet
 We can fix our example above using the `qualify` macro as follows:
 
 ```html
-<$vars stateTiddlerName=<<qualify "$:/temp/IsOpen">>>
+<$let stateTiddlerName=<<qualify "$:/temp/IsOpen">>>
 	<$reveal state=<<stateTiddlerName>> type="match" text="yes">
 			<$button set=<<stateTiddlerName>> setTo="no">Close</$button>
 
@@ -43,7 +43,7 @@ We can fix our example above using the `qualify` macro as follows:
 	<$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
 			<$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
 	</$reveal>
-</$vars>
+</$let>
 ```
  
 If you go look in `$:/temp` after clicking on each of the buttons, you'll see several unique tiddlers that look like `IsOpen-148223948` or `IsOpen--723342025`, each of which contains a unique value describing whether the expandable section is open.

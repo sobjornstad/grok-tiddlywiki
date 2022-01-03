@@ -1,9 +1,9 @@
 created: 20210208023017971
 length: s
-modified: 20210208022937976
+modified: 20220103170446227
 origin: Qualification
 tags: Exercise
 title: Ex:QualifyMultipleCalls
 type: text/vnd.tiddlywiki
 
-What happens if you remove the `$vars` widget and the `stateTiddlerName` variable from the above example and call `qualify` once every time that the name of the tiddler is needed?
+What happens if you remove the `$let` widget and the `stateTiddlerName` variable from the above example and call `qualify` once every time that the name of the tiddler is needed?

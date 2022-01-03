@@ -1,7 +1,7 @@
 created: 20210206210503975
-modified: 20210206230058232
+modified: 20220103165651799
 tags: 
-title: Sn:SetVsVars
+title: Sn:SetVsLet
 type: text/vnd.tiddlywiki
 
 <$set name="var1" value="one">
@@ -10,6 +10,6 @@ type: text/vnd.tiddlywiki
 </$set>
 </$set>
 
-<$vars var1="one" var2="two">
+<$let var1="one" var2="two">
 	<<var1>> <<var2>>
-</$vars>
+</$let>
