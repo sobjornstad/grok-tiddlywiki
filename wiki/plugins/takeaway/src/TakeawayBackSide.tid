@@ -1,13 +1,13 @@
 caption: Preview
 created: 20201229003054682
-modified: 20220103150349427
+modified: 20220103163741194
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayBackSide
 type: text/vnd.tiddlywiki
 
 <!-- Render the current tiddler as a TiddlyRemember note, whether Q&A or cloze type. -->
 
-\define sched-line() due:{{!!due}};ivl:{{!!ivl}};ease:{{!!ease}}0;lapses:{{{ [{!!lapses}!is[blank]else[0]] }}}
+\define sched-line() <$list filter="[all[current]has[due]has[ivl]has[ease]]" variable=_>due:{{!!due}};ivl:{{!!ivl}};ease:{{!!ease}}0;lapses:{{{ [{!!lapses}!is[blank]else[0]] }}}</$list>
 
 <$set name=qprefixed value={{{ [<needsContext>match[yes]!is[blank]then<currentTiddler>!search:question:regexp{$:/config/sobjornstad/TakeAway/Exporter/InhibitPrefixIfQuestionMatch}get[question]addprefix{$:/config/sobjornstad/TakeAway/Exporter/Prefix}] }}}>
 <$set name=qtext value={{{ [<qprefixed>is[blank]then{!!question}else<qprefixed>] }}}>
