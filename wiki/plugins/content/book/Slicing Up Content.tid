@@ -1,6 +1,6 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20210818155535963
+modified: 20220103155658370
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
@@ -58,7 +58,7 @@ You might wonder how takeaways, exercises, examples, and lies appear within sect
 
 !! In our sample wiki
 
-Office notes are a squishier domain than books, where it is much more difficult to draw neat lines between different nouns. Nevertheless, our tiddler types, which we discussed in [[Structuring Our Wiki]], are different classes of nouns. And as we started talking about [[knowledge tiddlers|Knowledge Tiddlers]], we worked to pull individual ideas into their own tiddlers. Fortunately, if it turns out a tiddler needs to be split up, or several tiddlers need to be combined, doing so is straightforward.
+Office notes are harder to slice up than books because the lines between the nouns involved are fuzzier; there often isn't one obvious place to split up a set of notes. Nevertheless, our tiddler types, which we discussed in [[Structuring Our Wiki]], are different classes of nouns. And as we started talking about [[knowledge tiddlers|Knowledge Tiddlers]], we worked to pull individual ideas into their own tiddlers. Fortunately, if it turns out a tiddler needs to be split up, or several tiddlers need to be combined, doing so is straightforward.
 
 
 !! Exercises
