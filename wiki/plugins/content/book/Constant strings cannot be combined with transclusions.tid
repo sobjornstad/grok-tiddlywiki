@@ -1,6 +1,6 @@
 created: 20210818025604551
 description: You often cannot combine a `{{transclusion}}` and some other text simply by placing them next to each other.
-modified: 20211005133547813
+modified: 20220103155140693
 parent: Common Misunderstandings
 tags: Section
 title: Constant strings cannot be combined with transclusions
@@ -40,7 +40,7 @@ There are {{Ltc:TwoWaysToConcatenate||LieToChildrenTemplate}} to //concatenate//
 
 !!! With a filter expression
 
-The filter expression is easier to understand and has fewer gotchas, so let's start with that. We use the `addsuffix` [[filter operator|Anatomy of Filter Steps]] to add more text to the end an existing input tiddler (or `addprefix` to add it to the beginning):
+The filter expression is easier to understand and has fewer gotchas, so let's start with that. We use the `addsuffix` [[filter operator|Anatomy of Filter Steps]] to add more text to the end of an existing input tiddler (or `addprefix` to add it to the beginning):
 
 {{Sn:GoodImageTransclusionFilter||MagicSnippet}}
 
