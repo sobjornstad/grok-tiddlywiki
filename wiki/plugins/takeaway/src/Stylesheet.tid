@@ -1,8 +1,13 @@
 created: 20201230011501771
-modified: 20210817222101510
+modified: 20220103150554231
 tags: $:/tags/Stylesheet
 title: $:/plugins/sobjornstad/TakeAway/Stylesheet
 type: text/vnd.tiddlywiki
+
+/* override spacing after clozes from TiddlyRemember so our links bar looks normal underneath it */
+div.remembercz {
+	margin-bottom: 22px; /* line-height of the selfidentification block */
+}
 
 .tr-nav {
   text-align: center;

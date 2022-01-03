@@ -1,22 +1,28 @@
 caption: Preview
 created: 20201229003054682
-modified: 20211129224824785
+modified: 20220103150349427
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayBackSide
 type: text/vnd.tiddlywiki
 
 <!-- Render the current tiddler as a TiddlyRemember note, whether Q&A or cloze type. -->
 
+\define sched-line() due:{{!!due}};ivl:{{!!ivl}};ease:{{!!ease}}0;lapses:{{{ [{!!lapses}!is[blank]else[0]] }}}
+
 <$set name=qprefixed value={{{ [<needsContext>match[yes]!is[blank]then<currentTiddler>!search:question:regexp{$:/config/sobjornstad/TakeAway/Exporter/InhibitPrefixIfQuestionMatch}get[question]addprefix{$:/config/sobjornstad/TakeAway/Exporter/Prefix}] }}}>
 <$set name=qtext value={{{ [<qprefixed>is[blank]then{!!question}else<qprefixed>] }}}>
 <$set name="qid" value={{{ [<previewTakeawayType>!is[blank]then[Preview]] ~[{!!title}split[:]last[]] }}}>
 
 	<$list filter="[<previewTakeawayType>match[rememberq]] ~[<currentTiddler>qtype[rememberq]]" variable=_>
-		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id=<<qid>> reference={{!!origin}}/>
+		<$wikify name="sched-info" text=<<sched-line>>>
+		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id=<<qid>> reference={{!!origin}} sched=<<sched-info>>/>
+		</$wikify>
 	</$list>
 
 	<$list filter="[<previewTakeawayType>match[remembercz]] ~[<currentTiddler>qtype[remembercz]]" variable=_>
-		<$macrocall $name=remembercz id=<<qid>> text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}}/>
+		<$wikify name="sched-info" text=<<sched-line>>>
+		<$macrocall $name=remembercz id=<<qid>> text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}} sched=<<sched-info>>/>
+		</$wikify>
 	</$list>
 
 	<$reveal text="yes" type="match" default=<<requireQtype>>>
