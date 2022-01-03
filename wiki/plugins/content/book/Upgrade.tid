@@ -1,7 +1,7 @@
 created: 20210407135618740
-modified: 20210521205515333
+modified: 20220103163946050
 tags: Fragment
 title: Upgrade
 type: text/vnd.tiddlywiki
 
-To update an old copy of //Grok TiddlyWiki// to this version without losing your takeaway progress and other customizations, drag the following links into your wiki: <$link to="$:/plugins/sobjornstad/GrokTiddlyWiki"><$text text={{{ [[Grok TiddlyWiki version ]addsuffix{Metadata##version}] }}}/></$link>; <$link to="$:/plugins/sobjornstad/TakeAway"><$set name="ta-version" value={{{ [[$:/plugins/sobjornstad/TakeAway]get[version]] }}}><$text text={{{ [[TakeAway version ]addsuffix<ta-version>] }}}/></$set></$link>. Sections, takeaways, exercises, and any other tiddlers that you have changed will be untouched during an upgrade.
+To update an old copy of //Grok TiddlyWiki// to this version without losing your takeaway progress and other customizations, drag the following links into your wiki: <$link to="$:/plugins/sobjornstad/GrokTiddlyWiki"><$text text={{{ [[Grok TiddlyWiki version ]addsuffix{Metadata##version}] }}}/></$link>; <$link to="$:/plugins/sobjornstad/TakeAway"><$set name="ta-version" value={{{ [[$:/plugins/sobjornstad/TakeAway]get[version]] }}}><$text text={{{ [[TakeAway version ]addsuffix<ta-version>] }}}/></$set></$link>; <$link to="$:/plugins/sobjornstad/TiddlyRemember"><$set name="tr-version" value={{{ [[$:/plugins/sobjornstad/TiddlyRemember]get[version]] }}}><$text text={{{ [[TiddlyRemember version ]addsuffix<tr-version>] }}}/></$set></$link>. Sections, takeaways, exercises, and any other tiddlers that you have changed will be untouched during an upgrade.
