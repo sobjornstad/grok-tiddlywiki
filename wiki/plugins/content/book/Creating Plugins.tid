@@ -1,6 +1,6 @@
 created: 20201124224911613
 description: You can share your custom TiddlyWiki tools with other wikis and users by extracting them into plugins.
-modified: 20210502163507094
+modified: 20220103160555366
 parent: Getting Technical
 tags: Section
 title: Creating Plugins
@@ -29,7 +29,7 @@ Then ''add a `plugin.info` file'' with some metadata in the plugin's folder (edi
     "version": "0.0.1",
     "core-version": ">=5.0.8",
     "source": "https://github.com/yourgithub/pluginname",
-    "list": "readme license"
+    "list": "readme license",
     "plugin-type": "plugin"
 }
 ```
