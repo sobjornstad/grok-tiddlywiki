@@ -1,6 +1,6 @@
 created: 20210115203325002
 description: Wikitext is a markup language used to format tiddlers.
-modified: 20210408175519881
+modified: 20220103154922740
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Wikitext
@@ -16,7 +16,7 @@ The specific markup language TiddlyWiki uses is called ''wikitext''. It is simil
 
 We'll look at some of the most important and popular wikitext syntax shortly. (//Syntax// comprises the rules for producing correctly formed sentences or expressions in a natural or computer language.) You can also visit the [[Wikitext Reference]] appendix at any time to look up the syntax.
 
-Another useful tool as you're learning is TiddlyWiki's ''editor toolbar'', which includes a number of buttons that insert common markup. For instance, you can click the italics button to insert the text `////` and put the cursor in between the slashes, or click the button with some text already highlighted to surround it with slashes. TiddlyWiki also offers a side-by-side preview, so you can write wikitext on the left and see the displayed version on the right. Here's an example of what writing in wikitext looks like with the side-by-side preview (from my [[Zettelkasten|Public Wikis]]):
+Another useful tool as you're learning is TiddlyWiki's ''editor toolbar'', which includes a number of buttons that insert common markup. For instance, you can click the italics button to insert the text `////` and put the cursor in between the slashes, or click the button with some text already highlighted to surround it with slashes. TiddlyWiki also offers a side-by-side preview, so you can write wikitext on the left and see the displayed version on the right; we'll see how to do this when we start writing tiddlers in the [[Journal Tiddlers]] section. Here's an example of what writing in wikitext looks like with the side-by-side preview (from my [[Zettelkasten|Public Wikis]]):
 
 {{side-by-side-wikitext.png}}
 
