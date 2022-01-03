@@ -1,5 +1,5 @@
 created: 20201230010120117
-modified: 20210817222337196
+modified: 20220103151340329
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/TakeawayFrontSide
 type: text/vnd.tiddlywiki
@@ -22,6 +22,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[<currentTiddler>qtype[remembercz]]" variable=_>
 	<div class="remembercz">
 		<span class="cloze-identifier">cloze: </span>
-		<span class="cloze-text"><$wikify name="w" mode="inline" output="html" text={{{ [{!!question}splitregexp[{.*?}]join[<span class="gtw-cloze-occlusion">{…}</span>]] }}}><<w>></$wikify></span>
+		<span class="cloze-text">{{!!question}}</span>
+		<span class="cloze-display"><$wikify name="w" mode="inline" output="html" text={{{ [{!!question}splitregexp[{.*?}]join[<span class="gtw-cloze-occlusion">{…}</span>]] }}}><<w>></$wikify></span>
 	</div>
 </$list>
