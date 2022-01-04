@@ -1,9 +1,0 @@
-answer: You cannot call macros with parameters within a filter.
-created: 20201231202740403
-modified: 20210409220141322
-origin: Filters and Transclusions
-qtype: rememberq
-question: What is wrong with the filter `[tag[Meeting]addprefix<getPrefixForTagType "Meeting">]`?
-tags: Takeaway
-title: Ta:20201231202738960
-type: text/vnd.tiddlywiki
