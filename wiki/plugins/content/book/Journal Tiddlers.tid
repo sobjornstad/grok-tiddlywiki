@@ -1,6 +1,6 @@
 created: 20200530202215791
 description: How to create journal tiddlers and use basic wikitext formatting features.
-modified: 20210504020220895
+modified: 20220105141307408
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Journal Tiddlers
@@ -27,6 +27,8 @@ You might like to start out your day's journal entry with some basic structure r
 {{Sn:JournalStartingText||MagicSnippet}}
 
 The `!!` is the wikitext syntax for a top-level section heading, while the `*`'s create a list.
+
+//Note//: In //Grok TiddlyWiki//, heading 2 (`!!`) has been customized to show a horizontal line under the title, as you can see in the preview above. You won't find this line in a default TiddlyWiki. This custom styling is configured via [[Stylesheets]] (but those are way ahead of our current TiddlyWiki knowledge!).
 
 !!! Tags
 
