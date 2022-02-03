@@ -84,8 +84,10 @@ You can also link to files ''on your computer'' by placing them in a folder next
 
 ```html
 [img [attachments/myimage.png]]
-[[See my PDF|attachments/mydocument.pdf]]
+[ext[See my PDF|attachments/mydocument.pdf]]
 ```
+
+Notice the `ext`, and the lack of a space before the `[`. This stands for //external// and is required so TiddlyWiki can distinguish between a missing tiddler called `attachments/mydocument.pdf` and a file with that name. TiddlyWiki can safely assume that a link to something beginning with `https://` or `file://` is intended to be external, but with a path relative to the wiki like this one, it's not so clear. (In the case of `img`, you don't have to specify: TiddlyWiki uses a tiddler with the provided name if it exists, and if it doesn't it tries treating it as an external path on your computer's filesystem.)
 
 </$details><$details summary="_canonical_uri">
 
