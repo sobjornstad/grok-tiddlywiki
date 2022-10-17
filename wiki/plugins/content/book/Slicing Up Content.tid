@@ -1,6 +1,6 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20220103155658370
+modified: 20221015161817042
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
@@ -49,7 +49,7 @@ When you get to entirely different functions -- for instance, your class notes a
 
 !! In //Grok TiddlyWiki//
 
-In the //Grok TiddlyWiki// wiki, each chapter and section has a tiddler. Sections use the `parent` field to describe which chapter they're a part of (tags would work just as well here, but I wanted to keep the list of tags small and neat in this book). Each takeaway, live example, lie, and exercise has its own tiddler. Answers to exercises have their own tiddler.
+In the //Grok TiddlyWiki// wiki, each chapter and section has a tiddler. Sections use the `parent` field to describe which chapter they're a part of; tags would work just as well here, but I wanted to keep the list of tags small and neat in this book. Each takeaway, live example, lie (link with a dashed underline), and exercise has its own tiddler. Answers to exercises have their own tiddler.
 
 You can see that the book is neatly divided into its component parts and concepts by this model. Some of the section tiddlers are a little longer than I would consider ideal, but I felt keeping a one-to-one correspondence between tiddlers and sections of the book was more important than the size of those tiddlers, and if a section got too long, I looked to split up the section.
 

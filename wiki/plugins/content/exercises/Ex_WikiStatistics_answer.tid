@@ -1,5 +1,5 @@
 created: 20201122040339373
-modified: 20201122171106156
+modified: 20221015160609158
 tags: Answer
 title: Ex:WikiStatistics/answer
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 ```html
 <ul>
   <li>There are <$text text={{{ [tag[Contact]count[]] }}}/> people in this wiki.</li>
-  <li>There are <$text text={{{ [tag[Meeting]links[]!tag[Contact]count[]] }}}/> non-contact tiddlers linked from meetings.</li>
+  <li>There are <$text text={{{ [tag[Meeting]links[]count[]] }}}/> tiddlers linked from meetings.</li>
   <$set name="totalTiddlers" value={{{ [!is[system]count[]] }}}>
     <li><$text text={{{ [tag[Contact]count[]divide<totalTiddlers>multiply[100]precision[3]] }}}/>% of all non-system tiddlers in the wiki are contacts.</li>
   </$set>

@@ -1,6 +1,6 @@
 created: 20200717225935255
 description: Almost everything in TiddlyWiki is controlled by tiddlers; system tiddlers are those hidden “meta-tiddlers” that control the wiki rather than containing your actual content.
-modified: 20210418132849099
+modified: 20221015162205861
 parent: Looking Under the Hood
 tags: Section Concept
 title: System Tiddlers
@@ -14,7 +14,7 @@ If everything is made up of these special tiddlers, you may be wondering why you
 
 Aside from their names and the fact that tiddlers with those names are hidden from most views, there is nothing special or different about system tiddlers as compared to “normal” tiddlers.
 
-System tiddlers are ''organized into a hierarchy'' by giving them names with slashes separating each folder, much like a computer's file system. For instance, the default height of the text box presented when you edit a tiddler is stored in a tiddler called [[$:/config/TextEditor/EditorHeight/Height]].
+System tiddlers are ''organized into a hierarchy'' by giving them names with slashes separating each folder, much like a computer's file system.  For instance, the default height of the text box presented when you edit a tiddler is stored in a tiddler called [[$:/config/TextEditor/EditorHeight/Height]]. (It's worth noting that no actual object representing these “folders” is created within your wiki; your wiki is just one big pile of tiddlers, and some of them happen to have slashes in their names which TiddlyWiki uses to display them in a tree. But //folder// is a useful way to describe each level of the hierarchy.)
 
 Important top-level folders in this hierarchy include:
 

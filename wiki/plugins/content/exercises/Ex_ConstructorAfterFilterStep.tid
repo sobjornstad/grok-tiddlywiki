@@ -1,11 +1,11 @@
 created: 20201230212136525
 length: m
-modified: 20210203164958757
+modified: 20221015161027735
 origin: Anatomy of Filter Steps
 tags: Exercise
 title: Ex:ConstructorAfterFilterStep
 type: text/vnd.tiddlywiki
 
-What do you think happens if you run the filter `[tag[Person]title[EmployeeInformationSystem]tag[Application]]`? Assume that the `EmployeeInformationSystem` tiddler is tagged `Application` but not `Person`.
+What do you think happens if you run the filter `[tag[Contact]title[EmployeeInformationSystem]tag[Application]]`? Assume that the `EmployeeInformationSystem` tiddler is tagged `Application` but not `Contact`.
 
 Check your answer by running the filter in TiddlyWiki, after ensuring that `EmployeeInformationSystem` is tagged appropriately.
