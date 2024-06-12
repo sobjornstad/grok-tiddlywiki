@@ -1,6 +1,6 @@
 created: 20200603023508492
 description: TiddlyWiki can produce hierarchical tables of contents from tag structures.
-modified: 20210817202551965
+modified: 20240612031750538
 parent: Filing and Organizing
 tags: Section
 title: Creating Hierarchies with a Table of Contents
@@ -52,6 +52,24 @@ All right, third time's the charm:
 ```
 
 Ah, that's better! (If only it were so easy to solve annoying behavior in all of tech.) Now the chevrons only show up by the elements that can actually be expanded.
+
+<$details summary="Straight quotes and curly quotes">
+
+There are many types of quotation marks available on computers. The most common are "straight quotes" (available on most keyboards), where the opening and closing marks are identical, and “curly quotes,” where there are two different characters that point inward towards the quoted text. Curly quotes are preferable in text – you would never see straight quotes in a published book, for instance. But curly quotes aren't valid in most computer code, including [[wikitext|Wikitext]].
+
+In the examples above, for instance, if we had instead written:
+
+```html
+<<toc-expandable “OnboardingProcess”>>
+```
+
+...this would not work correctly.
+
+If you just type the quotation mark key on your keyboard when writing wikitext directly in TiddlyWiki, you'll usually be OK. However, if you write wikitext in another app, like Microsoft Word, and then try to paste it into TiddlyWiki, it's possible that app will automatically convert your straight quotes to curly quotes, and then your wikitext will mysteriously not work. In this case, you'll need to backspace the quotation marks and add new straight ones when you paste.
+
+A similar problem occurs on some Mac and iOS devices, which may be configured to automatically convert straight quotes to curly quotes in text entry fields across all applications, potentially including your web browser. If you find this happening on the Mac, you can turn it off by unchecking //Edit > Substitutions > Smart Quotes// on your menu bar.
+
+</$details>
 
 
 !! Ordering items
