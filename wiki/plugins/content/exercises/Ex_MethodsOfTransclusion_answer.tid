@@ -1,5 +1,5 @@
 created: 20200605153253139
-modified: 20220103170432924
+modified: 20240612033545863
 tags: Answer
 title: Ex:MethodsOfTransclusion/answer
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 This one's fun because TiddlyWiki gives you so many different ways to skin this cat. Here's perhaps the most obvious one:
 
 ```html
-<$set name=currentTiddler value=JaneDoe>
+<$set name="currentTiddler" value="JaneDoe">
 
   {{!!text}}
 
@@ -32,14 +32,6 @@ Here are several more possibilities:
 \end
 
 <<janedoe JaneDoe>>
-```
-
-```html
-<$list filter="[[JaneDoe]get[text]]">
-
-  <<currentTiddler>>
-
-</$list>
 ```
 
 Another way would be to create another tiddler, call it `JaneDoeStandin`, put `{{JaneDoe}}` in //that// tiddler, and then transclude `{{JaneDoeStandin}}`.
