@@ -1,6 +1,6 @@
 created: 20200530170355218
 description: Shadow tiddlers are tiddlers that are provided by plugins; they can be overridden if you want to customize a plugin.
-modified: 20210817225909687
+modified: 20240612032624560
 parent: Looking Under the Hood
 tags: Concept Section
 title: Shadow Tiddlers
@@ -44,6 +44,7 @@ By default, filters do not match shadow tiddlers that have not been overridden. 
 
 If you want to really get //all// tiddlers, both shadow and non-shadow, start your filter run with `all[tiddlers+shadows]`. You will frequently see this step at the start of filter runs in live examples in //Grok TiddlyWiki//, since much of the content of the book is packaged as shadow tiddlers in the $:/plugins/sobjornstad/GrokTiddlyWiki plugin.
 
+(Note that the `+` in `tiddlers+shadows` is entirely unrelated to the `+` [[filter run prefix|Multi-Run Filters]] – the `all` operator interprets it in a special way. A filter run prefix would never be found inside a parameter.) 
 
 !! Takeaways
 
