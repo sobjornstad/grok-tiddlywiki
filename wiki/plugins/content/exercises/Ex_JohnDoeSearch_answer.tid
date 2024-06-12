@@ -1,10 +1,10 @@
 created: 20200603175809322
 length: m
-modified: 20210131163656992
+modified: 20240612040429639
 tags: Answer
 title: Ex:JohnDoeSearch/answer
 type: text/vnd.tiddlywiki
 
-Uses of `JohnDoe` in the `title` and `text` fields of a tiddler appear when searching. Uses in other fields, however, such as the `family` field on `JaneDoe`, do not!
+Uses of `JohnDoe` in the `title`, `text`, and `tags` fields of a tiddler appear when searching. Uses in other fields, however, such as the `family` field on `JaneDoe`, do not.
 
 Later on, we'll learn some ways around this. In the meantime, it's good to keep in mind that user-defined fields are in many ways second-class citizens in TiddlyWiki. If you want to do much with them beyond creating them, you have to add those features yourself with plugins or custom logic. This is not to say that doing so is difficult, though!
