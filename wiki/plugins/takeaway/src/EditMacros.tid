@@ -1,5 +1,5 @@
 created: 20201230022210312
-modified: 20210408135855517
+modified: 20240612042844876
 tags: $:/tags/Macro
 title: $:/plugins/sobjornstad/TakeAway/EditMacros
 type: text/vnd.tiddlywiki
@@ -21,10 +21,7 @@ type: text/vnd.tiddlywiki
 \end
 
 \define setSeennessLink(buttonName, newValue, tooltip:"")
-	<$button class="tc-btn-invisible tc-tiddlylink" tooltip=<<__tooltip__>>>
-		<<setSeennessAction """$newValue$""">>
-		<<__buttonName__>>
-	</$button>
+<$button actions=<<setSeennessAction """$newValue$""">> class="tc-btn-invisible tc-tiddlylink" tooltip=<<__tooltip__>>><<__buttonName__>></$button>
 \end
 
 \define editLink()
@@ -36,7 +33,7 @@ type: text/vnd.tiddlywiki
 \end
 
 \define markSeenLink()
-	<<setSeennessLink "collect" "yes" tooltip:"Start showing this takeaway in reviews starting tomorrow.">>
+<<setSeennessLink "collect" "yes" tooltip:"Start showing this takeaway in reviews starting tomorrow.">>
 \end
 
 \define currentDueFilt() [all[current]!days:due[-1]] [all[current]days:due[0]] +[tag[Takeaway]seen[yes]has[due]]
