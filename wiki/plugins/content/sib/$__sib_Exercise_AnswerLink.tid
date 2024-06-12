@@ -1,15 +1,20 @@
 created: 20200718200300480
-modified: 20210206145709509
+modified: 20240612042307953
 tags: $:/tags/EditTemplate $:/tags/ViewTemplate
 title: $:/sib/Exercise/AnswerLink
 type: text/vnd.tiddlywiki
 
-<$list filter="[all[current]tag[Exercise]]">
+<% if [all[current]tag[Exercise]] %>
+
   Go to answer: {{{ [all[current]has[draft.of]get[draft.of]addsuffix[/answer]] ~[all[current]addsuffix[/answer]] }}}
 	{{||$:/sib/Exercise/CompletionCheckbox}}
-	
-</$list>
+<div>
+<<sendFeedbackLink icon:"{{$:/core/images/mail}}" tooltip:"Suggest an improvement to this section.">>
+</div>
 
-<$list filter="[all[current]tag[Answer]]">
+<% endif %>
+
+<% if [all[current]tag[Answer]] %>
   Go to question: {{{ [all[current]has[draft.of]get[draft.of]removesuffix[/answer]] ~[all[current]removesuffix[/answer]] }}}
-</$list>
+<% endif %>
+
