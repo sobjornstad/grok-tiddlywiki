@@ -1,6 +1,6 @@
 created: 20200531014330950
 description: How to organize meetings and knowledge into overarching projects.
-modified: 20240612023209970
+modified: 20240612035137020
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Project Tiddlers
@@ -23,7 +23,7 @@ Option (1) works, but if you have a large project, your project tiddler might be
 
 Option (2) is a solid choice and particularly easy to implement, but links carry less information about what exactly the relationship between the two tiddlers is than tags or fields do. With a link, we just know they're related in some way. With a field or tag, we can know specifically that the meeting is part of the project -- rather than the project being part of the meeting, or the project being mentioned in the meeting as a horrific disaster that needs to be avoided in the next project.
 
-Option (3) provides the most information about the precise relationship between the two tiddlers. However, since you'll be creating your own custom field, you'll have to create your own customizations in TiddlyWiki to make the field do anything useful aside from showing up in the “fields” section of the Info tab, so this requires extra work.
+Option (3) provides the most information about the precise relationship between the two tiddlers. However, since you'll be creating your own custom field, you'll have to create your own customizations in TiddlyWiki to make the field do anything useful aside from showing up in the “fields” section of the Info tab, so this requires extra work. (We'll learn how to do this kind of thing in [[chapter 6|Looking Under the Hood]].)
 
 Option (4) is easy, fast, and effective, and tags are understood as the primary means of creating hierarchies and memberships in various plugins and parts of TiddlyWiki's core. Additionally, you get the autocomplete functionality of tags when searching for a “whole” tiddler to attach your “part” tiddler to. This sounds like an obvious coup, but the disadvantage is that if you have a large wiki, you may end up cluttering up your tag space by using this mechanism for many different things -- that is, dozens or hundreds of tags will show up in your tag picker, making it harder to find the ones you want. There are a number of ways to mitigate this, such as [[color-coding them|Classifying Tags]] or adding prefixes to their names to describe their functions, but it's still a disadvantage, and some experienced users of TiddlyWiki prefer to use fields in many cases for this reason.
 
