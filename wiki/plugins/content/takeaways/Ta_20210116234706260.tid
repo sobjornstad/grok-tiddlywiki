@@ -1,9 +1,9 @@
 answer: An external link.
 created: 20210116234707458
-modified: 20210408180703664
+modified: 20240612035518904
 origin: Links
 qtype: rememberq
-question: What kind of link does not define a relationship between two tiddlers when placed in a tiddler's `text` field?
+question: What kind of link does not represent a relationship between two tiddlers when placed in a tiddler's `text` field?
 tags: Takeaway
 title: Ta:20210116234706260
 type: text/vnd.tiddlywiki
