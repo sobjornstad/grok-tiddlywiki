@@ -1,6 +1,6 @@
 created: 20200531014330950
 description: How to organize meetings and knowledge into overarching projects.
-modified: 20210504021610224
+modified: 20240612023209970
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Project Tiddlers
@@ -12,7 +12,7 @@ What kind of information do we want to keep track of for projects? We might imag
 
 !! Project contents
 
-There's our project tiddler, but it's missing something: the meeting we had with Jane was definitely part of the company onboarding process. We need to relate these two tiddlers somehow. How should we do that? We have several sensible and straightforward options, along with many more silly ones. Here are the most obvious choices:
+There's our project tiddler, but it's missing something: the `EmployeeProfileSetupMeeting` [[we had with Jane|Meeting Tiddlers]] was definitely part of the company onboarding process. We need to relate these two tiddlers somehow. How should we do that? We have several sensible and straightforward options, along with many more silly ones. Here are the most obvious choices:
 
 # We could ''link to the meeting'' from the project tiddler.
 # We could ''link to the project'' from the meeting tiddler.
