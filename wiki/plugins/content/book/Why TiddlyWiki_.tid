@@ -1,6 +1,6 @@
 created: 20200531034640143
 description: What makes TiddlyWiki worth learning and using?
-modified: 20211129231939612
+modified: 20240614035046778
 parent: Front Matter
 tags: Section
 title: Why TiddlyWiki?
@@ -18,7 +18,7 @@ Because TiddlyWiki offers an entirely new way of thinking (there's a reason this
 
 Traditional information-management systems, both paper and digital, encourage or require you to put notes into “boxes” of one kind or another: notebooks, pages, categories, hierarchies. Notes, once added, stay static, stuck in the same place and time forever, so they quickly get out of date and you forget about them.
 
-Categories and hierarchies are sometimes unfairly maligned. In reality, they are powerful supplemental tools for thinking; sometimes, in order to think about a topic, we need to add additional order to a set of ideas to [[reduce them to a level of complexity we're capable of thinking about|https://zettelkasten.sorenbjornstad.com/#InformationalJig]], and these tools give us that ability. But as a general-purpose organization method, these tools are terrible: they prevent ideas from being effectively used outside their original context and force us to collapse distinctions that we might prefer to maintain. For notes to reach their full potential, we need to allow them to relate in a greater variety of ways. Further, we don't naturally think in hierarchies except when we are tackling a specific problem; we think in links and webs of ideas.
+Categories and hierarchies are sometimes unfairly maligned. In reality, they are powerful supplemental tools for thinking; sometimes, in order to think about a topic, we need to add additional order to a set of ideas to [[reduce them to a level of complexity we're capable of thinking about|https://mosmu.se/#InformationalJig]], and these tools give us that ability. But as a general-purpose organization method, these tools are terrible: they prevent ideas from being effectively used outside their original context and force us to collapse distinctions that we might prefer to maintain. For notes to reach their full potential, we need to allow them to relate in a greater variety of ways. Further, we don't naturally think in hierarchies except when we are tackling a specific problem; we think in links and webs of ideas.
 
 If you doubt that we don't think in hierarchies, try this. Think of the color white. You can take this idea in an almost infinite number of directions with no effort at all: What are some white things? What other colors are there? What categories does white fit into? What metaphors involve whiteness? And from each of the ideas you generate as answers to those questions, you can quickly generate another set of associations. Three or four jumps, and the relationship between the two ideas is unrecoverable except by the path you traced. This is not the mark of hierarchical organization.
 
@@ -63,7 +63,7 @@ While I love TiddlyWiki, no software is perfect, so it's worth pointing out some
 
 !! Experience TW for yourself
 
-If you have around an hour, check out the video [[Experience TiddlyWiki Fluency: Creating a Reading List|https://www.youtube.com/watch?v=vsdDs7oOLlg]], which will show you the experience of building a small tool in TiddlyWiki. You can also play around in some [[Public Wikis]], such as [[my Zettelkasten|https://zettelkasten.sorenbjornstad.com]].
+If you have around an hour, check out the video [[Experience TiddlyWiki Fluency: Creating a Reading List|https://www.youtube.com/watch?v=vsdDs7oOLlg]], which will show you the experience of building a small tool in TiddlyWiki. You can also play around in some [[Public Wikis]], such as my [[Mosaic Muse|https://mosmu.se]].
 
 <iframe style="width: 100%; height: 3in;" src="https://www.youtube.com/embed/vsdDs7oOLlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

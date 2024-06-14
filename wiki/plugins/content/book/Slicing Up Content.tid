@@ -1,6 +1,6 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20221015161817042
+modified: 20240614035012661
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
@@ -40,7 +40,7 @@ To summarize, the key discipline of slicing up your tiddlers is to consider what
 
 Often people wonder if they should create one large wiki or lots of smaller wikis. As with most questions in life, the answer is “it depends.”
 
-Creating different wikis that have the same //function// is usually an antipattern. For instance, if you're a student, it's better not to create one wiki for your notes on your math class and another for your notes on your history class. It's not just possible but likely that you'll eventually find connections between your classes, and when you can [[link these completely different ideas together|https://zettelkasten.sorenbjornstad.com/#DontPartitionKnowledge]], you begin to understand much more about both disciplines and are far more likely to come up with entirely new ideas.
+Creating different wikis that have the same //function// is usually an antipattern. For instance, if you're a student, it's better not to create one wiki for your notes on your math class and another for your notes on your history class. It's not just possible but likely that you'll eventually find connections between your classes, and when you can [[link these completely different ideas together|https://mosmu.se/#DontPartitionKnowledge]], you begin to understand much more about both disciplines and are far more likely to come up with entirely new ideas.
 
 Further, you gain little benefit from a TiddlyWiki perspective from splitting them up. Presumably the design of your wiki and the plugins you include in it will not differ tremendously based on the subject matter -- the much more important element is that you're taking notes on a class. (Sure, you might need to add a plugin for math notation when you're taking math notes, but it won't get in the way of your history notes. And if you want to be able to limit your searches to a single class, you can place a tag or field on each tiddler to identify the class it goes with.) Meanwhile, if you create multiple wikis, you'll have to go duplicate any awesome new customizations you come up with in all of them, making extra work for yourself.
 

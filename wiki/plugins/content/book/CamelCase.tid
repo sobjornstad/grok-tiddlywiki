@@ -1,6 +1,6 @@
 created: 20200822214806325
 description: Whether you should use CamelCase titles, what makes something CamelCase, and how you can get rid of CamelCase linking.
-modified: 20240614015700212
+modified: 20240614034241661
 parent: Appendices
 tags: Section
 title: CamelCase
@@ -12,7 +12,7 @@ TiddlyWiki has an option to make CamelCase text (where the words are run togethe
 
 CamelCase makes it easier to link to things, but some people think it's ugly. The only general advice I can give is figure out what you like, and don't feel like you have to fall solidly on one side of the fence for every wiki. For my personal notes, I love CamelCase; for the wiki I wrote this book in, it's more irritating than helpful, since I want my page titles to be friendlier and I don't want the CamelCase titles I quote to become links.
 
-You can learn more about my decision to use CamelCase for my huge Zettelkasten project at the [[WikiCamelCase|https://zettelkasten.sorenbjornstad.com/#WikiCamelCase]] page there.
+You can learn more about my decision to use CamelCase for my Mosaic Muse notes system at the [[WikiCamelCase|https://mosmu.se/#WikiCamelCase]] page there.
 
 
 !! Escaping CamelCase words
