@@ -1,6 +1,6 @@
 created: 20201121233242024
 description: A collection of particularly essential or interesting community plugins.
-modified: 20210327183341374
+modified: 20240614045834512
 parent: Appendices
 tags: Section
 title: Useful Plugins
@@ -8,15 +8,14 @@ type: text/vnd.tiddlywiki
 
 This section collects some plugins I find particularly useful that you may want to check out as well. There are //many// more out there.
 
-* [[TW5 Locator|https://bimlas.gitlab.io/tw5-locator/]] -- table of contents on steroids. Also makes it possible to easily search in fields and do a wide variety of other tiddler-organization-and-searching-related things.
 * CodeMirror (find in the official plugins repository in //Control Panel > Plugins//) -- improves the text editor embedded in the edit view of TiddlyWiki with things like find-and-replace and keybinding sets to match popular editors like Emacs and Vim.
 * Highlight (find in the official plugins repository) -- syntax highlighting on code blocks.
 * KaTeX (find in the official plugins repository) -- insert mathematical notation and formulas between `$$double dollar signs$$` in your wiki.
-* [[kin filter|https://bimlas.gitlab.io/tw5-kin-filter/]] -- allow finding tagged or linked items anywhere in a multi-level hierarchy. Like `tags[]`, `links[]`, etc., but more powerful.
+* [[kin filter|https://bimlas.github.io/tw5-kin-filter/]] -- allow finding tagged or linked items anywhere in a multi-level hierarchy. Like `tags[]`, `links[]`, etc., but more powerful.
 * [[TiddlyTables|http://tiddlytables.tiddlyspot.com]] -- create pretty dynamic, interactive tables with less fussing with HTML
 * [[Shiraz|https://kookma.github.io/TW-Shiraz/]] -- adds Bootstrap CSS classes to TiddlyWiki for pretty formatting.
 * [[Relink|https://flibbles.github.io/tw5-relink/]] -- allows updating all references to a tiddler when renaming it; almost essential in large wikis where things change frequently.
 * [[TiddlyRemember|https://sobjornstad.github.io/TiddlyRemember/]] -- transfer the most important parts of your notes into your brain by writing flashcards in your wiki and syncing them to [[Anki|https://apps.ankiweb.net/]]. The TakeAway tools in this book are built on TiddlyRemember.
 * [[Date Picker|http://kixam.github.io/TW5-datePicker/]] -- to create fields that allow easily selecting dates and times, rather than manually typing in dates in TiddlyWiki's weird format.
 
-David Gifford's [[TiddlyWiki Toolmap|https://dynalist.io/d/zUP-nIWu2FFoXH-oM7L7d9DM]] is a brilliant, actively updated resource for finding plugins and other TiddlyWiki-related tools. The [[TiddlyWiki Links Aggregator|https://links.tiddlywiki.com]] is still in the early stages of development, but promises to be just as valuable.
+David Gifford's [[TiddlyWiki Toolmap|https://dynalist.io/d/zUP-nIWu2FFoXH-oM7L7d9DM]] and the community [[TiddlyWiki Links Aggregator|https://links.tiddlywiki.org/]] are brilliant resources for finding plugins and other TiddlyWiki-related tools.

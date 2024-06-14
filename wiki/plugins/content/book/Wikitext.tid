@@ -1,6 +1,6 @@
 created: 20210115203325002
 description: Wikitext is a markup language used to format tiddlers.
-modified: 20240614035315795
+modified: 20240614043856659
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Wikitext
@@ -10,13 +10,14 @@ Many text-editing and note-taking tools are //WYSIWYG// (“What You See is What
 
 TiddlyWiki takes a different approach: it uses a ''markup language'', or ''WYSIWYM'' paradigm (“What You See is What You Mean”). In this type of editor, you see only plain text while editing, and you include special characters or phrases (“markup”) along with the text to explain how it should be formatted when you view it. For instance, to see text in //italics// while viewing it, you put it between `//double slashes//` while editing.
 
-If you've never used a markup language before, this may seem like a primitive and overly difficult way to write content, and it's true that markup languages take a little longer to learn than WYSIWYG editors, but once you've learned them, they are more powerful. You'll see some of the advantages yourself as you work through this book, but if you're impatient, you can check out the [[Advantages of WYSIWYM]] appendix.
+If you've never used a markup language before, this may seem like a primitive and overly difficult way to write content, and it's true that markup languages take a little longer to learn than WYSIWYG editors, but once you've learned them, they are more powerful. (Check out the [[Advantages of WYSIWYM]] appendix for details.)
 
-The specific markup language TiddlyWiki uses is called ''wikitext''. It is similar, but not identical, to other popular markup languages like MediaWiki, Markdown, reStructuredText, and AsciiDoc.
+TiddlyWiki calls its markup language ''wikitext''. The basic structure of TiddlyWiki wikitext is similar to that of other popular markup languages like Markdown, MediaWiki, reStructuredText, and AsciiDoc. However, wikitext is more powerful than most other markup languages, because it offers expressions that pull data from and make decisions based on other tiddlers in your wiki. If you have some content stored somewhere in your wiki in a consistent format (which we'll learn how to do in this chapter and the next), you can use wikitext to slice and process it and display it in a different format -- it's like a spreadsheet for your notes. In fact, this facility is so flexible that the majority of TiddlyWiki itself is implemented in wikitext, rather than in a traditional programming language.
+
 
 We'll look at some of the most important and popular wikitext syntax shortly. (//Syntax// comprises the rules for producing correctly formed sentences or expressions in a natural or computer language.) You can also visit the [[Wikitext Reference]] appendix at any time to look up the syntax.
 
-Another useful tool as you're learning is TiddlyWiki's ''editor toolbar'', which includes a number of buttons that insert common markup. For instance, you can click the italics button to insert the text `////` and put the cursor in between the slashes, or click the button with some text already highlighted to surround it with slashes. TiddlyWiki also offers a side-by-side preview, so you can write wikitext on the left and see the displayed version on the right; we'll see how to do this when we start writing tiddlers in the [[Journal Tiddlers]] section. Here's an example of what writing in wikitext looks like with the side-by-side preview (from my [[Mosaic Muse|Public Wikis]] wiki):
+A useful tool as you're learning is TiddlyWiki's ''editor toolbar'', which includes a number of buttons that insert common markup. For instance, you can click the italics button to insert the text `////` and put the cursor in between the slashes, or click the button with some text already highlighted to surround it with slashes. TiddlyWiki also offers a side-by-side preview, so you can write wikitext on the left and see the displayed version on the right; we'll see how to do this when we start writing tiddlers in the [[Journal Tiddlers]] section. Here's an example of what writing in wikitext looks like with the side-by-side preview (from my [[Mosaic Muse|Public Wikis]] wiki):
 
 [img[side-by-side-wikitext.png]]
 
