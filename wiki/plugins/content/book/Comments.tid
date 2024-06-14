@@ -1,12 +1,12 @@
 created: 20210117011508196
 description: You can leave notes to yourself in your wikitext that don't appear in the output.
-modified: 20210315202721436
+modified: 20240614052821002
 parent: Filtering and Formatting
 tags: Section
 title: Comments
 type: text/vnd.tiddlywiki
 
-As you start trying to build more complicated functionality in wikitext, you may sometimes want to keep some information in your wikitext that doesn't appear in the rendered output. For instance, you might want to remind yourself why you chose to use a certain filter or HTML tag, or keep a copy of an old filter around while tinkering on a new filter so that you can restore to the old one if you mess something up.
+As you start trying to build more complicated functionality in wikitext, you may sometimes want to keep some information in your wikitext that doesn't appear in the rendered output. For instance, you might want to remind yourself why you chose to use a certain filter or HTML tag, or keep a copy of an old filter around while tinkering on a new filter so that you can return to the old one if you mess something up.
 
 This can be accomplished via ''comments''. TiddlyWiki piggybacks on HTML's comment syntax, which begins a comment section with `<!--` and ends it with `-->`. Comments can be used almost anywhere:
 

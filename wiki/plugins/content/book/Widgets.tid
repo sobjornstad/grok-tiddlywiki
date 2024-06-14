@@ -1,6 +1,6 @@
 created: 20201125033901397
 description: Widgets are a TiddlyWiki extension to HTML exposing wiki-specific functionality.
-modified: 20210315202332008
+modified: 20240614052640216
 parent: Filtering and Formatting
 tags: Section Concept
 title: Widgets
@@ -11,6 +11,8 @@ type: text/vnd.tiddlywiki
 All the formatting instructions you use in wikitext, like `//italics//` or `[[links]]`, have either a corresponding HTML element or a corresponding widget. Just like we sometimes need or want to use raw HTML elements for more control over formatting, we sometimes need or want to use raw widgets.
 
 There are also many widgets that have no equivalent at all in wikitext, because you can only make the symbols on the keyboard do so many things! We will be seeing some of these widgets throughout the rest of the book.
+
+You can also write your own widgets in wikitext. We'll learn how to do this later in the book.
 
 !! Widget example
 
