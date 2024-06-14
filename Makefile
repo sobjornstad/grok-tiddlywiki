@@ -50,7 +50,7 @@ _build/static/index.html: _build/static/Welcome%20to%20Grok%20TiddlyWiki.html
 
 ## Utility functions
 edit:
-	cd wiki && "$$(npm bin)/tiddlywiki" --listen port=8000
+	cd wiki && npx tiddlywiki --listen port=2000
 
 preview:
 	cd _build && twistd web -n --path=. --port="tcp:port=8001"

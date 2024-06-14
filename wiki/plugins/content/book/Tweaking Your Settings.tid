@@ -1,6 +1,6 @@
 created: 20200530195556288
 description: A quick look at some of the TiddlyWiki options you're most likely to want to change.
-modified: 20210504015001757
+modified: 20240614021124245
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Tweaking Your Settings
@@ -33,7 +33,7 @@ Close out of `GettingStarted` and click the gear icon <<textual-button "options-
 !! Settings tab
 
 ; Camel Case Wiki Links
-: It's worth calling this one out even though we don't need to change the setting for now, because it's very divisive. If you don't want text RunTogetherLikeThis to automatically become links, switch this setting off. There are advantages and disadvantages to both settings, and I use both settings in different wikis. See the [[CamelCase]] appendix for details. Because I generally like camel-case for personal notes, we'll leave it on for this series.
+: This setting is very divisive! For many years it was on by default; recently it changed to being off by default. With the setting on, text RunTogetherLikeThis will automatically become a link. There are advantages to both choices, and I have the setting on in some wikis and off in others. See the [[CamelCase]] appendix for details. Because I generally like camel-case for personal notes, and because there are a few gotchas with CamelCase that are worth learning about if you want to build a complete understanding of TiddlyWiki, we'll turn it on for our sample wiki.
 
 
 !! Takeaways

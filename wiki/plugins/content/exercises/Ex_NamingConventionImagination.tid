@@ -1,6 +1,6 @@
 created: 20200603182330605
 length: m
-modified: 20210504023335969
+modified: 20240614032249031
 origin: Naming Conventions
 tags: Exercise
 title: Ex:NamingConventionImagination
@@ -12,4 +12,4 @@ Identify a wiki you could imagine yourself creating, then write a set of naming 
 * Whether you use CamelCase titles, and if so, what you do if there's only one word or it otherwise doesn't match the capitalization rules required to create a link.
 * Any special rules that seem appropriate (e.g., names of sources end with their publication date or the word `Source`).
 
-You can refer to the [[naming conventions for my Zettelkasten|https://zettelkasten.sorenbjornstad.com/#OurNamingConventions]] for an example.
+You can refer to the [[naming conventions for my Mosaic Muse notes system|https://mosmu.se/#OurNamingConventions]] for an example.

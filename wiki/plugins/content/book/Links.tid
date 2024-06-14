@@ -1,6 +1,6 @@
 created: 20200530170256021
 description: Links tell TiddlyWiki what ideas (tiddlers) in your wiki are related to each other.
-modified: 20210504015504198
+modified: 20240614020036862
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Links
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 ''Links'' between [[tiddlers|Tiddlers]] are the most basic way to make your way around a TiddlyWiki and relate ideas to each other.
 
-Links may be created within a tiddler by surrounding the name of the tiddler to link to with `[[double square brackets]]`. Additionally, anything written in `CamelCase`, with no space between words and each word capitalized, will be automatically linked. (If you don't find camel-case linking helpful, you can turn it off, as we saw in [[Tweaking Your Settings]]. The utility of this feature depends on your personal preference and the purpose of your wiki.)
+Links may be created within a tiddler by surrounding the name of the tiddler to link to with `[[double square brackets]]`.
 
 If you want the displayed text to be different than the target of the link (i.e., where you'll go when you click on it), you can write `[[link text|TargetTiddlerName]]` (that's a pipe `|` character separating the two parts of the link, found above the enter key on a US keyboard).
 
@@ -35,6 +35,12 @@ In addition to the //internal// links we've discussed so far (ones that point to
 Since the targets of external links aren't part of TiddlyWiki, you don't get backlinks or link-based searches for external links.
 
 External links will always open in a new tab or window so that you don't lose your place in the wiki.
+
+!! CamelCase links
+
+Wikis have a long history of automatically turning phrases written in CamelCase, with no space between words and each word capitalized, into links to pages with that title. You can turn on this style of linking on the [[Settings tab of the control panel|Tweaking Your Settings]]. (In versions of TiddlyWiki prior to 5.3.0, CamelCase linking was enabled by default.)
+
+See the [[CamelCase]] appendix for more details on CamelCase.
  
 
 !! Takeaways

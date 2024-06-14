@@ -1,6 +1,6 @@
 created: 20200822214806325
 description: Whether you should use CamelCase titles, what makes something CamelCase, and how you can get rid of CamelCase linking.
-modified: 20210918131544342
+modified: 20240614015700212
 parent: Appendices
 tags: Section
 title: CamelCase
@@ -17,8 +17,7 @@ You can learn more about my decision to use CamelCase for my huge Zettelkasten p
 
 !! Escaping CamelCase words
 
-If you have a word that is in CamelCase, but you don't want it to be a link, you need to //escape// it by placing a tilde in front of it, like `~CamelCase`. The one irritating thing about this mechanism is that if you move the text to a wiki or tiddler that has CamelCase links turned off, the tilde actually appears in the text. I am not aware of any way to ensure a CamelCase word appears exactly as itself in either mode, although you can always place it in `backticks` if you don't mind it showing up in a different font.
-
+If you have a word that is in CamelCase, but you don't want it to be a link, you can //escape// it by placing a tilde in front of it, like `~CamelCase`. As of TiddlyWiki 5.3.0, the tilde won't be rendered whether CamelCase linking is on or not, so you can always do this if you think some CamelCase text might be incorporated in a wiki that has CamelCase linking on.
 
 !! Is it CamelCase?
 

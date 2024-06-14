@@ -1,6 +1,6 @@
 created: 20200530203548943
 description: How to track the people we meet at work, linking to the ideas they're involved in and modeling their attributes as discrete fields of information.
-modified: 20210818165302118
+modified: 20240614031742295
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Contact Tiddlers
@@ -12,13 +12,13 @@ The second tiddler type to consider is the ''contact''. Let's create a contact a
 
 Start by adding a [[link|Links]] to a contact to your [[journal tiddler|Journal Tiddlers]]. As a reminder, to edit an existing tiddler, click the pencil icon in the upper-right corner of the tiddler.
 
-Recall that to create a link, you can either surround the name of the tiddler you want to link to with `[[double square brackets]]`, or just write the text in [[CamelCase]]. I like CamelCase for personal notes for its simplicity of use, even though it's not quite as pretty, so let's try that. (Note that `JaneDoe` doesn't appear as a link in the following live example, because this book's wiki has CamelCase linking turned off -- but it will when you paste it into your own wiki, because we left it turned on there.)
+Recall that to create a link, you surround the name of the tiddler you want to link to with `[[double square brackets]]`, or, if you've turned on the appropriate option, write the text in [[CamelCase]]. Since we [[turned on this option|Tweaking Your Settings]] and I like CamelCase for personal notes for its simplicity of use, we'll try that. (Note that `JaneDoe` doesn't appear as a link in the following live example, because this book's wiki has CamelCase linking turned off -- but it will when you paste it into your own wiki, because we turned it on there.)
 
 {{Sn:JaneDoeJournalStart||MagicSnippet}}
 
 When you type or paste this into your journal tiddler, if you have the live preview open you'll see the text `JaneDoe` immediately change color to indicate a link. It will be in italics, which indicates the tiddler doesn't yet exist. Let's click the link to open the nonexistent tiddler, then click the edit button to create it.
 
-We'll want to tag our contacts `Contact`, so go ahead and click in the //Tag name// box under the title, type `Contact`, and press Enter. A <<tag-pill Contact>>tag pill will appear. Notice the drop-down menu that allows you to select an existing tag; you can continue typing to filter the list of tags, and use the up and down arrow keys and the Enter key to pick a tag from the list.
+We'll want to tag our contacts `Contact`, so go ahead and click in the //Tag name// box under the title, type `Contact`, and press Enter. A <<tag-pill Contact>> tag pill will appear. Notice the drop-down menu that allows you to select an existing tag; you can continue typing to filter the list of tags, and use the up and down arrow keys and the Enter key to pick a tag from the list.
 
 We don't necessarily even have to add any content to Jane's tiddler. Maybe to start with, we just want to let TiddlyWiki know that ''Jane is a contact''. So let's save the tiddler; either use the check icon <<textual-button "done-button">> again, or press Control+Enter (if you don't learn any other keyboard shortcuts, this is a really helpful one). If you look back up at the journal tiddler, you'll see that `JaneDoe` is no longer in italics, meaning that tiddler now exists.
 
@@ -83,9 +83,10 @@ To actually add the fields, look under the text of the tiddler where it says //A
 
 A couple of notes about fields:
 
-* We'll want to be sure we ''use the same field names'' on every contact tiddler, or else we won't be able to cross-reference the values across different tiddlers. The drop-down for //field name// will show the names you've used in the past to reduce the chances of misremembering what you called it.
+* We'll want to be sure we ''use the same field names'' on every contact tiddler, or else we won't be able to cross-reference the values across different tiddlers. The drop-down for //field name// will show the names you've used in the past to reduce the chances of misremembering what you called it. Like tiddler names, field names are case-sensitive.
 * Similarly, it's a good idea to be sure to use a ''consistent format'' across all tiddlers. For instance, for the phone number, decide that you use the `nnn-nnn-nnnn` format, rather than `nnnnnnnnnn` or `(nnn) nnn-nnnn`, and then use that across all contact tiddlers.
 * The `family` field is an example of a ''tiddler list'' (or just ''list''), which consists of tiddler names separated by spaces. If your tiddler names have spaces in them, you put each tiddler name in double square brackets as if it were a link: `[[John Doe]] [[Emily Doe]]`. TiddlyWiki understands that lists are a series of separate tiddler names and can work with the values individually. We'll learn [[more about lists|Ordering Tiddlers]] in the next chapter.
+*  Field names conventionally ''contain only lowercase letters and hyphens'' (`-`). (Once upon a time, other characters were entirely disallowed.) Unless you have a good reason to do something else, it makes sense to follow this convention; aside from it being common practice, this draws a clear distinction between tiddler names (usually capitalized) and field names (usually lowercase), and any [[filters|Filters]] you write will be cleaner.
 
 Go ahead and save the `JaneDoe` tiddler. You'll see that your custom fields don't show up anywhere on the tiddler itself, but if you click the info button <<textual-button "info-button">> and then the //Fields// tab, they'll appear there.
 

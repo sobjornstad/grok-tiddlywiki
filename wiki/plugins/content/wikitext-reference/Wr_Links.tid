@@ -1,6 +1,6 @@
 caption: {{$:/core/images/link}} Links
 created: 20210131145925457
-modified: 20210320191211734
+modified: 20240614032354443
 tags: [[Wikitext Reference]]
 title: Wr:Links
 type: text/vnd.tiddlywiki
@@ -15,4 +15,4 @@ URLs or paths to files are automatically linked if they appear in the text of yo
 
 {{Sn:WikitextExtForce||MagicSnippet}}
 
-If CamelCase links are on in the control panel, words in CamelCase are automatically turned into links. If you want to prevent a CamelCase word from turning into a link, precede it with a tilde: `~CamelCase` (note that the tilde will appear literally in the output if you have camel-case linking off, though). See the [[CamelCase appendix|CamelCase]] for details.
+If CamelCase links are on in the control panel, words in CamelCase are automatically turned into links. If you want to prevent a CamelCase word from turning into a link, prefix it with a tilde: `~CamelCase`. See the [[CamelCase appendix|CamelCase]] for details.

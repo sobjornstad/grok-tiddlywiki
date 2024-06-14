@@ -1,7 +1,7 @@
 created: 20210207000729290
-modified: 20210817231602214
+modified: 20240614032109334
 tags: Fragment
 title: Datetime Format
 type: text/vnd.tiddlywiki
 
-TiddlyWiki uses an awkward format for dates and times: the four-digit year, the two-digit month, the two-digit day, the two-digit 24-hour hour, the two-digit minute, the two-digit second, and the three-digit milliseconds, all run together, in the UTC timezone (colloquially known as {{Ltc:GmtUtc||LieToChildrenTemplate}}). So if it's 8:31:41 PM my time on May 30, 2020 right now, Central Daylight Time (UTC-5), the time according to TiddlyWiki is 20200531013141000 (it's on the 31st at 1am because I have to add 5 hours to get to UTC).
+TiddlyWiki uses an awkward format for dates and times: the four-digit year, the two-digit month, the two-digit day, the two-digit 24-hour hour, the two-digit minute, the two-digit second, and the three-digit milliseconds, all run together, in the UTC timezone (colloquially known as {{Ltc:GmtUtc||LieToChildrenTemplate}}). So if it's 8:31:41 PM my time on May 30, 2024 right now, Central Daylight Time (UTC-5), the time according to TiddlyWiki is 20240531013141000 (it's on the 31st at 1am because I have to add 5 hours to get to UTC).
