@@ -1,9 +1,9 @@
 created: 20210409193632190
 length: s
-modified: 20210409193808869
-origin: Macros
+modified: 20240616174359216
+origin: Procedures
 tags: Exercise
 title: Ex:EmptyMacroCall
 type: text/vnd.tiddlywiki
 
-Try calling a macro that doesn't exist (say, one called `notamacro`). What happens?
+Try calling a procedure that doesn't exist (say, one called `notaprocedure`). What happens?

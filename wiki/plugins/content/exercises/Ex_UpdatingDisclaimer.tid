@@ -1,9 +1,9 @@
 created: 20200603200939184
 length: s
-modified: 20210130174701624
+modified: 20240616142450663
 origin: Variables
 tags: Exercise
 title: Ex:UpdatingDisclaimer
 type: text/vnd.tiddlywiki
 
-Suppose that corporate decides it's time to update the disclaimer, and henceforth all documents need to say "doesn't" instead of "does not." Update the tiddler to make this change. Notice that, with the use of a variable, you need only make the change in one place, even if you included the disclaimer in hundreds of places.
+Suppose that corporate decides it's time to update the disclaimer, and henceforth all documents need to say “doesn't” instead of “does not.” Update the tiddler to make this change. Notice that, with the use of a variable, you need only make the change in one place, even if you included the disclaimer in hundreds of places.

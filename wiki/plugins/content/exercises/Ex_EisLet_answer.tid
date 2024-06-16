@@ -1,0 +1,25 @@
+created: 20240616143353115
+modified: 20240616143425516
+tags: Answer
+title: Ex:EisLet/answer
+type: text/vnd.tiddlywiki
+
+```html
+<$let
+	disclaimer="(This paragraph does not represent the formal opinion of my company.)"
+	eis="Employee Information System"
+>
+
+The <<eis>> at this nice company allows employees to perform tasks such as:
+
+* update their names and other personal information (on the front page after signing in)
+* view pay stubs ("remuneration" tab)
+* request vacation dates ("time off" tab)
+<<disclaimer>>
+
+You need to use the Really Annoying Five-Factor Authentication Process to get into the <<eis>> if it is a Tuesday, unless you have also purchased coffee (tea or pastries do not count) in the company cafeteria earlier in the day. <<disclaimer>>
+
+JaneDoe taught me about the <<eis>> in our EmployeeProfileSetupMeeting. <<disclaimer>>
+
+</$let>
+```

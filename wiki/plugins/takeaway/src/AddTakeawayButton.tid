@@ -1,0 +1,35 @@
+created: 20240615154834366
+modified: 20240615155933017
+tags: 
+title: $:/plugins/sobjornstad/TakeAway/AddTakeawayButton
+type: text/vnd.tiddlywiki
+
+\define create-takeaway-actions()
+	<$action-createtiddler
+		$basetitle="Tr:$(rightNow)$"
+		$savetitle="$:/temp/addq!!newtid"
+		tags="Takeaway"
+		$(fieldAttributes)$
+		qtype=<<takeawayType>>
+		origin=<<currentTiddler>>
+	/>
+	<$action-deletetiddler $tiddler="$:/temp/addq"/>
+\end create-takeaway-actions
+
+\procedure add-takeaway-button(takeawayType)
+	<$tiddler tiddler="$:/temp/addq">
+		<$let previewTakeawayType=<<takeawayType>>>
+			{{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
+		</$let>
+	</$tiddler>
+
+	<$let
+		rightNow=<<now "[UTC]YYYY0MM0DD0hh0mm0ss0XXX">>
+		qafields=`question=${ [{$:/temp/addq!!question}] }$ answer=${ [{$:/temp/addq!!answer}] }$`
+		czfields=`question=${ [{$:/temp/addq!!question}] }$`
+		fieldAttributes={{{ [<takeawayType>match[rememberq]then<qafields>else<czfields>] }}}
+	>
+		<$button actions=<<create-takeaway-actions>>>
+			Add takeaway
+		</$button>
+	</$let>

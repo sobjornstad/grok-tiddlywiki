@@ -1,10 +1,11 @@
 created: 20210818022144250
-modified: 20210818024337562
+modified: 20240615153933104
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/ContextualHelp/TakeawayReviewer
 type: text/vnd.tiddlywiki
 
-<$list filter=<<help-wanted "takeaway-reviewer">> variable=_>
+<% if [gtw.help-wanted[takeaway-reviewer]] %>
+
 <div class="tr-contextual-help">
 
 !!! Tip:
@@ -18,4 +19,5 @@ See the [[TakeAway help page on reviewing|TakeAway Help/Reviewing]] for more inf
 <div style="text-align: center;"><$button actions=<<help-seen "takeaway-reviewer">> class="tc-btn-invisible tc-tiddlylink">I've got it, don't remind me again</$button></div>
 
 </div>
-</$list>
+
+<% endif %>

@@ -1,44 +1,42 @@
 caption: Cloze deletion
 created: 20210817193451300
-modified: 20210817200212137
+modified: 20240615155930519
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/CreateNewCloze
 type: text/vnd.tiddlywiki
 
-\define getName() Tr:$(rightNow)$
+\whitespace trim
+\import [[$:/plugins/sobjornstad/TakeAway/AddTakeawayButton]]
 
 <table>
 <tr>
-	<th style="text-align: left;">Cloze</th><td class="gtw-question-input"><$edit-text tiddler="$:/temp/addq" tag=input default="" field="question" placeholder="e.g., In TiddlyWiki, everything is a {tiddler}."/></td>
+	<th style="text-align: left;">Cloze</th>
+	<td class="gtw-question-input">
+		<$edit-text
+			tiddler="$:/temp/addq"
+			tag=input
+			default=""
+			field="question"
+			placeholder="e.g., In TiddlyWiki, everything is a {tiddler}."
+		/>
+	</td>
 </tr>
 </table>
 
 <div>
-<$list filter="[{$:/temp/addq!!question}regexp[.*{.*}.*]]" emptyMessage="//Specify one or more words or phrases to occlude/hide with {single curly braces}.//" variable=_>
-<$reveal type="nomatch" state="$:/temp/addq!!question" text="">
 
-<$tiddler tiddler="$:/temp/addq">
-	<$set name="previewTakeawayType" value="remembercz">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
-	</$set>
-</$tiddler>
+<% if [{$:/temp/addq!!question}regexp[.*{.*}.*]] %>
 
-<$set name=rightNow value=<<now "[UTC]YYYY0MM0DD0hh0mm0ss0XXX">> >
-<$button>
-	<$action-createtiddler
-		$basetitle=<<getName>>
-		$savetitle="$:/temp/addq!!newtid"
-		tags="Takeaway"
-		question={{$:/temp/addq!!question}}
-		qtype="remembercz"
-		origin=<<currentTiddler>>
-	/>
-	<$action-deletetiddler $tiddler="$:/temp/addq"/>
+	<% if [[$:/temp/addq]get[question]!is[blank]] %>
+
+		<<add-takeaway-button remembercz>>
 		
-Add takeaway
-</$button>
-</$set>
-</$reveal>
-</$list>
+	<% endif %>
+	
+<% else %>
+
+	//Specify one or more words or phrases to occlude/hide with {single curly braces}.//
+
+<% endif %>
 
 </div>

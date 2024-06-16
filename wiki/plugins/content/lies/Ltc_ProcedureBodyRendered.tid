@@ -1,0 +1,8 @@
+created: 20240616165224649
+description: It will render this wikitext
+modified: 20240616171859918
+tags: Lie
+title: Ltc:ProcedureBodyRendered
+type: text/vnd.tiddlywiki
+
+There's a very important exception: if the procedure call is used as the value of an attribute, TiddlyWiki doesn't render anything or substitute any variables, it uses the procedure body literally, with any variable references inside it intact. We'll explore the consequences of this later.

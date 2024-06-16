@@ -1,9 +1,10 @@
 created: 20201229004207931
-modified: 20210817193946040
+modified: 20240615154811419
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/CreateNewTrNote
 type: text/vnd.tiddlywiki
 
-\define getName() Tr:$(rightNow)$
-
-<<tabs "$:/plugins/sobjornstad/TakeAway/CreateNewQa $:/plugins/sobjornstad/TakeAway/CreateNewCloze" default:"$:/plugins/sobjornstad/TakeAway/CreateNewQa">>
+<<tabs
+	"$:/plugins/sobjornstad/TakeAway/CreateNewQa $:/plugins/sobjornstad/TakeAway/CreateNewCloze" 
+	default:"$:/plugins/sobjornstad/TakeAway/CreateNewQa"
+>>

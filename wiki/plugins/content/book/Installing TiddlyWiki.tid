@@ -1,6 +1,6 @@
 created: 20200530172429726
 description: How to get TiddlyWiki set up on your computer.
-modified: 20210818005955868
+modified: 20240616140816266
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Installing TiddlyWiki
@@ -56,4 +56,4 @@ Before we proceed, just one more thing. You probably won't care much if you lose
 
 If you want to get started learning TiddlyWiki before developing a backup strategy, that's fair enough -- but if you don't already have everything on your hard drive backed up on a regular schedule, go put it on your to-do list or your calendar right now to come up with a backup strategy. Then you can come back and continue with the book.
 
-When you have the `GettingStarted` page of your new TiddlyWiki looking back at you, proceed to the next section.
+When you've opened your new wiki and have the `GettingStarted` page looking back at you, proceed to the next section.

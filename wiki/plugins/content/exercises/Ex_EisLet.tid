@@ -1,0 +1,9 @@
+created: 20240616143236245
+length: s
+modified: 20240616143322557
+origin: Variables
+tags: Exercise
+title: Ex:EisLet
+type: text/vnd.tiddlywiki
+
+Change the `EmployeeInformationSystem` from using two `$set` widgets to using one `$let` widget. Make sure all references still show up correctly.

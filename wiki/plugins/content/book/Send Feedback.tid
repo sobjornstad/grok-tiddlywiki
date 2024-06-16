@@ -1,5 +1,5 @@
 created: 20210102234130275
-modified: 20210407151645015
+modified: 20240616143501633
 tags: 
 title: Send Feedback
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ type: text/vnd.tiddlywiki
 	<tr>
 		<th>Tiddler</th>
 		<td>{{{ [{$:/temp/FeedbackCollector}get[target]] }}}<br>//<$text text={{{ [{$:/temp/FeedbackCollector}get[target]get[question]] }}}/>//</td>
-		<td>You are sending feedback on this section or takeaway.</td>
+		<td>You are sending feedback on this section.</td>
 	</tr>
 	<tr>
 		<th>Email (optional)</th>

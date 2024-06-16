@@ -1,0 +1,13 @@
+created: 20240616153356073
+modified: 20240616153356073
+tags: 
+title: Sn:WikipediaBadWikitext
+type: text/vnd.tiddlywiki
+
+<$let wp="https://en.wikipedia.org">
+
+	[[Wikipedia|<<wp>>]]
+
+	[[The free encyclopedia|<<wp>>]]
+
+</$let>

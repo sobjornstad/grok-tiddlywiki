@@ -1,9 +1,9 @@
 created: 20210817203226888
-modified: 20210820145513975
-tags: $:/tags/Macro
+modified: 20240615153252864
+tags: $:/tags/Global
 title: $:/plugins/sobjornstad/TakeAway/ContextualHelpMacros
 type: text/vnd.tiddlywiki
 
-\define help-wanted(key) [[$:/config/sobjornstad/TakeAway/ContextualHelp/seen/$key$]is[tiddler]then[]else[yes]!is[blank]] -[<renderingStatic>match[yes]]
+\function gtw.help-wanted(key) [[$:/config/sobjornstad/TakeAway/ContextualHelp/seen/]addsuffix<key>is[tiddler]then[]else[yes]!is[blank]] -[<renderingStatic>match[yes]]
 
 \define help-seen(key) <$action-setfield $tiddler="$:/config/sobjornstad/TakeAway/ContextualHelp/seen/$key$" text=""/>

@@ -1,0 +1,11 @@
+created: 20240616145720038
+modified: 20240616145720038
+tags: 
+title: Sn:ExternalLinkATag
+type: text/vnd.tiddlywiki
+
+<a href="https://en.wikipedia.org/wiki/Aardvark">
+	https://en.wikipedia.org/wiki/Aardvark
+</a>
+
+<a href="https://en.wikipedia.org/wiki/Aardvark">Aardvark</a>

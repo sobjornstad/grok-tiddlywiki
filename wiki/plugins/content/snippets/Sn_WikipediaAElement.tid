@@ -1,0 +1,13 @@
+created: 20240616154018879
+modified: 20240616154018879
+tags: 
+title: Sn:WikipediaAElement
+type: text/vnd.tiddlywiki
+
+<$let wp="https://en.wikipedia.org">
+
+	<a href=<<wp>>>Wikipedia</a>
+
+	<a href=<<wp>>>The free encyclopedia</a>
+
+</$let>

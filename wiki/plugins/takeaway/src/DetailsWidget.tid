@@ -1,10 +1,10 @@
 created: 20210818005527099
-modified: 20210818010338831
+modified: 20240615153324449
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/ContextualHelp/DetailsWidget
 type: text/vnd.tiddlywiki
 
-<$list filter=<<help-wanted "details-widget">> variable=_>
+<% if [gtw.help-wanted[details-widget]] %>
 <div class="tr-contextual-help">
 
 !!! Tip:
@@ -14,4 +14,4 @@ Accordions like these are used throughout //Grok TiddlyWiki// to break up long p
 <div style="text-align: center;"><$button actions=<<help-seen "details-widget">> class="tc-btn-invisible tc-tiddlylink">I've got it, don't remind me again</$button></div>
 
 </div>
-</$list>
+<% endif %>

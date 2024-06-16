@@ -1,0 +1,15 @@
+created: 20240616141810468
+modified: 20240616143105143
+tags: 
+title: Sn:EmployeeInformationSystemDisclaimerLet
+type: text/vnd.tiddlywiki
+
+<$let 
+	raffap="Really Annoying Five-Factor Authentication Process"
+	eis-drink="coffee"
+	disclaimer="(This paragraph does not represent the formal opinion of my company.)"
+>
+
+You need to use the <<raffap>> to get into the EmployeeInformationSystem if it is a Tuesday, unless you have also purchased <<eis-drink>> (tea or pastries do not count) in the company cafeteria earlier in the day. <<disclaimer>>
+
+</$let>

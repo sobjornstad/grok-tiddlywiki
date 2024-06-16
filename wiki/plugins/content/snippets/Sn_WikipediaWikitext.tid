@@ -1,0 +1,13 @@
+created: 20240616152630822
+modified: 20240616153017137
+tags: 
+title: Sn:WikipediaWikitext
+type: text/vnd.tiddlywiki
+
+<$let wp="[[link|https://en.wikipedia.org]]">
+
+	Wikipedia: <<wp>>
+
+	The free encyclopedia: <<wp>>
+
+</$let>

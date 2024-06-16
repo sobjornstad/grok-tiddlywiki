@@ -1,0 +1,109 @@
+created: 20240616143658865
+description: Procedures extend the concept of variables by allowing portions of the value to change each time the procedure is referenced.
+modified: 20240616174341130
+parent: Variables, Macros, and Transclusions
+tags: Section Concept
+title: Procedures
+type: text/vnd.tiddlywiki
+
+Sometimes we repeat text which is exactly the same, and [[variables|Variables]] let us eliminate that repetition. But often, we want to repeat some text which is //mostly// the same, but which ''varies in a small part or two''.
+
+In [[Using Variables as Attributes]], we learned that you can combine a variable with other text using a substituted attribute value:
+
+```html
+<a href=`$(wpBase)$/Aardvark`>Aardvarks</a>
+```
+
+But this is a mighty awkward way to write a link to a Wikipedia article! If we want this to be useful, we need a much more convenient way to write it.
+
+''Procedures'' provide this mechanism. A procedure is a variable with some bits that change depending on how you refer to it; the bits that change are called ''parameters''.
+
+To get the value of a procedure (this is referred to as ''calling'' or ''invoking'' it), we use the same double angle brackets that we would for a standard variable, but we include the values of the parameters as well (this is called ''passing'' the parameters to the procedure). Specifically, we place them inside the double angle brackets after the procedure name, separated from the procedure name and from each other by a space.
+
+If we write a `wikipediaLink` procedure, we can use it like this:
+
+```html
+The <<wikipediaLink Aardvark>> is a pig-like African mammal that eats ants and termites.
+```
+
+
+!! Defining a procedure
+
+Obviously, before that wikitext will work, we have to tell TiddlyWiki what a `wikipediaLink` is. The syntax looks like this:
+
+```html
+\procedure wikipediaLink(articleName)
+	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+		<<articleName>>
+	</a>
+\end
+```
+
+Put all together, in action:
+
+{{Sn:InitialAardvarkWikipediaLink||MagicSnippet}}
+
+Let's get this example in your wiki so you can play with it: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: the [[HTML]] closing tag `</a>` uses a //forward slash//, while `\procedure` and `\end` use a //backslash//. Review the HTML section if you can't remember which is which.) You should see the link appear, as it does in the preview above.
+
+
+!! Anatomy of a procedure
+
+There's a lot of new syntax here, so let's take a closer look at what's going on. Our procedure started with this line:
+
+```html
+\procedure wikipediaLink(articleName)
+```
+
+The word starting with a backslash introduces a ''pragma'', which is a really fancy name for an instruction that comes at the top of a tiddler and changes the way TiddlyWiki reads the rest of the tiddler. Specifically, the `\procedure` pragma tells TiddlyWiki that every time it sees a reference to `wikipediaLink`, it should follow the instructions in this procedure.
+
+`wikipediaLink`, of course, is the name of the procedure.
+
+The part in parentheses, called the ''parameter list'', describes the parameters of the procedure. There can be any number of parameters. Here there is one parameter, `articleName`; in the [[next section|The Finer Points of Macros]], we'll see an example with more than one parameter.
+
+Everything between the line beginning with `\procedure` and the line beginning with `\end` is called the ''body'' of the procedure:
+
+```html
+	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+		<<articleName>>
+	</a>
+```
+
+The body of a procedure is like the value of a variable, with an additional feature: each parameter to the procedure becomes a variable within the body. This variable's name is the same as the parameter name, and its value is whatever was passed to the parameter. Here, we can see that our parameter `articleName` is now a variable available for use within the body.
+
+Lastly, there's the line:
+
+```html
+\end
+```
+
+Unsurprisingly, this indicates that we've come to the end of the procedure. A procedure can go on for as many lines as we want it to, until we come to the `\end`.
+
+
+!! How TiddlyWiki processes procedure calls
+
+When something doesn't work the way you expect, it's helpful to be able to “think like the computer” as you try to understand what you did wrong, so let's talk about what TiddlyWiki does when it encounters a procedure call.
+
+First, TiddlyWiki stops rendering the tiddler for a moment, looks at each of the parameters passed in the procedure call, and matches them up to the parameters in the parameter list, based on what order they come in. Then it ''sets a variable'' for each parameter, scoped to the procedure. In our example, it sets a variable `articleName` to the value `Aardvark`.
+
+With the variables set appropriately, TiddlyWiki will read the body of the procedure and see, in our example:
+
+```html
+	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+		<<articleName>>
+	</a>
+```
+
+{{Ltc:ProcedureBodyRendered||LieToChildrenTemplate}}.
+
+Once the body of the procedure has been rendered, the `articleName` variable will go out of scope, TiddlyWiki will return to the rest of the tiddler after the procedure call, and rendering will continue.
+
+
+!! Exercises
+
+{{Ex:PrettyWikipediaLink||ExerciseTemplate}}
+{{Ex:EmptyMacroCall||ExerciseTemplate}}
+{{Ex:MacroPosition||ExerciseTemplate}}
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

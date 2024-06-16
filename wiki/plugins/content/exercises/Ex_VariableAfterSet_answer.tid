@@ -1,7 +1,7 @@
 created: 20201121235610144
-modified: 20201121235546664
+modified: 20240616142516867
 tags: Answer
 title: Ex:VariableAfterSet/answer
 type: text/vnd.tiddlywiki
 
-Nothing shows up. After the `</$set>`, it's as if the variable never had a value.
+Nothing shows up. After the `</$set>` or `</$let>`, it's as if the variable never had a value.

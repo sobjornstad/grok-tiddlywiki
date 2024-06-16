@@ -1,6 +1,6 @@
 created: 20210206180622120
 description: TiddlyWiki offers tooling for displaying, retrieving, and computing differences between dates.
-modified: 20210502161621186
+modified: 20240616172129238
 parent: Tips and Tricks
 tags: Section
 title: Working with Dates
@@ -36,7 +36,7 @@ As another example, let's see on what day the `Metadata` tiddler describing the 
 
 !! Getting the current date
 
-As we discussed in [[Creating Tiddlers With Predefined Fields]], it's commonly helpful to ''retrieve the current date and time'' in order to prefill a field. This can be done with the `now` macro, which accepts any date format string, as described above, as an argument. For some reason, it does not default to the format string needed to produce the standard internal format, which isn't exactly easy to remember, so I find it helpful to add a [[global macro|Global Macros]] like the following:
+As we discussed in [[Creating Tiddlers With Predefined Fields]], it's commonly helpful to ''retrieve the current date and time'' in order to prefill a field. This can be done with the `now` macro, which accepts any date format string, as described above, as a parameter. For some reason, it does not default to the format string needed to produce the standard internal format, which isn't exactly easy to remember, so I find it helpful to add a [[global macro|Global Macros]] like the following:
 
 {{Sn:NowTimestamp||MagicSnippet}}
 

@@ -1,9 +1,9 @@
 created: 20200603211135898
 length: m
-modified: 20210130174509427
-origin: Macros
+modified: 20240616174422317
+origin: Procedures
 tags: Exercise
 title: Ex:MacroPosition
 type: text/vnd.tiddlywiki
 
-Try referring to the `wikipediaLink` macro //before// defining it. What happens? What about if you put some arbitrary text before the macro definition that doesn't include a call to `wikipediaLink`?
+Try referring to the `wikipediaLink` procedure //before// defining it. What happens? What about if you put some arbitrary text before the procedure definition that doesn't include a call to `wikipediaLink`?

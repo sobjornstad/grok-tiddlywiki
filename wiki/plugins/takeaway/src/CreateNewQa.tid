@@ -1,46 +1,53 @@
 caption: Question/Answer
 created: 20210817193149287
-modified: 20210817200250254
+modified: 20240615155931663
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/CreateNewQa
 type: text/vnd.tiddlywiki
 
-\define getName() Tr:$(rightNow)$
+\whitespace trim
+\import [[$:/plugins/sobjornstad/TakeAway/AddTakeawayButton]]
 
 <table>
-<tr>
-	<th style="text-align: left;">Question</th><td class="gtw-question-input"><$edit-text tiddler="$:/temp/addq" tag=input default="" field="question" placeholder="e.g., What field contains the name of a tiddler?"/></td>
-</tr>
-<tr>
-	<th style="text-align: left;">Answer</th><td class="gtw-question-input"><$edit-text class="gtw-question-input" tiddler="$:/temp/addq" tag=input default="" field="answer" placeholder="e.g., `title`"/></td>
-</tr>
+	<tr>
+		<th style="text-align: left;">
+			Question
+		</th>
+		<td class="gtw-question-input">
+			<$edit-text
+				tiddler="$:/temp/addq"
+				field="question"
+				tag="input"
+				default=""
+				placeholder="e.g., What field contains the name of a tiddler?"
+			/>
+		</td>
+	</tr>
+	<tr>
+		<th style="text-align: left;">
+			Answer
+		</th>
+		<td class="gtw-question-input">
+			<$edit-text
+				tiddler="$:/temp/addq"
+				field="answer"
+				tag="input"
+				default=""
+				placeholder="e.g., `title`"
+				class="gtw-question-input"
+			/>
+		</td>
+	</tr>
 </table>
 
 <div>
-<$reveal type="nomatch" state="$:/temp/addq!!question" text="">
-<$reveal type="nomatch" state="$:/temp/addq!!answer" text="">
 
-<$tiddler tiddler="$:/temp/addq">
-	<$set name="previewTakeawayType" value="rememberq">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
-	</$set>
-</$tiddler>
+<% if [[$:/temp/addq]get[question]!is[blank]] %>
+<% if [[$:/temp/addq]get[answer]!is[blank]] %>
 
-<$set name=rightNow value=<<now "[UTC]YYYY0MM0DD0hh0mm0ss0XXX">> >
-<$button>
-	<$action-createtiddler
-		$basetitle=<<getName>>
-		$savetitle="$:/temp/addq!!newtid"
-		tags="Takeaway"
-		question={{$:/temp/addq!!question}}
-		answer={{$:/temp/addq!!answer}}
-		qtype="rememberq"
-		origin=<<currentTiddler>>
-	/>
-	<$action-deletetiddler $tiddler="$:/temp/addq"/>
-		
-Add takeaway</$button>
-</$set>
-</$reveal>
-</$reveal>
+	<<add-takeaway-button rememberqa>>
+
+<% endif %>
+<% endif %>
+
 </div>

@@ -1,10 +1,10 @@
 created: 20210818010128673
-modified: 20210818010722063
+modified: 20240615153955730
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/ContextualHelp/TakeAway
 type: text/vnd.tiddlywiki
 
-<$list filter=<<help-wanted "takeaways">> variable=_>
+<% if [gtw.help-wanted[takeaways]] %>
 <div class="tr-contextual-help">
 
 !!! Tip:
@@ -31,4 +31,4 @@ Find details on the theory behind takeaways in [[How to Use This Book]], and mor
 <div style="text-align: center;"><$button actions=<<help-seen "takeaways">> class="tc-btn-invisible tc-tiddlylink">I've got it, don't remind me again</$button></div>
 
 </div>
-</$list>
+<% endif %>

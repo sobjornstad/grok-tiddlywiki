@@ -1,0 +1,14 @@
+created: 20240616145706115
+modified: 20240616150019106
+tags: 
+title: Sn:ExternalLinkMethods
+type: text/vnd.tiddlywiki
+
+<!-- We can just write the link directly in our wikitext. -->
+https://en.wikipedia.org/wiki/Aardvark
+
+<!-- Or we can use the wikilink syntax, using the same target and text. -->
+[[https://en.wikipedia.org/wiki/Aardvark]]
+
+<!-- Or we can use the wikilink syntax, using different target and text. -->
+[[Aardvark|https://en.wikipedia.org/wiki/Aardvark]]

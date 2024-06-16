@@ -1,0 +1,9 @@
+created: 20240616155419754
+modified: 20240616155419754
+tags: 
+title: Sn:WikipediaCombinedVarSubst2
+type: text/vnd.tiddlywiki
+
+<$let wpBase="https://en.wikipedia.org/wiki">
+	<a href=<<wpBase>>"/Aardvark">Aardvarks</a>
+</$let>
