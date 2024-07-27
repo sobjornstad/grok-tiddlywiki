@@ -1,83 +1,140 @@
 created: 20210124164801589
 list-before: $:/sib/Navigator/Related
-modified: 20210819132450925
+modified: 20240727223135707
 tags: $:/tags/ViewTemplate
 title: $:/sib/Navigator/SectionNavigation
 type: text/vnd.tiddlywiki
 
-<$list filter="[all[current]tag[Chapter]] [all[current]tag[Section]]">
-<$vars prevSection={{{ [list{!!parent}before{!!title}] }}}
-       nextSection={{{ [list{!!parent}after{!!title}] }}}
-			 upChapter={{!!parent}}>
+\whitespace trim
+
+<% if [all[current]tag[Chapter]] [all[current]tag[Section]] %>
+
+<$let
+	prevSection={{{ [list{!!parent}before{!!title}] }}}
+	nextSection={{{ [list{!!parent}after{!!title}] }}}
+	upChapter={{!!parent}}
+>
 
 <div class="gtw-section-manager">
-	<div style="text-align: left;">
-		<$list filter="[<prevSection>!is[blank]tag[Section]]">
-			←&nbsp;<$link to=<<prevSection>>>Previous: <<prevSection>></$link>
-		</$list>
-		<$list filter="[<prevSection>!is[blank]tag[Chapter]]" variable=_>
-			<$list variable="lastSectionInPreviousChapter" filter="[list<prevSection>last[]]">
-				&larr;&nbsp;<$link to=<<lastSectionInPreviousChapter>>>Last section in previous chapter: <$text text=<<lastSectionInPreviousChapter>>>/</$text></$link>
-				<br>
-			</$list>
-			&#10232;&nbsp;<$link to=<<prevSection>>>Previous chapter: <<prevSection>></$link>
-		</$list>
-		<$list filter="[<prevSection>is[blank]]" variable=_>
-			<$set name="endMessage" filter="[all[current]tag[Chapter]]" value="//at beginning of book//" emptyValue="//at first section//">
-			<$list filter="[list[Outline]before<upChapter>]" emptyMessage=<<endMessage>>>
-				&#10232;&nbsp;<$link to=<<currentTiddler>>>Previous chapter: <<currentTiddler>></$link>
-			</$list>
-			</$set>
-		</$list>
-	</div>
+	<div style="text-align: left; float: left;">
 	
-	<div style="text-align: right;">
-		<$list filter="[<nextSection>!is[blank]tag[Section]]">
-			<$link to=<<nextSection>>>Next: <<nextSection>></$link>&nbsp;→
-		</$list>
-		<$list filter="[<nextSection>!is[blank]tag[Chapter]]" variable=_>
-			<$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
-				<$link to=<<firstSectionInThisChapter>>>First section in this chapter: <$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
+		<!-- if this is a section and it's the first section in the chapter -->
+		<% if [<prevSection>is[blank]] %>
+			<$set
+				name="endMessage"
+				filter="[all[current]tag[Chapter]]"
+				value="//at beginning of book//"
+				emptyValue="//at first section//"
+			>
+				<% if [list[Outline]before<upChapter>] %>
+					&#10232;&nbsp;
+					<$link to=<<upChapter>>>
+						Up to chapter:&nbsp;
+						<$text text=<<upChapter>>/>
+					</$link>
+				<% else %>
+					<<endMessage>>
+				<% endif %>
+			</$set>
+		<% endif %>
+		
+		<!-- if this is a section and there's a previous section in the chapter -->
+		<% if [<prevSection>!is[blank]tag[Section]] %>
+			←&nbsp;
+			<$link to=<<prevSection>>>
+				Previous:&nbsp;
+				<$text text=<<prevSection>>/>
+			</$link>
+		<% endif %>
+		
+		<!-- if this is a chapter and there's a previous chapter -->
+		<% if [<prevSection>!is[blank]tag[Chapter]] %>
+			<$list filter="[list<prevSection>last[]]" variable="lastSectionInPreviousChapter">
+				&larr;&nbsp;
+				<$link to=<<lastSectionInPreviousChapter>>>
+					Last section in previous chapter:&nbsp;
+					<$text text=<<lastSectionInPreviousChapter>>/>
+				</$link>
 				<br>
 			</$list>
-			<$link to=<<nextSection>>>Next chapter: <<nextSection>></$link>&nbsp;&#10233;
-		</$list>
-		<$list filter="[<nextSection>is[blank]]" variable=_>
+			&#10232;&nbsp;
+			<$link to=<<prevSection>>>
+				Previous chapter:&nbsp;
+				<$text text=<<prevSection>>/>
+			</$link>
+		<% endif %>
+		
+	</div> <!-- left column -->
+	
+	<div style="text-align: right; float: right;">
+	
+		<!-- if this is a section and there's a later section in the chapter -->
+		<% if [<nextSection>!is[blank]tag[Section]] %>
+			<$link to=<<nextSection>>>Next:&nbsp;<<nextSection>></$link>&nbsp;→
+		<% endif %>
+		
+		<!-- if this is a section and it's the last section in the chapter -->
+		<% if [<nextSection>is[blank]] %>
 			<$list filter="[list[Outline]after<upChapter>]">
-				<$link to=<<currentTiddler>>>Next chapter: <<currentTiddler>></$link>&nbsp;&#10233;
+				<$link to=<<currentTiddler>>>
+					Next chapter:&nbsp;
+					<<currentTiddler>>
+				</$link>
+				&nbsp;&#10233;
 			</$list>
-			<$list filter="[list[Outline]after<upChapter>then[]else[x]!is[blank]]" variable=_>
-				<$list filter="[all[current]tag[Chapter]]">
-					<$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
-						<$link to=<<firstSectionInThisChapter>>>First section in this chapter: <$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
+			<% if [list[Outline]after<upChapter>then[]else[x]!is[blank]] %>
+				<% if [all[current]tag[Chapter]] %>
+					<!-- The final chapter lets you dive into its first section,
+							 but does not let you go to the next chapter (because there isn't one). -->
+					<$list filter="[list<currentTiddler>first[]]" variable="firstSectionInThisChapter" >
+						<$link to=<<firstSectionInThisChapter>>>
+							First section in this chapter:&nbsp;
+							<$text text=<<firstSectionInThisChapter>>/>
+						</$link>
+						&nbsp;&rarr;
 						<br>
 					</$list>
 					//at last chapter//
-				</$list>
-				<$list filter="[all[current]!tag[Chapter]]">
+				<% else %>
+					<!-- The final non-chapter (aka section) shows "at end of book". -->
 				  //at end of book//
-				</$list>
+				<% endif %>
+			<% endif %>
+		<% endif %>
+		
+		<!-- if this is a chapter and there's a later chapter -->
+		<% if [<nextSection>!is[blank]tag[Chapter]] %>
+			<$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
+				<$link to=<<firstSectionInThisChapter>>>First section in this chapter:&nbsp;<$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
+				<br>
 			</$list>
-		</$list>
-	</div>
+			<$link to=<<nextSection>>>Next chapter:&nbsp;<<nextSection>></$link>&nbsp;&#10233;
+		<% endif %>
+		
+	</div> <!-- right column -->
 </div>
 
 <div style="text-align: center; clear: both; padding-top: 1em;">
-	<$list filter="[all[current]tag[Section]]">
-		&uarr;&nbsp;<$link to=<<upChapter>>><$text text={{{ [<upChapter>get[caption]] }}}/></$link>
-	</$list>
-	<$list filter="[all[current]tag[Chapter]]">
-		&uarr;&nbsp;[[Outline]]
-	</$list>
+	<% if [all[current]tag[Section]] %>
+		&uarr;&nbsp;
+		<$link to=<<upChapter>>>
+			<$text text={{{ [<upChapter>get[caption]] }}}/>
+		</$link>
+	<% elseif [all[current]tag[Chapter]] %>
+		&uarr;&nbsp;
+		[[Outline]]
+	<% endif %>
 </div>
 <div style="text-align: center; padding-top: 0.2em;">
-<<sendFeedbackLink icon:"{{$:/core/images/mail}}" tooltip:"Suggest an improvement to this section.">>
+	<<sendFeedbackLink
+		icon:"{{$:/core/images/mail}}"
+		tooltip:"Suggest an improvement to this section.">>
 </div>
 <div style="padding-top: 0.2em;">
   {{||$:/sib/Navigator/Related}}
 </div>
 
-</$vars>
+</$let>
 
 <style>
 div.gtw-section-manager div {
@@ -85,7 +142,7 @@ div.gtw-section-manager div {
 	padding-top: 10px;
 	margin-top: 6ex;
 	width: 50%;
-	float: left;
 }
 </style>
-</$list>
+
+<% endif %>

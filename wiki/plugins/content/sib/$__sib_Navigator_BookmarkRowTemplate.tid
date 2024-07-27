@@ -1,7 +1,18 @@
 created: 20210320200248115
-modified: 20210320203053743
+modified: 20240727210226435
 tags: 
 title: $:/sib/Navigator/BookmarkRowTemplate
 type: text/vnd.tiddlywiki
 
-<$button actions=<<unbookmark-tiddler>> class="tc-btn-invisible">{{$:/core/images/delete-button}}</$button>&nbsp;<$link/>
+<$button
+	actions=<<unbookmark-tiddler>>
+	class="tc-btn-invisible gtw-bookmark-row-template"
+>
+	{{$:/core/images/delete-button}}
+</$button>&nbsp;<$link/>
+
+<style>
+.gtw-bookmark-row-template svg {
+	vertical-align: bottom;
+}
+</style>

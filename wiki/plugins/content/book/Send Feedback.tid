@@ -1,12 +1,12 @@
 created: 20210102234130275
-modified: 20240616143501633
+modified: 20240727202228412
 tags: 
 title: Send Feedback
 type: text/vnd.tiddlywiki
 
 \define getWikifyTarget() {{$(targetTiddler)$||$:/sib/DebugRenderTiddler}}
 
-<$set name=targetTiddler value={{{ [{$:/temp/FeedbackCollector}get[target]] }}}>
+<$let targetTiddler={{{ [{$:/temp/FeedbackCollector}get[target]] }}}>
 
 <table class="ta-feedback">
 	<tr>
@@ -16,12 +16,12 @@ type: text/vnd.tiddlywiki
 	</tr>
 	<tr>
 		<th>Email (optional)</th>
-		<td><$edit-text tag=input tiddler={{$:/temp/FeedbackCollector}} field="email"/></td>
+		<td><$edit-text tag="input" tiddler={{$:/temp/FeedbackCollector}} field="email"/></td>
 		<td>If you would like the author to be able to contact you about your feedback.</td>
 	</tr>
 	<tr>
 		<th>Comment</th>
-		<td><$edit-text tag=textarea tiddler={{$:/temp/FeedbackCollector}} field="comment"/></td>
+		<td><$edit-text tag="textarea" tiddler={{$:/temp/FeedbackCollector}} field="comment"/></td>
 		<td>What could be improved?</td>
 	</tr>
 	<tr>
@@ -31,24 +31,26 @@ type: text/vnd.tiddlywiki
 	</tr>
 </table>
 
-<$list filter="[{$:/temp/FeedbackCollector}get[comment]!is[blank]]" emptyMessage="//Please enter a comment.//">
-<$wikify name=debuginfo output="text" text=<<getWikifyTarget>>>
-	<$button>
-		<$action-sendfeedback
-			tiddler=<<targetTiddler>>
-			email={{{ [{$:/temp/FeedbackCollector}get[email]] }}}
-			comment={{{ [{$:/temp/FeedbackCollector}get[comment]] }}}
-			debuginfo=<<debuginfo>> />
-		<$action-setfield $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Feedback/UserEmail" $value={{{ [{$:/temp/FeedbackCollector}get[email]] }}}/>
-		<$action-sendmessage $message="tm-close-tiddler" $param="Send Feedback"/>
-		<$action-deletetiddler $tiddler={{$:/temp/FeedbackCollector}}/>
-		<$action-deletetiddler $tiddler="$:/temp/FeedbackCollector"/>
-		Send
-	</$button>
-</$wikify>
-</$list>
+<% if [{$:/temp/FeedbackCollector}get[comment]!is[blank]] %>
+	<$wikify name="debuginfo" output="text" text=<<getWikifyTarget>>>
+		<$button>
+			<$action-sendfeedback
+				tiddler=<<targetTiddler>>
+				email={{{ [{$:/temp/FeedbackCollector}get[email]] }}}
+				comment={{{ [{$:/temp/FeedbackCollector}get[comment]] }}}
+				debuginfo=<<debuginfo>> />
+			<$action-setfield $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Feedback/UserEmail" $value={{{ [{$:/temp/FeedbackCollector}get[email]] }}}/>
+			<$action-sendmessage $message="tm-close-tiddler" $param="Send Feedback"/>
+			<$action-deletetiddler $tiddler={{$:/temp/FeedbackCollector}}/>
+			<$action-deletetiddler $tiddler="$:/temp/FeedbackCollector"/>
+			Send
+		</$button>
+	</$wikify>
+<% else %>
+	//Please enter a comment.//
+<% endif %>
 
-</$set>
+</$let>
 
 <style>
 	table.ta-feedback tr td > textarea, table.ta-feedback tr td > input {

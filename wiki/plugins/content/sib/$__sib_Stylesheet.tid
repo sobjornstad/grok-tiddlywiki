@@ -1,5 +1,5 @@
 created: 20210116181556596
-modified: 20210817193348391
+modified: 20240727205255881
 tags: $:/tags/Stylesheet
 title: $:/sib/Stylesheet
 type: text/vnd.tiddlywiki
@@ -73,6 +73,11 @@ table.gtw-form td {
 	list-style-type: none;
 	margin-left: 0;
 	padding-left: 0;
+}
+
+/* Fix checkboxes appearing too low relative to their associated text in TW 5.3.3. */
+input[type="checkbox"] {
+	vertical-align: unset;
 }
 
 /* Add more horizontal space and a border for headings, except the title. */

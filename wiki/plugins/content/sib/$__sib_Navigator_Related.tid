@@ -1,67 +1,72 @@
 created: 20210206184132111
-modified: 20210409015113274
+modified: 20240727223500061
 tags: 
 title: $:/sib/Navigator/Related
 type: text/vnd.tiddlywiki
 
-\define linkDisplay(title, filter, cssClass)
-<div class=<<__cssClass__>>>
-<div style="text-align: center;">$title$:</div>
+\whitespace trim
 
-<ul>
-<$list filter=<<__filter__>> emptyMessage="<div style='text-align: center;'>//(none)//</div>">
-  <li>
-        <$link/>&ensp;
-				<span style="font-size: 80%;">
-					<$list filter="[enlist{!!tags}sort[]]">
-						<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
-					</$list>
-				</span>
-        <div class="sib-excerpt">{{!!description}}</div>
-  </li>
-</$list>
-</ul>
-</div>
-\end
-
-
-<$reveal stateTitle="$:/temp/ReferenceState"
-			   stateIndex=<<currentTiddler>>
-			   type="match"
-			   text="hide"
-			   default="hide">
-	<div style="text-align: center;">
-	<$button setTitle="$:/temp/ReferenceState"
-					 setIndex=<<currentTiddler>>
-					 setTo="show"
-					 class="tc-btn-invisible tc-tiddlylink">
-					 {{$:/core/images/unfold-button}} show related topics
-	</$button>
+\procedure render-link(title, filter, cssClass)
+	<div class=<<cssClass>>>
+		<div style="text-align: center;"><<title>>:</div>
+			<ul>
+			<$list filter=<<filter>> emptyMessage="<div style='text-align: center;'>//(none)//</div>">
+				<li>
+					<$link/>&ensp;
+					<span style="font-size: 80%;">
+						<$list filter="[enlist{!!tags}sort[]]">
+							<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
+						</$list>
+					</span>
+					<div class="sib-excerpt">{{!!description}}</div>
+				</li>
+			</$list>
+		</ul>
 	</div>
-</$reveal>
+\end render-link
 
-<$reveal stateTitle="$:/temp/ReferenceState"
-			   stateIndex=<<currentTiddler>>
-			   type="match"
-			   text="show"
-			   default="hide">
+
+<% if [[$:/temp/ReferenceState]getindex<currentTiddler>else[hide]match[hide]] %>
 	<div style="text-align: center;">
-	<$button setTitle="$:/temp/ReferenceState"
-					 setIndex=<<currentTiddler>>
-					 setTo="hide"
-					 class="tc-btn-invisible tc-tiddlylink">
-		{{$:/core/images/fold-button}} hide related topics
-	</$button>
+		<$button
+			setTitle="$:/temp/ReferenceState"
+		  setIndex=<<currentTiddler>>
+		  setTo="show"
+		  class="tc-btn-invisible tc-tiddlylink"
+		>
+	    {{$:/core/images/unfold-button}}&nbsp;show related topics
+		</$button>
+	</div>
+<% else %>
+	<div style="text-align: center;">
+		<$button
+			setTitle="$:/temp/ReferenceState"
+			setIndex=<<currentTiddler>>
+			setTo="hide"
+			class="tc-btn-invisible tc-tiddlylink"
+		>
+			{{$:/core/images/fold-button}} hide related topics
+		</$button>
 	</div>
 	<div class="gtw-bordered-element sib-link-display">
-		<$set name="xrefName" value={{{ [[Mentioned by //]addsuffix<currentTiddler>addsuffix[//]] }}}>
-			<$macrocall $name=linkDisplay title=<<xrefName>>  filter="[all[current]links[]sort[]]" cssClass="sib-links"/>
-		</$set>
-		<$set name="xrefName" value={{{ [[Mentions of //]addsuffix<currentTiddler>addsuffix[//]] }}}>
-			<$macrocall $name=linkDisplay title=<<xrefName>> filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]" cssClass="sib-backlinks"/>
-		</$set>
+		<$let xrefName=`Mentioned by //$(currentTiddler)$//`>
+			<$macrocall
+				$name=render-link
+				title=<<xrefName>>
+				filter="[all[current]links[]sort[]]"
+				cssClass="sib-links"
+			/>
+		</$let>
+		<$let xrefName=`Mentions of //$(currentTiddler)$//`>
+			<$macrocall
+				$name=render-link
+				title=<<xrefName>>
+				filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]"
+				cssClass="sib-backlinks"
+			/>
+		</$let>
 	</div>
-</$reveal>
+<% endif %>
 
 
 <style>
@@ -69,11 +74,14 @@ div.sib-link-display {
 	margin-top: 0.5em;
   overflow: auto;
 }
-div.sib-link-display div ul {
+div.sib-link-display ul {
   list-style-type: none;
   padding-left: 0;
 }
-div.sib-link-display div ul div.sib-excerpt {
+div.sib-link-display ul li {
+	padding-bottom: 2ex;
+}
+div.sib-link-display ul div.sib-excerpt {
   padding-left: 1em;
   color: <<colour muted-foreground>>;
 }

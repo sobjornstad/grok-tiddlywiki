@@ -1,33 +1,53 @@
 created: 20210322234549335
 list-before: $:/core/ui/Buttons/save-wiki
-modified: 20210322235453069
+modified: 20240727203808516
 tags: $:/tags/PageControls
 title: $:/sib/PaletteSwitchButton
 type: text/vnd.tiddlywiki
 
-\define darken-palette() <$action-setfield $tiddler="$:/palette" $value="$:/palettes/Twilight"/>
-\define lighten-palette() <$action-setfield $tiddler="$:/palette" $value="$:/palettes/SpartanDay"/>
+\procedure light-palette() $:/palettes/SpartanDay
+\procedure dark-palette() $:/palettes/Twilight
 
-\define darken-button()
-<$button actions=<<darken-palette>> class=<<tv-config-toolbar-class>> selectedClass="tc-selected" tooltip="Switch to dark mode">
-		<$list filter="[<tv-config-toolbar-icons>match[yes]]">
-			 {{$:/core/images/palette}}
-		</$list>
-		<$list filter="[<tv-config-toolbar-text>match[yes]]">
-			<span class="tc-btn-text"><$text text="Dark mode"/></span>
-		</$list>
+\procedure button-content(modeName)
+	<% if [<tv-config-toolbar-icons>match[yes]] %>
+		 {{$:/core/images/palette}}
+	<% endif %>
+	<% if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text"><$text text=<<modeName>>/></span>
+	<% endif %>
+\end button-content
+
+\procedure change-palette-button(actionWidget, buttonName, buttonTooltip)
+	<$button
+		actions=<<actionWidget>>
+		class=<<tv-config-toolbar-class>>
+		selectedClass="tc-selected"
+		tooltip=<<buttonTooltip>>
+	>
+		<$macrocall $name="button-content" modeName=<<buttonName>>>>
 	</$button>
 \end
 
-\define lighten-button()
-<$button actions=<<lighten-palette>> class=<<tv-config-toolbar-class>> selectedClass="tc-selected" tooltip="Switch to light mode">
-		<$list filter="[<tv-config-toolbar-icons>match[yes]]">
-			 {{$:/core/images/palette}}
-		</$list>
-		<$list filter="[<tv-config-toolbar-text>match[yes]]">
-			<span class="tc-btn-text"><$text text="Light mode"/></span>
-		</$list>
-	</$button>
+\procedure darken-button()
+	<$macrocall
+		$name="change-palette-button"
+		actionWidget=`<$action-setfield $tiddler="$:/palette" $value="$(dark-palette)$"/>`
+		buttonName="Dark mode"
+		buttonTooltip="Switch to dark mode"
+	/>
 \end
 
-<$list filter="[[$:/palette]text[$:/palettes/SpartanDay]]" emptyMessage=<<lighten-button>>><<darken-button>></$list>
+\procedure lighten-button()
+	<$macrocall
+		$name="change-palette-button"
+		actionWidget=`<$action-setfield $tiddler="$:/palette" $value="$(light-palette)$"/>`
+		buttonName="Light mode"
+		buttonTooltip="Switch to light mode"
+	/>
+\end
+
+<% if [[$:/palette]text<light-palette>] %>
+	<<darken-button>>
+<% else %>
+	<<lighten-button>>
+<% endif %>

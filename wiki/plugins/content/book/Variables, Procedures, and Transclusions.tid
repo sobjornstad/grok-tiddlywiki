@@ -1,8 +1,8 @@
 caption: 4: Variables, Procedures, and Transclusions
 created: 20200603200642700
 description: In which we study a variety of ways to write some content in one place and reuse it in many other places, a capability which sounds boring but is in fact incredibly powerful and versatile, setting TiddlyWiki apart from the competition.
-list: Variables [[Using Variables as Attributes]] Procedures Macros [[The Finer Points of Macros]] Transclusions [[Templates and the Current Tiddler]] [[Filters and Transclusions]] [[Text Substitution]] [[Using Variables in Macros]] Wikification [[Block Mode and Inline Mode]] [[Templates vs. Macros]] [[Summary of Macro and Transclusion Syntax]]
-modified: 20240616165722500
+list: Variables [[Using Variables as Attributes]] Procedures [[The Finer Points of Procedures]] Macros [[The Finer Points of Macros]] Transclusions [[Templates and the Current Tiddler]] [[Filters and Transclusions]] [[Text Substitution]] [[Using Variables in Macros]] Wikification [[Block Mode and Inline Mode]] [[Templates vs. Macros]] [[Summary of Macro and Transclusion Syntax]]
+modified: 20240727195902511
 parent: Outline
 tags: Chapter
 title: Variables, Procedures, and Transclusions

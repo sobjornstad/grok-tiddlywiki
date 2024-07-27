@@ -1,5 +1,5 @@
 created: 20200718200300480
-modified: 20240612042307953
+modified: 20240727204801180
 tags: $:/tags/EditTemplate $:/tags/ViewTemplate
 title: $:/sib/Exercise/AnswerLink
 type: text/vnd.tiddlywiki
@@ -17,4 +17,3 @@ type: text/vnd.tiddlywiki
 <% if [all[current]tag[Answer]] %>
   Go to question: {{{ [all[current]has[draft.of]get[draft.of]removesuffix[/answer]] ~[all[current]removesuffix[/answer]] }}}
 <% endif %>
-

@@ -2,38 +2,52 @@ caption: Toggle bookmark
 created: 20210320195437123
 description: Add or remove the current tiddler to/from the //Bookmarks// sidebar tab
 list-after: $:/core/ui/Buttons/more-tiddler-actions
-modified: 20210507013336738
+modified: 20240727213225589
 tags: $:/tags/ViewToolbar
 title: $:/sib/Navigator/NewBookmarkButton
 type: text/vnd.tiddlywiki
 
 \whitespace trim
 
-\define not-selected()
-	<$button actions=<<bookmark-tiddler>> class=<<tv-config-toolbar-class>> selectedClass="tc-selected" tooltip="Bookmark tiddler">
-		<$list filter="[<tv-config-toolbar-icons>match[yes]]">
-			 {{$:/core/images/star-filled}}
-		</$list>
-		<$list filter="[<tv-config-toolbar-text>match[yes]]">
-			<span class="tc-btn-text"><$text text="Bookmark tiddler"/></span>
-		</$list>
+\procedure common-button(actionWidget, iconClass, buttonAndTooltipText)
+	<$button
+		actions=<<actionWidget>>
+		class=<<tv-config-toolbar-class>>
+		selectedClass="tc-selected"
+		tooltip=<<buttonAndTooltipText>>
+	>
+		<% if [<tv-config-toolbar-icons>match[yes]] %>
+			<span class=<<iconClass>>>{{$:/core/images/star-filled}}</span>
+		<% endif %>
+		<% if [<tv-config-toolbar-text>match[yes]] %>
+			<span class="tc-btn-text"><$text text=<<buttonAndTooltipText>>/></span>
+		<% endif %>
 	</$button>
-\end
+\end common-button
 
-\define selected()
-	<$button actions=<<unbookmark-tiddler>> class=<<tv-config-toolbar-class>> selectedClass="tc-selected" tooltip="Remove bookmark">
-		<$list filter="[<tv-config-toolbar-icons>match[yes]]">
-			 <span class="gtw-yellow-me">{{$:/core/images/star-filled}}</span>
-		</$list>
-		<$list filter="[<tv-config-toolbar-text>match[yes]]">
-			<span class="tc-btn-text"><$text text="Remove bookmark"/></span>
-		</$list>
-	</$button>
-\end
+\procedure selected-state()
+	<$macrocall
+		$name="common-button"
+		actionWidget=<<unbookmark-tiddler>>
+		iconClass="gtw-yellow-me"
+		buttonAndTooltipText="Remove bookmark"
+	/>
+\end selected-state
 
-<$list filter="[[$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks]contains:text<currentTiddler>!is[blank]then[yes]]" emptyMessage=<<not-selected>> variable=_>
-	<<selected>>
-</$list>
+\procedure unselected-state()
+	<$macrocall
+		$name="common-button"
+		actionWidget=<<bookmark-tiddler>>
+		iconClass=""
+		buttonAndTooltipText="Bookmark tiddler"
+	/>
+\end unselected-state
+
+<% if [[$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks]contains:text<currentTiddler>!is[blank]] %>
+	<<selected-state>>
+<% else %>
+	<<unselected-state>>
+<% endif %>
 
 <style>
 .gtw-yellow-me svg {

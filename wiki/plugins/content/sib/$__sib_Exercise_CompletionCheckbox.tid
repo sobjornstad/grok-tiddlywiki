@@ -1,10 +1,10 @@
 complete: 
 created: 20210116164747131
-modified: 20210116213227195
+modified: 20240727204812812
 tags: 
 title: $:/sib/Exercise/CompletionCheckbox
 type: text/vnd.tiddlywiki
 
-	<div class="twx-completion">
+<div class="twx-completion">
 	<$checkbox field="complete" checked="yes" unchecked="" default="" tooltip="Mark this exercise as complete in the exercise list.">&nbsp;Complete</$checkbox>
-	</div>
+</div>

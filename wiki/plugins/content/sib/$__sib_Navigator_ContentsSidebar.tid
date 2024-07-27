@@ -1,40 +1,57 @@
 caption: Contents
 created: 20210313135753386
 list-after: $:/sib/Navigator/BookmarksList
-modified: 20210322011832856
+modified: 20240727212222310
 tags: $:/tags/SideBar
 title: $:/sib/Navigator/ContentsSidebar
 type: text/vnd.tiddlywiki
 
+\function gtw.contents.sectionsMatchingFilter()
+	[enlist{!!list}search:title,caption{$:/temp/OutlineFilter}]
+\end
+
+<!-- Some chapters (e.g., 'Supplemental Exercises') have no sections. We want to show these if we haven't started filtering (since we filter only section names and include only the chapters that have matching sections, they'll have to disappear at that point, and this seems mostly fine). -->
+\function gtw.contents.chaptersWithNoSectionsIfNoFilter()
+	[{$:/temp/OutlineFilter}is[blank]] :then[list[Outline]!has[list]]
+\end
+
 <div class="gtw-sidebar-outline">
+	<div style="text-align: center;">
+		[[Go to full outline|Outline]]
+	</div>
 
-<div style="text-align: center;">
-[[Go to full outline|Outline]]
-</div>
+	<table>
+		<tr>
+			<th>Filter by section name:</th>
+			<td>
+				<$edit-text tiddler="$:/temp/OutlineFilter" tag="input" default="" type="text"/>
+			</td>
+		</tr>
+	</table>
 
-|!Filter by section name: |<$edit-text tiddler="$:/temp/OutlineFilter" tag="input" default="" type="text"/>|
-
-<ul>
-<$list filter="[list[Outline]]">
-<$list filter="[enlist{!!list}search:title,caption{$:/temp/OutlineFilter}] [{$:/temp/OutlineFilter}is[blank]then[Supplemental Exercises]] +[first[]]" variable=_>
-	<li>
-		<h3>
-			<$link to={{!!title}}>
-				<$view field="caption">
-					{{!!title}}
-				</$view>
-			</$link>
-		</h3>
-		<ul>
-			<$list filter="[enlist{!!list}search:title,caption{$:/temp/OutlineFilter}]">
-				<li><$link to={{!!title}}/></li>
-			</$list>
-		</ul>
-	</li>
-	<br>
-</$list>
-</$list>
-</ul>
+	<ul>
+		<$list filter="[list[Outline]]">
+			<!-- for each chapter -->
+			<% if [gtw.contents.chaptersWithNoSectionsIfNoFilter[]] [gtw.contents.sectionsMatchingFilter[]]  %>
+				<li>
+					<h3>
+						<$link to={{!!title}}>
+							<$view field="caption">
+								{{!!title}}
+							</$view>
+						</$link>
+					</h3>
+					<ul>
+						<$list filter="[gtw.contents.sectionsMatchingFilter[]]">
+							<!-- for each section -->
+							<li><$link to={{!!title}}/></li>
+						</$list>
+					</ul>
+				</li>
+					<br>
+			<% endif %>
+		</$list>
+	</ul>
 </div>
 
 <style>

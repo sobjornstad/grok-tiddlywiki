@@ -1,6 +1,6 @@
 created: 20210120005004574
 list-after: $:/core/ui/SideBarSegments/site-subtitle
-modified: 20210503023308990
+modified: 20240727212258109
 tags: $:/tags/SideBarSegment
 title: $:/sib/Navigator/LinksBar
 type: text/vnd.tiddlywiki
@@ -12,15 +12,10 @@ type: text/vnd.tiddlywiki
 [[takeaways|Takeaway Browser]]&nbsp;·
 <a href={{$:/sib/DonationLink}} class="tc-tiddlylink tc-tiddlylink-resolves">donate</a>
 </div>
+
 <style>
 .gtw-sidebar-links a, .gtw-sidebar-links button {
 	color: <<color sidebar-foreground>>;
 	text-decoration: underline;
 }
 </style>
-<!--
-<$button class="tc-btn-invisible tc-tiddlylink tc-tiddlylink-resolves">
-	<<startReviewSessionAction>>
-	takeaways
-</$button>&nbsp;·
--->

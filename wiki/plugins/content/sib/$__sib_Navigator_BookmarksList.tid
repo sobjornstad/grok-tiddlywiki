@@ -1,14 +1,20 @@
 caption: Bookmarks
 created: 20210320195840485
 list-after: $:/core/ui/SideBar/Open
-modified: 20210407151442059
+modified: 20240727210143474
 tags: $:/tags/SideBar
 title: $:/sib/Navigator/BookmarksList
 type: text/vnd.tiddlywiki
 
-<$list filter="[{$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks}is[blank]]">
+<% if [{$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks}is[blank]] %>
 	<div style="max-width: 300px;">
 		You have no bookmarks at the moment. To bookmark a section, click the star icon <<textual-button "star-filled">> in the upper-right of that section's tiddler.
 	</div>
-</$list>
-<<list-links-draggable "$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks" field:"text" itemTemplate:"$:/sib/Navigator/BookmarkRowTemplate" class:"gtw-bookmarks-list">>
+<% else %>
+	<<list-links-draggable
+		"$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
+		field:"text"
+		itemTemplate:"$:/sib/Navigator/BookmarkRowTemplate"
+		class:"gtw-bookmarks-list"
+	>>
+<% endif %>

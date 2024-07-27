@@ -1,7 +1,11 @@
 created: 20210320143048952
-modified: 20210320143104510
+modified: 20240727202548567
 tags: $:/tags/Macro
 title: $:/sib/GeneralMacros
 type: text/vnd.tiddlywiki
 
-\define textual-button(imageName) <span class="gtw-textual-button">{{$:/core/images/$imageName$}}</span>
+\procedure textual-button(imageName)
+	<span class="gtw-textual-button">
+		<$transclude $tiddler=`$:/core/images/$(imageName)$`/>
+	</span>
+\end textual-button

@@ -12,10 +12,6 @@ Action widget to call an API.
 
 let ENDPOINT = "https://zaoi8ogjy4.execute-api.us-east-1.amazonaws.com/default/ReceiveGrokTiddlyWikiFeedback";
 
-function gfv(id) {
-		return document.getElementById(id).value
-}
-
 function sendRequest(url, params, callback) {
 		let xhr = new XMLHttpRequest();
 		xhr.open('POST', url, true);
