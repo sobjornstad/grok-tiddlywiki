@@ -1,7 +1,7 @@
 created: 20210320182859703
 description: Review all the syntax used for reusing and relating content in TiddlyWiki.
-modified: 20210410143748530
-parent: Variables, Macros, and Transclusions
+modified: 20240727194816928
+parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Summary of Macro and Transclusion Syntax
 type: text/vnd.tiddlywiki

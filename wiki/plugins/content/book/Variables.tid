@@ -1,7 +1,7 @@
 created: 20200530170346174
-description: Variables let you assign a name to an arbitrary value, then use the name in place of the value in multiple places.
-modified: 20240616143524717
-parent: Variables, Macros, and Transclusions
+description: Variables let you assign a name to an arbitrary value, then use the name in place of the value in multiple places within your wikitext.
+modified: 20240727195755908
+parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Variables
 type: text/vnd.tiddlywiki

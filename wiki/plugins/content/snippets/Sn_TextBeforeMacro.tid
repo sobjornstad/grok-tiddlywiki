@@ -1,11 +1,11 @@
 created: 20210116203958811
-modified: 20210124043431219
+modified: 20240727194550308
 tags: 
 title: Sn:TextBeforeMacro
 type: text/vnd.tiddlywiki
 
 Text before a macro
 
-\define wikipediaLink(articleName)
+\procedure wikipediaLink(articleName)
 [[Wikipedia: $articleName$|https://en.wikipedia.org/wiki/$articleName$]]
 \end

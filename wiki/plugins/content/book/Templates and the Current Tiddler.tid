@@ -1,7 +1,7 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20220103170417013
-parent: Variables, Macros, and Transclusions
+modified: 20240727194735834
+parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Templates and the Current Tiddler
 type: text/vnd.tiddlywiki

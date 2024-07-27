@@ -1,7 +1,7 @@
 created: 20200606025030461
 description: Macros can reference variables as well as parameters via text substitution.
-modified: 20210410135535433
-parent: Variables, Macros, and Transclusions
+modified: 20240727194754874
+parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Using Variables in Macros
 type: text/vnd.tiddlywiki

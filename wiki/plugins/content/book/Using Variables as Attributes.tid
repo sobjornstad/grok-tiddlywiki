@@ -1,20 +1,20 @@
 created: 20240616152105208
-description: Macros extend the concept of variables by allowing portions of the value to change each time the macro is referenced.
-modified: 20240616161224297
-parent: Variables, Macros, and Transclusions
+description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
+modified: 20240727195737553
+parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Using Variables as Attributes
 type: text/vnd.tiddlywiki
 
-In the [[previous section|Variables]], we saw how we can use the values of variables within running text. But we can also use variables within other formatting instructions -- as the ''values of attributes'' on widgets or HTML tags.
+In the [[previous section|Variables]], we saw how we can use the values of variables within running text. We can also use variables within other formatting instructions -- as the ''values of attributes'' on widgets or HTML tags.
 
-You've already done this once already in the [[link pattern|Ex:LinkPattern]] exercise in [[Your First Dynamic List]], before we understood that `<<currentTiddler>>` was a variable:
+We already did this once already in the [[link pattern|Ex:LinkPattern]] exercise in [[Your First Dynamic List]], before we had explained that `<<currentTiddler>>` was a variable:
 
 ```html
 <$link to=<<currentTiddler>>/>
 ```
 
-In some basic sense, then, using variables as attributes is no different than using them elsewhere. However, there are some traps for the unwary when it comes to mixing variables and other wikitext elements. Fully elucidating all of these requires much more understanding of TiddlyWiki, so we won't cover all of them in this section, but we'll get a good start.
+In a basic sense, using variables as attributes is no different than using them elsewhere. However, there are some traps for the unwary when it comes to mixing variables and other wikitext elements. Fully elucidating all of these requires much more understanding of TiddlyWiki, so we'll start by covering the most basic issues in this section and postpone the rest until later.
 
 
 !! Multiple links to the same place
@@ -29,16 +29,16 @@ But what if we want to use different text for the link each time? You might try 
 
 Unfortunately, variable references ''can't be nested inside other complex wikitext elements like links'', so this doesn't work. If you try clicking on one of the links in the example above, you'll see that TiddlyWiki produces a link to the tiddler literally called `<<wp>>`, which isn't very helpful!
 
-However, variable references //do// work as attribute values. So an easy solution is to use an `a` HTML element instead of wikitext syntax. This element takes the URL to link to in its `href` attribute and the text to display in its body. (`href` stands for //hypertext reference//, and `a` for //anchor//.)
+However, variable references //do// work as attribute values. So an easy solution is to use an `a` HTML element instead of wikitext syntax (recall that all items of wikitext syntax have corresponding [[widgets|Widgets]] or [[HTML]] tags). This element takes the URL to link to in its `href` attribute and the text to display in its body. (`href` stands for //hypertext reference//, and `a` for //anchor//.)
 
 {{Sn:WikipediaAElement||MagicSnippet}}
 
 
 !! Multiple links to different Wikipedia articles
 
-That worked, but it's hard to see a real-life situation where that example would be useful -- how often do you want to link to the same Wikipedia article multiple times?
+The previous example may be functional, but it's a bit academic -- how often do you want to link to the same web page multiple times?
 
-Here's a better idea. Wikipedia article URLs have a very predictable format: for an article named `Article Name` in the English encyclopedia, the URL looks like `https://en.wikipedia.org/wiki/Article Name`. The only part that ever changes is the name of the article. Can we use a variable to hold the part of the URL that doesn't change? Then we could produce a working link to any article given only its title.
+Here's a more useful idea. Wikipedia article URLs have a very predictable format: for an article named `Article Name` in the English encyclopedia, the URL looks like `https://en.wikipedia.org/wiki/Article Name`. The only part that ever changes is the name of the article. Can we use a variable to hold the part of the URL that doesn't change? Then we could produce a working link to any article given only its title.
 
 The most obvious thing to try would be:
 
@@ -52,13 +52,13 @@ Maybe the variable reference needs to go outside the quotation marks?
 
 Uh-oh!
 
-It turns out that we need an entirely new syntax to achieve this. We can use //just// a variable reference as the value of an attribute by writing it directly after the `=`, as we did earlier in this section. Or we can use //just// a constant value (one with no variables) by placing it in `"double quotation marks"` after the `=`. But if we want to combine a constant value and one or more variables, we need to use a ''substituted attribute value'', which looks like this:
+It turns out that we need an entirely new syntax to achieve this. We can use //just// a variable reference as the value of an attribute by writing it directly after the `=`, as we did earlier in this section. Or we can use //just// a constant value (one with no variables) by placing it in `"double quotation marks"` after the `=`. But if we need to //combine// a constant value and one or more variables, as we do here, we need to use a ''substituted attribute value'', which looks like this:
 
 {{Sn:WikipediaSubAttrValue||MagicSnippet}}
 
-Those funny <code>&#96;</code>'s are called ''backticks''. On a standard US keyboard, you can find the backtick (also called the grave accent) to the left of the 1 key. Other keyboards have it in weirder places or even on the AltGr layer; you may have to do a quick web search to learn how to type it on your keyboard.
+Those funny <code>&#96;</code>'s are called ''backticks''. On a standard US keyboard, you can find the backtick (also called the //grave accent//) to the left of the 1 key. Other keyboards have it in weirder places or even on the AltGr layer; you may have to do a quick web search to learn how to type it on your keyboard.
 
-Within a substituted attribute value, the syntax `$(wpBase)$` refers to the variable `wpBase`. The way in which this differs from `<<wpBase>>` is somewhat arcane, so we'll hold off on discussing it until the [[Text Substitution]] section. For now, suffice it to say that you should refer to variables with this `$()$` syntax within substituted attribute values.
+Within a substituted attribute value, the syntax `$(wpBase)$` refers to the value of the variable `wpBase`. The way in which this differs from `<<wpBase>>` is somewhat arcane, so we'll hold off on discussing it until the [[Text Substitution]] section. For now, suffice it to say that you should refer to variables with this `$()$` syntax within substituted attribute values.
 
 
 !! Exercises

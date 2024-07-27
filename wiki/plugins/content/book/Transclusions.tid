@@ -1,7 +1,7 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20210409195700028
-parent: Variables, Macros, and Transclusions
+modified: 20240727194730737
+parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Transclusions
 type: text/vnd.tiddlywiki

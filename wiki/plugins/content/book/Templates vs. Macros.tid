@@ -1,7 +1,7 @@
 created: 20200605153728555
 description: Templates and macros share a surprising number of properties; a few guidelines may help you decide when to use one over the other.
-modified: 20210410143258322
-parent: Variables, Macros, and Transclusions
+modified: 20240727194811630
+parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Templates vs. Macros
 type: text/vnd.tiddlywiki

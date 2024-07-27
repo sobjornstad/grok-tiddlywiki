@@ -1,7 +1,7 @@
 created: 20200603011212616
 description: Macros extend the concept of variables by allowing portions of the value to change each time the macro is referenced.
-modified: 20210512022609740
-parent: Variables, Macros, and Transclusions
+modified: 20240727194656296
+parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Macros
 type: text/vnd.tiddlywiki

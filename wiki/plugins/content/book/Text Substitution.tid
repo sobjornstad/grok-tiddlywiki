@@ -1,7 +1,7 @@
 created: 20200605144511058
 description: Macros process parameters in a peculiar way, by //substitution// of their text, which is quite useful but also causes more confusion than almost anything else in TiddlyWiki.
-modified: 20210521202832974
-parent: Variables, Macros, and Transclusions
+modified: 20240727194747465
+parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Text Substitution
 type: text/vnd.tiddlywiki

@@ -1,12 +1,12 @@
 created: 20240616143658865
 description: Procedures extend the concept of variables by allowing portions of the value to change each time the procedure is referenced.
-modified: 20240616174341130
-parent: Variables, Macros, and Transclusions
+modified: 20240727194649620
+parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Procedures
 type: text/vnd.tiddlywiki
 
-Sometimes we repeat text which is exactly the same, and [[variables|Variables]] let us eliminate that repetition. But often, we want to repeat some text which is //mostly// the same, but which ''varies in a small part or two''.
+Sometimes we want to use exactly the same text multiple times, and [[variables|Variables]] let us eliminate that repetition. But perhaps more often, we want to repeat some text which is //mostly// the same, but which ''varies in a small part or two''.
 
 In [[Using Variables as Attributes]], we learned that you can combine a variable with other text using a substituted attribute value:
 
@@ -14,13 +14,13 @@ In [[Using Variables as Attributes]], we learned that you can combine a variable
 <a href=`$(wpBase)$/Aardvark`>Aardvarks</a>
 ```
 
-But this is a mighty awkward way to write a link to a Wikipedia article! If we want this to be useful, we need a much more convenient way to write it.
+Technically, one could argue that this allows us to repeat text which is mostly the same. But this is a mighty awkward way to write a link to a Wikipedia article! If we want our fancy wikitext to be easier than simply copying and pasting a new link from our web browser each time, we need a much more convenient way to write it.
 
 ''Procedures'' provide this mechanism. A procedure is a variable with some bits that change depending on how you refer to it; the bits that change are called ''parameters''.
 
 To get the value of a procedure (this is referred to as ''calling'' or ''invoking'' it), we use the same double angle brackets that we would for a standard variable, but we include the values of the parameters as well (this is called ''passing'' the parameters to the procedure). Specifically, we place them inside the double angle brackets after the procedure name, separated from the procedure name and from each other by a space.
 
-If we write a `wikipediaLink` procedure, we can use it like this:
+If we write a `wikipediaLink` procedure, we can call it like this:
 
 ```html
 The <<wikipediaLink Aardvark>> is a pig-like African mammal that eats ants and termites.
@@ -29,7 +29,7 @@ The <<wikipediaLink Aardvark>> is a pig-like African mammal that eats ants and t
 
 !! Defining a procedure
 
-Obviously, before that wikitext will work, we have to tell TiddlyWiki what a `wikipediaLink` is. The syntax looks like this:
+Of course, before that wikitext will work, we have to tell TiddlyWiki what a `wikipediaLink` is. The syntax looks like this:
 
 ```html
 \procedure wikipediaLink(articleName)
@@ -43,7 +43,7 @@ Put all together, in action:
 
 {{Sn:InitialAardvarkWikipediaLink||MagicSnippet}}
 
-Let's get this example in your wiki so you can play with it: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: the [[HTML]] closing tag `</a>` uses a //forward slash//, while `\procedure` and `\end` use a //backslash//. Review the HTML section if you can't remember which is which.) You should see the link appear, as it does in the preview above.
+Let's get this example in your wiki so you can play with it: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: the HTML closing tag `</a>` uses a //forward slash//, while `\procedure` and `\end` use a //backslash//. Review the [[HTML]] section if you can't remember which is which.) You should see the link appear, as it does in the preview above.
 
 
 !! Anatomy of a procedure
@@ -68,7 +68,7 @@ Everything between the line beginning with `\procedure` and the line beginning w
 	</a>
 ```
 
-The body of a procedure is like the value of a variable, with an additional feature: each parameter to the procedure becomes a variable within the body. This variable's name is the same as the parameter name, and its value is whatever was passed to the parameter. Here, we can see that our parameter `articleName` is now a variable available for use within the body.
+The body of a procedure is like the value of a variable, with an additional feature: each parameter to the procedure becomes a variable within the body. This variable's name is the same as the parameter name, and its value is whatever was passed to the parameter. In this example, we're referring to the value of the parameter `articleName` twice, once inside the substituted attribute value for the `href` attribute of the `a` tag, and once directly in the wikitext.
 
 Lastly, there's the line:
 

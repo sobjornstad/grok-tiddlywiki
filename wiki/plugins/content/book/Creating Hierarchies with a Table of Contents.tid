@@ -1,6 +1,6 @@
 created: 20200603023508492
 description: TiddlyWiki can produce hierarchical tables of contents from tag structures.
-modified: 20240612031750538
+modified: 20240727195521568
 parent: Filing and Organizing
 tags: Section
 title: Creating Hierarchies with a Table of Contents
@@ -31,7 +31,7 @@ The most basic table of contents is created with the wikitext `<<toc "Root">>`, 
 <<toc "OnboardingProcess">>
 ```
 
-The funny double angle brackets `<<>>` introduce a reference to a variable or a macro call. You don't need to worry about what those are for now; we'll learn a whole lot more about them in [[Chapter 4|Variables, Macros, and Transclusions]].
+The funny double angle brackets `<<>>` introduce a reference to a [[variable|Variables]]. You don't need to worry about what that is for now; we'll learn a whole lot more about them in [[Chapter 4|Variables, Procedures, and Transclusions]].
 
 Go ahead and edit the `OnboardingProcess` tiddler and drop that snippet in. You'll see that a numbered list of the items tagged `OnboardingProcess` shows up. But oops, the `EmployeeProfileSetupMeeting` probably doesn't belong at the top level now that we've added our three subparts of the onboarding project. It makes more sense to have it in `OnboardingHr`, agreed? Let's open the `EmployeeProfileSetupMeeting`, remove the `OnboardingProcess` tag, and add the `OnboardingHr` tag. If we save it and go back up to `OnboardingProcess` now, we'll see that now it's indented into a second level.
 
