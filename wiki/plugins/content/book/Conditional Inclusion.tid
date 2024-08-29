@@ -1,0 +1,118 @@
+created: 20240829215208267
+description: TODO
+modified: 20240829224343466
+parent: Variables, Procedures, and Transclusions
+tags: Section
+title: Conditional Inclusion
+type: text/vnd.tiddlywiki
+
+Often, we don't want to show all of the wikitext in a template on all tiddlers to which it's applied. Rather, we want to show parts of the wikitext ''only if some condition is true''.
+
+For example, in [[Templates and the Current Tiddler]], we created a `ContactInformationTemplate`:
+
+```html
+!! Information about {{!!title}}
+
+* ''Email'': {{!!email}}
+* ''Phone'': {{!!phone}}
+* ''Family'': {{!!family}}
+* ''Manager'': {{!!manager}}
+```
+
+This template is nice as far as it goes, but it looks rather ugly when applied to a tiddler which is missing some of the fields, such as `ChrisSmith`:
+
+[img[chris-smith-empty.png]]
+
+It would be cleaner to show each bullet point only if the field actually has a value.
+
+!! Conditional expressions
+
+We can achieve this by modifying the template to include ''conditional expressions'' (or //conditionals// for short). Conditional expressions are based on [[filters|Filters]]. If the filter returns at least one result, the contents of the conditional are rendered. Otherwise, nothing at all is rendered. The syntax looks like this:
+
+```html
+!! Information about {{!!title}}
+
+<ul>
+  <% if [all[current]has[email]] %>
+    <li>''Email'': {{!!email}}</li>
+  <% endif %>
+  <% if [all[current]has[phone]] %>
+    <li>''Phone'': {{!!phone}}</li>
+  <% endif %>
+  <% if [all[current]has[family]] %>
+    <li>''Family'': {{!!family}}</li>
+  <% endif %>
+  <% if [all[current]has[manager]] %>
+    <li>''Manager'': {{!!manager}}</li>
+  <% endif %>
+</ul>
+```
+
+A conditional expression looks much like an [[HTML]] element, except there are percent signs `%` right inside the angle brackets, and where you might expect to see `<% /if %>`, you instead see `<% endif %>`. The spaces inside the percent signs are optional, but as with the spaces inside `{{{ triple braces }}}`, your wikitext will quickly become very hard to read if you omit them!
+
+The contents of conditional expressions can be on one line or multiple lines. They can contain wikitext. Nevertheless, in this example, we needed to switch to using HTML for our list instead of wikitext syntax. The intervening conditionals would split up the bullet points into multiple lists if we used wikitext syntax, preventing them from displaying correctly (see also [[Block Mode and Inline Mode]], coming up).
+
+TiddlyWiki technically calls this “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will simplify and call a use of this pattern “a conditional expression” or “a conditional”, and the overall feature “conditional inclusion,” for short.
+
+
+!! Nesting and else statements
+
+What if //none// of the contact fields are populated? In this case, we might want to provide a message saying that there is no contact information available, so we won't think there's a bug when we look at the template. To achieve this, we'll need to display something both if a condition is true //and// if it's false. We can do that with the <% else %> conditional, accompanied by an appropriate filter:
+
+```html
+<% if [all[current]!has[email]!has[phone]!has[family]!has[manager]] %>
+
+	There is no contact information available for {{!!title}}.
+	
+<% else %>
+
+  !! Information about {{!!title}}
+
+  <ul>
+    <% if [all[current]has[email]] %>
+      <li>''Email'': {{!!email}}</li>
+    <% endif %>
+    <% if [all[current]has[phone]] %>
+      <li>''Phone'': {{!!phone}}</li>
+    <% endif %>
+    <% if [all[current]has[family]] %>
+      <li>''Family'': {{!!family}}</li>
+    <% endif %>
+    <% if [all[current]has[manager]] %>
+      <li>''Manager'': {{!!manager}}</li>
+    <% endif %>
+  </ul>
+	
+<% endif %>
+```
+
+Notice that we've nested our conditionals -- put more conditionals inside the `<% else %>` part of the previous conditional. This is perfectly valid and common.
+
+
+!! Exercises
+
+TODO
+
+Include an exercise demonstrating `<% elseif %>`.
+
+An exercise where it tries to pick your location by area code? Or whether it's toll-free?
+
+An exercise that shows you can use `<<condition>>`
+
+Something that has you wrap this into a procedure (we may need to introduce the `$transclude` widget -- can't remember if we've yet done so).
+
+
+Show list of missing fields by looping over them, like this (not sure what this might require that we haven't yet covered, need to look):
+
+```
+Missing fields:
+<$list filter="phone email family manager" variable="field">
+  <% if [all[current]!has<field>] %><<field>><% endif %>
+</$list>
+```
+
+!! Takeaways
+
+TODO
+
+{{||TakeawaysTemplate}}
