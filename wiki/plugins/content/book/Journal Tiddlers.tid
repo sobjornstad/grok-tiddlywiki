@@ -1,6 +1,6 @@
 created: 20200530202215791
 description: How to create journal tiddlers and use basic wikitext formatting features.
-modified: 20240614020423595
+modified: 20240829125843532
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Journal Tiddlers
@@ -42,9 +42,9 @@ If you now click on the new-journal button, you will see a new tiddler open up f
 
 Can't tell if you did the markup right? There is a live ''side-by-side preview'' function, which you'll likely want to have open most of if not all of the time unless you're working on an unusually small screen, but the discoverability is terrible. The button is second from the right on the editor toolbar, and it looks like a jagged mouth <<textual-button "preview-closed">>; you'll see after clicking it that it's supposed to be a closed eye to contrast with the open eye <<textual-button "preview-open">>. Alternatively, you can press Alt+P while editing (your cursor has to be in the text field for this shortcut to work). Most buttons in the editor toolbar have similar keyboard shortcuts, which you can find by hovering over them.
 
-If you have a small screen and need more space to see the editor and the preview side by side, you can click the double right chevron <<textual-button "chevron-right">> way in the upper-right corner of the screen to hide the sidebar temporarily (click the button again to put it back). If you're using a full browser rather than TiddlyDesktop, you can also hide your browser's toolbars and interface by pressing F11 (or Command+Shift+F on a Mac), which is nice if you want to focus on what you're writing or you need a bit more vertical space. (This doesn't work in TiddlyDesktop since it already has no toolbars.)
+If you have a small screen and need more space to see the editor and the preview side by side, you can click the double right chevron <<textual-button "chevron-right">> way in the upper-right corner of the screen to hide the sidebar temporarily (click the button again to put it back). You can also hide your web browser's toolbars and interface by pressing F11 (or Command+Shift+F on a Mac), which is nice if you want to focus on what you're writing or you need a bit more vertical space.
 
-When you're done, click the check mark <<textual-button "done-button">> in the upper-right corner of the tiddler to accept the changes and admire your handiwork. You should see a tooltip momentarily appear, indicating that your wiki has been saved; TiddlyDesktop will automatically save your wiki every time you save a tiddler. You can also manually save the wiki by clicking the checkmark inside a circle <<textual-button "save-button">> on the page toolbar, which changes color when there are changes to be saved.
+When you're done, click the check mark <<textual-button "done-button">> in the upper-right corner of the tiddler to accept the changes and admire your handiwork. Note, however, that //this does not save your wiki itself//. To permanently commit your changes to TiddlyHost, you need to click the save changes button <<textual-button "save-button-dynamic">> on the page toolbar, which changes into a red target when there are changes to be saved. (If you dislike the need to manually save, note that this is a limitation of TiddlyHost, not TiddlyWiki itself -- many [[other savers|Options for Saving and Hosting Your Wiki]] are capable of saving automatically.)
 
 {{Ex:BasicWikitext||ExerciseTemplate}}
 

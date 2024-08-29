@@ -1,13 +1,27 @@
 created: 20210123233814789
-modified: 20210911214545388
+modified: 20240829124150567
 tags: Fragment
 title: SavingProgress
 type: text/vnd.tiddlywiki
 
-If you're currently viewing this page on the web, you should download a copy now by clicking the save icon at the end of this paragraph: {{$:/core/ui/Buttons/save-wiki}}
+If you're currently viewing this page on the web at https://groktiddlywiki.com, you should make your own copy now.
 
-You are free to modify your saved copy for personal use, and to share unmodified copies with others, but not to redistribute modified versions or earn money from redistribution. See the [[copyright notice|Copyright]] for details.
 
-Since the point of having your own copy is being able to edit the wiki to save your progress, you'll also need a way to save changes to the file. The most convenient way is to [[load the file up in TiddlyDesktop|Installing TiddlyWiki]], just like the wiki you'll be doing exercises in. Once you've done that, close out of //Grok TiddlyWiki// in your web browser and pick up where you left off in TiddlyDesktop (you can use the //Outline// link in the upper-right to quickly find your spot again). In the future, open the book in TiddlyDesktop rather than on the web.
+!! Clone this wiki using TiddlyHost
 
-Be sure to save your changes when you close the book for a while; TiddlyDesktop will prompt you to do so when you close the window.
+The easiest way to manage your own copy of //Grok TiddlyWiki// is using [[TiddlyHost|https://tiddlyhost.com]] (see [[Installing TiddlyWiki]] for details). To clone your own copy of GTW into your TiddlyHost account, click on <<gtw-tiddlyhost-clone-link "this clone link">> and log in if required. Then give your site a name at the top (this can be anything; something like `sorens-grok-tiddlywiki` would make sense), choose //Private// access, and click //Create//.
+
+You'll now be able to see your copy of //Grok TiddlyWiki// in your TiddlyHost account, next to the sample wiki you installed in [[Installing TiddlyWiki]]. In the future, whenever you go to work on learning TiddlyWiki, open the book from your TiddlyHost account rather than from https://groktiddlywiki.com.
+
+Be sure to save your changes when you close the book for a while; your browser will prompt you to do so when you close the tab if you forget.
+
+
+!! Download a copy directly
+
+If you prefer to use [[a saver other than TiddlyHost|Options for Saving and Hosting Your Wiki]], click the save icon at the end of this paragraph to download a copy of the wiki to your computer: {{$:/core/ui/Buttons/save-wiki}}
+
+Then add the wiki to whatever saver you're using, as required.
+
+!! Copyright
+
+You are free to modify the copy you've saved for your personal use, and to share unmodified copies with others, but not to redistribute modified versions or earn money from redistribution. See the [[copyright notice|Copyright]] for details.

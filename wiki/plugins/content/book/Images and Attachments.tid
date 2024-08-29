@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20210818172314460
+modified: 20240829125436764
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -19,7 +19,7 @@ This works for text, images, PDFs, and even binary files (though this last optio
 
 You can also ''copy content between TiddlyWikis'' this way. For instance, if you wanted a copy of the [[Classifying Tags]] section in your wiki, you could simply grab that link and drag and drop it right onto your wiki window (this doesn't consistently work, however, if you don't have both wikis open in the same web browser -- you may have to try another browser in some cases).
 
-If it's easier than dragging and dropping, you can also click the <<textual-button "import-button">> ''Import'' button on the ''Tools'' tab of the sidebar to select a file to import. In particular, when using TiddlyDesktop with certain operating systems and browsers, it may be tricky to get drag-and-drop to work, but the Import button will almost always work fine.
+If it's easier than dragging and dropping, you can also click the <<textual-button "import-button">> ''Import'' button on the ''Tools'' tab of the sidebar to select a file to import. In some browsers, it may be tricky to get drag-and-drop to work, but the Import button will almost always work fine.
 
 Go ahead and import a file or two into your wiki, including at least one image so we can take a look at that below.
 
@@ -80,7 +80,7 @@ One way to avoid the issue is to ''link to content stored elsewhere'' instead of
 
 Similarly, you could link to a PDF instead of transcluding it.
 
-You can also link to files ''on your computer'' by placing them in a folder next to your TiddlyWiki. Say that you're using TiddlyDesktop, and you have a single-file TiddlyWiki, `C:\Users\Soren\Documents\TiddlyWiki\tw.html`. You could create a folder called `C:\Users\Soren\Documents\TiddlyWiki\attachments`. Then, when you want to have a file available for linking from TiddlyWiki, put it in this folder and display an image or link to a PDF like this:
+If you're keeping your wiki on your computer and using a compatible saver (this rules out TiddlyHost), you can also link to files ''on your computer'' by placing them in a folder next to your TiddlyWiki. Say that your wiki is on a Windows computer at `C:\Users\Soren\Documents\TiddlyWiki\tw.html`. You could create a folder called `C:\Users\Soren\Documents\TiddlyWiki\attachments`. Then, when you want to have a file available for linking from TiddlyWiki, put it in this folder and display an image or link to a PDF like this:
 
 ```html
 [img [attachments/myimage.png]]

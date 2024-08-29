@@ -1,17 +1,18 @@
 created: 20201121231218670
 description: The variety of ways you can save and store your wiki.
-modified: 20210504013511473
+modified: 20240829120636958
 parent: Appendices
 tags: Section
 title: Options for Saving and Hosting Your Wiki
 type: text/vnd.tiddlywiki
 
-In [[Installing TiddlyWiki]], we decided to use TiddlyDesktop to save and manage our wiki. However, once you have the hang of TiddlyWiki, TiddlyDesktop is not necessarily the best fit. For instance, it doesn't let you access your wiki across the internet or make it available to other users. Or you might be frustrated with the limitations on [[Images and Attachments]] in a single-file wiki and want to store your wiki as a folder of individual tiddlers and host it on Node.js.
+In [[Installing TiddlyWiki]], we decided to use TiddlyHost to save and manage our wiki. However, once you have the hang of TiddlyWiki, TiddlyHost is not necessarily the best fit. For instance, it requires you to entrust your data to a couple members of the TiddlyWiki community, and backing up requires manual actions. Or you might be frustrated with the limitations on [[Images and Attachments]] in a single-file wiki and want to store your wiki as a folder of individual tiddlers and host it on Node.js.
 
-If this sounds like something you'd like to explore, you can find a list of all the available savers in the [[Getting Started|https://tiddlywiki.com/#GettingStarted]] tiddler on tiddlywiki.com. Several particularly interesting ones:
+If you'd like to explore other options, you can find a list of all the available savers in the [[Getting Started|https://tiddlywiki.com/#GettingStarted]] tiddler on tiddlywiki.com. Several particularly interesting ones:
 
-* [[TiddlyDesktop|https://tiddlywiki.com/#Saving%20on%20TiddlyDesktop]] is the tool that //Grok TiddlyWiki// has generally been assuming you are using.
+* [[TiddlyDesktop|https://tiddlywiki.com/#Saving%20on%20TiddlyDesktop]] is a small standalone NW.js app that launches your file-based wiki in a separate TiddlyWiki window on your local computer.
 * The [[GitHub saver|https://tiddlywiki.com/#Saving%20to%20a%20Git%20service]] allows you to save your changes to a public or private Git repository hosted on GitHub.
-* [[Node.js|https://tiddlywiki.com/#Installing%20TiddlyWiki%20on%20Node.js]] is really TiddlyWiki's native platform, and the single-file versions a kind of package containing the elements needed to allow it to operate outside of Node. This is the most powerful way to work with your wiki, but also requires some technical expertise to take advantage of.
+* [[Node.js|https://tiddlywiki.com/#Installing%20TiddlyWiki%20on%20Node.js]] is really TiddlyWiki's native platform, and the single-file versions a kind of package containing the elements needed to allow it to operate outside of Node. Accessing your TiddlyWiki directly through a server running on Node is the most powerful way to work with your wiki, but also requires some technical expertise to take advantage of.
 * [[Timimi|https://tiddlywiki.com/#Timimi%3A%20WebExtension%20and%20Native%20Host%20by%20Riz]] is a combination browser add-on and desktop application that allows you to seamlessly save to your hard drive -- much like TiddlyDesktop, but you access your wiki from within a normal browser.
 * [[Quine 2|https://tiddlywiki.com/#Saving%20on%20iPad%2FiPhone]] allows you to conveniently view and edit TiddlyWikis on an iOS device.
+* [[Twexe|https://ihm4u.github.io/twexe/]] is a special kind of single-file wiki that can be directly run on Linux and Windows without launching a browser at all. It automatically modifies itself to contain your changes.
