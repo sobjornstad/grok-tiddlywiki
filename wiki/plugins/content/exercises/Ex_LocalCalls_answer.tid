@@ -1,0 +1,29 @@
+created: 20240830031132609
+modified: 20240830031440604
+tags: Answer
+title: Ex:LocalCalls/answer
+type: text/vnd.tiddlywiki
+
+While you don't necessarily have to write a procedure to contain this logic, doing so in a scenario like this often helps make your template easier to understand. It may also make the wikitext easier to debug if you mess something up.
+
+A `call-type` procedure can look like this:
+
+```html
+\procedure call-type()
+  <$let areaCode={{{ [<currentTiddler>split[]first[3]join[]] }}}>
+    <% if [{CurrentAreaCode}match<areaCode>] %>
+      local
+    <% elseif [enlist{TollFreeAreaCodes}match<areaCode>] %>
+      toll-free
+    <% else %>
+      long-distance
+    <% endif %>
+  </$let>
+\end
+```
+
+The `TollFreeAreaCodes` tiddler will contain `800 888 877` (or any ordering of those three space-separated numbers, or those numbers each surrounded with square brackets, like `[[800]]`), and the `CurrentAreaCode` tiddler will contain `212`. Then just drop something like this in an appropriate spot in the template:
+
+```html
+Call will be <<call-type>>.
+```

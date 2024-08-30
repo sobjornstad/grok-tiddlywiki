@@ -1,6 +1,6 @@
 created: 20240829215208267
 description: TODO
-modified: 20240829224343466
+modified: 20240830032358043
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Conditional Inclusion
@@ -8,7 +8,24 @@ type: text/vnd.tiddlywiki
 
 Often, we don't want to show all of the wikitext in a template on all tiddlers to which it's applied. Rather, we want to show parts of the wikitext ''only if some condition is true''.
 
-For example, in [[Templates and the Current Tiddler]], we created a `ContactInformationTemplate`:
+!! Conditional expressions
+
+We can achieve this using ''conditional expressions'' (or ''conditionals'' for short). Conditional expressions are based on [[filters|Filters]]. If the filter ''returns at least one result'', the contents of the conditional are rendered. Otherwise, nothing at all is rendered. The syntax looks like this:
+
+{{Sn:ConditionalInclusionExample||MagicSnippet}}
+
+The `match` [[filter operator|Anatomy of Filter Steps]] passes through any tiddler whose title exactly matches the `match` step's parameter, and filters out all other tiddlers. It's indispensable in many conditional filters. The `<storyTiddler>` variable retrieves the name of the tiddler which is currently being shown in the [[story river|The TiddlyWiki Interface]]. We have to use that in this snippet to get the expected result, rather than `<currentTiddler>`, because [[Grok TiddlyWiki snippets are their own tiddlers|Slicing Up Content]].
+
+You can see that the filter in the first conditional returns a result, since the title of this tiddler is `Conditional Inclusion`, so the contents of the conditional are rendered. The second returns no results, since the title is not `When Pigs Fly`, so nothing is rendered.
+
+Notice that a conditional expression looks much like an [[HTML]] element, except there are percent signs `%` right inside the angle brackets, and where you might expect to see `<% /if %>`, you instead see `<% endif %>`. The spaces inside the percent signs are optional, but as with the spaces inside `{{{ triple braces }}}`, your wikitext will quickly become very hard to read if you omit them!
+
+TiddlyWiki technically calls this “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will simplify and call a use of this pattern //a conditional expression// or //a conditional//, and the overall feature ''conditional inclusion'', for short.
+
+
+!! A real example
+
+In [[Templates and the Current Tiddler]], we created a `ContactInformationTemplate`:
 
 ```html
 !! Information about {{!!title}}
@@ -23,11 +40,7 @@ This template is nice as far as it goes, but it looks rather ugly when applied t
 
 [img[chris-smith-empty.png]]
 
-It would be cleaner to show each bullet point only if the field actually has a value.
-
-!! Conditional expressions
-
-We can achieve this by modifying the template to include ''conditional expressions'' (or //conditionals// for short). Conditional expressions are based on [[filters|Filters]]. If the filter returns at least one result, the contents of the conditional are rendered. Otherwise, nothing at all is rendered. The syntax looks like this:
+It would be cleaner to show each bullet point only if the field actually has a value. To achieve this, we can add a conditional expression around each one:
 
 ```html
 !! Information about {{!!title}}
@@ -48,16 +61,12 @@ We can achieve this by modifying the template to include ''conditional expressio
 </ul>
 ```
 
-A conditional expression looks much like an [[HTML]] element, except there are percent signs `%` right inside the angle brackets, and where you might expect to see `<% /if %>`, you instead see `<% endif %>`. The spaces inside the percent signs are optional, but as with the spaces inside `{{{ triple braces }}}`, your wikitext will quickly become very hard to read if you omit them!
-
-The contents of conditional expressions can be on one line or multiple lines. They can contain wikitext. Nevertheless, in this example, we needed to switch to using HTML for our list instead of wikitext syntax. The intervening conditionals would split up the bullet points into multiple lists if we used wikitext syntax, preventing them from displaying correctly (see also [[Block Mode and Inline Mode]], coming up).
-
-TiddlyWiki technically calls this “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will simplify and call a use of this pattern “a conditional expression” or “a conditional”, and the overall feature “conditional inclusion,” for short.
+The contents of conditionals can be on one line or multiple lines, and they can contain arbitrary wikitext. Nevertheless, in this example, we needed to switch to using HTML for our list instead of wikitext syntax. The intervening conditionals would split up the bullet points into multiple lists if we used wikitext syntax, preventing them from displaying correctly (see also [[Block Mode and Inline Mode]], coming up).
 
 
-!! Nesting and else statements
+!! Nesting and `else` clauses
 
-What if //none// of the contact fields are populated? In this case, we might want to provide a message saying that there is no contact information available, so we won't think there's a bug when we look at the template. To achieve this, we'll need to display something both if a condition is true //and// if it's false. We can do that with the <% else %> conditional, accompanied by an appropriate filter:
+What if //none// of the contact fields are populated? In this case, we might want to provide a message saying that there is no contact information available, so we won't think there's a bug when we look at the template. To achieve this, we'll need to display something both if a condition is true //and// if it's false. We can do that by adding an `<% else %>` clause to the conditional, accompanied by an appropriate filter:
 
 ```html
 <% if [all[current]!has[email]!has[phone]!has[family]!has[manager]] %>
@@ -86,30 +95,22 @@ What if //none// of the contact fields are populated? In this case, we might wan
 <% endif %>
 ```
 
-Notice that we've nested our conditionals -- put more conditionals inside the `<% else %>` part of the previous conditional. This is perfectly valid and common.
+Notice that we've nested the conditionals -- put more conditionals inside the `<% else %>` clause of the outer conditional. As with HTML tags, this is perfectly valid, and even common.
 
+
+!! One gotcha to be aware of
+
+In many places in TiddlyWiki, when you want to use a filter, you put it in `"quotation marks"`. No quotation marks are involved in a conditional expression, and if you inadvertently include them, the condition will //always// be true, no matter what the filter is:
+
+{{Sn:WhenPigsFlyQuotation||MagicSnippet}}
+
+This can be quite perplexing if you've never seen it before! What's happening is that you're turning the entire filter expression into a single literal tiddler name -- namely, a tiddler called `[<storyTiddler>match[When Pigs Fly]]`. A single tiddler name is a valid filter expression which outputs itself when evaluated, so we get a result, and the contents of the conditional are rendered.
 
 !! Exercises
 
-TODO
-
-Include an exercise demonstrating `<% elseif %>`.
-
-An exercise where it tries to pick your location by area code? Or whether it's toll-free?
-
-An exercise that shows you can use `<<condition>>`
-
-Something that has you wrap this into a procedure (we may need to introduce the `$transclude` widget -- can't remember if we've yet done so).
-
-
-Show list of missing fields by looping over them, like this (not sure what this might require that we haven't yet covered, need to look):
-
-```
-Missing fields:
-<$list filter="phone email family manager" variable="field">
-  <% if [all[current]!has<field>] %><<field>><% endif %>
-</$list>
-```
+{{Ex:LocalCalls||ExerciseTemplate}}
+{{Ex:ConditionalProcedure||ExerciseTemplate}}
+{{Ex:ConditionalProcedureContinued||ExerciseTemplate}}
 
 !! Takeaways
 

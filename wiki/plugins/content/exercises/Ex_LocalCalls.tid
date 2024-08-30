@@ -1,0 +1,16 @@
+created: 20240830031047089
+length: m
+modified: 20240830031739442
+tags: Exercise
+title: Ex:LocalCalls
+type: text/vnd.tiddlywiki
+
+You can add multiple clauses to a single conditional expression using `<% elseif %>`. First there must always be an `<% if FILTER %>`, then there can be zero or more `<% elseif FILTER %>`s, and finally there can optionally be an `<% else %>` clause. The first clause whose filter returns a result is used.
+
+Suppose that you're in the 212 area code, and your office still uses landline phones. Within the `ContactInformationTemplate`, after the contact information list, show whether a call to this person will be `local`, `long-distance`, or `toll-free`, depending on their phone number.
+
+You may assume that the area code is the first three characters of the `phone` field. Use the filter steps `split[]first[3]join[]` (turn each character in the input into a single tiddler name, then discard all but the first three, then join all the tiddler names into a single tiddler name) to select the first three characters of a single input tiddler.
+
+Consider a number to be local if it's in the current area code, and to be toll-free if its area code is `800`, `888`, or `877`. All other numbers are long-distance.
+
+Store both the current area code and the list of toll-free area codes in tiddlers, called `CurrentAreaCode` and `TollFreeAreaCodes`, respectively, so that you can easily change these values in the future if necessary.

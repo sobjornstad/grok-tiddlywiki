@@ -1,0 +1,47 @@
+created: 20240830023119470
+modified: 20240830030959732
+tags: Answer
+title: Ex:ConditionalProcedureContinued/answer
+type: text/vnd.tiddlywiki
+
+The trick here (useful in a wide variety of situations) is to use a `$list` widget with a filter consisting of a “tiddler list” of the items you want to loop over, here the field names. We'll assign these to the variable `field`, and pass that variable's value as the parameter to the `contact-info-item` macro:
+
+```html
+\procedure contact-info-item(field)
+  <% if [all[current]has<field>] %>
+    <li>
+      ''<<field>>'':
+      <$transclude $field=<<field>>/>
+    </li>
+  <% endif %>
+\end
+
+<ul>
+  <$list filter="email phone family manager" variable="field">
+    <$transclude $variable="contact-info-item" field=<<field>> />
+	</$list>
+</ul>
+```
+
+One can imagine taking this even further, getting the actual procedure call down to a single line:
+
+```html
+\procedure contact-info-item(field)
+  <% if [all[current]has<field>] %>
+    <li>
+      ''<<field>>'':
+      <$transclude $field=<<field>>/>
+    </li>
+  <% endif %>
+\end
+
+\procedure apply-fields(proc, fields)
+  <$list filter=<<fields>> variable="field">
+    <$transclude $variable=<<proc>> field=<<field>>/>
+  </$list>
+\end
+
+<<apply-fields "contact-info-item" "email phone family manager">>
+```
+
+...but at some point, adding additional layers of abstraction makes your wikitext harder to understand, rather than easier.

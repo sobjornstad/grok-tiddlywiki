@@ -1,0 +1,38 @@
+created: 20240830022808182
+modified: 20240830022819289
+tags: Answer
+title: Ex:ConditionalProcedure/answer
+type: text/vnd.tiddlywiki
+
+```html
+\procedure contact-info-item(field)
+  <% if [all[current]has<field>] %>
+    <li>
+      ''<<field>>'':
+      <$transclude $field=<<field>>/>
+    </li>
+  <% endif %>
+\end
+
+!! Information about {{!!title}}
+
+<ul>
+	<<contact-info-item "email">>
+	<<contact-info-item "phone">>
+	<<contact-info-item "family">>
+	<<contact-info-item "manager">>
+</ul>
+```
+
+Note that the result of this snippet is slightly different than the original code in that the field names are no longer capitalized. If you're fussy about this, you can use the `$text` widget and the `sentencecase[]` operator in a filtered transclusion to upper-case the first letter of the field name:
+
+```html
+\procedure contact-info-item(field)
+  <% if [all[current]has<field>] %>
+    <li>
+      ''<$text text={{{ [<field>sentencecase[]] }}}/>'':
+      <$transclude $field=<<field>>/>
+    </li>
+  <% endif %>
+\end
+```

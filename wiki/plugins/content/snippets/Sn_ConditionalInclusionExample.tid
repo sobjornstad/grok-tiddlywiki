@@ -1,0 +1,13 @@
+created: 20240829224753084
+modified: 20240829225431791
+tags: 
+title: Sn:ConditionalInclusionExample
+type: text/vnd.tiddlywiki
+
+<% if [<storyTiddler>match[Conditional Inclusion]] %>
+	The title of the current tiddler is “Conditional Inclusion.”
+<% endif %>
+
+<% if [<storyTiddler>match[When Pigs Fly]] %>
+	Pigs are flying – better watch out!
+<% endif %>

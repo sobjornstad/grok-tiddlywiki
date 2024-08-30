@@ -1,0 +1,12 @@
+created: 20240830022944745
+length: m
+modified: 20240830031658063
+tags: Exercise
+title: Ex:ConditionalProcedureContinued
+type: text/vnd.tiddlywiki
+
+The result of [[Ex:ConditionalProcedure]] is still repetitive in that it uses the same procedure call four times in a row, with only the field name changing. Can you remove even this repetition, so there is only a single procedure call?
+
+//Hint 1:// What TiddlyWiki feature have we seen that renders some wikitext multiple times?
+
+//Hint 2:// A type of filter expression we haven't discussed explicitly yet consists of a tiddler list (sequence of tiddler names).
