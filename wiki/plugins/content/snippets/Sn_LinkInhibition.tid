@@ -1,0 +1,12 @@
+created: 20240901050536401
+modified: 20240901051120928
+tags: 
+title: Sn:LinkInhibition
+type: text/vnd.tiddlywiki
+
+\widget $link()
+	<$slot $name="ts-raw">
+\end
+
+* <$link to="Links">Link</$link> to a tiddler
+* [[Links]] are a fundamental part of a TiddlyWiki.

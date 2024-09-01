@@ -1,0 +1,11 @@
+created: 20240901045923535
+modified: 20240901045939724
+tags: 
+title: Sn:BoldItalicsWidget
+type: text/vnd.tiddlywiki
+
+\widget $format.bold-italics(text)
+	''//<<text>>//''
+\end
+
+<$format.bold-italics text="Test text"/>

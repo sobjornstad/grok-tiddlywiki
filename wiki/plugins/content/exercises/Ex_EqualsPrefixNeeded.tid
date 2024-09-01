@@ -1,0 +1,8 @@
+created: 20240901144824449
+length: s
+modified: 20240901192039806
+tags: Exercise
+title: Ex:EqualsPrefixNeeded
+type: text/vnd.tiddlywiki
+
+Why did we need to use the `=` filter prefix in the [[previous exercise|Ex:SaveOptionalParameters]]?

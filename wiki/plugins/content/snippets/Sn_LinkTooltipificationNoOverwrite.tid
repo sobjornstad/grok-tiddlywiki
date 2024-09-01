@@ -1,0 +1,20 @@
+created: 20240901134445673
+modified: 20240901135132964
+tags: 
+title: Sn:LinkTooltipificationNoOverwrite
+type: text/vnd.tiddlywiki
+
+\widget $link(to, tooltip:"")
+  <$let tip={{{ [<tooltip>!is[blank]] ~[<to>get[description]] }}}>
+    <$genesis
+      $type="$link"
+      $remappable="no"
+      to=<<to>>
+      tooltip=<<tip>>
+    >
+      <$slot $name="ts-raw"/>
+    </$genesis>
+  </$let>
+\end
+
+[[Links]] and <$link to=Tags tooltip="I love tags!">Tags</$link> combine to organize [[Tiddlers]] within a wiki.

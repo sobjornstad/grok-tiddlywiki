@@ -1,0 +1,33 @@
+created: 20240901145209499
+modified: 20240901145846008
+tags: 
+title: Sn:SaveOptionalParametersSolution
+type: text/vnd.tiddlywiki
+
+\function .rest-names() [<params-var>jsonindexes[]]
+\function .rest-values() [.rest-names[]] :map[<params-var>jsonget<currentTiddler>]
+	
+\widget $link()
+	<$parameters
+		to=""
+		tooltip=""
+		$params="params-var"
+	>
+		<$let newtooltip={{{ [<tooltip>!is[blank]] ~[<to>get[description]] }}}>
+			<$genesis
+				$type="$link"
+				$remappable="no"
+				$names="[.rest-names[]] =tooltip"
+				$values="[.rest-values[]] =[<newtooltip>]"
+			>
+				<$slot $name="ts-raw"/>
+			</$genesis>
+		</$let>
+	</$parameters>
+\end
+
+[[Links]] and <$link to=Tags tooltip="I love tags!">Tags</$link> combine to organize [[Tiddlers]] within a wiki.
+
+Here's an example of a link using a parameter we didn't touch, `class`, which gets saved correctly:
+
+<$link to="Fields" class="tc-tiddlylink-external">I'm posing as external</$link>

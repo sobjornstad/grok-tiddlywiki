@@ -1,0 +1,13 @@
+created: 20240901050231572
+modified: 20240901050321981
+tags: 
+title: Sn:BoldItalicsWidgetBody
+type: text/vnd.tiddlywiki
+
+\widget $format.bold-italics()
+''//<$slot $name="ts-raw" />//''
+\end
+
+<$format.bold-italics>
+Test text
+</$format.bold-italics>

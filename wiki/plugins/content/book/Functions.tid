@@ -1,6 +1,6 @@
 created: 20240831204317959
 description: TODO
-modified: 20240901043938888
+modified: 20240901045518895
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Functions
@@ -33,7 +33,7 @@ You can also call a function using the ''`function`'' [[filter operator|Anatomy 
 
 {{Sn:MultiplyByTwoFunctionOperator||MagicSnippet}}
 
-Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use the same shortcut for function names, but with one extra restriction: the function name must contain a period (`.`).
+Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use the same shortcut for function names, but with one extra restriction: the function name must contain a dot (`.`).
 
 Taking advantage of this syntax is as simple as prefixing your function names with a single `.`:
 

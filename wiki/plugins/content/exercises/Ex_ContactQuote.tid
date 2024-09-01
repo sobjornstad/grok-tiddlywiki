@@ -1,0 +1,12 @@
+created: 20240901190714607
+length: m
+modified: 20240901191626844
+tags: Exercise
+title: Ex:ContactQuote
+type: text/vnd.tiddlywiki
+
+Write a `$contact.quote` widget that renders a blockquote for something somebody in your contacts said, given a body containing the quotation and a `contact` parameter containing the name of the contact's tiddler. 
+
+The widget should show a link to the person's tiddler, with text matching their name (taken from the `caption` field of the tiddler if it exists, or the title if it doesn't), then a colon, then starting on the next line a blockquote.
+
+//Tip//: Use the `<blockquote>` HTML element, not one of the wikitext syntaxes – `$slot` doesn't play nice with wikitext formatting here.

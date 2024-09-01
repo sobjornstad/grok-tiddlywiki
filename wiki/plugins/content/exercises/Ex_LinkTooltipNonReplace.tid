@@ -1,0 +1,8 @@
+created: 20240901134634516
+length: m
+modified: 20240901192022023
+tags: Exercise
+title: Ex:LinkTooltipNonReplace
+type: text/vnd.tiddlywiki
+
+Having overridden the definition of the `$link` widget above, if we explicitly supply a `tooltip` attribute on some `$link` widget, it's now silently replaced with the description one we added. Change the behavior so that the description tooltip is only applied if one isn't already provided for the widget.

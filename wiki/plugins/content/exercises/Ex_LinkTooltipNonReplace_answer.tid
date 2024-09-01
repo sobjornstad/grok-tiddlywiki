@@ -1,0 +1,9 @@
+created: 20240901134704453
+modified: 20240901134707857
+tags: Answer
+title: Ex:LinkTooltipNonReplace/answer
+type: text/vnd.tiddlywiki
+
+An easy solution based on the `~` filter run prefix:
+
+{{Sn:LinkTooltipificationNoOverwrite||MagicSnippet}}

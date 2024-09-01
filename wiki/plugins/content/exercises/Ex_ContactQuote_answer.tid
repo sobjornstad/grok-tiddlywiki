@@ -1,0 +1,31 @@
+created: 20240901191043077
+modified: 20240901191511934
+tags: Answer
+title: Ex:ContactQuote/answer
+type: text/vnd.tiddlywiki
+
+```html
+\widget $contact.quote(contact)
+  <$link to=<<contact>>><$text text={{{ [<contact>has[caption]get[caption]] ~[<contact>get[title]] }}}/></$link>:
+
+  <blockquote>
+    <$slot $name="ts-raw"/>
+  </blockquote>
+\end
+
+<$contact.quote contact="JaneDoe">
+  This is how you do the thing.
+</$contact.quote>
+```
+
+Note that you need either `has[caption]` before or `!is[blank]` after the `get[caption]` step -- otherwise the first filter will have one output tiddler that is the empty string, rather than zero output tiddlers, and the title fallback won't be used.
+
+Another option for the fallback from caption to title is to use nested `$transclude` widgets, since the body of each `$transclude` widget is used if the tiddler or field is missing:
+
+```html
+<$link to=<<contact>>>
+  <$transclude $tiddler=<<contact>> $field="caption">
+    <$transclude $tiddler=<<contact>> $field="title"/>
+  </$transclude>:
+</$link>
+```
