@@ -1,0 +1,67 @@
+created: 20240831204317959
+description: TODO
+modified: 20240901043938888
+parent: Variables, Procedures, and Transclusions
+tags: Section Concept
+title: Functions
+type: text/vnd.tiddlywiki
+
+[[Variables]] and [[Procedures]] allow us to write some wikitext in one place, give it a name that concisely describes what it is, and use it in multiple places.
+
+For the same reason that TiddlyWiki supports variables and procedures when writing complicated wikitext, it supports ''functions'' when writing complicated filters. A function is a special kind of variable that contains a [[filter expression|Using Filter Expressions]].
+
+Like a procedure, a function can have parameters. Parameters passed to a function are available as variables inside the function's filter expression, just like parameters passed to a procedure are available as variables within the body of the procedure.
+
+Unlike a procedure, a function evaluates the filter expression within it and produces output tiddlers when called, rather than producing its contents as wikitext.
+
+The syntax for basic function definitions and calls will be very familiar, because it's identical to that for procedures except that it uses the word `function` instead of `procedure`:
+
+{{Sn:MultiplyByTwoFunction||MagicSnippet}}
+
+Since filters are typically only a single line, most function definitions will only need one line and so can omit the `\end`. However, if you have a very complex filter, line breaks between [[runs|Multi-Run Filters]] are allowed and can make the function easier to read.
+
+
+!! Using a function in a filter
+
+Occasionally calling a single function by itself can be useful. However, functions are typically most useful when used //inside other filters// to build up more complex filter pipelines that can still be easily read and understood.
+
+Like a procedure, you can call a function within a filter pipeline using the `<angle bracket>` syntax:
+
+{{Sn:MultiplyByTwoInBraces||MagicSnippet}}
+
+You can also call a function using the ''`function`'' [[filter operator|Anatomy of Filter Steps]]. This operator's first parameter is the name of the function, and subsequent parameters are passed through to that function:
+
+{{Sn:MultiplyByTwoFunctionOperator||MagicSnippet}}
+
+Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use the same shortcut for function names, but with one extra restriction: the function name must contain a period (`.`).
+
+Taking advantage of this syntax is as simple as prefixing your function names with a single `.`:
+
+{{Sn:MultiplyByTwoFunctionDottedCall||MagicSnippet}}
+
+
+!! Accessing input tiddlers
+
+So far, our function has ignored its input tiddlers (instead injecting one of its parameters into the start of the filter pipeline), and we've only tried to call it at the start of a filter pipeline. However, functions are fully able to access their input tiddlers, just like any other filter operator. Let's change our test filter so that it operates on its input tiddlers instead:
+
+{{Sn:MultiplyInputByTwoFunction||MagicSnippet}}
+
+It's not possible to choose the input tiddlers of a function invoked with the `<<angle bracket form>>`. The input tiddlers will always be all tiddlers in your wiki.
+
+
+!! Nesting functions
+
+You can use functions inside other functions. This makes it possible to build up complicated processes or formulas while giving each one a name.
+
+As an example, here are some carefully decomposed functions for calculating the area and circumference of a circle with a given radius. In the example, we've also used several `$list`s to loop over the different circle sizes and measurements we want to use, so we only have to call each function once. (Review the [[conditional procedure|Ex:ConditionalProcedureContinued]] exercise if you don't remember how this works.) In real life, the amount of decomposition of the formulas shown here is probably overkill -- since the formulas are straightforward, you might even find this makes it harder to understand what's going on.
+
+{{Sn:CircleMathNestingExample||MagicSnippet}}
+
+
+!! Exercises
+
+{{Ex:CircleMathRearrangement||ExerciseTemplate}}
+{{Ex:ExtractFunctions||ExerciseTemplate}}
+{{Ex:CStartTiddlers||ExerciseTemplate}}
+{{Ex:MultiplyByTwoTwoWays||ExerciseTemplate}}
+{{Ex:LocalCallFunctions||ExerciseTemplate}}

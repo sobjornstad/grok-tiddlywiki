@@ -1,0 +1,12 @@
+created: 20240831221450257
+length: m
+modified: 20240831221555601
+tags: Exercise
+title: Ex:ExtractFunctions
+type: text/vnd.tiddlywiki
+
+Return to the [[alphabetically last description|Ex:AlphabeticallyLastDescription]] exercise:
+
+{{Sn:AlphabeticallyLastFilter||MagicSnippet}}
+
+Extract one or more functions from this filter to make it easier to understand. That is, group some of the filter steps by the task they accomplish and create a function with a name that clearly describes what those steps do, and change the filter to call that function instead of using the steps directly.

@@ -1,0 +1,30 @@
+created: 20240831223333520
+modified: 20240831225037303
+title: Ex:CStartTiddlers/answer
+type: text/vnd.tiddlywiki
+
+It turns out that calling a function with `<<angle brackets>>` always gives only the first output tiddler produced by the filter.
+
+The most straightforward way to get the code snippet working as desired is by calling the function using the `function[]` operator (or the shortcut syntax) instead:
+
+{{Sn:FixedCStartTiddlers||MagicSnippet}}
+
+Interestingly, you can also fix this by making `tiddlers-starting-with-C` ''a procedure instead of a function'':
+
+{{Sn:AlternatelyFixedCStartTiddlers||MagicSnippet}}
+
+Puzzling through why this is may be enlightening. Spend a couple minutes seeing if you can figure it out before continuing! Consider what TiddlyWiki is doing as it evaluates a procedure vs. a function.
+
+<$details summary="Answer">
+
+When `tiddlers-starting-with-C` is defined as a function, TiddlyWiki evaluates the filter in its body as part of the transclusion `<<tiddlers-starting-with-C>>` itself, because a function call causes the filter inside the function to be executed and output tiddlers to be produced. Then it passes those output tiddlers (or rather, output tiddler, since the angle bracket syntax always results in a single output tiddler) to the `filter` parameter of the `$list` widget. A single tiddler name is a valid filter, so the body of the `$list` widget is rendered once with that tiddler name as the current tiddler.
+
+In contrast, when `tiddlers-starting-with-C` is defined as a procedure, TiddlyWiki evaluates the filter as wikitext, which simply yields the text of the filter itself (since there aren't any formatting instructions, transclusions, widgets, etc. in it). Then it passes this filter text to the `filter` parameter of the `$list` widget. The `$list` widget actually runs the text of a filter passed to the `filter` parameter, so this is perfectly valid, and completely equivalent to just:
+
+```html
+<$list filter="[all[shadows+tiddlers]prefix[C]]">
+	<$link /><br>
+</$list>
+```
+
+</$details>

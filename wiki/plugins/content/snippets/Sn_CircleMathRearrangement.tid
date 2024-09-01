@@ -1,0 +1,35 @@
+created: 20240831222004624
+modified: 20240831222032696
+tags: 
+title: Sn:CircleMathRearrangement
+type: text/vnd.tiddlywiki
+
+\function circle-area(radius) [<radius>.radius-to-area[]fixed[2]]
+\function circle-circumference(radius) [<radius>.radius-to-circumference[]fixed[2]]
+
+\function .radius-to-area() [.square[]multiply<pi>]
+\function .radius-to-diameter() [multiply[2]]
+\function .radius-to-circumference() [.radius-to-diameter[]multiply[2]multiply<pi>]
+
+\function .square() [power[2]]
+
+\procedure pi() 3.1415926
+
+<$list filter="1 2 3" variable="r">
+	<li>
+		Circle with radius <<r>>
+		<ul>
+			<$list filter="area circumference" variable="measurement">
+				<$let
+					macroName=`circle-$(measurement)$`
+					measurementName={{{ [<measurement>sentencecase[]] }}}
+				>
+					<li>
+						<<measurementName>>:
+						<$transclude $variable=<<macroName>> radius=<<r>>/>
+					</li>
+				</$let>
+			</$list>
+		</ul>
+	</li>
+</$list>

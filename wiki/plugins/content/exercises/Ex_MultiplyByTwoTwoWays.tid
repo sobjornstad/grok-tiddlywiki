@@ -1,0 +1,21 @@
+created: 20240831225123664
+length: m
+modified: 20240831225537582
+tags: Exercise
+title: Ex:MultiplyByTwoTwoWays
+type: text/vnd.tiddlywiki
+
+We saw two different ways to create a function that multiplies its input by two, depending on whether we wanted to take the multiplicand as an input tiddler or as a parameter:
+
+```html
+\function multiply-by-two(number) [<number>multiply[2]]
+\function multiply-input-by-two [multiply[2]]
+
+<<multiply-by-two 4>>
+{{{ [function[multiply-input-by-two],[4]] }}}
+```
+
+Create a `multiply-anything-by-two` function that works in //either// of these roles. That is:
+
+{{Sn:MultiplyAnythingByTwo||MagicSnippet}}
+

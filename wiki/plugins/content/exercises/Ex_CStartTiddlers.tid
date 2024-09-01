@@ -1,0 +1,10 @@
+created: 20240831222628296
+length: m
+modified: 20240831223329839
+tags: Exercise
+title: Ex:CStartTiddlers
+type: text/vnd.tiddlywiki
+
+This snippet is supposed to show a list of all tiddlers in the wiki whose names start with C. Why do you think it doesn't show all the tiddlers? Fix it so it does.
+
+{{Sn:BuggyCStartTiddlers||MagicSnippet}}

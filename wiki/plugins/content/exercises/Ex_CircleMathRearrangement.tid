@@ -1,0 +1,8 @@
+created: 20240831221924665
+length: s
+modified: 20240831222114597
+tags: Exercise
+title: Ex:CircleMathRearrangement
+type: text/vnd.tiddlywiki
+
+In the circle math example, we carefully ordered the functions so that if function B calls function A, function A always comes before function B. What happens if you change the order of the functions so this isn't true? Why do you think this is?

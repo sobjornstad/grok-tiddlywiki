@@ -1,0 +1,38 @@
+created: 20240901042833928
+modified: 20240901043842812
+tags: Answer
+title: Ex:LocalCallFunctions/answer
+type: text/vnd.tiddlywiki
+
+Here's my version:
+
+```html
+\function .firstnchars(n) [split[]first<n>join[]]
+\function phone.area-code() [.firstnchars[3]]
+
+\function .is-toll-free() [phone.area-code[]] :intersection[enlist{TollFreeAreaCodes}]
+\function .is-local() [phone.area-code[]match{CurrentAreaCode}]
+
+\function phone.toll-free(number) [<number>] :filter[.is-toll-free[]]
+\function phone.local(number) [<number>] :filter[.is-local[]]
+\function phone.long-distance(number) [!phone.local<number>!phone.toll-free<number>then<number>]
+
+\procedure call-type()
+  <% if [phone.local{!!phone}] %>
+    local
+  <% elseif [phone.toll-free{!!phone}] %>
+    toll-free
+  <% elseif [phone.long-distance{!!phone}] %>
+    long-distance
+  <% else %>
+    INVALID PHONE NUMBER TYPE
+  <% endif %>
+\end
+```
+
+This is a drop-in replacement -- the `<<call-type>>` procedure call will continue to operate as before.
+
+A few things to notice:
+
+* We added `.firstnchars` and `phone.area-code` functions to avoid unnecessary duplication and make the logic easier to read.
+* We have an `<% else %>` clause which, if we wrote the wikitext correctly, will never be used. Because most of us unfortunately do not write perfect logic every time, this is a useful way of validating our assumptions (here, that if a phone number is not local or toll-free, it is long-distance). Should this assumption ever prove untrue, perhaps because there's a mistake in our definition of “long-distance,” we'll see a message `INVALID PHONE NUMBER TYPE` on the template instead of a blank space, making both the fact that something is wrong and exactly where the issue is coming from abundantly clear. In general, obvious errors should be preferred to silence -- if the error is hidden, it's much harder to find the mistake, and you might not notice it at all until you make faulty decisions based on wrong information!

@@ -1,0 +1,9 @@
+created: 20240831213009485
+modified: 20240831213109417
+tags: 
+title: Sn:MultiplyByTwoFunctionDottedCall
+type: text/vnd.tiddlywiki
+
+\function .multiply-by-two(number) [<number>multiply[2]]
+
+{{{ [.multiply-by-two[4]] }}}

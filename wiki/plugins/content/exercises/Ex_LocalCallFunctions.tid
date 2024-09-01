@@ -1,0 +1,39 @@
+created: 20240901033821359
+length: M
+modified: 20240901044223189
+tags: Exercise
+title: Ex:LocalCallFunctions
+type: text/vnd.tiddlywiki
+
+In the [[local calls|Ex:LocalCalls]] exercise, we created template logic to display whether a contact's phone number was local. Write three functions to determine the type of a number, according to the definitions used in that exercise:
+
+* `phone.toll-free[number]`
+* `phone.local[number]`
+* `phone.long-distance[number]`
+
+Each function should take a phone number (not just an area code) as its parameter, and return that parameter unmodified as its output if the area code is in that class, and yield no output if it is not.
+
+Modify the template to use these functions.
+
+//Tip 1//: In the previous answer to the exercise, we did this to check if an area code was in the list of toll-free area codes:
+
+```
+[enlist{TollFreeAreaCodes}match<areaCode>]
+```
+
+That won't work anymore because the area code will need to be coming in the pipeline as an input tiddler, rather than being in a variable. You can't simply invert them, like `[<areaCode>enlist{TollFreeAreaCodes}]`, because `enlist` is a constructor and will just wipe out the area code. Instead, use a filter run with the `:intersection` prefix:
+
+```
+[...get-the-area-code-somehow] :intersection[enlist{TollFreeAreaCodes}]
+```
+
+`:intersection` causes TiddlyWiki to evaluate both filter runs separately, //then// compare them and keep only the values that are in both.
+
+
+//Tip 2//: In order to pass the parameter through unmodified without converting it to just the area code, you'll need to do most of the work in a run with the `:filter` prefix. When a run has this prefix, TiddlyWiki will evaluate that filter once for each output tiddler of the preceding run, and keep only the tiddlers for which the new run returns any value. The value actually returned by the run is thrown away -- it only matters whether there is one or not.
+
+Because the pattern in Hint 1 requires two filter runs, and you can't directly nest multiple filter runs within another filter run, you'll actually need to use a function to combine those two runs, and call that function in the run with the prefixed `:filter`.
+
+Here's a complete example, for a function `phone.outside-line-or-operator`, that shows the pattern you'll want to use:
+
+{{Sn:OutsideLineOrOperator||MagicSnippet}}

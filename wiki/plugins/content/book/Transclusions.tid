@@ -1,6 +1,6 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240727194730737
+modified: 20240901033254444
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Transclusions
@@ -29,14 +29,14 @@ Just like you can use the value of a variable or the result of a macro call as a
 Notice the similarity in form between the three wikitext methods we've encountered for referring to other content:
 
 * `[[double square brackets]]` -- to link to content
-* `<<double angle brackets>>` -- to get content from a variable or macro
+* `<<double angle brackets>>` -- to get content from a variable or procedure
 * `{{double curly braces}}` -- to get content from a tiddler field
 
 Directly including entire tiddlers within other tiddlers, like `{{My Other Tiddler}}`, is uncommon in most wikis; linking is usually a more useful way of relating ideas. However, transclusion is invaluable in combination with filters for creating dynamic lists, tables, and other content. In fact, the whole interface of TiddlyWiki is actually created by transcluding a bunch of special tiddlers! Transclusion becomes even more useful once you understand //templates//, which we'll cover in the [[next section|Templates and the Current Tiddler]].
 
 !! A note on terminology
 
-Technically, the form `<<double angle brackets>>` is called a ''variable transclusion'' or ''macro transclusion''. In the document-management-systems world, the word //transclusion// refers to including some other document or content at the location of the reference, and macros and variables do this just like field transclusions do.
+Technically, the form `<<double angle brackets>>` is //also// a transclusion -- a ''variable transclusion'' or ''procedure transclusion''. In the document-management-systems world, the word //transclusion// refers to including some other document or content at the location of the reference, and procedures and variables do this just like field transclusions do.
 
 However, in non-technical contexts, people often use the term //transclusion// by itself to refer to a field transclusion. We will try to explicitly state what kind of transclusion we mean if it might be unclear, but for the most part you should read //transclusion// without a modifier as //field transclusion// in the remainder of this book.
 

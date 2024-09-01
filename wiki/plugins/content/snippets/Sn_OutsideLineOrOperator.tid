@@ -1,0 +1,14 @@
+created: 20240901042158508
+modified: 20240901042208715
+tags: 
+title: Sn:OutsideLineOrOperator
+type: text/vnd.tiddlywiki
+
+\procedure outside-line-starts() [[9]] [[0]]
+\function is-outside-line-or-operator() [split[]first[]] :intersection[enlist<outside-line-starts>]
+\function phone.outside-line-or-operator(number) [<number>] :filter[function[is-outside-line-or-operator]]
+
+Will dialing these numbers give you an outside line or an operator (number begins with a 9 or a 0, respectively)?
+
+* Yes: {{{ [phone.outside-line-or-operator[92223334444]] }}}
+* No: {{{ [phone.outside-line-or-operator[2223334444]] }}}

@@ -1,0 +1,13 @@
+created: 20240831222036242
+modified: 20240831222455269
+tags: Answer
+title: Ex:CircleMathRearrangement/answer
+type: text/vnd.tiddlywiki
+
+Perhaps surprisingly, this works perfectly fine:
+
+{{{Sn:CircleMathRearrangement||MagicSnippet}}}
+
+This is OK because TiddlyWiki reads all the pragmas in a tiddler prior to doing anything with their contents them. While the `pi` variable, for example, isn't defined until after all of the functions that use `pi` are, that's OK because TiddlyWiki still hasn't actually evaluated any filters yet. It's only once //all// the pragmas have been read and their names added to the current scope that TiddlyWiki starts actually parsing the wikitext of the tiddler, sees function calls, and tries to run the filters inside the functions. So by the time TiddlyWiki tries to use the name `pi`, it's fully defined.
+
+It's still good practice to try to define functions and procedures roughly “in order”, with those that depend on earlier ones later in the tiddler, simply because this makes it easier to find the one you're looking for when you read through the tiddler later.

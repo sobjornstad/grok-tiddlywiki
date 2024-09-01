@@ -1,0 +1,34 @@
+created: 20240831215112634
+modified: 20240831220828362
+tags: 
+title: Sn:CircleMathNestingExample
+type: text/vnd.tiddlywiki
+
+\procedure pi() 3.1415926
+
+\function .square() [power[2]]
+\function .radius-to-area() [.square[]multiply<pi>]
+\function .radius-to-diameter() [multiply[2]]
+\function .radius-to-circumference() [.radius-to-diameter[]multiply[2]multiply<pi>]
+
+\function circle-area(radius) [<radius>.radius-to-area[]fixed[2]]
+\function circle-circumference(radius) [<radius>.radius-to-circumference[]fixed[2]]
+
+<$list filter="1 2 3" variable="r">
+	<li>
+		Circle with radius <<r>>
+		<ul>
+			<$list filter="area circumference" variable="measurement">
+				<$let
+					macroName=`circle-$(measurement)$`
+					measurementName={{{ [<measurement>sentencecase[]] }}}
+				>
+					<li>
+						<<measurementName>>:
+						<$transclude $variable=<<macroName>> radius=<<r>>/>
+					</li>
+				</$let>
+			</$list>
+		</ul>
+	</li>
+</$list>

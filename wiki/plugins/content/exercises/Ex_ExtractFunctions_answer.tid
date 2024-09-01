@@ -1,0 +1,15 @@
+created: 20240831221508407
+modified: 20240831221544364
+tags: Answer
+title: Ex:ExtractFunctions/answer
+type: text/vnd.tiddlywiki
+
+The correct answer to this exercise will depend on how you think about the tasks being carried out by this filter. Probably the most obvious function to extract is:
+
+```
+\function .enter-transclusion [split[{{]split[}}]get[text]]
+
+{{{ [all[shadows]tag[$:/tags/EditorToolbar]get[description].enter-transclusion[]!sort[]first[]] }}}
+```
+
+An `.editor-toolbar-description` function replacing the first three steps might plausibly make this filter more understandable, too.

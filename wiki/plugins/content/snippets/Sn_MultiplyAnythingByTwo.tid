@@ -1,0 +1,10 @@
+created: 20240831225409031
+modified: 20240831225425304
+tags: 
+title: Sn:MultiplyAnythingByTwo
+type: text/vnd.tiddlywiki
+
+\function multiply-anything-by-two(??) ??
+
+* <<multiply-anything-by-two 4>> should equal 8.
+* {{{ [function[multiply-anything-by-two],[4]] }}} should equal 8.
