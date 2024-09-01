@@ -1,0 +1,11 @@
+author: Maurycy Zarzycki
+core-version: >=5.2.3
+dependents: 
+description: Enable easy tiddler name completion in various contexts
+list: readme license history
+name: Auto Complete
+plugin-type: plugin
+source: https://github.com/EvidentlyCube/TW5-AutoComplete
+title: $:/plugins/EvidentlyCube/AutoComplete
+type: application/json
+version: 1.0.18

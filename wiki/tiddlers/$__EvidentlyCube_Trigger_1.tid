@@ -1,0 +1,12 @@
+auto-trigger-input: 1
+auto-trigger-textarea: 1
+caption: Linky Trigger
+created: 20240901212618083
+display-filter: [<currentTiddler>]
+filter: [all[tiddlers+shadows]!is[system]!is[draft]!is[image]search:title<query>]
+modified: 20240901212708137
+tags: $:/tags/EC/AutoComplete/Trigger
+template: [[$option$$caret$
+title: $:/EvidentlyCube/Trigger/1
+trigger: [[
+type: text/vnd.tiddlywiki

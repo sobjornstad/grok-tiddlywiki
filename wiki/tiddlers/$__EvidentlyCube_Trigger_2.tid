@@ -1,0 +1,11 @@
+auto-trigger-textarea: 1
+caption: Exercises
+created: 20240901212921597
+display-filter: [<currentTiddler>]
+filter: [all[tiddlers+shadows]!is[system]!is[draft]prefix[Ex:]search:title<query>]
+modified: 20240901213039598
+tags: $:/tags/EC/AutoComplete/Trigger
+template: {{$option$|ExerciseTemplate}}$caret$
+title: $:/EvidentlyCube/Trigger/2
+trigger: @x
+type: text/vnd.tiddlywiki
