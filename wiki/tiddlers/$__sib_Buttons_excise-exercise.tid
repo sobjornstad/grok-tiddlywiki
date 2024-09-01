@@ -1,0 +1,17 @@
+caption: Excise exercise
+condition: [<targetTiddler>type[]] [<targetTiddler>type[text/vnd.tiddlywiki]] +[first[]]
+created: 20210522034413324
+creator: soren
+description: Create an exercise from the selected text.
+icon: $:/core/images/paint
+modified: 20240901220414882
+modifier: soren
+shortcuts: ((excise-exercise))
+tags: $:/tags/EditorToolbar
+title: $:/sib/Buttons/excise-exercise
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="exciseExercise"
+/>
