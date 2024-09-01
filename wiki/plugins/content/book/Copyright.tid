@@ -22,8 +22,8 @@ This is version ''{{Metadata##version}}'' of GTW. The latest version can always 
 
 <style>
 .gtw-cc-copyright {
-	border: 1px solid;
-	padding: 5px;
-	text-align: center;
+  border: 1px solid;
+  padding: 5px;
+  text-align: center;
 }
 </style>

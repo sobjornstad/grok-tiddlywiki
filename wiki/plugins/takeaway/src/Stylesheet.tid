@@ -6,99 +6,99 @@ type: text/vnd.tiddlywiki
 
 /* override spacing after clozes from TiddlyRemember so our links bar looks normal underneath it */
 div.remembercz {
-	margin-bottom: 22px; /* line-height of the selfidentification block */
+  margin-bottom: 22px; /* line-height of the selfidentification block */
 }
 
 .tr-nav {
   text-align: center;
-	/* previously 22 */
-	margin-top: -18px;
-	margin-bottom: 36px;
+  /* previously 22 */
+  margin-top: -18px;
+  margin-bottom: 36px;
 }
 @media only screen and (max-width: 750px) {
-	.tr-nav {
-		clear: both;
-	}
+  .tr-nav {
+    clear: both;
+  }
 }
 
 .tr-nav-withref .tr-nav {
-	text-align: left;
+  text-align: left;
 }
 
 /* I don't understand why the width:100% default on .tc-control-panel causes the input boxes to have no width and disappear, but adding a .ta-control-panel div around the settings window fixes it for now */
 .ta-control-panel table input {
-	width: auto;
+  width: auto;
 }
 
 table.mm-takeaway-browser {
-	table-layout: fixed;
-	width: 100%;
-	font-size: 12px;
+  table-layout: fixed;
+  width: 100%;
+  font-size: 12px;
 }
 
 span.gtw-cloze-occlusion {
-	color: <<color primary>>;
-	font-weight: bold;
+  color: <<color primary>>;
+  font-weight: bold;
 }
 
 div.tr-reviewer {
-	position: relative;
-	min-height: 240px;
-	max-width: 600px;
-	margin: auto;
+  position: relative;
+  min-height: 240px;
+  max-width: 600px;
+  margin: auto;
 }
 
 div.tr-actions {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 400px;
-	clear: both;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  clear: both;
 }
 div.tr-actions div {
-	text-align: center;
+  text-align: center;
 }
 @media only screen and (max-width: 400px) {
   div.tr-reviewer {
-	  min-height: 350px;
-	}
+    min-height: 350px;
+  }
 }
 @media only screen and (max-width: 350px) {
   div.tr-reviewer {
-	  min-height: 450px;
-	}
+    min-height: 450px;
+  }
 }
 @media only screen and (max-width: 150px) {
   div.tr-reviewer {
-	  position: relative;
-	}
+    position: relative;
+  }
 }
 
 div.mm-intext-takeaway-list .tr-selfidentification, div.mm-intext-takeaway-card .tr-selfidentification {
   display: none;
 }
 div.mm-takeaway-example .tr-selfidentification {
-	display: none;
+  display: none;
 }
 
 div.mm-intext-takeaway-list, div.mm-intext-takeaway-card {
-	border-bottom: 1px solid <<color tab-border>>;
+  border-bottom: 1px solid <<color tab-border>>;
 }
 
 .mm-intext-takeaway-card .tr-nav {
-	margin-bottom: 0;
-	padding-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 div.mm-intext-takeaway {
-	margin-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 div.mm-intext-no-more-takeaways {
-	padding-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 div.mm-intext-takeaway:last-child {
@@ -106,21 +106,21 @@ div.mm-intext-takeaway:last-child {
 }
 
 td.gtw-question-input, td.gtw-question-input input {
-	width: 100%;
+  width: 100%;
 }
 
 div.tr-contextual-help {
-	border: 1px solid;
-	padding: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: auto;
-	width: 90%;
-	background-color: <<color tiddler-info-tab-background>>;
-	/*background-color: #404040;*/
-	margin-bottom: 1em;
+  border: 1px solid;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  width: 90%;
+  background-color: <<color tiddler-info-tab-background>>;
+  /*background-color: #404040;*/
+  margin-bottom: 1em;
 }
 
 div.tr-contextual-help h3 {
-	text-align: center;
+  text-align: center;
 }

@@ -9,7 +9,7 @@ The `$link` widget has many optional parameters besides `to` and `tooltip`: as o
 
 ```html
 <$link to="Tiddlers" class="tc-tiddlylink-external">
-	Tiddlers (fake external)
+  Tiddlers (fake external)
 </$link>
 ```
 
@@ -21,9 +21,9 @@ You'll need to know several new things to complete this task:
 
 ```html
 \widget $link(to, tooltip)
-	<$parameters $params="params-var">
-		...here <<params-var>> is JSON containing all the params, and <<to>> and <<tooltip>> contain the values of those specific parameters
-	</$parameters>
+  <$parameters $params="params-var">
+    ...here <<params-var>> is JSON containing all the params, and <<to>> and <<tooltip>> contain the values of those specific parameters
+  </$parameters>
 \end
 ```
 

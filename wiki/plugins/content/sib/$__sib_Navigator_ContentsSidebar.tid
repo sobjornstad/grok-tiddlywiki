@@ -7,83 +7,83 @@ title: $:/sib/Navigator/ContentsSidebar
 type: text/vnd.tiddlywiki
 
 \function gtw.contents.sectionsMatchingFilter()
-	[enlist{!!list}search:title,caption{$:/temp/OutlineFilter}]
+  [enlist{!!list}search:title,caption{$:/temp/OutlineFilter}]
 \end
 
 <!-- Some chapters (e.g., 'Supplemental Exercises') have no sections. We want to show these if we haven't started filtering (since we filter only section names and include only the chapters that have matching sections, they'll have to disappear at that point, and this seems mostly fine). -->
 \function gtw.contents.chaptersWithNoSectionsIfNoFilter()
-	[{$:/temp/OutlineFilter}is[blank]] :then[list[Outline]!has[list]]
+  [{$:/temp/OutlineFilter}is[blank]] :then[list[Outline]!has[list]]
 \end
 
 <div class="gtw-sidebar-outline">
-	<div style="text-align: center;">
-		[[Go to full outline|Outline]]
-	</div>
+  <div style="text-align: center;">
+    [[Go to full outline|Outline]]
+  </div>
 
-	<table>
-		<tr>
-			<th>Filter by section name:</th>
-			<td>
-				<$edit-text tiddler="$:/temp/OutlineFilter" tag="input" default="" type="text"/>
-			</td>
-		</tr>
-	</table>
+  <table>
+    <tr>
+      <th>Filter by section name:</th>
+      <td>
+        <$edit-text tiddler="$:/temp/OutlineFilter" tag="input" default="" type="text"/>
+      </td>
+    </tr>
+  </table>
 
-	<ul>
-		<$list filter="[list[Outline]]">
-			<!-- for each chapter -->
-			<% if [gtw.contents.chaptersWithNoSectionsIfNoFilter[]] [gtw.contents.sectionsMatchingFilter[]]  %>
-				<li>
-					<h3>
-						<$link to={{!!title}}>
-							<$view field="caption">
-								{{!!title}}
-							</$view>
-						</$link>
-					</h3>
-					<ul>
-						<$list filter="[gtw.contents.sectionsMatchingFilter[]]">
-							<!-- for each section -->
-							<li><$link to={{!!title}}/></li>
-						</$list>
-					</ul>
-				</li>
-					<br>
-			<% endif %>
-		</$list>
-	</ul>
+  <ul>
+    <$list filter="[list[Outline]]">
+      <!-- for each chapter -->
+      <% if [gtw.contents.chaptersWithNoSectionsIfNoFilter[]] [gtw.contents.sectionsMatchingFilter[]]  %>
+        <li>
+          <h3>
+            <$link to={{!!title}}>
+              <$view field="caption">
+                {{!!title}}
+              </$view>
+            </$link>
+          </h3>
+          <ul>
+            <$list filter="[gtw.contents.sectionsMatchingFilter[]]">
+              <!-- for each section -->
+              <li><$link to={{!!title}}/></li>
+            </$list>
+          </ul>
+        </li>
+          <br>
+      <% endif %>
+    </$list>
+  </ul>
 </div>
 
 <style>
 div.gtw-sidebar-outline ul ul {
-	margin-left: 0;
-	padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 div.gtw-sidebar-outline ul {
   margin-left: 0;
-	padding-left: 0;
-	list-style-type: none;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 div.gtw-sidebar-outline h3 {
-	margin-top: 1ex;
-	border-bottom: 0.05px solid <<color foreground>>;
-	padding-bottom: 2px;
-	margin-bottom: 10px;
-	max-width: 300px;
+  margin-top: 1ex;
+  border-bottom: 0.05px solid <<color foreground>>;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
+  max-width: 300px;
 }
 
 div.gtw-sidebar-outline svg {
-	height: 16px;
+  height: 16px;
 }
 
 div.gtw-sidebar-outline table {
-	width: 90%;
-	max-width: 400px;
-	margin-bottom: 0.3in;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 0.3in;
 }
 div.gtw-sidebar-outline table input[type="text"] {
-	width: 100%;
+  width: 100%;
 }
 </style>

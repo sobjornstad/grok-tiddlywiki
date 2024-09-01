@@ -6,24 +6,24 @@ type: text/vnd.tiddlywiki
 
 \function .rest-names() [<params-var>jsonindexes[]]
 \function .rest-values() [.rest-names[]] :map[<params-var>jsonget<currentTiddler>]
-	
+
 \widget $link()
-	<$parameters
-		to=""
-		tooltip=""
-		$params="params-var"
-	>
-		<$let newtooltip={{{ [<tooltip>!is[blank]] ~[<to>get[description]] }}}>
-			<$genesis
-				$type="$link"
-				$remappable="no"
-				$names="[.rest-names[]] =tooltip"
-				$values="[.rest-values[]] =[<newtooltip>]"
-			>
-				<$slot $name="ts-raw"/>
-			</$genesis>
-		</$let>
-	</$parameters>
+  <$parameters
+    to=""
+    tooltip=""
+    $params="params-var"
+  >
+    <$let newtooltip={{{ [<tooltip>!is[blank]] ~[<to>get[description]] }}}>
+      <$genesis
+        $type="$link"
+        $remappable="no"
+        $names="[.rest-names[]] =tooltip"
+        $values="[.rest-values[]] =[<newtooltip>]"
+      >
+        <$slot $name="ts-raw"/>
+      </$genesis>
+    </$let>
+  </$parameters>
 \end
 
 [[Links]] and <$link to=Tags tooltip="I love tags!">Tags</$link> combine to organize [[Tiddlers]] within a wiki.

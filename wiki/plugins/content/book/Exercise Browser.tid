@@ -5,40 +5,40 @@ title: Exercise Browser
 type: text/vnd.tiddlywiki
 
 \define tableBody()
-			<tr>
-				<td><$checkbox field="complete" checked="yes" unchecked="" default=""/></td>
-				<td><$link to={{!!title}}/></td>
-				<td><$link to={{!!origin}}/></td>
-				<td>({{!!length}})</td>
-				<td>
+      <tr>
+        <td><$checkbox field="complete" checked="yes" unchecked="" default=""/></td>
+        <td><$link to={{!!title}}/></td>
+        <td><$link to={{!!origin}}/></td>
+        <td>({{!!length}})</td>
+        <td>
 
-				{{!!text}}
+        {{!!text}}
 
-				</td>
-			</tr>
+        </td>
+      </tr>
 \end
 \define noSearchFilt() [search:origin:literal,anchored{$:/temp/SelectedSection}]
 \define searchFilt() [search{$:/temp/ExerciseBrowserFilter}search:origin:literal,anchored{$:/temp/SelectedSection}]
 
 <div style="float: right;">
-	<$text text={{{ [all[tiddlers+shadows]tag[Exercise]complete[yes]count[]]  }}}/> / <$text text={{{ [all[tiddlers+shadows]tag[Exercise]count[]] }}}/> exercises completed.
+  <$text text={{{ [all[tiddlers+shadows]tag[Exercise]complete[yes]count[]]  }}}/> / <$text text={{{ [all[tiddlers+shadows]tag[Exercise]count[]] }}}/> exercises completed.
 </div>
 
 <$set name="selectorFilter" value="[all[tiddlers+shadows]tag[Exercise]each[origin]get[origin]sort[]]">
 
 <table class="gtw-form">
-	<tr>
-		<th>Find in text</th>
-		<td><$edit-text tag="input" type="text" tiddler="$:/temp/ExerciseBrowserFilter" default=""/></td>
-	</tr>
-	<tr>
-		<th>Section</th>
-		<td>{{$:/sib/Navigator/SectionSelector}}</td>
-	</tr>
-	<tr>
-		<th>Show</th>
-		<td><$radio tiddler="$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState" field="complete" value="yes">&nbsp;Complete</$radio>&emsp;<$radio tiddler="$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState" field="complete" value="^$">&nbsp;Incomplete</$radio>&emsp;<$radio tiddler="$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState" field="complete" value=".*">&nbsp;All</$radio></td>
-	</tr>
+  <tr>
+    <th>Find in text</th>
+    <td><$edit-text tag="input" type="text" tiddler="$:/temp/ExerciseBrowserFilter" default=""/></td>
+  </tr>
+  <tr>
+    <th>Section</th>
+    <td>{{$:/sib/Navigator/SectionSelector}}</td>
+  </tr>
+  <tr>
+    <th>Show</th>
+    <td><$radio tiddler="$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState" field="complete" value="yes">&nbsp;Complete</$radio>&emsp;<$radio tiddler="$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState" field="complete" value="^$">&nbsp;Incomplete</$radio>&emsp;<$radio tiddler="$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState" field="complete" value=".*">&nbsp;All</$radio></td>
+  </tr>
 </table>
 
 </$set>
@@ -46,21 +46,21 @@ type: text/vnd.tiddlywiki
 The following table shows all exercises in this book. Click the checkbox to the left to mark an exercise as complete.
 
 <$set name=mySubfilt value={{{ [[$:/temp/ExerciseBrowserFilter]has[text]then<searchFilt>else<noSearchFilt>] }}}>
-	<table class="gtw-exercise-browser">
-		<col style="width: 2em;">
-		<col style="width: 15%;">
-		<col style="width: 15%;">
-		<col style="width: 4.5em;">
-		<col style="width: 70%;">
-		<tr>
-			<th/>
-			<th>Exercise</th>
-			<th>Section</th>
-			<th>Length</th>
-			<th>Text</th>
-		</tr>
-		<$list filter="[all[tiddlers+shadows]tag[Exercise]regexp:complete{$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState!!complete}subfilter<mySubfilt>]">
-			<<tableBody>>
-		</$list>
-	</table>
+  <table class="gtw-exercise-browser">
+    <col style="width: 2em;">
+    <col style="width: 15%;">
+    <col style="width: 15%;">
+    <col style="width: 4.5em;">
+    <col style="width: 70%;">
+    <tr>
+      <th/>
+      <th>Exercise</th>
+      <th>Section</th>
+      <th>Length</th>
+      <th>Text</th>
+    </tr>
+    <$list filter="[all[tiddlers+shadows]tag[Exercise]regexp:complete{$:/config/sobjornstad/GrokTiddlyWiki/ExerciseBrowserState!!complete}subfilter<mySubfilt>]">
+      <<tableBody>>
+    </$list>
+  </table>
 </$set>

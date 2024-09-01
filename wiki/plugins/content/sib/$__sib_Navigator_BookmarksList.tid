@@ -7,14 +7,14 @@ title: $:/sib/Navigator/BookmarksList
 type: text/vnd.tiddlywiki
 
 <% if [{$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks}is[blank]] %>
-	<div style="max-width: 300px;">
-		You have no bookmarks at the moment. To bookmark a section, click the star icon <<textual-button "star-filled">> in the upper-right of that section's tiddler.
-	</div>
+  <div style="max-width: 300px;">
+    You have no bookmarks at the moment. To bookmark a section, click the star icon <<textual-button "star-filled">> in the upper-right of that section's tiddler.
+  </div>
 <% else %>
-	<<list-links-draggable
-		"$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
-		field:"text"
-		itemTemplate:"$:/sib/Navigator/BookmarkRowTemplate"
-		class:"gtw-bookmarks-list"
-	>>
+  <<list-links-draggable
+    "$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
+    field:"text"
+    itemTemplate:"$:/sib/Navigator/BookmarkRowTemplate"
+    class:"gtw-bookmarks-list"
+  >>
 <% endif %>

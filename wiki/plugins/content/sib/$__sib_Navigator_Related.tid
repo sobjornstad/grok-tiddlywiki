@@ -7,71 +7,71 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 \procedure render-link(title, filter, cssClass)
-	<div class=<<cssClass>>>
-		<div style="text-align: center;"><<title>>:</div>
-			<ul>
-			<$list filter=<<filter>> emptyMessage="<div style='text-align: center;'>//(none)//</div>">
-				<li>
-					<$link/>&ensp;
-					<span style="font-size: 80%;">
-						<$list filter="[enlist{!!tags}sort[]]">
-							<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
-						</$list>
-					</span>
-					<div class="sib-excerpt">{{!!description}}</div>
-				</li>
-			</$list>
-		</ul>
-	</div>
+  <div class=<<cssClass>>>
+    <div style="text-align: center;"><<title>>:</div>
+      <ul>
+      <$list filter=<<filter>> emptyMessage="<div style='text-align: center;'>//(none)//</div>">
+        <li>
+          <$link/>&ensp;
+          <span style="font-size: 80%;">
+            <$list filter="[enlist{!!tags}sort[]]">
+              <$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
+            </$list>
+          </span>
+          <div class="sib-excerpt">{{!!description}}</div>
+        </li>
+      </$list>
+    </ul>
+  </div>
 \end render-link
 
 
 <% if [[$:/temp/ReferenceState]getindex<currentTiddler>else[hide]match[hide]] %>
-	<div style="text-align: center;">
-		<$button
-			setTitle="$:/temp/ReferenceState"
-		  setIndex=<<currentTiddler>>
-		  setTo="show"
-		  class="tc-btn-invisible tc-tiddlylink"
-		>
-	    {{$:/core/images/unfold-button}}&nbsp;show related topics
-		</$button>
-	</div>
+  <div style="text-align: center;">
+    <$button
+      setTitle="$:/temp/ReferenceState"
+      setIndex=<<currentTiddler>>
+      setTo="show"
+      class="tc-btn-invisible tc-tiddlylink"
+    >
+      {{$:/core/images/unfold-button}}&nbsp;show related topics
+    </$button>
+  </div>
 <% else %>
-	<div style="text-align: center;">
-		<$button
-			setTitle="$:/temp/ReferenceState"
-			setIndex=<<currentTiddler>>
-			setTo="hide"
-			class="tc-btn-invisible tc-tiddlylink"
-		>
-			{{$:/core/images/fold-button}} hide related topics
-		</$button>
-	</div>
-	<div class="gtw-bordered-element sib-link-display">
-		<$let xrefName=`Mentioned by //$(currentTiddler)$//`>
-			<$macrocall
-				$name=render-link
-				title=<<xrefName>>
-				filter="[all[current]links[]sort[]]"
-				cssClass="sib-links"
-			/>
-		</$let>
-		<$let xrefName=`Mentions of //$(currentTiddler)$//`>
-			<$macrocall
-				$name=render-link
-				title=<<xrefName>>
-				filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]"
-				cssClass="sib-backlinks"
-			/>
-		</$let>
-	</div>
+  <div style="text-align: center;">
+    <$button
+      setTitle="$:/temp/ReferenceState"
+      setIndex=<<currentTiddler>>
+      setTo="hide"
+      class="tc-btn-invisible tc-tiddlylink"
+    >
+      {{$:/core/images/fold-button}} hide related topics
+    </$button>
+  </div>
+  <div class="gtw-bordered-element sib-link-display">
+    <$let xrefName=`Mentioned by //$(currentTiddler)$//`>
+      <$macrocall
+        $name=render-link
+        title=<<xrefName>>
+        filter="[all[current]links[]sort[]]"
+        cssClass="sib-links"
+      />
+    </$let>
+    <$let xrefName=`Mentions of //$(currentTiddler)$//`>
+      <$macrocall
+        $name=render-link
+        title=<<xrefName>>
+        filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]"
+        cssClass="sib-backlinks"
+      />
+    </$let>
+  </div>
 <% endif %>
 
 
 <style>
 div.sib-link-display {
-	margin-top: 0.5em;
+  margin-top: 0.5em;
   overflow: auto;
 }
 div.sib-link-display ul {
@@ -79,7 +79,7 @@ div.sib-link-display ul {
   padding-left: 0;
 }
 div.sib-link-display ul li {
-	padding-bottom: 2ex;
+  padding-bottom: 2ex;
 }
 div.sib-link-display ul div.sib-excerpt {
   padding-left: 1em;

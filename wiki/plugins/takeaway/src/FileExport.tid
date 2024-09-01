@@ -7,11 +7,11 @@ type: text/vnd.tiddlywiki
 You can also export the takeaways you have studied to a file in one of two formats:
 
 * ''JSON'' -- import this file into another TakeAway-enabled TiddlyWiki to start reviewing these takeaways there, with your scheduling history and customizations preserved.<br><$button>
-	<$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="[tag[Takeaway]]" filename=<<exportButtonFilename """takeaway.json""">>/>
+  <$action-sendmessage $message="tm-download-file" $param="$:/core/templates/exporters/JsonFile" exportFilter="[tag[Takeaway]]" filename=<<exportButtonFilename """takeaway.json""">>/>
   Export as JSON
 </$button>
 
 * ''TSV'' -- import this tab-separated values file into another flashcards program or any other destination you choose. SM2-style scheduling information (ease, interval, and due date) is included, if your target application is capable of taking advantage of this information.<br><$button>
-	<$action-sendmessage $message="tm-download-file" $param="$:/plugins/sobjornstad/TakeAway/QuestionCsvTemplate" filename="takeaway.tsv"/>
+  <$action-sendmessage $message="tm-download-file" $param="$:/plugins/sobjornstad/TakeAway/QuestionCsvTemplate" filename="takeaway.tsv"/>
   Export as TSV
 </$button>

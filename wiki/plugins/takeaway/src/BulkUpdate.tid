@@ -20,32 +20,32 @@ Do NOT press these buttons unless you are certain you know what you are doing.<b
 <$details summary="I understand, and I have made a backup copy of my wiki">
 
 * Mark all takeaways that are currently seen unseen again: <$button>
-	<$list filter="[all[tiddlers+shadows]tag[Takeaway]seen[yes]]">
-		<<setSeennessAction "">>
-	</$list>
-	Mark All Unseen
+  <$list filter="[all[tiddlers+shadows]tag[Takeaway]seen[yes]]">
+    <<setSeennessAction "">>
+  </$list>
+  Mark All Unseen
 </$button>
 
 * Mark all takeaways seen: <$button>
-	<$list filter="[all[tiddlers+shadows]tag[Takeaway]]">
-		<<setSeennessAction "yes">>
-	</$list>
-	Mark All Seen
+  <$list filter="[all[tiddlers+shadows]tag[Takeaway]]">
+    <<setSeennessAction "yes">>
+  </$list>
+  Mark All Seen
 </$button>
 
 * Shift the interval of all takeaways that are currently due tomorrow back one day: <$button>
-	<$list filter="[all[tiddlers+shadows]tag[Takeaway]seen[yes]days:due[+1]!days:due[+1]]">
-		<<showTodayAction>>
-		<$action-setfield ivl=1/>
-	</$list>
-	Show Tomorrow's Reviews Today
+  <$list filter="[all[tiddlers+shadows]tag[Takeaway]seen[yes]days:due[+1]!days:due[+1]]">
+    <<showTodayAction>>
+    <$action-setfield ivl=1/>
+  </$list>
+  Show Tomorrow's Reviews Today
 </$button>
 
 * Delete/reset all takeaways completely (reverting to shadow version): <$button>
-	<$list filter="[tag[Takeaway]]">
-		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
-	</$list>
-	Reset All Takeaways
+  <$list filter="[tag[Takeaway]]">
+    <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+  </$list>
+  Reset All Takeaways
 </$button>
 
 </$details>

@@ -16,10 +16,10 @@ The following content tiddlers that you have modified (either manually or throug
 If you would like to keep any of these tiddlers, please rename them to something else so that they disappear from the list. Then click the button below to complete the upgrade.
 
 <$button>
-	Delete tiddlers and complete upgrade
-	<$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]]">
-		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
-	</$list>
+  Delete tiddlers and complete upgrade
+  <$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]]">
+    <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+  </$list>
 </$button>
 
 </$list>
@@ -27,15 +27,15 @@ If you would like to keep any of these tiddlers, please rename them to something
 
 <$list filter="[<storyTiddler>is[blank]]" variable=_>
 <$list filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/deletes}is[tiddler]first[]]" variable=_>
-	<div class="gtw-upgrade-banner">
-		<div style="display: inline-block; vertical-align: center; margin-top: 6px; margin-left: 1em;">
-			<span style="height: 44px;">{{$:/core/images/info-button}}</span>
-		</div>
-		<div style="display: inline-block; margin-left: 1em;">
-			An upgrade to //Grok TiddlyWiki// is in progress.<br>
-			[[Open the upgrader|$:/GrokTiddlyWikiUpgrader]] to finish the upgrade.
-		</div>
-	</div>
+  <div class="gtw-upgrade-banner">
+    <div style="display: inline-block; vertical-align: center; margin-top: 6px; margin-left: 1em;">
+      <span style="height: 44px;">{{$:/core/images/info-button}}</span>
+    </div>
+    <div style="display: inline-block; margin-left: 1em;">
+      An upgrade to //Grok TiddlyWiki// is in progress.<br>
+      [[Open the upgrader|$:/GrokTiddlyWikiUpgrader]] to finish the upgrade.
+    </div>
+  </div>
 </$list>
 </$list>
 
@@ -44,23 +44,23 @@ If you would like to keep any of these tiddlers, please rename them to something
 
 <$list filter="[<storyTiddler>is[blank]]" variable=_>
 <$list filter="[<version>compare:version:lt{Metadata##tw-version}]" variable=_>
-	<div class="gtw-upgrade-banner">
-		<div style="text-align: center;">
-			<span style="height: 44px;">{{$:/core/images/info-button}}</span>
-		</div>
-		<div style="display: inline-block; margin-left: 1em;">
-			This version of //Grok TiddlyWiki// was written for TiddlyWiki {{Metadata##tw-version}}, but it's running on an older version, TiddlyWiki <<version>>. Some features may not work correctly. Please update it to the latest version using the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade]].
-		</div>
-	</div>
+  <div class="gtw-upgrade-banner">
+    <div style="text-align: center;">
+      <span style="height: 44px;">{{$:/core/images/info-button}}</span>
+    </div>
+    <div style="display: inline-block; margin-left: 1em;">
+      This version of //Grok TiddlyWiki// was written for TiddlyWiki {{Metadata##tw-version}}, but it's running on an older version, TiddlyWiki <<version>>. Some features may not work correctly. Please update it to the latest version using the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade]].
+    </div>
+  </div>
 </$list>
 </$list>
 
 <!---------- Common ---------->
 <style>
 .gtw-upgrade-banner {
-	background-color: <<color tiddler-background>>;
-	display: inline-block;
-	margin-right: 2em;
-	padding-right: 1em;
+  background-color: <<color tiddler-background>>;
+  display: inline-block;
+  margin-right: 2em;
+  padding-right: 1em;
 }
 </style>

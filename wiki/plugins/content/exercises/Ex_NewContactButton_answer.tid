@@ -6,14 +6,14 @@ type: text/vnd.tiddlywiki
 
 ```html
 \define newContact()
-	<$action-sendmessage
-		$message="tm-new-tiddler"
-		title="New Contact"
-		tags="Contact"
-		email=""
-		family=""
-		phone=""
-		manager=""/>
+  <$action-sendmessage
+    $message="tm-new-tiddler"
+    title="New Contact"
+    tags="Contact"
+    email=""
+    family=""
+    phone=""
+    manager=""/>
 \end
 
 <$button actions=<<newContact>>>

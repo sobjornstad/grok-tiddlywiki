@@ -5,15 +5,15 @@ title: $:/sib/Navigator/BookmarkMacros
 type: text/vnd.tiddlywiki
 
 \procedure bookmark-tiddler()
-	<$action-listops 
-		$tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
-		$field="text"
-		$subfilter="[[]addsuffix<currentTiddler>]"/>
+  <$action-listops 
+    $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
+    $field="text"
+    $subfilter="[[]addsuffix<currentTiddler>]"/>
 \end
 
 \procedure unbookmark-tiddler()
-	<$action-listops
-		$tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
-		$field="text"
-		$filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks}] -[all[current]]"/>
+  <$action-listops
+    $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks"
+    $field="text"
+    $filter="[enlist{$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks}] -[all[current]]"/>
 \end

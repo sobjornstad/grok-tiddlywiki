@@ -16,15 +16,15 @@ For the full //Grok TiddlyWiki// experience, please visit {{||$:/sib/Navigator/A
 
 <style>
 .sib-static-alert {
-	max-width: 60em;
-	margin: auto;
-	color: red;
-	background-color: <<colour background>>;
-	padding: 1em;
-	text-align: center;
+  max-width: 60em;
+  margin: auto;
+  color: red;
+  background-color: <<colour background>>;
+  padding: 1em;
+  text-align: center;
 }
 
 .sib-static-alert div {
-	margin: auto;
+  margin: auto;
 }
 </style>

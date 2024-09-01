@@ -8,58 +8,58 @@ type: text/vnd.tiddlywiki
 \define when-empty() <$list filter="[all[current]addsuffix[/answer]is[tiddler]] [all[current]addsuffix[/answer]is[shadow]]"><$link to=<<currentTiddler>>>go to answer</$link></$list>
 
 <div class={{{ [all[current]complete[yes]then[gtw-exercise-complete]else[]] +[addsuffix[ gtw-bordered-element]] }}}>
-	<span class="gtw-exercise-intro">Exercise</span>: ({{!!length}}) [<$link to={{!!title}}>{{!!title}}</$link>]
-	{{||$:/sib/Exercise/CompletionCheckbox}}
-	
-	<$transclude mode="block" />
-	
-	<$list filter="[<renderingStatic>!match[yes]]" variable=_ emptyMessage=<<when-empty>>>
+  <span class="gtw-exercise-intro">Exercise</span>: ({{!!length}}) [<$link to={{!!title}}>{{!!title}}</$link>]
+  {{||$:/sib/Exercise/CompletionCheckbox}}
 
-		<$list filter="[<currentTiddler>addsuffix[/answer]get[title]]" variable="trash">
+  <$transclude mode="block" />
 
-		<$reveal stateTitle="$:/temp/exerciseAnswerState"
-					 stateIndex=<<currentTiddler>>
-					 type="match"
-					 text="hide"
-					 default="hide">
-			<$button setTitle="$:/temp/exerciseAnswerState"
-							 setIndex=<<currentTiddler>>
-							 setTo="show"
-							 class="tc-btn-invisible tc-tiddlylink">
-				{{$:/core/images/unfold-button}} show answer
-			</$button>
-		</$reveal>
+  <$list filter="[<renderingStatic>!match[yes]]" variable=_ emptyMessage=<<when-empty>>>
 
-		<$reveal stateTitle="$:/temp/exerciseAnswerState"
-					 stateIndex=<<currentTiddler>>
-					 type="match"
-					 text="show"
-					 default="hide">
+    <$list filter="[<currentTiddler>addsuffix[/answer]get[title]]" variable="trash">
 
-			-----
+    <$reveal stateTitle="$:/temp/exerciseAnswerState"
+           stateIndex=<<currentTiddler>>
+           type="match"
+           text="hide"
+           default="hide">
+      <$button setTitle="$:/temp/exerciseAnswerState"
+               setIndex=<<currentTiddler>>
+               setTo="show"
+               class="tc-btn-invisible tc-tiddlylink">
+        {{$:/core/images/unfold-button}} show answer
+      </$button>
+    </$reveal>
 
-			<$button setTitle="$:/temp/exerciseAnswerState"
-							 setIndex=<<currentTiddler>>
-							 setTo="hide"
-							 class="tc-btn-invisible tc-tiddlylink">
-				{{$:/core/images/fold-button}} hide answer
-			</$button>
-			[{{{ [<currentTiddler>addsuffix[/answer]] }}}]
+    <$reveal stateTitle="$:/temp/exerciseAnswerState"
+           stateIndex=<<currentTiddler>>
+           type="match"
+           text="show"
+           default="hide">
 
-			<$transclude tiddler={{{ [<currentTiddler>addsuffix[/answer]] }}} mode="block" />
-		</$reveal>
+      -----
 
-		</$list>
-	</$list>
+      <$button setTitle="$:/temp/exerciseAnswerState"
+               setIndex=<<currentTiddler>>
+               setTo="hide"
+               class="tc-btn-invisible tc-tiddlylink">
+        {{$:/core/images/fold-button}} hide answer
+      </$button>
+      [{{{ [<currentTiddler>addsuffix[/answer]] }}}]
+
+      <$transclude tiddler={{{ [<currentTiddler>addsuffix[/answer]] }}} mode="block" />
+    </$reveal>
+
+    </$list>
+  </$list>
 </div>
 
 <style>
 .gtw-exercise-intro {
-	font-weight: bold;
-	color: <<color primary>>;
+  font-weight: bold;
+  color: <<color primary>>;
 }
 
 .gtw-exercise-complete {
-	background-color: <<color completed-exercise>>;
+  background-color: <<color completed-exercise>>;
 }
 </style>

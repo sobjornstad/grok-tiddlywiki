@@ -6,5 +6,5 @@ title: $:/sib/Exercise/CompletionCheckbox
 type: text/vnd.tiddlywiki
 
 <div class="twx-completion">
-	<$checkbox field="complete" checked="yes" unchecked="" default="" tooltip="Mark this exercise as complete in the exercise list.">&nbsp;Complete</$checkbox>
+  <$checkbox field="complete" checked="yes" unchecked="" default="" tooltip="Mark this exercise as complete in the exercise list.">&nbsp;Complete</$checkbox>
 </div>

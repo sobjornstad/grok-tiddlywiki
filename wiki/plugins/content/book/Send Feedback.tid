@@ -9,68 +9,68 @@ type: text/vnd.tiddlywiki
 <$let targetTiddler={{{ [{$:/temp/FeedbackCollector}get[target]] }}}>
 
 <table class="ta-feedback">
-	<tr>
-		<th>Tiddler</th>
-		<td>{{{ [{$:/temp/FeedbackCollector}get[target]] }}}<br>//<$text text={{{ [{$:/temp/FeedbackCollector}get[target]get[question]] }}}/>//</td>
-		<td>You are sending feedback on this section.</td>
-	</tr>
-	<tr>
-		<th>Email (optional)</th>
-		<td><$edit-text tag="input" tiddler={{$:/temp/FeedbackCollector}} field="email"/></td>
-		<td>If you would like the author to be able to contact you about your feedback.</td>
-	</tr>
-	<tr>
-		<th>Comment</th>
-		<td><$edit-text tag="textarea" tiddler={{$:/temp/FeedbackCollector}} field="comment"/></td>
-		<td>What could be improved?</td>
-	</tr>
-	<tr>
-		<th>Send tiddler</th>
-		<td><$checkbox tiddler={{$:/temp/FeedbackCollector}} field="debug" checked="yes" unchecked="no" default="no"/></td>
-		<td>To make understanding your feedback easier, we'll send along the contents of this section or takeaway, which will include any edits you've made to it.</td>
-	</tr>
+  <tr>
+    <th>Tiddler</th>
+    <td>{{{ [{$:/temp/FeedbackCollector}get[target]] }}}<br>//<$text text={{{ [{$:/temp/FeedbackCollector}get[target]get[question]] }}}/>//</td>
+    <td>You are sending feedback on this section.</td>
+  </tr>
+  <tr>
+    <th>Email (optional)</th>
+    <td><$edit-text tag="input" tiddler={{$:/temp/FeedbackCollector}} field="email"/></td>
+    <td>If you would like the author to be able to contact you about your feedback.</td>
+  </tr>
+  <tr>
+    <th>Comment</th>
+    <td><$edit-text tag="textarea" tiddler={{$:/temp/FeedbackCollector}} field="comment"/></td>
+    <td>What could be improved?</td>
+  </tr>
+  <tr>
+    <th>Send tiddler</th>
+    <td><$checkbox tiddler={{$:/temp/FeedbackCollector}} field="debug" checked="yes" unchecked="no" default="no"/></td>
+    <td>To make understanding your feedback easier, we'll send along the contents of this section or takeaway, which will include any edits you've made to it.</td>
+  </tr>
 </table>
 
 <% if [{$:/temp/FeedbackCollector}get[comment]!is[blank]] %>
-	<$wikify name="debuginfo" output="text" text=<<getWikifyTarget>>>
-		<$button>
-			<$action-sendfeedback
-				tiddler=<<targetTiddler>>
-				email={{{ [{$:/temp/FeedbackCollector}get[email]] }}}
-				comment={{{ [{$:/temp/FeedbackCollector}get[comment]] }}}
-				debuginfo=<<debuginfo>> />
-			<$action-setfield $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Feedback/UserEmail" $value={{{ [{$:/temp/FeedbackCollector}get[email]] }}}/>
-			<$action-sendmessage $message="tm-close-tiddler" $param="Send Feedback"/>
-			<$action-deletetiddler $tiddler={{$:/temp/FeedbackCollector}}/>
-			<$action-deletetiddler $tiddler="$:/temp/FeedbackCollector"/>
-			Send
-		</$button>
-	</$wikify>
+  <$wikify name="debuginfo" output="text" text=<<getWikifyTarget>>>
+    <$button>
+      <$action-sendfeedback
+        tiddler=<<targetTiddler>>
+        email={{{ [{$:/temp/FeedbackCollector}get[email]] }}}
+        comment={{{ [{$:/temp/FeedbackCollector}get[comment]] }}}
+        debuginfo=<<debuginfo>> />
+      <$action-setfield $tiddler="$:/config/sobjornstad/GrokTiddlyWiki/Feedback/UserEmail" $value={{{ [{$:/temp/FeedbackCollector}get[email]] }}}/>
+      <$action-sendmessage $message="tm-close-tiddler" $param="Send Feedback"/>
+      <$action-deletetiddler $tiddler={{$:/temp/FeedbackCollector}}/>
+      <$action-deletetiddler $tiddler="$:/temp/FeedbackCollector"/>
+      Send
+    </$button>
+  </$wikify>
 <% else %>
-	//Please enter a comment.//
+  //Please enter a comment.//
 <% endif %>
 
 </$let>
 
 <style>
-	table.ta-feedback tr td > textarea, table.ta-feedback tr td > input {
-		width: 100%;
-	}
-	
-	table.ta-feedback th, table.ta-feedback tr {
-		text-align: left;
-		vertical-align: top;
-	}
-	
-	table.ta-feedback tr td:nth-child(3) {
-		width: 30%;
-	}
-	
-	table.ta-feedback tr th {
-		width: 130px;
-	}
-	
-	table.ta-feedback {
-		width: 100%;
-	}
+  table.ta-feedback tr td > textarea, table.ta-feedback tr td > input {
+    width: 100%;
+  }
+
+  table.ta-feedback th, table.ta-feedback tr {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  table.ta-feedback tr td:nth-child(3) {
+    width: 30%;
+  }
+
+  table.ta-feedback tr th {
+    width: 130px;
+  }
+
+  table.ta-feedback {
+    width: 100%;
+  }
 </style>

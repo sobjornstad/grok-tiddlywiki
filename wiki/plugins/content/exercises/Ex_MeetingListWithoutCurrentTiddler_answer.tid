@@ -6,9 +6,9 @@ type: text/vnd.tiddlywiki
 
 ```html
 <ul>
-	<$list filter="[tag[Meeting]!sort[at]]">
-		<li><$link to={{!!title}}>{{!!title}}</$link></li>
-	</$list>
+  <$list filter="[tag[Meeting]!sort[at]]">
+    <li><$link to={{!!title}}>{{!!title}}</$link></li>
+  </$list>
 </ul>
 ```
 
@@ -16,8 +16,8 @@ If you happened to remember from an [[earlier exercise|Ex:LinkPattern/answer]] t
 
 ```html
 <ul>
-	<$list filter="[tag[Meeting]!sort[at]]">
-		<li><$link /></li>
-	</$list>
+  <$list filter="[tag[Meeting]!sort[at]]">
+    <li><$link /></li>
+  </$list>
 </ul>
 ```

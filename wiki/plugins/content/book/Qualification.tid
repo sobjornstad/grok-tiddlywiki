@@ -12,15 +12,15 @@ This will become more clear with an example. Put the following on a template cal
 
 ```html
 <$let stateTiddlerName="$:/temp/IsOpen">
-	<$reveal state=<<stateTiddlerName>> type="match" text="yes">
-			<$button set=<<stateTiddlerName>> setTo="no">Close</$button>
+  <$reveal state=<<stateTiddlerName>> type="match" text="yes">
+      <$button set=<<stateTiddlerName>> setTo="no">Close</$button>
 
-			Here is some information that can be selectively hidden and shown: This tiddler's name is {{!!title}}.
-	</$reveal>
+      Here is some information that can be selectively hidden and shown: This tiddler's name is {{!!title}}.
+  </$reveal>
 
-	<$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
-			<$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
-	</$reveal>
+  <$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
+      <$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
+  </$reveal>
 </$let>
 ```
 
@@ -34,18 +34,18 @@ We can fix our example above using the `qualify` macro as follows:
 
 ```html
 <$let stateTiddlerName=<<qualify "$:/temp/IsOpen">>>
-	<$reveal state=<<stateTiddlerName>> type="match" text="yes">
-			<$button set=<<stateTiddlerName>> setTo="no">Close</$button>
+  <$reveal state=<<stateTiddlerName>> type="match" text="yes">
+      <$button set=<<stateTiddlerName>> setTo="no">Close</$button>
 
-			Here is some information that can be selectively hidden and shown: This tiddler's name is {{!!title}}.
-	</$reveal>
+      Here is some information that can be selectively hidden and shown: This tiddler's name is {{!!title}}.
+  </$reveal>
 
-	<$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
-			<$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
-	</$reveal>
+  <$reveal state=<<stateTiddlerName>> type="nomatch" text="yes">
+      <$button set=<<stateTiddlerName>> setTo="yes">Open</$button>
+  </$reveal>
 </$let>
 ```
- 
+
 If you go look in `$:/temp` after clicking on each of the buttons, you'll see several unique tiddlers that look like `IsOpen-148223948` or `IsOpen--723342025`, each of which contains a unique value describing whether the expandable section is open.
 
 

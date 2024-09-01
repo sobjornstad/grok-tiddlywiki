@@ -4,14 +4,14 @@ tags:
 title: Sn:HtmlWackoWhitespace
 type: text/vnd.tiddlywiki
 
-	<ul      >
+  <ul      >
 
 <li>Item 1<ul >
 <li >Subitem     1</li>
 
 
-	<li>
-			Subitem 2</li></ul>
-			</li>
+  <li>
+      Subitem 2</li></ul>
+      </li>
 
 </ul>

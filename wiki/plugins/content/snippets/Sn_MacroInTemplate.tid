@@ -6,7 +6,7 @@ type: text/vnd.tiddlywiki
 
 <$set name=myvar1 value="xyz">
 <$set name=myvar2 value={{!!field}}>
-	{{||MyTemplate}}
-	<<myMacro>>
+  {{||MyTemplate}}
+  <<myMacro>>
 </$set>
 </$set>

@@ -9,5 +9,5 @@ The current value of X is "<<X>>".
 \end
 
 <$set name=X value="marks the spot">
-	<<findX>>
+  <<findX>>
 </$set>

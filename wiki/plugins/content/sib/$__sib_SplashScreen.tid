@@ -17,20 +17,20 @@ type: text/vnd.tiddlywiki
     font-size: 16px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-	margin: 20px auto 0;
-	width: 200px;
-	text-align: center;
-	color: <<colour foreground>>;
-	fill: <<colour foreground>>;
+  margin: 20px auto 0;
+  width: 200px;
+  text-align: center;
+  color: <<colour foreground>>;
+  fill: <<colour foreground>>;
 }
 
 .tc-splash-text img {
-	width: 150px;
-	<<box-shadow "2px 2px 10px rgba(0, 0, 0, 0.5)">>
+  width: 150px;
+  <<box-shadow "2px 2px 10px rgba(0, 0, 0, 0.5)">>
 }
 
 html body.tc-body {
-	background: <<colour page-background>>;
+  background: <<colour page-background>>;
 }
 
 /*
@@ -59,46 +59,46 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 .tc-splash-spinner {
-	margin: 20px auto 0;
-	width: 70px;
-	text-align: center;
+  margin: 20px auto 0;
+  width: 70px;
+  text-align: center;
 }
 
 .tc-splash-spinner > div {
-	width: 18px;
-	height: 18px;
-	border-radius: 100%;
-	display: inline-block;
-	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	background-color: #f88;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  background-color: #f88;
 }
 
 .tc-splash-spinner .tc-splash-bounce-1 {
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
-	background-color: #8f8;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #8f8;
 }
 
 .tc-splash-spinner .tc-splash-bounce-2 {
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
-	background-color: #88f;
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #88f;
 }
 
 @-webkit-keyframes sk-bouncedelay {
-	0%, 80%, 100% { -webkit-transform: scale(0) }
-	40% { -webkit-transform: scale(1.0) }
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
 }
 
 @keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
-	-webkit-transform: scale(0);
-	transform: scale(0);
-	} 40% { 
-	-webkit-transform: scale(1.0);
-	transform: scale(1.0);
-	}
+  0%, 80%, 100% { 
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  } 40% { 
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+  }
 }
 </style>
 
@@ -109,6 +109,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 </div>
 
 <div class="tc-splash-text">
-	Loading <em>Grok TiddlyWiki</em>…
+  Loading <em>Grok TiddlyWiki</em>…
 </div>
 </div>

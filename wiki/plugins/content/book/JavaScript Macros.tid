@@ -15,8 +15,8 @@ The process of creating a JavaScript macro is [[documented on the TiddlyWiki Dev
 
 ```javascript
 function(parameter) {
-	/* do some stuff */
-	return "my return value";
+  /* do some stuff */
+  return "my return value";
 }
 ```
 
@@ -35,8 +35,8 @@ DESCRIPTION OF YOUR MACRO
 
 exports.name = "YOUR MACRO NAME";
 exports.params = [
-	{name: "YOUR FIRST PARAMETER NAME"}
-	/* repeat for additional parameters */
+  {name: "YOUR FIRST PARAMETER NAME"}
+  /* repeat for additional parameters */
 ];
 exports.run = /* INSERT YOUR FUNCTION HERE... */;
 

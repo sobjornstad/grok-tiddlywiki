@@ -12,8 +12,8 @@ To add a TODO item to this list, simply link to [[Meta:TODO]].
 <dl>
 <$list filter="[[Meta:TODO]backlinks[]] -Meta:TODO -Meta:Dashboard" variable=outer>
   <$list filter="[<outer>get[text]splitregexp<todore>last[]splitregexp<splitre>first[]]" variable=inner>
-	  <dt><$link to=<<outer>>/></dt>
-		<dd>''TODO:'' <<inner>>.</dd>
-	</$list>
+    <dt><$link to=<<outer>>/></dt>
+    <dd>''TODO:'' <<inner>>.</dd>
+  </$list>
 </$list>
 </dl>

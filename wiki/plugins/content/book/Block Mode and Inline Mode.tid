@@ -36,9 +36,9 @@ In many cases, TiddlyWiki will do the right thing on its own: it chooses a mode 
 
 ```html
 <$list filter="[tag[Meeting]search[fudge]]">
-	{{!!text}}
-	
-	------
+  {{!!text}}
+
+  ------
 </$list>
 ```
 
@@ -46,9 +46,9 @@ This doesn't work right -- can you spot the problem? There isn't a blank line be
 
 ```html
 <$list filter="[tag[Meeting]search[fudge]]">
-	<$transclude mode="block"/>
-	
-	------
+  <$transclude mode="block"/>
+
+  ------
 </$list>
 ```
 

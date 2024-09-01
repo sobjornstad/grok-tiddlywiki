@@ -10,16 +10,16 @@ type: text/vnd.tiddlywiki
 
 <table>
 <tr>
-	<th style="text-align: left;">Cloze</th>
-	<td class="gtw-question-input">
-		<$edit-text
-			tiddler="$:/temp/addq"
-			tag=input
-			default=""
-			field="question"
-			placeholder="e.g., In TiddlyWiki, everything is a {tiddler}."
-		/>
-	</td>
+  <th style="text-align: left;">Cloze</th>
+  <td class="gtw-question-input">
+    <$edit-text
+      tiddler="$:/temp/addq"
+      tag=input
+      default=""
+      field="question"
+      placeholder="e.g., In TiddlyWiki, everything is a {tiddler}."
+    />
+  </td>
 </tr>
 </table>
 
@@ -27,15 +27,15 @@ type: text/vnd.tiddlywiki
 
 <% if [{$:/temp/addq!!question}regexp[.*{.*}.*]] %>
 
-	<% if [[$:/temp/addq]get[question]!is[blank]] %>
+  <% if [[$:/temp/addq]get[question]!is[blank]] %>
 
-		<<add-takeaway-button remembercz>>
-		
-	<% endif %>
-	
+    <<add-takeaway-button remembercz>>
+
+  <% endif %>
+
 <% else %>
 
-	//Specify one or more words or phrases to occlude/hide with {single curly braces}.//
+  //Specify one or more words or phrases to occlude/hide with {single curly braces}.//
 
 <% endif %>
 

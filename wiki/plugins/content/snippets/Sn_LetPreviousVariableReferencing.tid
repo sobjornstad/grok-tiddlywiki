@@ -5,5 +5,5 @@ title: Sn:LetPreviousVariableReferencing
 type: text/vnd.tiddlywiki
 
 <$let var1="one" var2=<<var1>>>
-	var2: <<var2>>
+  var2: <<var2>>
 </$let>

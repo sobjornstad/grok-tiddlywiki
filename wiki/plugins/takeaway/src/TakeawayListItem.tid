@@ -8,47 +8,47 @@ type: text/vnd.tiddlywiki
 <!-- Render a single TiddlyRemember note as shown in the list for a given tiddler (expected to be the current tiddler). -->
 
 <$list filter="[all[current]seen[no]] [all[current]!has[seen]]" variable=_>
-	<!-- not seen, hide the answer -->
-	{{||$:/plugins/sobjornstad/TakeAway/TakeawayFrontSide}}
-	<div class="tr-nav">
-		<<setSeennessLink "show answer" "initial">>
-	</div>
+  <!-- not seen, hide the answer -->
+  {{||$:/plugins/sobjornstad/TakeAway/TakeawayFrontSide}}
+  <div class="tr-nav">
+    <<setSeennessLink "show answer" "initial">>
+  </div>
 </$list>
 
 <$list filter="[all[current]seen[initial]]">
-	<!-- in middle of initial in-text review -->
-	<$set name=requireQtype value="yes">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
-	</$set>
-	
-	<div class="tr-nav">
-		<div>
-			<$button class="tc-btn-invisible tc-tiddlylink" tooltip="I didn't remember the answer.">
-				<<setSeennessAction "yes">>
-				<<againAction>>
-				forgot
-			</$button>&nbsp;·
-			<$button class="tc-btn-invisible tc-tiddlylink" param={{!!title}} tooltip="I remembered the answer.">
-				<<setSeennessAction "yes">>
-				<<initialRememberedAction>>
-				remembered
-			</$button>
-		</div>
-	</div>
-	
+  <!-- in middle of initial in-text review -->
+  <$set name=requireQtype value="yes">
+    {{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
+  </$set>
+
+  <div class="tr-nav">
+    <div>
+      <$button class="tc-btn-invisible tc-tiddlylink" tooltip="I didn't remember the answer.">
+        <<setSeennessAction "yes">>
+        <<againAction>>
+        forgot
+      </$button>&nbsp;·
+      <$button class="tc-btn-invisible tc-tiddlylink" param={{!!title}} tooltip="I remembered the answer.">
+        <<setSeennessAction "yes">>
+        <<initialRememberedAction>>
+        remembered
+      </$button>
+    </div>
+  </div>
+
 </$list>
-	
+
 <$list filter="[<currentTiddler>seen[yes]]" variable=_>
-	<!-- seen, show full details -->
-	<$set name=requireQtype value="yes">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
-	</$set>
-	
-	<div class="tr-nav">
-		<<nextDueLink>>&nbsp;·
-		<<editLink>>&nbsp;·
-		<<markUnseenLink>>&nbsp;·
-		<<sendFeedbackLink>>&nbsp;·
-		<<helpLink>>
-	</div>
+  <!-- seen, show full details -->
+  <$set name=requireQtype value="yes">
+    {{||$:/plugins/sobjornstad/TakeAway/TakeawayBackSide}}
+  </$set>
+
+  <div class="tr-nav">
+    <<nextDueLink>>&nbsp;·
+    <<editLink>>&nbsp;·
+    <<markUnseenLink>>&nbsp;·
+    <<sendFeedbackLink>>&nbsp;·
+    <<helpLink>>
+  </div>
 </$list>

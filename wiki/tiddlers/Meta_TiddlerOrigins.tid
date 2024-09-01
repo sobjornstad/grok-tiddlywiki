@@ -6,9 +6,9 @@ type: text/vnd.tiddlywiki
 
 <table>
 <$list filter="[all[tiddlers+shadows]tag[Exercise]sort[origin]]">
-	<tr>
-		<td><$link to=<<currentTiddler>>/></td>
-		<td><$edit-text field="origin" tag="input" default=""/></td>
-		<td>{{{ [tag[Section]] [tag[Chapter]] +[search:text<currentTiddler>] }}}</td>
-	</tr>
+  <tr>
+    <td><$link to=<<currentTiddler>>/></td>
+    <td><$edit-text field="origin" tag="input" default=""/></td>
+    <td>{{{ [tag[Section]] [tag[Chapter]] +[search:text<currentTiddler>] }}}</td>
+  </tr>
 </$list>

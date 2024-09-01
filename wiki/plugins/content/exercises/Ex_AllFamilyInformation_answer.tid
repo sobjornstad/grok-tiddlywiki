@@ -6,17 +6,17 @@ type: text/vnd.tiddlywiki
 
 ```html
 <ul>
-	<li>''Email'': {{!!email}}</li>
-	<li>''Phone'': {{!!phone}}</li>
-	<li>
-		''Family'':
-		<ul>
-			<$list filter={{!!family}}>
-				<li>{{!!title}}: {{!!phone}}</li>
-			</$list>
-		</ul>
-	</li>
-	<li>''Manager'': {{!!manager}}</li>
+  <li>''Email'': {{!!email}}</li>
+  <li>''Phone'': {{!!phone}}</li>
+  <li>
+    ''Family'':
+    <ul>
+      <$list filter={{!!family}}>
+        <li>{{!!title}}: {{!!phone}}</li>
+      </$list>
+    </ul>
+  </li>
+  <li>''Manager'': {{!!manager}}</li>
 </ul>
 ```
 

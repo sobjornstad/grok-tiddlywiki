@@ -7,8 +7,8 @@ type: text/vnd.tiddlywiki
 
 <div class="mm-intext-takeaway-list">
 <$list filter="[all[tiddlers+shadows]tag[Takeaway]origin<currentTiddler>sort[title]]">
-	<div class="mm-intext-takeaway">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
-	</div>
+  <div class="mm-intext-takeaway">
+    {{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+  </div>
 </$list>
 </div>

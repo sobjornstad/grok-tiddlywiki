@@ -8,17 +8,17 @@ type: text/vnd.tiddlywiki
 <$checkbox field="showtest" checked="yes" unchecked="no"> Show an extra column</$checkbox>
 <table>
 <tr>
-	<th>Column 1</th>
-	<$reveal state="!!showtest" type="match" text="yes">
-	<th>Extra column</th>
-	</$reveal>
-	<th>Column 2</th>
+  <th>Column 1</th>
+  <$reveal state="!!showtest" type="match" text="yes">
+  <th>Extra column</th>
+  </$reveal>
+  <th>Column 2</th>
 </tr>
 <tr>
-	<td>Data 1</td>
-	<$reveal state="!!showtest" type="match" text="yes">
-	<td>Magic extra data</td>
-	</$reveal>
-	<td>Data 2</td>
+  <td>Data 1</td>
+  <$reveal state="!!showtest" type="match" text="yes">
+  <td>Magic extra data</td>
+  </$reveal>
+  <td>Data 2</td>
 </tr>
 </table>

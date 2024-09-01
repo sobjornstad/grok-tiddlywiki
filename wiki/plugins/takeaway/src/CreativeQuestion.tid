@@ -16,12 +16,12 @@ This is a //creative question// with a potentially infinite number of answers. U
 You can identify creative takeaways by the text “(try to pick a new one)” at the end of the prompt. Spaced-repetition nerds can see [[this explanation|https://zettelkasten.sorenbjornstad.com/#CreativePattern]] of the pattern.
 
 <div style="text-align: center;">
-	<$button
-		actions=<<help-seen "creative-question">> 
-		class="tc-btn-invisible tc-tiddlylink"
-	>
-		I've got it, don't remind me again
-	</$button>
+  <$button
+    actions=<<help-seen "creative-question">> 
+    class="tc-btn-invisible tc-tiddlylink"
+  >
+    I've got it, don't remind me again
+  </$button>
 </div>
 
 </div>

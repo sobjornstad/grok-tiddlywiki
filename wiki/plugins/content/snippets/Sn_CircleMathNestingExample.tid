@@ -15,20 +15,20 @@ type: text/vnd.tiddlywiki
 \function circle-circumference(radius) [<radius>.radius-to-circumference[]fixed[2]]
 
 <$list filter="1 2 3" variable="r">
-	<li>
-		Circle with radius <<r>>
-		<ul>
-			<$list filter="area circumference" variable="measurement">
-				<$let
-					macroName=`circle-$(measurement)$`
-					measurementName={{{ [<measurement>sentencecase[]] }}}
-				>
-					<li>
-						<<measurementName>>:
-						<$transclude $variable=<<macroName>> radius=<<r>>/>
-					</li>
-				</$let>
-			</$list>
-		</ul>
-	</li>
+  <li>
+    Circle with radius <<r>>
+    <ul>
+      <$list filter="area circumference" variable="measurement">
+        <$let
+          macroName=`circle-$(measurement)$`
+          measurementName={{{ [<measurement>sentencecase[]] }}}
+        >
+          <li>
+            <<measurementName>>:
+            <$transclude $variable=<<macroName>> radius=<<r>>/>
+          </li>
+        </$let>
+      </$list>
+    </ul>
+  </li>
 </$list>

@@ -5,23 +5,23 @@ title: $:/sib/GeneralMacros
 type: text/vnd.tiddlywiki
 
 \procedure textual-button(imageName)
-	<span class="gtw-textual-button">
-		<$transclude $tiddler=`$:/core/images/$(imageName)$`/>
-	</span>
+  <span class="gtw-textual-button">
+    <$transclude $tiddler=`$:/core/images/$(imageName)$`/>
+  </span>
 \end textual-button
 
 \procedure tiddlyhost-clone-link(site-name, text)
-	<a
-		class="tc-tiddlylink-external"
-		href=`https://tiddlyhost.com/sites/new?clone=$(site-name)$`>
-			<$text text=<<text>>/>
-	</a>
+  <a
+    class="tc-tiddlylink-external"
+    href=`https://tiddlyhost.com/sites/new?clone=$(site-name)$`>
+      <$text text=<<text>>/>
+  </a>
 \end tiddlyhost-clone-link
 
 \procedure gtw-tiddlyhost-clone-link(text)
-	<$macrocall
-		$name="tiddlyhost-clone-link"
-		site-name={{$:/config/sobjornstad/GrokTiddlyWiki/TiddlyHostSiteName}}
-		text=<<text>>
-	/>
+  <$macrocall
+    $name="tiddlyhost-clone-link"
+    site-name={{$:/config/sobjornstad/GrokTiddlyWiki/TiddlyHostSiteName}}
+    text=<<text>>
+  />
 \end gtw-tiddlyhost-clone-link

@@ -5,9 +5,9 @@ title: Sn:TiddlerWidget
 type: text/vnd.tiddlywiki
 
 <$set name="currentTiddler" value="New Current Tiddler">
-	<<currentTiddler>>
+  <<currentTiddler>>
 </$set>
 
 <$tiddler tiddler="New Current Tiddler">
-	<<currentTiddler>>
+  <<currentTiddler>>
 </$tiddler>

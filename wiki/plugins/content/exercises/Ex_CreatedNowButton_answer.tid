@@ -6,7 +6,7 @@ type: text/vnd.tiddlywiki
 
 ```html
 <$button set="!!created" setTo=<<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>>
-	Created Now
+  Created Now
 </$button>
 
 {{!!created}}}
@@ -20,7 +20,7 @@ You might be tempted to define and use the `now-timestamp` macro discussed earli
 \define now-timestamp() <<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>
 
 <$button set="!!created" setTo=<<now-timestamp>>>
-	Created Now
+  Created Now
 </$button>
 ```
 
@@ -30,8 +30,8 @@ In this case, the easiest fix is not to use the `now-timestamp` macro, since its
 
 ```html
 <$wikify name="currentTime" text=<<now-timestamp>>>
-	<$button set="!!created" setTo=<<currentTime>>>
-		Created Now
-	</$button>
+  <$button set="!!created" setTo=<<currentTime>>>
+    Created Now
+  </$button>
 </$wikify>
 ```

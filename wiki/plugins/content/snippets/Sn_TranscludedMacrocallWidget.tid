@@ -13,5 +13,5 @@ type: text/vnd.tiddlywiki
 * <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Aardvark" />
 * <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Bee" />
 * <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Cow" />
-	
+
 </$set>

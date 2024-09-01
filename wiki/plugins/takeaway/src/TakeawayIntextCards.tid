@@ -7,31 +7,31 @@ type: text/vnd.tiddlywiki
 
 \define empty-message()
 <div class='mm-intext-no-more-takeaways'>
-	You have collected all the takeaways in this section. Choose the //List// tab to see them.
+  You have collected all the takeaways in this section. Choose the //List// tab to see them.
 </div>
 <div class='mm-intext-no-more-takeaways'>
-	{{$:/plugins/sobjornstad/TakeAway/StudyingOnWebBanner}}
+  {{$:/plugins/sobjornstad/TakeAway/StudyingOnWebBanner}}
 </div>
 \end
 
 <div class="mm-intext-takeaway-card">
 <$list filter="[all[tiddlers+shadows]tag[Takeaway]origin<currentTiddler>sort[title]!seen[yes]first[]]" emptyMessage=<<empty-message>>>
 
-	<$reveal type="match" text="" state="!!seen">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayFrontSide}}
-		<div class="tr-nav">
-			<div>
-				<$button class="tc-btn-invisible tc-tiddlylink">
-					<<setSeennessAction "initial">>
-					show answer
-				</$button>
-			</div>
-		</div>
-	</$reveal>
-	
-	<$reveal type="nomatch" text="" state="!!seen" class="mm-intext-takeaway">
-		{{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
-	</$reveal>
-	
+  <$reveal type="match" text="" state="!!seen">
+    {{||$:/plugins/sobjornstad/TakeAway/TakeawayFrontSide}}
+    <div class="tr-nav">
+      <div>
+        <$button class="tc-btn-invisible tc-tiddlylink">
+          <<setSeennessAction "initial">>
+          show answer
+        </$button>
+      </div>
+    </div>
+  </$reveal>
+
+  <$reveal type="nomatch" text="" state="!!seen" class="mm-intext-takeaway">
+    {{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+  </$reveal>
+
 </$list>
 </div>

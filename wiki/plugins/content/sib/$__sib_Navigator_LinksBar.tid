@@ -15,7 +15,7 @@ type: text/vnd.tiddlywiki
 
 <style>
 .gtw-sidebar-links a, .gtw-sidebar-links button {
-	color: <<color sidebar-foreground>>;
-	text-decoration: underline;
+  color: <<color sidebar-foreground>>;
+  text-decoration: underline;
 }
 </style>

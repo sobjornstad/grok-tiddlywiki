@@ -23,7 +23,7 @@ For the most part, this is personal preference and a question of what makes the 
 <li>For instance, this book stores each exercise in a tiddler and uses an `ExerciseTemplate` to format each exercise; where the exercises appear, it simply says, e.g., `{{Ex:CreateMeetingTemplate||ExerciseTemplate}}` for each exercise.</li>
 </ul></li>
 <li>If you ''want to use [[text substitution|Text Substitution]]'', a macro is your only option.
-	<ul><li>But you can always include a macro //in// a template if you need to use text substitution.</li></ul></li>
+  <ul><li>But you can always include a macro //in// a template if you need to use text substitution.</li></ul></li>
 <li>Templates work best using ''fields of a particular tiddler'' as input. Macros work best using ''parameters written directly inside the body of the tiddler'' as input. However, either can get data from either source if you set a variable to the appropriate value:
 
 {{Sn:MacroInTemplate||BasicSnippet}}

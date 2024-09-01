@@ -51,27 +51,27 @@ type: text/vnd.tiddlywiki
 
 \define datestampFromOffset(y, m, d, o)
 <$wikify name=result text="<<daysfrom $y$ $m$ $d$ $o$>>">
-	<$vars
-		year={{{  [<result>split[,]nth[1]trim[]] }}}
-		month={{{ [<result>split[,]nth[2]trim[]] }}}
-		day={{{   [<result>split[,]nth[3]trim[]] }}}>
-	<$vars
-		paddedmonth={{{ [<month>addprefix[0]] }}}
-		paddedday={{{   [<day>addprefix[0]] }}}>
-		<<year>><$text text={{{ [<month>minlength[2]else<paddedmonth>] }}}/><$text text={{{ [<day>minlength[2]else<paddedday>] }}}/>{{$:/config/sobjornstad/TakeAway/Scheduler/TimeOffset}}00
-	</$vars>
-	</$vars>
-	
+  <$vars
+    year={{{  [<result>split[,]nth[1]trim[]] }}}
+    month={{{ [<result>split[,]nth[2]trim[]] }}}
+    day={{{   [<result>split[,]nth[3]trim[]] }}}>
+  <$vars
+    paddedmonth={{{ [<month>addprefix[0]] }}}
+    paddedday={{{   [<day>addprefix[0]] }}}>
+    <<year>><$text text={{{ [<month>minlength[2]else<paddedmonth>] }}}/><$text text={{{ [<day>minlength[2]else<paddedday>] }}}/>{{$:/config/sobjornstad/TakeAway/Scheduler/TimeOffset}}00
+  </$vars>
+  </$vars>
+
 </$wikify>
 \end
 
 \define daysFromDatestamp(datestamp, offset)
-	<$vars
-	  year={{{ [<__datestamp__>split[]first[4]join[]] }}}
-	  month={{{ [<__datestamp__>split[]first[6]last[2]join[]] }}}
-	  day={{{ [<__datestamp__>split[]first[8]last[2]join[]] }}}>
-		<$macrocall $name=datestampFromOffset
-			y=<<year>> m=<<month>> d=<<day>> o=<<__offset__>> />
+  <$vars
+    year={{{ [<__datestamp__>split[]first[4]join[]] }}}
+    month={{{ [<__datestamp__>split[]first[6]last[2]join[]] }}}
+    day={{{ [<__datestamp__>split[]first[8]last[2]join[]] }}}>
+    <$macrocall $name=datestampFromOffset
+      y=<<year>> m=<<month>> d=<<day>> o=<<__offset__>> />
   </$vars>
 \end
 

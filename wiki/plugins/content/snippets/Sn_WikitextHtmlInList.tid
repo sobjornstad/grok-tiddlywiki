@@ -7,8 +7,8 @@ type: text/vnd.tiddlywiki
 * First item
 * Second item <div>
 
-	<p>Here's a second paragraph.</p>
-	<p>Here's a third paragraph.</p>
-	
+  <p>Here's a second paragraph.</p>
+  <p>Here's a third paragraph.</p>
+
 </div>
 * Third item

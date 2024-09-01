@@ -13,24 +13,24 @@ type: text/vnd.tiddlywiki
 <$set name=qtext value={{{ [<qprefixed>is[blank]then{!!question}else<qprefixed>] }}}>
 <$set name="qid" value={{{ [<previewTakeawayType>!is[blank]then[Preview]] ~[{!!title}split[:]last[]] }}}>
 
-	<$list filter="[<previewTakeawayType>match[rememberq]] ~[<currentTiddler>qtype[rememberq]]" variable=_>
-		<$wikify name="sched-info" text=<<sched-line>>>
-		<$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id=<<qid>> reference={{!!origin}} sched=<<sched-info>>/>
-		</$wikify>
-	</$list>
+  <$list filter="[<previewTakeawayType>match[rememberq]] ~[<currentTiddler>qtype[rememberq]]" variable=_>
+    <$wikify name="sched-info" text=<<sched-line>>>
+    <$macrocall $name=rememberq question=<<qtext>> answer={{!!answer}} id=<<qid>> reference={{!!origin}} sched=<<sched-info>>/>
+    </$wikify>
+  </$list>
 
-	<$list filter="[<previewTakeawayType>match[remembercz]] ~[<currentTiddler>qtype[remembercz]]" variable=_>
-		<$wikify name="sched-info" text=<<sched-line>>>
-		<$macrocall $name=remembercz id=<<qid>> text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}} sched=<<sched-info>>/>
-		</$wikify>
-	</$list>
+  <$list filter="[<previewTakeawayType>match[remembercz]] ~[<currentTiddler>qtype[remembercz]]" variable=_>
+    <$wikify name="sched-info" text=<<sched-line>>>
+    <$macrocall $name=remembercz id=<<qid>> text={{{ [<qtext>splitregexp[{(?:c\d::)?]join[<span class="gtw-cloze-occlusion">{]split[}]join[}</span>]] }}} reference={{!!origin}} sched=<<sched-info>>/>
+    </$wikify>
+  </$list>
 
-	<$reveal text="yes" type="match" default=<<requireQtype>>>
-		<$list filter="[<currentTiddler>!qtype[rememberq]!qtype[remembercz]]">
-			<div style="color: orange;">Not sure how to display a note with qtype '{{!!qtype}}'! qtype should be `rememberq` or `remembercz`.</div>
-			<br>
-		</$list>
-	</$reveal>
+  <$reveal text="yes" type="match" default=<<requireQtype>>>
+    <$list filter="[<currentTiddler>!qtype[rememberq]!qtype[remembercz]]">
+      <div style="color: orange;">Not sure how to display a note with qtype '{{!!qtype}}'! qtype should be `rememberq` or `remembercz`.</div>
+      <br>
+    </$list>
+  </$reveal>
 
 </$set>
 </$set>

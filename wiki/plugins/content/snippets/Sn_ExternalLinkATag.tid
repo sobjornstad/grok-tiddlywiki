@@ -5,7 +5,7 @@ title: Sn:ExternalLinkATag
 type: text/vnd.tiddlywiki
 
 <a href="https://en.wikipedia.org/wiki/Aardvark">
-	https://en.wikipedia.org/wiki/Aardvark
+  https://en.wikipedia.org/wiki/Aardvark
 </a>
 
 <a href="https://en.wikipedia.org/wiki/Aardvark">Aardvark</a>

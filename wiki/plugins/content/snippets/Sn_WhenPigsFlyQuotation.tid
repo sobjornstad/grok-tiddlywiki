@@ -5,5 +5,5 @@ title: Sn:WhenPigsFlyQuotation
 type: text/vnd.tiddlywiki
 
 <% if "[<storyTiddler>match[When Pigs Fly]]" %>
-	Pigs are flying – maybe you made a syntax error?
+  Pigs are flying – maybe you made a syntax error?
 <% endif %>

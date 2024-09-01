@@ -5,7 +5,7 @@ title: Sn:LinkInhibition
 type: text/vnd.tiddlywiki
 
 \widget $link()
-	<$slot $name="ts-raw">
+  <$slot $name="ts-raw">
 \end
 
 * <$link to="Links">Link</$link> to a tiddler

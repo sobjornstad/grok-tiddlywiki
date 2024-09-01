@@ -10,7 +10,7 @@ The version presented in the exercise, upgraded, looks like this:
 View phone number for family member: <$list filter={{!!family}}><$radio tiddler=<<qualify "$:/temp/FamilyContact">> value=<<currentTiddler>>>&nbsp;<<currentTiddler>></$radio>&ensp;</$list>
 
 <$set name="stateTiddlerName" value=<<qualify "$:/temp/FamilyContact">>>
-	<$transclude tiddler={{{ [<stateTiddlerName>get[text]] }}} field="phone"/>
+  <$transclude tiddler={{{ [<stateTiddlerName>get[text]] }}} field="phone"/>
 </$set>
 ```
 

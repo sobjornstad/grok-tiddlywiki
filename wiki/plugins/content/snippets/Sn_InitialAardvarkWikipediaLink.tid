@@ -5,8 +5,8 @@ title: Sn:InitialAardvarkWikipediaLink
 type: text/vnd.tiddlywiki
 
 \procedure wikipediaLink(articleName)
-	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
-	<<articleName>></a>
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<articleName>></a>
 \end
 
 The <<wikipediaLink Aardvark>> is a pig-like African mammal that eats ants and termites.

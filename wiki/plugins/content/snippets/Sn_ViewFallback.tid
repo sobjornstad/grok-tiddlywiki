@@ -9,5 +9,5 @@ type: text/vnd.tiddlywiki
 <$button set="!!adate" setTo="">Hide Created Date</$button>
 
 <$view field="adate" format="date" template="This tiddler was created on MMM DD, YYYY.">
-	The date is not currently set.
+  The date is not currently set.
 </$view>

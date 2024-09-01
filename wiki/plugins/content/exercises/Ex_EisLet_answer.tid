@@ -6,8 +6,8 @@ type: text/vnd.tiddlywiki
 
 ```html
 <$let
-	disclaimer="(This paragraph does not represent the formal opinion of my company.)"
-	eis="Employee Information System"
+  disclaimer="(This paragraph does not represent the formal opinion of my company.)"
+  eis="Employee Information System"
 >
 
 The <<eis>> at this nice company allows employees to perform tasks such as:

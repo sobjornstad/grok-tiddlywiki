@@ -8,11 +8,11 @@ The portion that needs to be wrapped in a `$list` widget is the part that calls 
 
 ```html
 <$list filter="[all[current]links[]] [all[current]backlinks[]] +[first[]]" variable=_>
-	<!-- begin part that was already there -->
-	<div class="sib-link-display">
-		<<linkDisplay "Links" "links[]" "sib-links">>
-		<<linkDisplay "Backlinks" "backlinks[]" "sib-backlinks">>
-	</div>
-	<!-- end part that was already there -->
+  <!-- begin part that was already there -->
+  <div class="sib-link-display">
+    <<linkDisplay "Links" "links[]" "sib-links">>
+    <<linkDisplay "Backlinks" "backlinks[]" "sib-backlinks">>
+  </div>
+  <!-- end part that was already there -->
 </$list>
 ```

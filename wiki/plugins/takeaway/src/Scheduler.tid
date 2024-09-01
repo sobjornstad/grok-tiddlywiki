@@ -13,18 +13,18 @@ TakeAway uses an Anki/SM2-like algorithm. If you don't understand the terms used
 <table class="gtw-form">
 <$list filter="[all[tiddlers+shadows]prefix[$:/config/sobjornstad/TakeAway/Scheduler/]nsort[stackorder]]">
 <tr>
-	<th width="140px" style="text-align: left; vertical-align: top;">{{!!caption}}</th>
-	<td style="vertical-align: top;"><$edit-text tag=input size=4/></td>
-	<td>{{!!description}}</td>
-	<!--<td><$edit-text tag=input field="stackorder" size=4/></td>-->
+  <th width="140px" style="text-align: left; vertical-align: top;">{{!!caption}}</th>
+  <td style="vertical-align: top;"><$edit-text tag=input size=4/></td>
+  <td>{{!!description}}</td>
+  <!--<td><$edit-text tag=input field="stackorder" size=4/></td>-->
 </tr>
 </$list>
 </table>
 
 <$button>
-	<!-- NOT all[tiddlers+shadows] -- delete only modified -->
-	<$list filter="[prefix[$:/config/sobjornstad/TakeAway/Scheduler/]]">
-		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
-	</$list>
-	Reset scheduling settings to default
+  <!-- NOT all[tiddlers+shadows] -- delete only modified -->
+  <$list filter="[prefix[$:/config/sobjornstad/TakeAway/Scheduler/]]">
+    <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+  </$list>
+  Reset scheduling settings to default
 </$button>

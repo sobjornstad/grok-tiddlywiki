@@ -17,10 +17,10 @@ type: text/vnd.tiddlywiki
 !! Information about {{!!title}}
 
 <ul>
-	<<contact-info-item "email">>
-	<<contact-info-item "phone">>
-	<<contact-info-item "family">>
-	<<contact-info-item "manager">>
+  <<contact-info-item "email">>
+  <<contact-info-item "phone">>
+  <<contact-info-item "family">>
+  <<contact-info-item "manager">>
 </ul>
 ```
 

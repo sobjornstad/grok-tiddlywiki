@@ -12,5 +12,5 @@ type: text/vnd.tiddlywiki
 This reference is not exhaustive. In particular, [[widgets|Widgets]] are not included, as that would make it unreasonably long. You can quickly find details on all the widgets by searching in the [[TiddlyWiki documentation|https://tiddlywiki.com]].
 
 <$list filter="[<renderingStatic>!match[yes]]" variable=_ emptyMessage=<<list-links "[all[tiddlers+shadows]tag[Wikitext Reference]]">>>
-	<<tabs "[all[tiddlers+shadows]tag[Wikitext Reference]]" default:"Wr:InlineFormatting">>
+  <<tabs "[all[tiddlers+shadows]tag[Wikitext Reference]]" default:"Wr:InlineFormatting">>
 </$list>

@@ -6,14 +6,14 @@ type: text/vnd.tiddlywiki
 
 Section: 
 <$select tiddler="$:/temp/SectionSelectorExample" default="">
-	<option value="">(choose a section)</option>
-	<$list filter="[all[tiddlers+shadows]tag[Section]]">
-		<option value=<<currentTiddler>>>
-			<<currentTiddler>>
-		</option>
-	</$list>
+  <option value="">(choose a section)</option>
+  <$list filter="[all[tiddlers+shadows]tag[Section]]">
+    <option value=<<currentTiddler>>>
+      <<currentTiddler>>
+    </option>
+  </$list>
 </$select>
 
 <$list filter="[{$:/temp/SectionSelectorExample}!is[blank]]" variable="selectedTiddler" emptyMessage="Please choose a section.">
-	The blurb of the section //<<selectedTiddler>>// is “<$transclude tiddler=<<selectedTiddler>> field="description"/>”
+  The blurb of the section //<<selectedTiddler>>// is “<$transclude tiddler=<<selectedTiddler>> field="description"/>”
 </$list>

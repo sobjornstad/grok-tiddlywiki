@@ -6,32 +6,32 @@ type: text/vnd.tiddlywiki
 
 \define help-button()
 <$button class="tc-tiddlylink tc-btn-invisible" to="TakeAway Help">
-	{{$:/core/images/help}} help
+  {{$:/core/images/help}} help
 </$button>
 \end
 <$macrocall $name=tabs
-		tabsList="$:/plugins/sobjornstad/TakeAway/TakeawayIntextCards $:/plugins/sobjornstad/TakeAway/TakeawayIntextList" 
-		default="$:/plugins/sobjornstad/TakeAway/TakeawayIntextCards"/>
-		
+    tabsList="$:/plugins/sobjornstad/TakeAway/TakeawayIntextCards $:/plugins/sobjornstad/TakeAway/TakeawayIntextList" 
+    default="$:/plugins/sobjornstad/TakeAway/TakeawayIntextCards"/>
+
 <!--		
-		default={{{ [all[tiddlers+shadows]tag[Takeaway]origin<currentTiddler>!seen[yes]first[]then[$:/plugins/sobjornstad/TakeAway/TakeawayIntextCards]else[$:/plugins/sobjornstad/TakeAway/TakeawayIntextList]] }}}/>
+    default={{{ [all[tiddlers+shadows]tag[Takeaway]origin<currentTiddler>!seen[yes]first[]then[$:/plugins/sobjornstad/TakeAway/TakeawayIntextCards]else[$:/plugins/sobjornstad/TakeAway/TakeawayIntextList]] }}}/>
 -->
 
 <$list filter="[{$:/config/Authoring}match[no]]" variable=_>
-	<$reveal type="nomatch" state=<<qualify "$:/temp/ShowAddBox">> text="yes">
-		<div style="text-align: center;">
-		<$button set=<<qualify "$:/temp/ShowAddBox">> setTo="yes" class="tc-btn-invisible tc-tiddlylink">
-			{{$:/core/images/add-comment}} add your own takeaway
-		</$button>&ensp;·&ensp;<<help-button>>
-		</div>
-	</$reveal>
-	
-	<$reveal type="match" state=<<qualify "$:/temp/ShowAddBox">> text="yes">
-		<div style="text-align: center;">
-		<$button set=<<qualify "$:/temp/ShowAddBox">> setTo="no" class="tc-btn-invisible tc-tiddlylink">
-			{{$:/core/images/fold-button}} hide quick add
-		</$button>&ensp;·&ensp;<<help-button>>
-		</div>
-		{{||$:/plugins/sobjornstad/TakeAway/CreateNewTrNote}}
-	</$reveal>
+  <$reveal type="nomatch" state=<<qualify "$:/temp/ShowAddBox">> text="yes">
+    <div style="text-align: center;">
+    <$button set=<<qualify "$:/temp/ShowAddBox">> setTo="yes" class="tc-btn-invisible tc-tiddlylink">
+      {{$:/core/images/add-comment}} add your own takeaway
+    </$button>&ensp;·&ensp;<<help-button>>
+    </div>
+  </$reveal>
+
+  <$reveal type="match" state=<<qualify "$:/temp/ShowAddBox">> text="yes">
+    <div style="text-align: center;">
+    <$button set=<<qualify "$:/temp/ShowAddBox">> setTo="no" class="tc-btn-invisible tc-tiddlylink">
+      {{$:/core/images/fold-button}} hide quick add
+    </$button>&ensp;·&ensp;<<help-button>>
+    </div>
+    {{||$:/plugins/sobjornstad/TakeAway/CreateNewTrNote}}
+  </$reveal>
 </$list>

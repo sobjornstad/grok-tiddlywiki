@@ -23,7 +23,7 @@ If you want to include both a literal part //and// a field or macro transclusion
 ```html
 \define phonelink() [ext[Call $(currentTiddler)$|$(phonenum)$]]
 <$set name="phonenum" value={{!!phone}}>
-	<<phonelink>>
+  <<phonelink>>
 </$set>
 ```
 
@@ -32,7 +32,7 @@ Or with an `a` element:
 ```html
 \define phonelink() tel:$(phonenum)$
 <$set name="phonenum" value={{!!phone}}>
-	<a href=<<phonelink>>>Call {{!!title}}</a>
+  <a href=<<phonelink>>>Call {{!!title}}</a>
 </$set>
 ```
 

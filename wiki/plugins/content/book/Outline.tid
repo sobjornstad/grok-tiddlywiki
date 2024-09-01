@@ -10,34 +10,34 @@ This outline of //Grok TiddlyWiki// summarizes all the chapters and sections. Cl
 You can also browse all [[exercises|Exercise Browser]], [[takeaways|Takeaway Browser]], or [[concepts|Concept]].
 
 <dl class="gtw-outline">
-	<$list filter="[list[Outline]]">
-	<div class="gtw-chapter-item">
-		<dt>
-		<$link to={{!!title}}>
-		<$view field="caption">
-			{{!!title}}
-		</$view></$link>
-		</dt>
-		<dd>
-			<div style="font-style: italic;">
-				{{!!description}}
-			</div>
+  <$list filter="[list[Outline]]">
+  <div class="gtw-chapter-item">
+    <dt>
+    <$link to={{!!title}}>
+    <$view field="caption">
+      {{!!title}}
+    </$view></$link>
+    </dt>
+    <dd>
+      <div style="font-style: italic;">
+        {{!!description}}
+      </div>
 
-		{{||ChapterOutlineTemplate}}
-		
-		</dd>
-	</div>
-	</$list>
+    {{||ChapterOutlineTemplate}}
+
+    </dd>
+  </div>
+  </$list>
 </dl>
 
 <style>
 dl.gtw-outline {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 dl.gtw-outline dd ul {
-	margin-left: 18px;
-	padding-left: 0;
+  margin-left: 18px;
+  padding-left: 0;
 }
 
 div.gtw-chapter-item {

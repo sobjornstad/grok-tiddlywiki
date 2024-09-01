@@ -7,5 +7,5 @@ type: text/vnd.tiddlywiki
 Your name: <$edit-text tiddler="$:/temp/ExampleNameField" tag="input" default="" />
 
 <$set name="username" filter="[[$:/temp/ExampleNameField]get[text]]" value={{$:/temp/ExampleNameField}} emptyValue="Nobody">
-	Hi <<username>>!
+  Hi <<username>>!
 </$set>

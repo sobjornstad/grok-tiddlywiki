@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 \define testme(inputFilt, userFilt)
 <$list filter="[<__userFilt__>!is[blank]]" variable=_ emptyMessage="Enter a filter run to see the results.">
 <$list filter="""$inputFilt$ :filter$userFilt$""">
-	<<currentTiddler>><br>
+  <<currentTiddler>><br>
 </$list>
 </$list>
 \end

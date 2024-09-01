@@ -7,10 +7,10 @@ type: text/vnd.tiddlywiki
 What do you want to look at?
 
 <$select tiddler="$:/temp/SelectExample" default="">
-	<option value="">(choose an option)</option>
-	<option value="Exercise">Exercises</option>
-	<option value="Section">Sections</option>
-	<option value="Takeaway">Takeaways</option>
+  <option value="">(choose an option)</option>
+  <option value="Exercise">Exercises</option>
+  <option value="Section">Sections</option>
+  <option value="Takeaway">Takeaways</option>
 </$select>
 
 <<list-links "[all[tiddlers+shadows]tag{$:/temp/SelectExample}first[5]]">>

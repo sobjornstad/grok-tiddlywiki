@@ -9,18 +9,18 @@ This code snippet is quite repetitive:
 
 ```html
 <ul>
-	<% if [all[current]has[email]] %>
-		<li>''Email'': {{!!email}}</li>
-	<% endif %>
-	<% if [all[current]has[phone]] %>
-		<li>''Phone'': {{!!phone}}</li>
-	<% endif %>
-	<% if [all[current]has[family]] %>
-		<li>''Family'': {{!!family}}</li>
-	<% endif %>
-	<% if [all[current]has[manager]] %>
-		<li>''Manager'': {{!!manager}}</li>
-	<% endif %>
+  <% if [all[current]has[email]] %>
+    <li>''Email'': {{!!email}}</li>
+  <% endif %>
+  <% if [all[current]has[phone]] %>
+    <li>''Phone'': {{!!phone}}</li>
+  <% endif %>
+  <% if [all[current]has[family]] %>
+    <li>''Family'': {{!!family}}</li>
+  <% endif %>
+  <% if [all[current]has[manager]] %>
+    <li>''Manager'': {{!!manager}}</li>
+  <% endif %>
 </ul>
 ```
 

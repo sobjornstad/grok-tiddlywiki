@@ -6,8 +6,8 @@ type: text/vnd.tiddlywiki
 
 <$let wp="https://en.wikipedia.org">
 
-	<a href=<<wp>>>Wikipedia</a>
+  <a href=<<wp>>>Wikipedia</a>
 
-	<a href=<<wp>>>The free encyclopedia</a>
+  <a href=<<wp>>>The free encyclopedia</a>
 
 </$let>

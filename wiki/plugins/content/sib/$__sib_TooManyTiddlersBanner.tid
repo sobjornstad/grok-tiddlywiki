@@ -9,35 +9,35 @@ type: text/vnd.tiddlywiki
 
 <% if [{$:/config/sobjornstad/GrokTiddlyWiki/HideOpenTiddlersWarning}!text[yes]is[blank]] %>
 <$list filter="[enlist{$:/StoryList!!list}count[]compare:number:gt<maxNumOpen>]" variable="numOpen">
-	<div class="gtw-tiddler-excess-banner">
-		<div style="display: inline-block; vertical-align: center; margin-left: 1em;">
-			<span style="height: 44px">{{$:/core/images/info-button}}</span>
-		</div>
-		<div style="display: inline-block; margin-left: 1em;">
-			You have <<numOpen>> tiddlers open. Having too many<br>
-			open tiddlers may cause poor performance.<br>
-		</div>
+  <div class="gtw-tiddler-excess-banner">
+    <div style="display: inline-block; vertical-align: center; margin-left: 1em;">
+      <span style="height: 44px">{{$:/core/images/info-button}}</span>
+    </div>
+    <div style="display: inline-block; margin-left: 1em;">
+      You have <<numOpen>> tiddlers open. Having too many<br>
+      open tiddlers may cause poor performance.<br>
+    </div>
 
-		<div style="margin-left: calc(44px + 1em); margin-right: 4em;">
+    <div style="margin-left: calc(44px + 1em); margin-right: 4em;">
 
-			Close tiddlers from the //Open// tab of the sidebar, or use the <<textual-button "close-others-button">> //close others// button on a tiddler or the <<textual-button "close-all-button">> //close all// button in the sidebar to close tiddlers in bulk.
+      Close tiddlers from the //Open// tab of the sidebar, or use the <<textual-button "close-others-button">> //close others// button on a tiddler or the <<textual-button "close-all-button">> //close all// button in the sidebar to close tiddlers in bulk.
 
-			<div style="text-align: center;">
-				<$button set="$:/config/sobjornstad/GrokTiddlyWiki/HideOpenTiddlersWarning" setTo="yes" class="tc-tiddlylink tc-btn-invisible">
-					don't show this message again
-				</$button>
-			</div>
-		</div>
-	</div>
+      <div style="text-align: center;">
+        <$button set="$:/config/sobjornstad/GrokTiddlyWiki/HideOpenTiddlersWarning" setTo="yes" class="tc-tiddlylink tc-btn-invisible">
+          don't show this message again
+        </$button>
+      </div>
+    </div>
+  </div>
 </$list>
 <% endif %>
 
 <style>
 .gtw-tiddler-excess-banner {
-	background-color: <<color tiddler-background>>;
-	display: inline-block;
-	margin-right: 2em;
-	padding-top: 1em;
-	padding-bottom: 1px;
+  background-color: <<color tiddler-background>>;
+  display: inline-block;
+  margin-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1px;
 }
 </style>

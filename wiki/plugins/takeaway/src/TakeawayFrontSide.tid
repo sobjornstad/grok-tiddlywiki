@@ -5,24 +5,24 @@ title: $:/plugins/sobjornstad/TakeAway/TakeawayFrontSide
 type: text/vnd.tiddlywiki
 
 <$list filter="[<currentTiddler>qtype[rememberq]]" variable=_>
-	{{||$:/plugins/sobjornstad/TakeAway/ContextualHelp/CreativeQuestion}}
+  {{||$:/plugins/sobjornstad/TakeAway/ContextualHelp/CreativeQuestion}}
 
-	<div class="rememberq remembertwo">
-		<div class="rquestion tr-ritem">
-			<div>Q:</div>
-			<$reveal type="match" state="!!question" text="multiline">
-				<$transclude mode="block"/>
-			</$reveal>
-			<$reveal type="nomatch" state="!!question" text="multiline">
-				<p>{{!!question}}</p>
-			</$reveal>
-		</div>
-	</div>
+  <div class="rememberq remembertwo">
+    <div class="rquestion tr-ritem">
+      <div>Q:</div>
+      <$reveal type="match" state="!!question" text="multiline">
+        <$transclude mode="block"/>
+      </$reveal>
+      <$reveal type="nomatch" state="!!question" text="multiline">
+        <p>{{!!question}}</p>
+      </$reveal>
+    </div>
+  </div>
 </$list>
 <$list filter="[<currentTiddler>qtype[remembercz]]" variable=_>
-	<div class="remembercz">
-		<span class="cloze-identifier">cloze: </span>
-		<span class="cloze-text">{{!!question}}</span>
-		<span class="cloze-display"><$wikify name="w" mode="inline" output="html" text={{{ [{!!question}splitregexp[{.*?}]join[<span class="gtw-cloze-occlusion">{…}</span>]] }}}><<w>></$wikify></span>
-	</div>
+  <div class="remembercz">
+    <span class="cloze-identifier">cloze: </span>
+    <span class="cloze-text">{{!!question}}</span>
+    <span class="cloze-display"><$wikify name="w" mode="inline" output="html" text={{{ [{!!question}splitregexp[{.*?}]join[<span class="gtw-cloze-occlusion">{…}</span>]] }}}><<w>></$wikify></span>
+  </div>
 </$list>

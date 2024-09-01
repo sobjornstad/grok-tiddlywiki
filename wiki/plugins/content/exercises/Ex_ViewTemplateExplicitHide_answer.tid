@@ -6,6 +6,6 @@ type: text/vnd.tiddlywiki
 
 ```html
 <$list filter="[all[current]!hide-contactinfo[yes]]">
-	…the rest of the template
+  …the rest of the template
 </$list>
 ```

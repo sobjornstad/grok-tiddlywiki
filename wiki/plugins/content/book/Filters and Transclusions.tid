@@ -54,9 +54,9 @@ At first, this seems pretty straightforward:
 
 ```html
 <ul>
-	<$list filter="some filter">
-		<li>{{!!title}}: {{!!phone}}</li>
-	</$list>
+  <$list filter="some filter">
+    <li>{{!!title}}: {{!!phone}}</li>
+  </$list>
 </ul>
 ```
 
@@ -96,9 +96,9 @@ Here's the syntax that allows us to do that.
 
 ```html
 <ul>
-	<$list filter="[enlist{!!family}]">
-		<li>{{!!title}}: {{!!phone}}</li>
-	</$list>
+  <$list filter="[enlist{!!family}]">
+    <li>{{!!title}}: {{!!phone}}</li>
+  </$list>
 </ul>
 ```
 
@@ -108,11 +108,11 @@ If the value we wanted to use was in a variable rather than a tiddler field, we 
 
 ```html
 <ul>
-	<$set name="familyfield" value={{!!family}}>
-		<$list filter="[enlist<familyfield>]">
-			<li>{{!!title}}: {{!!phone}}</li>
-		</$list>
-	</$set>
+  <$set name="familyfield" value={{!!family}}>
+    <$list filter="[enlist<familyfield>]">
+      <li>{{!!title}}: {{!!phone}}</li>
+    </$list>
+  </$set>
 </ul>
 ```
 
@@ -133,9 +133,9 @@ Actually, there's an even easier if not immediately intuitive way to make the fa
 
 ```html
 <ul>
-	<$list filter={{!!family}}>
-		<li>{{!!title}}: {{!!phone}}</li>
-	</$list>
+  <$list filter={{!!family}}>
+    <li>{{!!title}}: {{!!phone}}</li>
+  </$list>
 </ul>
 ```
 

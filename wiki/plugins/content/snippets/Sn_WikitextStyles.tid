@@ -10,8 +10,8 @@ Here is some red text.
 
 <style>
 .my-blue-bold-class {
-	font-weight: bold;
-	color: blue;
+  font-weight: bold;
+  color: blue;
 }
 </style>
 

@@ -5,15 +5,15 @@ title: $:/sib/Exercise/Stylesheet
 type: text/vnd.tiddlywiki
 
 div.twx-completion {
-	float: right;
+  float: right;
 }
 
 table.gtw-exercise-browser {
-		font-size: 12px;
-		table-layout: fixed;
-		width: 100%;
+    font-size: 12px;
+    table-layout: fixed;
+    width: 100%;
 }
 
 table.gtw-exercise-browser td {
-	vertical-align: top;
+  vertical-align: top;
 }

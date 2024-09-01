@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 <% if [all[current]tag[Exercise]] %>
 
   Go to answer: {{{ [all[current]has[draft.of]get[draft.of]addsuffix[/answer]] ~[all[current]addsuffix[/answer]] }}}
-	{{||$:/sib/Exercise/CompletionCheckbox}}
+  {{||$:/sib/Exercise/CompletionCheckbox}}
 <div>
 <<sendFeedbackLink icon:"{{$:/core/images/mail}}" tooltip:"Suggest an improvement to this section.">>
 </div>

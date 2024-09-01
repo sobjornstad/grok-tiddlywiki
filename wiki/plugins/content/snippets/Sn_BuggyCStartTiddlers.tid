@@ -7,5 +7,5 @@ type: text/vnd.tiddlywiki
 \function tiddlers-starting-with-C() [all[shadows+tiddlers]prefix[C]]
 
 <$list filter=<<tiddlers-starting-with-C>>>
-	<$link /><br>
+  <$link /><br>
 </$list>

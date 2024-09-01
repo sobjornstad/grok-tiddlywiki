@@ -6,6 +6,6 @@ type: text/vnd.tiddlywiki
 
 <% if [{$:/temp/FeedbackCollector}get[debug]match[yes]] %>
 <$list filter="[all[current]fields[]sort[title]]" variable="fieldName">
-	<<fieldName>>: {{{ [all[current]get<fieldName>] }}}<br>
+  <<fieldName>>: {{{ [all[current]get<fieldName>] }}}<br>
 </$list>
 <% endif %>

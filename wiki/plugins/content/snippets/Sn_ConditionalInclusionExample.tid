@@ -5,9 +5,9 @@ title: Sn:ConditionalInclusionExample
 type: text/vnd.tiddlywiki
 
 <% if [<storyTiddler>match[Conditional Inclusion]] %>
-	The title of the current tiddler is “Conditional Inclusion.”
+  The title of the current tiddler is “Conditional Inclusion.”
 <% endif %>
 
 <% if [<storyTiddler>match[When Pigs Fly]] %>
-	Pigs are flying – better watch out!
+  Pigs are flying – better watch out!
 <% endif %>

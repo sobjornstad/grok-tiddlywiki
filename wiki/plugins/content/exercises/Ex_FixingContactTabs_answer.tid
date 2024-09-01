@@ -9,8 +9,8 @@ Create a template tiddler called `ContactTabTemplate` with the following content
 ```html
 <$set name=currentTiddler value=<<currentTab>>>
 
-	{{!!text}}
-	
+  {{!!text}}
+
 </$set>
 ```
 
@@ -32,7 +32,7 @@ Another way would be to transclude the tiddler named in the `currentTab` variabl
 
 ```html
 \define makeCurrentTiddler()
-	{{$(currentTab)$}}
+  {{$(currentTab)$}}
 \end
 
 <<makeCurrentTiddler>>

@@ -71,8 +71,8 @@ What if //none// of the contact fields are populated? In this case, we might wan
 ```html
 <% if [all[current]!has[email]!has[phone]!has[family]!has[manager]] %>
 
-	There is no contact information available for {{!!title}}.
-	
+  There is no contact information available for {{!!title}}.
+
 <% else %>
 
   !! Information about {{!!title}}
@@ -91,7 +91,7 @@ What if //none// of the contact fields are populated? In this case, we might wan
       <li>''Manager'': {{!!manager}}</li>
     <% endif %>
   </ul>
-	
+
 <% endif %>
 ```
 

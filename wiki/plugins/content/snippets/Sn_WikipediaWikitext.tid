@@ -6,8 +6,8 @@ type: text/vnd.tiddlywiki
 
 <$let wp="[[link|https://en.wikipedia.org]]">
 
-	Wikipedia: <<wp>>
+  Wikipedia: <<wp>>
 
-	The free encyclopedia: <<wp>>
+  The free encyclopedia: <<wp>>
 
 </$let>

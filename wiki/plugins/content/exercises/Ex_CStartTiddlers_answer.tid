@@ -23,7 +23,7 @@ In contrast, when `tiddlers-starting-with-C` is defined as a procedure, TiddlyWi
 
 ```html
 <$list filter="[all[shadows+tiddlers]prefix[C]]">
-	<$link /><br>
+  <$link /><br>
 </$list>
 ```
 

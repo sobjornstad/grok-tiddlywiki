@@ -10,125 +10,125 @@ type: text/vnd.tiddlywiki
 <% if [all[current]tag[Chapter]] [all[current]tag[Section]] %>
 
 <$let
-	prevSection={{{ [list{!!parent}before{!!title}] }}}
-	nextSection={{{ [list{!!parent}after{!!title}] }}}
-	upChapter={{!!parent}}
+  prevSection={{{ [list{!!parent}before{!!title}] }}}
+  nextSection={{{ [list{!!parent}after{!!title}] }}}
+  upChapter={{!!parent}}
 >
 
 <div class="gtw-section-manager">
-	<div style="text-align: left; float: left;">
-	
-		<!-- if this is a section and it's the first section in the chapter -->
-		<% if [<prevSection>is[blank]] %>
-			<$set
-				name="endMessage"
-				filter="[all[current]tag[Chapter]]"
-				value="//at beginning of book//"
-				emptyValue="//at first section//"
-			>
-				<% if [list[Outline]before<upChapter>] %>
-					&#10232;&nbsp;
-					<$link to=<<upChapter>>>
-						Up to chapter:&nbsp;
-						<$text text=<<upChapter>>/>
-					</$link>
-				<% else %>
-					<<endMessage>>
-				<% endif %>
-			</$set>
-		<% endif %>
-		
-		<!-- if this is a section and there's a previous section in the chapter -->
-		<% if [<prevSection>!is[blank]tag[Section]] %>
-			←&nbsp;
-			<$link to=<<prevSection>>>
-				Previous:&nbsp;
-				<$text text=<<prevSection>>/>
-			</$link>
-		<% endif %>
-		
-		<!-- if this is a chapter and there's a previous chapter -->
-		<% if [<prevSection>!is[blank]tag[Chapter]] %>
-			<$list filter="[list<prevSection>last[]]" variable="lastSectionInPreviousChapter">
-				&larr;&nbsp;
-				<$link to=<<lastSectionInPreviousChapter>>>
-					Last section in previous chapter:&nbsp;
-					<$text text=<<lastSectionInPreviousChapter>>/>
-				</$link>
-				<br>
-			</$list>
-			&#10232;&nbsp;
-			<$link to=<<prevSection>>>
-				Previous chapter:&nbsp;
-				<$text text=<<prevSection>>/>
-			</$link>
-		<% endif %>
-		
-	</div> <!-- left column -->
-	
-	<div style="text-align: right; float: right;">
-	
-		<!-- if this is a section and there's a later section in the chapter -->
-		<% if [<nextSection>!is[blank]tag[Section]] %>
-			<$link to=<<nextSection>>>Next:&nbsp;<<nextSection>></$link>&nbsp;→
-		<% endif %>
-		
-		<!-- if this is a section and it's the last section in the chapter -->
-		<% if [<nextSection>is[blank]] %>
-			<$list filter="[list[Outline]after<upChapter>]">
-				<$link to=<<currentTiddler>>>
-					Next chapter:&nbsp;
-					<<currentTiddler>>
-				</$link>
-				&nbsp;&#10233;
-			</$list>
-			<% if [list[Outline]after<upChapter>then[]else[x]!is[blank]] %>
-				<% if [all[current]tag[Chapter]] %>
-					<!-- The final chapter lets you dive into its first section,
-							 but does not let you go to the next chapter (because there isn't one). -->
-					<$list filter="[list<currentTiddler>first[]]" variable="firstSectionInThisChapter" >
-						<$link to=<<firstSectionInThisChapter>>>
-							First section in this chapter:&nbsp;
-							<$text text=<<firstSectionInThisChapter>>/>
-						</$link>
-						&nbsp;&rarr;
-						<br>
-					</$list>
-					//at last chapter//
-				<% else %>
-					<!-- The final non-chapter (aka section) shows "at end of book". -->
-				  //at end of book//
-				<% endif %>
-			<% endif %>
-		<% endif %>
-		
-		<!-- if this is a chapter and there's a later chapter -->
-		<% if [<nextSection>!is[blank]tag[Chapter]] %>
-			<$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
-				<$link to=<<firstSectionInThisChapter>>>First section in this chapter:&nbsp;<$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
-				<br>
-			</$list>
-			<$link to=<<nextSection>>>Next chapter:&nbsp;<<nextSection>></$link>&nbsp;&#10233;
-		<% endif %>
-		
-	</div> <!-- right column -->
+  <div style="text-align: left; float: left;">
+
+    <!-- if this is a section and it's the first section in the chapter -->
+    <% if [<prevSection>is[blank]] %>
+      <$set
+        name="endMessage"
+        filter="[all[current]tag[Chapter]]"
+        value="//at beginning of book//"
+        emptyValue="//at first section//"
+      >
+        <% if [list[Outline]before<upChapter>] %>
+          &#10232;&nbsp;
+          <$link to=<<upChapter>>>
+            Up to chapter:&nbsp;
+            <$text text=<<upChapter>>/>
+          </$link>
+        <% else %>
+          <<endMessage>>
+        <% endif %>
+      </$set>
+    <% endif %>
+
+    <!-- if this is a section and there's a previous section in the chapter -->
+    <% if [<prevSection>!is[blank]tag[Section]] %>
+      ←&nbsp;
+      <$link to=<<prevSection>>>
+        Previous:&nbsp;
+        <$text text=<<prevSection>>/>
+      </$link>
+    <% endif %>
+
+    <!-- if this is a chapter and there's a previous chapter -->
+    <% if [<prevSection>!is[blank]tag[Chapter]] %>
+      <$list filter="[list<prevSection>last[]]" variable="lastSectionInPreviousChapter">
+        &larr;&nbsp;
+        <$link to=<<lastSectionInPreviousChapter>>>
+          Last section in previous chapter:&nbsp;
+          <$text text=<<lastSectionInPreviousChapter>>/>
+        </$link>
+        <br>
+      </$list>
+      &#10232;&nbsp;
+      <$link to=<<prevSection>>>
+        Previous chapter:&nbsp;
+        <$text text=<<prevSection>>/>
+      </$link>
+    <% endif %>
+
+  </div> <!-- left column -->
+
+  <div style="text-align: right; float: right;">
+
+    <!-- if this is a section and there's a later section in the chapter -->
+    <% if [<nextSection>!is[blank]tag[Section]] %>
+      <$link to=<<nextSection>>>Next:&nbsp;<<nextSection>></$link>&nbsp;→
+    <% endif %>
+
+    <!-- if this is a section and it's the last section in the chapter -->
+    <% if [<nextSection>is[blank]] %>
+      <$list filter="[list[Outline]after<upChapter>]">
+        <$link to=<<currentTiddler>>>
+          Next chapter:&nbsp;
+          <<currentTiddler>>
+        </$link>
+        &nbsp;&#10233;
+      </$list>
+      <% if [list[Outline]after<upChapter>then[]else[x]!is[blank]] %>
+        <% if [all[current]tag[Chapter]] %>
+          <!-- The final chapter lets you dive into its first section,
+               but does not let you go to the next chapter (because there isn't one). -->
+          <$list filter="[list<currentTiddler>first[]]" variable="firstSectionInThisChapter" >
+            <$link to=<<firstSectionInThisChapter>>>
+              First section in this chapter:&nbsp;
+              <$text text=<<firstSectionInThisChapter>>/>
+            </$link>
+            &nbsp;&rarr;
+            <br>
+          </$list>
+          //at last chapter//
+        <% else %>
+          <!-- The final non-chapter (aka section) shows "at end of book". -->
+          //at end of book//
+        <% endif %>
+      <% endif %>
+    <% endif %>
+
+    <!-- if this is a chapter and there's a later chapter -->
+    <% if [<nextSection>!is[blank]tag[Chapter]] %>
+      <$list variable="firstSectionInThisChapter" filter="[list<currentTiddler>first[]]">
+        <$link to=<<firstSectionInThisChapter>>>First section in this chapter:&nbsp;<$text text=<<firstSectionInThisChapter>>>/</$text></$link>&nbsp;&rarr;
+        <br>
+      </$list>
+      <$link to=<<nextSection>>>Next chapter:&nbsp;<<nextSection>></$link>&nbsp;&#10233;
+    <% endif %>
+
+  </div> <!-- right column -->
 </div>
 
 <div style="text-align: center; clear: both; padding-top: 1em;">
-	<% if [all[current]tag[Section]] %>
-		&uarr;&nbsp;
-		<$link to=<<upChapter>>>
-			<$text text={{{ [<upChapter>get[caption]] }}}/>
-		</$link>
-	<% elseif [all[current]tag[Chapter]] %>
-		&uarr;&nbsp;
-		[[Outline]]
-	<% endif %>
+  <% if [all[current]tag[Section]] %>
+    &uarr;&nbsp;
+    <$link to=<<upChapter>>>
+      <$text text={{{ [<upChapter>get[caption]] }}}/>
+    </$link>
+  <% elseif [all[current]tag[Chapter]] %>
+    &uarr;&nbsp;
+    [[Outline]]
+  <% endif %>
 </div>
 <div style="text-align: center; padding-top: 0.2em;">
-	<<sendFeedbackLink
-		icon:"{{$:/core/images/mail}}"
-		tooltip:"Suggest an improvement to this section.">>
+  <<sendFeedbackLink
+    icon:"{{$:/core/images/mail}}"
+    tooltip:"Suggest an improvement to this section.">>
 </div>
 <div style="padding-top: 0.2em;">
   {{||$:/sib/Navigator/Related}}
@@ -138,10 +138,10 @@ type: text/vnd.tiddlywiki
 
 <style>
 div.gtw-section-manager div {
-	border-top: 1px solid <<color table-border>>;
-	padding-top: 10px;
-	margin-top: 6ex;
-	width: 50%;
+  border-top: 1px solid <<color table-border>>;
+  padding-top: 10px;
+  margin-top: 6ex;
+  width: 50%;
 }
 </style>
 

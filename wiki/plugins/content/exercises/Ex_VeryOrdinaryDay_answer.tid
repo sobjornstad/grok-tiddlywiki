@@ -23,7 +23,7 @@ If we didn't want to use `emptyMessage` (or didn't know about it), we could use 
   </$list>
   <$list filter="[[UsHolidays]getindex<formattedToday>then[]else[holiday]!is[blank]]">
     Sadly, it's a very ordinary day today.
-	</$list>
+  </$list>
 </$set>
 ```
 

@@ -6,9 +6,9 @@ type: text/vnd.tiddlywiki
 
 ```html
 <ul>
-	<$list filter="[tag[Meeting]!sort[at]]">
-		<li><<currentTiddler>></li>
-	</$list>
+  <$list filter="[tag[Meeting]!sort[at]]">
+    <li><<currentTiddler>></li>
+  </$list>
 </ul>
 ```
 

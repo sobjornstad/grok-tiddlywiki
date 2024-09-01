@@ -7,9 +7,9 @@ type: text/vnd.tiddlywiki
 ```html
 <$set name=previousCurrentTiddler value=<<currentTiddler>> >
 <ul>
-	<$list filter="[tag[Meeting]!sort[at]]">
-		<li>An item on <<previousCurrentTiddler>>: <$link to=<<currentTiddler>>/></li>
-	</$list>
+  <$list filter="[tag[Meeting]!sort[at]]">
+    <li>An item on <<previousCurrentTiddler>>: <$link to=<<currentTiddler>>/></li>
+  </$list>
 </ul>
 </$set>
 ```
@@ -18,8 +18,8 @@ It turns out this is a sufficiently common pattern that there's an attribute you
 
 ```html
 <ul>
-	<$list filter="[tag[Meeting]!sort[at]]" variable="meeting">
-		<li>An item on <<currentTiddler>>: <$link to=<<meeting>>/></li>
-	</$list>
+  <$list filter="[tag[Meeting]!sort[at]]" variable="meeting">
+    <li>An item on <<currentTiddler>>: <$link to=<<meeting>>/></li>
+  </$list>
 </ul>
 ```

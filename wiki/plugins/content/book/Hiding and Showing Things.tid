@@ -35,9 +35,9 @@ Here's an improved version:
 ```html
 <ul>
 <$list filter="[{$:/config/ShowProjectTocs}match[yes]]" variable=_>
-	<$list filter="[all[current]tag[Project]]">
-		{{||ProjectTableOfContents}}
-	</$list>
+  <$list filter="[all[current]tag[Project]]">
+    {{||ProjectTableOfContents}}
+  </$list>
 </$list>
 </ul>
 ```

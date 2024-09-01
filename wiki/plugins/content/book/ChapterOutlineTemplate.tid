@@ -6,6 +6,6 @@ type: text/vnd.tiddlywiki
 
 <ul>
 <$list filter={{!!list}}>
-	<li><$link to={{!!title}}/> -- {{!!description}}</li>
+  <li><$link to={{!!title}}/> -- {{!!description}}</li>
 </$list>
 </ul>

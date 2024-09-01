@@ -5,5 +5,5 @@ title: Sn:WikipediaCombinedVarSubst
 type: text/vnd.tiddlywiki
 
 <$let wpBase="https://en.wikipedia.org/wiki">
-	<a href="<<wpBase>>/Aardvark">Aardvarks</a>
+  <a href="<<wpBase>>/Aardvark">Aardvarks</a>
 </$let>

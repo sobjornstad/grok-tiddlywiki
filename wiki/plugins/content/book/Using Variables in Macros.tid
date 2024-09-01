@@ -22,7 +22,7 @@ Let's look at our good old `getPhone` example again and make it work without par
 \end
 
 <$set name=person value={{!!manager}}>
-	<<getPhone>>
+  <<getPhone>>
 </$set>
 ```
 
@@ -52,7 +52,7 @@ With the ability to do variable text substitutions, now we can do it like this:
 \end
 
 <$set name=people value={{!!family}}>
-	<$list filter=<<myfilt>> />
+  <$list filter=<<myfilt>> />
 </$set>
 ```
 

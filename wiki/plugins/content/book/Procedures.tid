@@ -33,9 +33,9 @@ Of course, before that wikitext will work, we have to tell TiddlyWiki what a `wi
 
 ```html
 \procedure wikipediaLink(articleName)
-	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
-		<<articleName>>
-	</a>
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+    <<articleName>>
+  </a>
 \end
 ```
 
@@ -63,9 +63,9 @@ The part in parentheses, called the ''parameter list'', describes the parameters
 Everything between the line beginning with `\procedure` and the line beginning with `\end` is called the ''body'' of the procedure:
 
 ```html
-	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
-		<<articleName>>
-	</a>
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+    <<articleName>>
+  </a>
 ```
 
 The body of a procedure is like the value of a variable, with an additional feature: each parameter to the procedure becomes a variable within the body. This variable's name is the same as the parameter name, and its value is whatever was passed to the parameter. In this example, we're referring to the value of the parameter `articleName` twice, once inside the substituted attribute value for the `href` attribute of the `a` tag, and once directly in the wikitext.
@@ -88,9 +88,9 @@ First, TiddlyWiki stops rendering the tiddler for a moment, looks at each of the
 With the variables set appropriately, TiddlyWiki will read the body of the procedure and see, in our example:
 
 ```html
-	<a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
-		<<articleName>>
-	</a>
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+    <<articleName>>
+  </a>
 ```
 
 {{Ltc:ProcedureBodyRendered||LieToChildrenTemplate}}.

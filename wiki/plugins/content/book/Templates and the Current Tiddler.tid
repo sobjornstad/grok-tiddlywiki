@@ -63,7 +63,7 @@ For this reason, anytime we transclude a field of a tiddler, the current tiddler
 
 ```html
 <$set name=currentTiddler value=JaneDoe>
-	{{JaneDoe}}
+  {{JaneDoe}}
 </$set>
 ```
 

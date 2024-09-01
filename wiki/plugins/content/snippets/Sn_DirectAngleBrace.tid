@@ -7,5 +7,5 @@ type: text/vnd.tiddlywiki
 {{{ [[abc]addsuffix[def]] }}}
 
 <$set name="myVariable" value="abc">
-	{{{ [<myVariable>addsuffix[def]] }}}
+  {{{ [<myVariable>addsuffix[def]] }}}
 </$set>

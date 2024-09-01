@@ -16,8 +16,8 @@ Using your browser's element inspector, determine:
 
 <style>
 .bluuuuu {
-	margin: auto;
-	width: 10px;
-	height: 10px;
-	border: 1px solid rgba(0, 0, 0, 0.2) }
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2) }
 </style>

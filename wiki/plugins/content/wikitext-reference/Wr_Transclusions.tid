@@ -10,62 +10,62 @@ type: text/vnd.tiddlywiki
 See [[Summary of Macro and Transclusion Syntax]] for a more detailed treatment.
 
 <table class="gtw-transclusions-table" >
-	<tr>
-		<td>[[Transclude the text field of a tiddler|Transclusions]]</td>
-		<td>{{Sn:WikitextTransclusionBasic||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>[[Transclude a specific field of a tiddler|Transclusions]], here `caption`</td>
-		<td>{{Sn:WikitextTransclusionField||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Transclude an index from a [[data tiddler|Data Tiddlers]]</td>
-		<td>(The [[Metadata]] tiddler contains details about //Grok TiddlyWiki// like its version number and project URL.)
+  <tr>
+    <td>[[Transclude the text field of a tiddler|Transclusions]]</td>
+    <td>{{Sn:WikitextTransclusionBasic||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>[[Transclude a specific field of a tiddler|Transclusions]], here `caption`</td>
+    <td>{{Sn:WikitextTransclusionField||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Transclude an index from a [[data tiddler|Data Tiddlers]]</td>
+    <td>(The [[Metadata]] tiddler contains details about //Grok TiddlyWiki// like its version number and project URL.)
 
-		{{Sn:WikitextTransclusionData||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>[[Transclude a tiddler through a template|Templates and the Current Tiddler]]</td>
-		<td>{{Sn:WikitextTransclusionTemplate||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Transclude the [[current tiddler|Templates and the Current Tiddler]] through a template</td>
-		<td>{{Sn:WikitextCurrentTransclusionTemplate||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>[[Transclude the result|Filters and Transclusions]] of a [[filter|Filters]]</td>
-		<td>{{Sn:WikitextTransclusionFilter||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Transclude the result of a filter through a [[template|Templates and the Current Tiddler]]</td>
-		<td>{{Sn:WikitextTransclusionFilterTemplate||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Transclude the value of a [[variable|Variables]]</td>
-		<td>{{Sn:WikitextTransclusionVariable||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Call a [[macro|Macros]] (transcluding its result), [[treating its parameter as a variable|Text Substitution]]</td>
-		<td>{{Sn:WikitextTransclusionMacro||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Call a [[macro|Macros]] (transcluding its result), [[using its parameter in text substitution|Text Substitution]]</td>
-		<td>{{Sn:WikitextTransclusionMacroSubst||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Transclude the value of a variable in a macro via [[text substitution|Text Substitution]]</td>
-		<td>{{Sn:MacroVariableTextSubstitution||MagicSnippet}}</td>
-	</tr>
+    {{Sn:WikitextTransclusionData||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>[[Transclude a tiddler through a template|Templates and the Current Tiddler]]</td>
+    <td>{{Sn:WikitextTransclusionTemplate||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Transclude the [[current tiddler|Templates and the Current Tiddler]] through a template</td>
+    <td>{{Sn:WikitextCurrentTransclusionTemplate||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>[[Transclude the result|Filters and Transclusions]] of a [[filter|Filters]]</td>
+    <td>{{Sn:WikitextTransclusionFilter||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Transclude the result of a filter through a [[template|Templates and the Current Tiddler]]</td>
+    <td>{{Sn:WikitextTransclusionFilterTemplate||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Transclude the value of a [[variable|Variables]]</td>
+    <td>{{Sn:WikitextTransclusionVariable||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Call a [[macro|Macros]] (transcluding its result), [[treating its parameter as a variable|Text Substitution]]</td>
+    <td>{{Sn:WikitextTransclusionMacro||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Call a [[macro|Macros]] (transcluding its result), [[using its parameter in text substitution|Text Substitution]]</td>
+    <td>{{Sn:WikitextTransclusionMacroSubst||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Transclude the value of a variable in a macro via [[text substitution|Text Substitution]]</td>
+    <td>{{Sn:MacroVariableTextSubstitution||MagicSnippet}}</td>
+  </tr>
 </table>
 
 <style>
 table.gtw-transclusions-table {
-	width: 100%;
+  width: 100%;
 }
 table.gtw-transclusions-table tr td {
-	padding: 5px;
+  padding: 5px;
 }
 table.gtw-transclusions-table tr td:first {
-	width: 20%;
+  width: 20%;
 }
 </style>

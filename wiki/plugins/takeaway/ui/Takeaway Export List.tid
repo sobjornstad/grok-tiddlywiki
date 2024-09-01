@@ -14,6 +14,6 @@ This tiddler is not intended to be read by humans unless something is wrong -- i
 
 <$set name=needsContext value="yes">
 <$list filter="[tag[Takeaway]seen[yes]]">
-	{{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
+  {{||$:/plugins/sobjornstad/TakeAway/TakeawayListItem}}
 </$list>
 </$set>

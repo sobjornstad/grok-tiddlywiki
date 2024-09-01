@@ -16,6 +16,16 @@ reversion:
 shadowify:
 	cd wiki && scripts/shadowify.sh 2>/dev/null
 
+spaceify:
+	cd wiki && \
+		find plugins tiddlers -type f -name '*.tid' -print0 | \
+		while IFS= read -r -d '' i; do \
+			sed -e ':a' \
+				-e 's/^\(\t*\)\t/\1  /;ta' \
+				-e 's/^[[:space:]]*$$//' \
+				-i '' "$$i"; \
+		done
+
 wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/* wiki/tiddlywiki.info
 	cd wiki && scripts/export.sh
 

@@ -7,17 +7,17 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 \define setSeennessAction(newValue)
-	<$set name=nextInterval value={{$:/config/sobjornstad/TakeAway/Scheduler/InitialForgotInterval}}>
-	<$wikify name=whendue text="<<getNextDueDate>>">
-		<$action-setfield
-			$tiddler=<<currentTiddler>>
-			seen=<<__newValue__>>
-			ivl=<<nextInterval>>
-			ease={{$:/config/sobjornstad/TakeAway/Scheduler/InitialEase}}
-			due={{{ [<whendue>trim[]] }}}/>
-		<<backToQuestionAction>>
-	</$wikify>
-	</$set>
+  <$set name=nextInterval value={{$:/config/sobjornstad/TakeAway/Scheduler/InitialForgotInterval}}>
+  <$wikify name=whendue text="<<getNextDueDate>>">
+    <$action-setfield
+      $tiddler=<<currentTiddler>>
+      seen=<<__newValue__>>
+      ivl=<<nextInterval>>
+      ease={{$:/config/sobjornstad/TakeAway/Scheduler/InitialEase}}
+      due={{{ [<whendue>trim[]] }}}/>
+    <<backToQuestionAction>>
+  </$wikify>
+  </$set>
 \end
 
 \define setSeennessLink(buttonName, newValue, tooltip:"")
@@ -25,11 +25,11 @@ type: text/vnd.tiddlywiki
 \end
 
 \define editLink()
-	<$link to={{!!title}} tooltip="Go to this takeaway's tiddler to edit it.">edit</$link>
+  <$link to={{!!title}} tooltip="Go to this takeaway's tiddler to edit it.">edit</$link>
 \end
 
 \define markUnseenLink()
-	<<setSeennessLink "uncollect" "" tooltip:"Clear your progress on this takeaway, hide the answer in the text, and don't show it again in your regular reviews.">>
+  <<setSeennessLink "uncollect" "" tooltip:"Clear your progress on this takeaway, hide the answer in the text, and don't show it again in your regular reviews.">>
 \end
 
 \define markSeenLink()
@@ -46,30 +46,30 @@ type: text/vnd.tiddlywiki
 
 \define iforgotButton()
 <$button class="tc-btn-invisible tc-tiddlylink" tooltip="I have forgotten this takeaway and would like to see it again tomorrow.">
-	<<againAction>>
-	forgot</$button>
+  <<againAction>>
+  forgot</$button>
 \end
 
 \define nextDueLink()
 <$wikify name=tomorrow text="<<daysFromToday 1>>">
 <$wikify name=today text="<<daysFromToday 0>>">
-	<$list filter=<<laterThanTomorrowFilt>>>next review on <$view field="due" format="date" template="YYYY-0MM-0DD"/>
-		(<<iforgotButton>>)</$list><$list filter=<<collectedFilt>>><$reveal state="!!due" type="match" text={{{ [<tomorrow>trim[]]}}}>next review tomorrow</$reveal></$list><$list filter=<<currentDueFilt>>><$button class="tc-btn-invisible tc-tiddlylink" tooltip="It's time to review this takeaway. Click here to start reviewing."><<startReviewSessionAction>>
-		due for review</$button></$list><$list filter=<<notCollectedFilt>>>not collected (<<markSeenLink>>)</$list></$wikify></$wikify>
+  <$list filter=<<laterThanTomorrowFilt>>>next review on <$view field="due" format="date" template="YYYY-0MM-0DD"/>
+    (<<iforgotButton>>)</$list><$list filter=<<collectedFilt>>><$reveal state="!!due" type="match" text={{{ [<tomorrow>trim[]]}}}>next review tomorrow</$reveal></$list><$list filter=<<currentDueFilt>>><$button class="tc-btn-invisible tc-tiddlylink" tooltip="It's time to review this takeaway. Click here to start reviewing."><<startReviewSessionAction>>
+    due for review</$button></$list><$list filter=<<notCollectedFilt>>>not collected (<<markSeenLink>>)</$list></$wikify></$wikify>
 \end
 
 \define helpLink()
-	<$link to="TakeAway Help">help</$link>
+  <$link to="TakeAway Help">help</$link>
 \end
 
 \define sendFeedbackAction()
-	<$action-createtiddler $basetitle="$:/temp/Feedback" $savetitle="$:/temp/FeedbackCollector" target=<<currentTiddler>> email={{$:/config/sobjornstad/GrokTiddlyWiki/Feedback/UserEmail}} comment="" debug="yes" />
-	<$action-navigate $to="Send Feedback"/>
+  <$action-createtiddler $basetitle="$:/temp/Feedback" $savetitle="$:/temp/FeedbackCollector" target=<<currentTiddler>> email={{$:/config/sobjornstad/GrokTiddlyWiki/Feedback/UserEmail}} comment="" debug="yes" />
+  <$action-navigate $to="Send Feedback"/>
 \end
 
 \define sendFeedbackLink(tooltip:"Suggest an improvement to this question.", icon:"" text:"send feedback")
 <$button class="tc-btn-invisible tc-tiddlylink" tooltip=<<__tooltip__>>>
-	<<sendFeedbackAction>>
-	$icon$ $text$
+  <<sendFeedbackAction>>
+  $icon$ $text$
 </$button>
 \end

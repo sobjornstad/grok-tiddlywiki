@@ -19,7 +19,7 @@ The trick here (useful in a wide variety of situations) is to use a `$list` widg
 <ul>
   <$list filter="email phone family manager" variable="field">
     <$transclude $variable="contact-info-item" field=<<field>> />
-	</$list>
+  </$list>
 </ul>
 ```
 

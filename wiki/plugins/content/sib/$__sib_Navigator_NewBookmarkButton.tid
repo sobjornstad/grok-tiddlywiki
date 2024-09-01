@@ -10,48 +10,48 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 \procedure common-button(actionWidget, iconClass, buttonAndTooltipText)
-	<$button
-		actions=<<actionWidget>>
-		class=<<tv-config-toolbar-class>>
-		selectedClass="tc-selected"
-		tooltip=<<buttonAndTooltipText>>
-	>
-		<% if [<tv-config-toolbar-icons>match[yes]] %>
-			<span class=<<iconClass>>>{{$:/core/images/star-filled}}</span>
-		<% endif %>
-		<% if [<tv-config-toolbar-text>match[yes]] %>
-			<span class="tc-btn-text"><$text text=<<buttonAndTooltipText>>/></span>
-		<% endif %>
-	</$button>
+  <$button
+    actions=<<actionWidget>>
+    class=<<tv-config-toolbar-class>>
+    selectedClass="tc-selected"
+    tooltip=<<buttonAndTooltipText>>
+  >
+    <% if [<tv-config-toolbar-icons>match[yes]] %>
+      <span class=<<iconClass>>>{{$:/core/images/star-filled}}</span>
+    <% endif %>
+    <% if [<tv-config-toolbar-text>match[yes]] %>
+      <span class="tc-btn-text"><$text text=<<buttonAndTooltipText>>/></span>
+    <% endif %>
+  </$button>
 \end common-button
 
 \procedure selected-state()
-	<$macrocall
-		$name="common-button"
-		actionWidget=<<unbookmark-tiddler>>
-		iconClass="gtw-yellow-me"
-		buttonAndTooltipText="Remove bookmark"
-	/>
+  <$macrocall
+    $name="common-button"
+    actionWidget=<<unbookmark-tiddler>>
+    iconClass="gtw-yellow-me"
+    buttonAndTooltipText="Remove bookmark"
+  />
 \end selected-state
 
 \procedure unselected-state()
-	<$macrocall
-		$name="common-button"
-		actionWidget=<<bookmark-tiddler>>
-		iconClass=""
-		buttonAndTooltipText="Bookmark tiddler"
-	/>
+  <$macrocall
+    $name="common-button"
+    actionWidget=<<bookmark-tiddler>>
+    iconClass=""
+    buttonAndTooltipText="Bookmark tiddler"
+  />
 \end unselected-state
 
 <% if [[$:/config/sobjornstad/GrokTiddlyWiki/Bookmarks]contains:text<currentTiddler>!is[blank]] %>
-	<<selected-state>>
+  <<selected-state>>
 <% else %>
-	<<unselected-state>>
+  <<unselected-state>>
 <% endif %>
 
 <style>
 .gtw-yellow-me svg {
   fill: yellow !important;
-	stroke: black !important;
+  stroke: black !important;
 }
 </style>

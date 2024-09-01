@@ -10,7 +10,7 @@ Add to some tiddler tagged $:/tags/ViewTemplate, such as `$:/yourname/TiddlerTyp
 <$list filter="[all[current]tag[Meeting]]">
 
   {{||MeetingInformationTemplate}}
-	
+
 </$list>
 ```
 

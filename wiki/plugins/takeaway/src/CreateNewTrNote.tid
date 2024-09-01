@@ -5,6 +5,6 @@ title: $:/plugins/sobjornstad/TakeAway/CreateNewTrNote
 type: text/vnd.tiddlywiki
 
 <<tabs
-	"$:/plugins/sobjornstad/TakeAway/CreateNewQa $:/plugins/sobjornstad/TakeAway/CreateNewCloze" 
-	default:"$:/plugins/sobjornstad/TakeAway/CreateNewQa"
+  "$:/plugins/sobjornstad/TakeAway/CreateNewQa $:/plugins/sobjornstad/TakeAway/CreateNewCloze" 
+  default:"$:/plugins/sobjornstad/TakeAway/CreateNewQa"
 >>

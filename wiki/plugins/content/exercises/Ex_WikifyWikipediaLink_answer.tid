@@ -10,6 +10,6 @@ https://en.wikipedia.org/wiki/$articleName$
 \end
 
 <$wikify name="article" text={{!!wikipedia-article}}>
-	<$macrocall $name="wikipediaLink" articleName=<<article>>/>
+  <$macrocall $name="wikipediaLink" articleName=<<article>>/>
 </$wikify>
 ```

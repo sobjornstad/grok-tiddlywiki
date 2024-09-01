@@ -7,11 +7,11 @@ type: text/vnd.tiddlywiki
 ```html
 \define newMeetingAction()
 <$action-sendmessage
-	$message="tm-new-tiddler"
-	title="New Meeting"
-	tags="Meeting"
-	at=<<now [UTC]YYYY0MM0DD0hh0mm00000>>
-	participants=""/>
+  $message="tm-new-tiddler"
+  title="New Meeting"
+  tags="Meeting"
+  at=<<now [UTC]YYYY0MM0DD0hh0mm00000>>
+  participants=""/>
 \end
 
 <$button actions=<<newMeetingAction>>>

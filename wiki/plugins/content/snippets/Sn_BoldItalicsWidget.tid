@@ -5,7 +5,7 @@ title: Sn:BoldItalicsWidget
 type: text/vnd.tiddlywiki
 
 \widget $format.bold-italics(text)
-	''//<<text>>//''
+  ''//<<text>>//''
 \end
 
 <$format.bold-italics text="Test text"/>

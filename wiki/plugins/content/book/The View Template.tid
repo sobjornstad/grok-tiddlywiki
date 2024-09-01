@@ -16,7 +16,7 @@ If you open up and edit $:/core/ui/ViewTemplate, you'll see something of a horne
 
 ```html
 <$list filter="[all[shadows+tiddlers]tag[$:/tags/ViewTemplate]!has[draft.of]]" variable="listItem">
-	<$transclude tiddler=<<listItem>>/>
+  <$transclude tiddler=<<listItem>>/>
 </$list>
 ```
 

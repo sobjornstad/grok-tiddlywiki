@@ -8,5 +8,5 @@ type: text/vnd.tiddlywiki
 <$checkbox field="showtest" checked="yes" unchecked="no"> Show the text</$checkbox>
 
 <$reveal state="!!showtest" type="match" text="yes">
-	Here is the text!
+  Here is the text!
 </$reveal>

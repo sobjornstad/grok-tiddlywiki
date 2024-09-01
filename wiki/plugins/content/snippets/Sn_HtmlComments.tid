@@ -18,9 +18,9 @@ if you like.
 HTML and wikitext can be included in comments. It's ''easy as''
 
 <ul style="color: red;">
-	<li>one</li>
-	<li>two</li>
-	<li>three.</li>
+  <li>one</li>
+  <li>two</li>
+  <li>three.</li>
 </ul>
 -->
 
