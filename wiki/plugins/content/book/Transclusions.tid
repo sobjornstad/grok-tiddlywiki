@@ -1,12 +1,12 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240901033254444
+modified: 20240907020755783
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Transclusions
 type: text/vnd.tiddlywiki
 
-''Field transclusions'' are much like [[variable references|Variables]], except instead of being set to a specific value by a `$set` widget or a macro definition, their value comes from a tiddler.
+''Field transclusions'' are much like [[variable references|Variables]], except instead of being set to a specific value by a `$let` widget or a procedure definition, their value comes from a tiddler.
 
 Specifically, a field transclusion, as its name suggests, references ''the contents of a particular field of a tiddler''. If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` and try that:
 
@@ -20,7 +20,7 @@ You should see:
 
 Either the left or the right side of the reference can be left off. Just `{{JaneDoe}}` refers to the `text` field of the `JaneDoe` tiddler, while just `{{!!phone}}` refers to the `phone` field of the current tiddler.
 
-Just like you can use the value of a variable or the result of a macro call as an attribute of a widget, you can use the value of a field transclusion as an attribute of a widget. For example, suppose we had a field on the current tiddler called `wikipedia-reference` that contained the name of a Wikipedia article it was based on, and we wanted to create a link to it:
+Just like you can use the value of a variable or the result of a procedure call as an attribute of a widget, you can use the value of a field transclusion as an attribute of a widget. For example, suppose we had a field on the current tiddler called `wikipedia-reference` that contained the name of a Wikipedia article it was based on, and we wanted to create a link to it:
 
 ```html
 <$macrocall $name="wikipediaLink" article={{!!wikipedia-reference}} />

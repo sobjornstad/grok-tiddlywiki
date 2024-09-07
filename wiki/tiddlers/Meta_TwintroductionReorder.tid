@@ -1,6 +1,6 @@
 created: 20200530141306650
 list: [[Front Matter]] [[Filing and Organizing]] [[Filtering and Formatting]] [[Variables, Procedures, and Transclusions]] [[Common Misunderstandings]] Resources Appendices
-modified: 20240907015546111
+modified: 20240907020527444
 refexplorer-hide: true
 tags: Index Meta
 title: Meta:TwintroductionReorder
@@ -27,7 +27,7 @@ Drag and drop to move items between chapters.
 The Locator doesn't let you reorder items //within// a section, so this tool lets you do that.
 
 Reorder sections of:
-<$select tiddler="$:/temp/ReorderSection" default="TwintroductionReorder">
+<$select tiddler="$:/temp/ReorderSection" default="Outline">
   <$list filter="[all[tiddlers+shadows]parent[Outline]!has[draft.of]sort[caption]] Outline">
     <option value=<<currentTiddler>>>{{!!caption}} ({{!!title}})</option>
   </$list>

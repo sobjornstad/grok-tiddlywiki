@@ -1,8 +1,8 @@
 created: 20240901044700214
 description: TODO
-modified: 20240907015846250
+modified: 20240907022348270
 parent: Macros, Wikification, and Widgets
-tags: Section Concept
+tags: Section
 title: Custom Widgets
 type: text/vnd.tiddlywiki
 
@@ -27,9 +27,11 @@ If you're overriding a built-in widget (see later in this section), it's wise to
 
 !! Using the widget body
 
-Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets without requiring quoting. To get the body of the widget, we use the `$slot` widget to retrieve the slot named `ts-raw`:
+Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, without requiring quoting. To get the body of the widget, we use the `$slot` widget to retrieve the slot named `ts-raw`:
 
 {{Sn:BoldItalicsWidgetBody||MagicSnippet}}
+
+(We'll talk more about [[slots|Filling Slots]] later. For now, you can treat `<$slot $name="ts-raw">` as a little bit of magic code.)
 
 As with built-in widgets, if we want the content of a widget to be in [[block mode|Block Mode and Inline Mode]], we need to put blank lines around the opening and closing tags of our custom widget:
 

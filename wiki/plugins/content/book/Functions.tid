@@ -1,14 +1,12 @@
 created: 20240831204317959
-description: TODO
-modified: 20240907015640286
+description: Functions allow you to break down filter expressions into simpler parts and reuse them in other filter expressions.
+modified: 20240907022036745
 parent: More Organizational Tools
 tags: Section Concept
 title: Functions
 type: text/vnd.tiddlywiki
 
-[[Variables]] and [[Procedures]] allow us to write some wikitext in one place, give it a name that concisely describes what it is, and use it in multiple places.
-
-For the same reason that TiddlyWiki supports variables and procedures when writing complicated wikitext, it supports ''functions'' when writing complicated filters. A function is a special kind of variable that contains a [[filter expression|Using Filter Expressions]].
+[[Variables]] and [[Procedures]] allow us to write some wikitext in one place, give it a name that concisely describes what it is, and use it in multiple places. For the same reason that TiddlyWiki supports variables and procedures when writing complicated wikitext, it supports ''functions'' when writing complicated filters. A function is a special kind of variable that contains a [[filter expression|Using Filter Expressions]].
 
 Like a procedure, a function can have parameters. Parameters passed to a function are available as variables inside the function's filter expression, just like parameters passed to a procedure are available as variables within the body of the procedure.
 

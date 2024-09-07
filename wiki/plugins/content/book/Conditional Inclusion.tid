@@ -1,6 +1,6 @@
 created: 20240829215208267
-description: TODO
-modified: 20240830032358043
+description: Conditional inclusion lets you show part of a tiddler's wikitext only under certain conditions.
+modified: 20240907020634029
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Conditional Inclusion
