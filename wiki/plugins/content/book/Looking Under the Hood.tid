@@ -1,8 +1,8 @@
-caption: 6: Looking Under the Hood
+caption: 7: Looking Under the Hood
 created: 20200717225720913
 description: In which we follow the implications of everything being a tiddler to their conclusions: TiddlyWiki can be extensively customized with little more than the tools we've already learned.
-list: [[System Tiddlers]] Plugins [[Shadow Tiddlers]] [[Global Macros]] [[The View Template]] [[Adding to the Sidebar]] Stamps [[Creating a List of Links and Backlinks]] [[Buttons and Input Widgets]] [[Creating Tiddlers With Predefined Fields]]
-modified: 20210327173513370
+list: [[System Tiddlers]] Plugins [[Shadow Tiddlers]] [[Scoping and the Global Tag]] [[The View Template]] [[Adding to the Sidebar]] Stamps [[Creating a List of Links and Backlinks]] [[Buttons and Input Widgets]] [[Creating Tiddlers With Predefined Fields]] Cascades
+modified: 20240907020416810
 parent: Outline
 tags: Chapter
 title: Looking Under the Hood

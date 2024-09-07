@@ -1,9 +1,9 @@
 created: 20200605153728555
 description: Templates and macros share a surprising number of properties; a few guidelines may help you decide when to use one over the other.
-modified: 20240727194811630
-parent: Variables, Procedures, and Transclusions
+modified: 20240907020100512
+parent: Macros, Wikification, and Widgets
 tags: Section
-title: Templates vs. Macros
+title: Templates vs. Procedures vs. Macros vs. Custom Widgets
 type: text/vnd.tiddlywiki
 
 Templates and macros can both be used to include some content in multiple places. (We haven't seen how to create [[global macros|Global Macros]] yet so we don't have to write the same macro in every tiddler we use it in, but we'll get there soon. If you're curious, you can jump ahead now -- you know everything you need to understand that section.) For instance, in the [[exercise|Ex:CreateMeetingTemplate]] where we created a template that showed a table of the fields on a meeting, we could just as well have written a macro:

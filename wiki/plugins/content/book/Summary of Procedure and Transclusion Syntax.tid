@@ -1,10 +1,13 @@
 created: 20210320182859703
 description: Review all the syntax used for reusing and relating content in TiddlyWiki.
-modified: 20240727194816928
+modified: 20240907020028490
 parent: Variables, Procedures, and Transclusions
 tags: Section
-title: Summary of Macro and Transclusion Syntax
+title: Summary of Procedure and Transclusion Syntax
 type: text/vnd.tiddlywiki
+
+''TODO: Make a second version of this in Chapter 6 that covers the additional macro syntax?''
+
 
 We learned about a lot of different ways of reusing and relating content in TiddlyWiki in this chapter, and when you've just learned all of them, it's often difficult to keep them straight. Let's review all the options and the syntax for each.
 

@@ -1,7 +1,7 @@
 created: 20200606025030461
 description: Macros can reference variables as well as parameters via text substitution.
-modified: 20240727194754874
-parent: Variables, Procedures, and Transclusions
+modified: 20240907015754521
+parent: Macros, Wikification, and Widgets
 tags: Section
 title: Using Variables in Macros
 type: text/vnd.tiddlywiki

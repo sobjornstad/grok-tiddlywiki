@@ -1,8 +1,8 @@
 caption: 5: More Organizational Tools
 created: 20200607150802909
 description: In which we cover miscellaneous TiddlyWiki features that didn't fit in any of the previous chapters, including images, tabs, and more on filters and tags.
-list: [[Classifying Tags]] [[Multi-Run Filters]] Functions [[Images and Attachments]] Tabs [[Data Tiddlers]]
-modified: 20240831204411301
+list: [[Classifying Tags]] [[Multi-Run Filters]] [[Filter Prefixes]] Functions [[Images and Attachments]] Tabs [[Data Tiddlers]]
+modified: 20240907020412391
 parent: Outline
 tags: Chapter
 title: More Organizational Tools

@@ -1,7 +1,7 @@
 created: 20210116171851507
 description: TiddlyWiki reads wikitext in two modes, one where elements stack horizontally and one where they stack vertically, and you occasionally have to consider which mode you should use.
-modified: 20240727194805852
-parent: Variables, Procedures, and Transclusions
+modified: 20240907015812519
+parent: Macros, Wikification, and Widgets
 tags: Section
 title: Block Mode and Inline Mode
 type: text/vnd.tiddlywiki

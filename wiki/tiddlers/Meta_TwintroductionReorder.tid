@@ -1,6 +1,6 @@
 created: 20200530141306650
-list: [[Front Matter]] [[The Shape of TiddlyWiki]] [[Filing and Organizing]] [[Filtering and Formatting]] [[Variables, Macros, and Transclusions]] [[More Organizational Tools]] [[Looking Under the Hood]] [[Tips and Tricks]] [[Getting Technical]] [[Supplemental Exercises]] Resources Appendices
-modified: 20240901221152493
+list: [[Front Matter]] [[Filing and Organizing]] [[Filtering and Formatting]] [[Variables, Procedures, and Transclusions]] [[Common Misunderstandings]] Resources Appendices
+modified: 20240907015546111
 refexplorer-hide: true
 tags: Index Meta
 title: Meta:TwintroductionReorder
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 <$action-listops
   $tiddler="""$(selectedParent)$"""
   $field=list
-  $filter="[parent[$(selectedParent)$]] [list[$(selectedParent)$]] -[!parent[$(selectedParent)$]]"
+  $filter="[all[tiddlers+shadows]parent[$(selectedParent)$]] [all[tiddlers+shadows]list[$(selectedParent)$]] -[all[tiddlers+shadows]!parent[$(selectedParent)$]]"
   />
 \end
 
@@ -28,7 +28,7 @@ The Locator doesn't let you reorder items //within// a section, so this tool let
 
 Reorder sections of:
 <$select tiddler="$:/temp/ReorderSection" default="TwintroductionReorder">
-  <$list filter="[all[tiddlers+shadows]parent[Outline]!has[draft.of]sort[caption]] Meta:TwintroductionReorder">
+  <$list filter="[all[tiddlers+shadows]parent[Outline]!has[draft.of]sort[caption]] Outline">
     <option value=<<currentTiddler>>>{{!!caption}} ({{!!title}})</option>
   </$list>
 </$select>

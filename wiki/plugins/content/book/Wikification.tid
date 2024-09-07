@@ -1,8 +1,8 @@
 created: 20201124152747833
 description: TiddlyWiki converts wikitext into HTML for display by //wikifying// it. This process may sometimes need to be triggered manually.
 imageurl: https://upload.wikimedia.org/wikipedia/commons/b/bb/Kittyply_edit1.jpg?download
-modified: 20240727194800332
-parent: Variables, Procedures, and Transclusions
+modified: 20240907015802869
+parent: Macros, Wikification, and Widgets
 tags: Section
 title: Wikification
 type: text/vnd.tiddlywiki

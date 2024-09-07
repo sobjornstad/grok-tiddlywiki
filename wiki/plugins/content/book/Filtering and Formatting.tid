@@ -2,7 +2,7 @@ caption: 3: Filtering and Formatting
 created: 20201125195211013
 description: In which we learn how to use filters to answer questions about our notes, like “What are the email addresses of all the people who went to X meeting?”, or “At what meetings attended by Jane did we discuss X concept?”. We'll also dig into HTML and widgets, which allow us to create tiddlers that use complex formatting and update automatically when other tiddlers are changed.
 list: Filters [[Using Filter Expressions]] [[Anatomy of Filter Steps]] [[Common Filter Operators]] HTML Widgets [[Your First Dynamic List]] Comments [[When Things Go Wrong]]
-modified: 20210409141729452
+modified: 20240907020407891
 parent: Outline
 tags: Chapter
 title: Filtering and Formatting

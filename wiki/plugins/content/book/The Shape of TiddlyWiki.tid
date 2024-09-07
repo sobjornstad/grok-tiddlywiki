@@ -2,7 +2,7 @@ caption: 1: The Shape of TiddlyWiki
 created: 20200603023507957
 description: In which we download and install TiddlyWiki, learn the basics of TiddlyWiki's data model, and begin creating some tiddlers in a sample wiki.
 list: [[Installing TiddlyWiki]] [[Downloading Grok TiddlyWiki]] [[The TiddlyWiki Interface]] [[Tweaking Your Settings]] Tiddlers Fields Wikitext Links Tags [[Requirements for the Sample Wiki]] [[Structuring Our Wiki]] [[Journal Tiddlers]] [[Contact Tiddlers]] [[Meeting Tiddlers]] [[Project Tiddlers]] [[Knowledge Tiddlers]] [[Reviewing the Basics]]
-modified: 20210504014215573
+modified: 20240907020404246
 parent: Outline
 tags: Chapter
 title: The Shape of TiddlyWiki
