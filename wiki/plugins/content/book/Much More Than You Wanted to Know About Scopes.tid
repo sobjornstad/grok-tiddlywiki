@@ -1,0 +1,105 @@
+created: 20200718014509693
+description: Macros can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
+modified: 20240907043139069
+parent: More Organizational Tools
+tags: Section
+title: Much More Than You Wanted to Know About Scopes
+type: text/vnd.tiddlywiki
+
+So far, the scope of every [[variable|Variables]], [[procedure|Procedures]], or [[function|Functions]] we've written has been, at most, a single tiddler. That is, we can only refer to it within the same tiddler where we defined it. But often, we write a procedure that does something we need ''throughout our wiki''. If we had to copy and paste that procedure throughout many tiddlers, that would defeat the point; if we didn't mind copying and pasting, we wouldn't need a procedure in the first place! 
+
+(For brevity, throughout the rest of this tiddler, we'll just talk about “procedures.” But unless otherwise noted, everything said in this section applies equally to functions, and for that matter [[macros|Macros]], which we haven't seen yet.)
+
+It follows that we need some way to make a procedure accessible in multiple tiddlers -- that is, in the ''global scope''. (A procedure that's not in the global scope, but is accessible only within a single tiddler, is said to be in the ''local scope''.)
+
+Here the [[$:/tags/Global]] tag comes to the rescue. {{Ltc:PrependsGlobals||LieToChildrenTemplate}} Therefore, they're available for use in every tiddler.
+
+
+!! Using global procedures
+
+Calling a procedure in the global scope works exactly the same way as calling any other procedure.
+
+When writing global procedures, it's normally best to put them in tiddlers that don't contain anything else, then tag these tiddlers `$:/tags/Global`. It's fine to put multiple global procedures in one tiddler, although if you want to be really tidy, putting each one in its own tiddler does have its benefits. In particular, you can do nifty things like add fields of metadata to their tiddlers and create automatic documentation; see [[an example in my Mosaic Muse wiki|https://mosmu.se/#%24%3A%2Fsib%2FDocumentation]].
+
+
+!! Namespacing
+
+You might be wondering, why bother with local scopes at all? Why not just put every procedure in the global scope and not have to think about scopes?
+
+The short answer is that the broader a scope you use, the more likely that you accidentally give two different things in different places the same name without realizing it. Name collisions create weird and difficult-to-track-down issues because TiddlyWiki no longer has any way to know which definition you want to use, so it has to pick one arbitrarily, and now a procedure call you thought would do one thing does something entirely different.
+
+This may seem like a trivial problem that would rarely come up, but it happens surprisingly often, especially once you start sharing procedures with others. In particular, names you create and names someone else creates in a [[plugin|Plugins]] (or names two people created in two plugins that you're trying to use in the same wiki) can collide, a situation which is far more annoying to resolve than a collision you created yourself -- here you didn't write the procedures that are causing the collisions, and you probably had no idea they even existed in your wiki.
+
+So the first good practice to avoid name collisions is to ''only make a procedure global if you actually need to use it in multiple tiddlers''. We say you want to avoid ''polluting the global scope'' by putting things in it that don't need to be there. (Procedures you have no use for in the global scope are like trash. Some trash is inevitable, but you want it contained in an appropriate trash can, not randomly scattered across the street.)
+
+Of course, while limiting what you put in the global scope makes accidental name collisions much less likely, it doesn't make them impossible. So a second good practice is to ''namespace'' your global procedures -- that is, put a prefix on their names that nobody else is likely to use, thus creating several distinct spaces in which otherwise identical names will actually be different. It's relatively likely that someone else would name a procedure `pretty-link`, for instance, but quite unlikely that someone else would name a procedure `bobwiki.pretty-link`. (Even if you're unlucky enough for someone else to use the namespace `bobwiki` in some content that you put in your wiki, the chance that they used both the same namespace //and// the same procedure name is tiny.) Of course, the downside of adding a namespace is that it means additional typing every time you want to use a procedure, so many people prefer short namespace names.
+
+You can use one namespace for your whole wiki, or several namespaces that separate your procedures into categories -- whatever helps you organize best. If you [[write plugins|Creating Plugins]], it's a good idea to use a namespace specific to that plugin, and be especially careful not to choose one someone else might choose by mistake.
+
+By convention, in TiddlyWiki we use a `.` to separate a namespace and the rest of the name of the procedure, as in the example above. This is baked into the way TiddlyWiki handles [[Functions]] and [[Custom Widgets]], where having a period in the name makes them more easily accessible in other syntax.
+
+
+!! Nested scopes
+
+The two good practices above leave one important problem unsolved: oftentimes a procedure A needs to refer to sub-procedures B and C, and while we need A to be global, we don't need B and C to be global. Since [[$:/tags/Global]] applies to an entire tiddler, when we make A global, if we have B and C in the same tiddler as A, they automatically become global as well. We could put B and C in a different tiddler, but then we'd have to make that other tiddler accessible within A to be able to use B and C (e.g., by tagging B and C's tiddler [[$:/tags/Global]]), which would make them global all over again!
+
+There are two useful ways to address this problem.
+
+First, you can put definitions of procedures //inside of// other procedures, or definitions of functions inside of procedures. (You can't put anything inside a function, because there is no syntax you can use to identify which part of the body of a function is a filter and which is something else.) When a procedure or function is inside another, ''only the outermost procedure actually gets a name in the surrounding scope'' -- the nested procedures or functions have their scope limited to the outer procedure and are invisible everywhere else.
+
+The syntax looks like this:
+
+```
+\procedure global-proc()
+	\procedure subproc(tiddler)
+		...render something with it
+	\end subproc
+	\function subfunction() [prefix[X]]
+
+	<<subproc1>> <<subproc2>>
+	<$list filter="[function[subfunction]]">
+		<$transclude
+		  $variable=<<subproc1>>
+			tiddler=<<currentTiddler>>
+		/>
+	</$list>
+\end global-proc
+```
+
+For the most part, you just literally put the inner pragmas inside the outer one, but do notice that you need to ''repeat the name of the procedure or function you're closing'' after `\end`, so that TiddlyWiki knows which one is ending. There's no limit to how many levels deep you can nest procedures, though in practice more than three levels will probably be difficult to understand!
+
+Second, if nesting doesn't work (perhaps because you need to use the sub-procedures in several procedures that you want to be global, rather than just one), you can ''use a namespace'' for the local procedures. You might use an empty namespace (`.`) or a `local.` namespace, for instance. As long as nobody expects a procedure in that namespace to work globally, this is very safe, because a procedure defined within the scope of a single tiddler takes precedence over a procedure in the global scope (recall the [[nested scopes exercise|Ex:NestedSets]] way back when we first learned about variables). So even if you have 17 different tiddlers that define a procedure `local.x`, within each of those tiddlers, `local.x` will still mean whatever it was defined to be within that tiddler. Of course, if you try to call `local.x` in some other tiddler that doesn't have its own definition of `local.x`, all bets are off -- just about anything might happen!
+
+Remember that you only need to worry about any of this when you're inside a tiddler with the tag [[$:/tags/Global]]. Other tiddlers don't put anything in the global scope, so if you're writing a procedure that will be limited to a single tiddler, you can use any names you want without worrying about polluting the global scope.
+
+
+!! More specific scopes
+
+With the aid of namespacing, you can get along just fine using just tiddler scopes and the global scope. For completeness, though, we should point out that it's possible to choose scopes for a procedure that are broader than a single tiddler, but narrower than the global scope, and if you want to be particularly tidy about your scopes, you may find these techniques useful.
+
+There are two additional system tags, [[$:/tags/Global/View]], and [[$:/tags/Global/View/Body]], which allow you to make some procedure //almost// but not quite global. The first makes it available when rendering all parts of [[the view template|The View Template]] (thus every tiddler), but not within other parts of the interface such as the sidebar. The second additionally restricts it to the //body// of the view template, not any of the other elements like the title or any custom templates you might add. This effectively makes it available within the wikitext of all your content tiddlers, but nowhere else. (We'll talk more about [[the view template|The View Template]] in chapter 7.)
+
+You can also use the `\import` pragma in any tiddler to explicitly include procedures from some other tiddler in that tiddler. This way, you could, for example, include a set of macros in three specific tiddlers, but no others (though note that if one of those tiddlers X transcludes other tiddlers, the procedures will be available within that transclusion as well, just like they would be if they'd been actually within X's wikitext). `\import` takes a filter as an argument, so to import procedures from all tiddlers tagged `MyAwesomePrivateProcedures`, you would put the following at the top of a tiddler:
+
+```html
+\import [tag[MyAwesomePrivateProcedures]]
+```
+
+We said earlier that when TiddlyWiki renders a tiddler, it prepends the tiddler's wikitext with all global procedure definitions -- but that this was not quite true. We can now explain how it actually works: TiddlyWiki imports the global procedures using the `\import` pragma on the //page template// (`$:/core/ui/PageTemplate`), which is responsible for [[transcluding|Transclusions]] all other parts of the wiki that appear on screen at any given time. It uses similar pragmas on the view template and the body of the view template for the other system tags.
+
+
+!! The legacy macro tag
+
+In older versions of TiddlyWiki, we made things global by tagging them `$:/tags/Macro` rather than `$:/tags/Global`. This was always a somewhat poorly chosen name, and is an even worse one now that procedures and functions exist, so you should not use this tag for any new procedures, functions, or macros you want to make global. However, this tag still works (it does precisely the same thing as `$:/tags/Global`), and you'll still see it used for many parts of TiddlyWiki and in many plugins, so you should remember what it does.
+
+
+!! Exercises
+
+{{Ex:MakeGlobalMacros||ExerciseTemplate}}
+{{Ex:ReadingDefaultMacros||ExerciseTemplate}}
+
+Why does \import not solve the problem that nested scopes does?
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

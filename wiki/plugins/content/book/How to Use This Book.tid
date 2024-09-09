@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20210818005827783
+modified: 20240907041159854
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -25,7 +25,7 @@ The [[Grok TiddlyWiki Tour|https://www.youtube.com/watch?v=vUkNxbaNHcY]] demonst
 * ''Bold type'' is used to call out important terms and points that you may wish to skim the text for.
 * //Italics// identify things you select on the screen and terms that may be unfamiliar but are not particularly important.
 * `Monospaced text` indicates something you type into TiddlyWiki (most often [[wikitext|Wikitext]]).
-* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the statement being made is not strictly accurate. Normally, this is done because the details are more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the full truth.
+* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the statement being made is not strictly accurate. Normally, this is done because the full truth is more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the complete story.
 
 </$details><$details summary="Structure and navigation">
 

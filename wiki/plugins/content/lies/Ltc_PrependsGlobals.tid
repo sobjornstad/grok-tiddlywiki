@@ -1,0 +1,8 @@
+created: 20240907040652083
+description: When TiddlyWiki displays a tiddler, it looks through all tiddlers tagged [[$:/tags/Global]], gathers the procedures they contain, and prepends them to the wikitext of the tiddler being displayed.
+modified: 20240907041408724
+tags: Lie
+title: Ltc:PrependsGlobals
+type: text/vnd.tiddlywiki
+
+In reality, this happens as part of various internal [[templates|Templates and the Current Tiddler]] used to render your wiki, rather than immediately before rendering each tiddler. We'll learn much more about this in chapter 7, [[Looking Under the Hood]], and a bit more at the end of the section.
