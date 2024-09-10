@@ -1,5 +1,5 @@
 created: 20200603203254646
-modified: 20240616173937591
+modified: 20240910122557127
 tags: Answer
 title: Ex:PrettyWikipediaLink/answer
 type: text/vnd.tiddlywiki
@@ -13,4 +13,4 @@ type: text/vnd.tiddlywiki
 
 You might notice that I put the `</a>` on the same line, rather than one line below. This is because TiddlyWiki will include an unwanted trailing space in the link text, like [[Wikipedia: Aardvark |https://en.wikipedia.org/wiki/Aardvark]], if there is a new line there.
 
-You can avoid this behavior using the pragma `\whitespace trim`, which [[causes whitespace that's not between two text characters to be ignored|https://tiddlywiki.com/#Pragma%3A%20%5Cwhitespace]]. But if you have actual text in the tiddler, rather than just procedure definitions, this will have undesired effects (for instance, you'll no longer be able to create new paragraphs by pressing Enter twice). Once we get to [[Chapter 6|Looking Under the Hood]], we'll be placing most of our procedures in tiddlers that don't contain any text, and this pragma will become quite useful.
+You can avoid this behavior using the pragma `\whitespace trim`, which [[causes whitespace that's not between two text characters to be ignored|https://tiddlywiki.com/#Pragma%3A%20%5Cwhitespace]]. But if you have actual text to be rendered in the tiddler, rather than just procedure definitions, this will have undesired effects (for instance, you'll no longer be able to create new paragraphs by pressing Enter twice). Once we discuss more about [[scopes|Much More Than You Wanted to Know About Scopes]] in [[Chapter 5|More Organizational Tools]], we'll be placing many of our procedures in tiddlers that don't contain any text, and this pragma will become quite useful.

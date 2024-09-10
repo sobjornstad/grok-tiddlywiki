@@ -1,5 +1,5 @@
 created: 20200603211145810
-modified: 20210818172448412
+modified: 20240910122707279
 tags: Answer
 title: Ex:MacroPosition/answer
 type: text/vnd.tiddlywiki
@@ -8,4 +8,4 @@ In either case, you get ugly and useless output:
 
 {{Sn:TextBeforeMacro||MagicSnippet}}
 
-Pragmas, including `\define`, have to be the very first thing in a tiddler (except for other pragmas). If anything else at all comes before them (except [[comments|Comments]]), they're treated as normal text.
+Pragmas, including `\procedure`, have to be the very first thing in a tiddler (except for other pragmas and [[comments|Comments]]). If anything else comes before them, they're treated as normal text.

@@ -1,10 +1,10 @@
 created: 20210116204238244
-modified: 20210116204148381
+modified: 20240910123016964
 tags: 
 title: Sn:ParameterlessMacro
 type: text/vnd.tiddlywiki
 
-\define disclaimer()
+\procedure disclaimer()
 (This paragraph does not represent the formal opinion of my company.)
 \end
 

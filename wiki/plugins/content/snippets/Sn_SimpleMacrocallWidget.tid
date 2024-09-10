@@ -1,11 +1,12 @@
 created: 20210116205906718
-modified: 20210327153554284
+modified: 20240910124012140
 tags: 
 title: Sn:SimpleMacrocallWidget
 type: text/vnd.tiddlywiki
 
-\define wikipediaLink(articleName, linkText)
-[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\procedure wikipediaLink(articleName, linkText)
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<linkText>></a>
 \end
 
-<$macrocall $name="wikipediaLink" linkText="Wikipedia on Aardvarks" articleName=Aardvark />
+<$transclude $variable="wikipediaLink" linkText="Wikipedia on Aardvarks" articleName=Aardvark />

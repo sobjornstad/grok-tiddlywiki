@@ -1,11 +1,12 @@
 created: 20210116204256895
-modified: 20210116204603819
+modified: 20240910123234913
 tags: 
 title: Sn:MultipleParameterMacro
 type: text/vnd.tiddlywiki
 
-\define wikipediaLink(articleName, linkText)
-[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\procedure wikipediaLink(articleName, linkText)
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<linkText>></a>
 \end
 
 <<wikipediaLink Aardvark "Wikipedia on Aardvarks">>

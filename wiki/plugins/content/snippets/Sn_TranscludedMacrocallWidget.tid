@@ -1,17 +1,18 @@
 created: 20210116210007489
-modified: 20210327153738242
+modified: 20240910124752524
 tags: 
 title: Sn:TranscludedMacrocallWidget
 type: text/vnd.tiddlywiki
 
-\define wikipediaLink(articleName, linkText)
-[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\procedure wikipediaLink(articleName, linkText:"Wikipedia Link")
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<linkText>></a>
 \end
 
-<$set name="linktext" value="An animal">
+<$let linktext="An animal">
 
-* <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Aardvark" />
-* <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Bee" />
-* <$macrocall $name="wikipediaLink" linkText=<<linktext>> articleName="Cow" />
+* <$transclude $variable="wikipediaLink" linkText=<<linktext>> articleName="Aardvark" />
+* <$transclude $variable="wikipediaLink" linkText=<<linktext>> articleName="Bee" />
+* <$transclude $variable="wikipediaLink" linkText=<<linktext>> articleName="Cow" />
 
-</$set>
+</$let>

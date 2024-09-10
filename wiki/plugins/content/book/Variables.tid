@@ -1,6 +1,6 @@
 created: 20200530170346174
 description: Variables let you assign a name to an arbitrary value, then use the name in place of the value in multiple places within your wikitext.
-modified: 20240727195755908
+modified: 20240910122904063
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Variables
@@ -37,7 +37,7 @@ For cases where you don't need any fancy options, the `$let` widget allows you t
 
 {{Sn:EmployeeInformationSystemDisclaimerLet||MagicSnippet}}
 
-We'll use the `$let` widget more often than the `$set` widget in the remainder of the book.
+We'll primarily use the `$let` widget to set variables throughout the rest of the book.
 
 
 !! Why use variables?
@@ -46,7 +46,7 @@ Eliminating repetition can save typing, which is nice but hardly anything to wri
 
 Additionally, some variables are ''set automatically by TiddlyWiki'', which can allow you to access information you otherwise wouldn't have. For instance, when we created a list widget to show all our meetings in the previous chapter, TiddlyWiki automatically set the `<<currentTiddler>>` variable to refer to the item which was currently being processed by the list widget.
 
-In the real world, you will use [[macros|Macros]] or [[transclusions|Transclusions]] more often than variables when you want to use some wikitext in many places throughout your wiki. But all three of these mechanisms serve the same basic purpose -- avoiding repetition -- and offer the same benefits discussed here.
+In the real world, you will use [[procedures|Procedures]] or [[transclusions|Transclusions]] more often than simple variables when you want to use some wikitext in many places throughout your wiki. But all three of these mechanisms serve the same basic purpose -- avoiding repetition -- and offer the same benefits discussed here.
 
 !! Exercises
 

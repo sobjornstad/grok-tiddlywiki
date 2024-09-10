@@ -1,6 +1,6 @@
 created: 20240616143658865
 description: Procedures extend the concept of variables by allowing portions of the value to change each time the procedure is referenced.
-modified: 20240727194649620
+modified: 20240910122359969
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Procedures
@@ -43,7 +43,7 @@ Put all together, in action:
 
 {{Sn:InitialAardvarkWikipediaLink||MagicSnippet}}
 
-Let's get this example in your wiki so you can play with it: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: the HTML closing tag `</a>` uses a //forward slash//, while `\procedure` and `\end` use a //backslash//. Review the [[HTML]] section if you can't remember which is which.) You should see the link appear, as it does in the preview above.
+Let's get this example in your wiki so you can play with it: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: the HTML closing tag `</a>` uses a //forward slash//, while `\procedure` and `\end` use a //backslash//. Review the [[HTML]] section if you can't remember which is which.) You should see the link appear, as it does in the preview above, and if you click on it, you'll land on the Wikipedia page about aardvarks.
 
 
 !! Anatomy of a procedure
@@ -81,7 +81,7 @@ Unsurprisingly, this indicates that we've come to the end of the procedure. A pr
 
 !! How TiddlyWiki processes procedure calls
 
-When something doesn't work the way you expect, it's helpful to be able to “think like the computer” as you try to understand what you did wrong, so let's talk about what TiddlyWiki does when it encounters a procedure call.
+When something doesn't work the way you expect, it's helpful to be able to “think like the computer” as you try to understand what you did wrong, so let's talk about what TiddlyWiki does when it encounters a `<<procedure call>>`.
 
 First, TiddlyWiki stops rendering the tiddler for a moment, looks at each of the parameters passed in the procedure call, and matches them up to the parameters in the parameter list, based on what order they come in. Then it ''sets a variable'' for each parameter, scoped to the procedure. In our example, it sets a variable `articleName` to the value `Aardvark`.
 
