@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20240910124815016
+modified: 20240911131906158
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: The Finer Points of Procedures
@@ -97,11 +97,12 @@ From the above, it was probably not immediately obvious why you would ever want 
 !! Exercises
 
 {{Ex:TicketTrackingLink||ExerciseTemplate}}
-{{Ex:MacroCallAsParameter||ExerciseTemplate}}
 {{Ex:QuotedMacroCall||ExerciseTemplate}}
 {{Ex:UnclosedMacroCall||ExerciseTemplate}}
 
 Not valid to have a default parameter for an EARLIER variable and not for a LATER variable (I think?)
+
+Add an exercise for optional and named parameters
 
 
 !! Takeaways

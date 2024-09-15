@@ -1,0 +1,16 @@
+created: 20240913123414077
+modified: 20240913123546662
+tags: 
+title: Sn:WikipediaLinkProcVsMacro
+type: text/vnd.tiddlywiki
+
+\procedure wikipediaLinkProcedure(articleName)
+[[<<articleName>>|https://en.wikipedia.org/wiki/<<articleName>>]]
+\end
+
+\define wikipediaLinkMacro(articleName)
+[[$articleName$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+<<wikipediaLinkProcedure Bear>>
+<<wikipediaLinkMacro Bear>>

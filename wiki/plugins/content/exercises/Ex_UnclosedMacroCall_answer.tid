@@ -1,11 +1,9 @@
 created: 20201231041636952
-modified: 20210409195408463
+modified: 20240911131834660
 tags: Answer
 title: Ex:UnclosedMacroCall/answer
 type: text/vnd.tiddlywiki
 
-Any content anywhere after the `$macrocall` tag in the tiddler disappears! This happens because the `$macrocall` widget is not a void element, so it needs to have a closing tag. In the absence of an actual closing tag, TiddlyWiki pretends there is a matching closing tag at the very end of the tiddler. However, this causes the remainder of the tiddler to be part of the content of the `$macrocall` widget, and any content in a `$macrocall` widget is completely ignored (what would go inside the expansion of a macro call, anyway?). This is a common typo, so watch out for that slash.
-
-You might wonder why the `$macrocall` widget isn't a void element, if we've agreed that it doesn't make sense for a macro call to have content. There is no logical explanation for this except that TiddlyWiki chose not to make any of its custom widgets void elements.
+Any content anywhere after the first `$transclude` tag in the tiddler disappears! This happens because the `$transclude` widget is not a void element, so it needs to have a closing tag. In the absence of an actual closing tag, TiddlyWiki pretends there is a matching closing tag at the very end of the tiddler. However, this causes the remainder of the tiddler to be part of the content of the `$transclude` widget, and any content in a `$transclude` widget is rendered only if the transclusion fails for some reason (e.g., the procedure you tried to call doesn't exist). This is a common typo, so watch out for that slash.
 
 If this discussion didn't make sense, consider reviewing the [[HTML]] section.

@@ -1,6 +1,6 @@
 created: 20240831204317959
 description: Functions allow you to break down filter expressions into simpler parts and reuse them in other filter expressions.
-modified: 20240907022036745
+modified: 20240911133038677
 parent: More Organizational Tools
 tags: Section Concept
 title: Functions
@@ -49,7 +49,7 @@ It's not possible to choose the input tiddlers of a function invoked with the `<
 
 !! Nesting functions
 
-You can use functions inside other functions. This makes it possible to build up complicated processes or formulas while giving each one a name.
+You can use functions inside other functions. This makes it possible to build up complicated processes or formulas while giving each part a name.
 
 As an example, here are some carefully decomposed functions for calculating the area and circumference of a circle with a given radius. In the example, we've also used several `$list`s to loop over the different circle sizes and measurements we want to use, so we only have to call each function once. (Review the [[conditional procedure|Ex:ConditionalProcedureContinued]] exercise if you don't remember how this works.) In real life, the amount of decomposition of the formulas shown here is probably overkill -- since the formulas are straightforward, you might even find this makes it harder to understand what's going on.
 

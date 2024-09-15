@@ -1,13 +1,13 @@
 created: 20200603224209604
-length: s
-modified: 20210409194800219
+length: m
+modified: 20240911131450779
 origin: The Finer Points of Macros
 tags: Exercise
 title: Ex:QuotedMacroCall
 type: text/vnd.tiddlywiki
 
-Take the example //The $macrocall widget can take variables as parameters// and modify it so that the inner macro calls are surrounded in quotation marks, like so:
+Try calling `wikipediaLink` using the `$transclude` widget with variables as parameters, but surround the variable references / procedure calls in the `$transclude` widget with "quotation marks", like this:
 
 {{Sn:QuotedMacroExpansion||$:/sib/Snippet/TiddlerAsWikitext}}
 
-What happens? Why do you think this happened?
+What's wrong with the output now? Why do you think this happened? And is there something that's unexpectedly //right//?

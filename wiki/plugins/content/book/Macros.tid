@@ -1,73 +1,58 @@
 created: 20200603011212616
-description: Macros extend the concept of variables by allowing portions of the value to change each time the macro is referenced.
-modified: 20240907015724579
+description: Macros are an older version of procedures that handle their parameters differently.
+modified: 20240915153212285
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Macros
 type: text/vnd.tiddlywiki
 
-Sometimes we repeat text which is exactly the same, and [[variables|Variables]] let us eliminate that repetition. But often, we want to repeat some text which is //mostly// the same, but which ''varies in a small part or two''.
+''Macros'', like [[Variables]], [[Procedures]], and [[Functions]], are a mechanism for reusing wikitext in different places. And like procedures and functions, they're really a special type of variable. They're most closely related to procedures: they're used to specify text which is mostly constant but changes in a small part or two. Indeed, they behave exactly like procedures in almost all ways, with one very important exception: they handle their parameters in a completely different way.
 
-For instance, suppose we are linking to Wikipedia articles over and over again, and we're getting tired of copying and pasting the URLs. Wikipedia article URLs have a very predictable format: for an article named `Article Name` in the English encyclopedia, the URL looks like `https://en.wikipedia.org/wiki/Article Name`. The only part that ever changes is the name of the article.
+Once upon a time, macros were the //only// way to create a variable with some parts that changed -- procedures didn't exist at all. The way macros handle their parameters tends to be much more confusing than the way procedures do, so we've put off learning them for a while, and nowadays it's usually best to prefer procedures most of the time. Nevertheless, there are times when using a macro can make something that would otherwise be quite awkward extremely easy, and if you explore older wikis, plugins, or the TiddlyWiki core, you will have to understand macros to follow the wikitext there, so learning how they work is still important.
 
-In situations like this, we can use a ''macro''. A macro is simply a variable with some bits that change depending on how you refer to it; the bits that change are called ''parameters'' or ''arguments''. A macro definition for creating Wikipedia links could look like this:
+Macro definitions work just like procedure and function definitions; they use the pragma `\define`. For example, we can say:
 
-```html
-\define wikipediaLink(articleName)
-https://en.wikipedia.org/wiki/$articleName$
-\end
-```
+{{Sn:BrokenWikipediaLinkMacro||MagicSnippet}}
 
-To get the value of the macro (this is referred to as ''calling'' or ''invoking'' it), we use the same double angle brackets that we would for a variable, but we include the values of the parameters as well (this is called ''passing'' the parameters to the macro). Specifically, we place them inside the double angle brackets after the macro name, separated from the macro name and from each other by a space:
+But wait -- why is there no output?
 
-```html
-<<wikipediaLink Aardvark>>
-```
 
-Let's put it together:
+!! Macro parameter handling
 
-{{Sn:InitialAardvarkWikipediaLink||MagicSnippet}}
+When you call a procedure, the values of its parameters are exposed as variables. But when you call a macro, the values of its parameters are not directly exposed as variables with that name. Instead you use one of two special syntaxes to get the values of its parameters:
 
-Let's get this example in your wiki: create a new tiddler called `WikipediaLinks` and type this snippet in. (Careful: unlike in [[HTML]], `\define` and `\end` use a //backslash//, not a forward slash. Review the linked section if you can't remember which is which.) You should see the link appear, as it does in the preview above.
+* `<<__parameter__>>` -- when you use this syntax, the parameter is treated ''like a variable'', like in a procedure. The difference is that you have to use this more verbose syntax. (Inside a filter expression, the syntax is `<__parameter__>`: the underscores stay doubled while the angle brackets get demoted to singles.)
+* `$parameter$` -- when you use this syntax, the parameter is ''incorporated into the body of the macro'' by [[Text Substitution]]. We'll talk more about what this means in a moment.
 
-The process of TiddlyWiki handling a call to your macro is called ''macro expansion'', and we say that the macro has been ''expanded'' when the result shows up in our formatted tiddler, and that the result is the ''expansion'' of the macro call.
+While you'll see the `<<__parameter__>>` syntax frequently in older wikitext, nowadays if you're using a macro rather than a procedure, it's probably because you wanted the text substitution behavior and only macros support that, so you probably won't use this syntax yourself too often. Nevertheless, it's good form to choose it instead of `$parameter$` anytime there is no difference, because you'll avoid exposing yourself to a number of gotchas possible only with text substitution.
 
-!! Anatomy of a macro
 
-Let's take a closer look at what's going on here. Our macro started with this line:
+!! Text substitution
 
-```html
-\define wikipediaLink(articleName)
-```
+Armed with the new syntax, we can fix our example to work as a macro:
 
-The word starting with a backslash indicates a kind of ''pragma'', which is a really fancy name for an instruction that comes at the top of a tiddler and changes the way TiddlyWiki reads the rest of the tiddler. Specifically, the `\define` pragma tells TiddlyWiki that every time it sees a reference to `wikipediaLink`, it should follow the instructions in this macro.
+{{Sn:FixedWikipediaLinkMacro||MagicSnippet}}
 
-`wikipediaLink`, of course, is the name of the macro.
+Take another look at that example. Notice something odd in the body of the macro? Right, we didn't use the [[backtick syntax|Using Variables as Attributes]] for the `href` attribute to combine `articleName` with the rest of the URL. Instead, we just quoted it normally -- yet we got the correct result.
 
-The part in parentheses, called the ''parameter list'', describes the parameters of the macro. When TiddlyWiki sees a macro call, it will look at each of the parameters passed and match them up to the names in the parentheses, based on what order they come in. In our example, it concludes that `articleName` should be `Aardvark` within the macro. (In the [[next section|The Finer Points of Macros]], we'll see an example with more than one parameter.)
+That's because the `$bare dollar signs$` syntax performs ''text substitution''. This is the key difference between macros and procedures. In a procedure, all variable references are processed as normal wikitext, just like they would be outside a procedure. But in a macro, when you call the macro, TiddlyWiki momentarily ''stops processing wikitext'' and first substitutes the macro's parameters into the text of the macro. This is completely unaware of syntax in any way and operates before rendering wikitext -- you can think of it like copying and pasting the value of the parameter over the `$placeholder$` in the macro. Only after text substitution is completed does the content of the macro get rendered as wikitext in its original context.
 
-Everything between the line beginning with `\define` and the line beginning with `\end` is called the ''body'' of the macro. When we call the macro, TiddlyWiki will stop processing wikitext and rendering your tiddler for a moment, read the body of the macro, and see:
+To see how this works, let's try defining `wikipediaLink` by using wikitext instead of a widget. This will completely fail for a procedure, because putting variable/parameter references inside wikitext links is invalid syntax, but will work totally fine for a macro, because the replacement happens before we start caring about syntax:
 
-```html
-https://en.wikipedia.org/wiki/$articleName$
-```
+{{Sn:WikipediaLinkProcVsMacro||MagicSnippet}}
 
-It will spot the bit between the dollar signs, notice that we said `articleName` represented `Aardvark` in this case, and substitute in the word `Aardvark`, yielding an expansion of `https://en.wikipedia.org/wiki/Aardvark`. Finally, it will go back to processing wikitext, starting with the expansion of the macro, at which point it will notice that this is a web URL, which should be turned into a link, and display the link on-screen.
 
-Lastly, there's the line:
+!! Miscellaneous points about macros
 
-```html
-\end
-```
+You can perform text substitution on a variable that is //not// a parameter of the macro using the `$(parenthesized dollar signs)$` syntax. This is the same syntax as used within [[backtick attributes|Using Variables as Attributes]], and it does exactly the same thing (performs text substitution using the value of the variable).
 
-This indicates that we've come to the end of the macro. A macro can go on for as many lines as we want it to, until we come to the `\end`.
+
+
 
 !! Exercises
 
-{{Ex:PrettyWikipediaLink||ExerciseTemplate}}
-{{Ex:MacroAdjacency||ExerciseTemplate}}
-{{Ex:EmptyMacroCall||ExerciseTemplate}}
-{{Ex:MacroPosition||ExerciseTemplate}}
+TODO
+
 
 !! Takeaways
 

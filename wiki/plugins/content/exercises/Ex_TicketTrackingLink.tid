@@ -1,11 +1,11 @@
 created: 20200603220219912
 length: m
-modified: 20240612032230989
-origin: The Finer Points of Macros
+modified: 20240911124934638
+origin: The Finer Points of Procedures
 tags: Exercise
 title: Ex:TicketTrackingLink
 type: text/vnd.tiddlywiki
 
-Write a macro called `ticketLink` that takes one parameter, called `ticketId`, and creates a link whose text is `Ticket #{ID}`, where `{ID}` represents the ID of the ticket, and which links to the ticket. Assume that the URL of a ticket in the company's ticket-tracking system is `https://tix.example.com/ticket/{ID}`.
+Write a procedure called `ticketLink` that takes one parameter, called `ticketId`, and creates a link whose text is `Ticket #{ID}`, where `{ID}` represents the ID of the ticket, and which links to the ticket. Assume that the URL of a ticket in the company's ticket-tracking system is `https://tix.example.com/ticket/{ID}`.
 
-Test this macro by putting it at the top of the `OnboardingProcess` tiddler and calling it at the bottom of the tiddler with the ticket number `245188`.
+Test this procedure by putting it at the top of the `OnboardingProcess` tiddler and calling it at the bottom of the tiddler with the ticket number `245188`.

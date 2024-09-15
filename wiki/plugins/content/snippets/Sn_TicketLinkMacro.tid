@@ -1,11 +1,11 @@
 created: 20210116210221048
-modified: 20210116210131168
+modified: 20240911125028759
 tags: 
 title: Sn:TicketLinkMacro
 type: text/vnd.tiddlywiki
 
-\define ticketLink(ticketId)
-[[Ticket #$ticketId$|https://tix.example.com/ticket/$ticketId$]]
+\procedure ticketLink(ticketId)
+<a href=`https://tix.example.com/ticket/$(ticketId)$`>Ticket <<ticketId>></a>
 \end
 
 <<ticketLink 245188>>

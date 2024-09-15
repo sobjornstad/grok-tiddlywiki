@@ -1,9 +1,9 @@
 created: 20201231041607192
 length: m
-modified: 20210130174703478
+modified: 20240911131647879
 origin: The Finer Points of Macros
 tags: Exercise
 title: Ex:UnclosedMacroCall
 type: text/vnd.tiddlywiki
 
-Take the example //The $macrocall widget can take variables as parameters// and modify it so that the `$macrocall` tags are unclosed (no `/` before the `>`). What happens? Why do you think this happened?
+Take the example //The $transclude widget can take variables as parameters// and modify it so that the `$transclude` tags are unclosed (no `/` before the `>`). What happens? Why do you think this happened?

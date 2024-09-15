@@ -1,0 +1,12 @@
+created: 20240911133929998
+modified: 20240911134001344
+tags: 
+title: Sn:BrokenWikipediaLinkMacro
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName)
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<articleName>></a>
+\end
+
+The <<wikipediaLink Aardvark>> is a pig-like African mammal that eats ants and termites.
