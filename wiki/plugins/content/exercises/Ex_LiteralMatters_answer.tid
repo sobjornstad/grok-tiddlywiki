@@ -1,7 +1,7 @@
 created: 20210208005424077
-modified: 20210208005324942
+modified: 20240923231556948
 tags: Answer
 title: Ex:LiteralMatters/answer
 type: text/vnd.tiddlywiki
 
-//Nothing// different happens, which may be unexpected at first -- typically there is a big difference between literal values and transcluded values, as we saw in [[Ex:QuotedMacroCall]]. The reason it's different here is that the `text` attribute of the `$wikify` widget is treated as wikitext. So if we give `"<<someVariable>>"` as the value, the first thing TiddlyWiki will do is wikify that text, which will result in the value of `someVariable`. Then TiddlyWiki will wikify that again as long as it still contains wikitext that can be transformed. Leaving off the quotation marks saves one round of wikification by directly passing the value of `someVariable` to the widget, but the end result is the same.
+//Nothing// different happens, which may be unexpected at first -- typically there is a big difference between literal values and transcluded values, as we've seen in [[Ex:QuotedMacroCall]] and [[Ex:WikifiedQuotation]]. The reason it's different here is that the `text` attribute of the `$wikify` widget is treated as wikitext. So if we give `"<<someVariable>>"` as the value, the first thing TiddlyWiki will do is wikify that text, which will result in the value of `someVariable`. Then TiddlyWiki will wikify that again as long as it still contains wikitext that can be transformed. Leaving off the quotation marks saves one round of wikification by directly passing the value of `someVariable` to the widget, but the end result is the same.

@@ -1,5 +1,5 @@
 created: 20210208004312948
-modified: 20210327153324227
+modified: 20240923231727744
 tags: Answer
 title: Ex:WikifyWikipediaLink/answer
 type: text/vnd.tiddlywiki
@@ -10,6 +10,6 @@ https://en.wikipedia.org/wiki/$articleName$
 \end
 
 <$wikify name="article" text={{!!wikipedia-article}}>
-  <$macrocall $name="wikipediaLink" articleName=<<article>>/>
+  <$transclude $variable="wikipediaLink" articleName=<<article>>/>
 </$wikify>
 ```

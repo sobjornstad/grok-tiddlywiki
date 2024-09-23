@@ -1,6 +1,6 @@
 created: 20210208004244560
 length: s
-modified: 20210327153305118
+modified: 20240923231713049
 origin: Wikification
 tags: Exercise
 title: Ex:WikifyWikipediaLink
@@ -13,7 +13,7 @@ Add the following snippet to a new tiddler:
 https://en.wikipedia.org/wiki/$articleName$
 \end
 
-<$macrocall $name="wikipediaLink" articleName={{!!wikipedia-article}}/>
+<$transclude $variable="wikipediaLink" articleName={{!!wikipedia-article}}/>
 ```
 
-Alter this snippet so the contents of the `wikipedia-article` field on the current tiddler can be a transclusion of a different tiddler field. (As it stands, the transclusion will render, but not as part of a link, since the transclusion within the `wikipedia-article` field is only seen //after// being returned from the macro.)
+Alter this snippet so the contents of the `wikipedia-article` field on the current tiddler can be a transclusion of a different tiddler field. (As it stands, the transclusion will render, but not as part of a link, since the transclusion within the `wikipedia-article` field is only seen //after// being returned from the `wikipediaLink` macro.)

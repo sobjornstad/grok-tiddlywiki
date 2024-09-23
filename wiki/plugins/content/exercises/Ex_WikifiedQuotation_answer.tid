@@ -1,0 +1,13 @@
+created: 20240923230137940
+modified: 20240923231204674
+tags: Answer
+title: Ex:WikifiedQuotation/answer
+type: text/vnd.tiddlywiki
+
+The problem that occurs if we remove the quotation marks is that the parameter `text` is no longer included in the output, we see only `Text: `.
+
+To understand why, consider for a moment what the `$wikify` widget does: It takes the text presented to it in the `text` parameter and wikifies it. When we have quoted the value of `text`, it gets exactly the wikitext we specified, namely the text `Text: ` and then a procedure call. The widget makes this procedure call and gets the value `Text: <<text>>`. It sees there is still wikitext to wikify, and does so again in the same context, where `text` is still defined as a variable due to being a parameter of the procedure. It gets the value of the `text` variable, which is `test text`, sees there is no remaining wikitext to wikify, and sets the variable `wikitext` to the result, which is `Text: test text`, as we want.
+
+Now what about if we haven't quoted the value of `text`? Now, before the `$wikify` widget gets to it at all, TiddlyWiki will evaluate the value of `<<myText "test text">>`. When TiddlyWiki evaluates the procedure call, it gets the literal text `Test: <<text>>`. Because the wikitext being evaluated is the value of an attribute, TiddlyWiki does not attempt to wikify this again. Instead it stops and passes this text in to the `$wikify` widget. Now the `$wikify` widget tries to wikify this string. But the variable `text` is no longer defined, because the `$wikify` widget is a different context -- it was only defined during the evaluation of the initial procedure call (which was not repeated enough times to get the value of the `text` variable, since it was the value of an attribute)! Since `text` now has no value, the `$wikify` widget treats it as empty and puts just `Text: ` in the value of the `wikitext` variable, and we get the incorrect result.
+
+This quirk is not specific to procedure calls -- macros using `<<__parameters as variables__>>` have the same problem. It does not, however, happen with text substitution, since in that case the //initial// macro call results in immediate replacement of the placeholders with their parameters -- there's nothing to wikify.

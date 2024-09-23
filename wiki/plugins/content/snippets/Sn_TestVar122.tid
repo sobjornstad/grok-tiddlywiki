@@ -1,11 +1,11 @@
 created: 20210101165917055
-modified: 20210101170330926
+modified: 20240923223451243
 tags: 
 title: Sn:TestVar122
 type: text/vnd.tiddlywiki
 
-<$set name="testVar1" value="XYZ">
-<$set name="testVar2" value="<<testVar1>>">
+<$let testVar1="XYZ">
+<$let testVar2="<<testVar1>>">
   <$text text=<<testVar2>>/>
-</$set>
-</$set>
+</$let>
+</$let>

@@ -1,10 +1,10 @@
 created: 20210502185915679
-modified: 20221015160350645
+modified: 20240923224451319
 tags: 
 title: Sn:AttributeParameterSubstitution
 type: text/vnd.tiddlywiki
 
-\define myText(text) Text: <<__text__>>
+\procedure myText(text) Text: <<text>>
 
 * ''OK:'' <<myText "test text">>
 * ''Bad:'' <$text text=<<myText "test text">>/>

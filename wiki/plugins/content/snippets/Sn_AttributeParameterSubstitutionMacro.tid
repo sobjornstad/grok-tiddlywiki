@@ -1,0 +1,10 @@
+created: 20240923224605240
+modified: 20240923224629071
+tags: 
+title: Sn:AttributeParameterSubstitutionMacro
+type: text/vnd.tiddlywiki
+
+\define myText(text) Text: $text$
+
+* ''OK:'' <<myText "test text">>
+* ''Also OK:'' <$text text=<<myText "test text">>/>

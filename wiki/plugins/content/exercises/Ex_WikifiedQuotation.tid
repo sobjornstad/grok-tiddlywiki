@@ -1,0 +1,11 @@
+created: 20240923230027918
+length: m
+modified: 20240923230457162
+origin: Wikification
+tags: Exercise
+title: Ex:WikifiedQuotation
+type: text/vnd.tiddlywiki
+
+In this snippet, we had to quote the value of `text` in the `$wikify` widget (using triple quotes, since the text we were quoting contained single quotes). What goes wrong if we don't quote it? Why do you think this happens?
+
+{{Sn:AttributeParameterSubstitutionWikified||MagicSnippet}}

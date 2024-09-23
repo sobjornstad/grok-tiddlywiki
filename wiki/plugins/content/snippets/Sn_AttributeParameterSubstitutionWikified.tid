@@ -1,0 +1,15 @@
+created: 20240923224711347
+modified: 20240923225957225
+tags: 
+title: Sn:AttributeParameterSubstitutionWikified
+type: text/vnd.tiddlywiki
+
+\procedure myText(text) Text: <<text>>
+
+''OK:'' <<myText "test text">>
+
+<$wikify name="wikitext" text="""<<myText "test text">>""">
+
+''Also OK:'' <$text text=<<wikitext>>/>
+	
+</$wikify>
