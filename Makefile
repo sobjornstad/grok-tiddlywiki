@@ -7,6 +7,10 @@ all: book web
 ## Building the TW book ##
 book: wiki/package-lock.json reversion shadowify wiki/pubfolder/output/index.html wiki/pubfolder/output/static/
 
+wiki/tiddlywiki-git:
+	git clone https://github.com/TiddlyWiki/TiddlyWiki5.git wiki/tiddlywiki-git
+	cd wiki/tiddlywiki-git && git pull
+
 wiki/package-lock.json: wiki/tiddlywiki-git
 	cd wiki && npm install
 
