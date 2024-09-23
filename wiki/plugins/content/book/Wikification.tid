@@ -1,7 +1,7 @@
 created: 20201124152747833
 description: TiddlyWiki converts wikitext into HTML for display by //wikifying// it. This process may sometimes need to be triggered manually.
 imageurl: https://upload.wikimedia.org/wikipedia/commons/b/bb/Kittyply_edit1.jpg?download
-modified: 20240923231647501
+modified: 20240923231952196
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Wikification
@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
   {{$:/BaseWikipediaUrl}}/$article$
 \end
 
-''Wikification'', in TiddlyWiki, is the process of taking wikitext and turning it into pure HTML that a browser can read directly (or, occasionally, into plain text or some other format). This includes processing markup like `//italics//`, rendering widgets, invoking macros, transcluding other tiddlers, and so on.
+''Wikification'', in TiddlyWiki, is the process of taking wikitext and turning it into pure HTML that a browser can read directly (or, occasionally, into plain text or some other format). This includes processing markup like `//italics//`, rendering widgets, calling procedures, transcluding other tiddlers, and so on.
 
 Wikification can be understood as a sort of preprocessing or pre-rendering: first TiddlyWiki renders the wikitext into HTML, then your browser renders the HTML on your screen.
 

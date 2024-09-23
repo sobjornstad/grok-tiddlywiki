@@ -1,5 +1,5 @@
 created: 20240901191043077
-modified: 20240901191511934
+modified: 20240923233740999
 tags: Answer
 title: Ex:ContactQuote/answer
 type: text/vnd.tiddlywiki
@@ -18,7 +18,7 @@ type: text/vnd.tiddlywiki
 </$contact.quote>
 ```
 
-Note that you need either `has[caption]` before or `!is[blank]` after the `get[caption]` step -- otherwise the first filter will have one output tiddler that is the empty string, rather than zero output tiddlers, and the title fallback won't be used.
+Note that you need either `has[caption]` before or `!is[blank]` after the `get[caption]` step -- otherwise the first filter will have one output tiddler that is the empty string, rather than zero output tiddlers, and the title fallback won't be used (this is just a perhaps unexpected quirk of the `get` filter operator).
 
 Another option for the fallback from caption to title is to use nested `$transclude` widgets, since the body of each `$transclude` widget is used if the tiddler or field is missing:
 

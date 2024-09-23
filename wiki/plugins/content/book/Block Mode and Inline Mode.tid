@@ -1,6 +1,6 @@
 created: 20210116171851507
 description: TiddlyWiki reads wikitext in two modes, one where elements stack horizontally and one where they stack vertically, and you occasionally have to consider which mode you should use.
-modified: 20240907015812519
+modified: 20240923232628286
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Block Mode and Inline Mode
@@ -30,7 +30,7 @@ This is why you need a blank line on either side of, e.g., lists, for them to di
 
 !! Transclusion
 
-Matters are complicated further by [[transclusion|Transclusions]], which can make sense in either a block or an inline context, but usually not both at once. For instance, if you want to transclude a field that contains a phone number into the text of a paragraph, you probably want to do that in inline mode so you don't interrupt the paragraph and put the phone number on a separate line. On the other hand, if you transclude the `text` field of a long tiddler, you probably want to do that in block mode so all its paragraphs don't get squashed into one. (I'm discussing field transclusions here, but this generally applies to macro/variable transclusions as well.)
+Matters are complicated further by [[transclusion|Transclusions]], which can make sense in either a block or an inline context, but usually not both at once. For instance, if you want to transclude a field that contains a phone number into the text of a paragraph, you probably want to do that in inline mode so you don't interrupt the paragraph and put the phone number on a separate line. On the other hand, if you transclude the `text` field of a long tiddler, you probably want to do that in block mode so all its paragraphs don't get squashed into one. (I'm discussing field transclusions here, but this generally applies to variable transclusions as well.)
 
 In many cases, TiddlyWiki will do the right thing on its own: it chooses a mode based on ''whether you put blank lines around the reference or not''. This can become unintuitive, however, when you transclude something within a widget. For instance, let's suppose we want to show the text of all meetings at which fudge was mentioned, with a horizontal line in between each:
 
@@ -46,7 +46,7 @@ This doesn't work right -- can you spot the problem? There isn't a blank line be
 
 ```html
 <$list filter="[tag[Meeting]search[fudge]]">
-  <$transclude mode="block"/>
+  <$transclude $mode="block" $tiddler=<<currentTiddler>>/>
 
   ------
 </$list>
