@@ -1,6 +1,6 @@
 created: 20240831225123664
 length: m
-modified: 20240831225537582
+modified: 20240923212944620
 tags: Exercise
 title: Ex:MultiplyByTwoTwoWays
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ We saw two different ways to create a function that multiplies its input by two,
 \function multiply-input-by-two [multiply[2]]
 
 <<multiply-by-two 4>>
-{{{ [function[multiply-input-by-two],[4]] }}}
+{{{ [[4]function[multiply-input-by-two]] }}}
 ```
 
 Create a `multiply-anything-by-two` function that works in //either// of these roles. That is:

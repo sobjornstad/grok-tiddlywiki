@@ -1,9 +1,0 @@
-created: 20210409221930746
-modified: 20210409222040720
-tags: Answer
-title: Ex:SubstitutionBackporting/answer
-type: text/vnd.tiddlywiki
-
-Surprisingly, there aren't any, if you've been exactly following along with all the exercises. Hopefully you had fun looking though!
-
-We'll be seeing more examples of situations in which we can use the `<<__parameter transclusion__>>` syntax later in the book.

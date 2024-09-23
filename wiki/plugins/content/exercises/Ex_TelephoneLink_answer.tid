@@ -1,41 +1,34 @@
 created: 20210131040820380
-modified: 20210818142017227
+length: m
+modified: 20240923222322469
+origin: Macros
 tags: Answer
 title: Ex:TelephoneLink/answer
 type: text/vnd.tiddlywiki
 
-By now, having read all about [[Text Substitution]], you should be aware that this won't work:
+The key issue here is passing the value of `!!phone` into the macro. You might be tempted to use a variable `phonenum`, like this:
 
 ```html
-[ext[Call {{!!title}}|tel:{{!!phone}}]]
+\define phonelink(phonenum) tel:$phonenum$
+<a href=<<phonelink {{!!phone}}>>>Call {{!!title}}</a>
 ```
 
-But you might be tempted to try using an HTML element, like this:
+...but unfortunately `<<phonelink {{!!phone}}>>` doesn't do what we want here -- TiddlyWiki does not parse other transclusions inside `<<variable transclusions>>`. (It's valid syntax, but it will just pass the literal text `{{!!phone}}` to the macro.)
+
+One option is to put the entire link within the macro, which allows you to use the `$transclude` widget to pass transcluded values as parameters:
 
 ```html
-<a href="tel:{{!!phone}}">Call {{!!title}}</a>
+\define phonelink(phonenum) [ext[Call $name$|$phonenum$]]
+<$transclude $variable="phonelink" name={{!!title}} phonenum={{!!phone}}/>
 ```
 
-It might be helpful to review exactly why this doesn't work, as it's something most TiddlyWiki beginners have found themselves trying to do at one point or another. It's actually the same thing we saw in [[Ex:QuotedMacroCall]], back in [[The Finer Points of Macros]]. If you put any attribute value in "quotation marks", it is //literal//: TiddlyWiki won't do any further wikitext parsing on it. Instead of a literal value for an attribute, you can instead use a `<<macro transclusion>>`, a `{{field transclusion}}`, or a `{{{filtered transclusion}}}`.
-
-If you want to include both a literal part //and// a field or macro transclusion, squashed together (the technical term for this is //string concatenation//), you need to use either a macro with text substitution or a filter. Here's the macro version:
+Another popular (and more flexible) option is to access the values needed as //variables//, rather than as parameters:
 
 ```html
 \define phonelink() [ext[Call $(currentTiddler)$|$(phonenum)$]]
-<$set name="phonenum" value={{!!phone}}>
+<$let phonenum={{!!phone}}>
   <<phonelink>>
 </$set>
 ```
 
-Or with an `a` element:
-
-```html
-\define phonelink() tel:$(phonenum)$
-<$set name="phonenum" value={{!!phone}}>
-  <a href=<<phonelink>>>Call {{!!title}}</a>
-</$set>
-```
-
-The filter version is left as the next exercise.
-
-You can find a more detailed treatment of this issue in the [[Common Misunderstandings]] chapter: [[Constant strings cannot be combined with transclusions]].
+This problem is not limited to macros; it can come up occasionally with procedures as well. Setting a variable is often a useful workaround.

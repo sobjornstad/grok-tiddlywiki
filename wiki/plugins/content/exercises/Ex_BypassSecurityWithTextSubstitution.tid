@@ -1,6 +1,6 @@
 created: 20210207223511379
 length: m
-modified: 20210207223810240
+modified: 20240923214306698
 origin: Text Substitution
 tags: Exercise
 title: Ex:BypassSecurityWithTextSubstitution
@@ -10,4 +10,4 @@ Suppose that the following macro is being used to validate whether the user is a
 
 {{Sn:AuthorizationBypass||MagicSnippet}}
 
-Without looking up the password, figure out what you can fill in between the quotation marks in the macro call to bypass the password check. Check your answer by editing the live example above.
+Because of the way text substitution works, it's possible to bypass this authentication check without knowing the password (or looking in that tiddler). Figure out what you can fill in between the quotation marks in the macro call to bypass the password check, and check your answer by editing the live example above.

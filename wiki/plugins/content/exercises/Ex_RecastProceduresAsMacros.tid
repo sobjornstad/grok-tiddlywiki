@@ -1,0 +1,11 @@
+created: 20210207224132602
+length: m
+modified: 20240923214702354
+origin: Text Substitution
+tags: Exercise
+title: Ex:RecastProceduresAsMacros
+type: text/vnd.tiddlywiki
+
+Go back to several of the procedures you have written for previous exercises and create macro versions that use text substitution, similar to how we created `wikipediaLinkMacro` in this section.
+
+//Tip//: Try searching for the word `procedure` to find tiddlers that contain procedure definitions.

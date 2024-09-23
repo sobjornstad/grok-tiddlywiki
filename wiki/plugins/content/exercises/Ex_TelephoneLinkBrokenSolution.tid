@@ -1,0 +1,14 @@
+created: 20240923221211699
+length: s
+modified: 20240923221237308
+origin: Macros
+tags: Exercise
+title: Ex:TelephoneLinkBrokenSolution
+type: text/vnd.tiddlywiki
+
+Why doesn't this solution to the previous exercise work, given that macros perform text substitution?
+
+```html
+\define phonelink() [ext[Call {{!!title}}|tel:{{!!phone}}]]
+<<phonelink>>
+```
