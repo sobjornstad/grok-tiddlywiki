@@ -1,32 +1,13 @@
 created: 20200718012215079
-modified: 20210818185038784
+modified: 20240924002458443
 tags: Answer
 title: Ex:VeryOrdinaryDay/answer
 type: text/vnd.tiddlywiki
 
-To show text only if a condition is true, we can use the `list` widget paired with a filter which outputs one item if the condition is met and nothing if it isn't:
+The most obvious approach is to use [[Conditional Inclusion]]. In this example, we set the variable `holiday` so we don't have to write the same filter twice, but you could also use a [[function|Functions]], or simply run it twice (it won't be much slower, just uglier):
 
-```html
-<$set name=formattedToday value=<<now "0MM/0DD">>>
-  <$list filter="[[UsHolidays]getindex<formattedToday>]" emptyMessage="Sadly, it's a very ordinary day today.">
-    It's ''<<currentTiddler>>'' today!
-  </$list>
-</$set>
-```
+{{Sn:OrdinaryDay||MagicSnippet}}
 
-If we didn't want to use `emptyMessage` (or didn't know about it), we could use a second list widget that had the opposite condition. The opposite condition is somewhat more difficult to compose, as there is no filter operator to determine whether an index exists in a data tiddler. Instead, we can team up `then`, `else`, and `is[blank]`:
+However, a more concise approach is to use the `$list` widget with the `emptyMessage` parameter, which is rendered if the filter returns no results:
 
-```html
-<$set name=formattedToday value=<<now "0MM/0DD">>>
-  <$list filter="[[UsHolidays]getindex<formattedToday>]">
-    It's ''<<currentTiddler>>'' today!
-  </$list>
-  <$list filter="[[UsHolidays]getindex<formattedToday>then[]else[holiday]!is[blank]]">
-    Sadly, it's a very ordinary day today.
-  </$list>
-</$set>
-```
-
-That is, first get the value of the index. Then if that value is not empty (meaning the index existed), change the value to an empty one, and if the value is empty, change it to a non-empty one. Lastly, remove all empty values (the distinction between an empty value and a nonexistent one is explained in [[this exercise answer|Ex:DefaultToField/answer]]). The net effect is that the body of the `$list` widget is shown if `getindex[]` returns an empty value, and nothing is shown otherwise.
-
-This `then`--`else`--`is[blank]` pattern may come in handy in other places as well.
+{{Sn:OrdinaryDayList||MagicSnippet}}

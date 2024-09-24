@@ -1,0 +1,8 @@
+created: 20240923234949881
+description: procedure
+modified: 20240923235042645
+tags: Lie
+title: Ltc:TabsProcedure
+type: text/vnd.tiddlywiki
+
+`tabs` is actually a macro, not a procedure. The distinction is unimportant at the moment; we'll talk more about [[Macros]] in [[chapter 6|Macros, Wikification, and Widgets]].

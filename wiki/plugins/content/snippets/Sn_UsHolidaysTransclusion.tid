@@ -1,0 +1,9 @@
+created: 20240924001658237
+modified: 20240924001844292
+tags: 
+title: Sn:UsHolidaysTransclusion
+type: text/vnd.tiddlywiki
+
+{{UsHolidays##07/04}}
+
+<$text text={{{ [[UsHolidays]getindex[07/04]] }}}/>

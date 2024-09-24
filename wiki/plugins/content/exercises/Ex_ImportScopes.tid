@@ -1,0 +1,9 @@
+created: 20240923234202349
+length: s
+modified: 20240923234448455
+origin: Much More Than You Wanted to Know About Scopes
+tags: Exercise
+title: Ex:ImportScopes
+type: text/vnd.tiddlywiki
+
+Rather than nesting scopes, why not just place the local procedures in a separate tiddler and use the `\import` pragma to access them?

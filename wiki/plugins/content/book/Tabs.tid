@@ -1,14 +1,14 @@
 created: 20200717215952541
 description: The `tabs` macro facilitates compact display of a number of related tiddlers, as in the sidebar of a stock TiddlyWiki.
-modified: 20210410185554583
+modified: 20240924000334232
 parent: More Organizational Tools
 tags: Section
 title: Tabs
 type: text/vnd.tiddlywiki
 
-It's often useful to create a summary or links tiddler that uses tabs to show the contents of some other tiddlers, just like the sidebar does in the default installation of TiddlyWiki. We can easily create new sets of tabs with the `tabs` macro.
+It's often useful to create a summary or links tiddler that uses tabs to show the contents of some other tiddlers, just like the sidebar does in the default installation of TiddlyWiki. We can easily create new sets of tabs with the built-in `tabs` {{Ltc:TabsProcedure||LieToChildrenTemplate}}.
 
-A typical call to the `tabs` macro looks like this:
+A typical call to the `tabs` procedure looks like this:
 
 ```html
 <<tabs tabsList:"foo bar baz" default:"foo">>

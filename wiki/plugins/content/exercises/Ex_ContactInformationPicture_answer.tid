@@ -1,10 +1,8 @@
 created: 20210130041415979
-modified: 20210130041513763
+modified: 20240923235845021
 tags: Answer
 title: Ex:ContactInformationPicture/answer
 type: text/vnd.tiddlywiki
-
-The simplest way to do this is using the `$image` widget:
 
 ```html
 <$list filter="[all[current]addsuffix[/Picture]is[tiddler]]">
@@ -12,24 +10,4 @@ The simplest way to do this is using the `$image` widget:
 </$list>
 ```
 
-If you didn't go look up the `$image` widget in the documentation (tip: there's pretty much always a widget for what you want if you go look for it!), you might have used a macro with the wikitext syntax for including an image:
-
-```html
-\define getImage() [img width=300 [$(currentTiddler)$]]
-
-<$list filter="[all[current]addsuffix[/Picture]is[tiddler]]">
-  <<getImage>>
-</$list>
-```
-
-Or, if you prefer using a macro with parameters, you'll have to use a `$macrocall` widget to get the value of `<<currentTiddler>>` into the macro:
-
-```html
-\define getImage(img) [img width=300 [$img$]]
-
-<$list filter="[all[current]addsuffix[/Picture]is[tiddler]]">
-  <$macrocall $name="getImage" img=<<currentTiddler>>/>
-</$list>
-```
-
-Notice that, in all these cases, we took advantage of the current tiddler being set to the name of the picture tiddler within the `$list` widget, and the `$list` widget never displaying its body if the tiddler didn't turn out to exist.
+Notice that there's no need to do [[Conditional Inclusion]] to ensure nothing is displayed if the image isn't available -- if the picture tiddler doesn't exist, there will be zero results for the filter, and the `$list` widget will never render anything.

@@ -1,6 +1,6 @@
 created: 20200718014509693
-description: Macros can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
-modified: 20240910020527167
+description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
+modified: 20240923234910445
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -95,9 +95,8 @@ In older versions of TiddlyWiki, we made things global by tagging them `$:/tags/
 !! Exercises
 
 {{Ex:MakeGlobalMacros||ExerciseTemplate}}
+{{Ex:ImportScopes||ExerciseTemplate}}
 {{Ex:ReadingDefaultMacros||ExerciseTemplate}}
-
-Why does \import not solve the problem that nested scopes does?
 
 !! Takeaways
 

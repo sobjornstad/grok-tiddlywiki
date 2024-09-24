@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20240829125436764
+modified: 20240923235531275
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -35,6 +35,8 @@ For more control over the image, you can use a special link syntax, `[img [image
 ```html
 [img width={{MyFavoriteImageWidth}} [image.png]]
 ```
+
+The [[widget|Widgets]] equivalent of this syntax is `$image` (see [[documentation|https://tiddlywiki.com/#ImageWidget]]).
 
 
 !! Putting PDFs in your tiddlers

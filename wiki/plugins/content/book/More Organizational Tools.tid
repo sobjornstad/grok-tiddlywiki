@@ -2,15 +2,15 @@ caption: 5: More Organizational Tools
 created: 20200607150802909
 description: In which we cover miscellaneous TiddlyWiki features that didn't fit in any of the previous chapters, including advanced filters, images, and tabs.
 list: [[Multi-Run Filters]] [[Filter Prefixes]] Functions [[Much More Than You Wanted to Know About Scopes]] [[Classifying Tags]] [[Images and Attachments]] Tabs [[Data Tiddlers]]
-modified: 20240907040217292
+modified: 20240923234857047
 parent: Outline
 tags: Chapter
 title: More Organizational Tools
 type: text/vnd.tiddlywiki
 
-At this point, we've seen most of the critical concepts in TiddlyWiki. Some more technical and finicky ones remain for full mastery of TiddlyWiki, but before we worry about those, we're going to loop back to fill in a few gaps that we left for the sake of not spending too long on any single topic earlier.
+At this point, we've seen most of the key concepts in TiddlyWiki. Some more technical and finicky ones remain for full mastery of TiddlyWiki, but before we worry about those, we're going to loop back to fill in a few gaps that we left for the sake of not spending too long on any single topic earlier.
 
-This chapter has two parts. First we'll learn more about writing more complicated filters, as well as splitting filters up into smaller chunks to make them easier to understand. Then we'll cover a bunch of small, simple ideas that don't fit anywhere else, but are worth knowing about: giving tags classifications, attaching images and files to your wiki, putting information in tabs within a tiddler, and storing small nuggets of data together in data tiddlers.
+This chapter has two parts. First we'll learn more about writing more complicated filters, as well as splitting filters up into smaller chunks to make them easier to understand. Then we'll cover a bunch of small, simple ideas that don't fit anywhere else, but are worth knowing about: managing scopes, giving tags classifications, attaching images and files to your wiki, putting information in tabs within a tiddler, and storing small nuggets of data together in data tiddlers.
 
 !! In this chapter
 

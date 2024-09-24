@@ -1,0 +1,12 @@
+created: 20240924002224723
+modified: 20240924002242502
+tags: 
+title: Sn:OrdinaryDayList
+type: text/vnd.tiddlywiki
+
+<$let
+  formattedToday=<<now "0MM/0DD">>>
+  <$list filter="[[UsHolidays]getindex<formattedToday>]" emptyMessage="Sadly, it's a very ordinary day today.">
+    It's ''<<currentTiddler>>'' today!
+  </$list>
+</$let>

@@ -1,0 +1,9 @@
+created: 20240923234232294
+modified: 20240923234604743
+tags: Answer
+title: Ex:ImportScopes/answer
+type: text/vnd.tiddlywiki
+
+Using `\import` would bring the local procedures into the current tiddler's scope...but //everything// in the current tiddler's scope is made global by $:/tags/Global, so separating the procedures into a separate tiddler wouldn't actually achieve anything in terms of avoiding pollution.
+
+Most serious programming languages solve this problem in an elegant way, by automatically namespacing the things you import. If you imported `SomeTiddler`'s procedures, you would say `SomeTiddler.procedurename` rather than `procedurename` to access them. Unfortunately, TiddlyWiki doesn't currently offer this -- maybe some day!

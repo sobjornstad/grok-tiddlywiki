@@ -1,0 +1,22 @@
+created: 20240924002129077
+modified: 20240924002456273
+tags: 
+title: Sn:OrdinaryDay
+type: text/vnd.tiddlywiki
+
+<$let
+  formattedToday=<<now "0MM/0DD">>
+  holiday={{{ [[UsHolidays]getindex<formattedToday>] }}}
+>
+
+<% if [<holiday>!is[blank]] %>
+
+	It's ''<<holiday>>'' today!
+
+<% else %>
+
+	Sadly, it's a very ordinary day today.
+
+<% endif %>
+
+</$let>

@@ -1,5 +1,5 @@
 created: 20200717224206811
-modified: 20210410192040152
+modified: 20240924000324303
 tags: Answer
 title: Ex:FixingContactTabs/answer
 type: text/vnd.tiddlywiki
@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 Create a template tiddler called `ContactTabTemplate` with the following content:
 
 ```html
-<$set name=currentTiddler value=<<currentTab>>>
+<$let currentTiddler=<<currentTab>>>
 
   {{!!text}}
 
@@ -18,7 +18,7 @@ You can use any method you like to set the current tiddler. Note the blank lines
 
 Then add a `template:ContactTabTemplate` parameter to the `tabs` macro used to render your contact tabs.
 
-The TiddlyWiki documentation gives the following equivalent version using the `$transclude` widget, which we've so far mentioned only in passing, and the `$tiddler` widget, which we haven't seen at all:
+The TiddlyWiki documentation gives the following cleaner version using the `$transclude` and `$tiddler` widgets, which we've so far mentioned only in passing:
 
 ```html
 <$tiddler tiddler=<<currentTab>>>
@@ -26,16 +26,4 @@ The TiddlyWiki documentation gives the following equivalent version using the `$
 </$tiddler>
 ```
 
-We'll talk about both widgets in [[chapter 7|Tips and Tricks]].
-
-Another way would be to transclude the tiddler named in the `currentTab` variable using double curly braces, since doing a transclusion this way sets the current tiddler as it does so. You have to use [[text substitution|Text Substitution]] to get the value of `currentTab` into the braces, though:
-
-```html
-\define makeCurrentTiddler()
-  {{$(currentTab)$}}
-\end
-
-<<makeCurrentTiddler>>
-```
-
-But when you reread this one later, it'll be much less obvious what you were trying to accomplish, so one of the preceding methods is probably preferable.
+We'll talk about both of these widgets in [[chapter 7|Tips and Tricks]].

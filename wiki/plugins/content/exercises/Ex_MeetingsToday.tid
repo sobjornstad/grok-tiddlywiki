@@ -1,6 +1,6 @@
 created: 20200717221603330
 length: M
-modified: 20210410191402372
+modified: 20240924000623141
 origin: Tabs
 tags: Exercise
 title: Ex:MeetingsToday
@@ -10,5 +10,5 @@ Create a tiddler named `Today` and put a set of vertically arranged tabs on it s
 
 Don't worry if everything doesn't show up right -- we'll talk about why that is and how to fix it in the exercises to follow. You're done with this exercise if you can get the correct set of tabs to appear in the list.
 
-* You can get today's date with the built-in `now` macro, like `<<now YYYY0MM0DD0hh>>`. (If you're wondering why we include the hours, we'll discuss the potential for day rollover when at negative UTC offsets in [[Working with Dates]].)
+* You can get today's date with the built-in `now` {{Ltc:NowProcedure||LieToChildrenTemplate}}, like `<<now YYYY0MM0DD0hh>>`. (If you're wondering why we include the hours, we'll discuss the potential for day rollover when at negative UTC offsets in [[Working with Dates]].)
 * You'll need to look up several new filter operators in the [[list|https://tiddlywiki.com/#Filter Operators]].

@@ -1,6 +1,6 @@
 created: 20200717223809578
 length: m
-modified: 20210130174413400
+modified: 20240924000137663
 origin: Tabs
 tags: Exercise
 title: Ex:FixingContactTabs
@@ -12,4 +12,4 @@ Fix the issue identified in the previous exercise, [[Ex:ContactTabs]], so that a
 
 //Hint 2//: The `currentTab` variable contains the name of the tiddler being rendered as the current tab.
 
-If you get really stuck, read the TiddlyWiki documentation on the `tabs` macro, which explains how to do this.
+If you get really stuck, read the TiddlyWiki [[documentation|https://tiddlywiki.com/#tabs%20Macro]] on the `tabs` procedure, which explains how to do this. Try to figure it out yourself for a few minutes first, though!

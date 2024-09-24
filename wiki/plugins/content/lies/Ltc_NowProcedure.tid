@@ -1,0 +1,8 @@
+created: 20240924000524807
+description: procedure
+modified: 20240924000557333
+tags: Lie
+title: Ltc:NowProcedure
+type: text/vnd.tiddlywiki
+
+`now` is actually a [[macro|Macros]], not a procedure.

@@ -1,11 +1,11 @@
 created: 20200718022013037
 length: m
-modified: 20210130174512870
+modified: 20240923234717883
 origin: Global Macros
 tags: Exercise
 title: Ex:MakeGlobalMacros
 type: text/vnd.tiddlywiki
 
-Find the `wikipediaLink` and `ticketLink` macros we created in the [[The Finer Points of Macros]] section and turn them into global macros, creating one or more system tiddlers under a user folder to house them (e.g., you could put both in `$:/yournamehere/LinkMacros`, or put one in `$:/yournamehere/macros/Wikipedia`). 
+Find the `wikipediaLink` and `ticketLink` procedures we created in [[The Finer Points of Procedures]] and turn them into global procedures, creating one or more tiddlers to house them.
 
 Remove the original macro definitions from the individual tiddlers and try calling the macros from a few different tiddlers to make sure it works.

@@ -1,6 +1,6 @@
 created: 20200717234504136
 description: A //data tiddler// packs a series of name-value pairs into a single tiddler's text field.
-modified: 20210410193139277
+modified: 20240924002618517
 parent: More Organizational Tools
 tags: Section
 title: Data Tiddlers
@@ -40,6 +40,7 @@ Paste this content into a new tiddler, then from the //Type// drop-down undernea
 
 To work with data tiddlers, we use a special addition to the normal transclusion syntax: to get the value for the index `07/04` from the `UsHolidays` data tiddler, we write `{{UsHolidays##07/04}}`. You can also use the `getindex` filter operator, like `[[UsHolidays]getindex[07/04]]`.
 
+{{Sn:UsHolidaysTransclusion||MagicSnippet}}
 
 !! Exercises
 
