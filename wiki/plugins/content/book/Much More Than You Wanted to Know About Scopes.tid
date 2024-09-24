@@ -1,6 +1,6 @@
 created: 20200718014509693
 description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
-modified: 20240923234910445
+modified: 20240924112650293
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -65,7 +65,7 @@ The syntax looks like this:
 \end global-proc
 ```
 
-For the most part, you just literally put the inner pragmas inside the outer one, but do notice that you need to ''repeat the name of the procedure or function you're closing'' after `\end`, so that TiddlyWiki knows which one is ending. There's no limit to how many levels deep you can nest procedures, though in practice more than three levels will probably be difficult to understand!
+For the most part, you just literally put the inner pragmas inside the outer one, but do notice that you need to ''repeat the name of the procedure or function you're closing'' after `\end`, so that TiddlyWiki knows which one is ending. (You can do this whenever you want, even if there aren't nested scopes, but you //must// do it if there is nesting.) There's no limit to how many levels deep you can nest procedures, though in practice more than three levels will probably be difficult to understand!
 
 Second, if nesting doesn't work (perhaps because you need to use the sub-procedures in several procedures that you want to be global, rather than just one), you can ''use a namespace'' for the local procedures. You might use an empty namespace (`.`) or a `local.` namespace, for instance. As long as nobody expects a procedure in that namespace to work globally, this is very safe, because a procedure defined within the scope of a single tiddler takes precedence over a procedure in the global scope (recall the [[nested scopes exercise|Ex:NestedSets]] way back when we first learned about variables). So even if you have 17 different tiddlers that each define a globally available procedure `local.x`, within each of those tiddlers, `local.x` will still mean whatever it was defined to be within that tiddler. Of course, if you try to call `local.x` in some other tiddler that doesn't have its own definition of `local.x`, all bets are off -- just about anything might happen!
 

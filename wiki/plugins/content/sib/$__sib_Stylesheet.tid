@@ -1,5 +1,5 @@
 created: 20210116181556596
-modified: 20240727205255881
+modified: 20240924113039787
 tags: $:/tags/Stylesheet
 title: $:/sib/Stylesheet
 type: text/vnd.tiddlywiki
@@ -109,6 +109,16 @@ div.tc-tiddler-frame {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
+}
+
+div.tc-tiddler-edit-frame { max-width: 90em; margin-left: auto; margin-right: auto; }
+
+.tc-tiddler-frame .tc-tiddler-editor.tc-tiddler-preview {
+grid-template-columns: 69% 29%;
+}
+
+.tc-tiddler-preview-preview {
+  z-index: 1;
 }
 
 .tc-storyview-zoomin-tiddler {
