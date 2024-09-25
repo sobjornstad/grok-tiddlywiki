@@ -1,9 +1,9 @@
 created: 20200604020731329
-modified: 20210409200335292
+modified: 20240924123143148
 tags: Answer
 title: Ex:SearchingInTransclusions/answer
 type: text/vnd.tiddlywiki
 
 No, nothing has changed! Search only looks in the physical `title` and `text` fields of the tiddler. Transcluded content is not actually part of the text field of a tiddler -- TiddlyWiki only shows it there when you look at the tiddler -- so it doesn't show up in search, either.
 
-If you search for //the transclusion itself// -- like, the part that looks like `{{JaneDoe}}` -- then you //will// find that. (But if you type the braces into the ordinary search bar, it doesn't like special characters and won't find anything. Type just `JaneDoe` and you'll find that any tiddler that transcludes `JaneDoe` shows up.)
+If you search for //the transclusion itself// -- like, the part that looks like `{{JaneDoe}}` -- then you //will// find that, because that text is physically located within the `JaneDoe` tiddler's text field. (But if you type the braces into the ordinary search bar, it doesn't like special characters and won't find anything. Type just `JaneDoe` and you'll find that any tiddler that transcludes `JaneDoe` shows up.)

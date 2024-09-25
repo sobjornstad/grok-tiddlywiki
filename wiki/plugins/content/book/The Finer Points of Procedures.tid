@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20240911131906158
+modified: 20240925024524236
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: The Finer Points of Procedures
@@ -99,6 +99,9 @@ From the above, it was probably not immediately obvious why you would ever want 
 {{Ex:TicketTrackingLink||ExerciseTemplate}}
 {{Ex:QuotedMacroCall||ExerciseTemplate}}
 {{Ex:UnclosedMacroCall||ExerciseTemplate}}
+{{Ex:MacroCallAsParameter||ExerciseTemplate}}
+
+TODO: is the one immediately above still relevant in this section? It at least needs updating
 
 Not valid to have a default parameter for an EARLIER variable and not for a LATER variable (I think?)
 

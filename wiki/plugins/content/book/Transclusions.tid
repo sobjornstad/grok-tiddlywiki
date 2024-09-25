@@ -1,6 +1,6 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240910025134489
+modified: 20240924123051971
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Transclusions
@@ -20,12 +20,12 @@ You should see:
 
 Either the left or the right side of the reference can be left off. Just `{{JaneDoe}}` refers to the `text` field of the `JaneDoe` tiddler, while just `{{!!phone}}` refers to the `phone` field of the current tiddler.
 
-As soon as you update a field of a tiddler, any open tiddlers or parts of the interface that transclude that field will be automatically re-rendered -- just like with the results of a filter, or the formulas in a spreadsheet. Because of the [[draft mechanism|Browsing Your Tiddlers]], though, if you're editing a tiddler within the story river, you have to save that tiddler before the – while you edit a tiddler in the story river, you're not actually editing that tiddler itself, but rather a draft copy of it, and your changes only go into the actual tiddler when you save.
+As soon as you update a field of a tiddler, any open tiddlers or parts of the interface that transclude that field will be automatically re-rendered -- just like with the results of a filter, or the formulas in a spreadsheet. Because of the [[draft mechanism|Browsing Your Tiddlers]], though, if you're editing a tiddler within the story river, you have to save that tiddler before the changes appear – while you edit a tiddler in the story river, you're not actually editing that tiddler itself, but rather a draft copy of it, and your changes only go into the actual tiddler when you save.
 
 Just like you can use the value of a variable or the result of a procedure call as an attribute of a widget, you can use the value of a field transclusion as an attribute of a widget. For example, suppose we had a field on the current tiddler called `wikipedia-reference` that contained the name of a Wikipedia article it was based on, and we wanted to create a link to it:
 
 ```html
-<$macrocall $name="wikipediaLink" article={{!!wikipedia-reference}} />
+<$transclude $variable="wikipediaLink" article={{!!wikipedia-reference}} />
 ```
 
 Notice the similarity in form between the three wikitext methods we've encountered for referring to other content:
@@ -38,9 +38,9 @@ Directly including entire tiddlers within other tiddlers, like `{{My Other Tiddl
 
 !! A note on terminology
 
-Technically, the form `<<double angle brackets>>` is //also// a transclusion -- a ''variable transclusion'' or ''procedure transclusion''. In the document-management-systems world, the word //transclusion// refers to including some other document or content at the location of the reference, and procedures and variables do this just like field transclusions do.
+Technically, the form `<<double angle brackets>>` is //also// a transclusion -- a ''variable transclusion'' or ''procedure transclusion''. In the document-management-systems world, //transclusion// means including some other document or content at the location of the reference, and procedures and plain old variables do this just like field transclusions do.
 
-However, in non-technical contexts, people often use the term //transclusion// by itself to refer to a field transclusion. We will try to explicitly state what kind of transclusion we mean if it might be unclear, but for the most part you should read //transclusion// without a modifier as //field transclusion// in the remainder of this book.
+However, in non-technical contexts, people often use the term //transclusion// by itself to refer specifically to a field transclusion. We will try to explicitly state what kind of transclusion we mean if it might be unclear, but in the remainder of this book, you should read //transclusion// without a modifier as //field transclusion//.
 
 
 !! Exercises
