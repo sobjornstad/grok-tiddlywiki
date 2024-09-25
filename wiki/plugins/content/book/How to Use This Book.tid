@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20240907041159854
+modified: 20240925030812933
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -65,7 +65,7 @@ Click on each mode below for a description of what it entails.
 
 //Grok TiddlyWiki// is organized into chapters and sections. Each chapter covers a broad range of related topics, while each section covers one feature of TiddlyWiki, pattern of TiddlyWiki use, or organizational principle. Many sections will take as little as five minutes to read, but others ask you to follow along and do things in TiddlyWiki as you read, and still others are about unfamiliar concepts and may need several readings, so these will take longer. In most cases, the text is followed by exercises and/or takeaways (see below).
 
-Despite TiddlyWiki's emphasis on enabling nonlinear thinking, a linear mode of presentation is better for building understanding where it doesn't already exist, so this book is ''designed to be worked through from start to finish''; the sections build on each other, and it may be hard to do some of the later exercises without having done the previous ones. Even if you already know the basics of TiddlyWiki, starting from [[chapter 1|The Shape of TiddlyWiki]] shouldn't be a huge sacrifice. The first parts will go fast if you already know them well, but you may pick up some useful terms, concepts, and features that you haven't run across yet.
+Despite TiddlyWiki's emphasis on enabling nonlinear thinking, a linear mode of presentation is better for building understanding where it doesn't already exist, so this book is ''designed to be worked through from start to finish''; the sections build on each other, and it may be hard to do some of the later exercises without having done the previous ones. Even if you already know the basics of TiddlyWiki, starting from <<gtw.link-chapter-number "The Shape of TiddlyWiki">> shouldn't be a huge sacrifice. The first parts will go fast if you already know them well, but you may pick up some useful terms, concepts, and features that you haven't run across yet.
 
 Although I have made some concessions in the interest of placing related material together, the chapters generally go in increasing order of complexity and decreasing order of utility, so you can stop for a while whenever you feel you've learned what you need to know for the time being. If you do need to skip ahead, or you come back to the book later to use it as a reference, I try to link back to previous material required to understand each section, when practical. In addition to appearing throughout the text, all of the links found in a section are aggregated under the //show related topics// link in the footer.
 

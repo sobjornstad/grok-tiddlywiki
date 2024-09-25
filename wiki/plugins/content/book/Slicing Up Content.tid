@@ -1,6 +1,6 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20240614035012661
+modified: 20240925031119805
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
@@ -29,9 +29,9 @@ Nouns also relate to other nouns. For instance, they might be ''part of another 
 
 Tiddlers can serve in several more complicated roles as well. They still model nouns, but those nouns do more than just store information about a thing:
 
-* They can ''gather together lists of other nouns'' that meet some criteria; in this way, they act like //sentences//, enumerating and expressing the relationships between other things. Their titles [[can then give the relationship a concise name|Tiddler Titles]]. We'll learn about this role in [[chapter 3|Filtering and Formatting]], specifically when we [[create dynamic lists|Your First Dynamic List]].
-* They can ''modify the way we see other tiddlers''; in this way, they act like //lenses//. We'll learn about this role in [[chapter 4|Variables, Macros, and Transclusions]], specifically in the section on [[templates|Templates and the Current Tiddler]].
-* They can ''perform actions'' and modify other nouns; in this way, they act like //machines//. We'll learn about this role in [[chapter 6|Looking Under the Hood]] and [[chapter 7|Tips and Tricks]].
+* They can ''gather together lists of other nouns'' that meet some criteria; in this way, they act like //sentences//, enumerating and expressing the relationships between other things. Their titles [[can then give the relationship a concise name|Tiddler Titles]]. We'll learn about this role in <<gtw.link-chapter-number "Filtering and Formatting">>, specifically when we [[create dynamic lists|Your First Dynamic List]].
+* They can ''modify the way we see other tiddlers''; in this way, they act like //lenses//. We'll learn about this role in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>, specifically in the section on [[templates|Templates and the Current Tiddler]].
+* They can ''perform actions'' and modify other nouns; in this way, they act like //machines//. We'll learn about this role in <<gtw.link-chapter-number "Looking Under the Hood">> and <<gtw.link-chapter-number "Tips and Tricks">>.
 
 To summarize, the key discipline of slicing up your tiddlers is to consider what noun(s) you're modeling, and ensure that only content related to each noun ends up in its tiddler, creating more tiddlers and relating them together as necessary to express more complex ideas.
 
@@ -53,7 +53,7 @@ In the //Grok TiddlyWiki// wiki, each chapter and section has a tiddler. Section
 
 You can see that the book is neatly divided into its component parts and concepts by this model. Some of the section tiddlers are a little longer than I would consider ideal, but I felt keeping a one-to-one correspondence between tiddlers and sections of the book was more important than the size of those tiddlers, and if a section got too long, I looked to split up the section.
 
-You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Transclusions]], which we'll learn about in chapter 4, and in some cases [[filters|Filters]], which we'll learn about in chapter 3.
+You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Transclusions]], which we'll learn about in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>, and in some cases [[filters|Filters]], which we'll learn about in <<gtw.link-chapter-number "Filtering and Formatting">>.
 
 
 !! In our sample wiki

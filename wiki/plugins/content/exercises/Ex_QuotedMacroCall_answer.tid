@@ -1,6 +1,6 @@
 created: 20200603224332671
 length: s
-modified: 20240911131625105
+modified: 20240925031929579
 tags: Answer
 title: Ex:QuotedMacroCall/answer
 type: text/vnd.tiddlywiki
@@ -19,6 +19,6 @@ The quotation marks should be omitted even if the macro call has spaces in it. S
 
 But you might have noticed that while the link URL is incorrect, the text is correct. What's up with that?
 
-We'll discuss this further in [[chapter 6|Macros, Wikification, and Widgets]], but for now, notice that `articleName` is used in backticks as an attribute, with the `$(variable name)$` syntax, while `<<linkText>>` is used directly in wikitext. This turns out to be the difference! When the value of the `href` attribute is evaluated, TiddlyWiki just takes the exact text of the variable -- in this case `<<article>>` -- and plops it into the URL string, and then it's done. In contrast, when the value of `<<linkText>>` is evaluated, TiddlyWiki indeed also replaces it with `<<description>>`, but when TiddlyWiki parses wikitext (rather than single strings of text in attributes), it keeps processing the result of each replacement over and over again, evaluating any further references until there are no more. (We say it parses //recursively//.) So on the second pass, it sees a variable `<<description>>` and replaces it with its value `An animal`, and everything is dandy.
+We'll discuss this further in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, but for now, notice that `articleName` is used in backticks as an attribute, with the `$(variable name)$` syntax, while `<<linkText>>` is used directly in wikitext. This turns out to be the difference! When the value of the `href` attribute is evaluated, TiddlyWiki just takes the exact text of the variable -- in this case `<<article>>` -- and plops it into the URL string, and then it's done. In contrast, when the value of `<<linkText>>` is evaluated, TiddlyWiki indeed also replaces it with `<<description>>`, but when TiddlyWiki parses wikitext (rather than single strings of text in attributes), it keeps processing the result of each replacement over and over again, evaluating any further references until there are no more. (We say it parses //recursively//.) So on the second pass, it sees a variable `<<description>>` and replaces it with its value `An animal`, and everything is dandy.
 
 In this case, the only bad effect of quoting `<<description>>` is that you make TiddlyWiki take very slightly longer to render the tiddler when you view it, since it has to do an extra step (and it's so fast at this you would never notice). But to avoid confusion, don't do that without a good reason -- if you don't really //mean// that you want to literally pass the text `<<article>>` to the procedure, don't write it that way.

@@ -1,5 +1,5 @@
 created: 20200717224206811
-modified: 20240924000324303
+modified: 20240925031640971
 tags: Answer
 title: Ex:FixingContactTabs/answer
 type: text/vnd.tiddlywiki
@@ -26,4 +26,4 @@ The TiddlyWiki documentation gives the following cleaner version using the `$tra
 </$tiddler>
 ```
 
-We'll talk about both of these widgets in [[chapter 7|Tips and Tricks]].
+We'll talk about both of these widgets in <<gtw.link-chapter-number "Tips and Tricks">>.

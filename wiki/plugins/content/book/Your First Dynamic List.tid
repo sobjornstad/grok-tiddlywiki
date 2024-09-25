@@ -1,6 +1,6 @@
 created: 20200603023508451
 description: You can create lists of tiddlers that automatically update to show all the tiddlers that currently match a filter.
-modified: 20210409172018970
+modified: 20240925031514613
 parent: Filtering and Formatting
 tags: Section
 title: Your First Dynamic List
@@ -33,7 +33,7 @@ When the list widget is used without any contents, like we did above, it simply 
 </$list>
 ```
 
-That's better! But you're probably wondering, what the heck is this `<<currentTiddler>>` thing? We'll be talking more about the concept of the [[current tiddler|Templates and the Current Tiddler]], as well as the `<<double angle bracket>>` [[syntax|Variables]], in [[chapter 4|Variables, Macros, and Transclusions]]. For now, just think of it as a placeholder for “the item in the list currently being processed”. (If you've done any programming, the `$list` widget is much like a loop: the contents of the widget are displayed once for each output tiddler in the filter.)
+That's better! But you're probably wondering, what the heck is this `<<currentTiddler>>` thing? We'll be talking more about the concept of the [[current tiddler|Templates and the Current Tiddler]], as well as the `<<double angle bracket>>` [[syntax|Variables]], in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>. For now, just think of it as a placeholder for “the item in the list currently being processed”. (If you've done any programming, the `$list` widget is much like a loop: the contents of the widget are displayed once for each output tiddler in the filter.)
 
 There's one more problem here, which is that we haven't actually listed our meetings from newest to oldest. Let's fix that by adding a `sort` filter step:
 

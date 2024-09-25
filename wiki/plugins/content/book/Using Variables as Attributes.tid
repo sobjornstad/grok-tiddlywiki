@@ -1,6 +1,6 @@
 created: 20240616152105208
 description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
-modified: 20240924122615451
+modified: 20240925031729639
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Using Variables as Attributes
@@ -58,7 +58,7 @@ It turns out that we need an entirely new syntax to achieve this. We can use //j
 
 Those funny <code>&#96;</code>'s are called ''backticks''. On a standard US keyboard, you can find the backtick (also called the //grave accent//) to the left of the 1 key. Other keyboards have it in weirder places or even on the AltGr layer; you may have to do a quick web search to learn how to type it on your keyboard.
 
-Within a substituted attribute value, the syntax `$(wpBase)$` refers to the value of the variable `wpBase`. The way in which this differs from `<<wpBase>>` is somewhat arcane, so we'll hold off on discussing it until we learn about [[Macros]] in [[chapter 6|Macros, Wikification, and Widgets]]. For now, suffice it to say that you should refer to variables with this `$()$` syntax within substituted attribute values.
+Within a substituted attribute value, the syntax `$(wpBase)$` refers to the value of the variable `wpBase`. The way in which this differs from `<<wpBase>>` is somewhat arcane, so we'll hold off on discussing it until we learn about [[macros|Macros]] in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>. For now, suffice it to say that you should refer to variables with this `$()$` syntax within substituted attribute values.
 
 
 !! Exercises

@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20240925024524236
+modified: 20240925031835901
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: The Finer Points of Procedures
@@ -14,7 +14,7 @@ We just skimmed the surface of procedures in the previous section, and you may b
 
 In the [[Variables]] section, we learned that after the closing `</$set>` or `</$let>` tag, a variable goes out of scope and is no longer available for use. So you might wonder, what's the scope of a procedure?
 
-The answer is, generally, the procedure is available until the end of the tiddler. It's also possible to define //global procedures// -- ones that you can use across any tiddler in your wiki. We'll discuss how to do that [[in chapter 5|Much More Than You Wanted to Know About Scopes]].
+The answer is, generally, the procedure is available until the end of the tiddler. It's also possible to define //global procedures// -- ones that you can use across any tiddler in your wiki. We'll discuss how to do that in [[Much More Than You Wanted to Know About Scopes]], next chapter.
 
 </$details><$details summary="Procedures can have zero parameters">
 

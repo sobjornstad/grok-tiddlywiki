@@ -1,6 +1,6 @@
 created: 20200530170256021
 description: Links tell TiddlyWiki what ideas (tiddlers) in your wiki are related to each other.
-modified: 20240614020036862
+modified: 20240925031357001
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Links
@@ -20,7 +20,7 @@ Here's an example of these two kinds of links. {{Live Examples}}
 
 As you likely expect from your past experience of links, clicking on a link to another tiddler opens that tiddler (usually as a new item in the [[story river|The TiddlyWiki Interface]]). In addition to this obvious function, however, TiddlyWiki links also ''define relationships between tiddlers'' and let you search based on these relationships. For instance, you can get a list of all tiddlers that link //to// a particular tiddler (these are called //backlinks//, and often allow you to find relationships between ideas you wouldn't have realized were related otherwise). Or you can get a list of all the people you linked to anywhere in your notes on a particular conference. This is a powerful idea that plays a large part in [[making TiddlyWiki human-shaped|Why TiddlyWiki?]]: our brains think most naturally in terms of links and relationships between things, not in hierarchies and attributes.
 
-As an example, here are the backlinks of this //Links// section, i.e., the other sections in the book that link here. In [[chapter 3|Filtering and Formatting]], you'll learn how to query your wiki like this, as well as how to turn the results into lists that update automatically, like this one.
+As an example, here are the backlinks of this //Links// section, i.e., the other sections in the book that link here. In <<gtw.link-chapter-number "Filtering and Formatting">>, you'll learn how to query your wiki like this, as well as how to turn the results into lists that update automatically, like this one.
 
 <<list-links "[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] -[[Wr:Links]]">>
 

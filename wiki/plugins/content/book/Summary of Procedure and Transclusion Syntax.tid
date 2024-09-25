@@ -1,6 +1,6 @@
 created: 20210320182859703
 description: Review all the syntax used for reusing and relating content in TiddlyWiki.
-modified: 20240907020028490
+modified: 20240925032224727
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Summary of Procedure and Transclusion Syntax
@@ -28,7 +28,7 @@ The following types of references work both within [[wikitext|Wikitext]] and [[f
 * `{{tiddler}}` to transclude the `text` field of a tiddler
 * `{{tiddler!!field}}` to transclude a different field of a tiddler
 * `{{!!field}}` to transclude a field of the [[current tiddler|Templates and the Current Tiddler]]
-* `{{tiddler##index}}` to transclude a property of a [[data tiddler|Data Tiddlers]] (we'll learn about data tiddlers in [[chapter 5|More Organizational Tools]])
+* `{{tiddler##index}}` to transclude a property of a [[data tiddler|Data Tiddlers]] (we'll learn about data tiddlers in <<gtw.link-chapter-number "More Organizational Tools">>)
 * `{{tiddler||Template}}` to transclude a tiddler [[through a template|Templates and the Current Tiddler]]
 * `{{||Template}}` to transclude the current tiddler through a template
 
