@@ -2,7 +2,7 @@ caption: 7: Looking Under the Hood
 created: 20200717225720913
 description: In which we follow the implications of everything being a tiddler to their conclusions: TiddlyWiki can be extensively customized with little more than the tools we've already learned.
 list: [[System Tiddlers]] Plugins [[Shadow Tiddlers]] [[The View Template]] [[Adding to the Sidebar]] Stamps [[Creating a List of Links and Backlinks]] [[Buttons and Input Widgets]] [[Creating Tiddlers With Predefined Fields]] Cascades
-modified: 20240910015427818
+modified: 20240926003340106
 parent: Outline
 tags: Chapter
 title: Looking Under the Hood
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 
 Everything we've learned about tiddlers so far ''can also be applied to the functionality of TiddlyWiki itself'', because everything's a tiddler!  After completing this chapter, you'll be able to customize TiddlyWiki's interface and behavior in a variety of useful ways, such as by adding buttons to the toolbars, placing predefined content on tiddlers matching some criteria, and creating new forms and interface elements.
 
-We'll start by looking at [[system tiddlers|System Tiddlers]], [[plugins|Plugins]], and [[shadow tiddlers|Shadow Tiddlers]], which are extensions to the normal understanding of [[tiddlers|Tiddlers]]. Then we'll see how mechanisms built into TiddlyWiki allow us to edit parts of TiddlyWiki's interface and link our own entirely new tiddlers into it -- whether that's the [[set of built-in macros|Global Macros]], the [[sidebar|Adding to the Sidebar]], or [[tiddlers in the story river|The View Template]]. And we'll work through several example customizations so you can see how these features will be used.
+We'll start by looking at [[system tiddlers|System Tiddlers]], [[plugins|Plugins]], and [[shadow tiddlers|Shadow Tiddlers]], which are extensions to the normal understanding of [[tiddlers|Tiddlers]]. Then we'll see how mechanisms built into TiddlyWiki allow us to edit parts of TiddlyWiki's interface and link our own entirely new tiddlers into it -- whether that's the [[sidebar|Adding to the Sidebar]], [[tiddlers in the story river|The View Template]], or [[buttons on a toolbar|Buttons and Input Widgets]]. And we'll work through several example customizations so you can see how these features can be used in real life.
 
 !! In this chapter
 

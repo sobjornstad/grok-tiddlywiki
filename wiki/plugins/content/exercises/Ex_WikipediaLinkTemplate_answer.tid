@@ -1,10 +1,10 @@
 created: 20201122165936723
-modified: 20201122165910736
+modified: 20240926002830406
 tags: Answer
 title: Ex:WikipediaLinkTemplate/answer
 type: text/vnd.tiddlywiki
 
-First, create a tiddler called `WikipediaMetadata` and set its `url` field to `https://en.wikipedia.org/wiki/`. (You could also make a tiddler containing only the URL, in the `text` field, and create other tiddlers if you needed to maintain other information about Wikipedia; it's up to you what makes the most sense.)
+First, create a tiddler called `WikipediaMetadata` and set its `url` field to `https://en.wikipedia.org/wiki/`. (You could also make a tiddler containing only the URL, in the `text` field, and create other tiddlers if you needed to maintain other information about Wikipedia; it's up to you.)
 
 Then in `WikipediaLinkTemplate`:
 
@@ -15,9 +15,9 @@ Then in `WikipediaLinkTemplate`:
 And to use this tiddler:
 
 ```html
-<$set name="articleName" value="Aardvark">
+<$let articleName="Aardvark">
   {{WikipediaLinkTemplate}}
-</$set>
+</$let>
 ```
 
 Notice that treating the `WikipediaLinkTemplate` as a template by placing `||` prior to its name in the transclusion is not necessary, as it does not access any of the fields of the current tiddler.

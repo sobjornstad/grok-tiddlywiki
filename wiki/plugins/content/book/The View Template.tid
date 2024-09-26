@@ -1,6 +1,6 @@
 created: 20200718024513554
 description: The ViewTemplate is a special template TiddlyWiki uses internally to render each story in the story river; you can customize it to add custom content to all tiddlers or a subset of tiddlers.
-modified: 20210418135236805
+modified: 20240926004421049
 parent: Looking Under the Hood
 tags: Section
 title: The View Template
@@ -20,7 +20,7 @@ If you open up and edit $:/core/ui/ViewTemplate, you'll see something of a horne
 </$list>
 ```
 
-This is beautiful, because it means most of the time we need not edit the ViewTemplate itself (and thus have to override a complicated shadow tiddler that could change in a future version of TiddlyWiki). Instead, we merely have to ''adjust the individual tiddlers'' tagged with `$:/tags/ViewTemplate` which define parts of the interface. Go ahead and find that tag in the ''Explorer'' and open it up. You'll see that it has a `list` field, to place the interface elements which appear when rendering a tiddler in a certain order (see [[Ordering Tiddlers]]). In a default installation as of TiddlyWiki 5.1.23, the list looks like this:
+This is beautiful, because it means most of the time we need not edit the ViewTemplate itself (and thus have to override a complicated shadow tiddler that could change in a future version of TiddlyWiki). Instead, we merely have to ''adjust the individual tiddlers'' tagged with `$:/tags/ViewTemplate` which define parts of the interface. Go ahead and find that tag in the ''Explorer'' and open it up. You'll see that it has a `list` field, to place the interface elements which appear when rendering a tiddler in a certain order (see [[Ordering Tiddlers]]). In a default installation as of TiddlyWiki 5.3.5, the list looks like this:
 
 * $:/core/ui/ViewTemplate/title
 * $:/core/ui/ViewTemplate/unfold

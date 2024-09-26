@@ -1,6 +1,6 @@
 created: 20201122165908150
 length: m
-modified: 20210130174642422
+modified: 20240926002852845
 origin: Filters and Transclusions
 tags: Exercise
 title: Ex:WikipediaLinkTemplate
@@ -8,4 +8,4 @@ type: text/vnd.tiddlywiki
 
 Make the solution of the [[previous exercise|Ex:WikipediaLinkWithoutMacro]] into a separate `WikipediaLinkTemplate` tiddler that can be transcluded, so that it can be used for creating links to more things than just aardvarks. As we learned in [[Ex:VariableTransclusion]], variable values will carry across transclusion boundaries, so refer to the value of a variable called `articleName` to decide what article to link to.
 
-While you're at it, make this template more robust by getting the value `https://en.wikipedia.org/wiki` from another tiddler; this way, we can reference the base URL of Wikipedia from other places, and only have to update it in one place if it changes.
+While you're at it, make this template more robust by getting the value `https://en.wikipedia.org/wiki/` from another tiddler; this way, we can reference the base URL of Wikipedia from other places, and only have to update it in one place if it changes.
