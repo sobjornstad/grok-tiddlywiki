@@ -1,5 +1,5 @@
 created: 20210116203958811
-modified: 20240727194550308
+modified: 20240925234717347
 tags: 
 title: Sn:TextBeforeMacro
 type: text/vnd.tiddlywiki
@@ -7,5 +7,6 @@ type: text/vnd.tiddlywiki
 Text before a macro
 
 \procedure wikipediaLink(articleName)
-[[Wikipedia: $articleName$|https://en.wikipedia.org/wiki/$articleName$]]
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+    Wikipedia: <<articleName>></a>
 \end

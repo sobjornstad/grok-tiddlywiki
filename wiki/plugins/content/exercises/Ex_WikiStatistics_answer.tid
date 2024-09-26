@@ -1,5 +1,5 @@
 created: 20201122040339373
-modified: 20221015160609158
+modified: 20240926000644195
 tags: Answer
 title: Ex:WikiStatistics/answer
 type: text/vnd.tiddlywiki
@@ -8,10 +8,10 @@ type: text/vnd.tiddlywiki
 <ul>
   <li>There are <$text text={{{ [tag[Contact]count[]] }}}/> people in this wiki.</li>
   <li>There are <$text text={{{ [tag[Meeting]links[]count[]] }}}/> tiddlers linked from meetings.</li>
-  <$set name="totalTiddlers" value={{{ [!is[system]count[]] }}}>
+  <$let totalTiddlers={{{ [!is[system]count[]] }}}>
     <li><$text text={{{ [tag[Contact]count[]divide<totalTiddlers>multiply[100]precision[3]] }}}/>% of all non-system tiddlers in the wiki are contacts.</li>
-  </$set>
+  </$let>
 </ul>
 ```
 
-Note the use of an HTML list. If we tried to do the list in pure wikitext with `*`, we would have been unable to place the third bullet point in the same list as the first two, as the `$set` widget coming in between causes TiddlyWiki to forget that a list was in progress. We could have put the set widget around the //entire// list, but then it would have been harder to understand what we were doing since the first part of the calculation would have been physically separated from the second part. Always prioritize readability in your wikitext!
+Note the use of an HTML list. If we tried to do the list in pure wikitext with `*`, we would have been unable to place the third bullet point in the same list as the first two, as the `$let` widget coming in between causes TiddlyWiki to forget that a list was in progress. We could have put the `$let` widget around the //entire// list, but then it would have been harder to understand what we were doing since the first part of the calculation would have been physically separated from the second part. Always prioritize readability in your wikitext!

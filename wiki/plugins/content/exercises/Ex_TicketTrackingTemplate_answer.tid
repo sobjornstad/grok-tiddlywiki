@@ -1,5 +1,5 @@
 created: 20200605153922962
-modified: 20210327153247824
+modified: 20240925232044467
 tags: Answer
 title: Ex:TicketTrackingTemplate/answer
 type: text/vnd.tiddlywiki
@@ -7,11 +7,11 @@ type: text/vnd.tiddlywiki
 In the `TicketNumberLink` tiddler:
 
 ```html
-\define ticketLink(ticketId)
-[[Ticket #$ticketId$|https://tix.example.com/ticket/$ticketId$]]
+\procedure ticketLink(ticketId)
+<a href=`https://tix.example.com/ticket/$(ticketId)$`>Ticket <<ticketId>></a>
 \end
 
-<$macrocall $name="ticketLink" ticketId={{!!ticketnum}} />
+<$transclude $variable="ticketLink" ticketId={{!!ticketnum}} />
 ```
 
 In the `OnboardingProcess` tiddler:

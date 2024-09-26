@@ -1,6 +1,6 @@
 created: 20240616152105208
 description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
-modified: 20240925031729639
+modified: 20240926000528512
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Using Variables as Attributes
@@ -33,6 +33,8 @@ However, variable references //do// work as attribute values. So an easy solutio
 
 {{Sn:WikipediaAElement||MagicSnippet}}
 
+Depending on the [[palette|Tweaking Your Settings]] you have selected, you may notice that links to external sites that use the `a` tag are a different color than is usual in your wiki. If this bothers you, add the attribute `class="tc-tiddlylink-external"` to the `<a>` tag, which will tell TiddlyWiki to use the same styling that it would if you created an external link with `[[double square brackets]]`.
+
 
 !! Multiple links to different Wikipedia articles
 
@@ -62,6 +64,8 @@ Within a substituted attribute value, the syntax `$(wpBase)$` refers to the valu
 
 
 !! Exercises
+
+{{Ex:ProcedureAdjacency||ExerciseTemplate}}
 
 
 !! Takeaways

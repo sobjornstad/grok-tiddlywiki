@@ -1,5 +1,5 @@
 created: 20200604020245387
-modified: 20210409201410771
+modified: 20240925230029291
 tags: Answer
 title: Ex:JaneManagerPhone/answer
 type: text/vnd.tiddlywiki
@@ -12,29 +12,16 @@ Jane's manager's phone number is {{ChrisSmith!!phone}}.
 
 Now for trying to make it grab the manager's name from the `manager` field on the fly. You may have been tempted to try:
 
-
 ```html
 {{ {{!!manager}}!!phone }}
 ```
 
-…but unfortunately this does not work.
+…but unfortunately this does not work; TiddlyWiki doesn't parse wikitext within `<<>>` or `{{}}`, so variable and field transclusions cannot be nested.
 
-There are actually two separate reasons it doesn't work. First, TiddlyWiki doesn't parse other wikitext within `{{double curly braces}}`, it only looks for a tiddler name/field. Second, even if it did, it would fail for the same reason that this didn't work in an [[exercise|Ex:MacroAdjacency]] in [[Macros]]:
-
-```html
-<<wikipediaLink>>Aardvark
-```
-
-If you need a refresher, TiddlyWiki processes the contents of transclusions (of variables and macros, as we saw before, as well as of fields) separately from the surrounding content, so the result of `{{!!manager}}` (namely, `ChrisSmith`) is an entirely separate piece of wikitext to TiddlyWiki. Thus, what it would see would be three separate, unconnected pieces: `{{`, `ChrisSmith`, and `!!phone }}`.
-
-Here's a method that works and uses only tools we've already seen. If you worked at it long enough, you might have gotten this or something similar:
+Instead, you can use the `$transclude` widget and pass the transclusion of the manager's name as the value of the `$tiddler` parameter:
 
 ```html
-\define getPhone(person)
-{{$person$!!phone}}
-\end
-
-Jane's manager's phone number is: <$macrocall $name="getPhone" person={{!!manager}} />
+<$transclude $tiddler={{!!manager}} $field="phone"/>
 ```
 
-That said, understanding //why// this works when `{{ {{!!manager}}!!phone }}` doesn't is likely beyond your TiddlyWiki knowledge at this point, so don't feel too bad if you didn't get it. We'll see the explanation in [[Text Substitution]].
+It's possible to create additional levels of indirection (e.g., to get Jane's manager's manager), but to do it elegantly, we will need to know how to store the results of filters to a variable, which will be in an upcoming section.

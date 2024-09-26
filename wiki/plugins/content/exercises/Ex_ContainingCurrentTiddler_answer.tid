@@ -1,17 +1,17 @@
 created: 20200605153116452
-modified: 20210521203020996
+modified: 20240925231405488
 tags: Answer
 title: Ex:ContainingCurrentTiddler/answer
 type: text/vnd.tiddlywiki
 
 ```html
-<$set name=previousCurrentTiddler value=<<currentTiddler>> >
+<$let previousCurrentTiddler=<<currentTiddler>> >
 <ul>
   <$list filter="[tag[Meeting]!sort[at]]">
     <li>An item on <<previousCurrentTiddler>>: <$link to=<<currentTiddler>>/></li>
   </$list>
 </ul>
-</$set>
+</$let>
 ```
 
 It turns out this is a sufficiently common pattern that there's an attribute you can add to the `$list` widget to make it easier, called `variable`. This attribute defaults to `currentTiddler`, but if you set it to something else, the current tiddler will be unmodified and that other variable will contain the current item being listed:

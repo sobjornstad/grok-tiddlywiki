@@ -1,24 +1,19 @@
 created: 20201122165712594
-length: m
-modified: 20210130175033254
+length: s
+modified: 20240926000438370
 origin: Filters and Transclusions
 tags: Exercise
 title: Ex:WikipediaLinkWithoutMacro
 type: text/vnd.tiddlywiki
 
-In [[Ex:MacroAdjacency]] within the [[Macros]] section, we found that this attempt to use a simple variable instead of a macro to compose a Wikipedia link didn't work:
+In [[Ex:ProcedureAdjacency]] back in [[Using Variables as Attributes]], we found that this attempt to use a simple variable instead of a macro to compose a Wikipedia link didn't work:
 
 ```html
-<$set name="wikipedia" value="https://en.wikipedia.org/wiki/">
-    <<wikipedia>>Aardvark
-</$set>
+<$let wikipedia="https://en.wikipedia.org/wiki/">
+	<<wikipedia>>Aardvark
+</$let>
 ```
 
-We now have the tools needed to accomplish this without a macro. Your solution should display a link to the Aardvark article which has been built from the `wikipedia` variable shown above and the constant part `Aardvark`, but without using a macro.
+Make this example work by replacing the `<<wikipedia>>Aardvark` line with an `a` element using a `{{{ filtered transclusion }}}`.
 
-* You will need the filter operator `addsuffix`.
-* You'll need to use the HTML tag `a`, which creates an //anchor//, including a link. The form of this tag is as follows:
-
-```html
-<a href="the URL">the link text</a>
-```
+//Tip//: The filter operator `addsuffix` will come in handy.

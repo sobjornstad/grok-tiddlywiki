@@ -1,0 +1,9 @@
+created: 20240925234625552
+length: s
+modified: 20240925235556148
+origin: Using Variables as Attributes
+tags: Exercise
+title: Ex:ProcedureAdjacency
+type: text/vnd.tiddlywiki
+
+What if we don't want to have any text at all except for the URL itself in our Wikipedia link? Try setting a variable `wikipedia` to `https://en.wikipedia.org/wiki` and placing a reference to the variable immediately next to the word `Aardvark`. What happens? Why do you think this happens?

@@ -1,0 +1,9 @@
+created: 20240925235448341
+modified: 20240925235521849
+tags: 
+title: Sn:AardvarkChunkLink
+type: text/vnd.tiddlywiki
+
+<$let wikipedia="https://en.wikipedia.org/wiki/">
+	<<wikipedia>>Aardvark
+</$let>
