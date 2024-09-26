@@ -1,14 +1,14 @@
 created: 20200718211403194
 creator: soren
 description: Buttons and input widgets allow you to create custom user interfaces that edit fields and take actions in the wiki.
-modified: 20210818190733312
+modified: 20240926120922559
 modifier: soren
 parent: Looking Under the Hood
 tags: Section
 title: Buttons and Input Widgets
 type: text/vnd.tiddlywiki
 
-So far, all we've done to customize TiddlyWiki is make new, more or less static content of various kinds show up in various places in the wiki: macros, tiddler content, sidebar tabs, snippets. This is all well and good, but sometimes we want to ''add interface elements the user can actively interact with'' as well. In other words, we want to be able to build the //machine// tiddlers we discussed in [[Slicing Up Content]].
+So far, all we've done to customize TiddlyWiki is make new, more or less static content of various kinds show up in various places in the wiki: tiddler content, sidebar tabs, snippets. This is all well and good, but sometimes we want to ''add interface elements the user can actively interact with'' as well. In other words, we want to be able to build the //machine// tiddlers we discussed in [[Slicing Up Content]].
 
 The most basic tools for active interaction are ''buttons'' and ''text boxes'' that the user can click on and type into to perform simple tasks. Let's look at how these work.
 

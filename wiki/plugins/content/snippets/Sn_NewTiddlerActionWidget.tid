@@ -1,10 +1,10 @@
 created: 20210116213436453
-modified: 20210130145355721
+modified: 20240926121258905
 tags: 
 title: Sn:NewTiddlerActionWidget
 type: text/vnd.tiddlywiki
 
-\define newTiddlerActionWidget()
+\procedure newTiddlerActionWidget()
 <$action-sendmessage
   $message="tm-new-tiddler"
   title="My New Tiddler"

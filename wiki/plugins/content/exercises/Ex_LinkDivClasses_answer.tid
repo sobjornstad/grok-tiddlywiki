@@ -1,35 +1,33 @@
 created: 20200718201623464
-modified: 20210418151529023
+modified: 20240926120613659
 tags: Answer
 title: Ex:LinkDivClasses/answer
 type: text/vnd.tiddlywiki
 
 ```html
-\define excerptify(title)
-  <$wikify name=wikitext text={{$title$}}>
-    <$text text={{{ [<wikitext>split[]first[200]join[]] }}} />...
+\procedure excerptify(title)
+  <$wikify name="contents" text={{{ [<title>get[text]] }}}>
+    <$text text={{{ [<contents>split[]first[200]join[]] }}} />...
   </$wikify>
 \end
 
-\define linkDisplay(title, filterFragment, cssClass)
-<div class=<<__cssClass__>>>
-$title$:
+\procedure linkDisplay(title, subfilter, className)
+  <div class=<<className>>>
+    <<title>>:
 
-<ul>
-<$list filter="[all[current]$filterFragment$]">
-  <li>
-    <$link />
-    <div class="sib-excerpt">
-      <$macrocall $name="excerptify" title={{!!title}}/>
-    </div>
-  </li>
-</$list>
-</ul>
-</div>
+    <ul>
+      <$list filter="[all[current]subfilter<subfilter>]">
+        <li>
+				  <$link />:
+				  <div class="sib-links-excerpt"><$transclude $variable="excerptify" title={{!!title}}/></div>
+				</li>
+      </$list>
+    </ul>
+  </div>
 \end
 
-<div class="sib-link-display">
-  <<linkDisplay "Links" "links[]" "sib-links">>
-  <<linkDisplay "Backlinks" "backlinks[]" "sib-backlinks">>
+<div class="sib-links-container">
+  <<linkDisplay "Links" "[links[]]" "sib-links-forward">>
+  <<linkDisplay "Backlinks" "[backlinks[]]" "sib-links-backward">>
 </div>
 ```

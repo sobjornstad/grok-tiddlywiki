@@ -1,11 +1,11 @@
 created: 20200822192038282
-modified: 20210109215025269
+modified: 20240926121337777
 tags: Answer
 title: Ex:NewContactButton/answer
 type: text/vnd.tiddlywiki
 
 ```html
-\define newContact()
+\procedure newContact()
   <$action-sendmessage
     $message="tm-new-tiddler"
     title="New Contact"

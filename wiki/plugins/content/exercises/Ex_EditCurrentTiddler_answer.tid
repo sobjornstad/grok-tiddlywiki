@@ -1,5 +1,5 @@
 created: 20210107230620928
-modified: 20211129232159174
+modified: 20240926121059178
 tags: Answer
 title: Ex:EditCurrentTiddler/answer
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ Quick and easy:
 
 ''A historical note'' that continues to have both practical and pedagogical relevance: Before TiddlyWiki 5.2.0, it was impractical to directly edit a field on the current tiddler, as the text box would lose focus every time you typed a single character, making typing anything into it infuriating. For this reason, when you browse existing wikis or look at old sample code, you may still see temporary tiddlers being used as the targets of edit boxes where they don't look like they would be useful.
 
-To understand why this happened previously, recall that whenever we make any change in the wiki, it is immediately reflected elsewhere -- for instance, a tiddler that is changed so that it newly matches a filter will immediately show up in any lists that use that filter. TiddlyWiki does this by notifying each widget displayed on the screen that a tiddler has changed and giving it a chance to refresh itself if it thinks it might need to display something different as a result of that tiddler changing. (Specifically, the //root widget//, at the "top" of the wiki, sends the news to all of its immediate child widgets, like the sidebar and the story river, then each of those transmit the news to their children, and so on until the message has propagated everywhere it is relevant.)
+To understand why this happened previously, recall that whenever we make any change in the wiki, it is immediately reflected elsewhere -- for instance, a tiddler that is changed so that it newly matches a filter will immediately show up in any lists that use that filter. TiddlyWiki does this by notifying each widget displayed on the screen that a tiddler has changed and giving it a chance to refresh itself if it thinks it might need to display something different as a result of that tiddler changing. (Specifically, the //root widget//, at the “top” of the wiki, sends the news to all of its immediate child widgets, like the sidebar and the story river, then each of those transmit the news to their children, and so on until the message has propagated everywhere it is relevant.)
 
 In versions prior to 5.2.0, anytime any field on a tiddler was changed, all transclusions of that tiddler were refreshed. That included the display of the whole tiddler in the story river and all its contents, since tiddlers are displayed in the story river [[by transcluding them through a template|The View Template]].
 The display of the tiddler in the story river of course included the edit widget -- and when a text box is removed from the page and re-rendered, its focus is lost.

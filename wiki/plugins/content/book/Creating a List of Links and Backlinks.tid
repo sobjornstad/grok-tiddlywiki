@@ -1,6 +1,6 @@
 created: 20200718160337924
 description: Dive into adding custom tooling to TiddlyWiki by building a list of outbound and inbound links that appears at the bottom of every tiddler.
-modified: 20210606143915261
+modified: 20240926120809780
 parent: Looking Under the Hood
 tags: Section
 title: Creating a List of Links and Backlinks
@@ -26,29 +26,29 @@ Most of this section will be presented as a series of exercises: you'll be given
 
 Custom formatting can be added to tiddlers using a //stylesheet//. Stylesheets are written in the [[CSS|https://en.wikipedia.org/wiki/Cascading_Style_Sheets]] (Cascading Style Sheets) language, an extremely powerful if slightly obtuse formatting language that controls the display of every web page you've ever looked at. You can either put a stylesheet in an individual tiddler within `<style>` tags (this is called an //inline// stylesheet) or make it global to the wiki. See [[Stylesheets]] if you know a little CSS and want more details on the options TiddlyWiki provides here.
 
-Teaching you CSS is outside the scope of this book -- and I'm no expert myself anyway -- so I'm just going to give you a stylesheet to use with this exercise. If you're interested in learning more, there are a wide variety of resources on the Internet.
+Teaching you CSS is outside the scope of this book, so I'm just going to give you a stylesheet to use with this exercise. If you're interested in learning more, there are a wide variety of resources on the Internet.
 
 ```css
 <style>
-div.sib-link-display {
+div.sib-links-container {
   border: 1px dashed white;
   overflow: auto;
   padding: 2px;
 }
-div.sib-link-display div ul {
+div.sib-links-container div ul {
   list-style-type: none;
   padding-left: 0;
 }
-div.sib-link-display div ul div.sib-excerpt {
+div.sib-links-container div ul div.sib-links-excerpt {
   padding-left: 1em;
   color: <<colour muted-foreground>>;
 }
-div.sib-links {
+div.sib-links-forward {
   width: 50%;
   float: left;
   padding-right: 0.5em;
 }
-div.sib-backlinks {
+div.sib-links-backward {
   width: 50%;
   float: right;
   padding-left: 0.5em;

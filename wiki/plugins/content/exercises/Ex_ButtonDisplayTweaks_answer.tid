@@ -1,5 +1,5 @@
 created: 20200822192711306
-modified: 20210109221836629
+modified: 20240926121453690
 tags: Answer
 title: Ex:ButtonDisplayTweaks/answer
 type: text/vnd.tiddlywiki
@@ -15,7 +15,7 @@ For a simple fix to the icon problem, just replace the text with an icon transcl
 </$list>
 ```
 
-Within the context of any button display, these variables will be defined as either "yes" or "no", and you can check using the above filters to see whether you should display each part. (Unless you plan to be translating your own wiki into different languages, you can safely hard-code the caption or put it in the `{{!!caption}}` field rather than putting it into a separate tiddler under `$:/language`.)
+Within the context of any button display, these variables will be defined as either `yes` or `no`, and you can check using the above filters to see whether you should display each part. (Unless you plan to be translating your own wiki into different languages, you can safely hard-code the caption or put it in the `{{!!caption}}` field rather than putting it into a separate tiddler under `$:/language`.)
 
 A related problem is that the button will still be square and not match the existing buttons. To fix this, add the `class` and `selectedClass` attributes that are used on the existing buttons:
 

@@ -1,5 +1,5 @@
 created: 20200718201238626
-modified: 20210418142500773
+modified: 20240926115335072
 tags: Answer
 title: Ex:BasicLinksList/answer
 type: text/vnd.tiddlywiki
@@ -7,37 +7,11 @@ type: text/vnd.tiddlywiki
 My tiddler now looks like this:
 
 ```html
-\define linkDisplay(title, filterFragment)
-$title$:
+\procedure linkDisplay(title, subfilter)
+<<title>>:
 
 <ul>
-<$list filter="[all[current]$filterFragment$]">
-  <li><$link /></li>
-</$list>
-</ul>
-\end
-
-<<linkDisplay "Links" "links[]">>
-<<linkDisplay "Backlinks" "backlinks[]">>
-```
-
-Let's talk about `filterFragment` for a moment. The way shown above is the simplest way to handle it, and TiddlyWiki's core does this in a number of macros, but if we didn't want to use [[text substitution|Text Substitution]], or we wanted to be able to reuse this macro in places where we didn't always want just the current tiddler, we could also make the entire filter the parameter to the macro (we'll call it `filterString`) and use parameter substitution instead:
-
-```html
-\define linkDisplay(title, filterString)
-[…]
-<$list filter=<<__filterString__>>>
-[…]
-```
-
-Another option would be to use `subfilter`. This filter operator takes an argument which is itself a filter run, and passes the current data into that run. Here's how we could do that:
-
-```html
-\define linkDisplay(title, filterFragment)
-$title$:
-
-<ul>
-<$list filter="[all[current]subfilter<__filterFragment__>]">
+<$list filter="[all[current]subfilter<subfilter>]">
   <li><$link /></li>
 </$list>
 </ul>
@@ -47,7 +21,6 @@ $title$:
 <<linkDisplay "Backlinks" "[backlinks[]]">>
 ```
 
-Two things to note here:
+`subfilter` runs the complete filter expression in its parameter with `subfilter`'s input tiddlers as the input tiddlers of the new expression.
 
-* Previously, the `filterFragment` parameter was just a single filter step. Now it has to be a complete filter run.
-* Using macro parameter substitution with `<<__param__>>` is valid inside a filter, so long as you use single angle brackets.
+You wouldn't have to use `subfilter` here if you didn't want to. You could use a [[macro|Macros]] with text substitution instead of a procedure and directly add `links[]` or `backlinks[]` into the filter expression, or you could just repeat `all[current]` in both filters; that would hardly be a horrible amount of repetition.

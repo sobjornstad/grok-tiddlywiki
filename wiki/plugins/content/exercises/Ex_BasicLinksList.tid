@@ -1,9 +1,9 @@
 created: 20200718201206937
 length: m
-modified: 20210130174304842
+modified: 20240926115120468
 origin: Creating a List of Links and Backlinks
 tags: Exercise
 title: Ex:BasicLinksList
 type: text/vnd.tiddlywiki
 
-Edit `$:/yourname/TiddlerLinkSummary` to show a list of the forward links as well. We don't want the wikitext to get too repetitive, so create a macro to hold the bits that are the same in both.
+Edit `$:/yourname/TiddlerLinkSummary` to show a list of the forward links as well. We don't want the wikitext to get too repetitive, so create a procedure to hold the bits that are the same in both. You may find the `subfilter` [[filter operator|https://tiddlywiki.com/#subfilter%20Operator]] helpful.

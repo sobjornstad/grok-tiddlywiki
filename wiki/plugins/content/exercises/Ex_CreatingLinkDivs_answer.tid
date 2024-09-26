@@ -1,33 +1,33 @@
 created: 20200718201524979
-modified: 20210327153046765
+modified: 20240926120244383
 tags: Answer
 title: Ex:CreatingLinkDivs/answer
 type: text/vnd.tiddlywiki
 
 ```html
-\define excerptify(title)
-  <$wikify name=wikitext text={{$title$}}>
-    <$text text={{{ [<wikitext>split[]first[200]join[]] }}} />...
+\procedure excerptify(title)
+  <$wikify name="contents" text={{{ [<title>get[text]] }}}>
+    <$text text={{{ [<contents>split[]first[200]join[]] }}} />...
   </$wikify>
 \end
 
-\define linkDisplay(title, filterFragment)
-<div>
-$title$:
+\procedure linkDisplay(title, subfilter)
+  <div>
+    <<title>>:
 
-<ul>
-<$list filter="[all[current]$filterFragment$]">
-  <li>
-    <$link to=<<currentTiddler>>><<currentTiddler>></$link>
-    <div><$macrocall $name="excerptify" title={{!!title}}/></div>
-  </li>
-</$list>
-</ul>
-</div>
+    <ul>
+      <$list filter="[all[current]subfilter<subfilter>]">
+        <li>
+				  <$link />:
+				  <div><$transclude $variable="excerptify" title={{!!title}}/></div>
+				</li>
+      </$list>
+    </ul>
+  </div>
 \end
 
 <div>
-  <<linkDisplay "Links" "links[]">>
-  <<linkDisplay "Backlinks" "backlinks[]">>
+  <<linkDisplay "Links" "[links[]]">>
+  <<linkDisplay "Backlinks" "[backlinks[]]">>
 </div>
 ```

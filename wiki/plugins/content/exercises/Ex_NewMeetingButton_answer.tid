@@ -1,11 +1,11 @@
 created: 20200822192244439
-modified: 20220103160317608
+modified: 20240926121350729
 tags: Answer
 title: Ex:NewMeetingButton/answer
 type: text/vnd.tiddlywiki
 
 ```html
-\define newMeetingAction()
+\procedure newMeetingAction()
 <$action-sendmessage
   $message="tm-new-tiddler"
   title="New Meeting"

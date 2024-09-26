@@ -1,6 +1,6 @@
 created: 20200718201326615
 length: m
-modified: 20210130174459855
+modified: 20240926115801167
 origin: Creating a List of Links and Backlinks
 tags: Exercise
 title: Ex:LinkedTiddlerExcerpt
@@ -8,12 +8,12 @@ type: text/vnd.tiddlywiki
 
 Add an excerpt for each link -- in other words, grab the first 200 characters of each tiddler and show it under the title. This will help us remind us what the tiddler is about, if the [[title wasn't chosen carefully enough|Tiddler Titles]].
 
-We can accomplish this by [[wikifying|Wikification]] the tiddler -- that is, processing the HTML, transclusions, and wikitext in it as if we were displaying the tiddler -- and then taking just the beginning portion of it. Here's a partially completed macro you can use to get an excerpt from a tiddler. Your task is to figure out what goes in the filter transclusion (to convert the full text of the tiddler to just its first 200 characters), then call the macro from an appropriate location.
+We can accomplish this by [[wikifying|Wikification]] the tiddler -- that is, processing the HTML, transclusions, and wikitext in it as if we were displaying the tiddler -- and then taking just the beginning portion of it. Here's a partially completed procedure you can use to get an excerpt from a tiddler. Your task is to figure out what goes in the filtered transclusions (to get the wikitext of the tiddler and convert the rendered wikitext to just its first 200 characters), then call the procedure from an appropriate location.
 
 ```html
-\define excerptify(title)
-  <$wikify name=wikitext text={{$title$}}>
-    <$text text={{{ ??? }}} />...
+\procedure excerptify(title)
+  <$wikify name="contents" text={{{ ... }}}>
+    <$text text={{{ ... }}} />...
   </$wikify>
 \end
 ```

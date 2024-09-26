@@ -1,5 +1,5 @@
 created: 20200718201356144
-modified: 20200718201400665
+modified: 20240926115836535
 tags: Answer
 title: Ex:LinkedTiddlerExcerpt/answer
 type: text/vnd.tiddlywiki
@@ -7,26 +7,24 @@ type: text/vnd.tiddlywiki
 Here's what I ended up with:
 
 ```html
-\define excerptify(title)
-  <$wikify name=wikitext text={{$title$}}>
-    <$text text={{{ [<wikitext>split[]first[200]join[]] }}} />...
+\procedure excerptify(title)
+  <$wikify name="contents" text={{{ [<title>get[text]] }}}>
+    <$text text={{{ [<contents>split[]first[200]join[]] }}} />...
   </$wikify>
 \end
 
-\define linkDisplay(title, filterFragment)
-$title$:
+\procedure linkDisplay(title, subfilter)
+<<title>>:
 
 <ul>
-<$list filter="[all[current]$filterFragment$]">
-  <li>
-    <$link to=<<currentTiddler>>><<currentTiddler>></$link>: <$macrocall $name=excerptify title={{!!title}}/>
-  </li>
+<$list filter="[all[current]subfilter<subfilter>]">
+  <li><$link />: <$transclude $variable="excerptify" title={{!!title}}/></li>
 </$list>
 </ul>
 \end
 
-<<linkDisplay "Links" "links[]">>
-<<linkDisplay "Backlinks" "backlinks[]">>
+<<linkDisplay "Links" "[links[]]">>
+<<linkDisplay "Backlinks" "[backlinks[]]">>
 ```
 
 You might notice that if the first line is shorter than 200 characters, the lines are run together. This is a common issue with excerpting algorithms which you'll often see even on professional blogs and websites. While it's undoubtedly possible to fix, we won't get into the necessary machinations here; feel free to take it on as a challenge project if you like!
