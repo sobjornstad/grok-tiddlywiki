@@ -1,18 +1,17 @@
 created: 20210120034946005
 description: Portions of tiddlers can be hidden and shown selectively using the `$list` widget and the `$reveal` widget.
-modified: 20210418165505272
+modified: 20240926221150363
 parent: Tips and Tricks
 showtest: 
 tags: Section
 title: Hiding and Showing Things
 type: text/vnd.tiddlywiki
 
-Oftentimes you want to ''show content only in certain circumstances'' (programmers might say an //if-statement// or //conditional// is required). There are a number of ways we can accomplish this. In many cases, you'll have your choice of several methods, but some are more effective or readable than others in individual situations.
-
+A very common need when developing things in wikitext is to ''show content only in certain circumstances''. The most obvious way to do this is with [[Conditional Inclusion]]. But there are other options too, which may sometimes be more concise or convenient.
 
 !! The `$list` widget + a filter
 
-In several earlier [[examples|Text Substitution]] and [[exercises|Ex:ContactsOnlyOnContacts]], we've seen that the `$list` widget can be used to accomplish this, but let's review how that works, as it's a versatile but unintuitive technique.
+The `$list` widget can be used to show content either one or zero times. Conditional expressions are a relatively recent addition to TiddlyWiki -- before they existed, this was the primary mechanism for showing and hiding content depending on a filter, so you'll still see this frequently in the TiddlyWiki core and throughout various plugins and wikis. Let's review how this works, as it's a versatile but unintuitive technique.
 
 The contents of a `$list` widget are rendered once for each element in its associated filter. If we can ensure that the filter we use ''returns either one or zero output tiddlers'', we can use it to control showing or hiding some content.
 
@@ -48,20 +47,19 @@ If you're not comparing against a single tiddler, whether the current tiddler or
 
 That didn't work so well! Try adding the `first[]` operator to the snippet to correct it.
 
-Also notice the use of the `emptyMessage` attribute to the `$list` widget above. This text is displayed if there are 0 results for the filter, and thereby saves us from having to create a second `$list` widget with the opposite condition. If you want to include a large amount of text in the empty condition, you can place it in a macro and call the macro as the value of this attribute.
+Also notice the use of the `emptyMessage` attribute of the `$list` widget above. This is analogous to `<% else %>` in a conditional expression -- it's displayed if there are zero results for the filter, and thereby saves us from having to create a second `$list` widget with the opposite condition. If you want to include a large amount of text in the empty condition, you can place it in a procedure and call the procedure as the value of this attribute (but at this point, switching to a conditional expression is probably more useful).
 
 !! The `$reveal` widget
 
-A method we haven't seen yet is the `$reveal` widget. Rather than using a filter, this widget includes content based on ''whether a specific field matches a specific value''. Thus, it's somewhat less powerful but often more convenient. Here's the basic syntax:
+A method we haven't seen yet is the `$reveal` widget. With the advent of conditional inclusion, this is rarely an attractive choice anymore, but let's quickly explore how it works, as you may also run across this widget in older wikitext. `$reveal` shows or hides content based on ''whether a specific field matches a specific value''. Here's the basic syntax:
 
 {{Sn:RevealWidgetTest||MagicSnippet}}
 
 In addition to `match`, as shown above, `type` can be set to `nomatch` to invert the match (`match` and `nomatch` widgets are often used in pairs to show one thing if something is true and another if it's not). There are also options to allow the widget to be used to compare numeric values (e.g., only show if a field value is greater than 5); check up the documentation for details.
 
-The `$reveal` widget has one major limitation worth noting: unlike the `$list` widget, it ''creates a new `div` or `span`'' HTML element to wrap the revealed content in. This means you can end up with corrupted output if you use it in certain contexts where one of those elements doesn't belong, for example inside a table (notice the column header is the wrong width when expanded):
+The `$reveal` widget has one major limitation worth noting: unlike the `$list` widget or a conditional expression, it ''creates a new `div` or `span`'' HTML element to wrap the revealed content in. This means you can end up with corrupted output if you use it in certain contexts where one of those elements doesn't belong, for example inside a table (notice the column header is the wrong width when expanded):
 
 {{Sn:BrokenRevealTable||MagicSnippet}}
-
 
 
 !! `$set` with a filter
@@ -73,12 +71,11 @@ Sometimes you don't need to include entirely different content in a tiddler depe
 
 !! Fallbacks
 
-Several widgets will ''display their content if they find no matches'', eliminating the need to create a `$list` or `$reveal` widget at all.
-
+A number of widgets will ''display their content if they find no matches'', eliminating the need to use a special expression or widget at all.
 
 !!! `$transclude` fallbacks
 
-The `$transclude` widget is the long syntax for transcluding a field of a tiddler. The tiddler name is optional; if not provided it defaults to the current tiddler.
+The `$transclude` widget is the long syntax for transcluding a field of a tiddler or calling a procedure/macro/variable. The tiddler name is optional; if not provided it defaults to the current tiddler.
 
 {{Sn:TranscludeWidget||MagicSnippet}}
 
@@ -86,7 +83,7 @@ In addition to its ability to override whether parsing occurs in block or inline
 
 {{Sn:TranscludeFallback||MagicSnippet}}
 
-(Be aware that the `$transclude` widget //does not change the current tiddler// -- in other words, it treats the transcluded tiddler as a [[template|Templates and the Current Tiddler]] for the current tiddler. If you want to get the equivalent of a straight `{{transclusion}}`, you need to wrap it in a `$tiddler` widget, as described in [[Miscellaneous Widgets]].)
+Beware that the `$transclude` widget ''does not change the current tiddler'' -- in other words, it treats the transcluded tiddler as a [[template|Templates and the Current Tiddler]] for the current tiddler. If you want to get the equivalent of a straight `{{transclusion}}`, you need to wrap it in a `$tiddler` widget.
 
 
 !!! `$view` fallbacks

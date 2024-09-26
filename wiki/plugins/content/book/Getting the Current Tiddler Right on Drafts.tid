@@ -1,6 +1,6 @@
 created: 20210206181426380
 description: The side-by-side preview won't display correctly when the current tiddler is used in certain ways, but you can work around it.
-modified: 20210317011739772
+modified: 20240926215713504
 parent: Tips and Tricks
 tags: Section
 title: Getting the Current Tiddler Right on Drafts
@@ -24,7 +24,7 @@ If this gets annoying enough to be worth fixing, there is an easy fix: we just n
 </$tiddler>
 ```
 
-(The `then` operator outputs its parameter if the input is non-empty, while the `else` operator outputs its parameter if the input is empty.)
+(Recall: the `then` operator outputs its parameter if the input is non-empty, while the `else` operator outputs its parameter if the input is empty.)
 
 Notice that with the pattern above, if you are relying on both the name of the current tiddler //and// the values of its fields, your changes to the fields won't appear until you save since the current tiddler is now changed to the original rather than the draft. If that's a problem, you can always set a variable other than `currentTiddler` to the value of the original tiddler, and use `currentTiddler` when referring to fields and the other variable when referring to the name.
 

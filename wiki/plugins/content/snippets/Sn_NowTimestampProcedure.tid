@@ -1,0 +1,9 @@
+created: 20240926222836590
+modified: 20240926222946308
+tags: 
+title: Sn:NowTimestampProcedure
+type: text/vnd.tiddlywiki
+
+\procedure now-timestamp() <<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>
+
+<<now-timestamp>>

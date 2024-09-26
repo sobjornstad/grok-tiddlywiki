@@ -1,0 +1,23 @@
+created: 20240926224206306
+modified: 20240926224339554
+tags: Answer
+title: Ex:NowTimestampFunction/answer
+type: text/vnd.tiddlywiki
+
+The first step to figuring this out is probably to try it some other way and see what happens. So let's do that:
+
+{{Sn:NowTimestampProcedure||MagicSnippet}}
+
+Hmm, no, that looks just fine. So what about the hint in the exercise? Let's try setting a field on the current tiddler to the time. You might use this to click a button to indicate that you've reviewed a tiddler at a particular time, say.
+
+{{Sn:NowTimestampProcedureAttribute||MagicSnippet}}
+
+Aha! Here the function works as you would expect, but the procedure simply puts the literal text of the procedure body in the field. (This is hard to notice if you just transclude the value, because the macro call to `now` expands when you do so! The `$view` widget doesn't wikify the field, so it shows the true value, as does editing the tiddler and looking at its field values.)
+
+The million-dollar question is, of course, why?
+
+Recall that we are transcluding the value of `now-timestamp` as an attribute of the `$button` widget, namely `setTo`. This means that the value [[will only be wikified once|Wikification]]! Consequently, the literal text of the procedure appears in the output. Changing it to a [[macro|Macros]] instead of a procedure doesn't help, because there's no way to use text substitution to call the `now` macro.
+
+But when we change it to a function, the effect of the `<<>>` syntax changes! It will still only be wikified once, but wikifying a function call results in evaluating the filter expression within the function -- and evaluating this filter expression requires calling the `now` macro, so that happens during the single wikification.
+
+You may find this trick a useful alternative to verbose uses of the `$wikify` widget on occasion.

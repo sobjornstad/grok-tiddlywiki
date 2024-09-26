@@ -1,0 +1,13 @@
+created: 20240926222718556
+length: m
+modified: 20240926224250425
+origin: Working with Dates
+tags: Exercise
+title: Ex:NowTimestampFunction
+type: text/vnd.tiddlywiki
+
+Why did I use a function, rather than a procedure or macro, to define `now-timestamp` here? Feel free to play with this live example if that helps.
+
+{{Sn:NowTimestamp||MagicSnippet}}
+
+//Hint//: What happens if you try to use the value of the `<<variable transclusion>>` to set something, as you often will with such a snippet, rather than rendering it within the body of the tiddler?

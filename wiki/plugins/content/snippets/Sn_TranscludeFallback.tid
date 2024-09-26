@@ -1,9 +1,9 @@
 created: 20210123194558334
-modified: 20210123194504092
+modified: 20240926220606514
 tags: 
 title: Sn:TranscludeFallback
 type: text/vnd.tiddlywiki
 
-<$transclude field="nonexistentfield">
+<$transclude $field="nonexistentfield">
   The nonexistent field does not exist.
 </$transclude>

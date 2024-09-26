@@ -1,5 +1,5 @@
 created: 20210207180211360
-modified: 20210207180335891
+modified: 20240926222636548
 tags: Answer
 title: Ex:DateFormatter/answer
 type: text/vnd.tiddlywiki
@@ -7,12 +7,12 @@ type: text/vnd.tiddlywiki
 Here's my version. You presumably have something slightly different.
 
 ```html
-\define show-date(fmt) <$view tiddler={{!!selectedtiddler}} field={{!!selectedfield}} format="date" template=<<__fmt__>>>(not a date)</$view>
+\procedure show-date(fmt) <$view tiddler={{!!selectedtiddler}} field={{!!selectedfield}} format="date" template=<<fmt>>>(not a date)</$view>
 
-\define date-row(name, fmt)
+\procedure date-row(name, fmt)
 <tr>
-  <td>$name$</td>
-  <td><$macrocall $name="show-date" fmt=<<__fmt__>>/></td>
+  <td><<name>></td>
+  <td><$transclude $variable="show-date" fmt=<<fmt>>/></td>
 </tr>
 \end
 
@@ -25,16 +25,16 @@ Tiddler:
 </$select>
 
 <!-- Don't show the field drop-down if no tiddler is selected, since it won't contain any options. -->
-<$reveal state="!!selectedtiddler" type="nomatch" text="">
+<% if [all[current]get[selectedtiddler]!is[blank]] %>
 Field:
 <$select field="selectedfield" default="created">
     <$list filter="[{!!selectedtiddler}fields[]]">
         <option value=<<currentTiddler>>><<currentTiddler>></option>
     </$list>
 </$select>
-</$reveal>
+<% endif %>
 
-<$list filter="[all[current]has[selectedtiddler]has[selectedfield]]">
+<% if [all[current]has[selectedtiddler]has[selectedfield]] %>
 <table>
     <tr>
         <th>Format</th>
@@ -46,5 +46,5 @@ Field:
             fmt={{{ [<currentFormat>get[text]] }}}/>
     </$list>
 </table>
-</$list>
+<% endif %>
 ```

@@ -1,0 +1,19 @@
+created: 20240926222948898
+modified: 20240926224300555
+nowtime: <<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>
+tags: 
+title: Sn:NowTimestampProcedureAttribute
+type: text/vnd.tiddlywiki
+
+\procedure now-timestamp-proc() <<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>
+\function now-timestamp-func() [<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>]
+
+<$button set="!!nowtime" setTo=<<now-timestamp-proc>> >
+  Set Reviewed Time (Badly)
+</$button>
+<$button set="!!nowtime" setTo=<<now-timestamp-func>> >
+  Set Reviewed Time (Properly)
+</$button>
+
+* Time Now: {{!!nowtime}}
+* Field Value: <$view field="nowtime"/>

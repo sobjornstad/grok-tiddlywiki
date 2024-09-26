@@ -1,11 +1,11 @@
 created: 20210123192157236
-modified: 20210123200211178
+modified: 20240926220419721
 tags: 
 title: Sn:NumDaysBack
 type: text/vnd.tiddlywiki
 
-<$set name=numDays value="-500">
+<$let numDays="-500">
 <$list filter="[days<numDays>]" emptyMessage="Nope.">
   Yep.
 </$list>
-</$set>
+</$let>
