@@ -1,6 +1,6 @@
 created: 20200719033806080
 description: Macros can execute JavaScript code rather than evaluating wikitext.
-modified: 20210502162723219
+modified: 20240927005331126
 parent: Getting Technical
 prerequisite: Basic knowledge of JavaScript
 tags: Section
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 
 (''Prerequisite'' for this section: {{!!prerequisite}}.)
 
-If you want to do something that's just a little bit out of reach of a wikitext macro, you can also write macros in [[JavaScript|https://en.wikipedia.org/wiki/JavaScript]]. It's important that your macro execute quickly and have no side effects, as TiddlyWiki may repeatedly rerender the page containing the macro and call your JavaScript function in the process, just as it would with a wikitext macro. JavaScript macros also cannot access the browser DOM, since they may run server-side if you're serving your wiki with Node.js.
+If you want to do something that's just a little bit out of reach of a wikitext procedure or macro, you can also write macros in [[JavaScript|https://en.wikipedia.org/wiki/JavaScript]]. It's important that your macro execute quickly and have no side effects, as TiddlyWiki may repeatedly rerender the page containing the macro and call your JavaScript function in the process, just as it would with a wikitext macro. JavaScript macros also cannot access the browser DOM, since they may run server-side if you're serving your wiki with Node.js.
 
 The process of creating a JavaScript macro is [[documented on the TiddlyWiki Dev wiki|https://tiddlywiki.com/dev/index.html#JavaScript Macros]], although not particularly well. Let's suppose that we want a macro that ''rounds timestamps to the nearest 15 minutes''. First, we write a JavaScript function that takes arguments matching those of the macro and returns the wikitext we want to output. You can test this function in any JavaScript development environment you like, including something as simple as your browser devtools. You'll end up with a single function, like this:
 

@@ -1,6 +1,6 @@
 created: 20200822201508518
 description: External tools can access the data in your TiddlyWiki by reading files and calling a Node.js CLI.
-modified: 20210502164024462
+modified: 20240927011226072
 parent: Getting Technical
 prerequisite: A basic background in shell scripting or some other scripting language like Python
 tags: Section
@@ -9,14 +9,14 @@ type: text/vnd.tiddlywiki
 
 (''Prerequisite'' for this section: {{!!prerequisite}}.)
 
-If you're a [[Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy]] person and believe that programs should do one thing well and integrate well with other programs, you might be wondering whether your data is going to be trapped in TiddlyWiki. Good news: if you install the Node.js backend on your computer and host your wiki there, you can easily integrate with other programs in whatever way you please. (It's also possible to quickly convert a single-file wiki to a Node.js folder wiki, so if you prefer to use a single file but sometimes need to get at the contents programmatically, you can extract a new folder wiki from the file to a temporary directory and then operate on that.)
+If you're a [[Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy]] person and believe that programs should do one thing well and integrate well with other programs, you might be wondering whether your data is going to be trapped in TiddlyWiki. Good news: if you install the Node.js backend on your computer and host your wiki there, you can easily integrate with other programs in whatever way you please. (It's also possible to quickly convert a single-file wiki to a Node.js folder wiki, so if you prefer to use a single file but sometimes need to get at the contents programmatically, you can extract a new folder wiki from the file to a temporary directory and then operate on that. [[TiddlyRemember|https://sobjornstad.github.io/TiddlyRemember/]], for instance, works this way.)
 
 
 !! File structure
 
 The Node.js backend stores text tiddlers in individual files, which are easy for a script or other application to read. The format is much like email: first the fields of the tiddler are listed with the name separated from the value by a colon and a space, and then after one blank line comes the contents of the `text` field.
 
-Tiddlers containing non-textual data, such as images, are instead included unmodified, and the fields associated with their tiddlers are stored in a separate text file with a `.meta` extension. So if you have an image tiddler called `image.png`, there will be an `image.png` PNG file which can be opened in a normal image viewer, and an `image.png.meta` file containing the fields of the tiddler.
+Tiddlers containing non-textual data, such as images, are instead included unmodified, and the fields associated with their tiddlers are stored in a separate text file with a `.meta` extension (the `text` field is set to the unmodified main file). So if you have an image tiddler called `image.png`, there will be an `image.png` PNG file which can be opened in a normal image viewer, and an `image.png.meta` file containing the fields of the tiddler.
 
 For the most part, the names of tiddlers are used as their filenames, with a `.tid` extension added. However, a few characters are changed so as to avoid those that are invalid in filenames on some operating systems. It's also possible to add additional transformations as TiddlyWiki filters, for instance to put tiddlers with particular tags in a different folder. The details can be found in the [[Customizing Tiddler File Naming|https://tiddlywiki.com/#Customising Tiddler File Naming]] tiddler in the TW documentation.
 

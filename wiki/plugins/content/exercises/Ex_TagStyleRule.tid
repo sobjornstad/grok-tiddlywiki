@@ -1,0 +1,9 @@
+created: 20240927010702719
+length: m
+modified: 20240927010756543
+origin: Stylesheets
+tags: Exercise
+title: Ex:TagStyleRule
+type: text/vnd.tiddlywiki
+
+Create a rule in a global stylesheet that makes some class of tiddlers (perhaps a couple of specific titles, or tiddlers with a particular tag) display in a smaller font.
