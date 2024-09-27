@@ -1,6 +1,6 @@
 created: 20200719030352650
 description: Explore buttons, system tags, action widgets, and messages by adding new buttons to the toolbar that create tiddlers with some custom field values already in place.
-modified: 20210327163010908
+modified: 20240927021212267
 parent: Looking Under the Hood
 tags: Section
 title: Creating Tiddlers With Predefined Fields
@@ -25,6 +25,11 @@ This second method is widespread in the wild, but it's usually better to avoid i
 In either case, when you click on the button, the action will be triggered, which will send a `tm-new-tiddler` message, which will create a new draft tiddler with the fields you've defined in the attributes of the action widget and open it for editing.
 
 If you like, you can put several action widgets within the macro or the `$button` widget. They will be triggered in sequence when the button is clicked.
+
+
+!! `$action-log`
+
+If you're struggling to get actions to work, you may find the <a href="https://tiddlywiki.com/#ActionLogWidget" class="tc-tiddlylink-external">`$action-log`</a> action widget helpful. It works exactly like the `$log` widget we discussed in [[When Things Go Wrong]] does, but it logs its values only when the action is triggered. You can plop this next to the other action(s) you're trying to use and look at the values of relevant variables (which are otherwise very hard to see the values of, since action widgets are invisible and the contents of the `actions` property of a button doesn't appear anywhere on screen).
 
 
 !! Exercises
