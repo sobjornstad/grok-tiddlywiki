@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20240928024032075
+modified: 20240928211613335
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Filters and Transclusions
@@ -52,9 +52,9 @@ You might be tempted to extrapolate the above example to create a list of meetin
 <$text text={{{ [tag[Meeting]] }}}/>
 ```
 
-However, if you try this, you'll find that only one meeting shows up. That's because when you transclude the result of a filter expression as a value of an attribute, unlike when you place it directly in wikitext, only the first output tiddler is passed to that attribute.
+However, if you try this, you'll find that only one meeting shows up. That's because when you transclude the result of a filter expression as a value of an attribute, unlike when you place it directly in wikitext, ''only the first output tiddler is passed to that attribute''.
 
-The rationale for this is simply that it's rarely useful to do anything else. If TiddlyWiki passed a list of meetings directly to the `$text` widget, you would just get a long string of meeting names separated by spaces. If you actually want to list all the meetings as text, or as a bulleted list, you would use a `$list` widget instead so you could specify what each item should look like.
+The rationale for this is simply that it's rarely useful to do anything else. If TiddlyWiki passed a list of meetings directly to the `$text` widget, you would just get a long string of meeting names separated by spaces. If you actually want to list all the meetings as text, or as a bulleted list of text names, you would use a `$list` widget instead so you could specify what each item should look like. With the actual behavior, if a filter accidentally returns more than one item, at least the attribute will get a value that actually represents a real output tiddler, rather than a made-up value that combines several of them.
 
 Nevertheless, it's important to be aware of this behavior, or you may find yourself very confused on occasion.
 
@@ -94,7 +94,7 @@ But what do we put as the filter to retrieve the contents of the `family` field?
 
 We can use the `enlist` filter operator to turn a tiddler list into a series of input tiddlers within the filter expression, but we have to pass it the tiddler list as a parameter, so we can't use `get[]`. And remember that we need to put the tiddler list in the `family` field of the //current tiddler// into that parameter -- we can't directly name the tiddler (e.g., `JaneDoe`), since this snippet would then only work in Jane's tiddler.
 
-To achieve this, we can ''replace the square brackets around the parameter'' with `{curly braces}`, and place a [[field transclusion|Transclusions]] inside:
+To achieve this, we can ''replace the square brackets around the parameter'' with `{curly braces}`, and place a [[field transclusion|Field Transclusions]] inside:
 
 ```html
 <ul>
@@ -118,11 +118,11 @@ Similarly, if the value we wanted to use was in a variable rather than a field, 
 </ul>
 ```
 
-You can also ''transclude the result of procedure calls with parameters'' using this syntax. However, this might not work quite the way you hope, because wikitext won't be processed inside the filter and you may end up with unexpanded variable references in the filter pipeline:
+You can also ''transclude the result of procedure calls with parameters'' using this syntax. However, this might not work quite the way you hope, because, just like if you were using this procedure call as the value of an attribute, wikitext won't be processed inside the filter, so you may end up with unexpanded variable transclusions in the filter pipeline:
 
 {{Sn:MacroCallTransclusion||MagicSnippet}}
 
-In <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, we'll learn why this happens and how [[Macros]] and [[Wikification]] allow us to work around the issue.
+In <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, we'll learn how [[Wikification]] allows us to work around this issue.
 
 Curly braces or angle brackets can be used by themselves, not preceded by an operator, to directly introduce an arbitrary value into the filter pipeline. This is the equivalent of specifying a literal title with square brackets:
 

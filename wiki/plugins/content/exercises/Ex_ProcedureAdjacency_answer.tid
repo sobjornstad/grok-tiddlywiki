@@ -1,5 +1,5 @@
 created: 20240925235538142
-modified: 20240928200845247
+modified: 20240928204026535
 tags: Answer
 title: Ex:ProcedureAdjacency/answer
 type: text/vnd.tiddlywiki
@@ -8,6 +8,6 @@ You get this:
 
 {{Sn:AardvarkChunkLink||MagicSnippet}}
 
-This brings up a very important point about the order in which TiddlyWiki processes wikitext. When you refer to a variable, or to any of the other tools for reusing wikitext that we'll be discussing in upcoming sections and chapters, including [[Procedures]], [[Field Transclusions]], and [[Macros]], TiddlyWiki processes the wikitext within the variable //separately// from its surrounding context. You might expect that TiddlyWiki goes through the tiddler and expands all references to variables into one giant tiddler-long section of wikitext, and only then renders the wikitext to HTML. This is not the case!
+This brings up a very important point about the order in which TiddlyWiki processes wikitext. When you transclude the value of a variable, or any of the other things that we'll be discussing in upcoming sections and chapters, including [[Procedures]], [[Field Transclusions]], and [[Macros]], TiddlyWiki processes the wikitext within the variable //separately// from its surrounding context. You might expect that TiddlyWiki goes through the tiddler and expands all transclusions into one giant tiddler-long section of wikitext, and only then renders the wikitext to HTML. This is not the case!
 
 Instead, it renders wikitext in discrete “chunks.” In this example, it's processing wikitext and it sees `<<wikipedia>>`. It consequently stops rendering the current chunk of wikitext (i.e., the whole tiddler), goes and renders the wikitext in the `wikipedia` variable, and then comes back and starts a new chunk. Therefore, when `<<wikipedia>>` is read, TiddlyWiki sees a separate chunk, which happens to be a link, and which it renders into a link. Then afterwards, it sees a chunk starting with the text `Aardvark`, and it renders that as text.

@@ -1,14 +1,14 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240928200835437
+modified: 20240928210646643
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Field Transclusions
 type: text/vnd.tiddlywiki
 
- ''Field transclusions'' are much like [[variable references|Variables]] or [[procedure calls|Procedures]], but their value comes from another tiddler in your wiki rather than a `$let` widget or a procedure definition.
+ ''Field transclusions'' are much like variable or procedure transclusions, but their value comes from the contents of ''a field of another tiddler in your wiki''.
 
-Specifically, a field transclusion, as its name suggests, retrieves ''the contents of a particular field of a tiddler''. If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` in our example wiki and try that:
+If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` in our example wiki and try that:
 
 ```html
 * JaneDoe -- {{JaneDoe!!phone}}
@@ -31,16 +31,14 @@ Just like you can use the value of a variable or the result of a procedure call 
 Notice the similarity in form between the three wikitext methods we've encountered for referring to other content:
 
 * `[[double square brackets]]` -- to link to content
-* `<<double angle brackets>>` -- to get content from a variable or procedure
-* `{{double curly braces}}` -- to get content from a tiddler field
+* `<<double angle brackets>>` -- to transclude content from a variable or procedure
+* `{{double curly braces}}` -- to transclude content from a tiddler field
 
-Directly including entire tiddlers within other tiddlers, like `{{My Other Tiddler}}`, is uncommon in most wikis; linking is usually a more useful way of relating ideas. However, transclusion is invaluable in combination with filters for creating dynamic lists, tables, and other content. In fact, the whole interface of TiddlyWiki is actually created by transcluding a bunch of special tiddlers! Transclusion becomes even more useful once you understand //templates//, which we'll cover in the [[next section|Templates and the Current Tiddler]].
+Directly transcluding entire tiddlers within other tiddlers, like `{{My Other Tiddler}}`, is uncommon in most wikis; linking is usually a more useful way of relating ideas. However, field transclusion is invaluable in combination with filters for creating dynamic lists, tables, and other content. In fact, the whole interface of TiddlyWiki is actually created by transcluding a bunch of special tiddlers! Field transclusion becomes even more useful once you understand //templates//, which we'll cover in the [[next section|Templates and the Current Tiddler]].
 
 !! A note on terminology
 
-Technically, the form `<<double angle brackets>>` is //also// a transclusion -- a ''variable transclusion'' or ''procedure transclusion''. In the document-management-systems world, //transclusion// means including some other document or content at the location of the reference, and procedures and plain old variables do this just like field transclusions do.
-
-However, in non-technical contexts, people often use the term //transclusion// by itself to refer specifically to a field transclusion. We will try to explicitly state what kind of transclusion we mean if it might be unclear, but in the remainder of this book, you should read //transclusion// without a modifier as //field transclusion//.
+In non-technical contexts, people sometimes use the term //transclusion// by itself to refer specifically to a field transclusion. //Grok TiddlyWiki// used to do this too, but with the introduction of new features in recent versions of TiddlyWiki that have made all kinds of transclusion more like each other (e.g., the [[parameterization of tiddlers|Parameterizing Field Transclusions]]), it seemed better to instead use //transclusion// to mean any or all kinds of transclusion, and explicitly say //field transclusion// when we mean that. It's possible there may be a few traces of the old way still hanging out throughout the book -- please use the //send feedback// link to let me know if you spot one!
 
 !! The `$transclude` widget
 

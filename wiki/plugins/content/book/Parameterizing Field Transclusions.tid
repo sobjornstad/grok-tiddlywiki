@@ -1,9 +1,9 @@
 created: 20240907015401704
 description: TODO
-modified: 20240928013104359
+modified: 20240928201829037
 parent: Variables, Procedures, and Transclusions
 tags: Section
-title: Parameterizing Transclusions
+title: Parameterizing Field Transclusions
 type: text/vnd.tiddlywiki
 
 Just like procedures can be given parameters, tiddler fields can be given parameters, giving a transclusion of that field some parts that change. To ''define the parameters of a field'', a `\parameters` pragma is placed at the start of the field. This takes a parameter list that looks and works exactly like that of a procedure. The specified parameters are made available as variables when rendering the field.

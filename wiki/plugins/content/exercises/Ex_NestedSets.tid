@@ -1,6 +1,6 @@
 created: 20201121235627600
 length: s
-modified: 20210130174538857
+modified: 20240928203542190
 origin: Variables
 tags: Exercise
 title: Ex:NestedSets
@@ -18,4 +18,4 @@ Consider the following code:
 </$set>
 ```
 
-What do you think happens at each reference to `<<variable>>`? Check your answers by pasting this into a new tiddler.
+What do you think happens at each transclusion of `<<variable>>`? Check your answers by pasting this into a new tiddler.

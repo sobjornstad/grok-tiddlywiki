@@ -1,12 +1,12 @@
 created: 20240616152105208
 description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
-modified: 20240928181438526
+modified: 20240928203907935
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Using Variables as Attributes
 type: text/vnd.tiddlywiki
 
-In the [[previous section|Variables]], we saw how we can use the values of variables within running text. We can also use variables within other formatting instructions -- as the ''values of attributes'' on widgets or HTML tags.
+In the [[previous section|Variables]], we saw how we can transclude the values of variables within running text. We can also use variables within other formatting instructions -- as the ''values of attributes'' on widgets or HTML tags.
 
 We already did this once already in the [[link pattern|Ex:LinkPattern]] exercise in [[Your First Dynamic List]], before we had explained that `<<currentTiddler>>` was a variable:
 
@@ -14,12 +14,12 @@ We already did this once already in the [[link pattern|Ex:LinkPattern]] exercise
 <$link to=<<currentTiddler>>/>
 ```
 
-In a basic sense, using variables as attributes is no different than using them elsewhere. However, there are some traps for the unwary when it comes to mixing variables and other wikitext elements. Fully elucidating all of these requires much more understanding of TiddlyWiki, so we'll start by covering the most basic issues in this section and postpone the rest until later.
+In a basic sense, using variables as attribute values is no different than using them elsewhere. However, there are some pitfalls for the unwary when it comes to mixing variables and other wikitext elements. Fully elucidating all of these requires much more understanding of TiddlyWiki, so we'll start by covering the most basic issues in this section and postpone the rest until later.
 
 
 !! Multiple links to the same place
 
-Suppose we want to link to the Wikipedia homepage multiple times. If we want the same text on the link each time, we can simply put the wikitext needed to create the link in a variable and refer to it several times, like this:
+Suppose we want to link to the Wikipedia homepage multiple times. If we want the same text on the link each time, we can simply put the wikitext needed to create the link in a variable and transclude it several times, like this:
 
 {{Sn:WikipediaWikitext||MagicSnippet}}
 
@@ -27,9 +27,9 @@ But what if we want to use different text for the link each time? You might try 
 
 {{Sn:WikipediaBadWikitext||MagicSnippet}}
 
-Unfortunately, variable references ''can't be nested inside other complex wikitext elements like links'', so this doesn't work. If you try clicking on one of the links in the example above, you'll see that TiddlyWiki produces a link to the tiddler literally called `<<wp>>`, which isn't very helpful!
+Unfortunately, transclusions ''can't be nested inside other complex wikitext elements like links'', so this doesn't work. If you try clicking on one of the links in the example above, you'll see that TiddlyWiki produces a link to the tiddler literally called `<<wp>>`, which isn't very helpful!
 
-However, variable references //do// work as attribute values. So an easy solution is to use an `a` HTML element instead of wikitext syntax (recall that all items of wikitext syntax have corresponding [[widgets|Widgets]] or [[HTML]] tags). This element takes the URL to link to in its `href` attribute and the text to display in its body. (`href` stands for //hypertext reference//, and `a` for //anchor//.)
+However, you //can// transclude a variable into the value of an attribute. So an easy solution is to use an `a` HTML element instead of wikitext syntax (recall that all items of wikitext syntax have corresponding [[widgets|Widgets]] or [[HTML]] tags). This element takes the URL to link to in its `href` attribute and the text to display in its body. (`href` stands for //hypertext reference//, and `a` for //anchor//.)
 
 {{Sn:WikipediaAElement||MagicSnippet}}
 
@@ -48,19 +48,19 @@ The most obvious thing to try would be:
 
 That looks OK, but if you click on the link you'll find that it goes to a page called `<<wpBase>>/Aardvark`, which obviously isn't what we wanted.
 
-Maybe the variable reference needs to go outside the quotation marks?
+Maybe the transclusion needs to go outside the quotation marks?
 
 {{Sn:WikipediaCombinedVarSubst2||MagicSnippet}}
 
 Uh-oh!
 
-It turns out that we need an entirely new syntax to achieve this. We can use //just// a variable reference as the value of an attribute by writing it directly after the `=`, as we did earlier in this section. Or we can use //just// a constant value (one with no variables) by placing it in `"double quotation marks"` after the `=`. But if we need to //combine// a constant value and one or more variables, as we do here, we need to use a ''substituted attribute value'', which looks like this:
+It turns out that we need an entirely new syntax to achieve this. We can use //just// a transclusion as the value of an attribute by writing it directly after the `=`, as we did earlier in this section. Or we can use //just// a constant value (one with no variables) by placing it in `"double quotation marks"` after the `=`. But if we need to //combine// a constant value and one or more variables, as we do here, we need to use a ''substituted attribute value'', which looks like this:
 
 {{Sn:WikipediaSubAttrValue||MagicSnippet}}
 
 Those funny <code>&#96;</code>'s are called ''backticks''. On a standard US keyboard, you can find the backtick (also called the //grave accent//) to the left of the 1 key. Other keyboards have it in weirder places or even on the AltGr layer; you may have to do a quick web search to learn how to type it on your keyboard.
 
-Within a substituted attribute value, the syntax `$(wpBase)$` refers to the value of the variable `wpBase`. The way in which this differs from `<<wpBase>>` is somewhat arcane, so we'll hold off on discussing it until we learn about [[macros|Macros]] in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>. For now, suffice it to say that you should refer to variables with this `$()$` syntax within substituted attribute values.
+Within a substituted attribute value, the syntax `$(wpBase)$` refers to the value of the variable `wpBase`. The way in which this differs from `<<wpBase>>` is somewhat arcane, so we'll hold off on discussing it until we learn about [[macros|Macros]] in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>. For now, suffice it to say that you should refer to the values of variables with this `$()$` syntax within substituted attribute values.
 
 
 !! Exercises

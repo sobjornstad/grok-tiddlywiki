@@ -1,12 +1,12 @@
 created: 20200530170346174
 description: Variables let you assign a name to an arbitrary value, then use the name in place of the value in multiple places within your wikitext.
-modified: 20240928201135818
+modified: 20240928203320411
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Variables
 type: text/vnd.tiddlywiki
 
-''Variables'' are a simple way to define some wikitext in one place and refer to it in many places.
+''Variables'' are the simplest way to define some wikitext in one place and refer to it in many places.
 
 !! How variables work
 
@@ -20,9 +20,9 @@ We can make this text into a variable using a ''`$set` widget'', like this:
 
 {{Sn:SetDisclaimer||MagicSnippet}}
 
-As you can see in the example above, the `$set` widget doesn't itself display anything in the rendered version of your tiddler. However, in between the `<$set>` tags, TiddlyWiki will keep track of the fact that the variable `disclaimer` is set to the stated value. (Once we pass the closing `</$set>` tag, TiddlyWiki will forget about the variable. When this happens, we say that the variable has ''gone out of scope''.)
+As you can see in the example above, the `$set` widget doesn't itself display anything in the rendered version of your tiddler. However, in between the `<$set>` tags, TiddlyWiki will keep track of the fact that the variable with name `disclaimer` is set to the stated value. (Once we pass the closing `</$set>` tag, TiddlyWiki will forget about the variable. When this happens, we say that the variable has ''gone out of scope''.)
 
-In order to actually use the variable, we put its name between double angle brackets `<<>>` in the spot where we want its value to show up. Let's edit our `EmployeeInformationSystem` tiddler to use this disclaimer:
+In order to actually use the variable, we put its name between double angle brackets `<<>>` in the spot where we want its value to show up; this is called ''transcluding the variable's value''. Let's edit our `EmployeeInformationSystem` tiddler to use this disclaimer:
 
 {{Sn:EmployeeInformationSystemDisclaimer||MagicSnippet}}
 
@@ -42,7 +42,7 @@ We'll primarily use the `$let` widget to set variables throughout the rest of th
 
 !! Why use variables?
 
-Eliminating repetition can save typing, which is nice but hardly anything to write home about. Much more importantly, if you want to change a snippet after you create it, ''you only have to change it in one place''. If you only use the snippet a couple of times, changing it in multiple places is no big deal, but there might be some things you end up using dozens or hundreds of times throughout your wiki. And sometimes a full wikitext snippet will be many lines long and easy to mistype, while a reference to a variable is short, concise, and easy to understand.
+Eliminating repetition can save typing, which is nice but hardly anything to write home about. Much more importantly, if you want to change a snippet after you create it, ''you only have to change it in one place''. If you only use the snippet a couple of times, changing it in multiple places is no big deal, but there might be some things you end up using dozens or hundreds of times throughout your wiki. And sometimes a full wikitext snippet will be many lines long and easy to mistype, while a variable transclusion is short, concise, and easy to understand.
 
 Additionally, some variables are ''set automatically by TiddlyWiki'', which can allow you to access information you otherwise wouldn't have. For instance, when we created a list widget to show all our meetings in the previous chapter, TiddlyWiki automatically set the `<<currentTiddler>>` variable to refer to the item which was currently being processed by the list widget.
 

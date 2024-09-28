@@ -1,12 +1,12 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20240928201117034
+modified: 20240928211015215
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Templates and the Current Tiddler
 type: text/vnd.tiddlywiki
 
-Transclusions have another useful trick up their sleeve: the option to treat the tiddler being transcluded as a ''template''. A template transclusion, like a normal field transclusion, is a means of reusing content, but it allows the tiddler being transcluded to refer to information {{Ltc:TiddlerDoingTransclusion||LieToChildrenTemplate}}. Just as macros extend variables by allowing some parts of the macro body to vary, templates extend transclusion by ''allowing some parts of the transcluded tiddler to vary''.
+Field transclusions have another useful trick up their sleeve: the option to treat the tiddler being transcluded as a ''template''. A template transclusion, like a normal field transclusion, is a means of reusing content, but it allows the tiddler being transcluded to refer to information {{Ltc:TiddlerDoingTransclusion||LieToChildrenTemplate}}.
 
 To return to the metaphor we began back in [[Slicing Up Content]], templates are a sort of lens or optical apparatus with which to look at a tiddler: still nouns themselves, but ones that can be used to modify the way we see other nouns.
 
@@ -87,9 +87,9 @@ When we transclude the `ContactInformationTemplate` into `JaneDoe`, the current 
 Suddenly the behavior that looked nice just a moment ago is exactly what we don't want!
 
 
-!! Templates
+!! Transcluding a tiddler through a template
 
-To make the `ContactInformationTemplate` work the way we want, we need a way of //not// changing the current tiddler during a transclusion, or, more generally, making the current tiddler a tiddler of our choice during the transclusion.
+To make the `ContactInformationTemplate` work the way we want, we need a way of //not// changing the current tiddler during a field transclusion, or, more generally, making the current tiddler a tiddler of our choice during the transclusion.
 
 As you may have guessed, TiddlyWiki is fully capable of this; it's called ''transcluding a tiddler through a template''. The syntax is `{{tiddler||template}}`. So here it would be:
 
@@ -111,7 +111,10 @@ In this case, we could also simply use the `$transclude` widget, which does not 
 <$transclude $tiddler="ContactInformationTemplate"/>
 ```
 
-(If you want to use the `$transclude` widget rather than braces but you //do// want to change the current tiddler, you can set the current tiddler yourself around the `$transclude` widget. The idiomatic way to do this is with the `$tiddler` widget, like `<$tiddler tiddler="NewCurrentTiddler">`.)
+(If you want to use the `$transclude` widget rather than braces but you //do// want to change the current tiddler, you can set the `currentTiddler` variable yourself around the `$transclude` widget. The idiomatic way to do this is with the `$tiddler` widget, like `<$tiddler tiddler="NewCurrentTiddler">`.)
+
+
+!! How to think about templates
 
 `{{tiddler||template}}`, and the concept of “transcluding a tiddler through a template,” ''feels backwards'' to many people at first. This operation actually transcludes the //template//, giving it access to the fields of the tiddler; our intuitive notion of transcluding a tiddler seems rather to suggest that the //tiddler// should be transcluded with reference to the information in the template. A good way to read `{{tiddler||template}}` is “Put the contents of //template// right here, but as you're deciding what //template// looks like, the current tiddler is //tiddler//, not //template//.”
 

@@ -1,10 +1,10 @@
 created: 20201122031957511
-modified: 20210409201513490
+modified: 20240928210036151
 tags: Answer
 title: Ex:VariableTransclusion/answer
 type: text/vnd.tiddlywiki
 
-The variable reference is accessible within the transcluded tiddler -- the scope is not limited to the tiddler in which the variable is set, but also applies to any transclusions that happen within the set block. In other words, if you place this in Tiddler 2:
+The variable reference is accessible within the transcluded tiddler -- the scope is not limited to the tiddler in which the variable is set, but also applies to any transclusions that happen within the `$let` widget. In other words, if you place this in Tiddler 2:
 
 ```html
 <<myVariable>>

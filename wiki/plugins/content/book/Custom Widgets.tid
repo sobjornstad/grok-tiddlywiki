@@ -25,11 +25,11 @@ By default, custom widgets, like procedures and functions, are scoped to the tid
 
 !! Using the widget body
 
-Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, without requiring quoting. The widget's body automatically fills a [[slot|Parameterizing Transclusions]] called `ts-raw`, so we use the `$slot` widget to retrieve it:
+Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, without requiring quoting. The widget's body automatically fills a [[slot|Parameterizing Field Transclusions]] called `ts-raw`, so we use the `$slot` widget to retrieve it:
 
 {{Sn:BoldItalicsWidgetBody||MagicSnippet}}
 
-(For more on the `$slot` widget, review [[Parameterizing Transclusions]].)
+(For more on the `$slot` widget, review [[Parameterizing Field Transclusions]].)
 
 As with built-in widgets, if we want the content of a widget to be in [[block mode|Block Mode and Inline Mode]], we need to put blank lines inside the opening and closing tags of our custom widget:
 
