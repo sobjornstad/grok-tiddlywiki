@@ -1,0 +1,9 @@
+created: 20240928194544290
+modified: 20240928194959337
+tags: 
+title: Sn:WikitextTransclusionFunctionAngles
+type: text/vnd.tiddlywiki
+
+\function add.numLetters(myName) [<myName>split[]count[]addsuffix[ letters)]addprefix[ (]addprefix<myName>]
+
+<<add.numLetters "Alice">>

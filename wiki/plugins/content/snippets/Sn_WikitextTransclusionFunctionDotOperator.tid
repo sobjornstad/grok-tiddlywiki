@@ -1,0 +1,9 @@
+created: 20240928194937803
+modified: 20240928194945313
+tags: 
+title: Sn:WikitextTransclusionFunctionDotOperator
+type: text/vnd.tiddlywiki
+
+\function add.numLetters(myName) [<myName>split[]count[]addsuffix[ letters)]addprefix[ (]addprefix<myName>]
+
+{{{ [add.numLetters[Charlie]] }}}

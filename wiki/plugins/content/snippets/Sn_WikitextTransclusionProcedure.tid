@@ -1,0 +1,9 @@
+created: 20240928194521137
+modified: 20240928194536861
+tags: 
+title: Sn:WikitextTransclusionProcedure
+type: text/vnd.tiddlywiki
+
+\procedure myproc(myName) Hi <<myName>>!
+
+<<myproc Soren>>

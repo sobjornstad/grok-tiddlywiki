@@ -1,11 +1,11 @@
 caption: {{$:/core/images/transcludify}} Transclusions
 created: 20210131145843458
-modified: 20240928185854529
+modified: 20240928200446427
 tags: [[Wikitext Reference]]
 title: Wr:Transclusions
 type: text/vnd.tiddlywiki
 
-[[Transclusions]] of [[variables|Variables]], [[procedures|Procedures]], [[functions|Functions]], [[macros|Macros]], and [[fields|Fields]] are an essential part of TiddlyWiki. Here's the standard syntax for including bits and pieces from other places in a tiddler.
+[[Transclusions]] of [[fields|Fields]], [[variables|Variables]], [[procedures|Procedures]], [[functions|Functions]], and [[macros|Macros]] are an essential part of TiddlyWiki. Here's the standard syntax for including bits and pieces from other places in a tiddler.
 
 See [[Summary of Inclusion Syntax]] for a more detailed treatment.
 
@@ -34,7 +34,14 @@ See [[Summary of Inclusion Syntax]] for a more detailed treatment.
   </tr>
 	<tr>
 		<td>Transclude a tiddler with parameters</td>
-		<td>{{Sn:WikitextParameterTransclusion||MagicSnippet|param1|param2}}</td>
+		<td>
+		
+```html
+{{Sn:WikitextParameterTransclusion|param1|param2}}
+```
+
+			(This one can't be shown as a live example because the live example code loses the parameters before they can be passed on.)
+		</td>
 	</tr>
   <tr>
     <td>[[Transclude the result|Filters and Transclusions]] of a [[filter|Filters]]</td>
@@ -48,16 +55,32 @@ See [[Summary of Inclusion Syntax]] for a more detailed treatment.
     <td>Transclude the value of a [[variable|Variables]]</td>
     <td>{{Sn:WikitextTransclusionVariable||MagicSnippet}}</td>
   </tr>
+	<tr>
+		<td>Call a [[procedure|Procedures]]</td>
+		<td>{{Sn:WikitextTransclusionProcedure||MagicSnippet}}</td>
+	</tr>
+	<tr>
+		<td>Transclude the result of the first item in a filter expression returned by a [[function|Functions]]</td>
+		<td>{{Sn:WikitextTransclusionFunctionAngles||MagicSnippet}}</td>
+	</tr>
+	<tr>
+		<td>Call a [[function|Functions]] within a filter expression using the `function` operator</td>
+		<td>{{Sn:WikitextTransclusionFunctionFunction||MagicSnippet}}</td>
+	</tr>
+	<tr>
+		<td>Call a [[function|Functions]] within a filter expression as an operator (requires the function to have a `.` in its name)</td>
+		<td>{{Sn:WikitextTransclusionFunctionDotOperator||MagicSnippet}}</td>
+	</tr>
   <tr>
-    <td>Call a [[macro|Macros]] (transcluding its result), [[treating its parameter as a variable|Text Substitution]]</td>
+    <td>Call a [[macro|Macros]] (transcluding its result), treating its parameter as a variable</td>
     <td>{{Sn:WikitextTransclusionMacro||MagicSnippet}}</td>
   </tr>
   <tr>
-    <td>Call a [[macro|Macros]] (transcluding its result), [[using its parameter in text substitution|Text Substitution]]</td>
+    <td>Call a [[macro|Macros]] (transcluding its result), using its parameter in text substitution</td>
     <td>{{Sn:WikitextTransclusionMacroSubst||MagicSnippet}}</td>
   </tr>
   <tr>
-    <td>Transclude the value of a variable in a macro via [[text substitution|Text Substitution]]</td>
+    <td>Include the value of a variable in a macro via text substitution</td>
     <td>{{Sn:MacroVariableTextSubstitution||MagicSnippet}}</td>
   </tr>
 </table>
