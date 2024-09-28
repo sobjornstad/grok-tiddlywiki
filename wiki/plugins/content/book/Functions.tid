@@ -1,6 +1,6 @@
 created: 20240831204317959
 description: Functions allow you to break down filter expressions into simpler parts and reuse them in other filter expressions.
-modified: 20240911133038677
+modified: 20240928214834674
 parent: More Organizational Tools
 tags: Section Concept
 title: Functions
@@ -8,13 +8,15 @@ type: text/vnd.tiddlywiki
 
 [[Variables]] and [[Procedures]] allow us to write some wikitext in one place, give it a name that concisely describes what it is, and use it in multiple places. For the same reason that TiddlyWiki supports variables and procedures when writing complicated wikitext, it supports ''functions'' when writing complicated filters. A function is a special kind of variable that contains a [[filter expression|Using Filter Expressions]].
 
-Like a procedure, a function can have parameters. Parameters passed to a function are available as variables inside the function's filter expression, just like parameters passed to a procedure are available as variables within the body of the procedure.
+Like a procedure, a function can have parameters. Parameters passed to a function are available as variables within the function's filter expression, just like parameters passed to a procedure are available as variables within the body of the procedure.
 
-Unlike a procedure, a function evaluates the filter expression within it and produces output tiddlers when called, rather than producing its contents as wikitext.
+Unlike a procedure, a function evaluates the filter expression within it and produces output tiddlers when called, rather than rendering its contents as wikitext.
 
-The syntax for basic function definitions and calls will be very familiar, because it's identical to that for procedures except that it uses the word `function` instead of `procedure`:
+The syntax for basic function definitions and calls will be very familiar, because it's identical to that for procedures except that the definition uses the word `function` instead of `procedure`:
 
 {{Sn:MultiplyByTwoFunction||MagicSnippet}}
+
+You can also use the `$transclude` widget to call a function, exactly like you use it to call a procedure.
 
 Since filters are typically only a single line, most function definitions will only need one line and so can omit the `\end`. However, if you have a very complex filter, line breaks between [[runs|Multi-Run Filters]] are allowed and can make the function easier to read.
 

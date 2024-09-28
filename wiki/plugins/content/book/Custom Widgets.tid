@@ -1,8 +1,8 @@
 created: 20240901044700214
-description: TODO
-modified: 20240928022342906
+description: Custom widgets are a special type of procedure that imitates the syntax of built-in widgets.
+modified: 20240928214328895
 parent: Macros, Wikification, and Widgets
-tags: Section
+tags: Section Concept
 title: Custom Widgets
 type: text/vnd.tiddlywiki
 
