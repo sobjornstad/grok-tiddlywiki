@@ -1,0 +1,12 @@
+created: 20240928184721952
+modified: 20240928184747658
+tags: 
+title: Sn:MissingParameters
+type: text/vnd.tiddlywiki
+
+\procedure wikipediaLink(linkText, articleName)
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<linkText>></a>
+\end
+
+<<wikipediaLink Aardvark>>

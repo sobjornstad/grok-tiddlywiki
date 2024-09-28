@@ -1,0 +1,9 @@
+created: 20240928184257238
+length: s
+modified: 20240928184916219
+origin: The Finer Points of Procedures
+tags: Exercise
+title: Ex:ReversedOptionalParameters
+type: text/vnd.tiddlywiki
+
+What do you think will happen if you reverse the order of the parameters in the version of `wikipediaLink` with an optional parameter, so that `linkText:"Wikipedia Link"` comes before `articleName` in the parameter list? Try it and see.

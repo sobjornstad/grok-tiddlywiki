@@ -1,0 +1,15 @@
+created: 20240928184649260
+modified: 20240928184825783
+tags: Answer
+title: Ex:ReversedOptionalParameters/answer
+type: text/vnd.tiddlywiki
+
+After reversing, we get something like this:
+
+{{Sn:ReversedOptParameters||MagicSnippet}}
+
+In the first link, we can see that `articleName` has implicitly gotten a value of `""` (an empty value), because there is nothing after the `wiki/`. In fact, the same thing happens if you don't provide any default value at all and just don't include a parameter:
+
+{{Sn:MissingParameters||MagicSnippet}}
+
+This said, putting non-optional parameters after optional ones, or calling a macro with some non-optional parameters missing, is bad style and will likely get you very confused sooner or later, so you should certainly avoid it!

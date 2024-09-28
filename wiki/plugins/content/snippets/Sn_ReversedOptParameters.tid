@@ -1,0 +1,13 @@
+created: 20240928184704511
+modified: 20240928184704511
+tags: 
+title: Sn:ReversedOptParameters
+type: text/vnd.tiddlywiki
+
+\procedure wikipediaLink(linkText:"Wikipedia Link", articleName)
+  <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
+  <<linkText>></a>
+\end
+
+<<wikipediaLink Aardvark>>
+<<wikipediaLink "Wikipedia on aardvarks" Aardvark>>

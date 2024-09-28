@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20240925031835901
+modified: 20240928184932752
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: The Finer Points of Procedures
@@ -82,7 +82,7 @@ Here's how we could create our aardvark link with a widget:
 
 Notice the dollar sign in front of `$variable`, which is easily missed. (It's there so that your procedure can parameters with any names, including `variable`, without conflicting.)
 
-We'll talk much more about transclusion in the sections to come, but for now, note simply that procedures are just a special way of defining a variable, and that when you “call a procedure,” you are really including the value of a variable in your wikitext at the specified point.
+We'll talk much more about transclusion in the sections to come, but for now, note simply that procedures are just a special way of defining a variable, and that when you “call a procedure,” you are really including the value of a variable in your wikitext (//transcluding// it) at the specified point.
 
 
 </$details><$details summary="The $transclude widget can take variables as parameters">
@@ -97,15 +97,9 @@ From the above, it was probably not immediately obvious why you would ever want 
 !! Exercises
 
 {{Ex:TicketTrackingLink||ExerciseTemplate}}
+{{Ex:ReversedOptionalParameters||ExerciseTemplate}}
 {{Ex:QuotedMacroCall||ExerciseTemplate}}
 {{Ex:UnclosedMacroCall||ExerciseTemplate}}
-{{Ex:MacroCallAsParameter||ExerciseTemplate}}
-
-TODO: is the one immediately above still relevant in this section? It at least needs updating
-
-Not valid to have a default parameter for an EARLIER variable and not for a LATER variable (I think?)
-
-Add an exercise for optional and named parameters
 
 
 !! Takeaways

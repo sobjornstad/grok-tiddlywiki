@@ -1,6 +1,6 @@
 created: 20210120014333991
 description: As your wikitext gets more complicated, it occasionally might not do what you were expecting; here's how you can figure out what you did wrong.
-modified: 20240927020820888
+modified: 20240928183956400
 parent: Filtering and Formatting
 tags: Section
 title: When Things Go Wrong
@@ -12,7 +12,7 @@ Error messages can be terrifying when you aren't prepared for them; but they can
 ---Donald Knuth, //The TeXbook//
 <<<
 
-In this chapter, we started looking at some more complicated features of [[wikitext|Wikitext]]. The more complicated wikitext gets, the more likely you use it incorrectly by mistake. So before we finish out the chapter, let's talk briefly about what to do when some wikitext you're writing doesn't do what you think it should. TiddlyWiki, like all software, is pretty fussy: if you leave out a period in the wrong spot, you might get a totally different effect than the one you intended. As you continue to work on the exercises and with your own wikis, you will no doubt run into problems on occasion.
+In this chapter, we started looking at some more complicated features of [[wikitext|Wikitext]]. The more complicated wikitext gets, the more likely you use it incorrectly by mistake. So before we finish out the chapter, let's talk briefly about what to do when some wikitext you're writing doesn't do what you think it should. (Programmers would say you need to ''debug'' your wikitext.)  TiddlyWiki, like all software, is pretty fussy: if you leave out a period in the wrong spot, you might get a totally different effect than the one you intended. As you continue to work on the exercises and with your own wikis, you will no doubt run into problems on occasion.
 
 Finding the errors will get easier as you learn more about TiddlyWiki. You'll get much faster at spotting minor syntax mistakes, and you'll have a deeper understanding of how TiddlyWiki works, so you'll be able to think through why something might not work. I also try to call out some of the most common errors in exercises and takeaways throughout the book, with the hopes that you'll be able to learn about at least a few of the errors ahead of time instead of through the school of hard knocks. In the meantime, let's look at some cognitive tools for working through problems when your prior experience fails you.
 

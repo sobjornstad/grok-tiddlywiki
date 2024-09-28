@@ -1,6 +1,6 @@
 created: 20240616152105208
 description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
-modified: 20240926000528512
+modified: 20240928181438526
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Using Variables as Attributes
@@ -65,6 +65,7 @@ Within a substituted attribute value, the syntax `$(wpBase)$` refers to the valu
 
 !! Exercises
 
+{{Ex:ContactLinks||ExerciseTemplate}}
 {{Ex:ProcedureAdjacency||ExerciseTemplate}}
 
 

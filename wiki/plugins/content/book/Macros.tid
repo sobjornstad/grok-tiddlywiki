@@ -1,6 +1,6 @@
 created: 20200603011212616
 description: Macros are an older version of procedures that handle their parameters differently.
-modified: 20240923222028857
+modified: 20240928184059946
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Macros
@@ -8,7 +8,9 @@ type: text/vnd.tiddlywiki
 
 ''Macros'', like [[Variables]], [[Procedures]], and [[Functions]], are a mechanism for reusing wikitext in different places. And like procedures and functions, they're really a special type of variable. They're most closely related to procedures: they're used to specify text which is mostly constant but changes in a small part or two. Indeed, they behave exactly like procedures in almost all ways, with one very important exception: they handle their parameters in a completely different way.
 
-Once upon a time, macros were the //only// way to create a variable with some parts that changed -- procedures didn't exist at all. The way macros handle their parameters tends to be much more confusing than the way procedures do, so we've put off learning them for a while, and nowadays it's usually best to use procedures instead. Nevertheless, there are times when using a macro can make something that would otherwise be quite awkward extremely easy, and if you explore older wikis, plugins, or the TiddlyWiki core, you will have to understand macros to follow the wikitext there, so learning how they work is important no matter what.
+Once upon a time, macros were the //only// way to create a variable with some parts that changed -- procedures didn't exist at all. Nowadays, it is usually best to use procedures rather than macros. There are two reasons for this: first, the way macros handle their parameters tends to be much more difficult to understand than the way procedures do (this is why we've put off learning about macros until much later). Second, the way macros handle their parameters can cause subtle bugs when tiddler titles or fields contain certain characters, and it is difficult to impossible to defend against them. (We'll see one example of this in an exercise at the end of this section; see [[Macro Pitfalls|https://tiddlywiki.com/#Macro%20Pitfalls]] in the TiddlyWiki documentation for more.)
+
+Nevertheless, there are times when using a macro can make something that would otherwise be quite awkward extremely easy, and if you explore older wikis, plugins, or the TiddlyWiki core, you will have to understand macros to follow the wikitext there, so learning how they work is important no matter what.
 
 Macro definitions work just like procedure and function definitions; they use the pragma `\define`. For example, we can say:
 
@@ -33,7 +35,7 @@ Armed with the new syntax, we can fix our example to work as a macro:
 
 {{Sn:FixedWikipediaLinkMacro||MagicSnippet}}
 
-Take another look at that example. Notice something odd in the body of the macro? Right, we didn't use the [[backtick syntax|Using Variables as Attributes]] for the `href` attribute to combine `articleName` with the rest of the URL. Instead, we just quoted it normally -- yet we got the correct result.
+Take another look at that example. Notice something odd in the body of the macro? Right, we didn't use the substituted attribute value [[backtick syntax|Using Variables as Attributes]] for the `href` attribute to combine `articleName` with the rest of the URL. Instead, we just quoted it normally -- yet we got the correct result.
 
 That's because the `$bare dollar signs$` syntax performs ''text substitution''. This is the key difference between macros and procedures. In a procedure, all variable references are processed as normal wikitext, just like they would be outside a procedure. But in a macro, when you call the macro, TiddlyWiki momentarily ''stops processing wikitext'' and first substitutes the macro's parameters into the text of the macro. This is completely unaware of syntax in any way and operates before rendering wikitext -- you can think of it like copying and pasting the value of the parameter over the `$placeholder$` in the macro. Only after text substitution is completed does the content of the macro get rendered as wikitext in its original context.
 
@@ -46,9 +48,9 @@ You may occasionally see text substitution called //textual substitution// or ju
 
 !! Text substitution with variables
 
-Within a macro, you can also perform text substitution on a variable that is not a parameter of the macro using the `$(parenthesized dollar signs)$` syntax. You may notice this syntax is familiar -- it's the same syntax used within [[backtick attributes|Using Variables as Attributes]] to combine variables with other text -- and it does exactly the same thing (performs text substitution using the value of the variable). But in a macro, you can do this outside of backticks.
+Within a macro, you can also perform text substitution on a variable that is not a parameter of the macro using the `$(parenthesized dollar signs)$` syntax. You may notice this syntax is familiar -- it's the same syntax used within [[substituted attribute values|Using Variables as Attributes]] to combine variables with other text -- and it does exactly the same thing (performs text substitution using the value of the variable). But in a macro, you can do this outside of backticks.
 
-You might be asking, why would we want to use a variable rather than a parameter to change the behavior of a macro? Generally, if we have the choice, we don't; it's clearer what information the macro is using when we use parameters, and it's not a good thing when macros do something surprising. (See the Principle of Least Astonishment.) However, there are some cases where it saves us a lot of trouble – the first exercise will be an example of that. (Hint, hint.)
+You might be asking, why would we want to use a variable rather than a parameter to change the behavior of a macro? Generally, if we have the choice, we don't; it's clearer what information the macro is using when we use parameters, and it's not a good thing when macros do something surprising. (See the [[Principle of Least Astonishment|https://en.wikipedia.org/wiki/Principle_of_least_astonishment]].) However, there are some cases where it saves us a lot of trouble – the first exercise will be an example of that. (Hint, hint.)
 
 
 !! Exercises

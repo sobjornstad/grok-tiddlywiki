@@ -1,0 +1,11 @@
+created: 20240928180939170
+length: m
+modified: 20240928181425501
+origin: Using Variables as Attributes
+tags: Exercise
+title: Ex:ContactLinks
+type: text/vnd.tiddlywiki
+
+Suppose you use a webapp to store your contacts which allows you to access them at `https://mycontacts.com/contactname`, where `contactname` is the name of their tiddler in TiddlyWiki (e.g., `JaneDoe`). Create a tiddler called `ContactLinks` that contains a bulleted list of all your contacts (sorted in alphabetical order). Each bullet should contain a link to the contact's tiddler in TiddlyWiki, and a link to the contact's page on mycontacts.com.
+
+Use a [[dynamic list|Your First Dynamic List]] so new contacts are automatically added. Recall that the current item in a dynamic list is available in the `currentTiddler` variable.

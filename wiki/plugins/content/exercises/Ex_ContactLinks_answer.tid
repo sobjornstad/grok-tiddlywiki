@@ -1,0 +1,16 @@
+created: 20240928181020317
+modified: 20240928181022422
+tags: Answer
+title: Ex:ContactLinks/answer
+type: text/vnd.tiddlywiki
+
+Here's a simple version.
+
+```html
+<ul>
+  <$list filter="[tag[Contact]]">
+    <li><<currentTiddler>> (<a href=`https://mycontacts.com/$(currentTiddler)$`>mycontacts.com</a>) 
+  </li>
+  </$list>
+</ul>
+```
