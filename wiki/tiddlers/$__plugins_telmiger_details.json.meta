@@ -1,13 +1,13 @@
 author: Thomas Elmiger
-core-version: >=5.1.13
-created: 20210315112839736
-dependents: 
-description: DetailsWidget
-list: readme license
-modified: 20210315112839736
-name: Disclosure HTML element
+core-version: 5.1.13
+created: 20170205215504722
+description: Disclosure HTML element
+list: readme support license
+modified: 20240106124548575
+name: DetailsWidget
+packaged-by: Gatha on 6th January 2024, 13:47:24
 plugin-type: plugin
 source: https://tid.li/tw5/plugins.html
 title: $:/plugins/telmiger/details
 type: application/json
-version: 0.7.4
+version: 0.8.0
