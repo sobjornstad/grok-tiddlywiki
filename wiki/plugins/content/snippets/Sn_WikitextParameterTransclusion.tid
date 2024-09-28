@@ -1,0 +1,9 @@
+created: 20240928185732900
+modified: 20240928185749102
+tags: 
+title: Sn:WikitextParameterTransclusion
+type: text/vnd.tiddlywiki
+
+\parameters(param1, param2)
+
+I have been passed parameters <<param1>> and <<param2>>.
