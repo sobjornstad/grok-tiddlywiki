@@ -1,8 +1,8 @@
 caption: 6: Macros, Wikification, and Widgets
 created: 20240907014711777
 description: In which...
-list: Macros Wikification [[Block Mode and Inline Mode]] [[Custom Widgets]] [[Filling Slots]] [[Templates vs. Procedures vs. Macros vs. Custom Widgets]] [[Summary of Procedure, Function, Macro, and Transclusion Syntax]]
-modified: 20240928014237236
+list: Macros Wikification [[Block Mode and Inline Mode]] [[Custom Widgets]] [[Filling Slots]] [[Templates vs. Procedures vs. Macros vs. Custom Widgets]] [[Summary of Inclusion Syntax]]
+modified: 20240928023739909
 parent: Outline
 tags: Chapter
 title: Macros, Wikification, and Widgets

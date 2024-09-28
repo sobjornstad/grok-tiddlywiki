@@ -1,6 +1,6 @@
 created: 20210320182859703
 description: Review all the syntax used for reusing and relating content in TiddlyWiki.
-modified: 20240928015038563
+modified: 20240928023739909
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Summary of Procedure and Transclusion Syntax
@@ -8,6 +8,6 @@ type: text/vnd.tiddlywiki
 
 We learned about a lot of different ways of reusing and relating content in TiddlyWiki in this chapter, and when you've just learned all of them, it's often difficult to keep them straight. Let's review all the options and the syntax for each.
 
-We'll be adding a handful of new tools to our toolbox in chapters <<gtw.link-chapter-number "More Organizational Tools" "">> and <<gtw.link-chapter-number "Macros, Wikification, and Widgets" "">>, so we'll have an updated version, [[Summary of Procedure, Function, Macro, and Transclusion Syntax]], at the end of chapter 6. You can also find a condensed version in the [[Wikitext Reference]], which also has some live examples you can play with.	
+We'll be adding a handful of new tools to our toolbox in chapters <<gtw.link-chapter-number "More Organizational Tools" "">> and <<gtw.link-chapter-number "Macros, Wikification, and Widgets" "">>, so we'll have an updated version, [[Summary of Inclusion Syntax]], at the end of chapter 6. You can also find a condensed version in the [[Wikitext Reference]], which also has some live examples you can play with.	
 
 {{CommonTransclusionSyntax|first}}
