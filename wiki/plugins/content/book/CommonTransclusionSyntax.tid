@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 \function .later() [<version>match[second]]
 
 <% if [<version>is[blank]] %>
-	''[WARNING: This tiddler is intended to be read transcluded with a `version` parameter in different places in the wiki depending on how much of this syntax you have learned by the section it appears in. Currently you are viewing this tiddler without any such parameter, and you may not be seeing all of the content in it.]''
+  ''[WARNING: This tiddler is intended to be read transcluded with a `version` parameter in different places in the wiki depending on how much of this syntax you have learned by the section it appears in. Currently you are viewing this tiddler without any such parameter, and you may not be seeing all of the content in it.]''
 <% endif %>
 
 !! Available in wikitext and filter expressions
@@ -26,13 +26,13 @@ The following types of references work both within [[wikitext|Wikitext]] and [[f
 : To [[transclude the value of|Transclusions]] a field of a tiddler.
 
 <ul>
-	<li>`{{tiddler}}` to transclude the `text` field of a tiddler</li>
-	<li>`{{tiddler!!field}}` to transclude a different field of a tiddler</li>
-	<% if [.later[]] %><li>`{{tiddler##index}}` to transclude a property of a [[data tiddler|Data Tiddlers]]</li><% endif %>
-	<li>`{{!!field}}` to transclude a field of the [[current tiddler|Templates and the Current Tiddler]]</li>
-	<li>`{{tiddler||Template}}` to transclude a tiddler [[through a template|Templates and the Current Tiddler]]</li>
-	<li>`{{||Template}}` to transclude the current tiddler through a template</li>
-	<li>`{{tiddler|param1|param2|...}}` to transclude a tiddler with parameters (optionally with either `!!` or `||` syntax before the first `|` to transclude an arbitrary field or perform a template transclusion, respectively)</li>
+  <li>`{{tiddler}}` to transclude the `text` field of a tiddler</li>
+  <li>`{{tiddler!!field}}` to transclude a different field of a tiddler</li>
+  <% if [.later[]] %><li>`{{tiddler##index}}` to transclude a property of a [[data tiddler|Data Tiddlers]]</li><% endif %>
+  <li>`{{!!field}}` to transclude a field of the [[current tiddler|Templates and the Current Tiddler]]</li>
+  <li>`{{tiddler||Template}}` to transclude a tiddler [[through a template|Templates and the Current Tiddler]]</li>
+  <li>`{{||Template}}` to transclude the current tiddler through a template</li>
+  <li>`{{tiddler|param1|param2|...}}` to transclude a tiddler with parameters (optionally with either `!!` or `||` syntax before the first `|` to transclude an arbitrary field or perform a template transclusion, respectively)</li>
 </ul>
 
 !! Available only within wikitext
@@ -48,12 +48,12 @@ As you might have worked out from the heading â€œAvailable only within wikitextâ
 Backticks can be used to combine constant text and variables and/or the results of filter expressions into a single attribute of a widget or HTML element.
 
 <dl>
-	<dt><code>`<$widget attribute=`&#96;text with a $(variable)$ in it&#96;/></code></dt>
-	<dd>To [[combine|Using Variables as Attributes]] constant text and one or more variables (in `$(these thingies)$`) into the value of an attribute</dd>
-	<% if [.later[]] %>
-		<dt><code>`<$widget attribute=`&#96;text with a `${ [[filter expression]] } in it`&#96;/></code></dt>
-		<dd>To combine constant text and the result of one or more filter expressions (in `${ these thingies }$` into the value of an attribute</dd>
-	<% endif %>
+  <dt><code>`<$widget attribute=`&#96;text with a $(variable)$ in it&#96;/></code></dt>
+  <dd>To [[combine|Using Variables as Attributes]] constant text and one or more variables (in `$(these thingies)$`) into the value of an attribute</dd>
+  <% if [.later[]] %>
+    <dt><code>`<$widget attribute=`&#96;text with a `${ [[filter expression]] } in it`&#96;/></code></dt>
+    <dd>To combine constant text and the result of one or more filter expressions (in `${ these thingies }$` into the value of an attribute</dd>
+  <% endif %>
 </dl>
 
 <% if [.later[]] %>

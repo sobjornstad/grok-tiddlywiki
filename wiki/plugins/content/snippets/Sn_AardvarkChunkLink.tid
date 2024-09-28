@@ -5,5 +5,5 @@ title: Sn:AardvarkChunkLink
 type: text/vnd.tiddlywiki
 
 <$let wikipedia="https://en.wikipedia.org/wiki/">
-	<<wikipedia>>Aardvark
+  <<wikipedia>>Aardvark
 </$let>

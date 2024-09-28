@@ -7,21 +7,21 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 \procedure gtw.link-chapter-name(chapterName, text:"")
-	<$link to=<<chapterName>>>
-		<% if [<text>!is[blank]] %>
-			<<text>>
-		<% else %>
-			<<chapterName>>
-		<% endif %>
-	</$link>
+  <$link to=<<chapterName>>>
+    <% if [<text>!is[blank]] %>
+      <<text>>
+    <% else %>
+      <<chapterName>>
+    <% endif %>
+  </$link>
 \end gtw.link-chapter-name
 
 \procedure gtw.link-chapter-number(chapterName, chapterPrefix:"chapter")
-	\function .number-from-chapter(chapterName) [get[caption]split[: ]first[]]
-	
-	<$transclude
-		$variable="gtw.link-chapter-name"
-		chapterName=<<chapterName>>
-		text={{{ [<chapterName>.number-from-chapter[]addprefix[ ]addprefix<chapterPrefix>] }}}
-	/>
+  \function .number-from-chapter(chapterName) [get[caption]split[: ]first[]]
+
+  <$transclude
+    $variable="gtw.link-chapter-name"
+    chapterName=<<chapterName>>
+    text={{{ [<chapterName>.number-from-chapter[]addprefix[ ]addprefix<chapterPrefix>] }}}
+  />
 \end gtw.link-chapter-number

@@ -9,6 +9,6 @@ type: text/vnd.tiddlywiki
 <<speaker>> says to <<interlocutor>>:
 
 <blockquote>
-	<$slot $name="quote" />
+  <$slot $name="quote" />
 </blockquote>
 

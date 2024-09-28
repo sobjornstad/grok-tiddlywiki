@@ -10,7 +10,7 @@ In [[Ex:ProcedureAdjacency]] back in [[Using Variables as Attributes]], we found
 
 ```html
 <$let wikipedia="https://en.wikipedia.org/wiki/">
-	<<wikipedia>>Aardvark
+  <<wikipedia>>Aardvark
 </$let>
 ```
 

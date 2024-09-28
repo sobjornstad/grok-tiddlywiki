@@ -11,5 +11,5 @@ type: text/vnd.tiddlywiki
 <$wikify name="wikitext" text="""<<myText "test text">>""">
 
 ''Also OK:'' <$text text=<<wikitext>>/>
-	
+
 </$wikify>

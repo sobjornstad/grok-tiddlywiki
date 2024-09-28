@@ -4,11 +4,11 @@ title: Sn:SayAThing
 type: text/vnd.tiddlywiki
 
 <$transclude
-	$tiddler="Sn:SaidAThing"
-	interlocutor="Alice" 
-	speaker="Bob"
+  $tiddler="Sn:SaidAThing"
+  interlocutor="Alice" 
+  speaker="Bob"
 >
-	<$fill $name="quote">
-		Charlie told me, “[[There's a horse in aisle five|https://what-if.xkcd.com/34/]].”
-	</$fill>
+  <$fill $name="quote">
+    Charlie told me, “[[There's a horse in aisle five|https://what-if.xkcd.com/34/]].”
+  </$fill>
 </$transclude>

@@ -51,17 +51,17 @@ The syntax looks like this:
 
 ```
 \procedure global-proc()
-	\procedure subproc(tiddler)
-		...render something with it
-	\end subproc
-	\function subfunction() [prefix[X]]
+  \procedure subproc(tiddler)
+    ...render something with it
+  \end subproc
+  \function subfunction() [prefix[X]]
 
-	<$list filter="[function[subfunction]]">
-		<$transclude
-		  $variable=<<subproc1>>
-			tiddler=<<currentTiddler>>
-		/>
-	</$list>
+  <$list filter="[function[subfunction]]">
+    <$transclude
+      $variable=<<subproc1>>
+      tiddler=<<currentTiddler>>
+    />
+  </$list>
 \end global-proc
 ```
 

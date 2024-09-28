@@ -11,11 +11,11 @@ type: text/vnd.tiddlywiki
 
 <% if [<holiday>!is[blank]] %>
 
-	It's ''<<holiday>>'' today!
+  It's ''<<holiday>>'' today!
 
 <% else %>
 
-	Sadly, it's a very ordinary day today.
+  Sadly, it's a very ordinary day today.
 
 <% endif %>
 

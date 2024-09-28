@@ -53,7 +53,7 @@ You can access these attributes using the [[CSS attribute selector syntax|https:
 
 ```css
 [data-tags*=BadFont] {
-	font-family: "Comic Sans MS", serif;
+  font-family: "Comic Sans MS", serif;
 }
 ```
 

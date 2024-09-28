@@ -12,6 +12,6 @@ title: $:/sib/Buttons/excise-exercise
 type: text/vnd.tiddlywiki
 
 <$action-sendmessage
-	$message="tm-edit-text-operation"
-	$param="exciseExercise"
+  $message="tm-edit-text-operation"
+  $param="exciseExercise"
 />

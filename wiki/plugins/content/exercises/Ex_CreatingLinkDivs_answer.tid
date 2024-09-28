@@ -18,9 +18,9 @@ type: text/vnd.tiddlywiki
     <ul>
       <$list filter="[all[current]subfilter<subfilter>]">
         <li>
-				  <$link />:
-				  <div><$transclude $variable="excerptify" title={{!!title}}/></div>
-				</li>
+          <$link />:
+          <div><$transclude $variable="excerptify" title={{!!title}}/></div>
+        </li>
       </$list>
     </ul>
   </div>
