@@ -1,6 +1,6 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240925225410478
+modified: 20240928024625995
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
 title: Transclusions
@@ -44,7 +44,7 @@ However, in non-technical contexts, people often use the term //transclusion// b
 
 !! The `$transclude` widget
 
-In the previous section, [[The Finer Points of Procedures]] we mentioned that you can use the `$transclude` widget with the `$variable` parameter to call a procedure (transclude the value of the procedure/variable). You can use the `$transclude` widget to do field transclusion as well, using its `$tiddler` and `$field` parameters. These are the same thing:
+In the previous section, [[The Finer Points of Procedures]] we mentioned that you can use the `$transclude` widget with the `$variable` parameter to call a procedure (transclude the value of the procedure/variable). You can use the `$transclude` widget to do field transclusion as well, using its `$tiddler` and `$field` parameters. {{Ltc:BracesTranscludeSame||LieToChildrenTemplate}}:
 
 ```html
 * {{JaneDoe!!phone}}

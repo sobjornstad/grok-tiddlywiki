@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20240925231036539
+modified: 20240928025029982
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Templates and the Current Tiddler
@@ -59,7 +59,7 @@ These field references referred to the `JaneDoe` tiddler, since they were in `Ja
 
 Easy enough, right? Now let's think about what happens when we transclude Jane's tiddler in another tiddler called `AllContacts`. (If you want, you can go try this in your wiki right now.) If we're looking at `AllContacts`, we definitely don't want the current tiddler to be `AllContacts` while rendering the content of the `JaneDoe` tiddler -- if it were, we wouldn't be able to see any of Jane's contact information, because we referred to it with, e.g., `{{!!phone}}`, and the `AllContacts` tiddler doesn't have a `phone` field, much less one containing Jane's phone number.
 
-For this reason, anytime we transclude a field of a tiddler, the current tiddler is ''changed to the tiddler we're transcluding'', the contents of the field are processed, and then the current tiddler is changed back. You can imagine that TiddlyWiki does something like this:
+For this reason, anytime we transclude a field of a tiddler using the `{{braces syntax}}`, the current tiddler is ''changed to the tiddler we're transcluding'', the contents of the field are processed, and then the current tiddler is changed back. You can imagine that TiddlyWiki does something like this:
 
 ```html
 <$let currentTiddler="JaneDoe">
@@ -104,6 +104,14 @@ There's a shorter and more flexible way to write this. Just like we can write `{
 ```html
 {{||ContactInformationTemplate}}
 ```
+
+In this case, we could also simply use the `$transclude` widget, which does not change the current tiddler. The above syntax is equivalent to:
+
+```html
+<$transclude $tiddler="ContactInformationTemplate"/>
+```
+
+(If you want to use the `$transclude` widget rather than braces but you //do// want to change the current tiddler, you can set the current tiddler yourself around the `$transclude` widget. The idiomatic way to do this is with the `$tiddler` widget, like `<$tiddler tiddler="NewCurrentTiddler">`.)
 
 `{{tiddler||template}}`, and the concept of “transcluding a tiddler through a template,” ''feels backwards'' to many people at first. This operation actually transcludes the //template//, giving it access to the fields of the tiddler; our intuitive notion of transcluding a tiddler seems rather to suggest that the //tiddler// should be transcluded with reference to the information in the template. A good way to read `{{tiddler||template}}` is “Put the contents of //template// right here, but as you're deciding what //template// looks like, the current tiddler is //tiddler//, not //template//.”
 

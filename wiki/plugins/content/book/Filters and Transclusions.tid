@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20240926002659519
+modified: 20240928024032075
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Filters and Transclusions
@@ -57,6 +57,21 @@ However, if you try this, you'll find that only one meeting shows up. That's bec
 The rationale for this is simply that it's rarely useful to do anything else. If TiddlyWiki passed a list of meetings directly to the `$text` widget, you would just get a long string of meeting names separated by spaces. If you actually want to list all the meetings as text, or as a bulleted list, you would use a `$list` widget instead so you could specify what each item should look like.
 
 Nevertheless, it's important to be aware of this behavior, or you may find yourself very confused on occasion.
+
+
+!!! Transcluding inside the value of an attribute
+
+In [[Using Variables as Attributes]], we learned that you can combine variables and constant text into the value of an attribute like this:
+
+```html
+<$widget attribute=`text and $(variable)$`/>
+```
+
+Similarly, you can combine the result of a filter and constant text, by replacing the parentheses with braces:
+
+```html
+<$widget attribute=`text and ${ [filter-expression[]] }$`/>
+```
 
 
 !! Transcluding things into a filter

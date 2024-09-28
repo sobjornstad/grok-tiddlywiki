@@ -1,0 +1,8 @@
+created: 20240928024455998
+description: These are the same thing
+modified: 20240928024607093
+tags: 
+title: Ltc:BracesTranscludeSame
+type: text/vnd.tiddlywiki
+
+Actually, there's a small but important difference between these two syntaxes, unlike most wikitext/widget pairs: the `$transclude` widget does not change the current tiddler, while `{{braces}}` do. We'll come back to this in the next section, when we've learned more about the current tiddler.
