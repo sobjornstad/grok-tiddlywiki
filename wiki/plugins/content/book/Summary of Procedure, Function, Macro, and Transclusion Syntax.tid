@@ -1,0 +1,13 @@
+created: 20240928013458182
+description: Review all the syntax used for reusing and relating content in TiddlyWiki.
+modified: 20240928021249044
+parent: Macros, Wikification, and Widgets
+tags: Section
+title: Summary of Procedure, Function, Macro, and Transclusion Syntax
+type: text/vnd.tiddlywiki
+
+At the end of chapter 4, we threw together a [[Summary of Procedure and Transclusion Syntax]]. Since then, we've added functions, macros, and data tiddlers, so there's a little more syntax to add. Here's an updated version.
+
+You can find a condensed version of this section in the [[Wikitext Reference]], which also has some live examples you can play with.	
+
+{{CommonTransclusionSyntax|second}}

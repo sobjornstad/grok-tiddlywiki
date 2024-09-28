@@ -1,0 +1,8 @@
+created: 20240927113512688
+modified: 20240927113555142
+title: Sn:HiTransclusionDescription
+type: text/vnd.tiddlywiki
+
+{{Sn:Hi!!description|Alice|Bob}}
+
+<$transclude $tiddler="Sn:Hi" $field="description" interlocutor="Carol" speaker="Daniel"/>

@@ -1,0 +1,9 @@
+created: 20240927112738084
+description: \parameters(interlocutor, speaker) <<speaker>> is talking to <<interlocutor>>
+modified: 20240927113359650
+tags: 
+title: Sn:Hi
+type: text/vnd.tiddlywiki
+
+\parameters(interlocutor, speaker)
+Hi <<interlocutor>>, I'm <<speaker>>!

@@ -1,6 +1,6 @@
 created: 20240901044700214
 description: TODO
-modified: 20240923233318025
+modified: 20240928022342906
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Custom Widgets
@@ -14,24 +14,24 @@ Custom widgets are defined using the same pragma syntax as [[Procedures]], [[Fun
 
 * The word `widget` is used.
 * Like all widgets, your custom widget must have a name beginning with `$`.
-* The name of your custom widget must contain a dot (`.`). Unlike for function names, this is not an optional naming convention that allows shorter syntax, it is outright required. (There is an important exception to this rule, however, which we'll get to momentarily.)
+* The name of your custom widget must contain a dot (`.`). Unlike for [[function|Functions]] names, this is not an optional naming convention that allows shorter syntax, it is outright required. (There is one exception to this rule, which we'll discuss in the next chapter, in [[Overriding Built-In Widgets]].)
 
 Here's a very simple example:
 
 {{Sn:BoldItalicsWidget||MagicSnippet}}
 
-By default, custom widgets, like procedures and functions, are scoped to the tiddler in which they appear, and they can be (and most often are) made global in the same way as procedures, functions, and macros, by tagging their tiddler with `$:/tags/Global`.
+By default, custom widgets, like procedures and functions, are scoped to the tiddler in which they appear, and they can be (and most often are) made global in the same way as procedures, functions, and macros, by tagging their tiddler with [[$:/tags/Global]].
 
 
 !! Using the widget body
 
-Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, without requiring quoting. To get the body of the widget, we use the `$slot` widget to retrieve the slot named `ts-raw`:
+Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, without requiring quoting. The widget's body automatically fills a [[slot|Parameterizing Transclusions]] called `ts-raw`, so we use the `$slot` widget to retrieve it:
 
 {{Sn:BoldItalicsWidgetBody||MagicSnippet}}
 
-(We'll talk more about [[slots|Filling Slots]] later. For now, you can treat `<$slot $name="ts-raw">` as a little bit of magic code.)
+(For more on the `$slot` widget, review [[Parameterizing Transclusions]].)
 
-As with built-in widgets, if we want the content of a widget to be in [[block mode|Block Mode and Inline Mode]], we need to put blank lines around the opening and closing tags of our custom widget:
+As with built-in widgets, if we want the content of a widget to be in [[block mode|Block Mode and Inline Mode]], we need to put blank lines inside the opening and closing tags of our custom widget:
 
 ```html
 <$format.bold-italics>
@@ -42,33 +42,6 @@ Test text rendered in block mode
 ```
 
 
-
-!! Overriding built-in widgets
-
-In addition to creating new custom widgets, you can ''replace a built-in widget'' with a custom widget. This obviously must be done with caution, but it's a powerful feature that can be a very convenient way to add custom behavior to a TiddlyWiki. To achieve this, we simply define a new `\widget` with the same name as the one we want to override (this is the case where you don't need, and indeed can't have, a `.` in the name, mentioned earlier).
-
-As a silly example, suppose we want to completely inhibit internal linking. We can override the `$link` widget to ignore all of its parameters and only render the link text:
-
-{{Sn:LinkInhibition||MagicSnippet}}
-
-In most practical scenarios, though, we're not trying to replace an existing widget entirely -- rather, we want to wrap it in some other wikitext or change the values of its attributes in some systematic way. Therefore, we'll want to use some version of the original widget within the custom widget.
-
-However, if we just directly include a `$link` widget inside the definition of the `$link` widget, TiddlyWiki will try to transclude the custom widget within itself over and over again, recognize that it's stuck in an infinite loop, and give up on rendering the widget. We instead need to use the <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#GenesisWidget">`$genesis`</a> meta-widget, which creates another widget of an arbitrary type, to retrieve the original widget instead of our custom version.
-
-As an example, here's something more useful we can do by overriding the `$link` widget: if a tiddler has a `description` field, add a tooltip showing the `description` field on the link's tooltip.
-
-{{Sn:LinkTooltipification||MagicSnippet}}
-
-The `$type` parameter of the `$genesis` widget is the name of the widget we're trying to render. The `$remappable` parameter is the magic: setting this to `no` forces the original, built-in widget definition to be used, rather than our custom definition. Lastly, all parameters that don't start with dollar signs are passed as parameters to the newly created widget.
-
-Try hovering over the links above – you'll see the descriptions appear as tooltips!
-
-Word to the wise: If you're overriding a built-in widget (see later in this section), always test your changes within a single tiddler prior to making it global, lest you make a mistake, override a widget critical to TiddlyWiki's operation with a broken version, and be unable to get back into the editor to restore the default behavior! (If you //do// make such a mistake, you can manually edit the HTML file or tiddler file in a text editor to remove the faulty code and restart TiddlyWiki – this will not cause permanent data loss, it'll just be annoying.)
-
-
 !! Exercises
 
 {{Ex:ContactQuote||ExerciseTemplate}}
-{{Ex:LinkTooltipNonReplace||ExerciseTemplate}}
-{{Ex:SaveOptionalParameters||ExerciseTemplate}}
-{{Ex:EqualsPrefixNeeded||ExerciseTemplate}}

@@ -1,0 +1,14 @@
+created: 20240927114133966
+modified: 20240927115435253
+tags: 
+title: Sn:SaidAThing
+type: text/vnd.tiddlywiki
+
+\parameters(interlocutor, speaker)
+
+<<speaker>> says to <<interlocutor>>:
+
+<blockquote>
+	<$slot $name="quote" />
+</blockquote>
+

@@ -1,0 +1,14 @@
+created: 20240927114307999
+modified: 20240927115528433
+title: Sn:SayAThing
+type: text/vnd.tiddlywiki
+
+<$transclude
+	$tiddler="Sn:SaidAThing"
+	interlocutor="Alice" 
+	speaker="Bob"
+>
+	<$fill $name="quote">
+		Charlie told me, “[[There's a horse in aisle five|https://what-if.xkcd.com/34/]].”
+	</$fill>
+</$transclude>

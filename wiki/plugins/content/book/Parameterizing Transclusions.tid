@@ -1,9 +1,61 @@
 created: 20240907015401704
 description: TODO
-modified: 20240907015413749
+modified: 20240928013104359
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Parameterizing Transclusions
 type: text/vnd.tiddlywiki
 
-STUB
+Just like procedures can be given parameters, tiddler fields can be given parameters, giving a transclusion of that field some parts that change. To ''define the parameters of a field'', a `\parameters` pragma is placed at the start of the field. This takes a parameter list that looks and works exactly like that of a procedure. The specified parameters are made available as variables when rendering the field.
+
+To ''specify parameters when transcluding a tiddler'', place each parameter after a single `|` at the end of the usual transclusion syntax. For instance, suppose we write a snippet tiddler `Sn:Hi`:
+
+{{Sn:Hi||MagicSnippet}}
+
+Then we can say:
+
+{{Sn:HiTransclusion||MagicSnippet}}
+
+Of course, you can also do parameterized field transclusion with a `$transclude` widget. Just use the `$tiddler` attribute, and name each of the parameters, just like you would with the parameters of a procedure:
+
+{{Sn:HiTransclusionWidget||MagicSnippet}}
+
+While we typically only have reason to transclude the `text` field when working with parameterized transclusions, it's perfectly valid to give a different field parameters and transclude that. For instance, if we set the `description` field of `Sn:Hi` to <code><$view tiddler="Sn:Hi" field="description"/></code>:
+
+{{Sn:HiTransclusionDescription||MagicSnippet}}
+
+It's also possible to combine template transclusion with parameters, using the syntax `{{CurrentTiddler||TemplateTiddler|parameter1|parameter2}}`. You cannot directly combine this with transcluding a different field using `!!`, but you can work around that limitation by manually setting the `currentTiddler` variable and then performing the field transclusion.
+
+
+!! The `$parameters` widget
+
+The `\parameters` pragma is actually a shortcut for a <a href="https://tiddlywiki.com/#ParametersWidget" class="tc-tiddlylink-external">`$parameters` widget</a>. The widget form has two extra features:
+
+* You can ''compute the default parameters dynamically'' (so, for instance, if you left off a parameter when calling the transclusion, it could be filled in by a filter expression or a different variable).
+* You can ''retrieve parameters passed to ancestor transclusions'' (i.e., if you transclude a tiddler with parameters which transcludes another tiddler with different values of the same parameter, in that second tiddler you can retrieve the value which the first transclusion set).
+
+These are rarely necessary, but if they would come in handy for you, check out the documentation.
+
+
+!! Slots
+
+Believe it or not, there is actually yet another way to pass content into a transcluded tiddler: ''slots''. Here, you use a `$slot` widget with an arbitrary name in the tiddler to be transcluded, instead of referencing a variable. Then, in the body of a `$transclude` widget transcluding that tiddler, you place the content for the slot in the body of a `$fill` widget referencing the same name.
+
+First we create a tiddler with a slot:
+
+{{Sn:SaidAThing||MagicSnippet}}
+
+And then we transclude it, filling the slot:
+
+{{Sn:SayAThing||MagicSnippet}}
+
+You can include as many slots as you want; each will be filled by a separate `$fill` widget when it's transcluded (or remain blank, if no appropriate `$fill` widget is provided).
+
+The benefit of using a slot rather than a parameter is that ''including long content with lots of formatting is much easier'', since you don't have to cram it into part of a `{{field transclusion}}` or the attribute of a `$transclude` widget. The syntax is still a little ugly though -- you're forced to use a `$transclude` widget rather than `{{braces}}`, plus you have to nest an extra `$fill` widget inside the `$transclude` widget. [[Custom Widgets]] wrap a single slot called `ts-raw` in more convenient syntax, and are often a better choice in such a situation.
+
+
+!! Parameterized transclusions vs. procedures
+
+Why use a transclusion with parameters (or slots) rather than a procedure? Well, there's no technical reason, really; it can accomplish exactly the same things. It's more about semantics. Sometimes it feels more natural to think about reusing wikitext in terms of calling a procedure (for instance, when you want to create a link to something or format a small chunk of text), and sometimes in terms of transcluding a tiddler (for instance, when including an icon in the current tiddler and specifying its color).
+
+Parameterized transclusions are a recent addition to TiddlyWiki; for many years the only way to have parts in a transclusion that changed was to manually set variables to values before performing the transclusion (probably having to go look at the tiddler you were transcluding to remember what variable names to use). This means that most parameterized wikitext out there in the wild uses procedures (or, really, [[macros|Macros]] -- more on that later), less because they're actually better and more because they're the only thing we're used to. As more time goes by, the community will probably get a better idea of which options make the most sense where.

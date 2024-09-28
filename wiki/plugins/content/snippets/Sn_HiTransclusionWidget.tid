@@ -1,0 +1,6 @@
+created: 20240927112852642
+modified: 20240927112918342
+title: Sn:HiTransclusionWidget
+type: text/vnd.tiddlywiki
+
+<$transclude $tiddler="Sn:Hi" interlocutor="Alice" speaker="Bob"/>
