@@ -1,12 +1,12 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20240925031119805
+modified: 20240928201027241
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
 type: text/vnd.tiddlywiki
 
-A large portion of the power of TiddlyWiki lies in its ability to reuse content in different contexts. The best way to create opportunities for reuse is to slice content up into tiddlers appropriately. The value of this kind of slicing will become much more obvious once you learn about [[filters|Filters]] in chapter 3 and [[transclusions|Transclusions]] in chapter 4. However, there is already value even when our only means of reusing content is [[linking to it|Links]], and it's a good idea to start thinking about these issues now regardless, so that you'll be prepared to integrate the ideas you learn in those chapters.
+A large portion of the power of TiddlyWiki lies in its ability to reuse content in different contexts. The best way to create opportunities for reuse is to slice content up into tiddlers appropriately. The value of this kind of slicing will become much more obvious once you learn about [[filters|Filters]] in <<gtw.link-chapter-number "Filtering and Formatting">> and [[field transclusions|Field Transclusions]] in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>. However, there is already value even when our only means of reusing content is [[linking to it|Links]], and it's a good idea to start thinking about these issues now regardless, so that you'll be prepared to integrate the ideas you learn in those chapters.
 
 
 !! What makes an appropriately sliced tiddler?

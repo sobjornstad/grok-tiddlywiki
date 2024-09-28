@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20240928025029982
+modified: 20240928201117034
 parent: Variables, Procedures, and Transclusions
 tags: Section
 title: Templates and the Current Tiddler
@@ -15,14 +15,14 @@ Be forewarned that templates are probably somewhat unlike anything you've encoun
 
 !! The current tiddler
 
-To understand templates, we have to first understand TiddlyWiki's unexpectedly complex concept of the ''current tiddler''. We casually referred to the current tiddler in the [[Transclusions]] section when talking about the syntax `{{!!field}}`, and you probably assumed that the “current” tiddler is the one that you're typing the transclusion into. And in many cases, such as in several of the exercises in that section, it is. But it turns out there's a bit more to it.
+To understand templates, we have to first understand TiddlyWiki's unexpectedly complex concept of the ''current tiddler''. We casually referred to the current tiddler in the [[Field Transclusions]] section when talking about the syntax `{{!!field}}`, and you probably assumed that the “current” tiddler is the one that you're typing the transclusion into. And in many cases, such as in several of the exercises in that section, it is. But it turns out there's a bit more to it.
 
 An {{Ltc:CurrentTiddlerDefinition||LieToChildrenTemplate}} is straightforward: it's just ''the tiddler that's named in the value of the `<<currentTiddler>>` [[variable|Variables]]''. However, the current tiddler is much more interesting than your average variable, because references to this variable are deeply embedded into the syntax and inner workings of TiddlyWiki.
 
 Here are some places you can ''access the current tiddler'':
 
 * Via the `<<currentTiddler>>` variable.
-* In a field transclusion that does not name any tiddler. `{{!!field}}` refers to the `field` field of the current tiddler, as noted in [[Transclusions]].
+* In a field transclusion that does not name any tiddler. `{{!!field}}` refers to the `field` field of the current tiddler, as noted in [[Field Transclusions]].
 * Via the `all[current]` [[filter step|Common Filter Operators]].
 * Many [[widgets|Widgets]] assume the tiddler to operate on is the current tiddler unless you say otherwise.
 

@@ -1,12 +1,12 @@
 created: 20200717225935255
 description: Almost everything in TiddlyWiki is controlled by tiddlers; system tiddlers are those hidden “meta-tiddlers” that control the wiki rather than containing your actual content.
-modified: 20240926003822735
+modified: 20240928201045523
 parent: Looking Under the Hood
 tags: Section Concept
 title: System Tiddlers
 type: text/vnd.tiddlywiki
 
-Back at the very beginning of the book, in [[Tiddlers]], we learned that everything is a tiddler. And in [[Transclusions]], we mentioned in passing that the entire interface of TiddlyWiki is created by transcluding special tiddlers.
+Back at the very beginning of the book, in [[Tiddlers]], we learned that everything is a tiddler. And in [[Field Transclusions]], we mentioned in passing that the entire interface of TiddlyWiki is created by transcluding special tiddlers.
 
 This means that, essentially, we can change //anything// in TiddlyWiki just by modifying these tiddlers, using the same tools we already know. (Only a tiny piece of TiddlyWiki, called the //microkernel//, can't be directly modified from within the wiki. But the only function of the microkernel is to load the JavaScript code and wikitext that is stored in tiddlers, so it's hard to imagine having a reason to customize it.) Completely changing the look and feel of TiddlyWiki and implementing custom JavaScript code are beyond the scope of this book, but in this chapter we will look at changing the sidebar, adding custom interface elements, and some more fun and useful things that will help you make any wiki you create with TiddlyWiki exactly fit your needs. Along the way, you'll also learn how you can poke around and discover how these tiddlers work, so you can make your own changes that we haven't talked about.
 

@@ -1,12 +1,12 @@
 created: 20200530170328830
 description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240928024625995
+modified: 20240928200835437
 parent: Variables, Procedures, and Transclusions
 tags: Section Concept
-title: Transclusions
+title: Field Transclusions
 type: text/vnd.tiddlywiki
 
-''Field transclusions'' are much like [[variable references|Variables]] or [[procedure calls|Procedures]], but their value comes from another tiddler in your wiki rather than a `$let` widget or a procedure definition.
+ ''Field transclusions'' are much like [[variable references|Variables]] or [[procedure calls|Procedures]], but their value comes from another tiddler in your wiki rather than a `$let` widget or a procedure definition.
 
 Specifically, a field transclusion, as its name suggests, retrieves ''the contents of a particular field of a tiddler''. If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` in our example wiki and try that:
 
