@@ -1,5 +1,5 @@
 created: 20240615154834366
-modified: 20240615155933017
+modified: 20240929154334596
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/AddTakeawayButton
 type: text/vnd.tiddlywiki
@@ -25,11 +25,12 @@ type: text/vnd.tiddlywiki
 
   <$let
     rightNow=<<now "[UTC]YYYY0MM0DD0hh0mm0ss0XXX">>
-    qafields=`question=${ [{$:/temp/addq!!question}] }$ answer=${ [{$:/temp/addq!!answer}] }$`
-    czfields=`question=${ [{$:/temp/addq!!question}] }$`
+    qafields=`question="""${ [{$:/temp/addq!!question}] }$""" answer="""${ [{$:/temp/addq!!answer}] }$"""`
+    czfields=`question="""${ [{$:/temp/addq!!question}] }$"""`
     fieldAttributes={{{ [<takeawayType>match[rememberq]then<qafields>else<czfields>] }}}
   >
     <$button actions=<<create-takeaway-actions>>>
       Add takeaway
     </$button>
   </$let>
+\end

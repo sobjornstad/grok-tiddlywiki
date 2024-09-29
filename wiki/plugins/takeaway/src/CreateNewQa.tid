@@ -1,6 +1,6 @@
 caption: Question/Answer
 created: 20210817193149287
-modified: 20240615155931663
+modified: 20240929154129682
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/CreateNewQa
 type: text/vnd.tiddlywiki
@@ -45,7 +45,7 @@ type: text/vnd.tiddlywiki
 <% if [[$:/temp/addq]get[question]!is[blank]] %>
 <% if [[$:/temp/addq]get[answer]!is[blank]] %>
 
-  <<add-takeaway-button rememberqa>>
+  <<add-takeaway-button rememberq>>
 
 <% endif %>
 <% endif %>
