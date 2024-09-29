@@ -1,9 +1,9 @@
 answer: As many times as is required to wikify all wikitext resulting from each wikification step.
 created: 20210101172925655
-modified: 20210410141938157
+modified: 20240929202127580
 origin: Wikification
 qtype: rememberq
-question: When a transclusion or macro call is included directly in the body of a tiddler, how many times does TiddlyWiki try to wikify it?
+question: When a transclusion is included directly in the body of a tiddler, how many times does TiddlyWiki try to wikify it?
 tags: Takeaway
 title: Ta:20210101172924122
 type: text/vnd.tiddlywiki

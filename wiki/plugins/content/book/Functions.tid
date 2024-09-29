@@ -1,12 +1,12 @@
 created: 20240831204317959
 description: Functions allow you to break down filter expressions into simpler parts and reuse them in other filter expressions.
-modified: 20240928214834674
+modified: 20240929185525748
 parent: More Organizational Tools
 tags: Section Concept
 title: Functions
 type: text/vnd.tiddlywiki
 
-[[Variables]] and [[Procedures]] allow us to write some wikitext in one place, give it a name that concisely describes what it is, and use it in multiple places. For the same reason that TiddlyWiki supports variables and procedures when writing complicated wikitext, it supports ''functions'' when writing complicated filters. A function is a special kind of variable that contains a [[filter expression|Using Filter Expressions]].
+[[Variables]] and [[Procedures]] allow us to write a small chunk of wikitext in one place, give it a name that concisely describes what it is, and use it in multiple places. For the same reason that TiddlyWiki supports variables and procedures when writing complicated wikitext, it supports ''functions'' when writing complicated filters. A function is a special kind of variable that contains a [[filter expression|Using Filter Expressions]].
 
 Like a procedure, a function can have parameters. Parameters passed to a function are available as variables within the function's filter expression, just like parameters passed to a procedure are available as variables within the body of the procedure.
 
@@ -33,9 +33,9 @@ You can also call a function using the ''`function`'' [[filter operator|Anatomy 
 
 {{Sn:MultiplyByTwoFunctionOperator||MagicSnippet}}
 
-Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use the same shortcut for function names, but with one extra restriction: the function name must contain a dot (`.`).
+Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use a similar shortcut for function names, treating the function name like a filter operator, but with one extra restriction: the function name must contain a dot (`.`).
 
-Taking advantage of this syntax is as simple as prefixing your function names with a single `.`:
+Taking advantage of this syntax can be as simple as prefixing your function names with a single `.`. (Of course, the `.` can go anywhere in the name, if it makes more sense somewhere else.)
 
 {{Sn:MultiplyByTwoFunctionDottedCall||MagicSnippet}}
 
@@ -46,7 +46,7 @@ So far, our function has ignored its input tiddlers (instead injecting one of it
 
 {{Sn:MultiplyInputByTwoFunction||MagicSnippet}}
 
-It's not possible to choose the input tiddlers of a function invoked with the `<<angle bracket form>>`. The input tiddlers will always be all tiddlers in your wiki.
+It's not possible to choose the input tiddlers of a function called with the `<<variable transclusion syntax>>`. The input tiddlers will always be all tiddlers in your wiki.
 
 
 !! Nesting functions
@@ -65,3 +65,8 @@ As an example, here are some carefully decomposed functions for calculating the 
 {{Ex:CStartTiddlers||ExerciseTemplate}}
 {{Ex:MultiplyByTwoTwoWays||ExerciseTemplate}}
 {{Ex:LocalCallFunctions||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

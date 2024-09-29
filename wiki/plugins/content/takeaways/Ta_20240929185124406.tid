@@ -1,0 +1,9 @@
+answer: It must contain a dot (`.`).
+created: 20240929185127423
+modified: 20240929185127423
+origin: Functions
+qtype: rememberq
+question: To use the shortcut syntax for calling a function within a filter pipeline (treating it like an operator), what must be true of the function's name?
+tags: Takeaway
+title: Ta:20240929185124406
+type: text/vnd.tiddlywiki

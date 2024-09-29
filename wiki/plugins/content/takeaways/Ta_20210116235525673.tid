@@ -1,6 +1,6 @@
 answer: If you don't leave a blank line, TiddlyWiki will still be in inline mode from rendering the paragraph, but a list is a block-mode element and can't start in inline mode.
 created: 20210116235528737
-modified: 20210418131730658
+modified: 20240929202518160
 origin: Block Mode and Inline Mode
 qtype: rememberq
 question: Using the concept of rendering modes, explain why you must leave a blank line between a paragraph and a bulleted list in TiddlyWiki.

@@ -1,0 +1,9 @@
+answer: Only the first result will be transcluded by `<<variable transclusion syntax>>`.
+created: 20240929185830723
+modified: 20240929185830723
+origin: Functions
+qtype: rememberq
+question: What's different about the result of calling a function using `<<variable transclusion syntax>>` and calling it from within a filter?
+tags: Takeaway
+title: Ta:20240929185828539
+type: text/vnd.tiddlywiki

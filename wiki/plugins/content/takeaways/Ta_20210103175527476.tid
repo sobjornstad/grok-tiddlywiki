@@ -1,5 +1,5 @@
 created: 20210103175528640
-modified: 20210410185302453
+modified: 20240929190427782
 origin: Images and Attachments
 qtype: remembercz
 question: You can store a tiddler's content (such as an image) in a file outside your TiddlyWiki by setting the tiddler's {`_canonical_uri`} field to the path to that file.

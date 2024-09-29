@@ -1,6 +1,6 @@
 answer: e.g., including a field containing a piece of data like a phone number, email address, or link to another tiddler in a paragraph, bulleted list, or table
 created: 20210116235642580
-modified: 20210410142922745
+modified: 20240929202520954
 origin: Block Mode and Inline Mode
 qtype: rememberq
 question: Give an example of when you might want to transclude a field in inline mode (try to pick a new one).

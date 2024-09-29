@@ -1,6 +1,6 @@
 created: 20240901044700214
 description: Custom widgets are a special type of procedure that imitates the syntax of built-in widgets.
-modified: 20240928214328895
+modified: 20240929202618908
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Custom Widgets
@@ -45,3 +45,8 @@ Test text rendered in block mode
 !! Exercises
 
 {{Ex:ContactQuote||ExerciseTemplate}}
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

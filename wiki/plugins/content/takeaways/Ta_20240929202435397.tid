@@ -1,0 +1,9 @@
+answer: Because the transclusion of `myText` is not quoted, TiddlyWiki will wikify it only once, leaving the `<<text>>` variable transclusion unexpanded.
+created: 20240929202437580
+modified: 20240929202437580
+origin: Wikification
+qtype: rememberq
+question: Why will this snippet fail to place "test text" in the `wikitext` variable?<br>`\procedure myText(text) Text: <<text>>`<br>` <$wikify name="wikitext" text=<<myText "test text">>>...`
+tags: Takeaway
+title: Ta:20240929202435397
+type: text/vnd.tiddlywiki

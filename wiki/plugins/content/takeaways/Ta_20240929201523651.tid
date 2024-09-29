@@ -1,0 +1,9 @@
+answer: Due to their use of text substitution, macros can fail in unexpected ways when tiddler names contain certain special characters (such as quotation marks or closing braces).
+created: 20240929201525200
+modified: 20240929201525200
+origin: Macros
+qtype: rememberq
+question: Why are procedures usually safer to use than macros?
+tags: Takeaway
+title: Ta:20240929201523651
+type: text/vnd.tiddlywiki

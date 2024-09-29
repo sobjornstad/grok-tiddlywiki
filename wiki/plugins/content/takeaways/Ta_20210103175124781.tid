@@ -1,6 +1,6 @@
 answer: Any that uses a folder wiki (one hosted on a Node.js webserver, where each tiddler is in a separate file).
 created: 20210103175125766
-modified: 20210410185240071
+modified: 20240929190418429
 origin: Images and Attachments
 qtype: rememberq
 question: What method of hosting a TiddlyWiki does not suffer issues when many images are added to the wiki?

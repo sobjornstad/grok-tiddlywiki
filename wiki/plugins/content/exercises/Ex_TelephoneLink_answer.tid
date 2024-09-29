@@ -1,12 +1,12 @@
 created: 20210131040820380
 length: m
-modified: 20240923222322469
+modified: 20240929201915337
 origin: Macros
 tags: Answer
 title: Ex:TelephoneLink/answer
 type: text/vnd.tiddlywiki
 
-The key issue here is passing the value of `!!phone` into the macro. You might be tempted to use a variable `phonenum`, like this:
+The key issue here is passing the value of `!!phone` into the macro. You might be tempted to use a parameter `phonenum`, like this:
 
 ```html
 \define phonelink(phonenum) tel:$phonenum$

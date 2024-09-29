@@ -1,9 +1,9 @@
 answer: Change the current tiddler to the tiddler being rendered as a tab.
 created: 20210103174257618
-modified: 20210410192120338
+modified: 20240929191438995
 origin: Tabs
 qtype: rememberq
-question: When rendering each tab in a `tabs` macro call, what does TiddlyWiki unexpectedly //not// do?
+question: When rendering each tab in a `tabs` call, what does TiddlyWiki unexpectedly //not// do?
 tags: Takeaway
 title: Ta:20210103174256315
 type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: `$myparameter$`
+created: 20240929201437257
+modified: 20240929201437257
+origin: Macros
+qtype: rememberq
+question: What's the syntax to text-substitute a parameter `myparameter` into the body of a macro?
+tags: Takeaway
+title: Ta:20240929201435327
+type: text/vnd.tiddlywiki

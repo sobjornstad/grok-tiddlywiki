@@ -1,0 +1,9 @@
+answer: (1) They must begin with a `$`, like all widgets. (2) They must contain a dot `.` (unless overriding a built-in widget).
+created: 20240929202720641
+modified: 20240929202813544
+origin: Custom Widgets
+qtype: rememberq
+question: What two restrictions are placed on the names of custom widgets?
+tags: Takeaway
+title: Ta:20240929202718241
+type: text/vnd.tiddlywiki

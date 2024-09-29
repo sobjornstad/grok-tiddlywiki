@@ -1,0 +1,9 @@
+answer: `{{{ [function[multiply-by-two],[4]] }}}`
+created: 20240929185011551
+modified: 20240929185011551
+origin: Functions
+qtype: rememberq
+question: Call the function `multiply-by-two` in a filter expression with a single parameter `4`, using the `function` operator.
+tags: Takeaway
+title: Ta:20240929185008670
+type: text/vnd.tiddlywiki

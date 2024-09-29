@@ -1,6 +1,6 @@
 answer: They can only contain a single level of key-value pairs – no nested arrays or objects.
 created: 20210103184419927
-modified: 20210418131926511
+modified: 20240929200545936
 origin: Data Tiddlers
 qtype: rememberq
 question: What limitation is placed on JSON documents being used as data tiddlers?

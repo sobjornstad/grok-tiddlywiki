@@ -1,6 +1,6 @@
 created: 20210116171851507
 description: TiddlyWiki reads wikitext in two modes, one where elements stack horizontally and one where they stack vertically, and you occasionally have to consider which mode you should use.
-modified: 20240923232628286
+modified: 20240929202549975
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Block Mode and Inline Mode
@@ -52,7 +52,7 @@ This doesn't work right -- can you spot the problem? There isn't a blank line be
 </$list>
 ```
 
-You can read more about the `$transclude` widget and block/inline-mode transclusion [[in the TiddlyWiki documentation|https://tiddlywiki.com/#TranscludeWidget]]. We'll also discuss this widget in [[Hiding and Showing Things]].
+You can read more about the `$transclude` widget and block/inline-mode transclusion [[in the TiddlyWiki documentation|https://tiddlywiki.com/#TranscludeWidget]].
 
 !! Inline-mode markup errors
 

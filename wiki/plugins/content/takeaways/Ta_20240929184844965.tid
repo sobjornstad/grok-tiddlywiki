@@ -1,0 +1,9 @@
+answer: To make the main filter expression shorter and easier to understand, by giving the extracted part a name that describes what it does.
+created: 20240929184845820
+modified: 20240929184845820
+origin: Functions
+qtype: rememberq
+question: What's the purpose of extracting part of a filter expression into a function?
+tags: Takeaway
+title: Ta:20240929184844965
+type: text/vnd.tiddlywiki

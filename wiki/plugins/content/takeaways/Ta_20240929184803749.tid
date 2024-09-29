@@ -1,0 +1,9 @@
+answer: The `$transclude` widget (with the same `$variable` attribute and parameters a procedure would use).
+created: 20240929184805176
+modified: 20240929184805176
+origin: Functions
+qtype: rememberq
+question: What widget can be used to call a function?
+tags: Takeaway
+title: Ta:20240929184803749
+type: text/vnd.tiddlywiki

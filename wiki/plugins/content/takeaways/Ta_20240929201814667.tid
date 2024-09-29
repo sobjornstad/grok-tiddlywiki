@@ -1,0 +1,9 @@
+answer: `$articleName$` is performing text substitution (only available in a macro), which means the replacement happens without regard for syntax. After the parameters are substituted, the link will be valid wikitext.
+created: 20240929201819661
+modified: 20240929201840688
+origin: Macros
+qtype: rememberq
+question: Why does this method of including a parameter in a wikitext link work in a macro, while it would not in a procedure? `[[$articleName$|https://en.wikipedia.org/wiki/$articleName$]]`
+tags: Takeaway
+title: Ta:20240929201814667
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: It evaluates the filter expression inside the function and shows the results.
+created: 20240929184716508
+modified: 20240929184727273
+origin: Functions
+qtype: rememberq
+question: When you call a function, what action does TiddlyWiki take, different from what it does when calling a procedure?
+tags: Takeaway
+title: Ta:20240929184714885
+type: text/vnd.tiddlywiki

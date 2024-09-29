@@ -1,29 +1,21 @@
 created: 20200717224206811
-modified: 20240925031640971
+modified: 20240929191323796
 tags: Answer
 title: Ex:FixingContactTabs/answer
 type: text/vnd.tiddlywiki
 
-Create a template tiddler called `ContactTabTemplate` with the following content:
-
-```html
-<$let currentTiddler=<<currentTab>>>
-
-  {{!!text}}
-
-</$set>
-```
-
-You can use any method you like to set the current tiddler. Note the blank lines to force the text field to be transcluded in [[block mode|Block Mode and Inline Mode]].
-
-Then add a `template:ContactTabTemplate` parameter to the `tabs` macro used to render your contact tabs.
-
-The TiddlyWiki documentation gives the following cleaner version using the `$transclude` and `$tiddler` widgets, which we've so far mentioned only in passing:
+Create a template tiddler called `ContactTabTemplate` with content like the following:
 
 ```html
 <$tiddler tiddler=<<currentTab>>>
-<$transclude mode="block" />
+	<$transclude mode="block"/>
 </$tiddler>
 ```
 
-We'll talk about both of these widgets in <<gtw.link-chapter-number "Tips and Tricks">>.
+A couple of notes on this:
+
+* The `$tiddler` widget is the most idiomatic way to set the current tiddler, but you could equivalently set the variable `currentTiddler` using something like a `$let` widget.
+* We didn't specify a tiddler for the `$transclude` widget. That's because if you don't specify either a `$tiddler` or `$variable` parameter, the widget defaults to transcluding the current tiddler.
+* We specified `mode="block"` on the `$transclude` widget. We could also have left blank lines around the `$transclude` widget to get the same effect. We'll talk more about this next chapter, in [[Block Mode and Inline Mode]].
+
+Once the template tiddler is in place, add a `template:ContactTabTemplate` parameter to the `tabs` macro used to render your contact tabs to use this template.

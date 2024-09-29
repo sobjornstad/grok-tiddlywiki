@@ -1,0 +1,9 @@
+answer: `function[]`
+created: 20240929184942793
+modified: 20240929184942793
+origin: Functions
+qtype: rememberq
+question: What filter operator calls a function with an arbitrary name and places its results in the filter pipeline?
+tags: Takeaway
+title: Ta:20240929184939778
+type: text/vnd.tiddlywiki

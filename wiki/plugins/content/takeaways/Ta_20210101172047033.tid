@@ -1,6 +1,6 @@
 answer: `<img src="https://example.com/image.png">` (`img` is a void element, so the tag is not closed)
 created: 20210101172048478
-modified: 20210418131657915
+modified: 20240929202104497
 origin: Wikification
 qtype: rememberq
 question: In HTML, how do you display an image that's stored at the URL `https://example.com/image.png`?

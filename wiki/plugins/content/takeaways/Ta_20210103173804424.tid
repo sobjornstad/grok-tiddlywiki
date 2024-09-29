@@ -1,9 +1,9 @@
 answer: `class:"tc-vertical"`
 created: 20210103173805655
-modified: 20210410192104364
+modified: 20240929191405138
 origin: Tabs
 qtype: rememberq
-question: What parameter do you add to the `tabs` macro to show tabs vertically instead of horizontally?
+question: What parameter do you add to `tabs` to show tabs vertically instead of horizontally?
 tags: Takeaway
 title: Ta:20210103173804424
 type: text/vnd.tiddlywiki

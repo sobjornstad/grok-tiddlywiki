@@ -1,9 +1,9 @@
 answer: A tiddler.
 created: 20210103173849080
-modified: 20210410192113404
+modified: 20240929191416526
 origin: Tabs
 qtype: rememberq
-question: What TiddlyWiki object populates each tab produced by the `tabs` macro?
+question: What TiddlyWiki object populates each tab produced by `tabs`?
 tags: Takeaway
 title: Ta:20210103173848047
 type: text/vnd.tiddlywiki

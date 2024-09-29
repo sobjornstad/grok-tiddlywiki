@@ -1,6 +1,6 @@
 answer: Transclude the image tiddler, like `{{image.png}}`.
 created: 20210103174824402
-modified: 20210410185214582
+modified: 20240929190409451
 origin: Images and Attachments
 qtype: rememberq
 question: How can you quickly display an image that is part of your wiki within another tiddler if you don't need to adjust its size or other parameters?

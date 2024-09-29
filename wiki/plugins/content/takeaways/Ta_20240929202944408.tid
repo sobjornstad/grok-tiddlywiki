@@ -1,0 +1,9 @@
+answer: `\widget $italicize.text() //<$slot $name="ts-raw" />//`
+created: 20240929202946793
+modified: 20240929202946793
+origin: Custom Widgets
+qtype: rememberq
+question: Define a custom widget `$italicize.text` that renders its body in italics.
+tags: Takeaway
+title: Ta:20240929202944408
+type: text/vnd.tiddlywiki

@@ -1,5 +1,5 @@
 created: 20240831215112634
-modified: 20240831220828362
+modified: 20240929185609552
 tags: 
 title: Sn:CircleMathNestingExample
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 \function .square() [power[2]]
 \function .radius-to-area() [.square[]multiply<pi>]
 \function .radius-to-diameter() [multiply[2]]
-\function .radius-to-circumference() [.radius-to-diameter[]multiply[2]multiply<pi>]
+\function .radius-to-circumference() [.radius-to-diameter[]multiply<pi>]
 
 \function circle-area(radius) [<radius>.radius-to-area[]fixed[2]]
 \function circle-circumference(radius) [<radius>.radius-to-circumference[]fixed[2]]

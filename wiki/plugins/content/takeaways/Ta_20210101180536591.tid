@@ -1,6 +1,6 @@
 answer: When using parameters, it is more obvious at the point where the macro is called what the macro is doing and what inputs it takes.
 created: 20210101180538367
-modified: 20210410140610451
+modified: 20240929200936047
 origin: Macros
 qtype: rememberq
 question: Why is it usually preferable to pass information to macros using parameters rather than defining variables and referring to them within the macro?
