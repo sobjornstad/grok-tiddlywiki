@@ -1,9 +1,9 @@
-answer: The `name` attribute needs a dollar sign, `$name`, to distinguish it from a macro parameter called `name`.
+answer: The `variable` attribute needs a dollar sign, `$variable`, to distinguish it from a procedure parameter called `variable`.
 created: 20201231041224734
-modified: 20210409195608566
+modified: 20240929170035763
 origin: The Finer Points of Procedures
 qtype: rememberq
-question: What is wrong with this macro call?: `<$macrocall name=wikipediaLink articleTitle="Philosophy"/>`
+question: What is wrong with this procedure call?: `<$transclude variable="wikipediaLink" articleTitle="Philosophy"/>`
 tags: Takeaway
 title: Ta:20201231041222739
 type: text/vnd.tiddlywiki

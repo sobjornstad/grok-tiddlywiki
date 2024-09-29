@@ -1,9 +1,9 @@
 answer: `<<currentTiddler>>`
 created: 20201231191006419
-modified: 20210409212850132
+modified: 20240929170620415
 origin: Templates and the Current Tiddler
 qtype: rememberq
-question: What variable reference is equivalent to the transclusion `{{!!title}}`?
+question: What variable transclusion is equivalent to the field transclusion `{{!!title}}`?
 tags: Takeaway
 title: Ta:20201231191005319
 type: text/vnd.tiddlywiki

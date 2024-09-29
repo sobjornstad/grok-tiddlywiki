@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20240929005215096
+modified: 20240929170715537
 parent: Transclusion
 tags: Section
 title: Templates and the Current Tiddler
@@ -120,7 +120,7 @@ In this case, we could also simply use the `$transclude` widget, which does not 
 
 It's important to remember that, since [[everything's a tiddler|Tiddlers]], ''a template is not really a thing in itself''. That is, unlike in many other similar tools, your TiddlyWiki is not separated into two distinct categories of content, tiddlers and templates. Rather, when you transclude a tiddler through a template, you are using a particular tiddler //as// a template, to display the content in the other tiddler. A tiddler can be used as a template in one place, and as an ordinary content tiddler with a link to it, or for that matter as a tag, in another. In fact, in many cases, transclusion will have exactly the same effect whether the transcluded tiddler is treated as a template or not. For instance, `{{EmployeeProfileSetupMeeting}}`, `{{||EmployeeProfileSetupMeeting}}`, and `{{JaneDoe||EmployeeProfileSetupMeeting}}` should all do the same thing if you try them: the contents of the `EmployeeProfileSetupMeeting` tiddler appears. That's because the `EmployeeProfileSetupMeeting` tiddler doesn't contain any references that depend on the current tiddler, such as `{{!!field transclusions}}`.
 
-Look out as you move forward: the syntax for templates uses two consecutive pipe characters (`||`), while the syntax for [[links|Links]] with different displayed text and target uses only a single pipe (`|`). This is one of those little warts on TiddlyWiki's syntax that can be hard to remember, and you won't get a useful error if you use the wrong one in the wrong place.
+Look out as you move forward: the syntax for templates uses two consecutive pipe characters (`||`), while the syntax for [[links|Links]] with different displayed text and target uses only a single pipe (`|`). In [[Parameterizing Field Transclusions]], we'll see that a single pipe does something entirely different!
 
 
 !! When is an error not an error?

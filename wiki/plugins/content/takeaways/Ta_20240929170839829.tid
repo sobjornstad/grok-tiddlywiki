@@ -1,0 +1,9 @@
+answer: `<$transclude $tiddler="ContactInformationTemplate"/>`
+created: 20240929170842545
+modified: 20240929170909238
+origin: Field Transclusions
+qtype: rememberq
+question: Transclude the `text` field of the tiddler `ContactInformationTemplate` using a `$transclude` widget.
+tags: Takeaway
+title: Ta:20240929170839829
+type: text/vnd.tiddlywiki

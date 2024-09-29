@@ -1,6 +1,6 @@
 answer: Transclude it, setting the current tiddler to a tiddler other than the template tiddler.
 created: 20201231185926952
-modified: 20210409212731076
+modified: 20240929170557135
 origin: Templates and the Current Tiddler
 qtype: rememberq
 question: A tiddler is being used as a //template// when you do what with it?

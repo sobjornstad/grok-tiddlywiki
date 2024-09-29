@@ -1,9 +1,9 @@
-answer: `<<myMacro Aardvark "Blue Baboon">>`
+answer: `<<myProcedure Aardvark "Blue Baboon">>`
 created: 20201231040155621
-modified: 20210409195503013
+modified: 20240929165617856
 origin: The Finer Points of Procedures
 qtype: rememberq
-question: What is the wikitext syntax to call a macro `myMacro` with two parameters, `Aardvark` and `Blue Baboon`?
+question: What is the wikitext syntax to call a procedure `myProcedure` with two parameters, `Aardvark` and `Blue Baboon`?
 tags: Takeaway
 title: Ta:20201231040154144
 type: text/vnd.tiddlywiki

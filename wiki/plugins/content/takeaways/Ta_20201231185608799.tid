@@ -1,6 +1,6 @@
 answer: The current tiddler is changed to `JaneDoe`, the JaneDoe tiddler is rendered, and then the current tiddler returns to its previous value (most likely `ContactList`).
 created: 20201231185612842
-modified: 20210418131909396
+modified: 20240929170407175
 origin: Templates and the Current Tiddler
 qtype: rememberq
 question: What happens to the current tiddler while TiddlyWiki reads the transclusion `{{JaneDoe}}` within the tiddler `ContactList`?

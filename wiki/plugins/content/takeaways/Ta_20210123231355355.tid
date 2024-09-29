@@ -1,6 +1,6 @@
 answer: `all[current]`
 created: 20210123231400916
-modified: 20210409212949013
+modified: 20240929170637828
 origin: Templates and the Current Tiddler
 qtype: rememberq
 question: What filter step constructs one output tiddler, the title of the current tiddler?

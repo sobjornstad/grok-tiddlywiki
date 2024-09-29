@@ -1,9 +1,9 @@
-answer: `\define myMacro()`
+answer: `\procedure myProcedure()`
 created: 20201231035928615
-modified: 20210409195456151
+modified: 20240929165601618
 origin: The Finer Points of Procedures
 qtype: rememberq
-question: What is the wikitext syntax to define a macro `myMacro` with no parameters?
+question: What is the wikitext syntax to define a procedure `myProcedure` with no parameters?
 tags: Takeaway
 title: Ta:20201231035927292
 type: text/vnd.tiddlywiki

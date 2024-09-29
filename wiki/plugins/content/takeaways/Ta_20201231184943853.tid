@@ -1,6 +1,6 @@
 answer: Sometimes: this works fine as long as none of the tiddlers transclude one of the previous tiddlers in the stack of transcluded tiddlers (this forms an infinite loop and TiddlyWiki gives up on the transclusion).
 created: 20201231184947599
-modified: 20240612034902093
+modified: 20240929170315664
 origin: Field Transclusions
 qtype: rememberq
 question: Always/Sometimes/Never: It is OK to transclude a tiddler that itself transcludes other tiddlers.

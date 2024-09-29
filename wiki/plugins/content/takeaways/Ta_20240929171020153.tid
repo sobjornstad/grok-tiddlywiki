@@ -1,0 +1,9 @@
+answer: `{{JaneDoe}}` changes the current tiddler to `JaneDoe` during the transclusion. `$transclude` has no effect on the current tiddler.
+created: 20240929171021646
+modified: 20240929171021646
+origin: Templates and the Current Tiddler
+qtype: rememberq
+question: What major and unexpected difference is there between the effect of `{{JaneDoe}}` and `<$transclude $tiddler="JaneDoe"/>`?
+tags: Takeaway
+title: Ta:20240929171020153
+type: text/vnd.tiddlywiki

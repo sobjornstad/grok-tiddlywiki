@@ -1,9 +1,9 @@
-answer: `\define coloredText(text, color:"red")`
+answer: `\procedure coloredText(text, color:"red")`
 created: 20201231040554973
-modified: 20210409195527271
+modified: 20240929165804474
 origin: The Finer Points of Procedures
 qtype: rememberq
-question: How would you change the following macro definition to supply a default value `red` for the parameter `color`?: `\define coloredText(text, color)`
+question: How would you change the following procedure definition to supply a default value `red` for the parameter `color`?: `\procedure coloredText(text, color)`
 tags: Takeaway
 title: Ta:20201231040546593
 type: text/vnd.tiddlywiki

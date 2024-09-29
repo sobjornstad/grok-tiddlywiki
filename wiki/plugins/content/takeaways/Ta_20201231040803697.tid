@@ -1,9 +1,9 @@
-answer: `$name` (note the dollar sign)
+answer: `$variable` (note the dollar sign)
 created: 20201231040804979
-modified: 20210409195539985
+modified: 20240929165940744
 origin: The Finer Points of Procedures
 qtype: rememberq
-question: What attribute of the `$macrocall` widget is used to supply the name of the macro to call?
+question: What attribute of the `$transclude` widget is used to supply the name of a procedure to call/transclude?
 tags: Takeaway
 title: Ta:20201231040803697
 type: text/vnd.tiddlywiki

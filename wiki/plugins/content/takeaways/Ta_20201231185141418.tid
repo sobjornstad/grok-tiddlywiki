@@ -1,6 +1,6 @@
 answer: You accidentally transcluded a tiddler into itself, either directly or by creating a loop (e.g., tiddler A transcludes tiddler B, while tiddler B transcludes tiddler A).
 created: 20201231185144000
-modified: 20210409201716264
+modified: 20240929170320198
 origin: Field Transclusions
 qtype: rememberq
 question: What does the error //Recursive transclusion error in transclude widget// suggest is wrong?
