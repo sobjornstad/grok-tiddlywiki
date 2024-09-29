@@ -1,6 +1,6 @@
 created: 20210115210638130
 description: Some of the reasons that TiddlyWiki and many other systems choose to use markup languages instead of visual editors.
-modified: 20210502154549106
+modified: 20240929014843236
 parent: Appendices
 tags: Section
 title: Advantages of WYSIWYM
@@ -12,7 +12,7 @@ TiddlyWiki's [[Wikitext]] is an example of a WYSIWYM (“What You See is What Yo
 
 * Markup languages can easily ''integrate other languages'' for finer control over display, content, and formatting. TiddlyWiki's markup language, for instance, also allows you to use [[HTML]], [[CSS|Stylesheets]], [[widgets|Widgets]], [[filters|Filters]], and more -- all without leaving the single editor text box. In a WYSIWYG editor, you'd have to go into separate dialog boxes and click a bunch of extra times to use each of these features.
 
-* In the context of TiddlyWiki in particular, ''[[macros|Macros]] and [[templates|Templates and the Current Tiddler]] would be much more challenging to write'' with a WYSIWYG editor, since you wouldn't be able to see exactly what text and formatting you were replacing. These are some of the most powerful features of TiddlyWiki, and they're challenging enough to learn as they are!
+* In the context of TiddlyWiki in particular, things like ''[[procedures|Procedures]] and [[templates|Templates and the Current Tiddler]] would be much more challenging to write'' with a WYSIWYG editor, since you wouldn't be able to see exactly what text and formatting you were replacing. These are some of the most powerful features of TiddlyWiki, and they're challenging enough to learn as they are!
 
 * You can ''separate presentation and content'' in most markup languages. Suppose you have a document where you want all software code snippets to appear in red text. Instead of manually setting every code snippet to appear in red, you merely have to ensure that you mark every code snippet as a code snippet, and then elsewhere you can indicate that all code snippets should appear in red. Your markup indicates the //function// of the text, rather than the nitty-gritty details of how it should be formatted. With this setup, if you later decide that code snippets should be blue, you only have to go to the spot where you decided code snippets were red and change it to blue, and all the code snippets will update to blue at once.
 

@@ -1,6 +1,6 @@
 created: 20200719030352650
 description: Explore buttons, system tags, action widgets, and messages by adding new buttons to the toolbar that create tiddlers with some custom field values already in place.
-modified: 20240927021212267
+modified: 20240929014913849
 parent: Looking Under the Hood
 tags: Section
 title: Creating Tiddlers With Predefined Fields
@@ -24,7 +24,7 @@ This second method is widespread in the wild, but it's usually better to avoid i
 
 In either case, when you click on the button, the action will be triggered, which will send a `tm-new-tiddler` message, which will create a new draft tiddler with the fields you've defined in the attributes of the action widget and open it for editing.
 
-If you like, you can put several action widgets within the macro or the `$button` widget. They will be triggered in sequence when the button is clicked.
+If you like, you can put several action widgets within the procedure or the `$button` widget. They will be triggered in sequence when the button is clicked.
 
 
 !! `$action-log`

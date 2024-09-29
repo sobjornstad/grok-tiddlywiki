@@ -1,5 +1,5 @@
 created: 20210206184132111
-modified: 20240727223500061
+modified: 20240929023327572
 tags: 
 title: $:/sib/Navigator/Related
 type: text/vnd.tiddlywiki
@@ -51,7 +51,7 @@ type: text/vnd.tiddlywiki
   <div class="gtw-bordered-element sib-link-display">
     <$let xrefName=`Mentioned by //$(currentTiddler)$//`>
       <$macrocall
-        $name=render-link
+        $name="render-link"
         title=<<xrefName>>
         filter="[all[current]links[]sort[]]"
         cssClass="sib-links"
@@ -59,9 +59,9 @@ type: text/vnd.tiddlywiki
     </$let>
     <$let xrefName=`Mentions of //$(currentTiddler)$//`>
       <$macrocall
-        $name=render-link
+        $name="render-link"
         title=<<xrefName>>
-        filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<currentTiddler>] [all[current]backlinks[]]"
+        filter="[[$:/plugins/sobjornstad/GrokTiddlyWiki]plugintiddlers[]] :filter[links[]match<..currentTiddler>] [all[current]backlinks[]]"
         cssClass="sib-backlinks"
       />
     </$let>
