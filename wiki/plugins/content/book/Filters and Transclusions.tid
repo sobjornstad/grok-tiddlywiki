@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20240928211613335
+modified: 20240929005351336
 parent: Transclusion
 tags: Section
 title: Filters and Transclusions
@@ -150,7 +150,7 @@ That may look weird right now, but when we get to [[Multi-Run Filters]] in the n
 
 {{Ex:TiddlersContainingWikiTitle||ExerciseTemplate}}
 {{Ex:AllFamilyInformation||ExerciseTemplate}}
-{{Ex:WikipediaLinkWithoutMacro||ExerciseTemplate}}
+{{Ex:WikipediaLinkWithoutProcedure||ExerciseTemplate}}
 {{Ex:WikipediaLinkTemplate||ExerciseTemplate}}
 {{Ex:DefaultToField||ExerciseTemplate}}
 {{Ex:WikiStatistics||ExerciseTemplate}}

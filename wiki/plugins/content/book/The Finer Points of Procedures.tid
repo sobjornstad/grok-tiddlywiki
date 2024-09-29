@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20240928205327845
+modified: 20240929004824845
 parent: Transclusion
 tags: Section
 title: The Finer Points of Procedures
@@ -95,8 +95,8 @@ From the above, it was probably not immediately obvious why you would ever want 
 
 {{Ex:TicketTrackingLink||ExerciseTemplate}}
 {{Ex:ReversedOptionalParameters||ExerciseTemplate}}
-{{Ex:QuotedMacroCall||ExerciseTemplate}}
-{{Ex:UnclosedMacroCall||ExerciseTemplate}}
+{{Ex:QuotedProcedureCall||ExerciseTemplate}}
+{{Ex:UnclosedProcedureCall||ExerciseTemplate}}
 
 
 !! Takeaways

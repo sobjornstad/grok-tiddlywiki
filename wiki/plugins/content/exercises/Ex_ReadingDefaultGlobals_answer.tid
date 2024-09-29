@@ -1,0 +1,7 @@
+created: 20200718022221661
+modified: 20240929004726302
+tags: Answer
+title: Ex:ReadingDefaultGlobals/answer
+type: text/vnd.tiddlywiki
+
+In case you can't figure out the filter to use, it should be `[all[shadows]tag[$:/tags/Global]] [all[shadows]tag[$:/tags/Macro]]`.

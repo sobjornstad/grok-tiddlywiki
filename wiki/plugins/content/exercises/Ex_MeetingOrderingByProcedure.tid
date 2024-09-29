@@ -1,0 +1,9 @@
+created: 20210327155150388
+length: m
+modified: 20240929004429381
+origin: Ordering Tiddlers
+tags: Exercise
+title: Ex:MeetingOrderingByProcedure
+type: text/vnd.tiddlywiki
+
+Repeat the [[previous exercise|Ex:MeetingOrdering]] using a `<<list-links-draggable>>` built-in procuder of the form described in this section, inserted within the `OnboardingHr` tiddler.

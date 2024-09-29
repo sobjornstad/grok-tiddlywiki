@@ -1,12 +1,14 @@
 created: 20210130174025850
-modified: 20240929002932360
+modified: 20240929004112482
 tags: Meta
-title: Meta:TiddlerOrigins
+title: Meta:ExerciseOrigins
 type: text/vnd.tiddlywiki
 
 \function .exercise-transclusions(searchText) [all[tiddlers+shadows]tag[Section]] [all[tiddlers+shadows]tag[Chapter]] +[search:text<searchText>]
 
 This table shows the `origin` field of every exercise, along with a listing of what tiddler(s) it is actually transcluded in using the `ExerciseTemplate`. (This uses a strict text search; soft transclusions or transclusions with funny business like the `$transclude` widget won't work. But I transclude exercises in a very formulaic way so this should be fine.) A check mark shows in the final column if the `origin` field exactly matches the one tiddler found by the search. A `!` appears if there is more than one transcluding tiddler. Nothing appears if the `origin` field doesn't match.
+
+Filter on title: <$edit-text tiddler="$:/temp/OriginFilter" tag="input"/>
 
 <table>
 	<tr>
@@ -15,7 +17,7 @@ This table shows the `origin` field of every exercise, along with a listing of w
 		<th>Transcluded in (synthetic)</th>
 		<th>Match?</th>
 	</tr>
-	<$list filter="[all[tiddlers+shadows]tag[Exercise]sort[]]">
+	<$list filter="[all[tiddlers+shadows]tag[Exercise]search:title{$:/temp/OriginFilter}sort[]]">
 		<tr>
 			<$let searchText={{{ [<currentTiddler>addsuffix[||ExerciseTemplate]] }}}>
 				<td><$link to=<<currentTiddler>>/></td>

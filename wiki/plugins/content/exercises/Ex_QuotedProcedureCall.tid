@@ -1,9 +1,9 @@
 created: 20200603224209604
 length: m
-modified: 20240929003227879
+modified: 20240929004453157
 origin: The Finer Points of Procedures
 tags: Exercise
-title: Ex:QuotedMacroCall
+title: Ex:QuotedProcedureCall
 type: text/vnd.tiddlywiki
 
 Try calling `wikipediaLink` using the `$transclude` widget with variables as parameters, but surround the variable references / procedure calls in the `$transclude` widget with "quotation marks", like this:

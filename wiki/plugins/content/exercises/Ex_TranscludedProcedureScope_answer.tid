@@ -1,7 +1,7 @@
 created: 20200605160659838
-modified: 20240925231851800
+modified: 20240929005136264
 tags: Answer
-title: Ex:TranscludedMacroScope/answer
+title: Ex:TranscludedProcedureScope/answer
 type: text/vnd.tiddlywiki
 
 To test this, you could place a procedure in a tiddler, transclude that procedure in another tiddler, and see if you can call the procedure. If you do this, you'll find that your `<<procedure call>>` doesn't produce any output, which is what happens when the procedure is not defined (we saw this in an [[earlier exercise|Ex:MacroPosition]]).

@@ -1,6 +1,6 @@
 created: 20240616143658865
 description: Procedures extend the concept of variables by allowing portions of the value to change each time the procedure is referenced.
-modified: 20240928204950597
+modified: 20240929004941509
 parent: Transclusion
 tags: Section Concept
 title: Procedures
@@ -103,8 +103,8 @@ Once the body of the procedure has been rendered, the `articleName` variable wil
 !! Exercises
 
 {{Ex:PrettyWikipediaLink||ExerciseTemplate}}
-{{Ex:EmptyMacroCall||ExerciseTemplate}}
-{{Ex:MacroPosition||ExerciseTemplate}}
+{{Ex:EmptyProcedureCall||ExerciseTemplate}}
+{{Ex:ProcedurePosition||ExerciseTemplate}}
 
 !! Takeaways
 

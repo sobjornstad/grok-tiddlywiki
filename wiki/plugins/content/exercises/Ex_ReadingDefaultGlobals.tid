@@ -1,0 +1,13 @@
+created: 20200718022049665
+length: m
+modified: 20240929004721207
+origin: Much More Than You Wanted to Know About Scopes
+tags: Exercise
+title: Ex:ReadingDefaultGlobals
+type: text/vnd.tiddlywiki
+
+Search for all tiddlers that currently contain globals. Remember that most of these will be stored in shadow tiddlers, so you'll need to say you want to filter on shadow tiddlers to get any results. Also remember to search for both the old tag and the new tag (most items will still have the old tag).
+
+Spend a few minutes browsing through some of the tiddlers that come up and looking at some of the system global definitions. You'll recognize some of the procedures/macros from previous chapters, and you should be able to understand a good portion of what's going on. There's no magic -- the built-in procedures are simply wrapping up some complicated HTML and widgets for us to use in a convenient way, just like we would do when writing our own procedures.
+
+You'll have to edit each shadow tiddler to look at the definitions. Just click the discard-changes button when you're done so you don't mess anything up!

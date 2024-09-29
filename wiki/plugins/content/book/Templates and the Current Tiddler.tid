@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20240928211015215
+modified: 20240929005215096
 parent: Transclusion
 tags: Section
 title: Templates and the Current Tiddler
@@ -138,7 +138,7 @@ Since templates are usually written expecting the current tiddler to be some oth
 {{Ex:MeetingListWithoutCurrentTiddler||ExerciseTemplate}}
 {{Ex:ContainingCurrentTiddler||ExerciseTemplate}}
 {{Ex:MethodsOfTransclusion||ExerciseTemplate}}
-{{Ex:TranscludedMacroScope||ExerciseTemplate}}
+{{Ex:TranscludedProcedureScope||ExerciseTemplate}}
 
 !!! On templates
 

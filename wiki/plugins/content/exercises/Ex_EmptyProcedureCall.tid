@@ -1,9 +1,9 @@
 created: 20210409193632190
 length: s
-modified: 20240616174359216
+modified: 20240929003920167
 origin: Procedures
 tags: Exercise
-title: Ex:EmptyMacroCall
+title: Ex:EmptyProcedureCall
 type: text/vnd.tiddlywiki
 
 Try calling a procedure that doesn't exist (say, one called `notaprocedure`). What happens?

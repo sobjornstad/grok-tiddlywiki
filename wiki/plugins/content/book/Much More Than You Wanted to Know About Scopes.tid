@@ -1,6 +1,6 @@
 created: 20200718014509693
 description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
-modified: 20240924112650293
+modified: 20240929005005717
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -94,9 +94,9 @@ In older versions of TiddlyWiki, we made things global by tagging them `$:/tags/
 
 !! Exercises
 
-{{Ex:MakeGlobalMacros||ExerciseTemplate}}
+{{Ex:MakeGlobalProcedures||ExerciseTemplate}}
 {{Ex:ImportScopes||ExerciseTemplate}}
-{{Ex:ReadingDefaultMacros||ExerciseTemplate}}
+{{Ex:ReadingDefaultGlobals||ExerciseTemplate}}
 
 !! Takeaways
 
