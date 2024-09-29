@@ -1,6 +1,6 @@
 created: 20210206180622120
 description: TiddlyWiki offers tooling for displaying, retrieving, and computing differences between dates.
-modified: 20240926224421664
+modified: 20240929003203109
 parent: Tips and Tricks
 tags: Section
 title: Working with Dates
@@ -65,6 +65,7 @@ For more complicated needs, a wide variety of [[plugins|Useful Plugins]] and tri
 !! Exercises
 
 {{Ex:CreatedNowButton||ExerciseTemplate}}
+{{Ex:NowTimestampFunction||ExerciseTemplate}}
 {{Ex:DateFormatter||ExerciseTemplate}}
 
 
