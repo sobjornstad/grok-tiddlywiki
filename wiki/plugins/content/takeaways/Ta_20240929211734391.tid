@@ -1,0 +1,9 @@
+answer: You can use an attribute selector on the `data-tags` data attribute to target your CSS rules to only these tiddlers.
+created: 20240929211735796
+modified: 20240929211735796
+origin: Stylesheets
+qtype: rememberq
+question: What mechanism can you use to style tiddlers with a particular tag differently from others?
+tags: Takeaway
+title: Ta:20240929211734391
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: Having it be a function allows it to be fully called as the attribute of a widget, since the first wikification of a function causes the entire filter expression to be evaluated. If it were a procedure, it would be passed in to the widget attribute as the literal macro call syntax `<<now ...>>`, rather than the current time.
+created: 20240929211500356
+modified: 20240929211501942
+origin: Working with Dates
+qtype: rememberq
+question: Why is this potentially more useful written as a function than as a procedure?  `\function now-timestamp() [<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>]`
+tags: Takeaway
+title: Ta:20240929211458797
+type: text/vnd.tiddlywiki
