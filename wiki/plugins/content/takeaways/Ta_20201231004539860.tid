@@ -1,9 +1,9 @@
 answer: `<<myvar>>`
 created: 20201231004541137
-modified: 20210409192722422
+modified: 20240929154604314
 origin: Variables
 qtype: rememberq
-question: What is the wikitext syntax to refer to the value of a variable named `myvar`?
+question: What is the wikitext syntax to transclude the value of a variable named `myvar`?
 tags: Takeaway
 title: Ta:20201231004539860
 type: text/vnd.tiddlywiki

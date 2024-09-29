@@ -1,5 +1,5 @@
 created: 20201231004217204
-modified: 20210409192705016
+modified: 20240929154421475
 origin: Variables
 qtype: remembercz
 question: When a variable ceases to be accessible at a closing `</$set>` tag, the variable is said to have gone {out of scope}.
