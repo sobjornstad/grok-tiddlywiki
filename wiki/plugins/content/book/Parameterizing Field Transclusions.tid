@@ -1,6 +1,6 @@
 created: 20240907015401704
 description: TODO
-modified: 20240928201829037
+modified: 20240929183259068
 parent: Transclusion
 tags: Section
 title: Parameterizing Field Transclusions
@@ -56,6 +56,11 @@ The benefit of using a slot rather than a parameter is that ''including long con
 
 !! Parameterized transclusions vs. procedures
 
-Why use a transclusion with parameters (or slots) rather than a procedure? Well, there's no technical reason, really; it can accomplish exactly the same things. It's more about semantics. Sometimes it feels more natural to think about reusing wikitext in terms of calling a procedure (for instance, when you want to create a link to something or format a small chunk of text), and sometimes in terms of transcluding a tiddler (for instance, when including an icon in the current tiddler and specifying its color).
+Why use a transclusion with parameters (or slots) rather than a procedure? Well, there's no technical reason, really; it can accomplish exactly the same things. It's more about semantics. Sometimes it feels more natural to think about reusing wikitext in terms of calling a procedure (for instance, when you want to create a link to something or format a small chunk of text), and sometimes in terms of transcluding a tiddler (for instance, when including an icon in the current tiddler and specifying its color). We'll come back to this question in [[Choosing a Type of Transclusion]], in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>.
 
 Parameterized transclusions are a recent addition to TiddlyWiki; for many years the only way to have parts in a transclusion that changed was to manually set variables to values before performing the transclusion (probably having to go look at the tiddler you were transcluding to remember what variable names to use). This means that most parameterized wikitext out there in the wild uses procedures (or, really, [[macros|Macros]] -- more on that later), less because they're actually better and more because they're the only thing we're used to. As more time goes by, the community will probably get a better idea of which options make the most sense where.
+
+
+!! Takeaways
+
+{{||TakeawaysTemplate}}

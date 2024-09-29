@@ -1,0 +1,9 @@
+answer: `{{A||B|C}}`
+created: 20240929182410926
+modified: 20240929182410926
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: Transclude the tiddler `A` through the template `B`, passing parameter `C`, using the brace syntax.
+tags: Takeaway
+title: Ta:20240929182408006
+type: text/vnd.tiddlywiki

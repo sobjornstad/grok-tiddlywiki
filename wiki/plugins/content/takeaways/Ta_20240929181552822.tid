@@ -1,0 +1,9 @@
+answer: <code><&#36;widget attribute=&#96;text and &#36;{ [filter-expression[]] }&#36;&#96;/></code>
+created: 20240929181556009
+modified: 20240929181558944
+origin: Filters and Transclusions
+qtype: rememberq
+question: What syntax allows transcluding a filter expression as //part// of the value of an attribute?
+tags: Takeaway
+title: Ta:20240929181552822
+type: text/vnd.tiddlywiki

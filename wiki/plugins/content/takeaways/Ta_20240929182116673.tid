@@ -1,0 +1,9 @@
+answer: (1) transcludes `A` through the template `B` (i.e., it transcludes the tiddler `B`, setting the current tiddler to `A`).   (2) transcludes the tiddler `A`, passing `B` as the value of its first parameter.
+created: 20240929182132020
+modified: 20240929182132020
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: Explain the difference in meaning between these two transclusions: (1) `{{A||B}}` (2) `{{A|B}}`
+tags: Takeaway
+title: Ta:20240929182116673
+type: text/vnd.tiddlywiki

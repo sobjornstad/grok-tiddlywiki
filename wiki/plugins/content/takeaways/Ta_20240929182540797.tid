@@ -1,0 +1,9 @@
+answer: `<$slot $name="statement" />`
+created: 20240929182547128
+modified: 20240929182810813
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: Write a widget that retrieves the content placed into a slot named `statement`.
+tags: Takeaway
+title: Ta:20240929182540797
+type: text/vnd.tiddlywiki

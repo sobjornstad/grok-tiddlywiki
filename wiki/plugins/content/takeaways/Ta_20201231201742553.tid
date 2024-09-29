@@ -1,9 +1,9 @@
 answer: `[parent<currentTiddler>]`
 created: 20201231201743734
-modified: 20210409220121472
+modified: 20240929181050757
 origin: Filters and Transclusions
 qtype: rememberq
-question: Write a filter to find all tiddlers whose `parent` field is set to the title of the current tiddler. Use a variable reference.
+question: Write a filter to find all tiddlers whose `parent` field is set to the title of the current tiddler. Use a variable transclusion.
 tags: Takeaway
 title: Ta:20201231201742553
 type: text/vnd.tiddlywiki

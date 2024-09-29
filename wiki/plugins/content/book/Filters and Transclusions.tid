@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20240929013921705
+modified: 20240929181312248
 parent: Transclusion
 tags: Section
 title: Filters and Transclusions
@@ -61,7 +61,7 @@ Nevertheless, it's important to be aware of this behavior, or you may find yours
 
 !!! Transcluding inside the value of an attribute
 
-In [[Using Variables as Attributes]], we learned that you can combine variables and constant text into the value of an attribute like this:
+In [[Using Variables as Attributes]], we learned that you can combine variables and constant text into the value of an attribute using the //substituted attribute value// syntax, like this:
 
 ```html
 <$widget attribute=`text and $(variable)$`/>

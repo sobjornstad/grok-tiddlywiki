@@ -1,9 +1,9 @@
 answer: `<<list-links "myfilter">>`
 created: 20201231201929127
-modified: 20210409220125376
+modified: 20240929181115831
 origin: Filters and Transclusions
 qtype: rememberq
-question: What built-in macro creates a bulleted list of links to tiddlers that match a filter?
+question: What built-in procedure/macro creates a bulleted list of links to tiddlers that match a filter?
 tags: Takeaway
 title: Ta:20201231201927944
 type: text/vnd.tiddlywiki

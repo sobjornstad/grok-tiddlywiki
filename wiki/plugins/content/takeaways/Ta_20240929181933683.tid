@@ -1,0 +1,9 @@
+answer: `{{Sn:Hi|A|B}}`
+created: 20240929181934822
+modified: 20240929181934822
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: Modify this transclusion to pass two values, `A` and `B`, as parameters: `{{Sn:Hi}}`
+tags: Takeaway
+title: Ta:20240929181933683
+type: text/vnd.tiddlywiki

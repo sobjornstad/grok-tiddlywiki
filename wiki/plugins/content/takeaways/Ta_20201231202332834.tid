@@ -1,6 +1,6 @@
 answer: `class="tc-tiddlylink-external"`
 created: 20201231202335322
-modified: 20210409220138014
+modified: 20240929181125920
 origin: Filters and Transclusions
 qtype: rememberq
 question: To make an external link created with an `<a>` HTML tag look the same as one created in wikitext, what attribute must you add to the tag?

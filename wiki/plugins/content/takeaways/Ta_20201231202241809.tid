@@ -1,6 +1,6 @@
 answer: `addsuffix`
 created: 20201231202243008
-modified: 20210409220129105
+modified: 20240929181101683
 origin: Filters and Transclusions
 qtype: rememberq
 question: What filter operator adds a string of text to the end of each of its inputs?

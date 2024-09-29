@@ -1,0 +1,9 @@
+answer: `<$transclude $tiddler="Hi" name="Emily"/> `
+created: 20240929182235085
+modified: 20240929182235085
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: Use a `$transclude` widget to transclude the tiddler `Hi` with the parameter `name` set to `Emily`.
+tags: Takeaway
+title: Ta:20240929182224200
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: `<$transclude $tiddler="X"><$fill $name="statement">Y</$fill></$transclude>`
+created: 20240929182756829
+modified: 20240929182819070
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: Transclude the tiddler `X`, filling its `statement` slot with `Y`.
+tags: Takeaway
+title: Ta:20240929182735224
+type: text/vnd.tiddlywiki

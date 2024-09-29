@@ -1,6 +1,6 @@
 answer: `{{{ [tag[Contact]count[]] }}}`
 created: 20201231200917522
-modified: 20210409220054251
+modified: 20240929180958956
 origin: Filters and Transclusions
 qtype: rememberq
 question: What is the wikitext syntax to transclude the result of the filter `[tag[Contact]count[]]`?
