@@ -1,7 +1,7 @@
 created: 20210116210438040
-modified: 20240911130416785
+modified: 20240929014243527
 tags: 
-title: Sn:QuotedMacroExpansion
+title: Sn:QuotedProcedureExpansion
 type: text/vnd.tiddlywiki
 
 \procedure wikipediaLink(articleName, linkText:"Wikipedia Link")

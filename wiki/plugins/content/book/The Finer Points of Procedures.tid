@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20240929004824845
+modified: 20240929014058987
 parent: Transclusion
 tags: Section
 title: The Finer Points of Procedures
@@ -20,14 +20,14 @@ The answer is, generally, the procedure is available until the end of the tiddle
 
 It's possible, and even common, to have a procedure with //no// parameters, which is just a different way of writing a variable scoped to the entire tiddler. For instance, this is equivalent to the example of the corporate disclaimer previously discussed in the [[Variables]] section:
 
-{{Sn:ParameterlessMacro||MagicSnippet}}
+{{Sn:ParameterlessProcedure||MagicSnippet}}
 
 
 </$details><$details summary="Procedures can have multiple parameters">
 
 Let's come back to our good old `wikipediaLink` procedure again. Let's say we want the user to be able to specify the text as well as the article we're linking to. Here's how we can do that:
 
-{{Sn:MultipleParameterMacro||MagicSnippet}}
+{{Sn:MultipleParameterProcedure||MagicSnippet}}
 
 Note that parameters are separated by a space in the procedure call but by a comma in the procedure definition. No, this doesn't really make any sense, but a lot of programming languages do it this way too.
 
@@ -38,11 +38,11 @@ Also notice the use of "double quotation marks" when a macro parameter contains 
 
 A moment ago, we saw that you can include spaces in a parameter by surrounding it with double quotes. But what happens when the parameter itself contains double quotes? Uh-oh:
 
-{{Sn:QuoteWithinQuotesMacro||MagicSnippet}}
+{{Sn:QuoteWithinQuotesProcedure||MagicSnippet}}
 
 In this case, we can use //tripled// double quotes (colloquially called //triple quotes//) to mark the start and end of the parameter:
 
-{{Sn:TripleDoublesMacro||MagicSnippet}}
+{{Sn:TripleDoublesProcedure||MagicSnippet}}
 
 This trick works elsewhere in TiddlyWiki as well, if you ever find yourself needing to quote something that contains quotes.
 
@@ -50,7 +50,7 @@ This trick works elsewhere in TiddlyWiki as well, if you ever find yourself need
 
 If we don't like the order that the procedure parameters are specified in, or there are a lot of parameters and it's hard to remember what order they come in, we can list the parameters by name. If we do this, the order becomes unimportant.
 
-{{Sn:MacroParameterNames||MagicSnippet}}
+{{Sn:ProcedureParameterNames||MagicSnippet}}
 
 Sometimes this is called using ''named parameters'', in contrast to using //positional parameters//.
 
@@ -61,7 +61,7 @@ A space may optionally be added after the colon `:`, but most people find it eas
 
 When defining a procedure, we can specify a default value for a parameter by writing it after the parameter name and a colon. Then we only need to provide a value in the procedure call if we don't want to use the default.
 
-{{Sn:DefaultMacroParameterValues||MagicSnippet}}
+{{Sn:DefaultProcedureParameterValues||MagicSnippet}}
 
 Again, a space may optionally be added after the colon.
 
@@ -69,7 +69,7 @@ Again, a space may optionally be added after the colon.
 
 You can place short procedures whose bodies need only one line on the same line as the `\procedure` pragma and omit the `\end`:
 
-{{Sn:SingleLineMacro||MagicSnippet}}
+{{Sn:SingleLineProcedure||MagicSnippet}}
 
 
 </$details><$details summary="Procedures can be called using a $transclude widget">
@@ -78,7 +78,7 @@ In addition to the handy `<<double angle bracket>>` syntax, it's possible to cal
 
 Here's how we could create our aardvark link with a widget:
 
-{{Sn:SimpleMacrocallWidget||MagicSnippet}}
+{{Sn:SimpleProcedureCallWidget||MagicSnippet}}
 
 Notice the dollar sign in front of `$variable`, which is easily missed. (It's there so that your procedure can have parameters with any names, including `variable`, without conflicting.)
 
@@ -86,7 +86,7 @@ Notice the dollar sign in front of `$variable`, which is easily missed. (It's th
 
 From the above, it was probably not immediately obvious why you would ever want to write out a procedure call the long way with a widget. Here's the main reason why: you can //transclude other things// into the parameters of the procedure. For instance, maybe we want to link to a few different Wikipedia pages, but use the same link name:
 
-{{Sn:TranscludedMacrocallWidget||MagicSnippet}}
+{{Sn:TranscludedProcedureCallWidget||MagicSnippet}}
 
 </$details>
 

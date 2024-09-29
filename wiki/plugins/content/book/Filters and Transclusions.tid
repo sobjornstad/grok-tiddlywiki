@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20240929005351336
+modified: 20240929013921705
 parent: Transclusion
 tags: Section
 title: Filters and Transclusions
@@ -120,7 +120,7 @@ Similarly, if the value we wanted to use was in a variable rather than a field, 
 
 You can also ''transclude the result of procedure calls with parameters'' using this syntax. However, this might not work quite the way you hope, because, just like if you were using this procedure call as the value of an attribute, wikitext won't be processed inside the filter, so you may end up with unexpanded variable transclusions in the filter pipeline:
 
-{{Sn:MacroCallTransclusion||MagicSnippet}}
+{{Sn:ProcedureCallTransclusion||MagicSnippet}}
 
 In <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, we'll learn how [[Wikification]] allows us to work around this issue.
 

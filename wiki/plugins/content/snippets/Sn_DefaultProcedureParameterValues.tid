@@ -1,7 +1,7 @@
 created: 20210116205525709
-modified: 20240910123750856
+modified: 20240929013559111
 tags: 
-title: Sn:DefaultMacroParameterValues
+title: Sn:DefaultProcedureParameterValues
 type: text/vnd.tiddlywiki
 
 \procedure wikipediaLink(articleName, linkText:"Wikipedia Link")

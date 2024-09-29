@@ -1,7 +1,7 @@
 created: 20210818205917912
-modified: 20240925233303808
+modified: 20240929013919836
 tags: 
-title: Sn:MacroCallTransclusion
+title: Sn:ProcedureCallTransclusion
 type: text/vnd.tiddlywiki
 
 \procedure partial-name(suffix) Tiddler <<suffix>>

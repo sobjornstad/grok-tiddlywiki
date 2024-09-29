@@ -1,7 +1,7 @@
 created: 20210116205742608
-modified: 20240928205147237
+modified: 20240929014135147
 tags: 
-title: Sn:SingleLineMacro
+title: Sn:SingleLineProcedure
 type: text/vnd.tiddlywiki
 
 \procedure disclaimer() (This paragraph does not represent the formal opinion of my company.)

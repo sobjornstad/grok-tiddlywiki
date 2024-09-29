@@ -1,6 +1,6 @@
 created: 20200605153728555
 description: Templates and macros share a surprising number of properties; a few guidelines may help you decide when to use one over the other.
-modified: 20240907020100512
+modified: 20240929013841713
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Templates vs. Procedures vs. Macros vs. Custom Widgets
@@ -26,7 +26,15 @@ For the most part, this is personal preference and a question of what makes the 
   <ul><li>But you can always include a macro //in// a template if you need to use text substitution.</li></ul></li>
 <li>Templates work best using ''fields of a particular tiddler'' as input. Macros work best using ''parameters written directly inside the body of the tiddler'' as input. However, either can get data from either source if you set a variable to the appropriate value:
 
-{{Sn:MacroInTemplate||BasicSnippet}}
+```html
+<$let
+	myvar1="xyz"
+	myvar2={{!!field}}
+>
+  {{||MyTemplate}}
+  <<myMacro>>
+</$let>
+```
 
 <p>In `MyTemplate`, a reference to `<<myvar1>>` will get the value `xyz`, while in `myMacro`, `<<myvar1>>` or `$(myvar1)$` will get the value `xyz`. Similarly with `myvar2` getting the value of `field` on the current tiddler.</p>
 

@@ -1,7 +1,7 @@
 created: 20210116210007489
-modified: 20240910124752524
+modified: 20240929014142165
 tags: 
-title: Sn:TranscludedMacrocallWidget
+title: Sn:TranscludedProcedureCallWidget
 type: text/vnd.tiddlywiki
 
 \procedure wikipediaLink(articleName, linkText:"Wikipedia Link")

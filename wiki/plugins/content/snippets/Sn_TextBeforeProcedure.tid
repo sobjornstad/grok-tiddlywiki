@@ -1,10 +1,10 @@
 created: 20210116203958811
-modified: 20240925234717347
+modified: 20240929014330349
 tags: 
-title: Sn:TextBeforeMacro
+title: Sn:TextBeforeProcedure
 type: text/vnd.tiddlywiki
 
-Text before a macro
+Text before a procedure
 
 \procedure wikipediaLink(articleName)
   <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>

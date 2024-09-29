@@ -1,8 +1,0 @@
-created: 20210818004551463
-description: Macros are not functions
-modified: 20210818004617229
-tags: 
-title: Sn:MacroFunctionCallDirect
-type: text/vnd.tiddlywiki
-
-<$transclude tiddler={{{ [<currentTiddler>get[description]] }}} field="description"/>

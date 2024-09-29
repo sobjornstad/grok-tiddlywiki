@@ -1,11 +1,11 @@
 created: 20200603211145810
-modified: 20240929004145190
+modified: 20240929014320738
 tags: Answer
 title: Ex:ProcedurePosition/answer
 type: text/vnd.tiddlywiki
 
 In either case, you get ugly and useless output:
 
-{{Sn:TextBeforeMacro||MagicSnippet}}
+{{Sn:TextBeforeProcedure||MagicSnippet}}
 
 Pragmas, including `\procedure`, have to be the very first thing in a tiddler (except for other pragmas and [[comments|Comments]]). If anything else comes before them, they're treated as normal text.

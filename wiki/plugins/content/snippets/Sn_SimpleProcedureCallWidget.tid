@@ -1,7 +1,7 @@
 created: 20210116205906718
-modified: 20240910124012140
+modified: 20240929014129823
 tags: 
-title: Sn:SimpleMacrocallWidget
+title: Sn:SimpleProcedureCallWidget
 type: text/vnd.tiddlywiki
 
 \procedure wikipediaLink(articleName, linkText)

@@ -1,7 +1,7 @@
 created: 20210116204238244
-modified: 20240910123016964
+modified: 20240929014113123
 tags: 
-title: Sn:ParameterlessMacro
+title: Sn:ParameterlessProcedure
 type: text/vnd.tiddlywiki
 
 \procedure disclaimer()

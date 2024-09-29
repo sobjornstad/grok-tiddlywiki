@@ -1,13 +1,13 @@
 created: 20200603224332671
 length: s
-modified: 20240929004451338
+modified: 20240929014305561
 tags: Answer
 title: Ex:QuotedProcedureCall/answer
 type: text/vnd.tiddlywiki
 
 You get broken links -- the URL just says `<<article>>` where the article name should be, when you hover over the link or click on it.
 
-{{Sn:QuotedMacroExpansion||MagicSnippet}}
+{{Sn:QuotedProcedureExpansion||MagicSnippet}}
 
 Putting quotation marks around a procedure call or variable reference passed to an HTML attribute makes it //literal// -- that is, TiddlyWiki doesn't try to look at it to see if it's a variable or procedure call. This is very occasionally what you want, but usually it's a mistake.
 

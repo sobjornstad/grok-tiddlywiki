@@ -1,0 +1,28 @@
+created: 20240929012243592
+modified: 20240929013359638
+tags: 
+title: Meta:SnippetCleanup
+type: text/vnd.tiddlywiki
+
+\function .snippet-transclusions(searchText) [all[tiddlers+shadows]!is[system]] +[search:*<searchText>] -[<searchText>]
+
+<table>
+<tr>
+	<th>Snippet</th>
+	<th>MagicSnippet transclusions</th>
+	<th>All field matches !is[system]</th>
+</tr>
+<$list filter=[search:title[Sn:]search:title[Macro]]>
+<tr>
+		<$let searchText={{{ [<currentTiddler>addsuffix[||MagicSnippet]] }}}>
+			<td><$link to=<<currentTiddler>>/></td>
+			<td>
+				{{{ [.snippet-transclusions<searchText>] }}}
+			</td>
+			<td>
+				{{{ [.snippet-transclusions<currentTiddler>] }}}
+			</td>
+		</$let>
+</tr>
+</$list>
+</table>

@@ -1,7 +1,7 @@
 created: 20210116210221048
-modified: 20240911125028759
+modified: 20240929014349222
 tags: 
-title: Sn:TicketLinkMacro
+title: Sn:TicketLinkProcedure
 type: text/vnd.tiddlywiki
 
 \procedure ticketLink(ticketId)

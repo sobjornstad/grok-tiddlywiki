@@ -1,7 +1,7 @@
-created: 20210116204322898
-modified: 20240910123345580
+created: 20210116204445198
+modified: 20240929014146884
 tags: 
-title: Sn:QuoteWithinQuotesMacro
+title: Sn:TripleDoublesProcedure
 type: text/vnd.tiddlywiki
 
 \procedure wikipediaLink(articleName, linkText)
@@ -9,4 +9,4 @@ type: text/vnd.tiddlywiki
   <<linkText>></a>
 \end
 
-<<wikipediaLink Aardvark "What is an "aardvark"?">>
+<<wikipediaLink Aardvark """What is an "aardvark"?""">>
