@@ -1,6 +1,6 @@
 answer: `<<toc "TableOfContents">>`
 created: 20201229152142692
-modified: 20210409134659559
+modified: 20240929214235195
 origin: Creating Hierarchies with a Table of Contents
 qtype: rememberq
 question: What wikitext syntax displays a table of contents that shows all tiddlers in a non-expandable hierarchy, beginning at the tiddler `TableOfContents`?

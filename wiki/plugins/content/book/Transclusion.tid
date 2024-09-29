@@ -1,0 +1,23 @@
+caption: 4: Transclusion
+created: 20200603200642700
+description: In which we study a variety of ways to write some content in one place and reuse it in many other places, a capability which sounds boring but is in fact incredibly powerful and versatile, setting TiddlyWiki apart from the competition.
+list: Variables [[Using Variables as Attributes]] Procedures [[The Finer Points of Procedures]] [[Field Transclusions]] [[Templates and the Current Tiddler]] [[Filters and Transclusions]] [[Parameterizing Field Transclusions]] [[Conditional Inclusion]] [[Summary of Transclusion Syntax]]
+modified: 20240929215018120
+parent: Outline
+tags: Chapter
+title: Transclusion
+type: text/vnd.tiddlywiki
+
+TiddlyWiki is as powerful and flexible as it is because it allows you to [[slice up content|Slicing Up Content]] into small pieces -- often, but not always, [[Tiddlers]] -- and reuse them in many different contexts. But how do we actually go about reusing tiddlers or other pieces of wikitext in different contexts? So far we've seen that we can make lists of tiddlers by [[filtering|Filters]] them, but that's about as far as we've gotten.
+
+Ultimately, what we need is a way to weave together wikitext from different sources (tiddlers or other named chunks) into a single document. That process of including wikitext from other sources in a document is called ''transclusion'', and is the subject of this chapter.
+
+First, we'll talk about three ways we can transclude content: ''variables'', ''procedures'', and ''field transclusions''. Then we'll go over some more advanced ways to use field transclusions, as well as how transclusions of all kinds integrate with filters. Finally, we'll explore how you can include wikitext only if certain conditions are true, not every time.
+
+This chapter is the core of the book and the core of TiddlyWiki. The features we discuss here, in one form or another, power most of the tools in TiddlyWiki that allow you to avoid repetitive work and customize your wiki to your liking. If you fully understand these three things and the way they integrate with the rest of TiddlyWiki, along with [[filters|Filtering and Formatting]], you'll be able to accomplish almost anything in TiddlyWiki.
+
+While the concepts in this chapter are, for the most part, not intrinsically complicated, there are a lot of details to internalize, and the way TiddlyWiki does things may be different enough from the way you're used to other apps doing things to be a bit confusing at first. So this chapter is packed with exercises, and it will likely take you somewhat longer than the previous chapters to work through.
+
+!! In this chapter
+
+{{||ChapterOutlineTemplate}}

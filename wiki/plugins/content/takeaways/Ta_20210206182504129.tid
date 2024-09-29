@@ -1,9 +1,9 @@
 answer: `myop[one],[two]`
 created: 20210206182505096
-modified: 20210409163149763
+modified: 20240929214552949
 origin: Anatomy of Filter Steps
 qtype: rememberq
-question: If a filter operator `myop` accepts multiple parameters, `one` and `two`, and has no suffix, what would the resulting filter step look like?
+question: If a filter operator `myop` accepts multiple parameters, `one` and `two`, and has no suffix, what does the resulting filter step look like?
 tags: Takeaway
 title: Ta:20210206182504129
 type: text/vnd.tiddlywiki

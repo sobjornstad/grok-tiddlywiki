@@ -1,0 +1,9 @@
+answer: Any number of arbitrarily named parameters, each with (typically) a variable as its value.
+created: 20240929214936814
+modified: 20240929214936814
+origin: When Things Go Wrong
+qtype: rememberq
+question: What parameters does the `$log` widget take?
+tags: Takeaway
+title: Ta:20240929214935650
+type: text/vnd.tiddlywiki
