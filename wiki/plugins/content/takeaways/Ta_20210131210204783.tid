@@ -1,0 +1,9 @@
+answer: The former syntax doesn't result in text substitution, so there is no possibility of errors if special characters like `]]` or `"` are used to surround <code>&#36;myparameter&#36;</code> but also appear in its value.
+created: 20210131210208174
+modified: 20210409222244576
+origin: Macros
+qtype: rememberq
+question: Why is it usually better to write `<<__myparameter__>>` rather than <code>&#36;myparameter&#36;</code> if it would have the same effect?
+tags: Takeaway
+title: Ta:20210131210204783
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: `\define myMacro(a, b, c)`
+created: 20201231040041862
+modified: 20240612035755282
+origin: The Finer Points of Procedures
+qtype: rememberq
+question: What is the wikitext syntax to define a single-line macro `myMacro` with three parameters, `a`, `b`, and `c`?
+tags: Takeaway
+title: Ta:20201231040040541
+type: text/vnd.tiddlywiki

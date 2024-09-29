@@ -1,0 +1,15 @@
+answer: `$(myVariable)​$`
+created: 20210101175652476
+modified: 20210410140537406
+origin: Macros
+qtype: rememberq
+question: What is the syntax to text-substitute a variable (not a parameter) called `myVariable` in the definition of a macro?
+tags: Takeaway
+title: Ta:20210101175651214
+type: text/vnd.tiddlywiki
+
+<!--
+
+Note: there is a zero-width space between the ) and the `$`, because otherwise it triggers a real variable substitution somewhere in the bowels of the TiddlyRemember rendering!
+
+-->
