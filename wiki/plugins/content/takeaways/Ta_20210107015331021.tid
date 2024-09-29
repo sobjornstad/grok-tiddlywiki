@@ -1,9 +1,0 @@
-answer: `\import`
-created: 20210107015332179
-modified: 20210418134629745
-origin: Global Macros
-qtype: rememberq
-question: What pragma loads macros that are defined in another tiddler but are not global, so that they can be called from within the current tiddler?
-tags: Takeaway
-title: Ta:20210107015331021
-type: text/vnd.tiddlywiki

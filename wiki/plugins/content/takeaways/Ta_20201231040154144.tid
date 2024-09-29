@@ -1,9 +1,0 @@
-answer: `<<myMacro Aardvark "Blue Baboon">>`
-created: 20201231040155621
-modified: 20210409195503013
-origin: The Finer Points of Macros
-qtype: rememberq
-question: What is the wikitext syntax to call a macro `myMacro` with two parameters, `Aardvark` and `Blue Baboon`?
-tags: Takeaway
-title: Ta:20201231040154144
-type: text/vnd.tiddlywiki

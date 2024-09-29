@@ -29,7 +29,7 @@ done
 
 ### Content ###
 for i in Ta_*; do
-    sed -Ee '1,/^$/ { /^[[:space:]]*"?(due|ease|ivl|seen|lapses)"?:/d }' "$i" >"../plugins/content/takeaways/$i"
+    sed -Ee '1,/^$/ { /^[[:space:]]*"?(due|ease|ivl|seen|lapses)"?:/d }' "$i" >"../plugins/content/takeaways/$i" && rm "$i"
 done
 
 for i in Sn_*; do

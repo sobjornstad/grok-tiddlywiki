@@ -1,9 +1,0 @@
-answer: `<<myMacro y:"2" x:"1">>`
-created: 20201231040442487
-modified: 20210409195516276
-origin: The Finer Points of Macros
-qtype: rememberq
-question: Given a macro defined with `\define myMacro(x, y)`, how can you use a double-angle-bracket macro call `<<myMacro>>` with x="1" and y="2", placing the parameter `y` //first// in the macro call?
-tags: Takeaway
-title: Ta:20201231040441260
-type: text/vnd.tiddlywiki
