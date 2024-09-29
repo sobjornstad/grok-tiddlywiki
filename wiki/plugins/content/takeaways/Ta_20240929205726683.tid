@@ -1,0 +1,9 @@
+answer: When it is overriding a built-in widget.
+created: 20240929205727446
+modified: 20240929205727446
+origin: Overriding Built-In Widgets
+qtype: rememberq
+question: In what case does the name of a custom widget not need to contain a `.`?
+tags: Takeaway
+title: Ta:20240929205726683
+type: text/vnd.tiddlywiki

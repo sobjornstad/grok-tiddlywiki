@@ -1,0 +1,9 @@
+answer: If you override a built-in widget with a broken version globally, it may make it difficult or impossible to edit the tiddler again and undo the changes.
+created: 20240929205956237
+modified: 20240929205956237
+origin: Overriding Built-In Widgets
+qtype: rememberq
+question: When overriding a built-in widget, why should you start by scoping your override to a single tiddler?
+tags: Takeaway
+title: Ta:20240929205952443
+type: text/vnd.tiddlywiki

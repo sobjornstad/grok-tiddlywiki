@@ -1,9 +1,0 @@
-answer: A text reference, like `!!field`.
-created: 20210207032824674
-modified: 20210418165615856
-origin: Hiding and Showing Things
-qtype: rememberq
-question: What type of reference goes in the value of the `state` attribute to the `$reveal` widget?
-tags: Takeaway
-title: Ta:20210207032823367
-type: text/vnd.tiddlywiki

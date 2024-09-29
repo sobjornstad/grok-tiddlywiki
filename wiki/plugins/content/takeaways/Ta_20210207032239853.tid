@@ -1,9 +1,9 @@
 answer: `<$list filter="[[$:/config/MyConfigTiddler]text[yes]]"> ... </$list>`
 created: 20210207032242027
-modified: 20210418165532962
+modified: 20240929210520002
 origin: Hiding and Showing Things
 qtype: rememberq
-question: Write a `$list` widget that displays its contents only if the `text` field of the tiddler `$:/config/MyConfigTiddler` is set to the exact value `yes`. Use only hard parameters.
+question: Write a `$list` widget that displays its contents only if the `text` field of the tiddler `$:/config/MyConfigTiddler` is set to the exact value `yes`. Use only hard parameters (no transclusions).
 tags: Takeaway
 title: Ta:20210207032239853
 type: text/vnd.tiddlywiki

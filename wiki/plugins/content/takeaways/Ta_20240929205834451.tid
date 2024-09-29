@@ -1,0 +1,9 @@
+answer: The `$genesis` widget.
+created: 20240929205835644
+modified: 20240929205835644
+origin: Overriding Built-In Widgets
+qtype: rememberq
+question: What widget allows us to call the original (not overridden) version of a widget we are overriding?
+tags: Takeaway
+title: Ta:20240929205834451
+type: text/vnd.tiddlywiki

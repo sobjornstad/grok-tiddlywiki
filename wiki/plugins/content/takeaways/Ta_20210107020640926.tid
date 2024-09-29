@@ -1,6 +1,6 @@
 answer: Use the HTML equivalent, `<h2>Section Name</h2>`. (Change the `2` to match the number of exclamation points.)
 created: 20210107020642128
-modified: 20210418140314732
+modified: 20240929205159597
 origin: The View Template
 qtype: rememberq
 question: When creating a template, how can you change the markup `!! Section Name` to ensure that `Section Name` will never merge into a paragraph rather than creating a section heading?

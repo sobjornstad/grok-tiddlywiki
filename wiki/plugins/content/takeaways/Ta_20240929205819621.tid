@@ -1,0 +1,9 @@
+answer: TiddlyWiki will instead use the definition of the newly created, overriding widget, and get stuck in an infinite loop.
+created: 20240929205820463
+modified: 20240929205820463
+origin: Overriding Built-In Widgets
+qtype: rememberq
+question: Why can we not add extra behavior to a built-in widget by simply using that widget within an overriding custom widget?
+tags: Takeaway
+title: Ta:20240929205819621
+type: text/vnd.tiddlywiki

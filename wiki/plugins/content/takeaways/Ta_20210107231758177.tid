@@ -1,6 +1,6 @@
 answer: They are not saved, so they disappear when the wiki is closed and reopened.
 created: 20210107231759222
-modified: 20210418160755302
+modified: 20240929205409124
 origin: Buttons and Input Widgets
 qtype: rememberq
 question: What special behavior do tiddlers whose names begin with `$:/temp` have?

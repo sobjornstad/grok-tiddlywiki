@@ -1,6 +1,6 @@
 answer: It performs each action in the order it is shown in the wikitext.
 created: 20210109214714279
-modified: 20210418162324515
+modified: 20240929205538998
 origin: Creating Tiddlers With Predefined Fields
 qtype: rememberq
 question: How does TiddlyWiki deal with multiple action widgets associated with the same button?
