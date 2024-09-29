@@ -1,8 +1,8 @@
 created: 20201231005815791
-modified: 20210409193610654
-origin: Macros
+modified: 20240929161913977
+origin: Procedures
 qtype: remembercz
-question: In `\define wikipediaLink(articleName)`, the part `(articleName)` is called the {parameter list} of the macro.
+question: In `\procedure wikipediaLink(articleName)`, the part `(articleName)` is called the {parameter list} of the procedure.
 tags: Takeaway
 title: Ta:20201231005812772
 type: text/vnd.tiddlywiki

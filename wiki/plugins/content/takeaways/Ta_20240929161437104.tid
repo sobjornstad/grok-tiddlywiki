@@ -1,0 +1,9 @@
+answer: The value of an attribute must be //just// a transclusion, //just// a constant string, or //just// a substituted attribute value -- not several of those things put together.
+created: 20240929161439086
+modified: 20240929162505024
+origin: Using Variables as Attributes
+qtype: rememberq
+question: Why doesn't this syntax yield a working link? `<a href=<<wpBase>>"/Aardvark">`
+tags: Takeaway
+title: Ta:20240929161437104
+type: text/vnd.tiddlywiki

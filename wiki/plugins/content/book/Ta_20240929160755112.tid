@@ -1,0 +1,13 @@
+answer: A //substituted attribute value//.
+created: 20240929160759545
+due: 202410041200
+ease: 250
+ivl: 5
+modified: 20240929161549824
+origin: Using Variables as Attributes
+qtype: rememberq
+question: What's this kind of attribute value, delimited by backticks, called? <code><a href=&#96;&#36;(wpLink)$/Aardvark&#96;>Aardvarks</a></code>
+seen: yes
+tags: Takeaway
+title: Ta:20240929160755112
+type: text/vnd.tiddlywiki

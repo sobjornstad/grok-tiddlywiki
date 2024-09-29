@@ -1,12 +1,12 @@
 created: 20240615154834366
-modified: 20240929154334596
+modified: 20240929162418929
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/AddTakeawayButton
 type: text/vnd.tiddlywiki
 
 \define create-takeaway-actions()
   <$action-createtiddler
-    $basetitle="Tr:$(rightNow)$"
+    $basetitle="Ta:$(rightNow)$"
     $savetitle="$:/temp/addq!!newtid"
     tags="Takeaway"
     $(fieldAttributes)$

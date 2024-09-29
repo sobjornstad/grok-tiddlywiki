@@ -1,13 +1,9 @@
 answer: The `$let` widget.
 created: 20240929154356572
-due: 202410041200
-ease: 250
-ivl: 5
-modified: 20240929154411204
+modified: 20240929162555796
 origin: Variables
 qtype: rememberq
 question: What widget allows you to set any number of variables to new values?
-seen: yes
 tags: Takeaway
-title: Tr:20240929154355182
+title: Ta:20240929154355182
 type: text/vnd.tiddlywiki

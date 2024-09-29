@@ -1,0 +1,9 @@
+answer: `<a href=<<url>>>Search the web</a>`
+created: 20240929155949698
+modified: 20240929162536678
+origin: Using Variables as Attributes
+qtype: rememberq
+question: Given a variable `url` containing the URL of Google, create a link to Google whose text is `Search the web`.
+tags: Takeaway
+title: Ta:20240929155943495
+type: text/vnd.tiddlywiki

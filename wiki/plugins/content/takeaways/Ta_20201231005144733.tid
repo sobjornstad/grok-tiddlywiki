@@ -1,8 +1,8 @@
 created: 20201231005147234
-modified: 20210418131841285
-origin: Macros
+modified: 20240929161706123
+origin: Procedures
 qtype: remembercz
-question: Macros, unlike variables, allow you to eliminate repetitive text where each occurrence of the repetitive text has some elements that {are different}.
+question: Procedures, unlike variables, allow you to eliminate repetitive text where each occurrence of the repetitive text has some elements that {are different}.
 tags: Takeaway
 title: Ta:20201231005144733
 type: text/vnd.tiddlywiki

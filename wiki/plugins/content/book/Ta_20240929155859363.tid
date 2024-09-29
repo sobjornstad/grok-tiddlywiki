@@ -1,0 +1,13 @@
+answer: Transclusions can't be nested inside other complex wikitext elements like links.
+created: 20240929155901071
+due: 202410041200
+ease: 250
+ivl: 5
+modified: 20240929161505676
+origin: Using Variables as Attributes
+qtype: rememberq
+question: Why does this syntax not produce a usable link? `[[Wikipedia|<<wp>>]]`
+seen: yes
+tags: Takeaway
+title: Ta:20240929155859363
+type: text/vnd.tiddlywiki

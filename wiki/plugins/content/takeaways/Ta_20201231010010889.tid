@@ -1,9 +1,9 @@
 answer: With the text `\end` on a separate line.
 created: 20201231010012028
-modified: 20210409193613036
-origin: Macros
+modified: 20240929161926644
+origin: Procedures
 qtype: rememberq
-question: A macro definition that is more than one line long must be ended how?
+question: A procedure definition that is more than one line long must be ended how?
 tags: Takeaway
 title: Ta:20201231010010889
 type: text/vnd.tiddlywiki

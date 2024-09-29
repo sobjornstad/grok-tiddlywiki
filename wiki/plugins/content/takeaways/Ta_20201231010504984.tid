@@ -1,9 +1,9 @@
-answer: As with a variable, nothing is present in the output where the wikitext referring to the macro was.
+answer: As with a variable, nothing appears in the output where the wikitext referring to the procedure was.
 created: 20201231010507567
-modified: 20210418131916132
-origin: Macros
+modified: 20240929161948280
+origin: Procedures
 qtype: rememberq
-question: What happens if you call a macro that doesn't exist?
+question: What happens if you call a procedure that doesn't exist?
 tags: Takeaway
 title: Ta:20201231010504984
 type: text/vnd.tiddlywiki
