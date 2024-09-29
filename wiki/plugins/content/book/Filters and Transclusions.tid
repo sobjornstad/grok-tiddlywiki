@@ -1,7 +1,7 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
 modified: 20240928211613335
-parent: Variables, Procedures, and Transclusions
+parent: Transclusion
 tags: Section
 title: Filters and Transclusions
 type: text/vnd.tiddlywiki

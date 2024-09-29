@@ -1,7 +1,7 @@
 created: 20240829215208267
 description: Conditional inclusion lets you show part of a tiddler's wikitext only under certain conditions.
 modified: 20240907020634029
-parent: Variables, Procedures, and Transclusions
+parent: Transclusion
 tags: Section
 title: Conditional Inclusion
 type: text/vnd.tiddlywiki

@@ -1,7 +1,7 @@
 created: 20240616143658865
 description: Procedures extend the concept of variables by allowing portions of the value to change each time the procedure is referenced.
 modified: 20240928204950597
-parent: Variables, Procedures, and Transclusions
+parent: Transclusion
 tags: Section Concept
 title: Procedures
 type: text/vnd.tiddlywiki

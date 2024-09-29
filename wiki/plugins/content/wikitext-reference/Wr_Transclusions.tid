@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 
 [[Field Transclusions]] of [[fields|Fields]], [[variables|Variables]], [[procedures|Procedures]], [[functions|Functions]], and [[macros|Macros]] are an essential part of TiddlyWiki. Here's the standard syntax for including bits and pieces from other places in a tiddler.
 
-See [[Summary of Inclusion Syntax]] for a more detailed treatment.
+See [[Updated Summary of Transclusion Syntax]] for a more detailed treatment.
 
 <table class="gtw-transclusions-table" >
   <tr>

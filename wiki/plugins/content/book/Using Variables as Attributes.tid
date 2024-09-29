@@ -1,7 +1,7 @@
 created: 20240616152105208
 description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
 modified: 20240928203907935
-parent: Variables, Procedures, and Transclusions
+parent: Transclusion
 tags: Section
 title: Using Variables as Attributes
 type: text/vnd.tiddlywiki

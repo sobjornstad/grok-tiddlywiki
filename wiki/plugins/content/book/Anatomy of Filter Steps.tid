@@ -24,7 +24,7 @@ The exact meaning of the suffix and parameter depends on which operator is being
 
 As briefly mentioned in the previous section, you can place a `!` (pronounced //not// or //bang//) before the operator. Typically, this negates its meaning, so that whatever tiddlers it would have allowed to pass it now filters out, and vice versa. With a few operators, it does something different and operator-specific.
 
-Putting this together, a simple filter step we saw in the [[previous section|Using Filter Expressions]] was `tag[Contact]`. In this step, `tag` is the operator and `Contact` is the parameter. Most commonly, the parameter goes in square brackets, but we'll learn in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">> that these can be replaced with `<angle brackets>` or `{curly braces}` for different effects.
+Putting this together, a simple filter step we saw in the [[previous section|Using Filter Expressions]] was `tag[Contact]`. In this step, `tag` is the operator and `Contact` is the parameter. Most commonly, the parameter goes in square brackets, but we'll learn in <<gtw.link-chapter-number "Transclusion">> that these can be replaced with `<angle brackets>` or `{curly braces}` for different effects.
 
 The `tag` operator has an optional suffix `strict` (don't worry about what it does for now). If we used it, our filter step would look like `tag:strict[Contact]`.
 

@@ -6,7 +6,7 @@ tags: Section
 title: Slicing Up Content
 type: text/vnd.tiddlywiki
 
-A large portion of the power of TiddlyWiki lies in its ability to reuse content in different contexts. The best way to create opportunities for reuse is to slice content up into tiddlers appropriately. The value of this kind of slicing will become much more obvious once you learn about [[filters|Filters]] in <<gtw.link-chapter-number "Filtering and Formatting">> and [[field transclusions|Field Transclusions]] in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>. However, there is already value even when our only means of reusing content is [[linking to it|Links]], and it's a good idea to start thinking about these issues now regardless, so that you'll be prepared to integrate the ideas you learn in those chapters.
+A large portion of the power of TiddlyWiki lies in its ability to reuse content in different contexts. The best way to create opportunities for reuse is to slice content up into tiddlers appropriately. The value of this kind of slicing will become much more obvious once you learn about [[filters|Filters]] in <<gtw.link-chapter-number "Filtering and Formatting">> and [[field transclusions|Field Transclusions]] in <<gtw.link-chapter-number "Transclusion">>. However, there is already value even when our only means of reusing content is [[linking to it|Links]], and it's a good idea to start thinking about these issues now regardless, so that you'll be prepared to integrate the ideas you learn in those chapters.
 
 
 !! What makes an appropriately sliced tiddler?
@@ -30,7 +30,7 @@ Nouns also relate to other nouns. For instance, they might be ''part of another 
 Tiddlers can serve in several more complicated roles as well. They still model nouns, but those nouns do more than just store information about a thing:
 
 * They can ''gather together lists of other nouns'' that meet some criteria; in this way, they act like //sentences//, enumerating and expressing the relationships between other things. Their titles [[can then give the relationship a concise name|Tiddler Titles]]. We'll learn about this role in <<gtw.link-chapter-number "Filtering and Formatting">>, specifically when we [[create dynamic lists|Your First Dynamic List]].
-* They can ''modify the way we see other tiddlers''; in this way, they act like //lenses//. We'll learn about this role in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>, specifically in the section on [[templates|Templates and the Current Tiddler]].
+* They can ''modify the way we see other tiddlers''; in this way, they act like //lenses//. We'll learn about this role in <<gtw.link-chapter-number "Transclusion">>, specifically in the section on [[templates|Templates and the Current Tiddler]].
 * They can ''perform actions'' and modify other nouns; in this way, they act like //machines//. We'll learn about this role in <<gtw.link-chapter-number "Looking Under the Hood">> and <<gtw.link-chapter-number "Tips and Tricks">>.
 
 To summarize, the key discipline of slicing up your tiddlers is to consider what noun(s) you're modeling, and ensure that only content related to each noun ends up in its tiddler, creating more tiddlers and relating them together as necessary to express more complex ideas.
@@ -53,7 +53,7 @@ In the //Grok TiddlyWiki// wiki, each chapter and section has a tiddler. Section
 
 You can see that the book is neatly divided into its component parts and concepts by this model. Some of the section tiddlers are a little longer than I would consider ideal, but I felt keeping a one-to-one correspondence between tiddlers and sections of the book was more important than the size of those tiddlers, and if a section got too long, I looked to split up the section.
 
-You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Transclusions]], which we'll learn about in <<gtw.link-chapter-number "Variables, Procedures, and Transclusions">>, and in some cases [[filters|Filters]], which we'll learn about in <<gtw.link-chapter-number "Filtering and Formatting">>.
+You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Transclusions]], which we'll learn about in <<gtw.link-chapter-number "Transclusion">>, and in some cases [[filters|Filters]], which we'll learn about in <<gtw.link-chapter-number "Filtering and Formatting">>.
 
 
 !! In our sample wiki

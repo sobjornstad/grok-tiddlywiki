@@ -3,10 +3,10 @@ description: Review all the syntax used for reusing and relating content in Tidd
 modified: 20240928023755693
 parent: Macros, Wikification, and Widgets
 tags: Section
-title: Summary of Inclusion Syntax
+title: Updated Summary of Transclusion Syntax
 type: text/vnd.tiddlywiki
 
-At the end of chapter 4, we threw together a [[Summary of Procedure and Transclusion Syntax]]. Since then, we've added functions, macros, and data tiddlers (there are now so many things all their names didn't fit in the title!), so there's a little more syntax to add. Here's an updated version.
+At the end of chapter 4, we threw together a [[Summary of Transclusion Syntax]]. Since then, we've added functions, macros, and data tiddlers (there are now so many things all their names didn't fit in the title!), so there's a little more syntax to add. Here's an updated version.
 
 You can find a condensed version of this section in the [[Wikitext Reference]], which also has some live examples you can play with.	
 
