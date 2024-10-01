@@ -1,6 +1,6 @@
 created: 20201122235410268
 length: h
-modified: 20210130175005982
+modified: 20241001125526439
 origin: Supplemental Exercises
 tags: Exercise
 title: Ex:MailMerge
@@ -17,7 +17,5 @@ mailto:whoever@example.com?subject=TheSubject&body=TheBodyOfTheEmail
 ```
 
 …where both `TheSubject` and `TheBodyOfTheEmail` are URL-encoded.
-
-''Warning'': This is well known in the community as a complex task that demands excellent knowledge of macros, filters, transclusions, and how they relate. It is harder than it looks, and even experienced users will find it challenging. That said, it's a great final exercise after reading this book, and it feels good to crack it!
 
 //Hint//: You will need the `$wikify` widget.
