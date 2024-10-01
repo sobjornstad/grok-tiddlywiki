@@ -1,11 +1,11 @@
 created: 20200718201549864
 length: m
-modified: 20240926120627822
+modified: 20241001022302331
 origin: Creating a List of Links and Backlinks
 tags: Exercise
 title: Ex:LinkDivClasses
 type: text/vnd.tiddlywiki
 
-One more step with the divs. In order to get them formatted correctly, we need to be able to identify each of them separately. The way we do this in HTML/CSS is by applying a //class// (that is, assigning a value to the `class` attribute of the HTML tag). Adjust the wikitext so that each div has a class. It's a good idea to namespace your class names (the namespace is usually separated from the rest of the name by a hyphen `-` in CSS class names), as CSS classes apply globally. I'll prefix these with `sib-links-`.
+One more step with the divs. In order to get them formatted correctly, we need to be able to identify each of them separately. The way we do this in HTML/CSS is by applying a //class// (that is, assigning a value to the `class` attribute of the HTML tag). Adjust the wikitext so that each div has a class. It's a good idea to [[prefix your class names|Much More Than You Wanted to Know About Scopes]] (in CSS class names, the prefix is normally separated from the rest of the name by a hyphen `-`), as CSS classes apply globally. I'll prefix these with `sib-links-`.
 
 Again, you won't see any changes in output yet.

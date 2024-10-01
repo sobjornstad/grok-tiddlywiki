@@ -1,16 +1,16 @@
 caption: 4: Transclusion
 created: 20200603200642700
 description: In which we study a variety of ways to write some content in one place and reuse it in many other places, a capability which sounds boring but is in fact incredibly powerful and versatile, setting TiddlyWiki apart from the competition.
-list: Variables [[Using Variables as Attributes]] Procedures [[The Finer Points of Procedures]] [[Field Transclusions]] [[Templates and the Current Tiddler]] [[Filters and Transclusions]] [[Parameterizing Field Transclusions]] [[Conditional Inclusion]] [[Summary of Transclusion Syntax]]
-modified: 20240929215018120
+list: Variables [[Using Variables as Attributes]] Procedures [[The Finer Points of Procedures]] [[Field Transclusions]] [[Templates and the Current Tiddler]] [[Filters and Transclusions]] [[Parameterizing Field Transclusions]] [[Conditional Expressions]] [[Summary of Transclusion Syntax]]
+modified: 20241001021856275
 parent: Outline
 tags: Chapter
 title: Transclusion
 type: text/vnd.tiddlywiki
 
-TiddlyWiki is as powerful and flexible as it is because it allows you to [[slice up content|Slicing Up Content]] into small pieces -- often, but not always, [[Tiddlers]] -- and reuse them in many different contexts. But how do we actually go about reusing tiddlers or other pieces of wikitext in different contexts? So far we've seen that we can make lists of tiddlers by [[filtering|Filters]] them, but that's about as far as we've gotten.
+TiddlyWiki is as powerful and flexible as it is because it allows you to [[slice up content|Slicing Up Content]] into small pieces -- often, but not always, [[Tiddlers]] -- and reuse them in many different contexts. But how do we actually go about reusing tiddlers or other pieces of wikitext in different contexts? So far we've seen that we can [[filter|Filters]] tiddlers into lists, but that's about as far as we've gotten.
 
-Ultimately, what we need is a way to weave together wikitext from different sources (tiddlers or other named chunks) into a single document. That process of including wikitext from other sources in a document is called ''transclusion'', and is the subject of this chapter.
+Ultimately, what we need is a way to weave together wikitext from different sources into a single document. That process of including wikitext from other sources in a document is called ''transclusion'', and is the subject of this chapter.
 
 First, we'll talk about three ways we can transclude content: ''variables'', ''procedures'', and ''field transclusions''. Then we'll go over some more advanced ways to use field transclusions, as well as how transclusions of all kinds integrate with filters. Finally, we'll explore how you can include wikitext only if certain conditions are true, not every time.
 

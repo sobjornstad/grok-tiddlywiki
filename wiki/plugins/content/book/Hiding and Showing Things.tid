@@ -1,13 +1,13 @@
 created: 20210120034946005
 description: Portions of tiddlers can be hidden and shown selectively using the `$list` widget and the `$reveal` widget.
-modified: 20240926221150363
+modified: 20241001021253362
 parent: Tips and Tricks
 showtest: 
 tags: Section
 title: Hiding and Showing Things
 type: text/vnd.tiddlywiki
 
-A very common need when developing things in wikitext is to ''show content only in certain circumstances''. The most obvious way to do this is with [[Conditional Inclusion]]. But there are other options too, which may sometimes be more concise or convenient.
+A very common need when developing things in wikitext is to ''show content only in certain circumstances''. The most obvious way to do this is with [[Conditional Expressions]]. But there are other options too, which may sometimes be more concise or convenient.
 
 !! The `$list` widget + a filter
 
@@ -51,7 +51,7 @@ Also notice the use of the `emptyMessage` attribute of the `$list` widget above.
 
 !! The `$reveal` widget
 
-A method we haven't seen yet is the `$reveal` widget. With the advent of conditional inclusion, this is rarely an attractive choice anymore, but let's quickly explore how it works, as you may also run across this widget in older wikitext. `$reveal` shows or hides content based on ''whether a specific field matches a specific value''. Here's the basic syntax:
+A method we haven't seen yet is the `$reveal` widget. With the advent of conditional expressions, this is rarely an attractive choice anymore, but let's quickly explore how it works, as you may also run across this widget in older wikitext. `$reveal` shows or hides content based on ''whether a specific field matches a specific value''. Here's the basic syntax:
 
 {{Sn:RevealWidgetTest||MagicSnippet}}
 

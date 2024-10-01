@@ -1,5 +1,5 @@
 created: 20210130041415979
-modified: 20240923235845021
+modified: 20241001021028138
 tags: Answer
 title: Ex:ContactInformationPicture/answer
 type: text/vnd.tiddlywiki
@@ -10,4 +10,4 @@ type: text/vnd.tiddlywiki
 </$list>
 ```
 
-Notice that there's no need to do [[Conditional Inclusion]] to ensure nothing is displayed if the image isn't available -- if the picture tiddler doesn't exist, there will be zero results for the filter, and the `$list` widget will never render anything.
+Notice that there's no need to use [[Conditional Expressions]] to ensure nothing is displayed if the image isn't available -- if the picture tiddler doesn't exist, there will be zero results for the filter, and the `$list` widget will never render anything.

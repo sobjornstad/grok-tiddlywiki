@@ -1,0 +1,13 @@
+created: 20240829224753084
+modified: 20241001021009843
+tags: 
+title: Sn:ConditionalExpressionsExample
+type: text/vnd.tiddlywiki
+
+<% if [<storyTiddler>match[Conditional Expressions]] %>
+  The title of the current tiddler is “Conditional Expressions”.
+<% endif %>
+
+<% if [<storyTiddler>match[When Pigs Fly]] %>
+  Pigs are flying – better watch out!
+<% endif %>

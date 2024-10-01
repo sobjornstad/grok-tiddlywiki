@@ -1,26 +1,24 @@
 created: 20240829215208267
 description: Conditional inclusion lets you show part of a tiddler's wikitext only under certain conditions.
-modified: 20240907020634029
+modified: 20241001021353825
 parent: Transclusion
 tags: Section
-title: Conditional Inclusion
+title: Conditional Expressions
 type: text/vnd.tiddlywiki
 
 Often, we don't want to show all of the wikitext in a template on all tiddlers to which it's applied. Rather, we want to show parts of the wikitext ''only if some condition is true''.
 
-!! Conditional expressions
-
 We can achieve this using ''conditional expressions'' (or ''conditionals'' for short). Conditional expressions are based on [[filters|Filters]]. If the filter ''returns at least one result'', the contents of the conditional are rendered. Otherwise, nothing at all is rendered. The syntax looks like this:
 
-{{Sn:ConditionalInclusionExample||MagicSnippet}}
+{{Sn:ConditionalExpressionsExample||MagicSnippet}}
 
 The `match` [[filter operator|Anatomy of Filter Steps]] passes through any tiddler whose title exactly matches the `match` step's parameter, and filters out all other tiddlers. It's indispensable in many conditional filters. The `<storyTiddler>` variable retrieves the name of the tiddler which is currently being shown in the [[story river|The TiddlyWiki Interface]]. We have to use that in this snippet to get the expected result, rather than `<currentTiddler>`, because [[Grok TiddlyWiki snippets are their own tiddlers|Slicing Up Content]].
 
-You can see that the filter in the first conditional returns a result, since the title of this tiddler is `Conditional Inclusion`, so the contents of the conditional are rendered. The second returns no results, since the title is not `When Pigs Fly`, so nothing is rendered.
+You can see that the filter in the first conditional returns a result, since the title of this tiddler is `Conditional Expressions`, so the contents of the conditional are rendered. The second returns no results, since the title is not `When Pigs Fly`, so nothing is rendered.
 
 Notice that a conditional expression looks much like an [[HTML]] element, except there are percent signs `%` right inside the angle brackets, and where you might expect to see `<% /if %>`, you instead see `<% endif %>`. The spaces inside the percent signs are optional, but as with the spaces inside `{{{ triple braces }}}`, your wikitext will quickly become very hard to read if you omit them!
 
-TiddlyWiki technically calls this “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will simplify and call a use of this pattern //a conditional expression// or //a conditional//, and the overall feature ''conditional inclusion'', for short.
+TiddlyWiki calls this the “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will call a use of this pattern //a conditional expression// or occasionally even just //a conditional//.
 
 
 !! A real example
