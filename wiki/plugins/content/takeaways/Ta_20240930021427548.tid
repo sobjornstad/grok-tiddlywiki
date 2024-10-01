@@ -1,0 +1,9 @@
+answer: `<$macrocall $name="mymacro" param1="value1"/>`
+created: 20240930021430383
+modified: 20240930021430383
+origin: Macros
+qtype: rememberq
+question: How would you use the old `$macrocall` syntax to call a macro named `mymacro` with the parameter `param1=value1`?
+tags: Takeaway
+title: Ta:20240930021427548
+type: text/vnd.tiddlywiki

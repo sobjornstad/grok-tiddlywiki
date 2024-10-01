@@ -1,6 +1,6 @@
 created: 20200603011212616
 description: Macros are an older version of procedures that handle their parameters differently.
-modified: 20240929201654520
+modified: 20240930021326243
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Macros
@@ -51,6 +51,20 @@ You may occasionally see text substitution called //textual substitution// or ju
 Within a macro, you can also perform text substitution on a variable that is not a parameter of the macro using the `$(parenthesized dollar signs)$` syntax. You may notice this syntax is familiar -- it's the same syntax used within [[substituted attribute values|Using Variables as Attributes]] to combine variables with other text -- and it does exactly the same thing (performs text substitution using the value of the variable). But in a macro, you can do this outside of backticks.
 
 You might be asking, why would we want to use a variable rather than a parameter to change the behavior of a macro? Generally, if we have the choice, we don't; it's clearer what information the macro is using when we use parameters, and it's not a good thing when macros do something surprising. (See the [[Principle of Least Astonishment|https://en.wikipedia.org/wiki/Principle_of_least_astonishment]].) However, there are some cases where it saves us a lot of trouble – the first exercise will be an example of that. (Hint, hint.)
+
+
+!! The `$macrocall` widget
+
+Calling a macro works just like calling a procedure -- you can do it with `<<angle brackets>>` or with the `$variable` attribute of the `$transclude` widget.
+
+In older versions of TiddlyWiki, before procedures existed, you called macros with the `$macrocall` widget rather than the `$transclude` widget. These two syntaxes are equivalent (in fact, you can even call procedures with the `$macrocall` widget if you want to):
+
+```html
+<$transclude $variable="mymacro" param="value"/>
+<$macrocall $name="mymacro" param="value"/>
+```
+
+It's recommended that you use the new `$transclude` syntax for both macros and procedures, but you'll see the `$macrocall` widget in a lot of old code, so it's good to be aware of.
 
 
 !! Exercises
