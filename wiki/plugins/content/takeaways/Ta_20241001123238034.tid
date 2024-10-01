@@ -1,0 +1,9 @@
+answer: `<% if FILTER %> ... <% endif %>`
+created: 20241001123238956
+modified: 20241001123238956
+origin: Conditional Expressions
+qtype: rememberq
+question: What syntax (quasi-HTML tag pair) starts and ends a conditional expression?
+tags: Takeaway
+title: Ta:20241001123238034
+type: text/vnd.tiddlywiki

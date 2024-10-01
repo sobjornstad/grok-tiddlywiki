@@ -1,9 +1,9 @@
 answer: E.g., automatically generate URLs matching a pattern, display some boilerplate text, perform a series of actions using action widgets
 created: 20210107015530781
-modified: 20210418134741794
-origin: More Than You Wanted to Know About Scopes
+modified: 20241001125101482
+origin: Much More Than You Wanted to Know About Scopes
 qtype: rememberq
-question: Give an example of something you might define a global macro to do (try to pick a new one).
+question: Give an example of something you might define a global procedure to do (try to pick a new one).
 tags: Takeaway
 title: Ta:20210107015521319
 type: text/vnd.tiddlywiki

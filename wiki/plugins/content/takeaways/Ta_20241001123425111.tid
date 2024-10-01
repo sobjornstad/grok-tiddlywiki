@@ -1,0 +1,9 @@
+answer: There should not be quotes around the filter.
+created: 20241001123426326
+modified: 20241001123426326
+origin: Conditional Expressions
+qtype: rememberq
+question: What's wrong with this syntax? `<% if "[<storyTiddler>match[When Pigs Fly]]" %>`
+tags: Takeaway
+title: Ta:20241001123425111
+type: text/vnd.tiddlywiki

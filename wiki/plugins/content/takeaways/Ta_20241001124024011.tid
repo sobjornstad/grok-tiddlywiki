@@ -1,0 +1,9 @@
+answer: If you inadvertently use the same name in multiple places, you'll end up with a confusing conflict.
+created: 20241001124027591
+modified: 20241001124027591
+origin: Much More Than You Wanted to Know About Scopes
+qtype: rememberq
+question: Why not put all names in the global scope?
+tags: Takeaway
+title: Ta:20241001124024011
+type: text/vnd.tiddlywiki

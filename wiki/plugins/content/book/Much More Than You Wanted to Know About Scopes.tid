@@ -1,6 +1,6 @@
 created: 20200718014509693
 description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers. The names of such procedures should be managed carefully to avoid conflicts.
-modified: 20241001120946655
+modified: 20241001124134306
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -30,7 +30,7 @@ The short answer is that the broader a scope you use, the more likely that you a
 
 This may seem like a trivial problem that would rarely come up, but it happens surprisingly often, especially once you start sharing procedures with others. In particular, names you create and names someone else creates in a [[plugin|Plugins]] (or names two people created in two plugins that you're trying to use in the same wiki) can collide, a situation which is far more annoying to resolve than a collision you created yourself -- here you didn't write the procedures that are causing the collisions, and you probably had no idea they even existed in your wiki, so the cause of the problem won't be obvious at first.
 
-So the first good practice to avoid name collisions is to ''only make a procedure global if you actually need to use it in multiple tiddlers''. We say you want to avoid ''polluting the global scope'' by putting things in it that don't need to be there. (Procedures you have no use for in the global scope are like trash. Some trash is inevitable, but you want it contained in an appropriate trash can, not randomly scattered across the street.)
+So the first good practice to avoid name collisions is to ''only make a procedure global if you actually need to use it in multiple tiddlers''. We say you want to avoid //polluting the global scope// by putting things in it that don't need to be there. (Procedures you have no use for in the global scope are like trash. Some trash is inevitable, but you want it contained in an appropriate trash can, not randomly scattered across the street.)
 
 Of course, while limiting what you put in the global scope makes accidental name collisions much less likely, it doesn't make them impossible. So a second good practice is to prefix the names of your global procedures with something that nobody else is likely to use (for instance, your initials, or the name of your wiki). It's relatively likely that someone else would name a procedure `process-tiddlers`, for instance,  since there are many TiddlyWiki-related contexts in which such a name could make sense, but quite unlikely that someone else would name a procedure `bobwiki.process-tiddlers`. (Even if you're unlucky enough for someone else to use the prefix `bobwiki` in some content that you put in your wiki, the chance that they used both the same prefix //and// the same procedure name is much smaller.)
 

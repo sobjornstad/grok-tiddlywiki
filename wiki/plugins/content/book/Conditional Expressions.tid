@@ -1,6 +1,6 @@
 created: 20240829215208267
 description: Conditional inclusion lets you show part of a tiddler's wikitext only under certain conditions.
-modified: 20241001021353825
+modified: 20241001123647668
 parent: Transclusion
 tags: Section
 title: Conditional Expressions
@@ -59,7 +59,7 @@ It would be cleaner to show each bullet point only if the field actually has a v
 </ul>
 ```
 
-The contents of conditionals can be on one line or multiple lines, and they can contain arbitrary wikitext. Nevertheless, in this example, we needed to switch to using HTML for our list instead of wikitext syntax. The intervening conditionals would split up the bullet points into multiple lists if we used wikitext syntax, preventing them from displaying correctly (see also [[Block Mode and Inline Mode]], coming up).
+The bodies of conditionals can be on one line or multiple lines, and they can contain arbitrary wikitext. Nevertheless, in this example, we needed to switch to using HTML for our list instead of wikitext syntax. The intervening conditionals would split up the bullet points into multiple lists if we used wikitext syntax, preventing them from displaying correctly (see also [[Block Mode and Inline Mode]], in an upcoming chapter).
 
 
 !! Nesting and `else` clauses
@@ -111,7 +111,5 @@ This can be quite perplexing if you've never seen it before! What's happening is
 {{Ex:ConditionalProcedureContinued||ExerciseTemplate}}
 
 !! Takeaways
-
-TODO
 
 {{||TakeawaysTemplate}}

@@ -1,7 +1,7 @@
 answer: `\import`
 created: 20210107015332179
-modified: 20210418134629745
-origin: More Than You Wanted to Know About Scopes
+modified: 20241001125049877
+origin: Much More Than You Wanted to Know About Scopes
 qtype: rememberq
 question: What pragma loads macros that are defined in another tiddler but are not global, so that they can be called from within the current tiddler?
 tags: Takeaway

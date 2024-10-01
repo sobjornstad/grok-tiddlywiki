@@ -1,0 +1,9 @@
+answer: The inner procedure is only accessible from within the outer procedure, not beyond its boundaries.
+created: 20241001124357957
+modified: 20241001124357957
+origin: Much More Than You Wanted to Know About Scopes
+qtype: rememberq
+question: What effect does placing a procedure inside another procedure have on the names made available in the surrounding scope?
+tags: Takeaway
+title: Ta:20241001124357012
+type: text/vnd.tiddlywiki

@@ -1,0 +1,9 @@
+answer: In the tiddler where you want them to be available, `\import [tag[MyTwProcedures]]`.
+created: 20241001124646881
+modified: 20241001124646881
+origin: Much More Than You Wanted to Know About Scopes
+qtype: rememberq
+question: How do you make the procedures in all tiddlers with the tag `MyTwProcedures` available in a particular tiddler?
+tags: Takeaway
+title: Ta:20241001124645414
+type: text/vnd.tiddlywiki

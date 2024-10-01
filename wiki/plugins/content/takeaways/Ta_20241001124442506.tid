@@ -1,0 +1,9 @@
+answer: The `\end` of each procedure must list the name of the procedure that is ending (e.g., `\end my-procedure`).
+created: 20241001124443797
+modified: 20241001124443797
+origin: Much More Than You Wanted to Know About Scopes
+qtype: rememberq
+question: When you nest procedures, what do you have to change in the syntax of your `\procedure` pragmas?
+tags: Takeaway
+title: Ta:20241001124442506
+type: text/vnd.tiddlywiki
