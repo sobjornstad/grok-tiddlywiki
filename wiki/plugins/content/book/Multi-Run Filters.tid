@@ -1,6 +1,6 @@
 created: 20200715220657649
 description: Filters can be made more complex and powerful by including more than one run.
-modified: 20210818205007521
+modified: 20241001125937197
 parent: More Organizational Tools
 tags: Section
 title: Multi-Run Filters
@@ -93,7 +93,7 @@ If you don't want the standard dominant-append behavior, you can place the chara
 ; `~` or `:else`
 : ''If the list of accumulated results is currently empty'', execute this run and make its output the accumulated results. Otherwise, ignore the run completely.
 
-Several prefixes were added in version 5.1.23 and 5.2.0 that are only available in the named variants. They're a little harder to understand, and TiddlyWiki users have gotten by without them for years, so you won't need to use them for the exercises and takeaways and you can skip them for now if you like, but at some point you might want to investigate them.
+There are a number of other prefixes, added in more recent versions, that are only available in the named variants. They're a little harder to understand, and they're less often necessary. You can skip them for now if you like, and if we need one in the exercises throughout the rest of //Grok TiddlyWiki//, instructions will be provided in the exercise. But they're still quite useful, so you might want to come back on your own and explore them in the future!
 
 <$details summary="More named prefixes">
 
