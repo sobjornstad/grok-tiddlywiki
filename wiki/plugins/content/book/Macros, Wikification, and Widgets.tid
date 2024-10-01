@@ -1,11 +1,19 @@
 caption: 6: Macros, Wikification, and Widgets
 created: 20240907014711777
-description: In which...
+description: In which we learn the details of how TiddlyWiki processes wikitext, to help us better understand how transclusion works and work around some difficulties we experienced in the transclusion section.
 list: Macros Wikification [[Block Mode and Inline Mode]] [[Custom Widgets]] [[Choosing a Type of Transclusion]] [[Updated Summary of Transclusion Syntax]]
-modified: 20240929151943746
+modified: 20241001122759278
 parent: Outline
 tags: Chapter
 title: Macros, Wikification, and Widgets
 type: text/vnd.tiddlywiki
 
-TODO
+In <<gtw.link-chapter-number "Transclusion">>, we learned all about how you can transclude wikitext into other wikitext. The details of reusing such a complicated medium as wikitext can be complex, though, so transclusions don't always behave exactly as you might expect at first. There are good reasons for these unexpected behaviors, but to fully understand them and never be confused, you need to learn a few technical details. That is the focus of this chapter.
+
+We'll also learn about ''macros'', an older form of procedures that have some unexpected tricky gotchas (that's why they go in this chapter), and ''custom widgets'', a form of procedure that you can call like a widget.
+
+This should be a relatively quick chapter, and then we'll be ready to [[look under the hood|Looking Under the Hood]] and see how to customize TiddlyWiki in almost arbitrary ways using the tools we've learned!
+
+!! In this chapter
+
+{{||ChapterOutlineTemplate}}

@@ -1,0 +1,18 @@
+created: 20241001113650270
+modified: 20241001113943615
+tags: Answer
+title: Ex:TranscludeWikipediaLink/answer
+type: text/vnd.tiddlywiki
+
+In the `WikipediaLink` tiddler:
+
+```html
+\parameters(articleName, text)
+<a href=`https://en.wikipedia.org/wiki/$(articleName)$`><<text>></a>
+```
+
+To create a link:
+
+```html
+{{WikipediaLink|List of lists of lists|A very silly article}}
+```

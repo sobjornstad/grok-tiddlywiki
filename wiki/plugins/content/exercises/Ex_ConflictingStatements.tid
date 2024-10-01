@@ -1,0 +1,13 @@
+created: 20241001114012257
+length: m
+modified: 20241001120510771
+origin: Parameterizing Field Transclusions
+tags: Exercise
+title: Ex:ConflictingStatements
+type: text/vnd.tiddlywiki
+
+Suppose you have several co-workers who each have their own opinion about what action to take, and they write a short statement explaining it. Create a `Statements` tiddler that accepts the names of up to three people as parameters, along with corresponding slots where you can write what the statements are. For each statement it should give the person's name, then a block quote containing their statement.
+
+Use a procedure inside `Statements` to avoid duplicating the wikitext that shows the person's name and their statement.
+
+(You might end up with some text that appears even if you didn't use all of the people/slots. If you want to try hiding it, feel free – we already know some techniques that can do this – but in the [[next section|Conditional Expressions]]), we'll learn the easiest way to do this, so it's fine to just wait!)

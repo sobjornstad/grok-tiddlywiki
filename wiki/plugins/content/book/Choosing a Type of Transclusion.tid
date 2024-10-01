@@ -1,6 +1,6 @@
 created: 20200605153728555
-description: Templates and macros share a surprising number of properties; a few guidelines may help you decide when to use one over the other.
-modified: 20240929204810888
+description: All types of transclusion are fundamentally similar, and their roles overlap, but a few guidelines may help you decide when to use one over the other.
+modified: 20241001121028869
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Choosing a Type of Transclusion

@@ -1,6 +1,6 @@
 created: 20240907015401704
-description: TODO
-modified: 20240929183259068
+description: Tiddler fields can have parameters, just like procedures can have parameters.
+modified: 20241001120845138
 parent: Transclusion
 tags: Section
 title: Parameterizing Field Transclusions
@@ -51,7 +51,13 @@ And then we transclude it, filling the slot:
 
 You can include as many slots as you want; each will be filled by a separate `$fill` widget when it's transcluded (or remain blank, if no appropriate `$fill` widget is provided).
 
+Slots, unlike variables, ''do not carry over into nested transclusions''. That is, if you are in some wikitext that has a particular slot S filled and you transclude another field or variable, S's value will not be directly available inside that transclusion. However, you can use the `$depth` parameter to the `$slot` widget to access it. This is 1 by default; if you set it to a higher number, it will go up to the parent transclusion that number of times before looking for the slot. In our example, setting `$depth` to 2 will retrieve the value of S.
+
 The benefit of using a slot rather than a parameter is that ''including long content with lots of formatting is much easier'', since you don't have to cram it into part of a `{{field transclusion}}` or the attribute of a `$transclude` widget. The syntax is still a little ugly though -- you're forced to use a `$transclude` widget rather than `{{braces}}`, plus you have to nest an extra `$fill` widget inside the `$transclude` widget. [[Custom Widgets]] wrap a single slot called `ts-raw` in more convenient syntax, and are often a better choice in such a situation.
+
+The main drawback of using a slot rather than a parameter is that you cannot access its value inside a filter, which means you're limited to displaying its contents as wikitext, rather than changing it or making decisions based on its value.
+
+Here we saw how you can use slots within field transclusions, because they tend to feel most intuitive this way. But it's actually possible to use a slot inside any type of transclusion -- so this would work fine within a procedure as well.
 
 
 !! Parameterized transclusions vs. procedures
@@ -59,6 +65,13 @@ The benefit of using a slot rather than a parameter is that ''including long con
 Why use a transclusion with parameters (or slots) rather than a procedure? Well, there's no technical reason, really; it can accomplish exactly the same things. It's more about semantics. Sometimes it feels more natural to think about reusing wikitext in terms of calling a procedure (for instance, when you want to create a link to something or format a small chunk of text), and sometimes in terms of transcluding a tiddler (for instance, when including an icon in the current tiddler and specifying its color). We'll come back to this question in [[Choosing a Type of Transclusion]], in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>.
 
 Parameterized transclusions are a recent addition to TiddlyWiki; for many years the only way to have parts in a transclusion that changed was to manually set variables to values before performing the transclusion (probably having to go look at the tiddler you were transcluding to remember what variable names to use). This means that most parameterized wikitext out there in the wild uses procedures (or, really, [[macros|Macros]] -- more on that later), less because they're actually better and more because they're the only thing we're used to. As more time goes by, the community will probably get a better idea of which options make the most sense where.
+
+
+!! Exercises
+
+{{Ex:TranscludeWikipediaLink||ExerciseTemplate}}
+{{Ex:ParameterizedCit||ExerciseTemplate}}
+{{Ex:ConflictingStatements||ExerciseTemplate}}
 
 
 !! Takeaways

@@ -1,6 +1,6 @@
 created: 20200530170328830
-description: Transclusions are like variables, but their value is stored in a field of a tiddler.
-modified: 20240928210646643
+description: Field transclusions work much like variable transclusions, but their value is tied to a field of a tiddler.
+modified: 20241001120828376
 parent: Transclusion
 tags: Section Concept
 title: Field Transclusions

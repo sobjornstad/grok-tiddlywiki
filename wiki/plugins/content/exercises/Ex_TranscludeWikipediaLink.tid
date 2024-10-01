@@ -1,0 +1,9 @@
+created: 20241001113555763
+length: m
+modified: 20241001113954079
+origin: Parameterizing Field Transclusions
+tags: Exercise
+title: Ex:TranscludeWikipediaLink
+type: text/vnd.tiddlywiki
+
+Create a `WikipediaLink` tiddler equivalent of the procedure. It should take `articleName` and `text` parameters and generate a Wikipedia link when transcluded.

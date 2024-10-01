@@ -1,0 +1,29 @@
+created: 20241001025001134
+modified: 20241001025151680
+tags: Answer
+title: Ex:ParameterizedCit/answer
+type: text/vnd.tiddlywiki
+
+There are a number of ways you could go about this, including passing only one parameter for the tiddler name and then retrieving the appropriate fields off of that, but here's perhaps the most straightforward version:
+
+```html
+\parameters(name, email, phone, manager)
+
+<h2>Information about <<name>></h2>
+
+<ul>
+	<li>''Email'': <<email>></li>i
+	<li>''Phone'': <<phone>></li>
+	<li>
+		''Family'':
+		<$transclude $variable="list-links-draggable" tiddler=<<name>> field="family" />
+	</li>
+	<li>''Manager'': <<manager>></li>
+</ul>
+
+<$transclude $tiddler="ContactInformationTemplateParameterized" name={{!!title}} manager={{!!manager}} email={{!!email}} phone={{!!phone}}/>
+```
+
+Note that we can't pass the `family` field as a parameter and use that directly because we need to be able to edit the `list` field of the contact tiddler in `list-links-draggable`, so instead we use the passed `name`. If we wanted to be able to use a `name` parameter that wasn't the name of the tiddler, we could add an additional parameter for the tiddler name.
+
+In practice, a template is clearly an easier and cleaner way to handle the `ContactInformationTemplate` than parameters!

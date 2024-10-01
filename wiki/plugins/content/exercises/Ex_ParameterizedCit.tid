@@ -1,0 +1,25 @@
+created: 20241001024940811
+length: m
+modified: 20241001025212124
+origin: Parameterizing Field Transclusions
+tags: Exercise
+title: Ex:ParameterizedCit
+type: text/vnd.tiddlywiki
+
+Clone the `ContactInformationTemplate` and create a `ContactInformationParameters` version that does not use the current tiddler in any way (and thus does not need to be transcluded as a template).
+
+If you've been messing with your `ContactInformationTemplate`, feel free to start with this version:
+
+```html
+<h2>Information about {{!!title}}</h2>
+
+<ul>
+<li>''Email'': {{!!email}}</li>
+<li>''Phone'': {{!!phone}}</li>
+<li>
+  ''Family'':
+  <$transclude $variable="list-links-draggable" tiddler=<<currentTiddler>> field="family" />
+</li>
+<li>''Manager'': {{!!manager}}</li>
+</ul>
+```

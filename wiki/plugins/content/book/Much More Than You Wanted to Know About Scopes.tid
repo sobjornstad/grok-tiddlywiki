@@ -1,6 +1,6 @@
 created: 20200718014509693
-description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers.
-modified: 20241001021957642
+description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers. The names of such procedures should be managed carefully to avoid conflicts.
+modified: 20241001120946655
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes

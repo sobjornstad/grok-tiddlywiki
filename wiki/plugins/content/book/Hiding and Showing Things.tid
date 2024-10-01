@@ -1,6 +1,6 @@
 created: 20210120034946005
-description: Portions of tiddlers can be hidden and shown selectively using the `$list` widget and the `$reveal` widget.
-modified: 20241001021253362
+description: There are many ways to conditionally hide and show wikitext or set values; here's a broad summary.
+modified: 20241001121150237
 parent: Tips and Tricks
 showtest: 
 tags: Section

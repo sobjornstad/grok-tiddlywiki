@@ -1,0 +1,38 @@
+created: 20241001115546803
+modified: 20241001115551760
+tags: Answer
+title: Ex:ConflictingStatements/answer
+type: text/vnd.tiddlywiki
+
+```html
+\parameters(person1, person2, person3)
+
+\procedure person-statement(person, slot)
+	<<person>> says:
+	
+	<blockquote>
+		<$slot $name=<<slot>> $depth="2"/>
+	</blockquote>
+\end
+
+<$transclude $variable="person-statement" person=<<person1>> slot="statement1"/>
+<$transclude $variable="person-statement" person=<<person2>> slot="statement2"/>
+<$transclude $variable="person-statement" person=<<person3>> slot="statement3"/>
+```
+
+Note the need for the `$depth` parameter to get the value of the slot since there is an intervening transclusion (of a procedure).
+
+Here's a test with two people/statements:
+
+```html
+Our team has a little bit of extra time this quarter; what should we use it for?
+
+<$transclude $tiddler="Statement" person1="Alice" person2="Bob">
+  <$fill $name="statement1">
+    There are not enough croissants available in the cafeteria this week. We must create a committee to solve it immediately.
+  </$fill>
+  <$fill $name="statement2">
+    Personally, I would prefer that our next initiative involve AI. We don't currently have enough buzzwords on our organization's homepage.
+  </$fill>
+</$transclude>
+```
