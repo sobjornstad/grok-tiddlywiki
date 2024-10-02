@@ -2,7 +2,7 @@ caption: 4: Transclusion
 created: 20200603200642700
 description: In which we study a variety of ways to write some content in one place and reuse it in many other places, a capability which sounds boring but is in fact incredibly powerful and versatile, setting TiddlyWiki apart from the competition.
 list: Variables [[Using Variables as Attributes]] Procedures [[The Finer Points of Procedures]] [[Field Transclusions]] [[Templates and the Current Tiddler]] [[Filters and Transclusions]] [[Parameterizing Field Transclusions]] [[Conditional Expressions]] [[Summary of Transclusion Syntax]]
-modified: 20241001021856275
+modified: 20241002114116204
 parent: Outline
 tags: Chapter
 title: Transclusion
