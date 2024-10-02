@@ -8,7 +8,7 @@ Create a template tiddler called `ContactTabTemplate` with content like the foll
 
 ```html
 <$tiddler tiddler=<<currentTab>>>
-	<$transclude mode="block"/>
+  <$transclude mode="block"/>
 </$tiddler>
 ```
 

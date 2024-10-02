@@ -32,17 +32,17 @@ See [[Updated Summary of Transclusion Syntax]] for a more detailed treatment.
     <td>Transclude the [[current tiddler|Templates and the Current Tiddler]] through a template</td>
     <td>{{Sn:WikitextCurrentTransclusionTemplate||MagicSnippet}}</td>
   </tr>
-	<tr>
-		<td>Transclude a tiddler with parameters</td>
-		<td>
-		
+  <tr>
+    <td>Transclude a tiddler with parameters</td>
+    <td>
+
 ```html
 {{Sn:WikitextParameterTransclusion|param1|param2}}
 ```
 
-			(This one can't be shown as a live example because the live example code loses the parameters before they can be passed on.)
-		</td>
-	</tr>
+      (This one can't be shown as a live example because the live example code loses the parameters before they can be passed on.)
+    </td>
+  </tr>
   <tr>
     <td>[[Transclude the result|Filters and Transclusions]] of a [[filter|Filters]]</td>
     <td>{{Sn:WikitextTransclusionFilter||MagicSnippet}}</td>
@@ -55,22 +55,22 @@ See [[Updated Summary of Transclusion Syntax]] for a more detailed treatment.
     <td>Transclude the value of a [[variable|Variables]]</td>
     <td>{{Sn:WikitextTransclusionVariable||MagicSnippet}}</td>
   </tr>
-	<tr>
-		<td>Call a [[procedure|Procedures]]</td>
-		<td>{{Sn:WikitextTransclusionProcedure||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Transclude the result of the first item in a filter expression returned by a [[function|Functions]]</td>
-		<td>{{Sn:WikitextTransclusionFunctionAngles||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Call a [[function|Functions]] within a filter expression using the `function` operator</td>
-		<td>{{Sn:WikitextTransclusionFunctionFunction||MagicSnippet}}</td>
-	</tr>
-	<tr>
-		<td>Call a [[function|Functions]] within a filter expression as an operator (requires the function to have a `.` in its name)</td>
-		<td>{{Sn:WikitextTransclusionFunctionDotOperator||MagicSnippet}}</td>
-	</tr>
+  <tr>
+    <td>Call a [[procedure|Procedures]]</td>
+    <td>{{Sn:WikitextTransclusionProcedure||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Transclude the result of the first item in a filter expression returned by a [[function|Functions]]</td>
+    <td>{{Sn:WikitextTransclusionFunctionAngles||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Call a [[function|Functions]] within a filter expression using the `function` operator</td>
+    <td>{{Sn:WikitextTransclusionFunctionFunction||MagicSnippet}}</td>
+  </tr>
+  <tr>
+    <td>Call a [[function|Functions]] within a filter expression as an operator (requires the function to have a `.` in its name)</td>
+    <td>{{Sn:WikitextTransclusionFunctionDotOperator||MagicSnippet}}</td>
+  </tr>
   <tr>
     <td>Call a [[macro|Macros]] (transcluding its result), treating its parameter as a variable</td>
     <td>{{Sn:WikitextTransclusionMacro||MagicSnippet}}</td>

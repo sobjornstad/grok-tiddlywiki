@@ -8,21 +8,21 @@ type: text/vnd.tiddlywiki
 
 <table>
 <tr>
-	<th>Snippet</th>
-	<th>MagicSnippet transclusions</th>
-	<th>All field matches !is[system]</th>
+  <th>Snippet</th>
+  <th>MagicSnippet transclusions</th>
+  <th>All field matches !is[system]</th>
 </tr>
 <$list filter=[search:title[Sn:]search:title[Macro]]>
 <tr>
-		<$let searchText={{{ [<currentTiddler>addsuffix[||MagicSnippet]] }}}>
-			<td><$link to=<<currentTiddler>>/></td>
-			<td>
-				{{{ [.snippet-transclusions<searchText>] }}}
-			</td>
-			<td>
-				{{{ [.snippet-transclusions<currentTiddler>] }}}
-			</td>
-		</$let>
+    <$let searchText={{{ [<currentTiddler>addsuffix[||MagicSnippet]] }}}>
+      <td><$link to=<<currentTiddler>>/></td>
+      <td>
+        {{{ [.snippet-transclusions<searchText>] }}}
+      </td>
+      <td>
+        {{{ [.snippet-transclusions<currentTiddler>] }}}
+      </td>
+    </$let>
 </tr>
 </$list>
 </table>

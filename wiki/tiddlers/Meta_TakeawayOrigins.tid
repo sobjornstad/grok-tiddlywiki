@@ -11,20 +11,20 @@ This shows takeaways with origins that don't match any existing shadow tiddler.
 Filter on title: <$edit-text tiddler="$:/temp/OriginFilter" tag="input"/>
 
 <table style="max-width: 35em;">
-	<tr>
-		<th>Title</th>
-		<th>`origin`</th>
-		<th>Exists</th>
-		<th>Question</th>
-		<th>Answer</th>
-	</tr>
-	<$list filter="[all[tiddlers+shadows]tag[Takeaway]search:origin{$:/temp/OriginFilter}sort[origin]] :filter[.filt[]]">
-		<tr style="max-width: 35em;">
-			<td><$link to=<<currentTiddler>>/></td>
-			<td><$edit-text field="origin" tag="input" default=""/></td>
-			<td>{{{ [{!!origin}is[shadow]then[✓]] }}}</td>
-			<td style="max-width: 10em;">{{!!question}}</td>
-			<td style="max-width: 10em;">{{!!answer}}</td>
-		</tr>
-	</$list>
+  <tr>
+    <th>Title</th>
+    <th>`origin`</th>
+    <th>Exists</th>
+    <th>Question</th>
+    <th>Answer</th>
+  </tr>
+  <$list filter="[all[tiddlers+shadows]tag[Takeaway]search:origin{$:/temp/OriginFilter}sort[origin]] :filter[.filt[]]">
+    <tr style="max-width: 35em;">
+      <td><$link to=<<currentTiddler>>/></td>
+      <td><$edit-text field="origin" tag="input" default=""/></td>
+      <td>{{{ [{!!origin}is[shadow]then[✓]] }}}</td>
+      <td style="max-width: 10em;">{{!!question}}</td>
+      <td style="max-width: 10em;">{{!!answer}}</td>
+    </tr>
+  </$list>
 </table>

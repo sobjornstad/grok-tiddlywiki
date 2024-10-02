@@ -8,11 +8,11 @@ type: text/vnd.tiddlywiki
 \parameters(person1, person2, person3)
 
 \procedure person-statement(person, slot)
-	<<person>> says:
-	
-	<blockquote>
-		<$slot $name=<<slot>> $depth="2"/>
-	</blockquote>
+  <<person>> says:
+
+  <blockquote>
+    <$slot $name=<<slot>> $depth="2"/>
+  </blockquote>
 \end
 
 <$transclude $variable="person-statement" person=<<person1>> slot="statement1"/>

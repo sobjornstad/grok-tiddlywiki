@@ -11,26 +11,26 @@ This table shows the `origin` field of every exercise, along with a listing of w
 Filter on title: <$edit-text tiddler="$:/temp/OriginFilter" tag="input"/>
 
 <table>
-	<tr>
-		<th>Go</th>
-		<th>`origin`</th>
-		<th>Transcluded in (synthetic)</th>
-		<th>Match?</th>
-	</tr>
-	<$list filter="[all[tiddlers+shadows]tag[Exercise]search:title{$:/temp/OriginFilter}sort[]]">
-		<tr>
-			<$let searchText={{{ [<currentTiddler>addsuffix[||ExerciseTemplate]] }}}>
-				<td><$link to=<<currentTiddler>>/></td>
-				<td><$edit-text field="origin" tag="input" default=""/></td>
-				<td>
-					{{{ [.exercise-transclusions<searchText>] }}}
-				</td>
-				<td>
-					<% if [.exercise-transclusions<searchText>count[]!match[1]] %>!<% else %>
-						<% if [.exercise-transclusions<searchText>match{!!origin}] %>✔<% endif %>
-					<% endif %>
-				</td>
-			</$let>
-		</tr>
-	</$list>
+  <tr>
+    <th>Go</th>
+    <th>`origin`</th>
+    <th>Transcluded in (synthetic)</th>
+    <th>Match?</th>
+  </tr>
+  <$list filter="[all[tiddlers+shadows]tag[Exercise]search:title{$:/temp/OriginFilter}sort[]]">
+    <tr>
+      <$let searchText={{{ [<currentTiddler>addsuffix[||ExerciseTemplate]] }}}>
+        <td><$link to=<<currentTiddler>>/></td>
+        <td><$edit-text field="origin" tag="input" default=""/></td>
+        <td>
+          {{{ [.exercise-transclusions<searchText>] }}}
+        </td>
+        <td>
+          <% if [.exercise-transclusions<searchText>count[]!match[1]] %>!<% else %>
+            <% if [.exercise-transclusions<searchText>match{!!origin}] %>✔<% endif %>
+          <% endif %>
+        </td>
+      </$let>
+    </tr>
+  </$list>
 </table>
