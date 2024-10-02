@@ -39,7 +39,7 @@ wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/* 
 # need. This appears to work fine since index.html should always update when
 # any wiki content is updated, but possible ordering problems?
 wiki/pubfolder/output/static/: wiki/pubfolder/output/index.html
-	cd wiki/pubfolder && "$$(npm bin)/tiddlywiki" --build static
+	cd wiki/pubfolder && npx tiddlywiki --build static
 
 
 ## Building the website (including the latest version of the book) ##

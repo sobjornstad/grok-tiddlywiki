@@ -10,7 +10,7 @@ fi
 
 # create new public wiki
 rm -rf pubfolder
-"$(npm bin)/tiddlywiki" . --savewikifolder pubfolder "$FILT"
+npx tiddlywiki . --savewikifolder pubfolder "$FILT"
 
 # add build commands to public wiki's tiddlywiki.info
 jq ".build = $(jq '.build' <tiddlywiki.info)" <pubfolder/tiddlywiki.info >pubfolder/tiddlywiki.info.new
@@ -32,5 +32,5 @@ for write in "${confarr[@]}"; do
 done
 popd >/dev/null
 
-"$(npm bin)/tiddlywiki" --rendertiddler '$:/core/save/all' index.html "text/plain"
+npx tiddlywiki --rendertiddler '$:/core/save/all' index.html "text/plain"
 popd >/dev/null
