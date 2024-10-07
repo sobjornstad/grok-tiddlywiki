@@ -1,5 +1,5 @@
 created: 20210116181556596
-modified: 20240927020655489
+modified: 20241007124209898
 tags: $:/tags/Stylesheet
 title: $:/sib/Stylesheet
 type: text/vnd.tiddlywiki
@@ -111,10 +111,15 @@ div.tc-tiddler-frame {
   margin-right: auto;
 }
 
+.tc-page-container.tc-page-view-zoomin .tc-tiddler-frame {
+	/* for some reason this is position: absolute in zoomin mode (only), which prevents the tiddlers from centering. unsetting it doesn't appear to cause any issues */
+	position: unset;
+}
+
 div.tc-tiddler-edit-frame { max-width: 90em; margin-left: auto; margin-right: auto; }
 
 .tc-tiddler-frame .tc-tiddler-editor.tc-tiddler-preview {
-grid-template-columns: 69% 29%;
+	grid-template-columns: 69% 29%;
 }
 
 .tc-tiddler-preview-preview {

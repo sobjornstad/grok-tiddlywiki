@@ -1,6 +1,6 @@
 created: 20240616143658865
 description: Procedures extend the concept of variables by allowing portions of the value to change each time the procedure is referenced.
-modified: 20240929004941509
+modified: 20241007124835162
 parent: Transclusion
 tags: Section Concept
 title: Procedures
@@ -87,7 +87,7 @@ When something doesn't work the way you expect, it's helpful to be able to “th
 
 First, TiddlyWiki stops rendering the tiddler for a moment, looks at each of the parameters passed in the procedure call, and matches them up to the parameters in the parameter list, based on what order they come in. Then it ''sets a variable'' for each parameter, scoped to the procedure. In our example, it sets a variable `articleName` to the value `Aardvark`.
 
-With the variables set appropriately, TiddlyWiki will read the body of the procedure and see, in our example:
+With the values of the variables set appropriately, TiddlyWiki will read the body of the procedure and sees, in our example:
 
 ```html
   <a href=`https://en.wikipedia.org/wiki/$(articleName)$`>
@@ -95,7 +95,7 @@ With the variables set appropriately, TiddlyWiki will read the body of the proce
   </a>
 ```
 
-{{Ltc:ProcedureBodyRendered||LieToChildrenTemplate}}.
+{{Ltc:ProcedureBodyRendered||LieToChildrenTemplate}}, using the value of the `articleName` variable (namely, `Aardvark`) as required to do so.
 
 Once the body of the procedure has been rendered, the `articleName` variable will go out of scope, TiddlyWiki will return to the rest of the tiddler after the procedure call, and rendering will continue.
 

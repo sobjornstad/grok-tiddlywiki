@@ -1,6 +1,6 @@
 created: 20210206214220001
 description: //Grok TiddlyWiki// exists only because of the efforts of many people.
-modified: 20240928023636722
+modified: 20241007122944418
 parent: Appendices
 tags: Section
 title: Acknowledgments
@@ -8,6 +8,7 @@ type: text/vnd.tiddlywiki
 
 Thanks to
 Diego M.,
+Mateusz Wilczek,
 Mohammad Rahmani,
 Jennifer Bjornstad,
 Odin Jorna,
@@ -16,8 +17,8 @@ Stan Dunn,
 Stéphane L.,
 and
 Walt Ludwick
-for reviewing pre-release copies of the first edition of //Grok TiddlyWiki// and offering feedback,
-and to many folks around the web for suggesting further improvements to subsequent editions.
+for reviewing pre-release copies of the first and/or second major edition of //Grok TiddlyWiki// and offering feedback,
+and to many folks around the web too numerous to list for suggesting further improvements in minor releases.
 
 //Grok TiddlyWiki// would not exist without [[TiddlyWiki|https://tiddlywiki.com]] itself; thanks to Jeremy Ruston for spending fifteen years working on it, and to all the community members who have helped to make this open-source project what it is.
 
