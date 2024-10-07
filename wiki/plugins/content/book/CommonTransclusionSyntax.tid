@@ -1,5 +1,5 @@
 created: 20240928014613139
-modified: 20240928021133579
+modified: 20241007231031553
 tags: 
 title: CommonTransclusionSyntax
 type: text/vnd.tiddlywiki
@@ -12,9 +12,9 @@ type: text/vnd.tiddlywiki
   ''[WARNING: This tiddler is intended to be read transcluded with a `version` parameter in different places in the wiki depending on how much of this syntax you have learned by the section it appears in. Currently you are viewing this tiddler without any such parameter, and you may not be seeing all of the content in it.]''
 <% endif %>
 
-!! Available in wikitext and filter expressions
+!! Available in wikitext, attribute values, and filter expressions
 
-The following types of references work both within [[wikitext|Wikitext]] and [[filter expressions|Filters and Transclusions]]. In filter expressions, you use only ''one of each type of bracket''. In wikitext, you use two.
+The following types of references work within [[wikitext|Wikitext]], as the values of HTML or widget attributes, and within [[filter expressions|Filters and Transclusions]]. In filter expressions, you use only ''one of each type of bracket''. In wikitext and attribute values, you use two.
 
 ; `[[square brackets]]`
 : To link or refer to the title of a tiddler.
@@ -23,7 +23,7 @@ The following types of references work both within [[wikitext|Wikitext]] and [[f
 : To get the value of a [[variable|Variables]] or call a [[procedure|Procedures]]<% if [.later[]] %>, [[function|Functions]], or [[macro|Macros]]<% endif %>.
 
 ; `{{curly braces}}`
-: To [[transclude the value of|Transclusions]] a field of a tiddler.
+: To [[transclude the value of|Field Transclusions]] a field of a tiddler.
 
 <ul>
   <li>`{{tiddler}}` to transclude the `text` field of a tiddler</li>
@@ -35,7 +35,7 @@ The following types of references work both within [[wikitext|Wikitext]] and [[f
   <li>`{{tiddler|param1|param2|...}}` to transclude a tiddler with parameters (optionally with either `!!` or `||` syntax before the first `|` to transclude an arbitrary field or perform a template transclusion, respectively)</li>
 </ul>
 
-!! Available only within wikitext
+!! Available only within wikitext and attribute values
 
 ; `{{{ triple curly braces }}}`
 : To select one or more tiddlers using a filter, [[then transclude them|Filters and Transclusions]]. You can think of this as the “super” or “extra powerful” version of normal double-brace transclusion, since it has one extra brace.
@@ -50,10 +50,8 @@ Backticks can be used to combine constant text and variables and/or the results 
 <dl>
   <dt><code>`<$widget attribute=`&#96;text with a $(variable)$ in it&#96;/></code></dt>
   <dd>To [[combine|Using Variables as Attributes]] constant text and one or more variables (in `$(these thingies)$`) into the value of an attribute</dd>
-  <% if [.later[]] %>
     <dt><code>`<$widget attribute=`&#96;text with a `${ [[filter expression]] } in it`&#96;/></code></dt>
     <dd>To combine constant text and the result of one or more filter expressions (in `${ these thingies }$` into the value of an attribute</dd>
-  <% endif %>
 </dl>
 
 <% if [.later[]] %>

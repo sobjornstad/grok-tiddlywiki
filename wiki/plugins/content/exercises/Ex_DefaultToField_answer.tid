@@ -1,5 +1,5 @@
 created: 20201122170037082
-modified: 20240926003105572
+modified: 20241007224504785
 tags: Answer
 title: Ex:DefaultToField/answer
 type: text/vnd.tiddlywiki
@@ -14,7 +14,7 @@ In your `WikipediaLinkTemplate`:
 </$set>
 ```
 
-Note that now, if you want to use the default `articlename` field, you'll need to use the `||` in the transclusion, unlike for the [[previous version|Ex:WikipediaLinkTemplate]] -- although you can still leave it off if you're using the variable.
+Note that now, when you're transcluding the `{{WikipediaLinkTemplate}}`, if you want to use the default `articlename` field, you'll need to use `||` in the transclusion to set the current tiddler correctly (unlike for the [[previous version|Ex:WikipediaLinkTemplate]], where it didn't matter). The current tiddler remains irrelevant if you're manually setting the variable instead.
 
 You are probably wondering why we need `!is[blank]`. To understand, consider what happens if `articleName` hasn't been defined. As we learned way back in the [[Variables]] section, a variable that hasn't been defined evaluates to nothing. However, within filters, TiddlyWiki makes a distinction between having a single value that contains no characters in the pipeline (programmers call this an //empty value// or //empty string//) and the state of there being no value at all in the pipeline (programmers call this //null//).
 

@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20240929181312248
+modified: 20241007224101386
 parent: Transclusion
 tags: Section
 title: Filters and Transclusions
@@ -44,7 +44,7 @@ There are <$text text={{{ [tag[Meeting]count[]] }}} /> meetings in this wiki.
 ```
 
 
-!!! Only a single value can be transcluded into an attribute
+!!! Only the first output tiddler will be transcluded into an attribute
 
 You might be tempted to extrapolate the above example to create a list of meetings that aren't links, like this:
 
@@ -52,7 +52,7 @@ You might be tempted to extrapolate the above example to create a list of meetin
 <$text text={{{ [tag[Meeting]] }}}/>
 ```
 
-However, if you try this, you'll find that only one meeting shows up. That's because when you transclude the result of a filter expression as a value of an attribute, unlike when you place it directly in wikitext, ''only the first output tiddler is passed to that attribute''.
+However, if you try this, you'll find that only one meeting shows up. That's because when you transclude the result of a filter expression as a value of an attribute, unlike when you place it directly in wikitext, ''only the first output tiddler is kept''.
 
 The rationale for this is simply that it's rarely useful to do anything else. If TiddlyWiki passed a list of meetings directly to the `$text` widget, you would just get a long string of meeting names separated by spaces. If you actually want to list all the meetings as text, or as a bulleted list of text names, you would use a `$list` widget instead so you could specify what each item should look like. With the actual behavior, if a filter accidentally returns more than one item, at least the attribute will get a value that actually represents a real output tiddler, rather than a made-up value that combines several of them.
 

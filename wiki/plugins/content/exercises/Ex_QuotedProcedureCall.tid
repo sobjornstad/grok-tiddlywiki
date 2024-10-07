@@ -1,6 +1,6 @@
 created: 20200603224209604
 length: m
-modified: 20240929004453157
+modified: 20241007223257460
 origin: The Finer Points of Procedures
 tags: Exercise
 title: Ex:QuotedProcedureCall
@@ -8,6 +8,6 @@ type: text/vnd.tiddlywiki
 
 Try calling `wikipediaLink` using the `$transclude` widget with variables as parameters, but surround the variable references / procedure calls in the `$transclude` widget with "quotation marks", like this:
 
-{{Sn:QuotedMacroExpansion||$:/sib/Snippet/TiddlerAsWikitext}}
+{{Sn:QuotedProcedureExpansion||$:/sib/Snippet/TiddlerAsWikitext}}
 
 What's wrong with the output now? Why do you think this happened? And is there something that's unexpectedly //right//?

@@ -27,6 +27,9 @@ Another case where procedures are often more convenient than parameterized field
 
 Of course, you can put a procedure, function, macro, etc., inside a tiddler that you transclude, if that proves the easiest way to achieve something.
 
+There is one thing that variables (and their brethren, procedures, functions, and macros) can achieve that field transclusions cannot, which is to ''have the same name refer to different things depending on context''. Since variables have scopes, you could, for instance, define the procedure `toc` to create one kind of table of contents in some places, and an entirely different kind in others, and use, say, the `\import` pragma to select the appropriate one for each tiddler. This is not possible with field transclusions, since a tiddler field always has the same contents in a given wiki until you edit it. This is not something you're likely to want to do frequently, but once in a long while it could come in handy when digging deep into customizations of TiddlyWiki, so it seems worth mentioning.
+
+
 !! Procedures vs. variables
 
 It's perfectly fine to use a procedure (or a macro definition with `\define` -- there's no difference if there are no parameters) to define a variable that you want to scope to the entire tiddler. Sometimes this feels neater than having the whole tiddler wrapped in a `$let` widget.

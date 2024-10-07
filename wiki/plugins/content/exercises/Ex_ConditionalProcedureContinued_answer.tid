@@ -1,5 +1,5 @@
 created: 20240830023119470
-modified: 20240830030959732
+modified: 20241007230552629
 tags: Answer
 title: Ex:ConditionalProcedureContinued/answer
 type: text/vnd.tiddlywiki
@@ -35,13 +35,15 @@ One can imagine taking this even further, getting the actual procedure call down
   <% endif %>
 \end
 
-\procedure apply-fields(proc, fields)
-  <$list filter=<<fields>> variable="field">
-    <$transclude $variable=<<proc>> field=<<field>>/>
-  </$list>
+\procedure contact-info(fields)
+	<ul>
+		<$list filter=<<fields>> variable="field">
+			<$transclude $variable="contact-info-item" field=<<field>>/>
+		</$list>
+	</ul>
 \end
 
-<<apply-fields "contact-info-item" "email phone family manager">>
+<<contact-info "email phone family manager">>
 ```
 
 ...but at some point, adding additional layers of abstraction makes your wikitext harder to understand, rather than easier.

@@ -1,6 +1,6 @@
 created: 20200603224332671
 length: s
-modified: 20240929014305561
+modified: 20241007223407652
 tags: Answer
 title: Ex:QuotedProcedureCall/answer
 type: text/vnd.tiddlywiki
@@ -14,7 +14,7 @@ Putting quotation marks around a procedure call or variable reference passed to 
 The quotation marks should be omitted even if the procedure call has spaces in it. So for some made-up procedure `myproc` with two parameters, this would the correct way to call it, even though it may look wrong at first glance:
 
 ```html
-<$transclude $variable="wikipediaLink" linktext=<<myproc attribute1 "attribute two">> articleName="Dingo"/>
+<$transclude $variable="wikipediaLink" linktext=<<myproc parameter1 "parameter 2">> articleName="Dingo"/>
 ```
 
 But you might have noticed that while the link URL is incorrect, the text is correct. What's up with that?

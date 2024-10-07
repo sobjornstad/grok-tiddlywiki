@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20240929170715537
+modified: 20241007223635686
 parent: Transclusion
 tags: Section
 title: Templates and the Current Tiddler
@@ -29,7 +29,7 @@ Here are some places you can ''access the current tiddler'':
 Here are some things that ''change the current tiddler'':
 
 * Transcluding another tiddler with the `{{curly braces}}` syntax.
-* Using a `$list` widget to enumerate the outputs of a filter.
+* Using a `$list` widget to enumerate the outputs of a filter ([[unless you specify otherwise|Ex:ContainingCurrentTiddler/answer]]).
 * Directly setting `currentTiddler` with a `$set` or `$let` widget.
 * Using a `$tiddler` widget to change the current tiddler.
 

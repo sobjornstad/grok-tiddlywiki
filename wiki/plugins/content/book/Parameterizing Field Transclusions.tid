@@ -20,6 +20,11 @@ Of course, you can also do parameterized field transclusion with a `$transclude`
 
 {{Sn:HiTransclusionWidget||MagicSnippet}}
 
+Unlike procedure calls, the wikitext syntax for field transclusions doesn't allow you to use named parameters – you can only use positional parameters. However, this is easily overcome by using the `$transclude` widget instead of the wikitext syntax, as shown immediately above.
+
+
+!!! Less common options
+
 While we typically only have reason to transclude the `text` field when working with parameterized transclusions, it's perfectly valid to give a different field parameters and transclude that. For instance, if we set the `description` field of `Sn:Hi` to <code><$view tiddler="Sn:Hi" field="description"/></code>:
 
 {{Sn:HiTransclusionDescription||MagicSnippet}}
