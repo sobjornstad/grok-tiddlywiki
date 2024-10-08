@@ -1,6 +1,6 @@
 created: 20240928021442847
 description: Write custom widgets that get transcluded instead of TiddlyWiki's built-in widgets.
-modified: 20241001121117151
+modified: 20241008025819754
 parent: Looking Under the Hood
 tags: Section
 title: Overriding Built-In Widgets
@@ -14,7 +14,7 @@ As a silly example, suppose we want to completely inhibit internal linking. We c
 
 !! Referencing the original widget
 
-In most practical scenarios, we're not trying to replace an existing widget entirely -- rather, we want to wrap it in some other wikitext or change the values of its attributes in some systematic way. Therefore, we'll want to use some version of the original widget within the custom widget.
+In most practical scenarios, we're not trying to replace an existing widget entirely -- rather, we want to ''wrap it in some other wikitext'' or change the values of its attributes in some systematic way. Therefore, we'll want to use some version of the original widget within the custom widget.
 
 However, if we just directly include a `$link` widget inside the definition of the `$link` widget, TiddlyWiki will try to transclude the custom widget within itself over and over again, recognize that it's stuck in an infinite loop, and give up on rendering the widget. We instead need to use the <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#GenesisWidget">`$genesis`</a> meta-widget, which creates another widget of an arbitrary type, to retrieve the original widget instead of our custom version.
 

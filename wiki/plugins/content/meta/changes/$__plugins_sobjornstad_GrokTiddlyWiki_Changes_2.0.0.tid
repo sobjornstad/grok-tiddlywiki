@@ -1,0 +1,44 @@
+commit: TODO
+created: 20241008030506682
+date: TODO
+modified: 20241008031853677
+tag: v2.0.0
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/2.0.0
+type: text/vnd.tiddlywiki
+version: 2.0.0
+
+!!! Changes in approach
+
+* The largest change in TiddlyWiki recently has been the replacement of macros with procedures for general use. Version 2.0 moves [[Macros]], along with several more advanced topics in wikitext rendering, to a new chapter 6, and changes chapter 4 to focus on variables, procedures, and field transclusions of all kinds. Exercises, takeaways, and other content have been updated throughout the book to align with this new approach.
+* We now treat the idea of “transclusion” as fully including procedures, variables, functions, etc., as first-class elements, rather than tending to call only field transclusions transclusions and using different names for the other objects. Given how much more unified the two things have become (field transclusions can be parameterized, and you now use the `$transclude` widget for all of them), this seems like a better way to think about it.
+* The “Common Misunderstandings” chapter has been removed, since the items in it are all no longer easily misunderstood with the advent of new features.
+
+!!! New sections
+
+Each of these except for “Much More Than You Wanted to Know About Scopes” is aligned with a new feature since the last release of TiddlyWiki covered by a //Grok TiddlyWiki// edition:
+
+* [[Using Variables as Attributes]]
+* [[Procedures]]
+* [[Parameterizing Field Transclusions]]
+* [[Conditional Expressions]]
+* [[Functions]]
+* [[Much More Than You Wanted to Know About Scopes]]
+* [[Custom Widgets]]
+* [[Overriding Built-In Widgets]]
+
+The [[Macros]] section is also new – while there was a section called “Macros” before, the “Procedures” section is much more closely related to the old “Macros” section than the new “Macros” section is. The new “Macros” section is rewritten from scratch, assuming that you already grok procedures and explaining the differences between macros and procedures (mostly text substitution).
+
+
+!!! General
+
+* All of the internal code of //Grok TiddlyWiki// has been refactored to use the new features to the greatest extent possible, so if you poke around there you will be shown modern good practices.
+* The whole book has gotten a polish pass with minor revisions for improved clarity.
+* We now recommend starting with TiddlyHost as a saving and hosting solution, rather than TiddlyDesktop.
+
+
+!!! Fixes
+
+* The “mentions of” display in the related tiddlers drop-down at the bottom of many sections was broken and displaying the same two tiddlers.
+* Normalize indentation in code examples to two spaces per level (no tabs) across the wiki.
+* Address a wide variety of miscellaneous items of feedback and errors spotted by readers over the past year or so.

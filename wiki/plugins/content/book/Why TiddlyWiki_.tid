@@ -1,6 +1,6 @@
 created: 20200531034640143
 description: What makes TiddlyWiki worth learning and using?
-modified: 20240614044450225
+modified: 20241008030342317
 parent: Front Matter
 tags: Section
 title: Why TiddlyWiki?
@@ -24,7 +24,7 @@ Categories and hierarchies are sometimes unfairly maligned. In reality, they are
 
 If you doubt that we don't think in hierarchies, try this. Think of the color white. You can take this idea in an almost infinite number of directions with no effort at all: What are some white things? What other colors are there? What categories does white fit into? What metaphors involve whiteness? And from each of the ideas you generate as answers to those questions, you can quickly generate another set of associations. Three or four jumps, and the relationship between the two ideas is unrecoverable except by the path you traced. This is not the mark of hierarchical organization.
 
-TiddlyWiki mirrors the way you think. While you can create traditional categories and hierarchies where they're helpful, these aren't the primary way of organizing content. Instead, you break ideas out into small, reusable pieces called [[tiddlers|Tiddlers]], and relate them and further describe their properties using [[links|Links]], [[tags|Tags]], and [[fields|Fields]]. You can query based on all these properties and more using [[filters|Filters]], and weave tiddlers together into other tiddlers to create aggregations and summaries using [[transclusion|Transclusions]].
+TiddlyWiki mirrors the way you think. While you can create traditional categories and hierarchies where they're helpful, these aren't the primary way of organizing content. Instead, you break ideas out into small, reusable pieces called [[tiddlers|Tiddlers]], and relate them and further describe their properties using [[links|Links]], [[tags|Tags]], and [[fields|Fields]]. You can query based on all these properties and more using [[filters|Filters]], and weave tiddlers together into other tiddlers to create aggregations and summaries using [[transclusion|Field Transclusions]].
 
 These mechanisms, properly used, allow relationships between ideas to magically jump out at you, and you can easily find the related bits that you //just know// are there somewhere but can't ever seem to find in traditional notes systems. Sometimes you may even find notes you didn't remember you took but turn out to be exactly what you need. Almost every TiddlyWiki user has had the experience of having some brilliant new idea and going to the appropriate spot to add it, only to find that it's already there.
 

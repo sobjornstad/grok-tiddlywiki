@@ -1,6 +1,6 @@
 created: 20200718014509693
 description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers. The names of such procedures should be managed carefully to avoid conflicts.
-modified: 20241001124134306
+modified: 20241008025113456
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -32,7 +32,7 @@ This may seem like a trivial problem that would rarely come up, but it happens s
 
 So the first good practice to avoid name collisions is to ''only make a procedure global if you actually need to use it in multiple tiddlers''. We say you want to avoid //polluting the global scope// by putting things in it that don't need to be there. (Procedures you have no use for in the global scope are like trash. Some trash is inevitable, but you want it contained in an appropriate trash can, not randomly scattered across the street.)
 
-Of course, while limiting what you put in the global scope makes accidental name collisions much less likely, it doesn't make them impossible. So a second good practice is to prefix the names of your global procedures with something that nobody else is likely to use (for instance, your initials, or the name of your wiki). It's relatively likely that someone else would name a procedure `process-tiddlers`, for instance,  since there are many TiddlyWiki-related contexts in which such a name could make sense, but quite unlikely that someone else would name a procedure `bobwiki.process-tiddlers`. (Even if you're unlucky enough for someone else to use the prefix `bobwiki` in some content that you put in your wiki, the chance that they used both the same prefix //and// the same procedure name is much smaller.)
+Of course, while limiting what you put in the global scope makes accidental name collisions much less likely, it doesn't make them impossible. So a second good practice is to ''prefix the names of your global procedures'' with something that nobody else is likely to use (for instance, your initials, or the name of your wiki). It's relatively likely that someone else would name a procedure `process-tiddlers`, for instance,  since there are many TiddlyWiki-related contexts in which such a name could make sense, but quite unlikely that someone else would name a procedure `bobwiki.process-tiddlers`. (Even if you're unlucky enough for someone else to use the prefix `bobwiki` in some content that you put in your wiki, the chance that they used both the same prefix //and// the same procedure name is much smaller.)
 
 Of course, the downside of adding a prefix is that it means additional typing every time you want to use a procedure, so many people prefer short prefixes. For instance, the TiddlyWiki core uses prefixes like `tc` for CSS classes (“tiddly-class”) and `tv` for variables (“tiddly-variable”). For things you plan to use extremely commonly, you might prefer to choose an evocative and uncommon name with no prefix.
 
@@ -80,7 +80,7 @@ With the aid of prefixes, you can get along just fine using just tiddler scopes 
 
 There are two additional system tags, [[$:/tags/Global/View]], and [[$:/tags/Global/View/Body]], which allow you to make some procedure //almost// but not quite global. The first makes it available when rendering all parts of [[the view template|The View Template]] (thus every tiddler), but not within other parts of the interface such as the sidebar. The second additionally restricts it to the //body// of the view template, not any of the other elements like the title or any custom templates you might add. This effectively makes it available within the wikitext of all your content tiddlers, but nowhere else. (We'll talk more about [[the view template|The View Template]] in chapter 7.)
 
-You can also use the `\import` pragma in any tiddler to explicitly include procedures from some other tiddler in that tiddler. This way, you could, for example, include a set of macros in three specific tiddlers, but no others (though note that if one of those tiddlers X transcludes other tiddlers after doing the `\import`, the imported procedures will be available within that transclusion as well, just like they would be if they'd been actually within X's wikitext). `\import` takes a filter as an argument, so to import procedures from all tiddlers tagged `MyAwesomePrivateProcedures`, you would put the following at the top of a tiddler:
+You can also use the ''`\import` pragma'' in any tiddler to explicitly include procedures from some other tiddler in that tiddler. This way, you could, for example, include a set of macros in three specific tiddlers, but no others (though note that if one of those tiddlers X transcludes other tiddlers after doing the `\import`, the imported procedures will be available within that transclusion as well, just like they would be if they'd been actually within X's wikitext). `\import` takes a filter as an argument, so to import procedures from all tiddlers tagged `MyAwesomePrivateProcedures`, you would put the following at the top of a tiddler:
 
 ```html
 \import [tag[MyAwesomePrivateProcedures]]

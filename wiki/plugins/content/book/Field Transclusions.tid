@@ -1,6 +1,6 @@
 created: 20200530170328830
 description: Field transclusions work much like variable transclusions, but their value is tied to a field of a tiddler.
-modified: 20241001120828376
+modified: 20241008024316895
 parent: Transclusion
 tags: Section Concept
 title: Field Transclusions
@@ -38,7 +38,7 @@ Directly transcluding entire tiddlers within other tiddlers, like `{{My Other Ti
 
 !! A note on terminology
 
-In non-technical contexts, people sometimes use the term //transclusion// by itself to refer specifically to a field transclusion. //Grok TiddlyWiki// used to do this too, but with the introduction of new features in recent versions of TiddlyWiki that have made all kinds of transclusion more like each other (e.g., the [[parameterization of tiddlers|Parameterizing Field Transclusions]]), it seemed better to instead use //transclusion// to mean any or all kinds of transclusion, and explicitly say //field transclusion// when we mean that. It's possible there may be a few traces of the old way still hanging out throughout the book -- please use the //send feedback// link to let me know if you spot one!
+In non-technical contexts, people sometimes use the term //transclusion// by itself to refer specifically to a field transclusion. //Grok TiddlyWiki// used to do this too, but with the introduction of new features in recent versions of TiddlyWiki that have made all kinds of transclusion more like each other (e.g., the [[parameterization of tiddlers|Parameterizing Field Transclusions]]), it now seems better to instead use //transclusion// to mean any or all kinds of transclusion, and explicitly say //field transclusion// when we mean that. It's possible there may be a few traces of the old way still hanging out throughout the book -- please use the //send feedback// link to let me know if you spot one!
 
 !! The `$transclude` widget
 

@@ -1,6 +1,6 @@
 created: 20240907015401704
 description: Tiddler fields can have parameters, just like procedures can have parameters.
-modified: 20241001120845138
+modified: 20241008024411564
 parent: Transclusion
 tags: Section
 title: Parameterizing Field Transclusions
@@ -25,11 +25,11 @@ Unlike procedure calls, the wikitext syntax for field transclusions doesn't allo
 
 !!! Less common options
 
-While we typically only have reason to transclude the `text` field when working with parameterized transclusions, it's perfectly valid to give a different field parameters and transclude that. For instance, if we set the `description` field of `Sn:Hi` to <code><$view tiddler="Sn:Hi" field="description"/></code>:
+While we typically only have reason to transclude the `text` field when working with parameterized transclusions, it's perfectly valid to ''give a different field parameters'' and transclude that. For instance, if we set the `description` field of `Sn:Hi` to <code><$view tiddler="Sn:Hi" field="description"/></code>:
 
 {{Sn:HiTransclusionDescription||MagicSnippet}}
 
-It's also possible to combine template transclusion with parameters, using the syntax `{{CurrentTiddler||TemplateTiddler|parameter1|parameter2}}`. You cannot directly combine this with transcluding a different field using `!!`, but you can work around that limitation by manually setting the `currentTiddler` variable and then performing the field transclusion.
+It's also possible to ''combine template transclusion with parameters'', using the syntax `{{CurrentTiddler||TemplateTiddler|parameter1|parameter2}}`. You cannot directly combine this with transcluding a different field using `!!`, but you can work around that limitation by manually setting the `currentTiddler` variable and then performing the field transclusion.
 
 
 !! The `$parameters` widget

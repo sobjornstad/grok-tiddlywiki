@@ -1,6 +1,6 @@
 created: 20200603011212616
 description: Macros are an older version of procedures that handle their parameters differently.
-modified: 20240930021326243
+modified: 20241008025347185
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Macros
@@ -39,7 +39,7 @@ Take another look at that example. Notice something odd in the body of the macro
 
 That's because the `$bare dollar signs$` syntax performs ''text substitution''. This is the key difference between macros and procedures. In a procedure, all variable references are processed as normal wikitext, just like they would be outside a procedure. But in a macro, when you call the macro, TiddlyWiki momentarily ''stops processing wikitext'' and first substitutes the macro's parameters into the text of the macro. This is completely unaware of TiddlyWiki syntax in any way and operates before rendering wikitext -- you can think of it like automatically copying and pasting the value of the parameter over the `$placeholder$` in the macro. Only after text substitution is completed does the content of the macro get rendered as wikitext in its original context.
 
-To see how this works, let's try defining `wikipediaLink` by using wikitext instead of a widget. This will completely fail for a procedure, because putting variable/parameter references inside wikitext links is invalid syntax, but will work totally fine for a macro, because the replacement happens before we start caring about syntax:
+To see how this works, let's try defining `wikipediaLink` by using a wikitext link instead of a widget. This will completely fail for a procedure, because putting variable/parameter references inside wikitext links is invalid syntax, but will work totally fine for a macro, because the replacement happens before we start caring about syntax:
 
 {{Sn:WikipediaLinkProcVsMacro||MagicSnippet}}
 
@@ -57,14 +57,14 @@ You might be asking, why would we want to use a variable rather than a parameter
 
 Calling a macro works just like calling a procedure -- you can do it with `<<angle brackets>>` or with the `$variable` attribute of the `$transclude` widget.
 
-In older versions of TiddlyWiki, before procedures existed, you called macros with the `$macrocall` widget rather than the `$transclude` widget. These two syntaxes are equivalent (in fact, you can even call procedures with the `$macrocall` widget if you want to):
+In older versions of TiddlyWiki, before procedures existed, you called macros with the ''`$macrocall` widget'' rather than the `$transclude` widget. These two syntaxes are equivalent (in fact, you can even call procedures with the `$macrocall` widget if you want to):
 
 ```html
 <$transclude $variable="mymacro" param="value"/>
 <$macrocall $name="mymacro" param="value"/>
 ```
 
-It's recommended that you use the new `$transclude` syntax for both macros and procedures, but you'll see the `$macrocall` widget in a lot of old code, so it's good to be aware of.
+It's recommended that you use the new `$transclude` syntax for both macros and procedures, but you'll see the `$macrocall` widget in a lot of old wikitext, so it's good to be aware of.
 
 
 !! Exercises

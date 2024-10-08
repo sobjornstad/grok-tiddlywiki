@@ -1,22 +1,30 @@
 created: 20210327165829987
-modified: 20210407173610182
+modified: 20241008023938459
 tags: Meta
 title: Meta:SectionDescriptions
 type: text/vnd.tiddlywiki
 
 <table class="xxxx" style="width: 100%;">
+	<tr>
+		<th>Section</th>
+		<th>Parent</th>
+		<th>Description</th>
+	</tr>
 <$list filter="[list[Outline]]">
   <tr>
     <td><$link/></td>
+		<td>{{!!parent}}</td>
     <td>--- (chapter) ---</td>
   </tr>
   <$list filter="[list<currentTiddler>]">
     <tr>
       <td><$link/></td>
+			<td>{{!!parent}}</td>
       <td style="width: 100%;"><$edit-text tag="textarea" field="description" default=""/></td>
     </tr>
   </$list>
 </$list>
+</table>
 
 <style>
 table.xxxx td textarea {

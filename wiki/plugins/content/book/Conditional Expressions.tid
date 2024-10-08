@@ -1,6 +1,6 @@
 created: 20240829215208267
 description: Conditional inclusion lets you show part of a tiddler's wikitext only under certain conditions.
-modified: 20241001123647668
+modified: 20241008024758666
 parent: Transclusion
 tags: Section
 title: Conditional Expressions
@@ -18,7 +18,7 @@ You can see that the filter in the first conditional returns a result, since the
 
 Notice that a conditional expression looks much like an [[HTML]] element, except there are percent signs `%` right inside the angle brackets, and where you might expect to see `<% /if %>`, you instead see `<% endif %>`. The spaces inside the percent signs are optional, but as with the spaces inside `{{{ triple braces }}}`, your wikitext will quickly become very hard to read if you omit them!
 
-TiddlyWiki calls this the “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will call a use of this pattern //a conditional expression// or occasionally even just //a conditional//.
+The TiddlyWiki documentation calls this the “[[conditional shortcut syntax|https://tiddlywiki.com/#Conditional%20Shortcut%20Syntax]],” which is a big mouthful and hard to remember. In this book, we will call a use of this pattern //a conditional expression// or occasionally even just //a conditional//.
 
 
 !! A real example
@@ -38,7 +38,7 @@ This template is nice as far as it goes, but it looks rather ugly when applied t
 
 [img[chris-smith-empty.png]]
 
-It would be cleaner to show each bullet point only if the field actually has a value. To achieve this, we can add a conditional expression around each one:
+It would be cleaner to ''show each bullet point only if the field actually has a value''. To achieve this, we can add a conditional expression around each one:
 
 ```html
 !! Information about {{!!title}}
@@ -64,7 +64,7 @@ The bodies of conditionals can be on one line or multiple lines, and they can co
 
 !! Nesting and `else` clauses
 
-What if //none// of the contact fields are populated? In this case, we might want to provide a message saying that there is no contact information available, so we won't think there's a bug when we look at the template. To achieve this, we'll need to display something both if a condition is true //and// if it's false. We can do that by adding an `<% else %>` clause to the conditional, accompanied by an appropriate filter:
+What if //none// of the contact fields are populated? In this case, we might want to provide a message saying that there is no contact information available, so we won't think there's a bug when we look at the template. To achieve this, we'll need to display something both if a condition is true //and// if it's false. We can do that by adding an ''`<% else %>` clause'' to the conditional, accompanied by an appropriate filter:
 
 ```html
 <% if [all[current]!has[email]!has[phone]!has[family]!has[manager]] %>

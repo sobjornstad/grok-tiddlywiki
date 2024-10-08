@@ -1,6 +1,6 @@
 created: 20240831204317959
 description: Functions allow you to break down filter expressions into simpler parts and reuse them in other filter expressions.
-modified: 20240929185525748
+modified: 20241008024942547
 parent: More Organizational Tools
 tags: Section Concept
 title: Functions
@@ -23,7 +23,7 @@ Since filters are typically only a single line, most function definitions will o
 
 !! Using a function in a filter
 
-Occasionally calling a single function by itself can be useful. However, functions are typically most useful when used //inside other filters// to build up more complex filter pipelines that can still be easily read and understood.
+Occasionally, calling a single function by itself can be useful. However, functions are typically most useful when used //inside other filters// to build up more complex filter pipelines that can still be easily read and understood.
 
 Like a procedure, you can call a function within a filter pipeline using the `<angle bracket>` syntax:
 
@@ -33,7 +33,7 @@ You can also call a function using the ''`function`'' [[filter operator|Anatomy 
 
 {{Sn:MultiplyByTwoFunctionOperator||MagicSnippet}}
 
-Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use a similar shortcut for function names, treating the function name like a filter operator, but with one extra restriction: the function name must contain a dot (`.`).
+Recall that filtering on a field is so common that you can omit the `field:` part from the `field:fieldname` [[operator|Common Filter Operators]] and just say `fieldname`, as long as the field name does not conflict with a built-in operator. You can use a similar shortcut for function names, ''treating the function name like a filter operator'', but with one extra restriction: the function name must contain a dot (`.`).
 
 Taking advantage of this syntax can be as simple as prefixing your function names with a single `.`. (Of course, the `.` can go anywhere in the name, if it makes more sense somewhere else.)
 
@@ -51,7 +51,7 @@ It's not possible to choose the input tiddlers of a function called with the `<<
 
 !! Nesting functions
 
-You can use functions inside other functions. This makes it possible to build up complicated processes or formulas while giving each part a name.
+You can ''use functions inside other functions''. This makes it possible to build up complicated processes or formulas while giving each part a name.
 
 As an example, here are some carefully decomposed functions for calculating the area and circumference of a circle with a given radius. In the example, we've also used several `$list`s to loop over the different circle sizes and measurements we want to use, so we only have to call each function once. (Review the [[conditional procedure|Ex:ConditionalProcedureContinued]] exercise if you don't remember how this works.) In real life, the amount of decomposition of the formulas shown here is probably overkill -- since the formulas are straightforward, you might even find this makes it harder to understand what's going on.
 

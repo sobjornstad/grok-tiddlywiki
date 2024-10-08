@@ -1,6 +1,6 @@
 created: 20240616152105208
 description: You can use the value of a variable as the value of an HTML or widget attribute, although there are additional complications.
-modified: 20241007124605098
+modified: 20241008024108297
 parent: Transclusion
 tags: Section
 title: Using Variables as Attributes
@@ -29,7 +29,7 @@ But what if we want to use different text for the link each time? You might try 
 
 Unfortunately, transclusions ''can't be nested inside other complex wikitext elements like links'', so this doesn't work. If you try clicking on one of the links in the example above, you'll see that TiddlyWiki produces a link to the tiddler literally called `<<wp>>`, which isn't very helpful!
 
-However, you //can// transclude a variable into the value of an attribute. So an easy solution is to use an `a` HTML element instead of wikitext syntax (recall that all items of wikitext syntax have corresponding [[widgets|Widgets]] or [[HTML]] tags). This element takes the URL to link to in its `href` attribute and the text to display in its body. (`href` stands for //hypertext reference//, and `a` for //anchor//.)
+However, you //can// transclude a variable ''into the value of an attribute''. So an easy solution is to use an `a` HTML element instead of wikitext syntax (recall that all items of wikitext syntax have corresponding [[widgets|Widgets]] or [[HTML]] tags). This element takes the URL to link to in its `href` attribute and the text to display in its body. (`href` stands for //hypertext reference//, and `a` for //anchor//.)
 
 {{Sn:WikipediaAElement||MagicSnippet}}
 

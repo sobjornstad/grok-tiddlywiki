@@ -1,6 +1,6 @@
 created: 20240901044700214
 description: Custom widgets are a special type of procedure that imitates the syntax of built-in widgets.
-modified: 20240929202618908
+modified: 20241008025440618
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Custom Widgets
@@ -25,7 +25,7 @@ By default, custom widgets, like procedures and functions, are scoped to the tid
 
 !! Using the widget body
 
-Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, without requiring quoting. The widget's body automatically fills a [[slot|Parameterizing Field Transclusions]] called `ts-raw`, so we use the `$slot` widget to retrieve it:
+Typically, the main reason we want to use a custom widget rather than a procedure or a transclusion is to take advantage of a widget's ability to include large blocks of arbitrary wikitext, HTML, and widgets in its body, ''without requiring quoting''. The widget's body automatically fills a [[slot|Parameterizing Field Transclusions]] called `ts-raw`, so we use the `$slot` widget to retrieve it:
 
 {{Sn:BoldItalicsWidgetBody||MagicSnippet}}
 
