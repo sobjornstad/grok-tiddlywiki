@@ -1,5 +1,5 @@
 created: 20240831222004624
-modified: 20240831222032696
+modified: 20241008115714561
 tags: 
 title: Sn:CircleMathRearrangement
 type: text/vnd.tiddlywiki
@@ -21,12 +21,11 @@ type: text/vnd.tiddlywiki
     <ul>
       <$list filter="area circumference" variable="measurement">
         <$let
-          macroName=`circle-$(measurement)$`
-          measurementName={{{ [<measurement>sentencecase[]] }}}
+          funcName=`circle-$(measurement)$`
         >
           <li>
-            <<measurementName>>:
-            <$transclude $variable=<<macroName>> radius=<<r>>/>
+            <<measurement>>:
+            <$transclude $variable=<<funcName>> radius=<<r>>/>
           </li>
         </$let>
       </$list>

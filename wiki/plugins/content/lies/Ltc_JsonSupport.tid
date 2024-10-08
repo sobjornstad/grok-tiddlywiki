@@ -1,0 +1,8 @@
+created: 20241008121325813
+description: are supported
+modified: 20241008122028816
+tags: 
+title: Ltc:JsonSupport
+type: text/vnd.tiddlywiki
+
+TiddlyWiki does internally know how to handle more complex JSON. There is a set of filter operators such as <a href="https://tiddlywiki.com/#jsonget%20Operator" class="tc-tiddlylink-external">`jsonget`</a> that you can use to work with it. However, you'll need to use filters to work with such JSON; the data tiddler syntax will not work.

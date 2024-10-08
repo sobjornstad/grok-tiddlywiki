@@ -1,9 +1,9 @@
 answer: A macro.
 created: 20210131205502716
-modified: 20240929201046318
+modified: 20241008122221457
 origin: Macros
 qtype: rememberq
-question: Text substitution occurs only within what context? (TiddlyWiki concept)
+question: Text substitution occurs only within what type of variable?
 tags: Takeaway
 title: Ta:20210131205501655
 type: text/vnd.tiddlywiki

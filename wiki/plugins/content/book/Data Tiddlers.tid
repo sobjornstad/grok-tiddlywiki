@@ -1,6 +1,6 @@
 created: 20200717234504136
 description: A //data tiddler// packs a series of name-value pairs into a single tiddler's text field.
-modified: 20240924002618517
+modified: 20241008121851907
 parent: More Organizational Tools
 tags: Section
 title: Data Tiddlers
@@ -18,7 +18,9 @@ If we have lots of other information about these holidays, it would make sense t
 
 We might also find the approach of creating tiddlers annoying if we have a way to import this data from somewhere outside the wiki -- we can likely get a list of holidays in some standard format, but TiddlyWiki tiddlers are not likely to be one of those standard formats!
 
-In these situations, ''data tiddlers'' can come in handy. A data tiddler is a tiddler with a special content type whose `text` field contains a series of key-value pairs, like the date-name pairs shown in the table above. There are two ways to format a data tiddler: TiddlyWiki's ''built-in dictionary format'', and ''JSON'' (JavaScript Object Notation, a standard data interchange format). If you're familiar with JSON, be aware that only very simple JSON files with a single level of key-value pairs are supported (no arrays or objects).
+In these situations, ''data tiddlers'' can come in handy. A data tiddler is a tiddler with a special content type whose `text` field contains a series of key-value pairs, like the date-name pairs shown in the table above. There are two ways to format a data tiddler: TiddlyWiki's ''built-in dictionary format'', and ''JSON'' (JavaScript Object Notation, a standard data interchange format). If you're familiar with JSON, be aware that only very simple JSON files with a single level of key-value pairs {{Ltc:JsonSupport||LieToChildrenTemplate}} (no arrays or objects).
+
+Dictionary data tiddlers can't contain colons `:` in their keys, or newlines anywhere. JSON data tiddlers allow you to include all characters, provided they are [[properly escaped|https://www.freeformatter.com/json-escape.html]].
 
 Each key-value pair in a data tiddler is called a ''property'', and the key of each property is called its ''index''.
 

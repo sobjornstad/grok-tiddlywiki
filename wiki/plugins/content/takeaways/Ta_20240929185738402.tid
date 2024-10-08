@@ -1,6 +1,6 @@
-answer: This is fine: TiddlyWiki doesn't do anything with the bodies of any of the declarations until it has read all of them.
+answer: This is fine: TiddlyWiki doesn't do anything with the bodies of any of the declarations (pragmas) until it has read all of them.
 created: 20240929185741274
-modified: 20240929185741274
+modified: 20241008120418661
 origin: Functions
 qtype: rememberq
 question: What happens if you call a function or procedure that's defined //after// the current one in a tiddler's wikitext?

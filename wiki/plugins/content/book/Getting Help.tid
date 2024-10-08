@@ -1,12 +1,12 @@
 created: 20200822204627346
 description: Where to look and who to ask for help on TiddlyWiki if you can't figure something out yourself.
-modified: 20240829031541113
+modified: 20241008124140256
 parent: Resources
 tags: Section
 title: Getting Help
 type: text/vnd.tiddlywiki
 
-The best place to get help on TiddlyWiki is the [[TiddlyWiki Discourse forums|https://talk.tiddlywiki.com]]. If you are ever not sure how to accomplish something, searching the forum is quite likely to find either a drop-in solution or the insight you need to solve the problem yourself. If you can't find anything relevant, you can start a new thread -- people are invariably welcoming and helpful.
+The best place to get help on TiddlyWiki is the TiddlyWiki Discourse forums, [[Talk TiddlyWiki|https://talk.tiddlywiki.org]]. If you are ever not sure how to accomplish something, searching the forum is quite likely to find either a drop-in solution or the insight you need to solve the problem yourself. If you can't find anything relevant, you can start a new thread -- people are invariably welcoming and helpful.
 
 When starting a new thread about [[a problem you're experiencing|When Things Go Wrong]], be sure to [[ask a good question|https://medium.com/@gordon_zhu/how-to-be-great-at-asking-questions-e37be04d0603]]. Not only will taking the time to write a good question show your respect for other people's time, making it more likely you get a useful response, but you'll learn more, leave a thread in the archives that will be more likely to help others in the future, and possibly even [[solve your problem while writing the question|https://en.wikipedia.org/wiki/Rubber_duck_debugging]].
 
@@ -17,4 +17,5 @@ You also shouldn't miss:
 * The [[documentation|https://tiddlywiki.com/]] (enough said)
 * The [[dev wiki|https://tiddlywiki.com/dev/]], an addendum to the documentation with information on things like creating plugins and writing JavaScript modules for TiddlyWiki
 * The [[TiddlyWiki Google group|https://groups.google.com/g/tiddlywiki]] was the primary forum for many years, and the archives there still contain much useful information.
-* [[Standard Nomenclature|https://anthonymuscio.github.io/#Standard%20Nomenclature]], an exhaustive list of all the brackets and quotes and other mysterious syntax of [[wikitext|Wikitext]]. It's likely to be overwhelming for beginners, but once you've worked through most of this book, it may be quite helpful. (//Grok TiddlyWiki//'s internal [[Wikitext Reference]] is less overwhelming but lacks some of the detail available in this resource.)
+* [[Standard Nomenclature|https://anthonymuscio.github.io/#Standard%20Nomenclature]], an exhaustive list of all the brackets and quotes and other mysterious syntax of [[wikitext|Wikitext]]. It's likely to be overwhelming for beginners, but once you've worked through most of this book, it may be quite helpful. It should be noted that, as of this writing, this resource hasn't been updated to include some of the newer features in 5.3.0 – for instance, it doesn't list the syntax for [[parameterized field transclusions|Parameterizing Field Transclusions]]. (//Grok TiddlyWiki//'s internal [[Wikitext Reference]] is less overwhelming but lacks some of the detail available in this resource.)
+* [[Those Pesky Brackets|https://pesky-brackets.tiddlyhost.com]], another resource on syntax that focuses on the functions of brackets, braces, and quotation marks. It is much more verbose and detailed than Standard Nomenclature.

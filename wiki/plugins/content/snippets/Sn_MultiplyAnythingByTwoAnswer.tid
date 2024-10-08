@@ -1,10 +1,10 @@
 created: 20240831225444967
-modified: 20240923213033908
+modified: 20241008120305581
 tags: 
 title: Sn:MultiplyAnythingByTwoAnswer
 type: text/vnd.tiddlywiki
 
-\function multiply-anything-by-two(number:"") [<number>!is[blank]multiply[2]] ~[multiply[2]]
+\function multiply-anything-by-two(number:"") [<number>!is[blank]multiply[2]] :else[multiply[2]]
 
 * {{{ [[4]function[multiply-anything-by-two]] }}} should equal 8.
 * {{{ [function[multiply-anything-by-two],[4]] }}} should equal 8.

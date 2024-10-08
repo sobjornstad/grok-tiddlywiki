@@ -1,18 +1,14 @@
 created: 20200715220657649
 description: Filters can be made more complex and powerful by including more than one run.
-modified: 20241001125937197
+modified: 20241008115442120
 parent: More Organizational Tools
 tags: Section
 title: Multi-Run Filters
 type: text/vnd.tiddlywiki
 
-The last time we discussed filters, back in the [[Finding Things|Filing and Organizing]] chapter, we learned that there is such a thing as a [[filter run|Using Filter Expressions]], indicated by those outer square brackets, and that you can have more than one filter run in a filter. We also saw an example of this, in passing, when we discussed [[Text Substitution]] and this weird filter:
+The last time we discussed filters in depth, back in the [[Finding Things|Filing and Organizing]] chapter, we learned that there is such a thing as a [[filter run|Using Filter Expressions]], indicated by those outer square brackets, and that you can have more than one filter run in a filter. So what do those do for us?
 
-```html
-[title[EmployeeProfileSetupMeeting]contains:participants[]][[SomeRandomGuy]]
-```
-
-So why would we want to use multiple filter runs? Essentially, they let us build up more complicated logic. With a single run, we can only find tiddlers that match //all// of a set of conditions. With multiple runs, we can combine AND, OR, and NOT conditions as much as we like, although due to the “pipeline” nature of filters, the logic works a little differently than the conventional Boolean logic used in Excel or a typical programming language.
+Essentially, they let us build up more complicated logic. With a single run, we can only find tiddlers that match //all// of a set of conditions. With multiple runs, we can combine AND, OR, and NOT conditions as much as we like, although due to the “pipeline” nature of filters, the logic works a little differently than the conventional Boolean logic used in Excel or a typical programming language.
 
 
 !! Creating OR conditions
@@ -93,9 +89,14 @@ If you don't want the standard dominant-append behavior, you can place the chara
 ; `~` or `:else`
 : ''If the list of accumulated results is currently empty'', execute this run and make its output the accumulated results. Otherwise, ignore the run completely.
 
+The prefix ''`:or`'' is equivalent to no prefix.
+
 There are a number of other prefixes, added in more recent versions, that are only available in the named variants. They're a little harder to understand, and they're less often necessary. You can skip them for now if you like, and if we need one in the exercises throughout the rest of //Grok TiddlyWiki//, instructions will be provided in the exercise. But they're still quite useful, so you might want to come back on your own and explore them in the future!
 
 <$details summary="More named prefixes">
+
+; `:cascade`
+: Evaluate this filter run, which should return a series of other //filters//. Then evaluate those filters in turn on the input, and output the results of the first filter which has a value. This is used with the [[cascade|https://tiddlywiki.com/#Cascades]] customization mechanism; we won't cover cascades in detail in //Grok TiddlyWiki//, but once you've worked your way through the book they should be easy to pick up from the documentation.
 
 ; `:filter`
 : Evaluate the filter run on each tiddler in the accumulated results and ''output elements where the filter expression does not evaluate to an empty list''. This differs from `+` in that `+` makes the output of its run the accumulated results. `:filter` doesn't use the output of its run at all, except to check whether it's non-empty.
@@ -111,6 +112,9 @@ There are a number of other prefixes, added in more recent versions, that are on
 
 ; `:sort`
 : Apply this filter run to each tiddler in the accumulated results in turn, and ''sort the accumulated results by the key produced by this filter expression''. That is, the filter run followed by `:sort` transforms each input into the form needed for sorting. This is the same thing as the `sortsub` operator, but it's often easier to use because you don't have to define a separate variable containing the sort filter.
+
+; `:then` and `:else`
+: These work just like the `then` and `else` [[filter operators|Common Filter Operators]], except they apply to an entire run rather than an individual tiddler in the filter pipeline: if the filter has at least one result, all the results are replaced with the results of the `:then` run, and if it has no results, so with the `:else` run.
 
 You can read more about these run prefixes [[in the documentation|https://tiddlywiki.com/#Filter%20Expression]].
 

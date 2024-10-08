@@ -1,5 +1,5 @@
 created: 20240831215112634
-modified: 20240929185609552
+modified: 20241008115655149
 tags: 
 title: Sn:CircleMathNestingExample
 type: text/vnd.tiddlywiki
@@ -20,12 +20,11 @@ type: text/vnd.tiddlywiki
     <ul>
       <$list filter="area circumference" variable="measurement">
         <$let
-          macroName=`circle-$(measurement)$`
-          measurementName={{{ [<measurement>sentencecase[]] }}}
+          funcName=`circle-$(measurement)$`
         >
           <li>
-            <<measurementName>>:
-            <$transclude $variable=<<macroName>> radius=<<r>>/>
+            <<measurement>>:
+            <$transclude $variable=<<funcName>> radius=<<r>>/>
           </li>
         </$let>
       </$list>

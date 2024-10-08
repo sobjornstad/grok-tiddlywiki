@@ -1,12 +1,12 @@
 created: 20240831225541086
-modified: 20240831230000429
+modified: 20241008120322800
 tags: Answer
 title: Ex:MultiplyByTwoTwoWays/answer
 type: text/vnd.tiddlywiki
 
 The trick is to have a parameter that defaults to blank (or any other value that nobody can use as a valid number to be multiplied, often called a //sentinel value// in programming), and create a first filter run that removes the parameter from the pipeline (making it empty) if the parameter is still set to the sentinel value. If you still have a value, then the user of the function supplied a parameter and you can multiply it by two.
 
-That settles the parameter case. Now for the input tiddler case: use the `~` (also spelled `:else`) [[filter run prefix|Multi-Run Filters]] to supply a second run which is used only if the first run had no results (thus no parameter was passed). In this run, multiply the input tiddler by 2.
+That settles the parameter case. Now for the input tiddler case: use the `:else` (also spelled `~`) [[filter run prefix|Multi-Run Filters]] to supply a second run which is used only if the first run had no results (thus no parameter was passed). In this run, multiply the input tiddler by 2.
 
 All together:
 
