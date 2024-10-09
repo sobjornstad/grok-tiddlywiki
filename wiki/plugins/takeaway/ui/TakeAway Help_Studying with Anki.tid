@@ -1,6 +1,6 @@
 caption: Studying with Anki
 created: 20210101235013980
-modified: 20220103163659308
+modified: 20241009133319922
 tags: Fragment
 title: TakeAway Help/Studying with Anki
 type: text/vnd.tiddlywiki
@@ -18,7 +18,7 @@ Setting up reviewing in Anki is a little more involved than using TakeAway's int
 # Click //OK// and restart Anki as instructed.
 # Choose //Tools > Add-ons//, select the TiddlyRemember add-on, and click the //Config// button on the right.
 # Fill out the syncing options as desired. A full description of each option is provided [[here|https://sobjornstad.github.io/TiddlyRemember/#Configuring%20the%20Anki%20add-on]].
-#* For the wiki settings, you'll want to choose a type of //File// and select the path of the wiki that you downloaded and opened with TiddlyDesktop on your computer. The //Filter// should be `[[Takeaway Export List]]`.
+#* For the wiki settings, you need some way to access your wiki. If you're using TiddlyHost, the easiest option is to mark your wiki as //Public// in the TiddlyHost settings (the “sliders” icon for your copy of Grok TiddlyWiki at https://tiddlyhost.com/sites). Then you can choose //URL// here in the TiddlyRemember settings and enter the wiki's URL (e.g., `https://sorens-grok-tiddlywiki.tiddlyhost.com/`). The //Filter// should be `[[Takeaway Export List]]`.
 # Choose //Tools > Sync from TiddlyWiki// to add all takeaways that you've seen in the text to your Anki collection. As you proceed through the book, you'll want to sync periodically to import the takeaways you've newly seen.
 
 Here's an example configuration:

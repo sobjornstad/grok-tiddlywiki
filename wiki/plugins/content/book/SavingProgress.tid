@@ -1,5 +1,5 @@
 created: 20210123233814789
-modified: 20240829124150567
+modified: 20241009130356384
 tags: Fragment
 title: SavingProgress
 type: text/vnd.tiddlywiki
@@ -20,7 +20,7 @@ Be sure to save your changes when you close the book for a while; your browser w
 
 If you prefer to use [[a saver other than TiddlyHost|Options for Saving and Hosting Your Wiki]], click the save icon at the end of this paragraph to download a copy of the wiki to your computer: {{$:/core/ui/Buttons/save-wiki}}
 
-Then add the wiki to whatever saver you're using, as required.
+Then configure the wiki with whatever saver you're using, as required.
 
 !! Copyright
 
