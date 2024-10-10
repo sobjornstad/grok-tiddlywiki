@@ -9,5 +9,6 @@ output/
 
 # not meaningful changes
 wiki/tiddlers/$__StoryList.tid
+wiki/tiddlers/$__Import.tid
 wiki/tiddlywiki-git/
 wiki/node_modules/
