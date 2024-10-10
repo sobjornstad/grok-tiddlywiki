@@ -1,12 +1,12 @@
 complete: 
 created: 20200605153857006
 length: m
-modified: 20210409212625980
+modified: 20241010130950573
 origin: Templates and the Current Tiddler
 tags: Exercise
 title: Ex:TicketTrackingTemplate
 type: text/vnd.tiddlywiki
 
-In the [[TicketTrackingLink|Ex:TicketTrackingLink]] exercise, we created a macro that outputs a link to a ticket in the company's ticket-tracking system and placed it in the `OnboardingProcess` tiddler. Create a template based on this macro, called `TicketNumberLink`, which displays the link to a project's ticket when it's used as a template for any tiddler that has the `ticketnum` field populated. Transclude this template in the text of the `OnboardingProcess` project to show its ticket number.
+In the [[TicketTrackingLink|Ex:TicketTrackingLink]] exercise, we created a procedure that outputs a link to a ticket in the company's ticket-tracking system and placed it in the `OnboardingProcess` tiddler. Create a template based on this procedure, called `TicketNumberLink`, which displays the link to a project's ticket when it's used as a template for any tiddler that has the `ticketnum` field populated. Transclude this template in the text of the `OnboardingProcess` project to show its ticket number.
 
 //Tip:// It may be helpful to get everything working within the `OnboardingProcess` tiddler first, then excise the relevant parts into a separate template tiddler -- this way, if something doesn't work, you have a better idea of what part isn't right.

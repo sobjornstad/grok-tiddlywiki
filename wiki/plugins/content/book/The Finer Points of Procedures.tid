@@ -1,6 +1,6 @@
 created: 20240727195829171
 description: Procedures come in many forms.
-modified: 20241007223221878
+modified: 20241010130147339
 parent: Transclusion
 tags: Section
 title: The Finer Points of Procedures
@@ -31,7 +31,7 @@ Let's come back to our good old `wikipediaLink` procedure again. Let's say we wa
 
 Note that parameters are separated by a space in the procedure call but by a comma in the procedure definition. No, this doesn't really make any sense, but a lot of programming languages do it this way too.
 
-Also notice the use of "double quotation marks" when a macro parameter contains spaces.
+Also notice the use of "double quotation marks" when a parameter contains spaces.
 
 
 </$details><$details summary="Procedures can be called with parameters containing double quotes">

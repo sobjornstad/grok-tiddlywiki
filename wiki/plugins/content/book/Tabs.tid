@@ -1,6 +1,6 @@
 created: 20200717215952541
-description: The `tabs` macro facilitates compact display of a number of related tiddlers, as in the sidebar of a stock TiddlyWiki.
-modified: 20240924000334232
+description: The `tabs` procedure facilitates compact display of a number of related tiddlers, as in the sidebar of a stock TiddlyWiki.
+modified: 20241010125935497
 parent: More Organizational Tools
 tags: Section
 title: Tabs

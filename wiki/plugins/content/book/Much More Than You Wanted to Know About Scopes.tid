@@ -1,6 +1,6 @@
 created: 20200718014509693
 description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers. The names of such procedures should be managed carefully to avoid conflicts.
-modified: 20241008025113456
+modified: 20241010125552572
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -80,7 +80,7 @@ With the aid of prefixes, you can get along just fine using just tiddler scopes 
 
 There are two additional system tags, [[$:/tags/Global/View]], and [[$:/tags/Global/View/Body]], which allow you to make some procedure //almost// but not quite global. The first makes it available when rendering all parts of [[the view template|The View Template]] (thus every tiddler), but not within other parts of the interface such as the sidebar. The second additionally restricts it to the //body// of the view template, not any of the other elements like the title or any custom templates you might add. This effectively makes it available within the wikitext of all your content tiddlers, but nowhere else. (We'll talk more about [[the view template|The View Template]] in chapter 7.)
 
-You can also use the ''`\import` pragma'' in any tiddler to explicitly include procedures from some other tiddler in that tiddler. This way, you could, for example, include a set of macros in three specific tiddlers, but no others (though note that if one of those tiddlers X transcludes other tiddlers after doing the `\import`, the imported procedures will be available within that transclusion as well, just like they would be if they'd been actually within X's wikitext). `\import` takes a filter as an argument, so to import procedures from all tiddlers tagged `MyAwesomePrivateProcedures`, you would put the following at the top of a tiddler:
+You can also use the ''`\import` pragma'' in any tiddler to explicitly include procedures from some other tiddler in that tiddler. This way, you could, for example, include a set of procedures in three specific tiddlers, but no others (though note that if one of those tiddlers X transcludes other tiddlers after doing the `\import`, the imported procedures will be available within that transclusion as well, just like they would be if they'd been actually within X's wikitext). `\import` takes a filter as an argument, so to import procedures from all tiddlers tagged `MyAwesomePrivateProcedures`, you would put the following at the top of a tiddler:
 
 ```html
 \import [tag[MyAwesomePrivateProcedures]]

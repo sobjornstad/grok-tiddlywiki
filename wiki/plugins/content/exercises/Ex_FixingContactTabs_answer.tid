@@ -1,5 +1,5 @@
 created: 20200717224206811
-modified: 20240929191323796
+modified: 20241010131412371
 tags: Answer
 title: Ex:FixingContactTabs/answer
 type: text/vnd.tiddlywiki
@@ -18,4 +18,4 @@ A couple of notes on this:
 * We didn't specify a tiddler for the `$transclude` widget. That's because if you don't specify either a `$tiddler` or `$variable` parameter, the widget defaults to transcluding the current tiddler.
 * We specified `mode="block"` on the `$transclude` widget. We could also have left blank lines around the `$transclude` widget to get the same effect. We'll talk more about this next chapter, in [[Block Mode and Inline Mode]].
 
-Once the template tiddler is in place, add a `template:ContactTabTemplate` parameter to the `tabs` macro used to render your contact tabs to use this template.
+Once the template tiddler is in place, add a `template:ContactTabTemplate` parameter to the `tabs` call used to render your contact tabs to use this template.

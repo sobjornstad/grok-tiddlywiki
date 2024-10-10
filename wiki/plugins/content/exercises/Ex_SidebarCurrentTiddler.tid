@@ -1,9 +1,9 @@
 created: 20200718044814594
 length: s
-modified: 20210418141506093
+modified: 20241010131834375
 origin: Adding to the Sidebar
 tags: Exercise
 title: Ex:SidebarCurrentTiddler
 type: text/vnd.tiddlywiki
 
-You might be tempted to use `[tag<currentTiddler>]` within the `tabs` macro on the `$:/yourname/Views` tiddler, so that if you ever change the name of the tiddler you don't have to remember to update the filter. Try this. What happens? Why do you think this happened?
+You might be tempted to use `[tag<currentTiddler>]` within the `tabs` macro call on the `$:/yourname/Views` tiddler, so that if you ever change the name of the tiddler you don't have to remember to update the filter. Try this. What happens? Why do you think this happened?

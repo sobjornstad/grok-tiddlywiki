@@ -1,6 +1,6 @@
 created: 20200531034640143
 description: What makes TiddlyWiki worth learning and using?
-modified: 20241008030342317
+modified: 20241010130236209
 parent: Front Matter
 tags: Section
 title: Why TiddlyWiki?
@@ -34,7 +34,7 @@ Most notes systems fail at the seemingly elementary requirement of matching the 
 
 In TiddlyWiki, notes are written and formatted using a markup language called [[wikitext|Wikitext]] (rather like [[Markdown|https://en.wikipedia.org/wiki/Markdown]]). This language is relatively easy to learn and offers a more flexible way of formatting notes than WYSIWYG editors like those used by word processors or email programs.
 
-Advanced users or anyone needing detailed control over how their notes look can fall back to [[HTML]] and [[CSS|Stylesheets]], the same languages used for styling web pages. You can write [[macros|Macros]] or use [[templates|Templates and the Current Tiddler]], along with CSS, for full [[separation of content and presentation|https://en.wikipedia.org/wiki/Separation_of_content_and_presentation]]. You can even write parts of your notes directly in HTML or in Markdown (via a plugin) if you like.
+Advanced users or anyone needing detailed control over how their notes look can fall back to [[HTML]] and [[CSS|Stylesheets]], the same languages used for styling web pages. You can write [[procedures|Procedures]] or use [[templates|Templates and the Current Tiddler]], along with CSS, for full [[separation of content and presentation|https://en.wikipedia.org/wiki/Separation_of_content_and_presentation]]. You can even write parts of your notes directly in HTML or in Markdown (via a plugin) if you like.
 
 [img [side-by-side-wikitext.png]]
 

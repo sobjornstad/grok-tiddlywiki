@@ -1,11 +1,11 @@
 created: 20210120030944524
 length: h
-modified: 20240614034649987
+modified: 20241010131136104
 origin: Supplemental Exercises
 tags: Exercise
 title: Ex:StretchText
 type: text/vnd.tiddlywiki
 
-//StretchText//, generally attributed to [[Ted Nelson|https://en.wikipedia.org/wiki/Ted_Nelson]], is a form of hypertext in which links, or summary snippets, can be expanded in place: in other words, you can “stretch” parts of the text that you want to see in more detail to zoom in on them. Implement stretch-text in TiddlyWiki using a template or macro that allows you to expand and contract a tiddler serving as the “next level down”.
+//StretchText//, generally attributed to [[Ted Nelson|https://en.wikipedia.org/wiki/Ted_Nelson]], is a form of hypertext in which links, or summary snippets, can be expanded in place: in other words, you can “stretch” parts of the text that you want to see in more detail to zoom in on them. Implement stretch-text in TiddlyWiki using a template or procedure that allows you to expand and contract a tiddler serving as the “next level down”.
 
 You can find an example and a TiddlyWiki implementation as the TiddlyStretch plugin in my [[list of cynical laws|https://mosmu.se/#LawOfCynicism]].

@@ -1,5 +1,5 @@
 created: 20201122171832715
-modified: 20210409172901634
+modified: 20241010131324941
 tags: Answer
 title: Ex:LinkPattern/answer
 type: text/vnd.tiddlywiki
@@ -24,4 +24,4 @@ And in fact, if the target should be the current tiddler, you can just say:
 <$link />
 ```
 
-We'll be seeing much more of using `<<things in angle brackets>>` as attribute values in widgets and HTML tags when we learn about [[variables, macros, and transclusions|Variables, Macros, and Transclusions]] in the next chapter.
+We'll be seeing much more of using `<<things in angle brackets>>` as attribute values in widgets and HTML tags when we learn about [[transclusion|Transclusion]] in the next chapter.

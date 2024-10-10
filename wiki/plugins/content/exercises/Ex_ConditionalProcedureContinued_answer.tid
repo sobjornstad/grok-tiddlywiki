@@ -1,10 +1,10 @@
 created: 20240830023119470
-modified: 20241007230552629
+modified: 20241010131656908
 tags: Answer
 title: Ex:ConditionalProcedureContinued/answer
 type: text/vnd.tiddlywiki
 
-The trick here (useful in a wide variety of situations) is to use a `$list` widget with a filter consisting of a “tiddler list” of the items you want to loop over, here the field names. We'll assign these to the variable `field`, and pass that variable's value as the parameter to the `contact-info-item` macro:
+The trick here (useful in a wide variety of situations) is to use a `$list` widget with a filter consisting of a “tiddler list” of the items you want to loop over, here the field names. We'll assign these to the variable `field`, and pass that variable's value as the parameter to the `contact-info-item` procedure:
 
 ```html
 \procedure contact-info-item(field)

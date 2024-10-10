@@ -1,6 +1,6 @@
 created: 20200717223809578
 length: m
-modified: 20240924000137663
+modified: 20241010125923124
 origin: Tabs
 tags: Exercise
 title: Ex:FixingContactTabs
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 Fix the issue identified in the previous exercise, [[Ex:ContactTabs]], so that all contacts display all information correctly.
 
-//Hint 1//: You'll need to create a template tiddler. You can specify the name of a template used to render each tab using the `template` parameter to the `tabs` macro.
+//Hint 1//: You'll need to create a template tiddler. You can specify the name of a template used to render each tab using the `template` parameter to the `tabs` procedure.
 
 //Hint 2//: The `currentTab` variable contains the name of the tiddler being rendered as the current tab.
 

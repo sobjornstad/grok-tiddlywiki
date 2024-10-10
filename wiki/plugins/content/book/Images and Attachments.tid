@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20240923235531275
+modified: 20241010125809294
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -30,7 +30,7 @@ Once you have an image in your wiki, you probably want to know how to include it
 
 The easiest way to include it is to simply [[transclude|Transclusions]] it. So if the image tiddler is called `image.png`, use `{{image.png}}`.
 
-For more control over the image, you can use a special link syntax, `[img [image.png]]` (notice the space before the second `[` -- this is not important yet, but is required when including attributes, as described in the next sentence). In between the `img` and the opening square bracket, you can include `width=200` and/or `height=200` attributes to size the image, replacing `200` with however many pixels you want to use for the image. It's also possible to use a macro or field transclusion to set the size, e.g.:
+For more control over the image, you can use a special link syntax, `[img [image.png]]` (notice the space before the second `[` -- this is not important yet, but is required when including attributes, as described in the next sentence). In between the `img` and the opening square bracket, you can include `width=200` and/or `height=200` attributes to size the image, replacing `200` with however many pixels you want to use for the image. Unlike most places in wikitext syntax, it's also possible to transclude a field or variable containing the size, e.g.:
 
 ```html
 [img width={{MyFavoriteImageWidth}} [image.png]]

@@ -1,6 +1,6 @@
-answer: To insert some predefined text into a tiddler that can't be effectively implemented as a macro or template.
+answer: To insert some predefined text into a tiddler that can't be effectively implemented as a transclusion.
 created: 20210107184727378
-modified: 20210418141930151
+modified: 20241010132136804
 origin: Stamps
 qtype: rememberq
 question: What is the purpose of a //stamp//?

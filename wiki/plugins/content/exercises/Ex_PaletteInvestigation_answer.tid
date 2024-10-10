@@ -1,5 +1,5 @@
 created: 20200718202204205
-modified: 20210418152036717
+modified: 20241010131620392
 tags: Answer
 title: Ex:PaletteInvestigation/answer
 type: text/vnd.tiddlywiki
@@ -10,7 +10,7 @@ The macro definition is found in `$:/core/macros/CSS`. (If you're American and d
 <$transclude tiddler={{$:/palette}} index="$name$">
 ```
 
-`$:/palette` is a configuration tiddler managed by TiddlyWiki that contains the name of whichever palette you've currently selected in the control panel. If you then open up the palette named therein (e.g., `$:/palettes/GruvboxDark`), you'll see a [[data tiddler|Data Tiddlers]] listing the names of colors and their CSS values (or, sometimes, another substitution with the `<<colour>>` macro).
+`$:/palette` is a configuration tiddler managed by TiddlyWiki that contains the name of whichever palette you've currently selected in the control panel. If you then open up the palette named therein (e.g., `$:/palettes/GruvboxDark`), you'll see a [[data tiddler|Data Tiddlers]] listing the names of colors and their CSS values (or, sometimes, another call to the `<<colour>>` macro).
 
 In the macro definition, you might wonder what's with all the other `$transclude` widgets:
 

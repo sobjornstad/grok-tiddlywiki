@@ -1,5 +1,5 @@
 created: 20210207180211360
-modified: 20240926222636548
+modified: 20241010131913941
 tags: Answer
 title: Ex:DateFormatter/answer
 type: text/vnd.tiddlywiki
@@ -41,7 +41,7 @@ Field:
         <th>Date</th>
     </tr>
     <$list filter="[prefix[$:/config/DateFormatter/Formats/]]" variable="currentFormat">
-        <$macrocall $name="date-row"
+        <$transclude $variable="date-row"
             name={{{ [<currentFormat>removeprefix[$:/config/DateFormatter/Formats/]] }}} 
             fmt={{{ [<currentFormat>get[text]] }}}/>
     </$list>

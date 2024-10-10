@@ -1,6 +1,6 @@
 created: 20200718022013037
 length: m
-modified: 20240929004220066
+modified: 20241010131120022
 origin: Much More Than You Wanted to Know About Scopes
 tags: Exercise
 title: Ex:MakeGlobalProcedures
@@ -8,4 +8,4 @@ type: text/vnd.tiddlywiki
 
 Find the `wikipediaLink` and `ticketLink` procedures we created in [[The Finer Points of Procedures]] and turn them into global procedures, creating one or more tiddlers to house them.
 
-Remove the original macro definitions from the individual tiddlers and try calling the macros from a few different tiddlers to make sure it works.
+Remove the original procedure definitions from the individual tiddlers and try calling the procedures from a few different tiddlers to make sure it works.
