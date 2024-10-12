@@ -1,6 +1,6 @@
 caption: Scheduler
 created: 20201230042714308
-modified: 20210407191155217
+modified: 20241012224750182
 stackorder: 20
 tags: 
 title: $:/plugins/sobjornstad/TakeAway/Settings/Scheduler
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 If you're familiar with spaced repetition and want to play around with the parameters of the spacing algorithm, you can do that here. If that doesn't sound exciting, you do not need to and should not make any changes here.
 
-TakeAway uses an Anki/SM2-like algorithm. If you don't understand the terms used in these descriptions, read [[Spaced Repetition from the Ground Up|https://controlaltbackspace.org/memory/spaced-repetition-from-the-ground-up/]] for help.
+TakeAway uses an algorithm from the Anki SM-2 family. If you don't understand the terms used in these descriptions, read [[Spaced Repetition from the Ground Up|https://controlaltbackspace.org/memory/spaced-repetition-from-the-ground-up/]] for help.
 
 <table class="gtw-form">
 <$list filter="[all[tiddlers+shadows]prefix[$:/config/sobjornstad/TakeAway/Scheduler/]nsort[stackorder]]">

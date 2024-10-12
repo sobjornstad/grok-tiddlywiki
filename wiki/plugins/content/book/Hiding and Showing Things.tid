@@ -1,6 +1,6 @@
 created: 20210120034946005
 description: There are many ways to conditionally hide and show wikitext or set values; here's a broad summary.
-modified: 20241001121150237
+modified: 20241012223613930
 parent: Tips and Tricks
 showtest: 
 tags: Section
@@ -57,7 +57,7 @@ A method we haven't seen yet is the `$reveal` widget. With the advent of conditi
 
 In addition to `match`, as shown above, `type` can be set to `nomatch` to invert the match (`match` and `nomatch` widgets are often used in pairs to show one thing if something is true and another if it's not). There are also options to allow the widget to be used to compare numeric values (e.g., only show if a field value is greater than 5); check up the documentation for details.
 
-The `$reveal` widget has one major limitation worth noting: unlike the `$list` widget or a conditional expression, it ''creates a new `div` or `span`'' HTML element to wrap the revealed content in. This means you can end up with corrupted output if you use it in certain contexts where one of those elements doesn't belong, for example inside a table (notice the column header is the wrong width when expanded):
+The `$reveal` widget has one major limitation worth noting: unlike the `$list` widget or a conditional expression, it ''creates a new `div` or `span`'' HTML element to wrap the revealed content in. This means you can end up with corrupted output if you use it in certain contexts where one of those elements doesn't belong, for example inside a table (notice the column header is the wrong width when expanded -- you might need to switch to the “Wikitext” tab to see this):
 
 {{Sn:BrokenRevealTable||MagicSnippet}}
 

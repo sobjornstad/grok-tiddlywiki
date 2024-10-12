@@ -1,5 +1,5 @@
 created: 20240926224206306
-modified: 20240926224339554
+modified: 20241012224046873
 tags: Answer
 title: Ex:NowTimestampFunction/answer
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ Hmm, no, that looks just fine. So what about the hint in the exercise? Let's try
 
 {{Sn:NowTimestampProcedureAttribute||MagicSnippet}}
 
-Aha! Here the function works as you would expect, but the procedure simply puts the literal text of the procedure body in the field. (This is hard to notice if you just transclude the value, because the macro call to `now` expands when you do so! The `$view` widget doesn't wikify the field, so it shows the true value, as does editing the tiddler and looking at its field values.)
+Aha! Here the function works as you would expect, but the procedure simply puts the literal text of the procedure body in the field. (This is hard to notice if you just transclude the value, because the macro call to `now` expands when you do so. The `$view` widget doesn't wikify the field, so it shows the true value, as does editing the tiddler and looking at its field values.)
 
 The million-dollar question is, of course, why?
 
