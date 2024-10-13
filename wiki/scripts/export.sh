@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILT='[all[tiddlers]] -[prefix[$:/plugins/tiddlywiki/codemirror]] -[[$:/plugins/tiddlywiki/tiddlyweb]] -[[$:/plugins/tiddlywiki/filesystem]] -[prefix[$:/state]] -[prefix[Tr:]] -[tag[Meta]]'
+FILT='[all[tiddlers]] -[prefix[$:/plugins/tiddlywiki/codemirror]] -[[$:/plugins/tiddlywiki/tiddlyweb]] -[[$:/plugins/tiddlywiki/filesystem]] -[prefix[$:/state]] -[prefix[Tr:]] -[tag[Meta]] -[[Ta:20210214165634956]]'
 public_edits_file="$PWD/scripts/public-edits.conf"
 
 if [ ! -f "tiddlywiki.info" ]; then

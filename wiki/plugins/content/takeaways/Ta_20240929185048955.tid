@@ -1,9 +1,9 @@
 answer: `{{{ [.multiply-by-two[4]] }}}`
 created: 20240929185052321
-modified: 20240929185052321
+modified: 20241013004227939
 origin: Functions
 qtype: rememberq
-question: Call the function `.multiply-by-two` in a filter expression, with the parameter `2`, using the shortcut syntax.
+question: Call the function `.multiply-by-two` in a filter expression, with the parameter `4`, using the shortcut syntax.
 tags: Takeaway
 title: Ta:20240929185048955
 type: text/vnd.tiddlywiki

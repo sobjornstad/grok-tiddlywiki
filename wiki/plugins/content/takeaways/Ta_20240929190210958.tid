@@ -1,9 +1,9 @@
 answer: If you make a mistake and this clause actually //is// reachable, it is much easier to recognize and fix the problem if you show an error message there.
 created: 20240929190212962
-modified: 20240929190212962
+modified: 20241013004238726
 origin: Functions
 qtype: rememberq
-question: Why is it sometimes helpful to add an `<% else %>` clause to a chain of conditional inclusions even if you think you have covered all conditions?
+question: Why is it sometimes helpful to add an `<% else %>` clause to a chain of conditional expressions even if you think you have covered all conditions?
 tags: Takeaway
 title: Ta:20240929190210958
 type: text/vnd.tiddlywiki

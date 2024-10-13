@@ -1,6 +1,6 @@
-answer: Only the text of the first result of the filter is shown.
+answer: Only the title of the first meeting (first result of the filter) is shown.
 created: 20240929181237345
-modified: 20240929181237345
+modified: 20241013003923252
 origin: Filters and Transclusions
 qtype: rememberq
 question: What behavior does this snippet exhibit that you might not expect? `<$text text={{{ [tag[Meeting]] }}}/>`

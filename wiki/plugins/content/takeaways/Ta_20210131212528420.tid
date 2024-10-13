@@ -1,6 +1,6 @@
-answer: Effectively using custom fields this way usually requires creating a small amount of ''custom logic'' so you can easily see and edit the fields.
+answer: Effectively using custom fields this way usually requires creating a small amount of custom logic so you can easily see and edit the fields.
 created: 20210131212529677
-modified: 20210409025830100
+modified: 20241013004813137
 origin: Project Tiddlers
 qtype: rememberq
 question: Why are fields a higher-effort method of relating tiddlers than tags?

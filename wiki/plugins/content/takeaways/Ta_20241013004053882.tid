@@ -1,0 +1,9 @@
+answer: You can't access them within filters or pass them on to a different procedure or tiddler.
+created: 20241013004055542
+modified: 20241013004055542
+origin: Parameterizing Field Transclusions
+qtype: rememberq
+question: What drawback do slots have in terms of flexibility compared to parameters or variables?
+tags: Takeaway
+title: Ta:20241013004053882
+type: text/vnd.tiddlywiki

@@ -1,6 +1,6 @@
-answer: \parameters
+answer: `\parameters`
 created: 20240929181837586
-modified: 20240929181837586
+modified: 20241013003938901
 origin: Parameterizing Field Transclusions
 qtype: rememberq
 question: What pragma is used to give a field/tiddler parameters?

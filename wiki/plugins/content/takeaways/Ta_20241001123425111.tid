@@ -1,6 +1,6 @@
-answer: There should not be quotes around the filter.
+answer: Placing quotes around the filter expression causes the result to become a constant string and the condition to always be true.
 created: 20241001123426326
-modified: 20241001123426326
+modified: 20241013004141333
 origin: Conditional Expressions
 qtype: rememberq
 question: What's wrong with this syntax? `<% if "[<storyTiddler>match[When Pigs Fly]]" %>`

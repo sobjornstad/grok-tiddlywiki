@@ -1,6 +1,6 @@
-answer: Place the parameter in triple double-quotes (“triple quotes”): `<<procedureName """the parameter "containing" quotes""">>`
+answer: Place the parameter in triple double-quotes (“triple quotes”): `<<procedureName """the "parameter" 'containing' quotes""">>`
 created: 20201231040248490
-modified: 20241007223429442
+modified: 20241012230544599
 origin: The Finer Points of Procedures
 qtype: rememberq
 question: What is the simplest way to pass a parameter whose value contains both "double quotes" and 'single quotes' to a procedure?

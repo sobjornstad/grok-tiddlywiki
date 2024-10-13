@@ -1,6 +1,6 @@
 created: 20210120034946005
 description: There are many ways to conditionally hide and show wikitext or set values; here's a broad summary.
-modified: 20241012223613930
+modified: 20241013004618524
 parent: Tips and Tricks
 showtest: 
 tags: Section
@@ -75,16 +75,11 @@ A number of widgets will ''display their content if they find no matches'', elim
 
 !!! `$transclude` fallbacks
 
-The `$transclude` widget is the long syntax for transcluding a field of a tiddler or calling a procedure/macro/variable. The tiddler name is optional; if not provided it defaults to the current tiddler.
-
-{{Sn:TranscludeWidget||MagicSnippet}}
-
-In addition to its ability to override whether parsing occurs in block or inline mode, as discussed in [[Block Mode and Inline Mode]], you can use the content of a `$transclude` widget as a fallback if the field doesn't exist.
+You can use the content of a `$transclude` widget as a fallback if the field doesn't exist.
 
 {{Sn:TranscludeFallback||MagicSnippet}}
 
-Beware that the `$transclude` widget ''does not change the current tiddler'' -- in other words, it treats the transcluded tiddler as a [[template|Templates and the Current Tiddler]] for the current tiddler. If you want to get the equivalent of a straight `{{transclusion}}`, you need to wrap it in a `$tiddler` widget.
-
+If you are [[filling any slots|Parameterizing Field Transclusions]] within the body of the transclude widget, place the fallback inside a slot called `ts-missing` instead of directly within the body.
 
 !!! `$view` fallbacks
 
