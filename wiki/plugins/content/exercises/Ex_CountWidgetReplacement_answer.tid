@@ -1,13 +1,13 @@
 created: 20210206220427285
-modified: 20210206220330765
+modified: 20241015025121901
 tags: Answer
 title: Ex:CountWidgetReplacement/answer
 type: text/vnd.tiddlywiki
 
 ```html
 <ul>
-  <li>There are <$count filter="[tag[Contact]"/> people in this wiki.</li>
-  <li>There are <$count filter="[tag[Meeting]links[]!tag[Contact]"/> non-contact tiddlers linked from meetings.</li>
+  <li>There are <$count filter="[tag[Contact]]"/> people in this wiki.</li>
+  <li>There are <$count filter="[tag[Meeting]links[]!tag[Contact]]"/> non-contact tiddlers linked from meetings.</li>
   <$set name="totalTiddlers" value={{{ [!is[system]count[]] }}}>
     <li><$text text={{{ [tag[Contact]count[]divide<totalTiddlers>multiply[100]precision[3]] }}}/>% of all non-system tiddlers in the wiki are contacts.</li>
   </$set>

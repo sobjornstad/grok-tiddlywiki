@@ -1,9 +1,9 @@
 created: 20200604020710211
 length: s
-modified: 20210130174625225
+modified: 20241015001534018
 origin: Field Transclusions
 tags: Exercise
 title: Ex:SearchingInTransclusions
 type: text/vnd.tiddlywiki
 
-In an [[exercise|Ex:JohnDoeSearch]] in the previous chapter, we observed that tiddlers referenced in fields did not appear in search. Now, however, we have transcluded these fields directly into the JaneDoe tiddler. Try searching for some of the text again (e.g., `ChrisSmith`). Has anything changed?
+In an [[exercise|Ex:JohnDoeSearch]] in the previous chapter, we observed that tiddlers referenced in fields did not appear in search. Now, however, in [[Ex:JaneDataTransclusion]], we transcluded the `manager` field directly into the JaneDoe tiddler. Try searching for some of the text in that field again (e.g., `ChrisSmith`). Has anything changed?

@@ -1,10 +1,10 @@
 created: 20200717224206811
-modified: 20241010131412371
+modified: 20241015002159415
 tags: Answer
 title: Ex:FixingContactTabs/answer
 type: text/vnd.tiddlywiki
 
-Create a template tiddler called `ContactTabTemplate` with content like the following:
+First, create a template tiddler called `ContactTabTemplate` with content like the following:
 
 ```html
 <$tiddler tiddler=<<currentTab>>>
@@ -12,7 +12,9 @@ Create a template tiddler called `ContactTabTemplate` with content like the foll
 </$tiddler>
 ```
 
-A couple of notes on this:
+When each tab is transcluded through this template, the current tiddler will be set to `<<currentTab>>` prior to rendering each tab's tiddler, so all references to the current tiddler within that tab's tiddler will now be set in the same way as if that tiddler were being rendered directly in the story river.
+
+A couple of notes:
 
 * The `$tiddler` widget is the most idiomatic way to set the current tiddler, but you could equivalently set the variable `currentTiddler` using something like a `$let` widget.
 * We didn't specify a tiddler for the `$transclude` widget. That's because if you don't specify either a `$tiddler` or `$variable` parameter, the widget defaults to transcluding the current tiddler.

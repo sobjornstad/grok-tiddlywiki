@@ -1,0 +1,10 @@
+created: 20241015000520345
+modified: 20241015000614468
+tags: Meta
+title: Meta:Bugs
+type: text/vnd.tiddlywiki
+
+Temporary things in GTW that should be checked and removed in new editions because they're bugs which should be fixed:
+
+* Note on italics sometimes not updating right away in [[Contact Tiddlers]]
+* Unnecessarily complex `$genesis` widget in [[Overriding Built-In Widgets]]

@@ -1,6 +1,6 @@
 created: 20200530203548943
 description: How to track the people we meet at work, linking to the ideas they're involved in and modeling their attributes as discrete fields of information.
-modified: 20240614031742295
+modified: 20241015000547177
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Contact Tiddlers
@@ -21,6 +21,8 @@ When you type or paste this into your journal tiddler, if you have the live prev
 We'll want to tag our contacts `Contact`, so go ahead and click in the //Tag name// box under the title, type `Contact`, and press Enter. A <<tag-pill Contact>> tag pill will appear. Notice the drop-down menu that allows you to select an existing tag; you can continue typing to filter the list of tags, and use the up and down arrow keys and the Enter key to pick a tag from the list.
 
 We don't necessarily even have to add any content to Jane's tiddler. Maybe to start with, we just want to let TiddlyWiki know that ''Jane is a contact''. So let's save the tiddler; either use the check icon <<textual-button "done-button">> again, or press Control+Enter (if you don't learn any other keyboard shortcuts, this is a really helpful one). If you look back up at the journal tiddler, you'll see that `JaneDoe` is no longer in italics, meaning that tiddler now exists.
+
+(There is a bug in TiddlyWiki 5.3.5 that can cause italics to not be immediately removed from newly created tiddlers. If this happens, closing and reopening the tiddler should resolve the issue. Hopefully this will be fixed soon!)
 
 
 !! Finding what Jane is involved in

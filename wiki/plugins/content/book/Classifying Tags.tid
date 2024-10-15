@@ -1,6 +1,6 @@
 created: 20200607151655161
 description: The colors and icons of tags can be customized to make it easier to tell tags with different functions apart.
-modified: 20220103160458959
+modified: 20241015001811625
 parent: More Organizational Tools
 tags: Section
 title: Classifying Tags
@@ -10,7 +10,7 @@ When we use lots of tags in a wiki, it can become difficult to find the ones we 
 
 One great way to tell apart tags used for different purposes is to add colors and icons to them. TiddlyWiki makes this easy to do using the <<textual-button "tag-button">> ''tag manager'', which you can find under the //Tools// tab in the sidebar.
 
-One tricky point can be getting the same color across multiple tags, since the color picker does not save recently used colors. The easiest way is to pick a tag that already has the color you want, click the color picker, and copy the hex code from the bottom (that's the bit that looks like `#000000`). Then you can paste that in for the new tag.
+One tricky point can be getting the same color across multiple tags, since the color picker does not save recently used colors. The easiest way is to pick a tag that already has the color you want, click the info button (//not// the color picker), and copy the hex code from the bottom (that's the bit that looks like `#000000`). Then you can paste that in for the new tag.
 
 
 !! Exercises
