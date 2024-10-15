@@ -1,6 +1,6 @@
 created: 20210116201528646
 description: are a TiddlyWiki extension
-modified: 20210131175322304
+modified: 20241015031926020
 tags: Lie
 title: Ltc:WidgetsExtension
 type: text/vnd.tiddlywiki
@@ -8,5 +8,7 @@ type: text/vnd.tiddlywiki
 Actually, widgets have a more complex role in the rendering of pages than I'm letting on when I claim that wikitext is a superset of HTML and that widgets are an extension to HTML. When a tiddler is being rendered, everything in its wikitext is transformed into underlying widgets, including HTML that you've embedded in your wikitext. Once this //widget tree// has been built, TiddlyWiki can convert it back to the HTML that causes the page to display in your web browser. `$widget`s in pages aren't an extra feature added to wikitext, but a means of directly creating a widget in TiddlyWiki's underlying representation of the page, rather than allowing wikitext or HTML to be transformed into a widget by TiddlyWiki.
 
 You can read more about this in the [[Widgets|https://tiddlywiki.com/dev/#Widgets]] section of the TiddlyWikiDev wiki.
+
+[[Custom Widgets]] are an additional complication, in that they are actually procedures (which generate wikitext widgets) underneath.
 
 Unless you dig into the JavaScript code underlying TiddlyWiki, this is not a detail you need to concern yourself with.

@@ -1,5 +1,5 @@
 created: 20240925024949563
-modified: 20240925025956605
+modified: 20241015032025750
 tags: $:/tags/Global
 title: $:/sib/ReferenceMacros
 type: text/vnd.tiddlywiki
@@ -22,6 +22,6 @@ type: text/vnd.tiddlywiki
   <$transclude
     $variable="gtw.link-chapter-name"
     chapterName=<<chapterName>>
-    text={{{ [<chapterName>.number-from-chapter[]addprefix[ ]addprefix<chapterPrefix>] }}}
+    text={{{ [<chapterName>.number-from-chapter[]addprefix[&nbsp;]addprefix<chapterPrefix>] }}}
   />
 \end gtw.link-chapter-number

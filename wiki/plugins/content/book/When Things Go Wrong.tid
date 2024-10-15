@@ -1,6 +1,6 @@
 created: 20210120014333991
 description: As your wikitext gets more complicated, it occasionally might not do what you were expecting; here's how you can figure out what you did wrong.
-modified: 20241010130053359
+modified: 20241015032547270
 parent: Filtering and Formatting
 tags: Section
 title: When Things Go Wrong
@@ -44,7 +44,7 @@ Now, simply click the pointer icon in the far top-left corner of the inspector a
 
 !! Display the values of variables
 
-In the next chapter, we'll start discussing [[variables, procedures, and transclusions|Transclusion]]. Oftentimes you will use variables, procedures, and transclusions as part of widgets or filters (for instance, you might use the value of a variable in a filter). If your widget or filter isn't working right and you are at all uncertain about what's in the variable, try ''using the variable by itself in your wikitext'' and see what shows up in the preview. If the variable's value is wrong, investigating how it got set to the wrong value will likely point you to the problem.
+In the next chapter, we'll start discussing [[variables, procedures, and field transclusions|Transclusion]]. Oftentimes you will use variables, procedures, and field transclusions as part of widgets or filters (for instance, you might use the value of a variable in a filter). If your widget or filter isn't working right and you are at all uncertain about what's in the variable, try ''using the variable by itself in your wikitext'' and see what shows up in the preview. If the variable's value is wrong, investigating how it got set to the wrong value will likely point you to the problem.
 
 Sometimes putting a variable directly in your wikitext might mess up the formatting in a way that makes the issue harder to understand. In this case, you can use the ''`$log` widget'' instead. This widget doesn't put anything into the rendered output of the tiddler -- instead it puts output into your ''browser console'', a hidden log that you only see when you open the developer tools. For instance, paste this into a tiddler in your test wiki:
 

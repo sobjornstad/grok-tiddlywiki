@@ -1,10 +1,10 @@
 created: 20240927021945879
 length: s
-modified: 20240927022032117
+modified: 20241015032650371
 origin: When Things Go Wrong
 tags: Exercise
 title: Ex:LogWidget
 type: text/vnd.tiddlywiki
 
-If you haven't done so yet, try pasting the `$log` widget into somewhere in your sample wiki and find the output in the console.
+If you haven't done so yet, try pasting the example `$log` widget shown above into somewhere in your sample wiki and find the output in the console.
 You can add multiple attributes to the widget, with any names you want, to log multiple things – try doing this as well.

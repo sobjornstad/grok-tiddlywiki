@@ -1,6 +1,6 @@
 created: 20200603023508451
 description: You can create lists of tiddlers that automatically update to show all the tiddlers that currently match a filter.
-modified: 20240925031514613
+modified: 20241015032325763
 parent: Filtering and Formatting
 tags: Section
 title: Your First Dynamic List
@@ -10,12 +10,12 @@ Searching with filters is all very nice, but what if we want to look for the sam
 
 Fortunately, one of the things TiddlyWiki does best is create dynamic lists -- lists of tiddlers or other content that automatically update as the wiki changes. Dynamic lists take a filter and do something with all of the tiddlers that filter returns. In [[Slicing Up Content]], we said the role of a tiddler containing a dynamic list was much like that of a sentence: it describes the relationships between other things.
 
-Let's create a new tiddler and call it `MeetingList`. If we want to give it a tag, we could tag it `Tool`.
+Let's create a new tiddler to try this out in and call it `MeetingList`. If we want to give it a tag, we could tag it `Tool`.
 
 
 !! Creating a `$list` widget
 
-The ''`$list` widget'' is among the most important and frequently used TiddlyWiki widgets. This widget is named quite appropriately for our purpose, since we're trying to create a list, but you can also use a list widget to accomplish some other things that don't necessarily look like they involve listing anything. We'll see more of those uses later.
+The ''`$list` widget'' is among the most important and frequently used TiddlyWiki widgets. This widget is named quite appropriately for our purpose, since we're trying to create a list, but you can also use a `$list` widget to accomplish some other things that don't necessarily look like they involve listing anything. We'll see more of those uses later.
 
 Here's how we create a list of meetings from the output of a filter:
 
@@ -33,7 +33,7 @@ When the list widget is used without any contents, like we did above, it simply 
 </$list>
 ```
 
-That's better! But you're probably wondering, what the heck is this `<<currentTiddler>>` thing? We'll be talking more about the concept of the [[current tiddler|Templates and the Current Tiddler]], as well as the `<<double angle bracket>>` [[syntax|Variables]], in <<gtw.link-chapter-number "Transclusion">>. For now, just think of it as a placeholder for “the item in the list currently being processed”. (If you've done any programming, the `$list` widget is much like a loop: the contents of the widget are displayed once for each output tiddler in the filter.)
+That's better! But you're probably wondering, what the heck is this `<<currentTiddler>>` thing? We'll be talking much more about the concept of the [[current tiddler|Templates and the Current Tiddler]], as well as the `<<double angle bracket>>` [[syntax|Variables]], in <<gtw.link-chapter-number "Transclusion">>. For now, just think of it as a placeholder for “the item in the list currently being processed.” (If you've done any programming, the `$list` widget is much like a loop or a functional-programming `map`: the contents of the widget are displayed once for each output tiddler in the filter.)
 
 There's one more problem here, which is that we haven't actually listed our meetings from newest to oldest. Let's fix that by adding a `sort` filter step:
 
@@ -47,7 +47,7 @@ Here are all your meetings from newest to oldest:
 
 !! The future
 
-In this example, we only see a list of tiddler titles that match the search criteria, which is nifty but hardly revolutionary. However, it turns out we can actually display ''any information we want'' that can be derived from the contents of the tiddlers we're listing: any field on those tiddlers, the tiddlers they link to, the number of tags they have, and so on. We'll learn how to do this in the [[next chapter|Variables, Macros, and Transclusions]].
+In this example, we only see a list of tiddler titles that match the search criteria, which is nifty but hardly revolutionary. However, it turns out we can actually display ''any information we want'' that can be derived from the contents of the tiddlers we're listing: any field on those tiddlers, the tiddlers they link to, the number of tags they have, and so on. We'll learn how to do this in the [[next chapter|Transclusion]].
 
 
 !! Exercises

@@ -1,6 +1,6 @@
 created: 20201124235605503
 description: HTML is a simple formatting language used to describe web pages, including TiddlyWikis. We can go “down a level” from wikitext to HTML when we need a bit more control over presentation.
-modified: 20240829125147735
+modified: 20241015031713751
 parent: Filtering and Formatting
 tags: Section
 title: HTML
@@ -120,7 +120,7 @@ Tags need to be closed in the opposite order they were opened. For instance, if 
 
 </$details><$details summary="Whitespace">
 
-In general, whitespace in HTML does not matter. Specifically, ''any number of spaces or newlines are treated exactly the same as one space''. You can even add extra spaces in some spots, like before the closing angle bracket at the end of a tag. So we could just as easily write:
+In general, whitespace in HTML does not matter. Specifically, ''any number of spaces, tabs, or newlines are treated exactly the same as one space''. You can even add extra spaces in some spots, like before the closing angle bracket at the end of a tag. So we could just as easily write:
 
 {{Sn:HtmlNoWhitespace||MagicSnippet}}
 
@@ -130,7 +130,7 @@ Or:
 
 However, it is hopefully obvious that both of these “styles” are bad form, as they're much harder to read. The standard is to start a new line after each opening tag that encloses an element too large to fit comfortably on a single line, and optionally indent a consistent number of spaces (usually 2 or 4) when doing so. Otherwise, avoid extra whitespace. I've done this in the real examples so far in this section and will continue to do it for the rest of the book.
 
-Now, the statement that whitespace doesn't make a difference isn't //entirely// true in TiddlyWiki. Blank lines are significant in wikitext -- specifically, to start a new paragraph, you leave at least one blank line. For this reason, if you're mixing wikitext and HTML, there are some situations where the number of newlines you enter matters. We'll talk about this more in the next chapter, in [[Block Mode and Inline Mode]]. For now, if something isn't displaying the way you expect in a mixed-wikitext-and-HTML situation, try ''adding or removing blank lines'' around the thing that isn't displaying the way you expect.
+Now, the statement that whitespace doesn't make a difference isn't //entirely// true in TiddlyWiki. Blank lines are significant in wikitext -- specifically, to start a new paragraph, you leave at least one blank line. For this reason, if you're mixing wikitext and HTML, there are some situations where the number of newlines you enter matters. We'll talk about this more in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, in [[Block Mode and Inline Mode]]. For now, if something isn't displaying the way you expect in a mixed-wikitext-and-HTML situation, try ''adding or removing blank lines'' around the thing that isn't displaying the way you expect.
 
 
 </$details>
