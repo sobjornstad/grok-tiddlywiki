@@ -1,6 +1,6 @@
 created: 20240829215208267
-description: Conditional inclusion lets you show part of a tiddler's wikitext only under certain conditions.
-modified: 20241008024758666
+description: Conditional expressions make it easy to show part of a tiddler's wikitext only under certain conditions.
+modified: 20241013010115342
 parent: Transclusion
 tags: Section
 title: Conditional Expressions

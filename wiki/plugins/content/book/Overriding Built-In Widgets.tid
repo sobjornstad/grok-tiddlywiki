@@ -1,6 +1,6 @@
 created: 20240928021442847
-description: Write custom widgets that get transcluded instead of TiddlyWiki's built-in widgets.
-modified: 20241008025819754
+description: Write custom widgets that get transcluded in place of TiddlyWiki's built-in widgets.
+modified: 20241013010717370
 parent: Looking Under the Hood
 tags: Section
 title: Overriding Built-In Widgets

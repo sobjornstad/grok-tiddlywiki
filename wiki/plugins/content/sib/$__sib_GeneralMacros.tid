@@ -1,8 +1,10 @@
 created: 20210320143048952
-modified: 20240829124239995
+modified: 20241013020856453
 tags: $:/tags/Macro
 title: $:/sib/GeneralMacros
 type: text/vnd.tiddlywiki
+
+\whitespace trim
 
 \procedure textual-button(imageName)
   <span class="gtw-textual-button">

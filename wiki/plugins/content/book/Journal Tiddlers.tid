@@ -1,6 +1,6 @@
 created: 20200530202215791
 description: How to create journal tiddlers and use basic wikitext formatting features.
-modified: 20240829125843532
+modified: 20241013022052075
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Journal Tiddlers
@@ -16,7 +16,7 @@ Pop open your <<textual-button "options-button">> [[control panel|Tweaking Your 
 
 !!! Titling
 
-Scroll down to //Title of new journal tiddlers//. I [[dislike the default date format|https://thetechnicalgeekery.com/2013/06/yyyy-mm-dd-the-best-way-to-write-dates/]] (//23rd May 2020//) because it causes journal tiddlers to sort in an unhelpful order in many views. The YYYY-MM-DD format (//2020-05-23//), in contrast, will sort nicely in chronological order in any lists it may end up in without requiring any special treatment. I also find it helpful to toss the day of the week in the title after the date (not before it, or you break the sort again!).
+Scroll down to //Title of new journal tiddlers//. I [[dislike the default date format|https://thetechnicalgeekery.com/2013/06/yyyy-mm-dd-the-best-way-to-write-dates/]] (//23rd May 2024//) because it causes journal tiddlers to sort in an unhelpful order in many views. The YYYY-MM-DD format (//2024-05-23//), in contrast, will sort nicely in chronological order in any lists it may end up in without requiring any special treatment. I also find it helpful to toss the day of the week in the title after the date (not before it, or you break the sort again!).
 
 The incantation to make this format happen is `YYYY-0MM-0DD DDD`, so fill that in the //Title of new journal tiddlers// field. If you prefer a different format, you can find details in the [[DateFormat|https://tiddlywiki.com/#DateFormat]] section of the TiddlyWiki documentation.
 

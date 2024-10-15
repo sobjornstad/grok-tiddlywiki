@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20240925030812933
+modified: 20241013012839014
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -25,12 +25,12 @@ The [[Grok TiddlyWiki Tour|https://www.youtube.com/watch?v=vUkNxbaNHcY]] demonst
 * ''Bold type'' is used to call out important terms and points that you may wish to skim the text for.
 * //Italics// identify things you select on the screen and terms that may be unfamiliar but are not particularly important.
 * `Monospaced text` indicates something you type into TiddlyWiki (most often [[wikitext|Wikitext]]).
-* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the statement being made is not strictly accurate. Normally, this is done because the full truth is more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the complete story.
+* A {{Ltc:ExampleLtc||LieToChildrenTemplate}} indicates that the statement being made is not completely accurate. Normally, this is done because the full truth is more confusing than helpful at this moment, but if you're on a second reading or would just like to dive in deeper, click the link to get the complete story.
 
 </$details><$details summary="Structure and navigation">
 
 * The book is organized into ''chapters'' and ''sections''.
-* You can find a ''hierarchical overview with summaries of each section'' in the [[Outline]], which you can access at any time by clicking //outline// in the sidebar underneath the //Grok TiddlyWiki// title (the sidebar is found at the top of the page if your monitor is too narrow to fit the content and the sidebar side-by-side).
+* You can find a ''hierarchical overview with summaries of each section'' in the [[Outline]], which you can access at any time by clicking //outline// in the right sidebar underneath the title, //Grok TiddlyWiki// (the sidebar is found at the top of the page if your screen is too narrow to fit the content and the sidebar side-by-side).
 * When you click on an internal link, you will navigate to the new section, but the section you were previously in stays open. The ''Open'' tab of the sidebar will let you see all the sections you have open and flip between them, much like tabs in your web browser. You can drag and drop the open sections to reorder them.
 * The ''Bookmarks'' tab of the sidebar contains any sections you have bookmarked. Bookmark or unbookmark any section by clicking the bookmark button <<textual-button "star-filled">> at the top of the section. As with the //Open// tab, you can drag and drop bookmarks to reorder them.
 * The ''Contents'' tab of the sidebar contains an abbreviated version of the outline, if you already know what you're looking for.

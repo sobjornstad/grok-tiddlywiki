@@ -1,6 +1,6 @@
 created: 20200530170154864
 description: Tiddlers are the unit of information in TiddlyWiki.
-modified: 20241010125509794
+modified: 20241013021525992
 parent: The Shape of TiddlyWiki
 tags: Section Concept
 title: Tiddlers
@@ -8,9 +8,9 @@ type: text/vnd.tiddlywiki
 
 Before we start creating our sample wiki, we need to go over a few concepts. I know, theory is boring and you want to get your hands on the software, so I'll just introduce five foundational concepts that we can't do without right now, and we'll fill in the rest as we need them.
 
-''Tiddlers'' are the unit of information in TiddlyWiki. If we didn't want to use a weird neologism, we might call tiddlers //notes//, or //cards//, or //records//, or //files//, or //pages//, or //articles//. However, tiddlers aren't quite like any of these things, so the designers concluded a word that doesn't carry any baggage from other information systems would ultimately be less confusing. (A tiddler is a kind of small fish.)
+''Tiddlers'' are the unit of information in TiddlyWiki. If we didn't want to use a weird neologism, we might call tiddlers //notes//, or //cards//, or //records//, or //files//, or //pages//, or //articles//. However, tiddlers aren't quite like any of these things, so the designers concluded a word that doesn't carry any baggage from other information systems would ultimately be less confusing. (A tiddler is a kind of small fish -- thus the logo for //Grok TiddlyWiki//.)
 
-For now, you can think of a tiddler as a 3×5 index card: a blank slate used to store a small amount of information. Even better, think of it as an [[edge-notched card|https://en.wikipedia.org/wiki/Edge-notched_card]], an index card that can be mechanically sorted based on metadata punched out of the edges of the card. (In the mid-20th century, these were the height of sophistication for the amateur information geek, and they're still pretty cool even in the computer age!) Tiddlers can do much more complicated things than this, however, so in [[Slicing Up Content]] in chapter 2 we'll see a different, more conceptual metaphor which will be more helpful as we continue.
+For now, you can think of a tiddler as a 3×5 index card: a blank slate used to store a small amount of information. Even better, think of it as an [[edge-notched card|https://www.youtube.com/watch?v=v8qHPXPnQps]], an index card that can be mechanically sorted based on metadata punched out of the edges of the card. (In the mid-20th century, these were the height of sophistication for the amateur information geek, and they're still pretty cool even in the computer age!) Tiddlers can do much more complicated things than this, however, so in [[Slicing Up Content]] in chapter 2 we'll see a different, more conceptual metaphor which will be more helpful as we continue.
 
 <div style="text-align: center;">
 <$link to="edge-notched.jpg">[img width=300 [edge-notched.jpg]]</$link>

@@ -1,6 +1,6 @@
 created: 20210206155516669
 description: We slice content up into tiddlers by modeling nouns related to our subject matter.
-modified: 20240928201027241
+modified: 20241014125711016
 parent: Filing and Organizing
 tags: Section
 title: Slicing Up Content
@@ -53,7 +53,7 @@ In the //Grok TiddlyWiki// wiki, each chapter and section has a tiddler. Section
 
 You can see that the book is neatly divided into its component parts and concepts by this model. Some of the section tiddlers are a little longer than I would consider ideal, but I felt keeping a one-to-one correspondence between tiddlers and sections of the book was more important than the size of those tiddlers, and if a section got too long, I looked to split up the section.
 
-You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Transclusions]], which we'll learn about in <<gtw.link-chapter-number "Transclusion">>, and in some cases [[filters|Filters]], which we'll learn about in <<gtw.link-chapter-number "Filtering and Formatting">>.
+You might wonder how takeaways, exercises, examples, and lies appear within sections if they are separate tiddlers. This relies on [[transclusion|Field Transclusions]], which we'll learn about in <<gtw.link-chapter-number "Transclusion">>, and in some cases [[filters|Filters]], which we'll learn about in <<gtw.link-chapter-number "Filtering and Formatting">>.
 
 
 !! In our sample wiki

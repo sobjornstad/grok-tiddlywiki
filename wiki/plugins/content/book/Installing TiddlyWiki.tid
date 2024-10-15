@@ -1,6 +1,6 @@
 created: 20200530172429726
 description: How to get TiddlyWiki set up on your computer.
-modified: 20240829121824323
+modified: 20241013020740586
 parent: The Shape of TiddlyWiki
 tags: Section
 title: Installing TiddlyWiki
@@ -24,7 +24,7 @@ Visit https://tiddlyhost.com/, click the green //Sign Up// button, and fill out 
 
 !! Creating a wiki
 
-Once you've created an account and gotten logged in, click the //Create site// button at the bottom of the page. Then pick a name (TiddlyHost will pick a random one for you, which you can accept for your test wiki if you like), a wiki type (use the default //TiddlyWiki (self-contained)// option for now) and an access level (//Private// probably makes the most sense for your test wiki, but you can share it with the world if you want to for whatever reason!). Finally, click //Create//. No need to worry about the other options for now!
+Once you've created an account and gotten logged in, click the //Create site// button at the bottom of the page. Then pick a name (TiddlyHost will pick a random one for you, which you can accept for your test wiki if you like), a wiki type (use the default //TiddlyWiki (self-contained)// option for now) and an access level (//Private// probably makes the most sense for your test wiki, but you can share it with the world if you want to). Finally, click //Create//. No need to worry about the other options for now!
 
 [img[create-th-site.png]]
 
@@ -36,7 +36,7 @@ Before we proceed, just one more thing. You probably won't care much if you lose
 
 If you want to get started learning TiddlyWiki before developing a backup strategy, that's OK -- but if you don't already have everything on your hard drive backed up on a regular schedule, go put it on your to-do list or your calendar right now to come up with a backup strategy. Then you can come back and continue with the book. If you don't know anything about backups, you can check out my [[blog post|https://controlaltbackspace.org/backup/]] about developing a strategy. Compared to losing data, it is easy, fast, and cheap!
 
-If you're using TiddlyHost, you'll need to periodically use the //Download// option next to your wiki to make a copy on your computer, and then back up your computer.
+If you're using TiddlyHost, you'll want to periodically use the //Download// option next to your wiki to make a copy on your computer, and then back up your computer.
 
 [img[download-in-tiddlyhost.png]]
 

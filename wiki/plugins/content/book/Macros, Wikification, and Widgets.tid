@@ -1,8 +1,8 @@
 caption: 6: Macros, Wikification, and Widgets
 created: 20240907014711777
-description: In which we learn the details of how TiddlyWiki processes wikitext, to help us better understand how transclusion works and work around some difficulties we experienced in the transclusion section.
+description: In which we learn the details of how TiddlyWiki processes wikitext, to help ourselves better understand how transclusion works and work around some difficulties we experienced in the Transclusion chapter.
 list: Macros Wikification [[Block Mode and Inline Mode]] [[Custom Widgets]] [[Choosing a Type of Transclusion]] [[Updated Summary of Transclusion Syntax]]
-modified: 20241001122759278
+modified: 20241013010241449
 parent: Outline
 tags: Chapter
 title: Macros, Wikification, and Widgets

@@ -1,6 +1,6 @@
 created: 20200603023508364
-description: TiddlyWiki allows fast and convenient full-text searching, although it doesn't look everywhere.
-modified: 20210409032047883
+description: TiddlyWiki allows fast and convenient full-text searching, although it doesn't look in every field of every tiddler.
+modified: 20241014124719822
 parent: Filing and Organizing
 tags: Section
 title: Searching

@@ -1,6 +1,6 @@
 created: 20210110055215195
 description: An overview of the book and where you should get started.
-modified: 20241001122111101
+modified: 20241013011306728
 parent: Front Matter
 tags: Index Section
 title: Welcome to Grok TiddlyWiki
@@ -50,7 +50,7 @@ If you're looking for one-on-one help learning TiddlyWiki or getting a wiki set 
 
 Every time I publish a new version of //Grok TiddlyWiki//, I increase the book's version number. To see what's changed in recent versions, visit [[Changes]]. You can always find the latest version at {{Metadata##project-url}}.
 
-The TiddlyWiki version indicates which version of TiddlyWiki this version of //Grok TiddlyWiki// expects you to have; I try to keep it up to date with the newest version, but if I'm behind, it should be fine to use a newer version of TiddlyWiki than listed here. In contrast, using an older version than listed might mean some things the book tells you to do mysteriously don't work, so that's not a good idea! If you have an older version currently, you can visit the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade.html]] to update your wiki to the latest version.
+The TiddlyWiki version indicates which version of TiddlyWiki this version of //Grok TiddlyWiki// expects you to have; I try to keep it up to date with the newest version, but if I'm behind, it should be fine to use a newer version of TiddlyWiki than listed here. In contrast, using an older version than listed might mean some things the book tells you to do mysteriously don't work, so that's not a good idea! If you have an older version in a wiki you're already using, you can visit the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade.html]] to update that wiki to the latest version.
 
 This is the second major version of //Grok TiddlyWiki//, aligned with TiddlyWiki 5.3.5+. Recent versions of TiddlyWiki have added major new features such as [[Procedures]], [[Functions]], and [[Custom Widgets]], to replace older features which were more difficult to learn and had more gotchas, such as [[Macros]]. This means that significant portions of GTW have been rewritten or reorganized because the recommended approach to reusing wikitext has changed. If you've used older versions of TiddlyWiki, you may wish to work through <<gtw.link-chapter-number "Transclusion">> and <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, as well as the [[Functions]] section in <<gtw.link-chapter-number "More Organizational Tools">>, to get up to speed on these newer tools.
 
