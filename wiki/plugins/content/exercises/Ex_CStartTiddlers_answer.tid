@@ -1,9 +1,9 @@
 created: 20240831223333520
-modified: 20240831225037303
+modified: 20241016124049253
 title: Ex:CStartTiddlers/answer
 type: text/vnd.tiddlywiki
 
-It turns out that calling a function with `<<angle brackets>>` always gives only the first output tiddler produced by the filter.
+It turns out that calling a function with `<<angle brackets>>` always gives only the first output tiddler produced by the filter (unlike elsewhere in TiddlyWiki, this is true even if it's placed directly within wikitext rather than as the value of an attribute).
 
 The most straightforward way to get the code snippet working as desired is by calling the function using the `function[]` operator (or the shortcut syntax) instead:
 

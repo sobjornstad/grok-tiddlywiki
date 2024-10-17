@@ -1,12 +1,12 @@
 created: 20240907015401704
 description: Tiddler fields can have parameters, just like procedures can have parameters.
-modified: 20241008024411564
+modified: 20241016122222723
 parent: Transclusion
 tags: Section
 title: Parameterizing Field Transclusions
 type: text/vnd.tiddlywiki
 
-Just like procedures can be given parameters, tiddler fields can be given parameters, giving a transclusion of that field some parts that change. To ''define the parameters of a field'', a `\parameters` pragma is placed at the start of the field. This takes a parameter list that looks and works exactly like that of a procedure. The specified parameters are made available as variables when rendering the field.
+Just like [[procedures|Procedures]] can be given parameters, tiddler fields can be given parameters, giving a [[transclusion of that field|Field Transclusions]] some parts that change. To ''define the parameters of a field'', a `\parameters` pragma is placed at the start of the field. This takes a parameter list that looks and works exactly like that of a procedure. The specified parameters are made available as variables when rendering the field.
 
 To ''specify parameters when transcluding a tiddler'', place each parameter after a single `|` at the end of the usual transclusion syntax. For instance, suppose we write a snippet tiddler `Sn:Hi`:
 
@@ -20,7 +20,7 @@ Of course, you can also do parameterized field transclusion with a `$transclude`
 
 {{Sn:HiTransclusionWidget||MagicSnippet}}
 
-Unlike procedure calls, the wikitext syntax for field transclusions doesn't allow you to use named parameters – you can only use positional parameters. However, this is easily overcome by using the `$transclude` widget instead of the wikitext syntax, as shown immediately above.
+Unlike procedure calls, the wikitext syntax for `{{field transclusions}}` doesn't allow you to use named parameters – you can only use positional parameters. However, this is easily overcome by using the `$transclude` widget instead of the wikitext syntax, as shown immediately above.
 
 
 !!! Less common options

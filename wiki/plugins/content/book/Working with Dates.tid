@@ -1,6 +1,6 @@
 created: 20210206180622120
 description: TiddlyWiki offers tooling for displaying, retrieving, and computing differences between dates.
-modified: 20240929003203109
+modified: 20241017010444959
 parent: Tips and Tricks
 tags: Section
 title: Working with Dates
@@ -27,7 +27,7 @@ Way back in [[Meeting Tiddlers]], you were given the following mysterious magic 
 
 {{Sn:MagicDateSnippet||BasicSnippet}}
 
-This ought to be easier to understand now. The `$view` widget, as mentioned in [[Hiding and Showing Things]], allows you to look at the contents of fields. It's much like [[transcluding a field|Transclusions]], but it doesn't wikify the contents; instead, it can display them verbatim or apply a variety of other formats. In this case, we've chosen the `date` option, one of the widget's most important applications. We additionally have to supply a `template`, which is a date format string, consisting of placeholders describing what components of a date should go where. In this case, it shows the day of the month, the month name, the four-digit year, and the hour, minute, and second in 12-hour format, with AM or PM listed at the end. A list of all the placeholders can be found in the [[Date Format|https://tiddlywiki.com/#DateFormat]] section of the TiddlyWiki documentation.
+This ought to be easier to understand now. The `$view` widget, as mentioned in [[Hiding and Showing Things]], allows you to look at the contents of fields. It's much like [[transcluding a field|Field Transclusions]], but it doesn't wikify the contents; instead, it can display them verbatim or apply a variety of other formats. In this case, we've chosen the `date` option, one of the widget's most important applications. We additionally have to supply a `template`, which is a date format string, consisting of placeholders describing what components of a date should go where. In this case, it shows the day of the month, the month name, the four-digit year, and the hour, minute, and second in 12-hour format, with AM or PM listed at the end. A list of all the placeholders can be found in the [[Date Format|https://tiddlywiki.com/#DateFormat]] section of the TiddlyWiki documentation.
 
 As another example, let's see on what day the `Metadata` tiddler describing the version of this book was last modified, in a long date format typical for the United States:
 

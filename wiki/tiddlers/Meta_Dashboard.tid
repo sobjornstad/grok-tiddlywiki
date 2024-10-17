@@ -1,5 +1,5 @@
 created: 20200531142851888
-modified: 20210820164513350
+modified: 20241017013924166
 tags: Meta
 title: Meta:Dashboard
 type: text/vnd.tiddlywiki
@@ -21,7 +21,7 @@ type: text/vnd.tiddlywiki
 * Emphasize terms and the most important points with sparing use of ''bold''.
 * Add icons to the tabs in the live preview, the takeaway view within each tiddler, and the wikitext reference.
 * Show relevant icons using the `<<textual-button>>` macro within the text when a button in TW is being referenced [Stéphane]
-* Added a [[Summary of Macro and Transclusion Syntax]] based on my response to [[this forum thread|https://groups.google.com/g/tiddlywiki/c/UoiZjeth-cU/m/lSbxj9OBAwAJ]], assisting with an issue that I've seen many people have.
+* Added a [[Summary of Transclusion Syntax]] based on my response to [[this forum thread|https://groups.google.com/g/tiddlywiki/c/UoiZjeth-cU/m/lSbxj9OBAwAJ]], assisting with an issue that I've seen many people have.
 * Fixed several out-of-order exercises requiring the reader to do things they hadn't learned about yet, or edit tiddlers they hadn't created yet, caused by reordering sections after writing the exercises. [Various]
 * Added horizontal rules after headings so as to break up long tiddlers better. [Various people vaguely stated they had trouble finding their place]
 * Added notes to "how to use this book" on navigating between open tiddlers and the difference between internal and external links [Stephané]

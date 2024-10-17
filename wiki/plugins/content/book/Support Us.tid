@@ -1,6 +1,6 @@
 created: 20210818143231603
 description: If you've made it this far, please consider chipping in some money or time to help the open-source projects you're using.
-modified: 20210818144726320
+modified: 20241017013451102
 parent: Appendices
 tags: Section
 title: Support Us
@@ -11,7 +11,7 @@ If you've made it this far in //Grok TiddlyWiki// and expect to continue using a
 For GTW:
 
 * ''<a href={{$:/sib/DonationLink}}>Donate to the Grok TiddlyWiki project</a>'' to support me in keeping this book up to date.
-* ''Provide feedback on the book''. In addition to using the //send feedback// link at the bottom of any section to provide targeted feedback on that section, you can send general thoughts on how well the book has worked for you to `contact@sorenbjornstad.com`.
+* ''Provide feedback on the book''. In addition to using the //send feedback// link at the bottom of any section to provide targeted feedback on that section, you can send general thoughts on how the book has worked for you to `contact@sorenbjornstad.com`.
 
 For TiddlyWiki itself:
 

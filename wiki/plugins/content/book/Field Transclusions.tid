@@ -1,6 +1,6 @@
 created: 20200530170328830
 description: Field transclusions work much like variable transclusions, but their value is tied to a field of a tiddler.
-modified: 20241010130825726
+modified: 20241016120601826
 parent: Transclusion
 tags: Section Concept
 title: Field Transclusions
@@ -49,7 +49,7 @@ In the previous section, [[The Finer Points of Procedures]] we mentioned that yo
 * <$transclude $tiddler="JaneDoe" $field="phone"/>
 ```
 
-As with the `{{curly braces syntax}}`, `$tiddler` defaults to the current tiddler and `$field` defaults to `text`.
+You can leave out one or both of the parameters if appropriate. If not supplied, `$tiddler` defaults to the current tiddler and `$field` defaults to `text`.
 
 
 !! Exercises

@@ -1,6 +1,6 @@
 created: 20200822195432205
 description: Every little bit of page formatting can be customized by adding CSS to your wiki.
-modified: 20241015025405346
+modified: 20241017011005537
 parent: Getting Technical
 prerequisite: Basic knowledge of CSS
 tags: Section
@@ -15,9 +15,9 @@ This section assumes you have basic knowledge of CSS. If you don't, and you woul
 
 You can use a `<style>` element to embed rules within the text of a tiddler. The style section can appear anywhere in the tiddler, but it's common practice to put it at the bottom.
 
-Be careful, however -- inline stylesheets are not restricted to that tiddler! If you place a broad rule such as `p { color: purple; }` in a tiddler, all paragraph text ''anywhere in the wiki'' will become purple whenever that tiddler is open, including in other tiddlers and in the sidebar. For this reason, you should normally use a class name on all rules that you define this way, and [[make sure your class name has a unique prefix|Much More Than You Wanted to Know About Scopes]] so it doesn't accidentally conflict with something used elsewhere in the wiki.
+Be careful, however -- inline stylesheets are not restricted to that tiddler! If you place a broad rule such as `p { color: purple; }` in a tiddler, all paragraph text ''anywhere in the wiki'' will become purple whenever that tiddler is being transcluded in some visible part of the interface, including in other tiddlers and in the sidebar. For this reason, you should normally use a class name on all rules that you define this way, and [[make sure your class name has a unique prefix|Much More Than You Wanted to Know About Scopes]] so it doesn't accidentally conflict with something used elsewhere in the wiki.
 
-Because of the lack of scoping, the rules in a given tiddler are guaranteed to apply to any tiddlers that transclude it (since transcluding the tiddler causes the stylesheet in it to be read); we took advantage of this in [[Creating a List of Links and Backlinks]].
+Because of the lack of scoping, the rules in a given tiddler are guaranteed to apply to any tiddlers that transclude it (since transcluding the tiddler causes the stylesheet in it to be read and applied to the whole page); we took advantage of this in [[Creating a List of Links and Backlinks]].
 
 !! Styling and classes in wikitext
 
@@ -47,7 +47,7 @@ There is a content type called `text/css`. This is natural for stylesheets, and 
 
 !! The `data-tiddler-title` and `data-tags` attributes
 
-You can apply rules to only specific tiddlers using the `data-tiddler-title` and `data-tags` data attributes, which TiddlyWiki automatically attaches to the containers each tiddler is rendered within in the story river. Note that this is matched specifically when rendering a tiddler directly within the story river – if you transclude a tiddler which has a particular title and tags into another tiddler, no container with this attribute will be created.
+You can apply rules to only specific tiddlers using the `data-tiddler-title` and `data-tags` data attributes, which TiddlyWiki automatically attaches to the containers each tiddler is rendered within in the story river. Note that this happens specifically when rendering a tiddler directly within the story river – if you transclude a tiddler which has a particular title and tags into another tiddler, no container with this attribute will be created.
 
 You can access these attributes using the [[CSS attribute selector syntax|https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors]]. You could use this, for instance, to give certain tiddlers a different font:
 

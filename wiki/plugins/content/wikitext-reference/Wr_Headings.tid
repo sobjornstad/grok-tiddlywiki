@@ -1,6 +1,6 @@
 caption: {{$:/core/images/heading-1}} Headings
 created: 20210131145939469
-modified: 20210320145007635
+modified: 20241017011831660
 tags: [[Wikitext Reference]]
 title: Wr:Headings
 type: text/vnd.tiddlywiki
@@ -11,7 +11,7 @@ Headings should be used sparingly in TiddlyWiki. If you find yourself creating c
 
 Heading 1 is usually not used (in HTML documents, it is reserved for the page title).
 
-Anything below Heading 4 is smaller than the body text and not particularly useful. If you find yourself needing anything deeper than Heading 3, you should //definitely// be splitting out into multiple tiddlers anyway. I typically try to avoid more than one level of headings within an individual tiddler.
+Anything below Heading 4 is smaller than the body text and not particularly useful. If you find yourself needing anything deeper than Heading 3, you should almost certainly be splitting into multiple tiddlers anyway. I usually try to avoid more than one level of headings within an individual tiddler.
 
 Headings are [[block-level elements|Block Mode and Inline Mode]], so you need to put a blank line between text and a following heading, or the heading will get rolled into the preceding paragraph, which is almost certainly not what you want:
 

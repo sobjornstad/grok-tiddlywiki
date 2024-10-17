@@ -1,6 +1,6 @@
 created: 20200530170256021
 description: Links tell TiddlyWiki what ideas (tiddlers) in your wiki are related to each other.
-modified: 20240925031357001
+modified: 20241016121347059
 parent: The Shape of TiddlyWiki
 tags: Concept Section
 title: Links
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 
 Links may be created within a tiddler by surrounding the name of the tiddler to link to with `[[double square brackets]]`.
 
-If you want the displayed text to be different than the target of the link (i.e., where you'll go when you click on it), you can write `[[link text|TargetTiddlerName]]` (that's a pipe `|` character separating the two parts of the link, found above the enter key on a US keyboard).
+If you want the displayed text to be different than the target of the link (i.e., where you'll go when you click on it), you can write `[[link text|TargetTiddlerName]]` (that's a //pipe// `|` character separating the two parts of the link, found above the enter key on a US keyboard).
 
 Here's an example of these two kinds of links. {{Live Examples}}
 

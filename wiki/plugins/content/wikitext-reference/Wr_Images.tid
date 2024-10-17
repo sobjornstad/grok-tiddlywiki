@@ -1,11 +1,11 @@
 caption: {{$:/core/images/picture}} Images
 created: 20210131152534431
-modified: 20210320145130516
+modified: 20241017012010146
 tags: [[Wikitext Reference]]
 title: Wr:Images
 type: text/vnd.tiddlywiki
 
-[[Image tiddlers|Images and Attachments]] can be simply displayed within other tiddlers via [[transclusion|Transclusions]]:
+[[Image tiddlers|Images and Attachments]] can be simply displayed within other tiddlers by [[transcluding the image tiddler|Field Transclusions]]:
 
 {{Sn:WikitextImageTransclusion||MagicSnippet}}
 

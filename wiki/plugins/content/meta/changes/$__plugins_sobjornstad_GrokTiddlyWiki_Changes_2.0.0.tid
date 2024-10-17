@@ -1,7 +1,7 @@
 commit: TODO
 created: 20241008030506682
 date: TODO
-modified: 20241008031853677
+modified: 20241017013358047
 tag: v2.0.0
 tags: 
 title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/2.0.0
@@ -35,6 +35,7 @@ The [[Macros]] section is also new – while there was a section called “Macro
 * All of the internal code of //Grok TiddlyWiki// has been refactored to use the new features to the greatest extent possible, so if you poke around there you will be shown modern good practices.
 * The whole book has gotten a polish pass with minor revisions for improved clarity.
 * We now recommend starting with TiddlyHost as a saving and hosting solution, rather than TiddlyDesktop.
+* I've read through the entire book and corrected a number of things that had gotten slightly out of date over the years or could be explained better.
 
 
 !!! Fixes

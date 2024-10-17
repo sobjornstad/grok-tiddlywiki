@@ -1,5 +1,5 @@
 created: 20240928014613139
-modified: 20241007231031553
+modified: 20241016123030107
 tags: 
 title: CommonTransclusionSyntax
 type: text/vnd.tiddlywiki
@@ -40,7 +40,7 @@ The following types of references work within [[wikitext|Wikitext]], as the valu
 ; `{{{ triple curly braces }}}`
 : To select one or more tiddlers using a filter, [[then transclude them|Filters and Transclusions]]. You can think of this as the “super” or “extra powerful” version of normal double-brace transclusion, since it has one extra brace.
 
-As you might have worked out from the heading “Available only within wikitext”, this form is not available inside another filter expression; if you need to nest filter expressions this way, store the results of the inner filter expression [[in a variable|Variables]] and then transclude the value of that variable into the outer filter expression.
+This form is not available inside another filter expression; if you need to nest filter expressions this way, store the results of the inner filter expression [[in a variable|Variables]] and then transclude the value of that variable into the outer filter expression.
 
 
 !! Available only within attribute values

@@ -1,11 +1,11 @@
 caption: TakeAway
 created: 20210101233014514
-modified: 20210407190938188
+modified: 20241017014430721
 tags: $:/tags/ControlPanel/SettingsTab $:/tags/ControlPanel/Settings
 title: $:/plugins/sobjornstad/TakeAway/Settings
 type: text/vnd.tiddlywiki
 
-These settings let you customize the behaviour of [[TakeAway|TakeAway Help]].
+These settings let you customize the behavior of [[TakeAway|TakeAway Help]].
 
 <div class="ta-control-panel">
 <<tabs "[all[tiddlers+shadows]prefix[$:/plugins/sobjornstad/TakeAway/Settings/]sortan[stackorder]]" default:"$:/plugins/sobjornstad/TakeAway/Settings/Review">>

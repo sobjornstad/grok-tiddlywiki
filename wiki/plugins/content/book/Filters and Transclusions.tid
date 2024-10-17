@@ -1,6 +1,6 @@
 created: 20200604030325277
 description: TiddlyWiki can transclude the output of a filter, or transclude a variable or field into a filter.
-modified: 20241007224101386
+modified: 20241016121821885
 parent: Transclusion
 tags: Section
 title: Filters and Transclusions
@@ -17,7 +17,7 @@ As we know, we can transclude the `text` field of a tiddler by placing its title
 
 {{Sn:ChapterFilterTransclusion||MagicSnippet}}
 
-(The `all[tiddlers+shadows]` step is required here and in many live examples to come because of the way //Grok TiddlyWiki// is packaged; in your own wiki, you wouldn't need this step. If you're too curious to wait for the explanation, jump ahead to [[Shadow Tiddlers]].)
+(The `all[tiddlers+shadows]` step is required here and in many live examples to&nbsp;come because of the way //Grok TiddlyWiki// is packaged; in your own wiki, you wouldn't need this step. If you're too curious to wait for the explanation, jump ahead to [[Shadow Tiddlers]].)
 
 The spaces directly inside the curly braces are not required, but they're highly recommended: if you leave them out, there are so many brackets next to each other that it is nearly impossible to tell whether you've inserted the right number of them.
 
@@ -67,7 +67,7 @@ In [[Using Variables as Attributes]], we learned that you can combine variables 
 <$widget attribute=`text and $(variable)$`/>
 ```
 
-Similarly, you can combine the result of a filter and constant text, by replacing the parentheses with braces:
+Similarly, you can combine the result of a filter and constant text, by replacing the parentheses with braces and the variable name with a filter expression:
 
 ```html
 <$widget attribute=`text and ${ [filter-expression[]] }$`/>
@@ -122,7 +122,7 @@ You can also ''transclude the result of procedure calls with parameters'' using 
 
 {{Sn:ProcedureCallTransclusion||MagicSnippet}}
 
-In <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, we'll learn how [[Wikification]] allows us to work around this issue.
+In <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, we'll learn how [[Macros]] and [[Wikification]] can make this syntax consistently useful.
 
 Curly braces or angle brackets can be used by themselves, not preceded by an operator, to directly introduce an arbitrary value into the filter pipeline. This is the equivalent of specifying a literal title with square brackets:
 

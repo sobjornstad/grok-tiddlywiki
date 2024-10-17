@@ -1,14 +1,14 @@
 created: 20200715220657649
 description: Filters can be made more complex and powerful by including more than one run.
-modified: 20241008115442120
+modified: 20241016123714639
 parent: More Organizational Tools
 tags: Section
 title: Multi-Run Filters
 type: text/vnd.tiddlywiki
 
-The last time we discussed filters in depth, back in the [[Finding Things|Filing and Organizing]] chapter, we learned that there is such a thing as a [[filter run|Using Filter Expressions]], indicated by those outer square brackets, and that you can have more than one filter run in a filter. So what do those do for us?
+The last time we discussed filters in depth, back in the [[Finding Things|Filing and Organizing]] chapter, we learned that there is such a thing as a [[filter run|Using Filter Expressions]], indicated by those outer square brackets, and that you can have more than one filter run in a filter. So what does having more than one run do for us?
 
-Essentially, they let us build up more complicated logic. With a single run, we can only find tiddlers that match //all// of a set of conditions. With multiple runs, we can combine AND, OR, and NOT conditions as much as we like, although due to the “pipeline” nature of filters, the logic works a little differently than the conventional Boolean logic used in Excel or a typical programming language.
+Essentially, it lets us build up more complicated logic. With a single run, we can only find tiddlers that match //all// of a set of conditions. With multiple runs, we can combine AND, OR, and NOT conditions as much as we like, although due to the “pipeline” nature of filters, the logic works a little differently than the conventional Boolean logic used in Excel or a typical programming language.
 
 
 !! Creating OR conditions
@@ -75,7 +75,7 @@ When a run finishes, TiddlyWiki ''dominantly appends'' the output from the curre
 
 !! Run prefixes
 
-If you don't want the standard dominant-append behavior, you can place the character `=`, `+`, `-`, or `~` (or the equivalent named prefixes `:all`, `:and`, `:except`, and `:else`), directly in front of the filter run, e.g., `=[tag[Meeting]]`. These work as follows:
+Dominant appending is the default way to combine multiple runs. But you can change this behavior by placing the character `=`, `+`, `-`, or `~` (or the equivalent named prefixes `:all`, `:and`, `:except`, and `:else`), directly in front of the second filter run, e.g., `[tag[Journal]] =[tag[Meeting]]`. These work as follows:
 
 ; `=` or `:all`
 : Just ''slap the results of the runs together'', rather than performing deduplication by dominantly appending; `A B C` and `B C D` results in `A B C B C D`, rather than the default of `A B C D`.
@@ -114,7 +114,7 @@ There are a number of other prefixes, added in more recent versions, that are on
 : Apply this filter run to each tiddler in the accumulated results in turn, and ''sort the accumulated results by the key produced by this filter expression''. That is, the filter run followed by `:sort` transforms each input into the form needed for sorting. This is the same thing as the `sortsub` operator, but it's often easier to use because you don't have to define a separate variable containing the sort filter.
 
 ; `:then` and `:else`
-: These work just like the `then` and `else` [[filter operators|Common Filter Operators]], except they apply to an entire run rather than an individual tiddler in the filter pipeline: if the filter has at least one result, all the results are replaced with the results of the `:then` run, and if it has no results, so with the `:else` run.
+: These work just like the `then` and `else` [[filter operators|Common Filter Operators]], except they apply to an entire run rather than an individual tiddler in the filter pipeline: if there's at least one tiddler in the accumulated results, the accumulated results are replaced with the results of the `:then` run, and if the accumulated results were empty, so with the `:else` run.
 
 You can read more about these run prefixes [[in the documentation|https://tiddlywiki.com/#Filter%20Expression]].
 

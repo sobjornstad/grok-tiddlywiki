@@ -1,11 +1,11 @@
 caption: {{$:/core/images/transcludify}} Transclusions
 created: 20210131145843458
-modified: 20240928200835440
+modified: 20241017012125083
 tags: [[Wikitext Reference]]
 title: Wr:Transclusions
 type: text/vnd.tiddlywiki
 
-[[Field Transclusions]] of [[fields|Fields]], [[variables|Variables]], [[procedures|Procedures]], [[functions|Functions]], and [[macros|Macros]] are an essential part of TiddlyWiki. Here's the standard syntax for including bits and pieces from other places in a tiddler.
+[[Transclusions|Transclusion]] of [[fields|Fields]], [[variables|Variables]], [[procedures|Procedures]], [[functions|Functions]], and [[macros|Macros]] are an essential part of TiddlyWiki. Here's the standard syntax for including bits and pieces from other places in a tiddler.
 
 See [[Updated Summary of Transclusion Syntax]] for a more detailed treatment.
 
@@ -33,7 +33,7 @@ See [[Updated Summary of Transclusion Syntax]] for a more detailed treatment.
     <td>{{Sn:WikitextCurrentTransclusionTemplate||MagicSnippet}}</td>
   </tr>
   <tr>
-    <td>Transclude a tiddler with parameters</td>
+    <td>Transclude a tiddler [[with parameters|Parameterizing Field Transclusions]]</td>
     <td>
 
 ```html

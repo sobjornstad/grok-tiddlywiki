@@ -1,7 +1,7 @@
 created: 20201124152747833
 description: TiddlyWiki converts wikitext into HTML for display by //wikifying// it. This process may sometimes need to be triggered manually.
 imageurl: https://upload.wikimedia.org/wikipedia/commons/b/bb/Kittyply_edit1.jpg?download
-modified: 20240923231952196
+modified: 20241016131345928
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Wikification
@@ -13,13 +13,13 @@ type: text/vnd.tiddlywiki
 
 ''Wikification'', in TiddlyWiki, is the process of taking wikitext and turning it into pure HTML that a browser can read directly (or, occasionally, into plain text or some other format). This includes processing markup like `//italics//`, rendering widgets, calling procedures, transcluding other tiddlers, and so on.
 
-Wikification can be understood as a sort of preprocessing or pre-rendering: first TiddlyWiki renders the wikitext into HTML, then your browser renders the HTML on your screen.
+Wikification can be understood as a sort of pre-processing or pre-rendering: first TiddlyWiki renders the wikitext into HTML, then your browser renders the HTML on your screen.
 
 !! When wikification happens
 
-Obviously, processing and formatting wikitext is one of the most essential functions of TiddlyWiki. It happens anytime a tiddler is displayed. However, just because you put some wikitext somewhere in TiddlyWiki does not guarantee it will be wikified.
+Obviously, processing and formatting wikitext is one of the most essential functions of TiddlyWiki. It happens any time a tiddler is displayed. However, just because you put some wikitext somewhere in TiddlyWiki does not guarantee it will be wikified.
 
-In general, ''anytime a chunk of wikitext ends up in the body of a tiddler that is being displayed'', TiddlyWiki tries to wikify it. The chunk might be the entire text of the tiddler or the result of a single transclusion (in the most general sense, including field transclusions, variable transclusions, procedure calls, macro calls, and transcluded filter expressions). If the result of wikifying one of these things still contains wikifiable wikitext -- for instance, the result of wikifying the `{{tiddler!!field}}` transclusion syntax is some wikitext contained in the `field` field -- TiddlyWiki will try to wikify that as well. It will repeat this step until there is no more unwikified wikitext, or until it detects that it has gotten stuck in an infinite loop (recall [[Ex:SelfTransclusion]]).
+In general, ''any time a chunk of wikitext ends up in the body of a tiddler that is being displayed'', TiddlyWiki tries to wikify it. The chunk might be the entire text of the tiddler or the result of a single transclusion (in the most general sense, including field transclusions, variable transclusions, procedure calls, macro calls, and transcluded filter expressions). If the result of wikifying one of these things still contains wikifiable wikitext -- for instance, the result of wikifying the `{{tiddler!!field}}` transclusion syntax is some wikitext contained in the `field` field -- TiddlyWiki will try to wikify that as well. It will repeat this step until there is no more unwikified wikitext, or until it detects that it has gotten stuck in an infinite loop (recall [[Ex:SelfTransclusion]]).
 
 However, there is one huge exception: when you use a variable or field transclusion as a parameter to an HTML or widget attribute, ''the result of this transclusion is //not// wikified''. In other words, TiddlyWiki doesn't attempt to repeatedly wikify the result of the initial transclusion like it does with body text; it does it exactly once and then stops.
 
@@ -91,7 +91,7 @@ You can fix this by manually wikifying:
 
 {{Sn:AttributeParameterSubstitutionWikified||MagicSnippet}}
 
-If you use a [[macro|Macros]], you can use text substitution to get the result you want, and this is one of the key scenarios in which macros may remain more convenient than procedures:
+If you use a [[macro|Macros]], you can also use text substitution to get the result you want, and this is one of the key scenarios in which macros may remain more convenient than procedures:
 
 {{Sn:AttributeParameterSubstitutionMacro||MagicSnippet}}
 

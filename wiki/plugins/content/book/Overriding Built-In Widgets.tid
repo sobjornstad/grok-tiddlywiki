@@ -1,6 +1,6 @@
 created: 20240928021442847
 description: Write custom widgets that get transcluded in place of TiddlyWiki's built-in widgets.
-modified: 20241013010717370
+modified: 20241017004756313
 parent: Looking Under the Hood
 tags: Section
 title: Overriding Built-In Widgets
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 When we discussed [[Custom Widgets]] in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>, we talked about how you can create new widgets. But you can also ''replace a built-in widget'' with a custom widget. This obviously must be done with caution, since it can have effects that reach deep into the core code of TiddlyWiki, but it's a powerful feature that can be a very convenient way to add custom behaviors. To achieve this, we simply define a new `\widget` with the same name as the one we want to override (in this case, you don't need, and indeed can't have, a `.` in the name of the custom widget, like you normally do).
 
-As a silly example, suppose we want to completely inhibit internal linking. We can override the `$link` widget to ignore all of its parameters and only render the link text:
+As a silly example, suppose we want to completely inhibit internal linking. We can override the `$link` widget to ignore all of its parameters and only render the link text in the body of the widget:
 
 {{Sn:LinkInhibition||MagicSnippet}}
 
@@ -26,7 +26,7 @@ The `$type` parameter of the `$genesis` widget is the name of the widget we're t
 
 Try hovering over the links above – you'll see the descriptions appear as tooltips!
 
-//Word to the wise//: When overriding a built-in widget, ''always test your changes within a single tiddler'' and make sure they work as expected prior to tagging the new version with $:/tags/Global. If you make a mistake and override a widget critical to TiddlyWiki's operation with a broken version, you may find yourself unable to get back into the editor to restore the default behavior! (If you //do// make such a mistake, you can manually edit the HTML file or tiddler file in a text editor to remove the faulty code and restart TiddlyWiki – this will not cause permanent data loss, it'll just be annoying.)
+//Word to the wise//: When overriding a built-in widget, ''always test your changes within a single tiddler'' and make sure they work as expected prior to tagging the new version with `$:/tags/Global`. If you make a mistake and override a widget critical to TiddlyWiki's operation with a broken version, you may find yourself unable to get back into the editor to restore the default behavior! (If you //do// make such a mistake, you can manually edit the HTML file or tiddler file in a text editor to remove the faulty wikitext and restart TiddlyWiki – this will not cause permanent data loss, it'll just be annoying.)
 
 
 !! Exercises

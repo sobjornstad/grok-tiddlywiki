@@ -1,6 +1,6 @@
 created: 20200822201508518
 description: External tools can access the data in your TiddlyWiki by reading files and calling a Node.js CLI.
-modified: 20240927011226072
+modified: 20241017011525566
 parent: Getting Technical
 prerequisite: A basic background in shell scripting or some other scripting language like Python
 tags: Section
@@ -61,7 +61,7 @@ But it doesn't -- the first command sets the wiki to load but doesn't persist th
 
 !! Editing wiki files
 
-If you're going to edit wiki files on disk, rather than just reading them, be aware that you will need to ''restart the server to pick up the changes'', as it assumes it is the exclusive user of the folder while it's running and does not watch files on disk. The plugin [[Bob|https://github.com/OokTech/TW5-Bob]] adds listening functionality along with some other helpful features and is worth a look if you plan to do this more than occasionally,
+If you're going to edit wiki files on disk, rather than just reading them, be aware that you will need to ''restart the server to pick up the changes'', as it assumes it is the exclusive user of the folder while it's running and does not watch files on disk. The plugin [[Bob|https://github.com/OokTech/TW5-Bob]] adds listening functionality along with some other helpful features and is worth a look if you plan to do this more than occasionally.
 
 
 !! Takeaways

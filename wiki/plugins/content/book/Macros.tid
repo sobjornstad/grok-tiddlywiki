@@ -1,6 +1,6 @@
 created: 20200603011212616
 description: Macros are an older version of procedures that handle their parameters differently.
-modified: 20241008025347185
+modified: 20241016130309100
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Macros
@@ -16,7 +16,7 @@ Macro definitions work just like procedure and function definitions; they use th
 
 {{Sn:BrokenWikipediaLinkMacro||MagicSnippet}}
 
-But wait -- why is there no output?
+But wait -- why is the link missing from the output?
 
 
 !! Macro parameter handling
@@ -48,7 +48,7 @@ You may occasionally see text substitution called //textual substitution// or ju
 
 !! Text substitution with variables
 
-Within a macro, you can also perform text substitution on a variable that is not a parameter of the macro using the `$(parenthesized dollar signs)$` syntax. You may notice this syntax is familiar -- it's the same syntax used within [[substituted attribute values|Using Variables as Attributes]] to combine variables with other text -- and it does exactly the same thing (performs text substitution using the value of the variable). But in a macro, you can do this outside of backticks.
+Within a macro, you can also perform text substitution on a variable that is not a parameter of the macro using the `$(parenthesized dollar signs)$` syntax. You may notice this syntax is familiar -- it's the same syntax used within [[substituted attribute values|Using Variables as Attributes]] to combine variables with other text -- and it does exactly the same thing (performs text substitution using the value of the variable). But in a macro, you can do this anywhere, not just within backticks.
 
 You might be asking, why would we want to use a variable rather than a parameter to change the behavior of a macro? Generally, if we have the choice, we don't; it's clearer what information the macro is using when we use parameters, and it's not a good thing when macros do something surprising. (See the [[Principle of Least Astonishment|https://en.wikipedia.org/wiki/Principle_of_least_astonishment]].) However, there are some cases where it saves us a lot of trouble – the first exercise will be an example of that. (Hint, hint.)
 

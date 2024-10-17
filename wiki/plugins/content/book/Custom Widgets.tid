@@ -1,6 +1,6 @@
 created: 20240901044700214
 description: Custom widgets are a special type of procedure that imitates the syntax of built-in widgets.
-modified: 20241008025440618
+modified: 20241017002859774
 parent: Macros, Wikification, and Widgets
 tags: Section Concept
 title: Custom Widgets
@@ -20,7 +20,7 @@ Here's a very simple example:
 
 {{Sn:BoldItalicsWidget||MagicSnippet}}
 
-By default, custom widgets, like procedures and functions, are scoped to the tiddler in which they appear, and they can be (and most often are) made global in the same way as procedures, functions, and macros, by tagging their tiddler with [[$:/tags/Global]].
+By default, custom widgets, like procedures and functions, are scoped to the tiddler in which they appear, and they can be (and most often are) made global in the same way as procedures, functions, and macros, by tagging their tiddler with `$:/tags/Global`.
 
 
 !! Using the widget body

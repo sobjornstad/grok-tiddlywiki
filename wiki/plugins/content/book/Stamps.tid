@@ -1,6 +1,6 @@
 created: 20200718203354489
 description: Stamps allow quick insertion of commonly-used snippets of text into tiddlers while editing.
-modified: 20241010125724708
+modified: 20241017003823148
 parent: Looking Under the Hood
 tags: Section
 title: Stamps
@@ -11,6 +11,8 @@ type: text/vnd.tiddlywiki
 Stamps are tiddlers (what else?) tagged `$:/tags/TextEditor/Snippet`. Such tiddlers appear on the <<textual-button "stamp">> stamp button on the edit toolbar under the name in their `caption` field, and clicking them inserts the text of the relevant snippet into the editor.
 
 It's also possible to make a stamp take some selected text and add a prefix or suffix to it, rather than just inserting a chunk of new text. For this and more, see the [[documentation on stamps|https://tiddlywiki.com/#Using%20Stamp]].
+
+!! Exercises
 
 {{Ex:WikipediaLinkSnippet||ExerciseTemplate}}
 

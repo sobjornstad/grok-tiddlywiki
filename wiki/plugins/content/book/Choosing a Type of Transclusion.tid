@@ -1,6 +1,6 @@
 created: 20200605153728555
 description: All types of transclusion are fundamentally similar, and their roles overlap, but a few guidelines may help you decide when to use one over the other.
-modified: 20241010125856087
+modified: 20241017003011635
 parent: Macros, Wikification, and Widgets
 tags: Section
 title: Choosing a Type of Transclusion
@@ -23,7 +23,7 @@ We should start out by noting that there aren't many wrong answers, and to a lar
 
 The main question here is ''what makes the most sense semantically''. That is, even though the two methods have the same effect, one might feel easier for a person to read and understand. For instance, the [[Summary of Transclusion Syntax]] and [[Updated Summary of Transclusion Syntax]] in //Grok TiddlyWiki// are both made almost entirely of a parameterized transclusion of another tiddler called `CommonTransclusionSyntax`, the parameter indicating how many of the features we've talked about so far. I could have implemented `CommonTransclusionSyntax` as a procedure, but that would feel less natural, since it feels more like we're including another document/section than that we're getting a snippet of text. On the other hand, implementing our `wikipediaLink` procedure as a transclusion of a tiddler would feel unnatural; there isn't really any //content// in a link to a Wikipedia page, so a transclusion that makes it look like you're getting legitimate content from your wiki is confusing.
 
-Another case where procedures are often more convenient than parameterized field transclusions or templates is when you want to ''create several closely related snippets'', especially snippets that refer to each other. For instance, there are two related global procedures in //Grok TiddlyWiki//, `gtw.link-chapter-name` and `gtw.link-chapter-number`. These can be used separately in wikitext, and `link-chapter-number` calls `link-chapter-name` to achieve its goal. It's handy to be able to keep these in the same tiddler ($:/sib/ReferenceMacros) and be able to see their definitions right next to each other, rather than having them spread over several tiddlers.
+Another case where procedures are often more convenient than parameterized field transclusions or templates is when you want to ''create several closely related snippets'', especially snippets that refer to each other. For instance, there are two related global procedures used internally by //Grok TiddlyWiki//, `gtw.link-chapter-name` and `gtw.link-chapter-number`. These can be used separately in wikitext, and `link-chapter-number` calls `link-chapter-name` to achieve its goal. It's handy to be able to keep these in the same tiddler ($:/sib/ReferenceMacros) and be able to see their definitions right next to each other, rather than having them spread over several tiddlers.
 
 Of course, you can put a procedure, function, macro, etc., inside a tiddler that you transclude, if that proves the easiest way to achieve something.
 

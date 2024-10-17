@@ -1,9 +1,9 @@
 created: 20240829230053105
-modified: 20240901033640169
+modified: 20241016122822459
 tags: 
 title: Sn:WhenPigsFlyQuotation
 type: text/vnd.tiddlywiki
 
 <% if "[<storyTiddler>match[When Pigs Fly]]" %>
-  Pigs are flying – maybe you made a syntax error?
+  Pigs are flying – perhaps you made a syntax error?
 <% endif %>

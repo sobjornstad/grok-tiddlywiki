@@ -1,12 +1,12 @@
 created: 20201121231218670
 description: The variety of ways you can save and store your wiki.
-modified: 20240829120636958
+modified: 20241017013021120
 parent: Appendices
 tags: Section
 title: Options for Saving and Hosting Your Wiki
 type: text/vnd.tiddlywiki
 
-In [[Installing TiddlyWiki]], we decided to use TiddlyHost to save and manage our wiki. However, once you have the hang of TiddlyWiki, TiddlyHost is not necessarily the best fit. For instance, it requires you to entrust your data to a couple members of the TiddlyWiki community, and backing up requires manual actions. Or you might be frustrated with the limitations on [[Images and Attachments]] in a single-file wiki and want to store your wiki as a folder of individual tiddlers and host it on Node.js.
+In [[Installing TiddlyWiki]], we decided to use TiddlyHost to save and manage our wiki. TiddlyHost is easy to set up and convenient to use. However, once you have the hang of TiddlyWiki, TiddlyHost may not be the best fit for you anymore. For instance, it requires you to entrust your data to a couple members of the TiddlyWiki community, and backing up requires manual actions. Or you might be frustrated with the limitations on [[Images and Attachments]] in a single-file wiki and want to store your wiki as a folder of individual tiddlers and host it on Node.js.
 
 If you'd like to explore other options, you can find a list of all the available savers in the [[Getting Started|https://tiddlywiki.com/#GettingStarted]] tiddler on tiddlywiki.com. Several particularly interesting ones:
 

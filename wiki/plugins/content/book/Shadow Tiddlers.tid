@@ -1,6 +1,6 @@
 created: 20200530170355218
 description: Shadow tiddlers are tiddlers that are provided by plugins; they can be overridden if you want to customize a plugin.
-modified: 20240612032624560
+modified: 20241017003534585
 parent: Looking Under the Hood
 tags: Concept Section
 title: Shadow Tiddlers
@@ -25,7 +25,7 @@ When editing an overridden shadow tiddler, if you click the very rightmost drop-
 
 !! The dangers of over-overriding
 
-Before you get too excited about overriding shadow tiddlers, beware: if you override too many, ''it may become very difficult to upgrade your wiki and your plugins''. If a new version of the plugin changes the tiddler you overrode, you won't see those changes, since your overridden shadow tiddler prevents TiddlyWiki from ever looking at the plugin's new version. In this case, you may experience odd behavior, since the newly upgraded plugin relies on a new version of a tiddler that it doesn't have access to, and you'll have to manually pick out the changes and merge together your two versions to fix the problem.
+Before you get too excited about overriding shadow tiddlers, beware: if you override too many, ''it may become very difficult to upgrade your wiki and your plugins''. If a new version of the plugin changes the tiddler you overrode, you won't see those changes, since your overridden shadow tiddler prevents TiddlyWiki from ever looking at the plugin's new version. In this case, you may experience odd behavior, since the newly upgraded plugin relies on changes in that overridden tiddler that aren't active in your wiki, and you'll have to manually pick out the changes and merge together your two versions to fix the problem.
 
 Doing this for a handful of targeted shadow tiddlers is no big deal. But if you override large portions of your wiki, you're going to be in for a world of hurt! So it's worth taking a moment before editing a shadow tiddler to be sure there's no other way of making the changes you're looking for (perhaps there's actually a mechanism designed for customizing the thing you're trying to change). People discussing solutions on the TiddlyWiki forums will sometimes say things like, “No shadow tiddlers were harmed in this customization,” meaning nothing had to be overridden.
 
@@ -36,9 +36,9 @@ Most configuration settings are also internally handled by overriding shadow tid
 
 All shadow tiddlers are listed in the ''Shadows'' view under the ''More'' sidebar tab, and you can search for shadow tiddlers on the ''Shadows'' tab of Advanced Search.
 
-You can identify shadow tiddlers in the ''Shadows'' view, the ''Explorer'' view, and the shadows tab of Advanced Search because they're shown in a bold font. If you've overridden a shadow tiddler, it will show in a normal font. (//Grok TiddlyWiki// disables this mechanism because it uses shadow tiddlers for much of its content, so look in another wiki if you want to see how this works.)
+You can identify shadow tiddlers in the ''Shadows'' view, the ''Explorer'' view, and the Shadows tab of Advanced Search because they're shown in a bold font. If you've overridden a shadow tiddler, it will show in a normal font. (//Grok TiddlyWiki// disables this mechanism because it uses shadow tiddlers for much of its content, so look in another wiki if you want to see how this works.)
 
-A filter for `[is[shadow]]` will bring up a list of ''only the overridden shadow tiddlers''; this can be useful if you want to see a list of your customizations in a given wiki, or if you upgrade your TiddlyWiki to the latest version, something's not working right, and you need to know what shadows you might need to manually merge.
+A filter for `[is[shadow]]` will bring up a list of ''only the overridden shadow tiddlers''; this can be useful if you want to see a list of your customizations in a given wiki, or if you upgrade your TiddlyWiki to the latest version, something's not working right, and you need to know what shadow tiddlers you might need to manually merge.
 
 By default, filters do not match shadow tiddlers that have not been overridden. Up until now, we've been lying and saying that //all// the tiddlers in the wiki get put in the left end of a filter run. Actually, it is only all non-shadow tiddlers: the input of a filter run that doesn't start with an `all[something]` filter step is `all[tiddlers]`, which explicitly excludes shadow tiddlers (unless they have been overridden). If you want to see shadow tiddlers, both overridden and not overridden, start your filter run with `all[shadows]`. We actually witnessed this behavior in the exercise [[Ex:AlphabeticallyLastDescription]], all the way back in [[Common Filter Operators]], but we didn't have the context to explain it at the time.
 

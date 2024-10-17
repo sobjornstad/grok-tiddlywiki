@@ -1,6 +1,6 @@
 created: 20200716024459314
 description: Content other than wikitext can be embedded into a TiddlyWiki, or stored outside of it and referenced in a variety of ways.
-modified: 20241010125809294
+modified: 20241016125526700
 parent: More Organizational Tools
 tags: Section
 title: Images and Attachments
@@ -17,9 +17,9 @@ This part is slick. Want a file to be part of your TiddlyWiki? Just ''drag and d
 
 This works for text, images, PDFs, and even binary files (though this last option is usually a bad idea, as TiddlyWiki can lock up if you try to open the tiddler for a large binary file, and you won't be able to read it anyway). You can import multiple files at once by dragging multiple files; you'll have the chance to review and uncheck any that you don't want before you import.
 
-You can also ''copy content between TiddlyWikis'' this way. For instance, if you wanted a copy of the [[Classifying Tags]] section in your wiki, you could simply grab that link and drag and drop it right onto your wiki window (this doesn't consistently work, however, if you don't have both wikis open in the same web browser -- you may have to try another browser in some cases).
+You can also ''copy content between TiddlyWikis'' this way. For instance, if you wanted a copy of the [[Classifying Tags]] section in your wiki, you could simply grab that link and drag and drop it right onto your wiki window (for this to consistently work, both the source and the destination wiki should be open in the same web browser, e.g., Chrome).
 
-If it's easier than dragging and dropping, you can also click the <<textual-button "import-button">> ''Import'' button on the ''Tools'' tab of the sidebar to select a file to import. In some browsers, it may be tricky to get drag-and-drop to work, but the Import button will almost always work fine.
+If it's easier than dragging and dropping, you can also click the <<textual-button "import-button">> ''Import'' button on the ''Tools'' tab of the sidebar to select a file to import.
 
 Go ahead and import a file or two into your wiki, including at least one image so we can take a look at that below.
 
@@ -28,9 +28,9 @@ Go ahead and import a file or two into your wiki, including at least one image s
 
 Once you have an image in your wiki, you probably want to know how to include it in a tiddler. Let's create a new tiddler called `ImageTest` for this purpose.
 
-The easiest way to include it is to simply [[transclude|Transclusions]] it. So if the image tiddler is called `image.png`, use `{{image.png}}`.
+The easiest way to include it is to simply [[transclude|Field Transclusions]] it. So if the image tiddler is called `image.png`, use `{{image.png}}`.
 
-For more control over the image, you can use a special link syntax, `[img [image.png]]` (notice the space before the second `[` -- this is not important yet, but is required when including attributes, as described in the next sentence). In between the `img` and the opening square bracket, you can include `width=200` and/or `height=200` attributes to size the image, replacing `200` with however many pixels you want to use for the image. Unlike most places in wikitext syntax, it's also possible to transclude a field or variable containing the size, e.g.:
+For more control over the image, you can use a special link syntax, <nobr><code>[img&nbsp;[image.png]]</code></nobr> (notice the space before the second `[` -- this is not important yet, but is required when including attributes, as described in the next sentence). In between the `img` and the opening square bracket, you can include `width=200` and/or `height=200` attributes to size the image, replacing `200` with however many pixels you want to use for the image. Unlike most places in wikitext syntax, it's also possible to transclude a field or variable containing the size, e.g.:
 
 ```html
 [img width={{MyFavoriteImageWidth}} [image.png]]
@@ -53,9 +53,10 @@ Aside from this automatic insertion of appropriate wikitext markup, directly add
 
 !! The problem with TiddlyWiki attachments
 
-Here's the essential problem with all this: in single-file TiddlyWikis, ''anything you attach to your wiki gets embedded in the file''. That's no big deal if you only add a few small images or documents to your wiki, but if you start adding tens or dozens of large images, that file will balloon in size. And that's a big problem, because //every time TiddlyWiki saves//, it makes a new copy of the file for backup purposes. If your wiki is 100 MB, and you save your wiki just 20 times, you're now using 2 GB of space on your hard drive. Plus, it takes a long time to write a 100 MB file to your hard drive or load it into the browser, so performance will start to slow down.
+Here's the essential problem with all this: in single-file TiddlyWikis, ''anything you attach to your wiki gets embedded in the file''. That's no big deal if you only add a few small images or documents to your wiki, but if you start adding tens or dozens of large images, that file will balloon in size. That's a big problem for at least two reasons:
 
-You can reduce the number of backups saved by various means, but that only hides the problem for longer; eventually your wiki is still going to get really big.
+* If your wiki is stored on the web, e.g., at TiddlyHost, every time you open it, you have to download the entire file, which may take quite a while depending on the speed of your internet connection.
+* With [[many savers|Options for Saving and Hosting Your Wiki]], every time TiddlyWiki saves, it makes a new copy of the file for backup purposes. If your wiki is 100 MB, and you save your wiki just 20 times, you're now using 2 GB of space on your hard drive. You can reduce the number of backups saved by various means, but that only hides the problem for longer; eventually your wiki is still going to get really big.
 
 (For the curious, text is so much smaller than images that serious difficulties are unlikely. You would have to write over 16 million average-length words of English, or 32,000 densely filled pages, to reach 100 MB of text. If you write 3 pages every day, it will still take you 30 years to write that much.)
 

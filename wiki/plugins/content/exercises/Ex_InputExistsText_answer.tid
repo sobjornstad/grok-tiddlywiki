@@ -1,5 +1,5 @@
 created: 20200718215113479
-modified: 20200718215113806
+modified: 20241017004242594
 tags: Answer
 title: Ex:InputExistsText/answer
 type: text/vnd.tiddlywiki
@@ -8,8 +8,9 @@ type: text/vnd.tiddlywiki
 Go to Tiddler:
 <$edit-text tiddler="$:/temp/goto" tag="input" default=""/>
 <$button to={{$:/temp/goto}}>Go</$button>
-<$list filter="[{$:/temp/goto}is[tiddler]]"
-       emptyMessage="""<span style="color: red;">Not found.</span>""">
+<% if [{$:/temp/goto}is[tiddler]] %>
   <span style="color:green;">Exists!</span>
-</$list>
+<% else %>
+  <span style="color: red;">Not found.</span>
+<% endif %>
 ```

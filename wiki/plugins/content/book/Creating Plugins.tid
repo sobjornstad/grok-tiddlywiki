@@ -1,6 +1,6 @@
 created: 20201124224911613
 description: You can share your custom TiddlyWiki tools with other wikis and users by extracting them into plugins.
-modified: 20220103160555366
+modified: 20241017011414083
 parent: Getting Technical
 tags: Section
 title: Creating Plugins
@@ -8,12 +8,12 @@ type: text/vnd.tiddlywiki
 
 If you've developed some functionality in [[System Tiddlers]] in your wiki that you think others might get some use out of, you may wish to ''package them'' as a [[plugin|Plugins]] to make them easier to distribute.
 
-(Actually, you can distribute //any// content in plugins, system tiddlers or not. Plugins are rarely used for anything other than common wiki functionality, but you might be able to come up with some creative uses. For instance, //Grok TiddlyWiki// distributes most of its content as a plugin. This takes advantage of the [[shadowing|Shadow Tiddlers]] mechanism to allow users to update their book by importing a new version while leaving any changes they may have made to their copy in place.)
+(Actually, you can distribute //any// content in plugins, system tiddlers or not. Plugins are rarely used for anything other than common wiki functionality, but you might be able to come up with some creative uses. For instance, //Grok TiddlyWiki// distributes most of its content as a plugin. This takes advantage of the [[shadowing|Shadow Tiddlers]] mechanism to allow readers to update their books by importing a new version while leaving any changes they may have made in place.)
 
 
 !! Folder structure and metadata
 
-Plugin development is usually more convenient on the Node.js version of TiddlyWiki, so begin by [[installing that|https://tiddlywiki.com/#GettingStarted%20-%20Node.js]] if you don't already have it. (If you don't want to use Node.js, a plugin has recently come out that lets you export plugins from within a single-file wiki. The resource links at the bottom of this section have more information.)
+Plugin development is usually more convenient on the Node.js version of TiddlyWiki, so begin by [[installing that|https://tiddlywiki.com/#GettingStarted%20-%20Node.js]] if you don't already have it. (If you don't want to use Node.js, you can use the [[Tinka|https://tinkaplugin.github.io/]] plugin. Yes, it's a plugin that helps you create plugins.)
 
 ''Create a new folder wiki'' to house your plugin. You'll use this wiki to document the features of the plugin as well.
 

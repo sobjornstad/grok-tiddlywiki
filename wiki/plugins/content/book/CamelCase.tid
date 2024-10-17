@@ -1,6 +1,6 @@
 created: 20200822214806325
 description: Whether you should use CamelCase titles, what makes something CamelCase, and how you can get rid of CamelCase linking.
-modified: 20240614034241661
+modified: 20241017012944580
 parent: Appendices
 tags: Section
 title: CamelCase
@@ -51,7 +51,7 @@ Fortunately, there's an easy fix in this situation. Just insert the following pr
 \rules except wikilink
 ```
 
-Note that like any other pragma, this must go at the very beginning of your tiddler. If other lines come before it, they must be empty lines, [[comments|Comments]], or other pragmas (e.g., `\define` or `\import`). Otherwise, the text `\rules except wikilink` will appear literally.
+As with any other pragma, this must go at the beginning of your tiddler. If other lines come before it, they must be empty lines, [[comments|Comments]], or other pragmas (e.g., `\procedure` or `\import`). Otherwise, the text `\rules except wikilink` will appear literally.
 
 
 !! Takeaways

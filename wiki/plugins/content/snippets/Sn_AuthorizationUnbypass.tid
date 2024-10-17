@@ -1,13 +1,13 @@
 created: 20210207224335516
-modified: 20210207224233617
+modified: 20241016130910712
 tags: 
 title: Sn:AuthorizationUnbypass
 type: text/vnd.tiddlywiki
 
 \define checkAuthorization(password)
-<$list filter="[<__password__>match{$:/config/SecretPasswordExample}]">
+<% if [<__password__>match{$:/config/SecretPasswordExample}] %>
   The user is authorized.
-</$list>
+<% endif %>
 \end
 
 <<checkAuthorization "]">>
