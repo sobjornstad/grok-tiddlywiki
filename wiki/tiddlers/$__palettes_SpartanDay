@@ -10,7 +10,7 @@ button-border: <<colour tag-background>>
 code-background: #ececec
 code-border: #ececec
 code-foreground: 
-dirty-indicator: #c80000
+dirty-indicator: #ff4600
 download-background: <<colour primary>>
 download-foreground: <<colour background>>
 dragger-background: <<colour foreground>>
