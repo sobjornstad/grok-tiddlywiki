@@ -1,6 +1,6 @@
 created: 20210206214220001
 description: //Grok TiddlyWiki// exists only because of the efforts of many people.
-modified: 20241007122944418
+modified: 20241017123603407
 parent: Appendices
 tags: Section
 title: Acknowledgments
@@ -8,6 +8,7 @@ type: text/vnd.tiddlywiki
 
 Thanks to
 Diego M.,
+Don Gore,
 Mateusz Wilczek,
 Mohammad Rahmani,
 Jennifer Bjornstad,
