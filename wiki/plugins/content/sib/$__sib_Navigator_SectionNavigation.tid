@@ -1,6 +1,6 @@
 created: 20210124164801589
 list-before: $:/sib/Navigator/Related
-modified: 20240727223135707
+modified: 20241017021652514
 tags: $:/tags/ViewTemplate
 title: $:/sib/Navigator/SectionNavigation
 type: text/vnd.tiddlywiki
@@ -125,6 +125,7 @@ type: text/vnd.tiddlywiki
     [[Outline]]
   <% endif %>
 </div>
+<% if [gtw.is-not-static-edition[]] %>
 <div style="text-align: center; padding-top: 0.2em;">
   <<sendFeedbackLink
     icon:"{{$:/core/images/mail}}"
@@ -133,6 +134,7 @@ type: text/vnd.tiddlywiki
 <div style="padding-top: 0.2em;">
   {{||$:/sib/Navigator/Related}}
 </div>
+<% endif %>
 
 </$let>
 

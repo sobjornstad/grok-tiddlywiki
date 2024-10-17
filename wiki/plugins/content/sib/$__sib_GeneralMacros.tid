@@ -1,10 +1,12 @@
 created: 20210320143048952
-modified: 20241013020856453
+modified: 20241017021637675
 tags: $:/tags/Macro
 title: $:/sib/GeneralMacros
 type: text/vnd.tiddlywiki
 
 \whitespace trim
+
+\function gtw.is-not-static-edition() [<renderingStatic>!match[yes]]
 
 \procedure textual-button(imageName)
   <span class="gtw-textual-button">
