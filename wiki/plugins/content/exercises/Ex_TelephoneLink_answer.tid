@@ -27,7 +27,7 @@ Another popular (and more flexible) option is to access the values needed as //v
 ```html
 \define phonelink() tel:$(phonenum)$
 <$let phonenum={{!!phone}}>
-	<a href=<<phonelink>>>Call {{!!title}}</a>
+  <a href=<<phonelink>>>Call {{!!title}}</a>
 </$let>
 ```
 

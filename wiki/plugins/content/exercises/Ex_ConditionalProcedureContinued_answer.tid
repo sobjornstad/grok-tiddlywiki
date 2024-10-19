@@ -36,11 +36,11 @@ One can imagine taking this even further, getting the actual procedure call down
 \end
 
 \procedure contact-info(fields)
-	<ul>
-		<$list filter=<<fields>> variable="field">
-			<$transclude $variable="contact-info-item" field=<<field>>/>
-		</$list>
-	</ul>
+  <ul>
+    <$list filter=<<fields>> variable="field">
+      <$transclude $variable="contact-info-item" field=<<field>>/>
+    </$list>
+  </ul>
 \end
 
 <<contact-info "email phone family manager">>

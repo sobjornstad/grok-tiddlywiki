@@ -9,95 +9,95 @@ type: text/vnd.tiddlywiki
 
 <!-- Was section/chapter modified prior to N date?
      Set the modified date to the release date of an update which makes major changes and might invalidate some old sections.
-		 Don't include content that was deleted in the new version in "modified content", as that needs to be treated separately anyway. -->
+     Don't include content that was deleted in the new version in "modified content", as that needs to be treated separately anyway. -->
 \function gtw.upgrade.modified-content() [tag[Section]] [tag[Chapter]] :filter[get[modified]compare:date:lt{$:/config/sobjornstad/GrokTiddlyWiki/Upgrades/flag-modified-as-upgrade-before}] -[gtw.upgrade.needed-deletes[]]
 
 \procedure gtw.upgrade.modified-content-delete-actions()
-	<$list filter="[gtw.upgrade.modified-content[]]">
-		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
-	</$list>
+  <$list filter="[gtw.upgrade.modified-content[]]">
+    <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+  </$list>
 \end
 
 \procedure gtw.upgrade.deleted-content-delete-actions()
-	<$list filter="[gtw.upgrade.needed-deletes[]]">
-		<$action-deletetiddler $tiddler=<<currentTiddler>>/>
-	</$list>
+  <$list filter="[gtw.upgrade.needed-deletes[]]">
+    <$action-deletetiddler $tiddler=<<currentTiddler>>/>
+  </$list>
 \end
 
 
 <% if [<storyTiddler>!is[blank]] %>
-	<!----- RENDERING THE UPGRADER ITSELF ---->
-	<% if [gtw.upgrade.modified-content[]] %>
+  <!----- RENDERING THE UPGRADER ITSELF ---->
+  <% if [gtw.upgrade.modified-content[]] %>
 
-		The following chapters and sections ''have been manually modified'' in your copy:
+    The following chapters and sections ''have been manually modified'' in your copy:
 
-		<<list-links "[gtw.upgrade.modified-content[]]">>
+    <<list-links "[gtw.upgrade.modified-content[]]">>
 
-		If you would like to keep any of the changes in these tiddlers,
-		please rename the tiddlers to something else so that they disappear from the list.
-		Then click the button below to complete the upgrade.
+    If you would like to keep any of the changes in these tiddlers,
+    please rename the tiddlers to something else so that they disappear from the list.
+    Then click the button below to complete the upgrade.
 
-		<$button actions=<<gtw.upgrade.modified-content-delete-actions>>>
-			Overwrite your tiddlers with the tiddlers in the new edition
-		</$button>
+    <$button actions=<<gtw.upgrade.modified-content-delete-actions>>>
+      Overwrite your tiddlers with the tiddlers in the new edition
+    </$button>
 
-	<% endif %>
+  <% endif %>
 
-	<% if [gtw.upgrade.needed-deletes[]] %>
+  <% if [gtw.upgrade.needed-deletes[]] %>
 
-		The following content tiddlers that you have modified
-		(either manually or through a tool such as the TakeAway reviewer)
-		''have been removed'' in the version of //Grok TiddlyWiki// you've upgraded to,
-		most likely because they are no longer relevant in a new version of TiddlyWiki,
-		or they have been superseded by other content:
+    The following content tiddlers that you have modified
+    (either manually or through a tool such as the TakeAway reviewer)
+    ''have been removed'' in the version of //Grok TiddlyWiki// you've upgraded to,
+    most likely because they are no longer relevant in a new version of TiddlyWiki,
+    or they have been superseded by other content:
 
-		<<list-links "[gtw.upgrade.needed-deletes[]]" emptyMessage:"(none)">>
+    <<list-links "[gtw.upgrade.needed-deletes[]]" emptyMessage:"(none)">>
 
-		If you would like to keep any of these tiddlers,
-		please rename them to something else so that they disappear from the list.
-		Then click the button below to complete the upgrade.
+    If you would like to keep any of these tiddlers,
+    please rename them to something else so that they disappear from the list.
+    Then click the button below to complete the upgrade.
 
-		<$button actions=<<gtw.upgrade.deleted-content-delete-actions>>>
-			Delete tiddlers and complete upgrade
-		</$button>
+    <$button actions=<<gtw.upgrade.deleted-content-delete-actions>>>
+      Delete tiddlers and complete upgrade
+    </$button>
 
-	<% endif %>
+  <% endif %>
 
-	<% if [gtw.upgrade.modified-content[]] [gtw.upgrade.needed-deletes[]] %>
-	<% else %>
+  <% if [gtw.upgrade.modified-content[]] [gtw.upgrade.needed-deletes[]] %>
+  <% else %>
 
-		You're all up to date, nothing to see here!
+    You're all up to date, nothing to see here!
 
-	<% endif %>
+  <% endif %>
 
 <% else %> <!-- <storyTiddler> is blank -->
-	<!----- RENDERING THE BANNER SHOWING YOU NEED TO OPEN THE UPGRADER IN THE SIDEBAR ---->
+  <!----- RENDERING THE BANNER SHOWING YOU NEED TO OPEN THE UPGRADER IN THE SIDEBAR ---->
 
-	<!----------- GTW tiddler upgrade ---------->
-	<% if [gtw.upgrade.modified-content[]] [gtw.upgrade.needed-deletes[]] %>
-		<div class="gtw-upgrade-banner">
-			<div style="display: inline-block; vertical-align: center; margin-top: 6px; margin-left: 1em;">
-				<span style="height: 44px;">{{$:/core/images/info-button}}</span>
-			</div>
-			<div style="display: inline-block; margin-left: 1em;">
-				An upgrade to //Grok TiddlyWiki// is in progress.<br>
-				[[Open the upgrader|$:/GrokTiddlyWikiUpgrader]] to finish the upgrade.
-			</div>
-		</div>
-	<% endif %>
+  <!----------- GTW tiddler upgrade ---------->
+  <% if [gtw.upgrade.modified-content[]] [gtw.upgrade.needed-deletes[]] %>
+    <div class="gtw-upgrade-banner">
+      <div style="display: inline-block; vertical-align: center; margin-top: 6px; margin-left: 1em;">
+        <span style="height: 44px;">{{$:/core/images/info-button}}</span>
+      </div>
+      <div style="display: inline-block; margin-left: 1em;">
+        An upgrade to //Grok TiddlyWiki// is in progress.<br>
+        [[Open the upgrader|$:/GrokTiddlyWikiUpgrader]] to finish the upgrade.
+      </div>
+    </div>
+  <% endif %>
 
-	<!---------- Version upgrade ---------->
-	<!-- <version> is set to the current TW version somewhere (I can't actually find where) -->
-	<$list filter="[<version>compare:version:lt{Metadata##tw-version}]" variable=_>
-		<div class="gtw-upgrade-banner">
-			<div style="text-align: center;">
-				<span style="height: 44px;">{{$:/core/images/info-button}}</span>
-			</div>
-			<div style="display: inline-block; margin-left: 1em;">
-				This version of //Grok TiddlyWiki// was written for TiddlyWiki {{Metadata##tw-version}}, but it's ''running on an older version'', TiddlyWiki <<version>>. Some features may not work correctly. Please update it to the latest version using the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade]].
-			</div>
-		</div>
-	</$list>
+  <!---------- Version upgrade ---------->
+  <!-- <version> is set to the current TW version somewhere (I can't actually find where) -->
+  <$list filter="[<version>compare:version:lt{Metadata##tw-version}]" variable=_>
+    <div class="gtw-upgrade-banner">
+      <div style="text-align: center;">
+        <span style="height: 44px;">{{$:/core/images/info-button}}</span>
+      </div>
+      <div style="display: inline-block; margin-left: 1em;">
+        This version of //Grok TiddlyWiki// was written for TiddlyWiki {{Metadata##tw-version}}, but it's ''running on an older version'', TiddlyWiki <<version>>. Some features may not work correctly. Please update it to the latest version using the [[TiddlyWiki Upgrader|https://tiddlywiki.com/upgrade]].
+      </div>
+    </div>
+  </$list>
 
 <% endif %>
 
