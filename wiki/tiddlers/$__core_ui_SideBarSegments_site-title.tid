@@ -1,12 +1,13 @@
 created: 20241011115633823
-modified: 20241011120623147
+modified: 20241019200752670
 tags: $:/tags/SideBarSegment
 title: $:/core/ui/SideBarSegments/site-title
 type: text/vnd.tiddlywiki
 
 \whitespace trim
-<h1 class="tc-site-title" style="display: flex; align-items: center;">
-	<$image height=32 source=gtw-logo.png/>&nbsp;
+<h1 class="tc-site-title" style="display: flex; align-items: center; margin-left: -4px;">
+  {{$:/logo}}&nbsp;
+	<!--<$image height=32 source=gtw-logo.png/>&nbsp;-->
 	<$transclude tiddler="$:/SiteTitle" mode="inline"/>
 </h1>
 
