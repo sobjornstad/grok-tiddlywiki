@@ -1,6 +1,6 @@
 created: 20200605170324446
 description: How the book plans to do it, if you cooperate.
-modified: 20241013012839014
+modified: 20241019230721972
 parent: Front Matter
 tags: Section
 title: How to Use This Book
@@ -11,6 +11,8 @@ type: text/vnd.tiddlywiki
 !! Video tour
 
 The [[Grok TiddlyWiki Tour|https://www.youtube.com/watch?v=vUkNxbaNHcY]] demonstrates how to navigate around //Grok TiddlyWiki// and use exercises, live examples, and takeaways. If you're in a hurry or videos aren't your thing, the text below contains all the same information.
+
+The video was recorded with the first edition of GTW, so the chapters and sections will be a little different than the ones you see currently, but the features and interface are the same.
 
 <iframe style="width: 100%;" height="300" src="https://www.youtube.com/embed/vUkNxbaNHcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

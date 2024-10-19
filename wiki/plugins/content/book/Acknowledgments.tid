@@ -1,6 +1,6 @@
 created: 20210206214220001
 description: //Grok TiddlyWiki// exists only because of the efforts of many people.
-modified: 20241017123603407
+modified: 20241019225839732
 parent: Appendices
 tags: Section
 title: Acknowledgments
@@ -21,9 +21,9 @@ Walt Ludwick
 for reviewing pre-release copies of the first and/or second major edition of //Grok TiddlyWiki// and offering feedback,
 and to many folks around the web too numerous to list for suggesting further improvements in minor releases.
 
-//Grok TiddlyWiki// would not exist without [[TiddlyWiki|https://tiddlywiki.com]] itself; thanks to Jeremy Ruston for spending fifteen years working on it, and to all the community members who have helped to make this open-source project what it is.
+//Grok TiddlyWiki// would have no reason to exist without [[TiddlyWiki|https://tiddlywiki.com]] itself; thanks to Jeremy Ruston for spending twenty years working on it, and to all the community members who have helped to make this open-source project what it is.
 
-In particular, thanks to all the members of the [[TiddlyWiki forum|https://groups.google.com/g/tiddlywiki]] for helping me learn to use TiddlyWiki, and for not just putting up with but reliably and cheerfully answering a wide variety of impractical questions I posed while trying to understand TiddlyWiki deeply enough to write a book about it. All users of TiddlyWiki are lucky to have such a friendly and helpful resource!
+In particular, thanks to all the members of the TiddlyWiki forums, [[new|https://talk.tiddlywiki.org]] and [[old|https://groups.google.com/g/tiddlywiki]], for helping me learn to use TiddlyWiki, and for not just putting up with but reliably and cheerfully answering a wide variety of impractical questions I posed while trying to understand TiddlyWiki deeply enough to write a book about it. All users of TiddlyWiki are lucky to have such a friendly and helpful resource!
 
 Thanks to Andy Matuschak and Michael Nielsen for doing pioneering work on the [[mnemonic medium|https://numinous.productions/ttft/]] and [[Orbit|https://withorbit.com]], which was the inspiration for [[TakeAway|TakeAway Help]] and is worth a look for anyone who likes TakeAway. Thanks also to Damien Elmes and the [[Anki|https://apps.ankiweb.net]] community for developing the fantastic spaced-repetition tool that got me interested in spaced-repetition study back in 2010. I hope that TakeAway serves to advance the cause of spaced-repetition use at least a little bit.
 
