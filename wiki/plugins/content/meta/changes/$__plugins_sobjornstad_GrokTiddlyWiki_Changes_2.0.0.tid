@@ -1,7 +1,7 @@
 commit: TODO
 created: 20241008030506682
 date: TODO
-modified: 20241017013358047
+modified: 20241019232610341
 tag: v2.0.0
 tags: 
 title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/2.0.0
@@ -43,3 +43,12 @@ The [[Macros]] section is also new – while there was a section called “Macro
 * The “mentions of” display in the related tiddlers drop-down at the bottom of many sections was broken and displaying the same two tiddlers.
 * Normalize indentation in code examples to two spaces per level (no tabs) across the wiki.
 * Address a wide variety of miscellaneous items of feedback and errors spotted by readers over the past year or so.
+
+
+!!! Upgrading
+
+If you'd like, you can [[upgrade|Upgrade]] a current edition of //Grok TiddlyWiki// to 2.0 just like you can with any other edition. You should keep in mind, however, that when you have worked through or edited exercises and takeaways in older versions, you've made copies of their shadow tiddlers, so the upgraded version won't show any updates to those exercises and takeaways. This is a minor to nonexistent issue in most releases of GTW, but in a major release like this one where //many// of these have changed considerably, it may be more confusing or problematic than normal.
+
+Therefore, we recommend that if you don't have significant exercise or takeaway review history you'd like to keep, you start out working on //Grok TiddlyWiki// 2.0 by making a fresh copy. If you do have such history, upgrading may make more sense for you -- just be on the lookout as you proceed and delete any exercises or takeaways that look like they aren't up to date to grab the latest versions.
+
+(If there are any //sections or chapters// you've modified directly, you'll be asked to merge the changes and delete them during the upgrade process, so all of your actual text will be fully up to date after completing an upgrade. This is impractical for exercises or takeaways given that there are so many of them and it's normal to modify them.)
