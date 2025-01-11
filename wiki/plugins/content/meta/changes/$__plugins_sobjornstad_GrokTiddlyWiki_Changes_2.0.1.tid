@@ -1,0 +1,22 @@
+commit: 564bd1c8e6e6d25028cb46273643823bea830e3c
+created: 20250111152937199
+date: 20250111120000000
+modified: 20250111153912009
+tag: v2.0.1
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/2.0.1
+type: text/vnd.tiddlywiki
+version: 2.0.1
+
+!!! 5.3.6 updates
+
+GTW has been updated to TiddlyWiki 5.3.6. Changes related to that:
+
+* Mention that you can now change the number of entries in the Recent list, and don't explain that TW goes beyond this limit if there are a lot of tiddlers changed on a particular day that's within the range (because it no longer does).
+* Mention new shortcut `<<toc>>` syntax to create a TOC for the current tiddler.
+* Update exercise in [[Overriding Built-In Widgets]] to account for the bug where explicit attributes didn't override `$names` and `$values` in the `$genesis` widget being fixed.
+
+!!! Other fixes and clarifications
+
+* Explain that `list-links-draggable` doesn't create a tag tiddler or `list` field if one doesn't yet exist, unlike the tag pill lists.
+* Fix several minor typos and confusing phrases.

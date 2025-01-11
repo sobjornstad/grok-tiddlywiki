@@ -1,4 +1,5 @@
-1. Write changelog and update changes list in [[Changes]].
+1. Write changelog and update changes list in [[Changes]]
+   (clone a $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/* tiddler to add an entry).
 2. Update version numbers in `Metadata` tiddler, then in `wiki/plugins/*/plugin.info`.
    Run `make shadowify` to migrate these changes to the plugin.
    Commit changes.
