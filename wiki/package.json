@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tiddlywiki": "^5.3.5"
+    "tiddlywiki": "file:tiddlywiki-git/"
   }
 }

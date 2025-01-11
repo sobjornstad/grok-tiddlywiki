@@ -83,6 +83,12 @@ publish:
 	aws s3 sync --delete _build/thankyou/ s3://groktiddlywiki-webserve/thankyou
 	aws cloudfront create-invalidation --distribution-id E165ACBA2QEFAJ --paths '/*'
 
+checkout-tiddlywiki-version:
+	cd wiki/tiddlywiki-git && \
+		git fetch --all && \
+		git clean -fdx && \
+		git checkout "$(VERSION)"
+
 clean:
 	rm -rf wiki/pubfolder/
 	rm -rf _build/
