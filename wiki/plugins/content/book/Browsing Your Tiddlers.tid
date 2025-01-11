@@ -1,6 +1,6 @@
 created: 20200603023508396
 description: TiddlyWiki provides a variety of options for getting an overview of many tiddlers at once.
-modified: 20210504022432324
+modified: 20250111145130346
 parent: Filing and Organizing
 tags: Section
 title: Browsing Your Tiddlers
@@ -12,7 +12,7 @@ When you don't know what you're looking for precisely enough to formulate a [[fu
 : As the name suggest, this tab lists {{Ltc:AllListsAllTiddlers||LieToChildrenTemplate}} in alphabetical order.
 
 ; Recent
-: This tab lists {{Ltc:MostRecentHundred||LieToChildrenTemplate}} in reverse chronological order. This is exactly the same view that's on the //Recent// tab.
+: This tab lists {{Ltc:MostRecentHundred||LieToChildrenTemplate}} in reverse chronological order (the number is adjustable in the Control Panel at //Settings > TiddlyWiki > Recent Tab Limit//). This is exactly the same view that's on the //Recent// tab.
 
 ; Tags
 : This tab shows tag pills for all of the tiddlers in your wiki that are used to tag at least one other tiddler. Clicking on a tag pill pops open the tag menu, allowing you to navigate to the tag tiddler itself or any of the tiddlers it is tagging.
