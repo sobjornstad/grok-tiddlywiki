@@ -1,6 +1,6 @@
 created: 20200608015232773
 description: A set of tiddlers, such as those with a particular tag, can be given a specific order using a tiddler list.
-modified: 20240929005025424
+modified: 20250111142639856
 parent: Filing and Organizing
 tags: Section
 title: Ordering Tiddlers
@@ -47,6 +47,8 @@ You can also insert such a reorderable list anywhere you want using `list-links-
 ```
 
 This will produce a bulleted list with links to each of the tiddlers listed in the `list` field of `MyTiddler`, and if you drag and drop them, the field will be updated, just like if you drag and drop tiddlers within the tag pill. (As with the various table-of-contents incantations [[in the previous section|Creating Hierarchies with a Table of Contents]], this is a built-in procedure, a statement that will make sense once we get to <<gtw.link-chapter-number "Transclusion">>.)
+
+Unlike a tag pill, though, `list-links-draggable` only works if the tag tiddler already exists and has a `list` field containing items. So you may need to manually “initialize” the `list-links-draggable` call by finding a tag pill for the tiddler you're editing and moving an item in it -- if you don't get any output from `list-links-draggable`, this is likely the issue.
 
 ____
 

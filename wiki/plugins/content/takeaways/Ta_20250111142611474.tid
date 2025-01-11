@@ -1,0 +1,9 @@
+answer: They don't automatically create the tag tiddler or populate its `list` field; the tag tiddler must already exist and have a `list` field containing the tiddlers you want to reorder.
+created: 20250111142613742
+modified: 20250111142613742
+origin: Ordering Tiddlers
+qtype: rememberq
+question: What limitation do the `list-links-draggable` procedure's lists have, compared to a tag pill's lists?
+tags: Takeaway
+title: Ta:20250111142611474
+type: text/vnd.tiddlywiki
