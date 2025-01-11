@@ -1,5 +1,5 @@
 created: 20201122171832715
-modified: 20241010131324941
+modified: 20250111141015731
 tags: Answer
 title: Ex:LinkPattern/answer
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ type: text/vnd.tiddlywiki
 </ul>
 ```
 
-Since this is such a common pattern, TiddlyWiki offers several ways to abbreviate it. If the text of the link should be be the same as the target, you can leave the body empty using a self-closing tag:
+Since this is such a common pattern, TiddlyWiki offers several ways to abbreviate it. If the text of the link should be the same as the target, you can leave the body empty using a self-closing tag:
 
 ```html
 <$link to=<<currentTiddler>>/>
