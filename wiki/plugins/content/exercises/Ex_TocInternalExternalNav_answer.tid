@@ -1,8 +1,12 @@
 created: 20200603195826629
 length: m
-modified: 20200603195917940
+modified: 20250111143250359
 tags: Answer
 title: Ex:TocInternalExternalNav/answer
 type: text/vnd.tiddlywiki
 
-The difference is that the `internal` version opens internal links within the tabbed display, whereas the `external` version opens them in a separate tiddler in the story river.
+The difference is in the behavior when you click on an internal link in the right half of the view (showing the tiddler you've navigated to). The `internal` version changes the right half of the view to show the tiddler you navigated to (navigation “internal” to the view), whereas the `external` version opens the tiddler you navigated to as a new item in the story river.
+
+The behavior when navigating to other items that are listed in the table of contents (in the left half of the view) is identical for both versions.
+
+[img [internal-external-toc-distinction.png]]
