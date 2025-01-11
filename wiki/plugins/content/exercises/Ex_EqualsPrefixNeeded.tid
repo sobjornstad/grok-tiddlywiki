@@ -1,9 +1,0 @@
-created: 20240901144824449
-length: s
-modified: 20241008123514104
-origin: Overriding Built-In Widgets
-tags: Exercise
-title: Ex:EqualsPrefixNeeded
-type: text/vnd.tiddlywiki
-
-Why did we need to use the `=` (also called `:all`) filter prefix in the [[previous exercise|Ex:SaveOptionalParameters]]?

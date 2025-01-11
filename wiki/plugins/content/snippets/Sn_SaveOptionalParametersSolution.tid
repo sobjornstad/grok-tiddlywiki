@@ -1,5 +1,5 @@
 created: 20240901145209499
-modified: 20240901145846008
+modified: 20250111151343472
 tags: 
 title: Sn:SaveOptionalParametersSolution
 type: text/vnd.tiddlywiki
@@ -17,8 +17,9 @@ type: text/vnd.tiddlywiki
       <$genesis
         $type="$link"
         $remappable="no"
-        $names="[.rest-names[]] =tooltip"
-        $values="[.rest-values[]] =[<newtooltip>]"
+        $names="[.rest-names[]]"
+        $values="[.rest-values[]]"
+        tooltip=<<newtooltip>>
       >
         <$slot $name="ts-raw"/>
       </$genesis>

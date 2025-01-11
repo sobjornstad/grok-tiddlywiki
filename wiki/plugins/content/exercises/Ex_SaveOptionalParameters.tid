@@ -1,6 +1,6 @@
 created: 20240901144810532
 length: m
-modified: 20240929003242784
+modified: 20250111151648090
 origin: Overriding Built-In Widgets
 tags: Exercise
 title: Ex:SaveOptionalParameters
@@ -35,9 +35,6 @@ You'll need to know several new things to complete this task:
 \function .rest-values() [.rest-names[]] :map[<params-var>jsonget<currentTiddler>]
 ```
 
-(3) When you call the `$genesis` widget, you're //supposed// to be able to override any values in the `$names` and `$values` lists by additionally supplying that parameter (so that we could add a new `tooltip` parameter here, and that one would be used), but [[due to a bug in TiddlyWiki, this doesn't currently work|https://talk.tiddlywiki.org/t/bug-in-genesis-widget-precedence/10548]]. Instead, override parameters directly within the `$names` and `$values` lists by using new filter runs at the end with the `=` prefix, something like this:
+(3) When you call the `$genesis` widget, parameters that you've listed explicitly take precedence over any in `$names` and `$values`. So although the old value for `tooltip` will be included in `$names` and `$values`, if you additionally give a new value for `tooltip` as a widget attribute, that one will win.
 
-```
-$names="[[...blablabla]] =[[tooltip]]"
-$values="[[...blablabla]] =[[tooltipvalue]]"
-```
+(//Note//: Due to a bug, this behaved incorrectly in versions of TiddlyWiki prior to 5.3.6. If you're having trouble, make sure the wiki you're editing is on the latest version!)
