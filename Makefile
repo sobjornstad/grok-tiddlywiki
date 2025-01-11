@@ -20,15 +20,16 @@ reversion:
 shadowify:
 	cd wiki && scripts/shadowify.sh 2>/dev/null
 
-# note: on macos you have to temporarily add a '' after the -i parameter to sed >__<
+SPACEIFY_SED_EXPR := -e ':a' -e 's/^\(\t*\)\t/\1  /;ta' -e 's/^[[:space:]]*$$//'
 spaceify:
 	cd wiki && \
 		find plugins tiddlers -type f -name '*.tid' -print0 | \
 		while IFS= read -r -d '' i; do \
-			sed -e ':a' \
-				-e 's/^\(\t*\)\t/\1  /;ta' \
-				-e 's/^[[:space:]]*$$//' \
-				-i "$$i"; \
+			if [ "$$(uname)" = "Darwin" ]; then \
+				sed $(SPACEIFY_SED_EXPR) -i '' "$$i"; \
+			else \
+				sed $(SPACEIFY_SED_EXPR) -i "$$i"; \
+			fi \
 		done
 
 wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/* wiki/tiddlywiki.info
