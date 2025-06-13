@@ -7,5 +7,5 @@ type: text/vnd.tiddlywiki
 ```html
 <$let today=<<now YYYY0MM0DD0hh>>>
   <<tabs "[tag[Meeting]sameday:at<today>!is[draft]]" class:"tc-vertical">>
-</$set>
+</$let>
 ```
