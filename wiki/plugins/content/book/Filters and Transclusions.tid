@@ -114,7 +114,7 @@ Similarly, if the value we wanted to use was in a variable rather than a field, 
     <$list filter="[enlist<familyfield>]">
       <li>{{!!title}}: {{!!phone}}</li>
     </$list>
-  </$set>
+  </$let>
 </ul>
 ```
 
