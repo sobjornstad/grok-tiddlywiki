@@ -1,6 +1,6 @@
 created: 20200530170337337
 description: Combining transclusions and manipulation of TiddlyWiki's `currentTiddler` variable gives us //templates//, tiddlers that control the way other tiddlers are displayed.
-modified: 20241017013949599
+modified: 20260305213843448
 parent: Transclusion
 tags: Section
 title: Templates and the Current Tiddler
@@ -87,11 +87,15 @@ When we transclude the `ContactInformationTemplate` into `JaneDoe`, the current 
 Suddenly the behavior that looked nice just a moment ago is exactly what we don't want!
 
 
-!! Transcluding a tiddler through a template
+!! Template transclusions
 
 To make the `ContactInformationTemplate` work the way we want, we need a way of //not// changing the current tiddler during a field transclusion, or, more generally, making the current tiddler a tiddler of our choice during the transclusion.
 
-This is called ''transcluding a tiddler through a template''. The syntax is `{{tiddler||template}}`. So here it would be:
+In the official lingo, this is usually called, somewhat confusingly, ''transcluding a tiddler through a template''. This phrase accurately describes the //function// of a template transclusion -- you're using the template to look at the values of some other tiddler in a particular way -- but it can muck up your understanding of the mechanics. From a technical standpoint, it's actually the //template// tiddler whose wikitext gets transcluded -- not the current tiddler -- with the current tiddler set to some other tiddler. (Presumably, the template tiddler will have some `{{!!field-references}}` on it that get replaced with the values of the tiddler that you're looking at.)
+
+A physical metaphor may be helpful here to keep all of the parts straight. Imagine the template tiddler is an index card with holes in it, each hole representing a `{{!!field-reference}}` located within the template tiddler's text. When you “transclude a tiddler through the template,” you put the template card on top of the card representing the current tiddler, and you read (“transclude”) the template tiddler, with the other tiddler's field values visible through it.
+
+The syntax for template transclusion is `{{tiddler||template}}`. In this case, we'll write:
 
 ```html
 {{JaneDoe||ContactInformationTemplate}}
@@ -116,7 +120,7 @@ In this case, we could also simply use the `$transclude` widget, which does not 
 
 !! How to think about templates
 
-`{{tiddler||template}}`, and the concept of “transcluding a tiddler through a template,” ''feels backwards'' to many people at first. This operation actually transcludes the //template//, giving it access to the fields of the tiddler; our intuitive notion of transcluding a tiddler seems rather to suggest that the //tiddler// should be transcluded with reference to the information in the template. A good way to read `{{tiddler||template}}` is “Put the contents of //template// right here, but as you're deciding what //template// looks like, the current tiddler is //tiddler//, not //template//.”
+As noted in the previous section, `{{tiddler||template}}`, and the concept of “transcluding a tiddler through a template,” ''feels backwards'' to many people at first. This operation actually transcludes the template, giving it access to the fields of the tiddler; our intuitive notion of transcluding a tiddler seems rather to suggest that the tiddler should be transcluded with reference to the information in the template. This will become easier with practice, but if you find yourself having trouble keeping the various tiddlers involved in a template transclusion straight, come back to the index cards metaphor and consider what operation is actually taking place.
 
 It's important to remember that, since [[everything's a tiddler|Tiddlers]], ''a template is not really a thing in itself''. That is, unlike in many other similar tools, your TiddlyWiki is not separated into two distinct categories of content, tiddlers and templates. Rather, when you transclude a tiddler through a template, you are using a particular tiddler //as// a template, to display the content in the other tiddler. A tiddler can be used as a template in one place, and as an ordinary content tiddler with a link to it, or for that matter as a tag, in another. In fact, in many cases, transclusion will have exactly the same effect whether the transcluded tiddler is treated as a template or not. For instance, `{{EmployeeProfileSetupMeeting}}`, `{{||EmployeeProfileSetupMeeting}}`, and `{{JaneDoe||EmployeeProfileSetupMeeting}}` should all do the same thing if you try them: the contents of the `EmployeeProfileSetupMeeting` tiddler appears. That's because the `EmployeeProfileSetupMeeting` tiddler doesn't contain any references that depend on the current tiddler, such as `{{!!field transclusions}}`.
 
