@@ -1,6 +1,6 @@
 created: 20200603023508492
 description: TiddlyWiki can produce hierarchical tables of contents from tag structures.
-modified: 20250111145537626
+modified: 20260305211009541
 parent: Filing and Organizing
 tags: Section
 title: Creating Hierarchies with a Table of Contents
@@ -13,13 +13,15 @@ Important disclaimer: you can only use the built-in table-of-contents functional
 
 !! Creating structure tiddlers
 
-Let's look at how we can create a table of contents for our onboarding project. We'll begin by creating some basic structure underneath it. Let's say the project is broadly divided into three parts. We'll need to create a tiddler for each of these parts to define the hierarchy:
+Let's look at how we can create a table of contents for our onboarding project, which we're currently tracking in the `OnboardingProcess` tiddler.
+
+We'll begin by creating some basic structure underneath that tiddler. Let's say the project is broadly divided into three parts. We'll need to create a tiddler for each of these parts to define the hierarchy:
 
 * HR stuff about the company and government-mandated training -- `OnboardingHr`
 * Introductions and social events/notes -- `OnboardingPeople`
 * Training for the position -- `OnboardingTraining`
 
-Go ahead and create those three tiddlers and tag them `OnboardingProcess`, thus marking them as direct members of the idea `OnboardingProcess`. Rather than create new tiddlers and tag them manually, here's a handy timesaver: click the more drop-down <<textual-button "down-arrow">> on the `OnboardingProcess` tiddler and choose <<textual-button "new-here-button">> //New here//. A new tiddler will open, already tagged `OnboardingProcess`.
+Each of these will be tagged `OnboardingProcess`, to mark them as direct members of that idea. Here's a handy timesaver when you need to create multiple tiddlers with the same tag: click the more drop-down <<textual-button "down-arrow">> on the `OnboardingProcess` tiddler and choose <<textual-button "new-here-button">> //New here//. A new tiddler will open, already tagged `OnboardingProcess`.
 
 There's no need to put any content in the tiddlers for the time being. If we later find we need to give an overview of that part of the onboarding process, or we have information about it that doesn't seem to deserve its own tiddler, we can add it at that time.
 
