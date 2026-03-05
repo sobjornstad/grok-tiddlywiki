@@ -1,6 +1,6 @@
 created: 20200603181515580
 description: //Naming conventions// are rules about how sets of things should be named. Creating your own conventions will make it easier to create titles and easier to find tiddlers later.
-modified: 20210504023207883
+modified: 20260305210506950
 parent: Filing and Organizing
 tags: Section
 title: Naming Conventions
@@ -24,15 +24,17 @@ Some languages use Title Case, Where All Words Are Capitalized Except a Few Litt
 
 If you're using CamelCase titles, that point is moot, but several additional considerations come up:
 
-* It's useful to ''normalize the capitalization'' of weird things like acronyms: for instance, it's not `WritingInHTML` but `WritingInHtml`.
-* Some people make single-word titles into CamelCase by ''capitalizing a letter in the middle'' (e.g., writing `ApPle` instead of `Apple`). Aside from being pretty ugly, this can be dangerous since you might pick a different letter to capitalize the next time and not notice that you already have a similar tiddler; this is one of the main arguments for avoiding CamelCase altogether. Even if I'm using CamelCase titles for most tiddlers in a wiki, I prefer to dispense with the CamelCase and use extra brackets around any link where the title is naturally only one word.
+* It's conventional to ''normalize the capitalization'' of weird things like acronyms: for instance, it's not `WritingInHTML` but `WritingInHtml`. This has several functions: it prevents you from having to remember how some weird name is capitalized; it reduces the chance that you accidentally create a duplicate tiddler or fail to find something because you linked to something with the wrong case; and it makes your tiddler names look more consistent.
+* Some people make single-word titles into CamelCase by ''capitalizing a letter in the middle'' (e.g., writing `ApPle` instead of `Apple`). Aside from being pretty ugly, this can be dangerous since you might pick a different letter to capitalize the next time and not notice that you already have a similar tiddler (this is one of the main arguments for avoiding CamelCase altogether). Even if I'm using CamelCase titles for most tiddlers in a wiki, I prefer to dispense with the CamelCase and use extra brackets around any link where the title is naturally only one word.
 
-Some people like to capitalize tags differently than content tiddlers (for instance, tags are all lowercase). I dislike this approach since [[tags really are tiddlers too|Tags]], but if it's helpful for you, go for it.
+Some people like to capitalize the names of tags differently than those of content tiddlers (for instance, making tags all lowercase). I dislike this approach since [[tags really are tiddlers too|Tags]], but if it's helpful for you, go for it.
 
 
 !! Plurals
 
-Another way you can end up creating duplicate tiddlers by mistake is to write one of the titles in the singular and the other in the plural. This is especially common with tags. For this reason, I like to always ''write all nouns in the singular''. So instead of tagging tiddlers with `CoffeeOptions`, we would tag them with `CoffeeOption`. This isn't as ungrammatical as it may look at first glance, since each tiddler with the tag is a single coffee option. If you prefer, you could just as easily choose to make all nouns plural, but it's best to pick one and stick with it.
+Another way you can end up creating duplicate tiddlers by mistake is to write one of the titles in the singular and the other in the plural. This is especially common with tags. For this reason, I like to always ''write all nouns in the singular''. So instead of tagging tiddlers with `CoffeeOptions`, we would tag them with `CoffeeOption`. This isn't as ungrammatical as it may look at first glance, since each tiddler with the tag is a single coffee option. If you prefer, you could just as easily choose to make all nouns plural, but it's helpful to pick one and stick with it.
+
+(There is one small reason why a default-singular policy might be superior to a default-plural one if you're using a language where plurals are typically formed by adding one or more characters to the singular form: when creating a link, if the title is singular and you want to use it in the plural, you can write, e.g., `[[Apple]]s`, but if the title is plural and you want to use it in the singular, you'll have to write out, e.g., `[[Apple|Apples]]`.)
 
 
 !! Namespacing
