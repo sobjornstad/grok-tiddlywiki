@@ -1,0 +1,11 @@
+at: 20260308100000000
+created: 20260306110030000
+modified: 20260306110030000
+participants: ChrisSmith
+tags: Meeting OnboardingHr
+title: BenefitsEnrollmentMeeting
+type: text/vnd.tiddlywiki
+
+ChrisSmith helped me enroll in the company health insurance and retirement plan.
+
+<$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>

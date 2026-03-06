@@ -1,0 +1,11 @@
+at: 20260307140000000
+created: 20260306110010000
+modified: 20260306110010000
+participants: ChrisSmith
+tags: Meeting OnboardingTraining
+title: SecurityTrainingSession
+type: text/vnd.tiddlywiki
+
+ChrisSmith walked me through the company's security policies, including password requirements and the [[ReallyAnnoyingFiveFactorAuthenticationProcess]].
+
+<$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>

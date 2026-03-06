@@ -1,0 +1,11 @@
+at: 20260309130000000
+created: 20260306110031000
+modified: 20260306110031000
+participants: ChrisSmith JaneDoe
+tags: Meeting OnboardingHr
+title: ComplianceTrainingMeeting
+type: text/vnd.tiddlywiki
+
+Mandatory compliance training covering workplace safety, anti-harassment policies, and data protection regulations.
+
+<$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>
