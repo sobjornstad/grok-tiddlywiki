@@ -1,5 +1,5 @@
 created: 20240928014613139
-modified: 20241016123030107
+modified: 20260306011839547
 tags: 
 title: CommonTransclusionSyntax
 type: text/vnd.tiddlywiki
@@ -50,8 +50,8 @@ Backticks can be used to combine constant text and variables and/or the results 
 <dl>
   <dt><code>`<$widget attribute=`&#96;text with a $(variable)$ in it&#96;/></code></dt>
   <dd>To [[combine|Using Variables as Attributes]] constant text and one or more variables (in `$(these thingies)$`) into the value of an attribute</dd>
-    <dt><code>`<$widget attribute=`&#96;text with a `${ [[filter expression]] } in it`&#96;/></code></dt>
-    <dd>To combine constant text and the result of one or more filter expressions (in `${ these thingies }$` into the value of an attribute</dd>
+    <dt><code>`<$widget attribute=`&#96;text with a `${ [[filter expression]] }$ in it`&#96;/></code></dt>
+    <dd>To combine constant text and the result of one or more filter expressions (in `${ these thingies }$`) into the value of an attribute</dd>
 </dl>
 
 <% if [.later[]] %>

@@ -1,5 +1,5 @@
 created: 20200718011953409
-modified: 20240924001531442
+modified: 20260305211640919
 tags: Answer
 title: Ex:HolidayToday/answer
 type: text/vnd.tiddlywiki
@@ -10,12 +10,12 @@ The easiest and cleanest way uses the <a href="https://tiddlywiki.com/#Transclud
 It's ''<$transclude tiddler="UsHolidays" index=<<now "0MM/0DD">> />'' today!
 ```
 
-However, we didn't discuss the `transclude` widget or its `index` attribute, so it's unlikely you thought of that unless you assumed it must exist and visited the documentation (but kudos if you did, that's the right way to think about widgets)! Here's a way to accomplish this using only tools we've already seen:
+However, we haven't discussed the `index` attribute of the `$transclude` widget, so it's unlikely you thought of that unless you assumed it must exist and visited the documentation (but kudos if you did, that's the right way to think about widgets)! Here's a way to accomplish this using only tools we've already seen:
 
 ```html
 <$let formattedToday=<<now "0MM/0DD">>>
   It's ''<$text text={{{ [[UsHolidays]getindex<formattedToday>] }}} />'' today!
-</$set>
+</$let>
 ```
 
 (Recall that the `text` widget is needed to prevent the holiday from turning into a link with the use of triple curly braces.)

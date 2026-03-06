@@ -1,6 +1,6 @@
 created: 20200603023508451
 description: You can create lists of tiddlers that automatically update to show all the tiddlers that currently match a filter.
-modified: 20241015032325763
+modified: 20260306010231114
 parent: Filtering and Formatting
 tags: Section
 title: Your First Dynamic List
@@ -25,7 +25,7 @@ Here's how we create a list of meetings from the output of a filter:
 
 That was easy. But wait, there's something wrong…all of the meeting names are run together in a single line, without even a space between them!
 
-When the list widget is used without any contents, like we did above, it simply plops each tiddler title that the filter returns right after the previous one. In HTML, line breaks only happen when you explicitly ask for them, either with a rich formatting tag like `</p>` to indicate the end of a paragraph or `</li>` to indicate the end of a list item, or with the simple `<br>` for a line break. Let's fix this by adding a `<br>` between each item:
+When the list widget is used without any contents, like we did above, it simply plops each tiddler title that the filter returns right after the previous one. In HTML, line breaks only happen when you explicitly ask for them, either because you've come to the end of a rich formatting block like a paragraph (`<p></p>`) or a list item (`<li></li>`), or using the simple `<br>` tag for a line break. Let's fix this by adding a `<br>` between each item:
 
 ```html
 <$list filter="[tag[Meeting]]">

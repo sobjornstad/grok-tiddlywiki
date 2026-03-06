@@ -1,6 +1,6 @@
 created: 20210120014333991
 description: As your wikitext gets more complicated, it occasionally might not do what you were expecting; here's how you can figure out what you did wrong.
-modified: 20241015032547270
+modified: 20260306004833000
 parent: Filtering and Formatting
 tags: Section
 title: When Things Go Wrong
@@ -56,7 +56,7 @@ If you now open the page inspector, as discussed in “Use your web browser's in
 
 [img[xy.png]]
 
-In real life, you'll typically put a variable in place of `"Y"` (once you learn what that is in the next section!), which will look something like this:
+In real life, you'll typically put a variable in place of `"Y"` (once you learn what that is in the next chapter!), which will look something like this:
 
 ```html
 <$log X=<<myvariable>>/>

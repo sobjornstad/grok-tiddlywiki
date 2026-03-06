@@ -1,5 +1,5 @@
 created: 20241001115546803
-modified: 20241001115551760
+modified: 20260306010739229
 tags: Answer
 title: Ex:ConflictingStatements/answer
 type: text/vnd.tiddlywiki
@@ -27,7 +27,7 @@ Here's a test with two people/statements:
 ```html
 Our team has a little bit of extra time this quarter; what should we use it for?
 
-<$transclude $tiddler="Statement" person1="Alice" person2="Bob">
+<$transclude $tiddler="Statements" person1="Alice" person2="Bob">
   <$fill $name="statement1">
     There are not enough croissants available in the cafeteria this week. We must create a committee to solve it immediately.
   </$fill>

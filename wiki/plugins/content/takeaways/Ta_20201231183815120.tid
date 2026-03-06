@@ -1,6 +1,6 @@
-answer: `<$transclude $variable="showRedText" text={{!!warning}}/>`
+answer: `<$transclude $variable="showRedText" text={{!!warning}}/>` (or, in the newest versions of TiddlyWiki, `<<showRedText text:{{!!warning}}>>`)
 created: 20201231183816473
-modified: 20240929170250431
+modified: 20260306025854219
 origin: Field Transclusions
 qtype: rememberq
 question: What wikitext syntax would you use to call a procedure named `showRedText` with a parameter `text` set to the value of the `warning` field of the current tiddler?

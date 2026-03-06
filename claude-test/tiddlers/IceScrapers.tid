@@ -1,0 +1,9 @@
+car: MyCar
+created: 20260306100053000
+modified: 20260306100053000
+title: IceScrapers
+type: text/vnd.tiddlywiki
+
+Ice scrapers stored in the back seat.
+
+''Method 3:'' This tiddler has a `car` field pointing to MyCar.

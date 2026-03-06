@@ -1,9 +1,11 @@
 created: 20200608014154433
 length: s
-modified: 20210130174636491
+modified: 20260305204148723
 origin: Classifying Tags
 tags: Exercise
 title: Ex:TagMetadataStorage
 type: text/vnd.tiddlywiki
 
 How do you think the color and icon of tags are stored?
+
+//Hint//: we briefly encountered the storage mechanism for colors in an exercise earlier in this chapter.

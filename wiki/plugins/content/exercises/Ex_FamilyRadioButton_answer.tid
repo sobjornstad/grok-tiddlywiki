@@ -1,5 +1,5 @@
 created: 20210206220547886
-modified: 20240926224603550
+modified: 20260306013105429
 tags: Answer
 title: Ex:FamilyRadioButton/answer
 type: text/vnd.tiddlywiki
@@ -7,11 +7,13 @@ type: text/vnd.tiddlywiki
 Here's a simple version that just shows the phone number:
 
 ```html
-View phone number for family member: <$list filter={{!!family}}><$radio tiddler=<<qualify "$:/temp/FamilyContact">> value=<<currentTiddler>>>&nbsp;<<currentTiddler>></$radio>&ensp;</$list>
+View phone number for family member: <$list filter={{!!family}}><$radio tiddler="$:/temp/FamilyContact">> value=<<currentTiddler>>>&nbsp;<<currentTiddler>></$radio>&ensp;</$list>
 
-<$let stateTiddlerName=<<qualify "$:/temp/FamilyContact">>>
+<$let stateTiddlerName="$:/temp/FamilyContact">>>
   <$transclude tiddler={{{ [<stateTiddlerName>get[text]] }}} field="phone"/>
 </$let>
 ```
 
 Notice that we don't transclude the tiddler `$:/temp/FamilyContact` itself, like `<$transclude tiddler="$:/temp/FamilyContact"/>`, we transclude //the transcluded value of// `$:/temp/FamilyContact` (using the filter `[<stateTiddlerName>get[text]]`). You might have to think about this for a moment: we stored the name of the selected contact in the tiddler `$:/temp/FamilyContact`, so we don't want to transclude the tiddler `$:/temp/FamilyContact` -- we would be trying to get the value of the `phone` field of `$:/temp/FamilyContact` itself (which is presumably empty). Instead, we want to transclude the `phone` field of the tiddler which is named within that tiddler (i.e., the contact tiddler we selected). This means we effectively have to transclude twice.
+
+Note that this implementation has a small problem: because we're using a single temp tiddler, if you have multiple contact tiddlers in your wiki open, the radio buttons of all of them will share state, so when you click one of them, all of the other tiddlers will switch to displaying a different family member as well (possibly one that doesn't exist for that tiddler). We'll learn how to fix this in the [[Qualification]] section of <<gtw.link-chapter-number "Tips and Tricks">>.

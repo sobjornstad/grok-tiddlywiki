@@ -12,3 +12,5 @@ wiki/tiddlers/$__StoryList.tid
 wiki/tiddlers/$__Import.tid
 wiki/tiddlywiki-git/
 wiki/node_modules/
+node_modules/
+claude-test/screenshots/

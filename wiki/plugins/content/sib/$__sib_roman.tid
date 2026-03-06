@@ -1,0 +1,26 @@
+created: 20260216140326511
+creator: soren
+modified: 20260216145229714
+modifier: soren
+tags: $:/tags/Global
+title: $:/sib/roman
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+\function roman.letterfor(bp) [[$:/sib/roman/Breakpoints]getindex<bp>]
+\function roman.nextbp(bp) [[$:/sib/roman/NextBreakpoint]getindex<bp>]
+
+\procedure roman(num, bp: 1000)
+	<$let found={{{ [<num>divide<bp>floor[]] }}}
+				next={{{ [<num>remainder<bp>] }}}>
+		<!--call: [num: <<num>> bp: <<bp>> found: <<found>> next: <<next>>]<br>-->
+		<$list filter="[range<found>]" variable=_>
+			<$text text={{{ [roman.letterfor<bp>] }}}/>
+		</$list>
+		<$let nextbp={{{ [roman.nextbp<bp>] }}}>
+			<$list filter="[<nextbp>!is[blank]]">
+				<$transclude $variable="roman" num=<<next>> bp=<<nextbp>>/>
+			</$list>
+		</$let>
+	</$let>
+\end

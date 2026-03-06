@@ -1,7 +1,7 @@
 complete: 
 created: 20200718034451465
 length: m
-modified: 20210321003424291
+modified: 20260306012110535
 origin: The View Template
 tags: Exercise
 title: Ex:DontOverrideViewTemplateTag
@@ -11,4 +11,4 @@ In [[Ex:MoveContactInformation]], we edited the `list` field of $:/tags/ViewTemp
 
 In this case, that's not the end of the world, since the tag contains no body text and it's relatively unlikely extra elements will be added to this list in a future version of TiddlyWiki (thus necessitating a manual merge if we want them to show up). However, suppose we want to be purists and avoid overriding a shadow tiddler unless absolutely necessary. How can we achieve the same effect without needing to override `$:/tags/ViewTemplate`?
 
-Delete the overridden shadow tiddler `$:/tags/ViewTemplate` prior to attempting this exercise to put your  `$:/yourname/TiddlerTypeTemplates/` templates back in their default position, so you can tell if you've succeeded.
+Delete the overridden shadow tiddler `$:/tags/ViewTemplate` prior to attempting this exercise to put your `$:/yourname/TiddlerTypeTemplates/` templates back in their default position, so you can tell if you've succeeded.

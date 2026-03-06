@@ -1,5 +1,5 @@
 created: 20240830031132609
-modified: 20240830031440604
+modified: 20260305211427121
 tags: Answer
 title: Ex:LocalCalls/answer
 type: text/vnd.tiddlywiki
@@ -10,7 +10,7 @@ A `call-type` procedure can look like this:
 
 ```html
 \procedure call-type()
-  <$let areaCode={{{ [<currentTiddler>split[]first[3]join[]] }}}>
+  <$let areaCode={{{ [{!!phone}split[]first[3]join[]] }}}>
     <% if [{CurrentAreaCode}match<areaCode>] %>
       local
     <% elseif [enlist{TollFreeAreaCodes}match<areaCode>] %>
@@ -22,7 +22,7 @@ A `call-type` procedure can look like this:
 \end
 ```
 
-The `TollFreeAreaCodes` tiddler will contain `800 888 877` (or any ordering of those three space-separated numbers, or those numbers each surrounded with square brackets, like `[[800]]`), and the `CurrentAreaCode` tiddler will contain `212`. Then just drop something like this in an appropriate spot in the template:
+The `TollFreeAreaCodes` tiddler will contain `800 888 877` (or any ordering of those three space-separated numbers, or those numbers each surrounded with square brackets, like `[[800]]`), and the `CurrentAreaCode` tiddler will contain `212`. Then put a call to this procedure in an appropriate place on the contact template:
 
 ```html
 Call will be <<call-type>>.

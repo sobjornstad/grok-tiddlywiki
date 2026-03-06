@@ -1,5 +1,5 @@
 created: 20201122170037082
-modified: 20241007224504785
+modified: 20260305211936247
 tags: Answer
 title: Ex:DefaultToField/answer
 type: text/vnd.tiddlywiki
@@ -11,7 +11,7 @@ In your `WikipediaLinkTemplate`:
     <a class="tc-tiddlylink-external" href={{{ [{WikipediaMetadata!!url}addsuffix<theArticle>] }}}>
         <<theArticle>>
     </a>
-</$set>
+</$let>
 ```
 
 Note that now, when you're transcluding the `{{WikipediaLinkTemplate}}`, if you want to use the default `articlename` field, you'll need to use `||` in the transclusion to set the current tiddler correctly (unlike for the [[previous version|Ex:WikipediaLinkTemplate]], where it didn't matter). The current tiddler remains irrelevant if you're manually setting the variable instead.

@@ -1,0 +1,19 @@
+created: 20260306100070000
+modified: 20260306100070000
+tags: Application
+title: ReallyAnnoyingFiveFactorAuthenticationProcess
+type: text/vnd.tiddlywiki
+
+The Really Annoying Five-Factor Authentication Process (RAFFAP) is required to access the [[Employee Information System]] on Tuesdays (unless you've bought coffee from the cafeteria that day).
+
+The five factors are:
+
+# Password (minimum 32 characters, changed monthly)
+# SMS code to your company phone
+# Email confirmation link to your company email
+# A second email confirmation to your personal email on file
+# Manager approval via the manager's own authenticated portal
+
+The approval chain for step 5 means authentication can take up to 24 hours if your manager is out of office. Plan accordingly for Tuesday EIS tasks.
+
+JaneDoe walked me through the process during my onboarding as part of the EmployeeProfileSetupMeeting.
