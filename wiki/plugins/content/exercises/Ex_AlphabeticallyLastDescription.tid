@@ -1,6 +1,6 @@
 created: 20200603185508516
 length: M
-modified: 20210606030005775
+modified: 20260306004653000
 origin: Common Filter Operators
 tags: Exercise
 title: Ex:AlphabeticallyLastDescription
@@ -20,4 +20,4 @@ And here are two hints if you need them:
 # How do you think we would define the description of a button in the TiddlyWiki data model?
 # The content of a language tiddler, like `$:/language/Buttons/Paint/Description`, is stored in its `text` field.
 
-This one is intended to be a little bit above your level at the moment -- we won't get to some of the concepts involved until chapter 6, [[Looking Under the Hood]] -- so you might not be able to figure it out. But spend some time working on it before you look at the answer.
+This one is intended to be a little bit above your level at the moment -- we won't get to some of the concepts involved until <<gtw.link-chapter-number "Looking Under the Hood">>, [[Looking Under the Hood]] -- so you might not be able to figure it out. But spend some time working on it before you look at the answer.

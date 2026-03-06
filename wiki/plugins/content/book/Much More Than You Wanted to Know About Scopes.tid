@@ -1,6 +1,6 @@
 created: 20200718014509693
 description: Procedures and functions can be made available to all tiddlers in the wiki, or to some subset of tiddlers. The names of such procedures should be managed carefully to avoid conflicts.
-modified: 20241017013848716
+modified: 20260306011539095
 parent: More Organizational Tools
 tags: Section
 title: Much More Than You Wanted to Know About Scopes
@@ -38,7 +38,7 @@ Of course, the downside of adding a prefix is that it means additional typing ev
 
 You can use one prefix for your whole wiki, or several prefixes that separate your procedures into categories -- whatever helps you organize best. If you [[write plugins|Creating Plugins]], it's a good idea to use a prefix specific to that plugin, and be especially careful not to choose one someone else might choose by mistake.
 
-In TiddlyWiki we typically use either a `-` or a `.` to separate a prefix and the rest of the name of the procedure, as in the example above. `-` is conventional for CSS classes and variable/procedure names, but if you're using a [[function|Functions]] or [[custom widget|Custom Widgets]], a `.` may make more sense given that you will need to include one anyway if you want to refer to it in certain ways.
+In TiddlyWiki we typically use either a `-` or a `.` to separate a prefix and the rest of the name of the procedure, as in the example above. `-` is conventional for CSS classes and variable/procedure names, but if you're using a [[function|Functions]] or [[custom widget|Custom Widgets]] (about which more in <<gtw.link-chapter-number "Macros, Wikification, and Widgets">>), a `.` may make more sense given that you will need to include one anyway if you want to refer to it in certain ways.
 
 
 !! Nested scopes
@@ -60,7 +60,7 @@ The syntax looks like this:
 
   <$list filter="[function[subfunction]]">
     <$transclude
-      $variable=<<subproc1>>
+      $variable=<<subproc>>
       tiddler=<<currentTiddler>>
     />
   </$list>

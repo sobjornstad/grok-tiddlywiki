@@ -1,6 +1,6 @@
 created: 20200603023508396
 description: TiddlyWiki provides a variety of options for getting an overview of many tiddlers at once.
-modified: 20250111150515444
+modified: 20260306004438000
 parent: Filing and Organizing
 tags: Section
 title: Browsing Your Tiddlers
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 When you don't know what you're looking for precisely enough to formulate a [[full-text search|Searching]], you can browse through lists of tiddlers. Let's take a look at the available options. All of these are found under the ''More'' tab of the sidebar.
 
 ; All
-: As the name suggest, this tab lists {{Ltc:AllListsAllTiddlers||LieToChildrenTemplate}} in alphabetical order.
+: As the name suggests, this tab lists {{Ltc:AllListsAllTiddlers||LieToChildrenTemplate}} in alphabetical order.
 
 ; Recent
 : This tab lists the most recent 100 tiddlers you've edited in reverse chronological order (the number is adjustable in the Control Panel at //Settings > TiddlyWiki > Recent Tab Limit//). This is exactly the same view that's on the //Recent// tab.

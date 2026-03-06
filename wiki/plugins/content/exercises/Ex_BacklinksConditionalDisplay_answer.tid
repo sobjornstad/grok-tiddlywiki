@@ -1,10 +1,10 @@
 created: 20210207214655751
-modified: 20210207215748750
+modified: 20260306013211841
 tags: Answer
 title: Ex:BacklinksConditionalDisplay/answer
 type: text/vnd.tiddlywiki
 
-The portion that needs to be wrapped in a `$list` widget is the part that calls the macros -- trying to wrap the macros won't end well because [[pragmas have to be the first thing in their tiddler|Ex:MacroPosition/answer]].
+The portion that needs to be wrapped in a `$list` widget is the part that calls the macros -- trying to wrap the macros won't end well because [[pragmas have to be the first thing in their tiddler|Ex:ProcedurePosition/answer]].
 
 ```html
 <$list filter="[all[current]links[]] [all[current]backlinks[]] +[first[]]" variable=_>

@@ -1,6 +1,6 @@
 created: 20200717215952541
 description: The `tabs` procedure facilitates compact display of a number of related tiddlers, as in the sidebar of a stock TiddlyWiki.
-modified: 20241010125935497
+modified: 20260306011429197
 parent: More Organizational Tools
 tags: Section
 title: Tabs
@@ -22,7 +22,7 @@ Now, if we add new concepts to the wiki, they'll immediately show up as new tabs
 
 The optional `default` parameter, set to the title of one of the tiddlers being made into a tab, chooses which tab starts selected. If you leave it blank, you'll have to click on a tab to see anything expand.
 
-The `tabs` macro has several other optional parameters that are occasionally useful, which you can read about in [[the documentation|https://tiddlywiki.com/#tabs%20Macro]].
+The `tabs` procedure has several other optional parameters that are occasionally useful, which you can read about in [[the documentation|https://tiddlywiki.com/#tabs%20Macro]].
 
 You can make tabs show up vertically instead of horizontally, like they do under the ''More'' tab of the sidebar, using the parameter `class:"tc-vertical"`.
 

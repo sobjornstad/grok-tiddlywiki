@@ -1,9 +1,9 @@
 answer: The `days` operator.
 created: 20210207005601117
-modified: 20210502162426032
+modified: 20260306015551437
 origin: Working with Dates
 qtype: rememberq
-question: What filter operator finds tiddlers with dates that are before or after a specific time?
+question: What filter operator finds tiddlers with dates that are before or after a specific number of days from the current date?
 tags: Takeaway
 title: Ta:20210207005559946
 type: text/vnd.tiddlywiki

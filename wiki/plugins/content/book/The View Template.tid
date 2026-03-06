@@ -1,6 +1,6 @@
 created: 20200718024513554
-description: The ViewTemplate is a special template TiddlyWiki uses internally to render each story in the story river; you can customize it to add custom content to all tiddlers or a subset of tiddlers.
-modified: 20240926004421049
+description: The ViewTemplate is a special template TiddlyWiki uses internally to render each tiddler in the story river; you can customize it to add custom content to all tiddlers or a subset of tiddlers.
+modified: 20260306012005046
 parent: Looking Under the Hood
 tags: Section
 title: The View Template

@@ -1,5 +1,5 @@
 created: 20210131041013435
-modified: 20240923221703037
+modified: 20260306011739620
 tags: Answer
 title: Ex:FilteredTelephoneLink/answer
 type: text/vnd.tiddlywiki
@@ -14,4 +14,4 @@ Or, equivalently:
 <a href={{{ [{!!phone}addprefix[tel:]] }}}>Call {{!!title}}</a>
 ```
 
-This suggests a general fact: most anything you can do with [[text substitution|Text Substitution]] in a macro, you can also achieve with a [[filtered transclusion|Filters and Transclusions]]. Which you choose is largely personal preference, although sometimes one might be significantly clearer and easier than the other, in which case you should probably choose that one. And in simple cases like this where backticks will suffice, those are probably clearest of all.
+This suggests a general fact: most anything you can do with text substitution in a [[macro|Macros]], you can also achieve with a [[filtered transclusion|Filters and Transclusions]]. Which you choose is largely personal preference, although sometimes one might be significantly clearer and easier than the other, in which case you should probably choose that one. And in simple cases like this where backticks will suffice, those are probably clearest of all.

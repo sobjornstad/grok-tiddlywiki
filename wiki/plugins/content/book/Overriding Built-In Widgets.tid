@@ -1,6 +1,6 @@
 created: 20240928021442847
 description: Write custom widgets that get transcluded in place of TiddlyWiki's built-in widgets.
-modified: 20241017004756313
+modified: 20260306013948769
 parent: Looking Under the Hood
 tags: Section
 title: Overriding Built-In Widgets
@@ -33,7 +33,6 @@ Try hovering over the links above – you'll see the descriptions appear as tool
 
 {{Ex:LinkTooltipNonReplace||ExerciseTemplate}}
 {{Ex:SaveOptionalParameters||ExerciseTemplate}}
-{{Ex:EqualsPrefixNeeded||ExerciseTemplate}}
 
 
 !! Takeaways

@@ -1,12 +1,12 @@
 created: 20200530170328830
 description: Field transclusions work much like variable transclusions, but their value is tied to a field of a tiddler.
-modified: 20241016120601826
+modified: 20260306010924212
 parent: Transclusion
 tags: Section Concept
 title: Field Transclusions
 type: text/vnd.tiddlywiki
 
- ''Field transclusions'' are much like variable or procedure transclusions, but their value comes from the contents of ''a field of another tiddler in your wiki''.
+''Field transclusions'' are much like variable or procedure transclusions, but their value comes from the contents of ''a field of another tiddler in your wiki''.
 
 If we write `{{JaneDoe!!phone}}`, the contents of the `phone` field of the JaneDoe tiddler -- namely, Jane's phone number -- will appear in the output. Let's start a tiddler called `PhoneNumbers` in our example wiki and try that:
 
@@ -42,7 +42,7 @@ In non-technical contexts, people sometimes use the term //transclusion// by its
 
 !! The `$transclude` widget
 
-In the previous section, [[The Finer Points of Procedures]] we mentioned that you can use the `$transclude` widget with the `$variable` parameter to call a procedure (transclude the value of the procedure/variable). You can use the `$transclude` widget to do field transclusion as well, using its `$tiddler` and `$field` parameters. {{Ltc:BracesTranscludeSame||LieToChildrenTemplate}}:
+In the previous section, [[The Finer Points of Procedures]], we mentioned that you can use the `$transclude` widget with the `$variable` parameter to call a procedure (transclude the value of the procedure/variable). You can use the `$transclude` widget to do field transclusion as well, using its `$tiddler` and `$field` parameters. {{Ltc:BracesTranscludeSame||LieToChildrenTemplate}}:
 
 ```html
 * {{JaneDoe!!phone}}
