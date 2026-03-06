@@ -162,6 +162,8 @@ In the TiddlyWiki UI, when renaming a tiddler, a dropdown shows all tiddlers tha
 ### Ex:RaffapKnowledgeTiddler
 Created `ReallyAnnoyingFiveFactorAuthenticationProcess` tiddler with imagined content about the five factors and their inconveniences.
 
+**Note on sequencing:** The Knowledge Tiddlers section says "let's leave all of them unlinked" when discussing RAFFAP and other concepts within the EIS tiddler. This is just a deferral — this exercise immediately tells you to go back and create the RAFFAP tiddler. So after completing the exercise, the RAFFAP should be linked from within the EIS tiddler. The "leave unlinked for now" instruction in Knowledge Tiddlers could be slightly clearer about this deferral being intentional.
+
 ### Ex:RaffapReflection
 Reviewed the RAFFAP tiddler:
 - Links to `EmployeeProfileSetupMeeting` (where Jane walked me through it) ✓
