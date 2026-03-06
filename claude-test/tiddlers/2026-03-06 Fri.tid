@@ -1,0 +1,53 @@
+created: 20260306100010000
+modified: 20260306100010000
+tags: Journal
+title: 2026-03-06 Fri
+type: text/vnd.tiddlywiki
+
+!! Goals for the day
+
+* Get computer set up
+* Meet the team
+* Learn about company systems
+
+!! Scheduled events
+
+* 9:00 AM - Onboarding meeting with JaneDoe
+
+!! Journal
+
+[[EmployeeProfileSetupMeeting]]
+
+---
+
+!! Wikitext formatting practice
+
+This section demonstrates various wikitext formatting elements.
+
+''Bold text'' looks like this, //italic text// looks like this, and `monospaced text` looks like this.
+
+Bulleted list:
+
+* First item
+* Second item
+* Third item
+
+Numbered list:
+
+# First step
+# Second step
+# Third step
+
+!! A section heading within the entry
+
+Block quote:
+
+> The unexamined wiki is not worth keeping.
+
+Monospaced block:
+
+```
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+```

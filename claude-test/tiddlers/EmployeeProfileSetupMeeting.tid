@@ -1,0 +1,11 @@
+at: 20260306090000000
+created: 20260306100030000
+modified: 20260306100030000
+participants: JaneDoe
+tags: Meeting OnboardingProcess
+title: EmployeeProfileSetupMeeting
+type: text/vnd.tiddlywiki
+
+JaneDoe welcomed me to the company and helped me set up my computer and employee profile.
+
+<$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>
