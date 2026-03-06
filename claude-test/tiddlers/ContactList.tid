@@ -1,0 +1,9 @@
+created: 20260306120002000
+modified: 20260306120002000
+tags: Tool
+title: ContactList
+type: text/vnd.tiddlywiki
+
+<$list filter="[tag[Contact]has[phone]sort[]]">
+  <$link /><br>
+</$list>

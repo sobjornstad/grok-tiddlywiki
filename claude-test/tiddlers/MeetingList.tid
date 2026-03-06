@@ -1,0 +1,13 @@
+created: 20260306120001000
+modified: 20260306120001000
+tags: Tool
+title: MeetingList
+type: text/vnd.tiddlywiki
+
+Here are all your meetings from newest to oldest:
+
+<ul>
+  <$list filter="[tag[Meeting]!sort[at]]">
+    <li><$link to=<<currentTiddler>>><<currentTiddler>></$link></li>
+  </$list>
+</ul>
