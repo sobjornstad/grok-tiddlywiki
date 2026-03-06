@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(done)",
+      "Bash(wc:*)",
+      "WebFetch(domain:tiddlywiki.com)",
+      "Bash(ls:*)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:talk.tiddlywiki.org)",
+      "Bash(grep:*)",
+      "Bash(xargs basename:*)",
+      "Bash(git log:*)",
+      "Bash(for f in Ta_20240929154355182 Ta_20240929154746057 Ta_20240929155943495)",
+      "Bash(do)",
+      "Bash(echo \"=== Comparing $f ===\")",
+      "Read(//home/soren/cabinet/Me/Writing/Nonfiction/Books/gtw/wiki/plugins/content/book/**)",
+      "Bash(for f in Ta_20240929160831411 Ta_20240929155859363 Ta_20240929154746057 Ta_20240929160159417 Ta_20240929155943495 Ta_20240929154355182 Ta_20240929160755112 Ta_20240929161330455 Ta_20240929161437104)",
+      "Bash(echo \"File: $f\")"
+    ]
+  }
+}
