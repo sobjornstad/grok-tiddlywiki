@@ -1,0 +1,7 @@
+created: 20260307120003000
+modified: 20260307120003001
+title: MeetingInformationTemplate
+type: text/vnd.tiddlywiki
+
+| !Time|<$view field="at" format="date" template="DDth MMM YYYY"/>|
+| !Participants|{{!!participants}}|

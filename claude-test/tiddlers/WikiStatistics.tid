@@ -1,0 +1,13 @@
+created: 20260307120006000
+modified: 20260307120006000
+tags: Tool
+title: WikiStatistics
+type: text/vnd.tiddlywiki
+
+<ul>
+  <li>There are <$text text={{{ [tag[Contact]count[]] }}}/> contacts in this wiki.</li>
+  <li>There are <$text text={{{ [tag[Meeting]links[]count[]] }}}/> unique tiddlers linked from meetings.</li>
+  <$let totalTiddlers={{{ [!is[system]count[]] }}}>
+    <li><$text text={{{ [tag[Contact]count[]divide<totalTiddlers>multiply[100]precision[3]] }}}/>% of all non-system tiddlers are contacts.</li>
+  </$let>
+</ul>

@@ -6,4 +6,6 @@ tags: Contact
 title: ChrisSmith
 type: text/vnd.tiddlywiki
 
+{{||ContactInformationTemplate}}
+
 Chris Smith is the HR department manager, overseeing JaneDoe and the Doe family employees.

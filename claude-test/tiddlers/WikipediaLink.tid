@@ -1,0 +1,7 @@
+created: 20260307120008000
+modified: 20260307120008000
+title: WikipediaLink
+type: text/vnd.tiddlywiki
+
+\parameters(articleName, text)
+<a class="tc-tiddlylink-external" href=`https://en.wikipedia.org/wiki/$(articleName)$`><<text>></a>

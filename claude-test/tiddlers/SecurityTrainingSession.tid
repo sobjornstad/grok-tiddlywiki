@@ -6,6 +6,8 @@ tags: Meeting OnboardingTraining
 title: SecurityTrainingSession
 type: text/vnd.tiddlywiki
 
+{{||MeetingInformationTemplate}}
+
 ChrisSmith walked me through the company's security policies, including password requirements and the [[ReallyAnnoyingFiveFactorAuthenticationProcess]].
 
 <$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>

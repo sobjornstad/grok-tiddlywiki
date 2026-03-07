@@ -6,6 +6,8 @@ tags: Meeting OnboardingHr
 title: ComplianceTrainingMeeting
 type: text/vnd.tiddlywiki
 
+{{||MeetingInformationTemplate}}
+
 Mandatory compliance training covering workplace safety, anti-harassment policies, and data protection regulations.
 
 <$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>

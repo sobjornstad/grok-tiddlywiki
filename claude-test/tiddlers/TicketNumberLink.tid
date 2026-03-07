@@ -1,0 +1,10 @@
+created: 20260307120010000
+modified: 20260307120010000
+title: TicketNumberLink
+type: text/vnd.tiddlywiki
+
+\procedure ticketLink(ticketId)
+<a href=`https://tix.example.com/ticket/$(ticketId)$`>Ticket #<<ticketId>></a>
+\end
+
+<$transclude $variable="ticketLink" ticketId={{!!ticketnum}} />

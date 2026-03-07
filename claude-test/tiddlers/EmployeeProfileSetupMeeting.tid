@@ -6,6 +6,8 @@ tags: Meeting OnboardingHr
 title: EmployeeProfileSetupMeeting
 type: text/vnd.tiddlywiki
 
+{{||MeetingInformationTemplate}}
+
 JaneDoe welcomed me to the company and helped me set up my computer and employee profile.
 
 <$view field="at" format="date" template="DD MMM YYYY hh12:0mm:0ss pm"/>
