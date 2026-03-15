@@ -1,0 +1,8 @@
+created: 20260315100040000
+modified: 20260315100040000
+title: ContactTabTemplate
+type: text/vnd.tiddlywiki
+
+<$tiddler tiddler=<<currentTab>>>
+  <$transclude mode="block"/>
+</$tiddler>

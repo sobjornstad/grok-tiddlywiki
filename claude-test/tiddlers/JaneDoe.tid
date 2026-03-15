@@ -2,10 +2,16 @@ created: 20260306100020000
 email: janedoe@company.com
 family: JohnDoe EmilyDoe
 manager: ChrisSmith
-modified: 20260306100020000
+modified: 20260307120001000
 phone: 888-555-1234
 tags: Contact
 title: JaneDoe
 type: text/vnd.tiddlywiki
 
 Jane works in the HR department managing the [[Employee Information System]] and onboarding new hires.
+
+!! Information about Jane
+
+{{||ContactInformationTemplate}}
+
+Jane's manager's phone number: <$transclude $tiddler={{!!manager}} $field="phone"/>

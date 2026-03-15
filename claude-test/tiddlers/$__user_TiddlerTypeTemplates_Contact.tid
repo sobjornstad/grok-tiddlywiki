@@ -1,0 +1,12 @@
+created: 20260315120000000
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20260315120000000
+tags: $:/tags/ViewTemplate $:/tags/EditTemplate
+title: $:/user/TiddlerTypeTemplates/Contact
+type: text/vnd.tiddlywiki
+
+<$reveal state="!!hide-contactinfo" type="nomatch" text="yes">
+<% if [all[current]tag[Contact]] %>
+  {{||ContactInformationTemplate}}
+<% endif %>
+</$reveal>

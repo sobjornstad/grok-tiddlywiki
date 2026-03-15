@@ -1,0 +1,12 @@
+created: 20260307120020000
+modified: 20260307120020000
+title: NestedSetsTest
+type: text/vnd.tiddlywiki
+
+<$set name="variable" value="1">
+    <<variable>>
+    <$set name="variable" value="2">
+        <<variable>>
+    </$set>
+    <<variable>>
+</$set>

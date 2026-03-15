@@ -1,0 +1,19 @@
+created: 20260315120600000
+modified: 20260315120600000
+title: CaptionsByTag
+type: text/vnd.tiddlywiki
+
+<$edit-text tiddler="$:/temp/captionbytag" tag="input" default=""/>
+
+<table>
+  <tr>
+    <th>Tiddler</th>
+    <th>Caption</th>
+  </tr>
+  <$list filter="[tag{$:/temp/captionbytag}]">
+  <tr>
+    <td>{{!!title}}</td>
+    <td>{{!!caption}}</td>
+  </tr>
+  </$list>
+</table>

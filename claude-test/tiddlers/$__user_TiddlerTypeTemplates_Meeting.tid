@@ -1,0 +1,12 @@
+created: 20260315120200000
+list-before: $:/core/ui/ViewTemplate/body
+modified: 20260315120200000
+tags: $:/tags/ViewTemplate $:/tags/EditTemplate
+title: $:/user/TiddlerTypeTemplates/Meeting
+type: text/vnd.tiddlywiki
+
+<% if [all[current]tag[Meeting]] %>
+
+  {{||MeetingInformationTemplate}}
+
+<% endif %>

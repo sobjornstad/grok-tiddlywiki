@@ -1,0 +1,12 @@
+created: 20260315130100000
+modified: 20260315130100000
+title: CreatedNowTest
+type: text/vnd.tiddlywiki
+
+!! Created Now Button (Ex:CreatedNowButton)
+
+<$button set="!!created" setTo=<<now [UTC]YYYY0MM0DD0hh0mm0ssXXX>>>
+  Created Now
+</$button>
+
+Created field: {{!!created}}

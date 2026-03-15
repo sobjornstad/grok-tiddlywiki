@@ -8,4 +8,6 @@ tags: Contact
 title: EmilyDoe
 type: text/vnd.tiddlywiki
 
+{{||ContactInformationTemplate}}
+
 Emily Doe works in the HR department.

@@ -1,0 +1,9 @@
+created: 20260315140100000
+modified: 20260315140100000
+tags: $:/tags/Stylesheet
+title: $:/user/stylesheets/TagSmallFont
+type: text/vnd.tiddlywiki
+
+[data-tags*="Tool"] .tc-tiddler-body {
+  font-size: 85%;
+}

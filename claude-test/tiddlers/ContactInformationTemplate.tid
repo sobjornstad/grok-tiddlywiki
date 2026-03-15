@@ -1,0 +1,49 @@
+created: 20260307120002000
+modified: 20260307120002000
+title: ContactInformationTemplate
+type: text/vnd.tiddlywiki
+
+\procedure contact-info-item(field)
+  <% if [all[current]has<field>] %>
+    <li>
+      ''<$text text={{{ [<field>sentencecase[]] }}}/>'':
+      <$transclude $field=<<field>>/>
+    </li>
+  <% endif %>
+\end
+
+\procedure call-type()
+  <$let areaCode={{{ [{!!phone}split[]first[3]join[]] }}}>
+    <% if [{CurrentAreaCode}match<areaCode>] %>
+      local
+    <% elseif [enlist{TollFreeAreaCodes}match<areaCode>] %>
+      toll-free
+    <% else %>
+      long-distance
+    <% endif %>
+  </$let>
+\end
+
+<% if [all[current]!has[email]!has[phone]!has[family]!has[manager]] %>
+
+  There is no contact information available for {{!!title}}.
+
+<% else %>
+
+  <ul>
+    <<contact-info-item "email">>
+    <<contact-info-item "phone">>
+    <% if [all[current]has[family]] %>
+      <li>''Family'':
+        <ul>
+          <$list filter={{!!family}}>
+            <li>{{!!title}}: {{!!phone}}</li>
+          </$list>
+        </ul>
+      </li>
+    <% endif %>
+    <<contact-info-item "manager">>
+  </ul>
+  <% if [all[current]has[phone]] %>Call will be <<call-type>>.<% endif %>
+
+<% endif %>

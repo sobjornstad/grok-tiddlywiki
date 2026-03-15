@@ -2,9 +2,11 @@ at: 20260306090000000
 created: 20260306100030000
 modified: 20260306100030000
 participants: JaneDoe
-tags: Meeting OnboardingProcess
+tags: Meeting OnboardingHr
 title: EmployeeProfileSetupMeeting
 type: text/vnd.tiddlywiki
+
+{{||MeetingInformationTemplate}}
 
 JaneDoe welcomed me to the company and helped me set up my computer and employee profile.
 

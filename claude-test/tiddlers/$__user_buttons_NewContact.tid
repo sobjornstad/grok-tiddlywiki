@@ -1,0 +1,27 @@
+caption: New Contact
+created: 20260315120700000
+description: Create a new contact tiddler with standard fields
+modified: 20260315120700000
+tags: $:/tags/PageControls
+title: $:/user/buttons/NewContact
+type: text/vnd.tiddlywiki
+
+\procedure newContact()
+  <$action-sendmessage
+    $message="tm-new-tiddler"
+    title="New Contact"
+    tags="Contact"
+    email=""
+    family=""
+    phone=""
+    manager=""/>
+\end
+
+<$button actions=<<newContact>> tooltip="Create a new contact" class=<<tv-config-toolbar-class>> selectedClass="tc-selected">
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/core/images/user}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text">New Contact</span>
+</$list>
+</$button>

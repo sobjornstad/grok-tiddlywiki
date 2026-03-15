@@ -1,0 +1,4 @@
+title: WikipediaLinkTest
+type: text/vnd.tiddlywiki
+
+{{WikipediaLink|List of lists of lists|A very silly article}}

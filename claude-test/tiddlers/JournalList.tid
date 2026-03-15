@@ -1,0 +1,10 @@
+caption: Journal
+created: 20260315120300000
+modified: 20260315120300000
+tags: $:/user/Views
+title: JournalList
+type: text/vnd.tiddlywiki
+
+<$list filter="[tag[Journal]!sort[created]]">
+  <$link/><br/>
+</$list>

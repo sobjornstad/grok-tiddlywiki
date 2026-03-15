@@ -1,0 +1,12 @@
+created: 20260315100010000
+modified: 20260315100010000
+title: UsHolidaysJson
+type: application/json
+
+{
+  "01/01": "New Year's Day",
+  "03/15": "Ides of March",
+  "07/04": "Independence Day",
+  "10/31": "Halloween",
+  "12/25": "Christmas Day"
+}

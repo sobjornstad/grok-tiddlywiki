@@ -1,0 +1,46 @@
+created: 20260315130100000
+modified: 20260315043232392
+selectedfield: created
+selectedtiddler: JaneDoe
+title: DateFormatter
+type: text/vnd.tiddlywiki
+
+\procedure show-date(fmt) <$view tiddler={{!!selectedtiddler}} field={{!!selectedfield}} format="date" template=<<fmt>>>(not a date)</$view>
+
+\procedure date-row(name, fmt)
+<tr>
+  <td><<name>></td>
+  <td><$transclude $variable="show-date" fmt=<<fmt>>/></td>
+</tr>
+\end
+
+Tiddler:
+<$select field="selectedtiddler" default="">
+    <option value="">(choose a tiddler)</option>
+    <$list filter="[!is[system]]">
+        <option value=<<currentTiddler>>><<currentTiddler>></option>
+    </$list>
+</$select>
+
+<% if [all[current]get[selectedtiddler]!is[blank]] %>
+Field:
+<$select field="selectedfield" default="created">
+    <$list filter="[{!!selectedtiddler}fields[]]">
+        <option value=<<currentTiddler>>><<currentTiddler>></option>
+    </$list>
+</$select>
+<% endif %>
+
+<% if [all[current]has[selectedtiddler]has[selectedfield]] %>
+<table>
+    <tr>
+        <th>Format</th>
+        <th>Date</th>
+    </tr>
+    <$list filter="[prefix[$:/config/DateFormatter/Formats/]]" variable="currentFormat">
+        <$transclude $variable="date-row"
+            name={{{ [<currentFormat>removeprefix[$:/config/DateFormatter/Formats/]] }}}
+            fmt={{{ [<currentFormat>get[text]] }}}/>
+    </$list>
+</table>
+<% endif %>

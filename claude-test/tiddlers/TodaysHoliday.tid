@@ -1,0 +1,8 @@
+created: 20260315100020000
+modified: 20260315100020000
+title: TodaysHoliday
+type: text/vnd.tiddlywiki
+
+<$list filter="""[[UsHolidays]getindex<now "0MM/0DD">]""" emptyMessage="Sadly, it's a very ordinary day today.">
+  It's ''<<currentTiddler>>'' today!
+</$list>

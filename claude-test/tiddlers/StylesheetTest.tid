@@ -1,0 +1,14 @@
+created: 20260315140100000
+modified: 20260315140100000
+title: StylesheetTest
+type: text/vnd.tiddlywiki
+
+!! Stylesheet Tests (Ex:FunnyClass + Ex:ConditionalStyle + Ex:TagStyleRule)
+
+Normal text.
+
+@@.my-funny-class
+This text should have a funny style when $:/config/ShowFunnyText is "yes".
+@@
+
+Normal text again.

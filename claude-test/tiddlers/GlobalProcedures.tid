@@ -1,0 +1,13 @@
+created: 20260315100070000
+modified: 20260315100070000
+tags: $:/tags/Global
+title: GlobalProcedures
+type: text/vnd.tiddlywiki
+
+\procedure wikipediaLink(articleName, displayText:"Wikipedia")
+<a href=`https://en.wikipedia.org/wiki/$(articleName)$`><<displayText>></a>
+\end
+
+\procedure ticketLink()
+<a href=`https://tickets.example.com/$(currentTiddler)$`>Ticket {{!!ticketnum}}</a>
+\end

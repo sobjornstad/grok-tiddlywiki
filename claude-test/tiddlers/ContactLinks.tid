@@ -1,0 +1,11 @@
+created: 20260307120005000
+modified: 20260307120005000
+tags: Tool
+title: ContactLinks
+type: text/vnd.tiddlywiki
+
+<ul>
+  <$list filter="[tag[Contact]sort[]]">
+    <li><<currentTiddler>> (<a href=`https://mycontacts.com/$(currentTiddler)$`>mycontacts.com</a>)</li>
+  </$list>
+</ul>

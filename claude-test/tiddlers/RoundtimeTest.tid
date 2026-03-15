@@ -1,0 +1,11 @@
+created: 20260315140000000
+modified: 20260315140000000
+title: RoundtimeTest
+type: text/vnd.tiddlywiki
+
+!! Roundtime JS Macro Test (Ex:RoundtimeMacro)
+
+* Input: 20260315143700000 → <<roundtime "20260315143700000">> (should be 20260315144500000)
+* Input: 20260315140300000 → <<roundtime "20260315140300000">> (should be 20260315140000000)
+* Input: 20260315145800000 → <<roundtime "20260315145800000">> (should be 20260315150000000)
+* Input: 20260315142000000 → <<roundtime "20260315142000000">> (should be 20260315141500000)
