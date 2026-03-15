@@ -11,7 +11,8 @@
    and make sure they look OK and have the correct book and TW version #'s
    (you can use `make preview` to web-serve the `_build` folder).
    Make any required fixes.
-5. Update the Changes tiddler again with the commit hash of your "bump version" commit.
+5. Update the Changes tiddler again with the commit hash of your "bump version" commit,
+   being sure to do this in the live `:2000` server rather than the `_build` file.
    Run `make shadowify`.
 6. Run `make`.
 7. Do step 4 again, just verifying that commit hash & release date is correct.
