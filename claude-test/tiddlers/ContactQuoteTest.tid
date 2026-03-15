@@ -1,0 +1,22 @@
+created: 20260315110030000
+modified: 20260315110031000
+title: ContactQuoteTest
+type: text/vnd.tiddlywiki
+
+\widget $contact.quote(contact)
+  <$link to=<<contact>>><$text text={{{ [<contact>has[caption]get[caption]] ~[<contact>get[title]] }}}/></$link>:
+
+  <blockquote>
+    <$slot $name="ts-raw"/>
+  </blockquote>
+\end
+
+!! Custom Widget: $contact.quote (Ex:ContactQuote)
+
+<$contact.quote contact="JaneDoe">
+  This is how you do the thing.
+</$contact.quote>
+
+<$contact.quote contact="ChrisSmith">
+  Welcome to the company! Let me help you with benefits enrollment.
+</$contact.quote>

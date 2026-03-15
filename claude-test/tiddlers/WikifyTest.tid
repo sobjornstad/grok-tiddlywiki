@@ -1,0 +1,20 @@
+created: 20260315110020000
+modified: 20260315110021000
+title: WikifyTest
+type: text/vnd.tiddlywiki
+
+\define wikipediaLink(articleName)
+https://en.wikipedia.org/wiki/$articleName$
+\end
+
+!! Wikify Wikipedia Link (Ex:WikifyWikipediaLink)
+
+Without wikify (transclusion renders but not as part of link):
+
+<$transclude $variable="wikipediaLink" articleName="TiddlyWiki"/>
+
+With wikify:
+
+<$wikify name="article" text="TiddlyWiki">
+  <$transclude $variable="wikipediaLink" articleName=<<article>>/>
+</$wikify>

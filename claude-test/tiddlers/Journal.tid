@@ -1,0 +1,8 @@
+color: #ff0000
+created: 20260306100000000
+icon: $:/core/images/tag-button
+modified: 20260315100000000
+title: Journal
+type: text/vnd.tiddlywiki
+
+Tag for journal tiddlers.

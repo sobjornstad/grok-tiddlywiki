@@ -1,0 +1,7 @@
+created: 20260315100030000
+modified: 20260315100030000
+tags: Tool
+title: ContactTabs
+type: text/vnd.tiddlywiki
+
+<<tabs "[tag[Contact]sort[]]" template:"ContactTabTemplate">>

@@ -1,0 +1,17 @@
+created: 20260315110000000
+modified: 20260315110001000
+phone: 888-555-1234
+title: TelephoneLinkTest
+type: text/vnd.tiddlywiki
+
+\define phonelink() tel:$(phonenum)$
+
+!! Macro text substitution approach
+
+<$let phonenum={{!!phone}}>
+  <a href=<<phonelink>>>Call {{!!title}}</a>
+</$let>
+
+!! Filtered transclusion approach
+
+<a href={{{ [[tel:]addsuffix{!!phone}] }}}>Call {{!!title}}</a>

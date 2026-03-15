@@ -1,0 +1,16 @@
+created: 20260315110010000
+modified: 20260315110011000
+title: AuthorizationBypassTest
+type: text/vnd.tiddlywiki
+
+\define check-password(attempt) <% if [<__attempt__>match{$:/temp/password}] %>You're in!<% else %>Wrong password!<% endif %>
+
+!! Authorization Bypass Demo (Ex:BypassSecurityWithTextSubstitution)
+
+Enter password: <<check-password "">>
+
+Bypass attempt with `]`: <<check-password "]">>
+
+!! Note
+
+The fix is to avoid using text substitution for user input - use a procedure instead, or use the $transclude widget to pass values as attributes.
