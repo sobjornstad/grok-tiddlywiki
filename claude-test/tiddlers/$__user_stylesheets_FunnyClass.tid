@@ -1,0 +1,15 @@
+created: 20260315140100000
+modified: 20260315140100000
+tags: $:/tags/Stylesheet
+title: $:/user/stylesheets/FunnyClass
+type: text/vnd.tiddlywiki
+
+<% if [[$:/config/ShowFunnyText]text[yes]] %>
+.my-funny-class {
+  background-color: blue;
+  color: yellow;
+  font-size: 150%;
+  border: 3px dotted orange;
+  text-align: right;
+}
+<% endif %>

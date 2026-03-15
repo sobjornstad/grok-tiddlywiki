@@ -1,0 +1,12 @@
+caption: Views
+created: 20260315120300000
+list-before: $:/core/ui/SideBar/Tools
+modified: 20260315120300000
+tags: $:/tags/SideBar
+title: $:/user/Views
+type: text/vnd.tiddlywiki
+
+<<tabs
+  tabsList:"[tag[$:/user/Views]]"
+  default:"JournalList"
+  class:"tc-vertical">>

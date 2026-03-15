@@ -1,0 +1,35 @@
+created: 20260315120800000
+modified: 20260315120800000
+title: LinkOverrideTest
+type: text/vnd.tiddlywiki
+
+\function .rest-names() [<params-var>jsonindexes[]]
+\function .rest-values() [.rest-names[]] :map[<params-var>jsonget<currentTiddler>]
+
+\widget $link()
+  <$parameters
+    to=""
+    tooltip=""
+    $params="params-var"
+  >
+    <$let newtooltip={{{ [<tooltip>!is[blank]] ~[<to>get[description]] }}}>
+      <$genesis
+        $type="$link"
+        $remappable="no"
+        $names="[.rest-names[]]"
+        $values="[.rest-values[]]"
+        tooltip=<<newtooltip>>
+      >
+        <$slot $name="ts-raw"/>
+      </$genesis>
+    </$let>
+  </$parameters>
+\end
+
+!! Link Override Test (Ex:LinkTooltipNonReplace + Ex:SaveOptionalParameters)
+
+Links with description tooltip: [[JaneDoe]]
+
+Link with explicit tooltip: <$link to="JaneDoe" tooltip="Custom tooltip!">JaneDoe (custom)</$link>
+
+Link with extra class preserved: <$link to="JaneDoe" class="tc-tiddlylink-external">JaneDoe (fake external)</$link>

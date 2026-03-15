@@ -1,0 +1,59 @@
+created: 20260315120500000
+modified: 20260315120500000
+tags: $:/tags/ViewTemplate
+title: $:/user/TiddlerLinkSummary
+type: text/vnd.tiddlywiki
+
+\procedure excerptify(title)
+  <$wikify name="contents" text={{{ [<title>get[text]] }}}>
+    <$text text={{{ [<contents>split[]first{$:/config/LinkExcerptLength}join[]] }}} />...
+  </$wikify>
+\end
+
+\procedure linkDisplay(title, subfilter, className)
+  <div class=<<className>>>
+    <<title>>:
+
+    <ul>
+      <$list filter="[all[current]subfilter<subfilter>]">
+        <li>
+          <$link />:
+          <div class="sib-links-excerpt"><$transclude $variable="excerptify" title={{!!title}}/></div>
+        </li>
+      </$list>
+    </ul>
+  </div>
+\end
+
+<$list filter="[all[current]links[]] [all[current]backlinks[]] +[first[]]" variable=_>
+<div class="sib-links-container">
+  <<linkDisplay "Links" "[links[]]" "sib-links-forward">>
+  <<linkDisplay "Backlinks" "[backlinks[]]" "sib-links-backward">>
+</div>
+</$list>
+
+<style>
+div.sib-links-container {
+  border: 1px dashed white;
+  overflow: auto;
+  padding: 2px;
+}
+div.sib-links-container div ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+div.sib-links-container div ul div.sib-links-excerpt {
+  padding-left: 1em;
+  color: <<colour muted-foreground>>;
+}
+div.sib-links-forward {
+  width: 50%;
+  float: left;
+  padding-right: 0.5em;
+}
+div.sib-links-backward {
+  width: 50%;
+  float: right;
+  padding-left: 0.5em;
+}
+</style>

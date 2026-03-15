@@ -1,8 +1,10 @@
+caption: Projects
 color: #ff0000
 created: 20260306100000000
 icon: $:/core/images/tag-button
-modified: 20260315100000000
+modified: 20260315120300000
+tags: $:/user/Views
 title: Project
 type: text/vnd.tiddlywiki
 
-Tag for project tiddlers.
+<<toc-selective-expandable "Project">>
