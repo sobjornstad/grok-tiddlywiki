@@ -1,3 +1,6 @@
+0. Ensure that you’re using the version of TiddlyWiki you want to:
+   `VERSION=v5.3.8 make checkout-tiddlywiki-version`,
+   then if changed run `npm update` in the `wiki/` folder.
 1. Write changelog and update changes list in [[Changes]]
    (clone a $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/* tiddler to add an entry).
 2. Update version numbers in `Metadata` tiddler, then in `wiki/plugins/*/plugin.info`.

@@ -1,0 +1,44 @@
+commit: 
+created: 20260315143532276
+date: 202603151200000
+modified: 20260315150038885
+tag: v2.0.2
+tags: 
+title: $:/plugins/sobjornstad/GrokTiddlyWiki/Changes/2.0.2
+type: text/vnd.tiddlywiki
+version: 2.0.2
+
+!!! 5.3.8 updates
+
+//Grok TiddlyWiki// has been verified against TiddlyWiki 5.3.8.
+There were no significant changes needed to the text due to the updates.
+
+Thanks to many readers who submitted errors and suggestions for improvement.
+I also had Claude Code exhaustively check the book for errors,
+of which it found quite a few that had snuck through for multiple years,
+and I'll continue doing this on future releases.
+
+
+!!! Text improvements
+
+* [[Expand on|Templates and the Current Tiddler]] the terminology of “transcluding a tiddler through a template,” and include a physical metaphor that may be helpful.
+* Mention when we [[first discuss|Using Filter Expressions]] filter pipelines that the order of steps is significant, and describe the example multi-step pipeline's function more accurately (the previous text could make it sound like the steps were taking place in reverse if you read it wrong).
+* Mention that [[dragging and dropping items|Ordering Tiddlers]] in a tag list or `list-links-draggable` removes/normalizes `list-before` and `list-after` fields.
+* Expand the explanation of why normalizing acronym case and singular/plurals in [[naming conventions|Naming Conventions]] is helpful.
+* Tweak the flow in the interactive instructions in [[Creating Hierarchies with a Table of Contents]] to reduce the chance that the learner accidentally creates all of the requested tiddlers before reading the sentence about a shortcut method of doing this.
+* Update discussion of when LLMs can be useful when [[getting help with TiddlyWiki|Getting Help]].
+* Update the link to the TiddlyWiki forums in [[Support Us]] to point to the new forum.
+* Remove mention of a refresh bug causing tiddlers to continue to appear as missing, as it was fixed in TiddlyWiki 5.3.5 some time ago.
+
+!!! Errata
+
+* Update an exercise in [[Multi-Run Filters]] so that it previews enough about tag colors to do the exercise (it assumed knowledge of tag colors before this was taught in [[Classifying Tags]] a couple of sections later).
+* Fix the [[Ex:FamilyRadioButton]] answer suggesting use of the `qualify` macro before it was introduced. (There is already a later exercise asking you to fix this previous exercise's answer to use `qualify`.)
+* Clarify some confusing wording in the description of how the `list` field [[orders tiddlers|Ordering Tiddlers]], which could make it sound like the contents of the `list` field the text mentioned was a logical requirement of the rest of the situation rather than part of the example setup.
+* Clarify wording of a takeaway that sounded like it might be asking for a time zone conversion in the reverse direction.
+* Change confusing filter in the [[local calls|Ex:LocalCalls]] exercise's answer (formerly required you to use the procedure in a way that modified the current tiddler, without explaining this).
+* Mention in a takeaway answer that transcluding fields into `<<procedure call shorthand>>` is an option.
+* Fix the example of a JavaScript macro to not rely on implicit conversion of strings to ints, and to properly left-pad hours and minutes with zeroes.
+* Fix some incorrect references to chapter numbers, and convert them to use the chapter number macro so they'll stay up to date if changed again in the future.
+* Fix several places where `$let` tags were inadvertently mismatched with `/$set` tags.
+* Fix various other minor typos and incorrect links/tags.

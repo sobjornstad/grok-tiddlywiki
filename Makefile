@@ -40,17 +40,19 @@ wiki/pubfolder/output/index.html: wiki/plugins/* wiki/scripts/* wiki/tiddlers/* 
 # need. This appears to work fine since index.html should always update when
 # any wiki content is updated, but possible ordering problems?
 wiki/pubfolder/output/static/: wiki/pubfolder/output/index.html
-	cd wiki/pubfolder && npx tiddlywiki --build static
+	cd wiki/pubfolder && ../node_modules/.bin/tiddlywiki --build static
 
 
 ## Building the website (including the latest version of the book) ##
 web: _build/donate _build/thankyou _build/read/index.html _build/static _build/static/index.html
 
 _build/donate: web/donate
-	cp -r web/donate _build
+	mkdir -p _build
+	cp -r web/donate _build/donate
 
 _build/thankyou: web/thankyou
-	cp -r web/thankyou/ _build
+	mkdir -p _build
+	cp -r web/thankyou _build/thankyou
 
 _build/read/index.html: wiki/pubfolder/output/index.html
 	mkdir -p _build/read/
@@ -66,7 +68,7 @@ _build/static/index.html: _build/static/Welcome%20to%20Grok%20TiddlyWiki.html
 
 ## Utility functions
 edit:
-	cd wiki && npx tiddlywiki --listen port=2000 host=0.0.0.0
+	cd wiki && ./node_modules/.bin/tiddlywiki --listen port=2000 host=0.0.0.0
 
 preview:
 	cd _build && twistd web -n --path=. --port="tcp:port=8001"
