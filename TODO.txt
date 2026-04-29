@@ -1,0 +1,11 @@
+Tasks for 5.4.0
+===============
+
+2026-04-29 I went through the changelog and identified these as the new features / changes that need addressing:
+
+* Writing stylesheets in vanilla CSS (special CSS variables so you don't have to use wikitext transclusion for color palettes, for instance)
+* There have been some improvements to list-tagged-draggable/list-links-draggable which might be worth either including or might obsolete claims that you can't do X in one of them; should check
+* Background actions - I think they're probably not necessary for the level we're talking about here, but maybe they should be mentioned? Or I should try to at least fully understand what they're good for
+* Dynamic parameters for macro/procedure/function calls - this is a simplifying situation, but will require some fairly far-reaching changes; Claude will also need to proofread to make sure I didn't leave any of these in because otherwise I definitely will have ha
+* Multi-valued variables and let filter run prefix -- probably we should have some exercises on this, it seems quite important, and it might be worth changing to not recommend using nested versions of this etc. now that it isn't so necessary
+* The simple toc macro now supports a level parameter -- possibly mention this in the TOC section?
