@@ -9,3 +9,5 @@ Tasks for 5.4.0
 * Dynamic parameters for macro/procedure/function calls - this is a simplifying situation, but will require some fairly far-reaching changes; Claude will also need to proofread to make sure I didn't leave any of these in because otherwise I definitely will have ha
 * Multi-valued variables and let filter run prefix -- probably we should have some exercises on this, it seems quite important, and it might be worth changing to not recommend using nested versions of this etc. now that it isn't so necessary
 * The simple toc macro now supports a level parameter -- possibly mention this in the TOC section?
+
+Also I should include a note about AI - I have one that’s reasonably up-to-date on the GitHub repository.
